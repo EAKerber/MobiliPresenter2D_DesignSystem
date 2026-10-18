@@ -31,10 +31,10 @@ Os seletores e declarações visuais são preservados por folha CSS, com regra, 
 | Como funciona | `app/how-it-works/index.html` | NAV-003, NAV-004, NAV-005, VIS-002 |
 | Quem somos | `app/about/index.html` | NAV-003, NAV-004, NAV-005, VIS-002 |
 | Viewer de ambiente | `app/viewer/index.html` | NAV-003, NAV-004, NAV-005, VIS-002, EST-01–03 |
-| Configurador | `app/config/index.html` | NAV-003/004, PRIVATE-HEADER-001, VIS-002, EST-01–06 |
-| Administração / login | `app/admin.html` | PRIVATE-HEADER-001, VIS-002, EST-02, EST-04–10 |
-| Login de acesso | `app/access/index.html` | PRIVATE-HEADER-001, VIS-002 |
-| Gerenciar acessos | `app/access/manage.html` | PRIVATE-HEADER-001, VIS-002, EST-02, EST-04–06 |
+| Configurador | `app/config/index.html` | NAV-003/004/005, PRIVATE-HEADER-001, VIS-002, EST-01–06 |
+| Administração / login | `app/admin.html` | NAV-005, PRIVATE-HEADER-001, VIS-002, EST-02, EST-04–10 |
+| Login de acesso | `app/access/index.html` | NAV-005, PRIVATE-HEADER-001, VIS-002 |
+| Gerenciar acessos | `app/access/manage.html` | NAV-005, PRIVATE-HEADER-001, VIS-002, EST-02, EST-04–06 |
 
 ## CSS, classes e estilos locais
 
@@ -56,7 +56,7 @@ Nomes iguais não asseguram estilo comum: regras locais e contexto alteram o res
 - **Base promocional terciária aprovada:** `#A64D13` para informação promocional de produto, campanhas e condições comerciais. Essa aprovação não fixa variantes por tema/superfície nem os pares de contraste. A regra `.launch-badge` em `app/how-it-works/how-it-works.css` já usa esse valor; isso é evidência de implementação atual, não aprovação automática de outros usos. O uso comercial não deve ser rotulado como `warning` técnico.
 - **Informação de processo aprovada:** usar o azul homologado para orientações sobre funcionamento/processo. Essa categoria não é aviso, erro nem confirmação de sucesso. A administração atualmente define `--info` como `#245d87` no tema claro e `#a7d1f0` no escuro; o mapeamento das ocorrências no produto e a validação em DOM real ficam para a auditoria visual/runtime.
 - **Outras cores no CSS:** uso atual observado, não aprovação automática de tokens. A imagem de estados semânticos continua sendo referência candidata para erro, sucesso e aviso.
-- A extração encontrou 459 ocorrências de cores literais e 43 custom properties. Não foi encontrado um namespace explícito `--space-*` / `--spacing-*`; o espaçamento está expresso em declarações CSS.
+- O mapa de aplicação em [DECISION_APPLICATION_MAP.md](DECISION_APPLICATION_MAP.md) liga decisões, rotas, HTML, CSS carregado e evidência runtime, sem tratar o vínculo como conformidade de implementação. A extração encontrou 459 ocorrências de cores literais e 43 custom properties. Não foi encontrado um namespace explícito `--space-*` / `--spacing-*`; o espaçamento está expresso em declarações CSS.
 
 ## Responsividade, espaçamento e tipografia
 

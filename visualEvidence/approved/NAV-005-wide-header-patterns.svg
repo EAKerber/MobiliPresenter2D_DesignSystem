@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="895" viewBox="0 0 1440 1074">
+<rect width="1440" height="1074" fill="#f3f0eb"/>
+<text x="72" y="70" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#745839" letter-spacing="2">NAV-005 · DIREÇÃO APROVADA</text>
+<text x="72" y="116" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#252422">Estruturas largas dos cabeçalhos</text>
+<text x="72" y="153" font-family="Arial,sans-serif" font-size="17" fill="#66615a">A composição muda conforme o tipo de página; menu tem prioridade na extremidade direita.</text>
+<g transform="translate(72 188)">
+<rect width="1296" height="230" rx="18" fill="#fff" stroke="#d4cec5"/>
+<text x="28" y="42" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#252422">Páginas públicas · A (padrão já usado)</text>
+<text x="28" y="70" font-family="Arial,sans-serif" font-size="14" fill="#66615a">Navegação pública exposta na versão larga.</text>
+<rect x="28" y="92" width="1240" height="102" rx="12" fill="#201f1d"/>
+<g transform="translate(52 116)" fill="none" stroke-linecap="square" stroke-width="5"><path d="M2 47V20L32 3 62 20V47" stroke="#d8d0c4"/><path d="M32 3L62 20V47" stroke="#A64D13"/></g>
+<text x="130" y="152" font-family="Arial,sans-serif" font-size="23" font-weight="700" letter-spacing="3" fill="#f5f1e9">CASA<tspan fill="#D38A34" font-size="13"> EM</tspan></text><text x="131" y="172" font-family="Arial,sans-serif" font-size="11" letter-spacing="6" fill="#f5f1e9">MÓDULOS</text>
+<text x="412" y="155" font-family="Arial,sans-serif" font-size="16" fill="#eee9e1">Ambientes</text><text x="520" y="155" font-family="Arial,sans-serif" font-size="16" fill="#eee9e1">Como funciona</text><text x="668" y="155" font-family="Arial,sans-serif" font-size="16" fill="#eee9e1">Quem somos</text>
+<rect x="870" y="128" width="190" height="48" rx="8" fill="#8a6a43"/><text x="891" y="158" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#fff">FALE CONOSCO ↗</text>
+<rect x="1090" y="126" width="154" height="52" rx="26" fill="#2c2b28" stroke="#6a645d"/><circle cx="1114" cy="152" r="10" fill="none" stroke="#f5f1e9" stroke-width="2"/><text x="1132" y="157" font-family="Arial,sans-serif" font-size="13" fill="#f5f1e9">Escuro / claro</text>
+<text x="28" y="218" font-family="Arial,sans-serif" font-size="13" fill="#796c5b">Escopo aprovado: layout largo; responsividade compacta e medidas específicas seguem abertas.</text>
+</g>
+<g transform="translate(72 448)">
+<rect width="1296" height="230" rx="18" fill="#fff" stroke="#d4cec5"/>
+<text x="28" y="42" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#252422">Páginas privadas · B</text>
+<text x="28" y="70" font-family="Arial,sans-serif" font-size="14" fill="#66615a">Identificador da página junto da marca; tema e menu à direita.</text>
+<rect x="28" y="92" width="1240" height="102" rx="12" fill="#201f1d"/>
+<g transform="translate(52 116)" fill="none" stroke-linecap="square" stroke-width="5"><path d="M2 47V20L32 3 62 20V47" stroke="#d8d0c4"/><path d="M32 3L62 20V47" stroke="#A64D13"/></g>
+<text x="130" y="152" font-family="Arial,sans-serif" font-size="23" font-weight="700" letter-spacing="3" fill="#f5f1e9">CASA<tspan fill="#D38A34" font-size="13"> EM</tspan></text><text x="131" y="172" font-family="Arial,sans-serif" font-size="11" letter-spacing="6" fill="#f5f1e9">MÓDULOS</text>
+<text x="328" y="156" font-family="Arial,sans-serif" font-size="18" fill="#d7d0c7">Administração</text>
+<rect x="1006" y="126" width="154" height="52" rx="26" fill="#2c2b28" stroke="#6a645d"/><circle cx="1030" cy="152" r="10" fill="none" stroke="#f5f1e9" stroke-width="2"/><text x="1048" y="157" font-family="Arial,sans-serif" font-size="13" fill="#f5f1e9">Escuro / claro</text>
+<rect x="1176" y="126" width="68" height="52" rx="10" fill="#2c2b28" stroke="#8f7657"/><path d="M1192 141h36M1192 152h36M1192 163h36" stroke="#f5f1e9" stroke-width="3"/>
+<text x="28" y="218" font-family="Arial,sans-serif" font-size="13" fill="#796c5b">Escopo aprovado: layout largo; hambúrguer é o controle na ponta direita.</text>
+</g>
+<g transform="translate(72 708)">
+<rect width="1296" height="230" rx="18" fill="#fff" stroke="#d4cec5"/>
+<text x="28" y="42" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#252422">Navegação de segunda ordem · semelhante ao viewer</text>
+<text x="28" y="70" font-family="Arial,sans-serif" font-size="14" fill="#66615a">Mantém identificação contextual da página e traz o controle de tema para o header.</text>
+<rect x="28" y="92" width="1240" height="102" rx="12" fill="#201f1d"/>
+<g transform="translate(52 116)" fill="none" stroke-linecap="square" stroke-width="5"><path d="M2 47V20L32 3 62 20V47" stroke="#d8d0c4"/><path d="M32 3L62 20V47" stroke="#A64D13"/></g>
+<text x="130" y="152" font-family="Arial,sans-serif" font-size="23" font-weight="700" letter-spacing="3" fill="#f5f1e9">CASA<tspan fill="#D38A34" font-size="13"> EM</tspan></text><text x="131" y="172" font-family="Arial,sans-serif" font-size="11" letter-spacing="6" fill="#f5f1e9">MÓDULOS</text>
+<text x="608" y="156" font-family="Arial,sans-serif" font-size="16" fill="#e4d5bf">← Ambientes</text>
+<rect x="1006" y="126" width="154" height="52" rx="26" fill="#2c2b28" stroke="#6a645d"/><circle cx="1030" cy="152" r="10" fill="none" stroke="#f5f1e9" stroke-width="2"/><text x="1048" y="157" font-family="Arial,sans-serif" font-size="13" fill="#f5f1e9">Escuro / claro</text>
+<rect x="1176" y="126" width="68" height="52" rx="10" fill="#2c2b28" stroke="#8f7657"/><path d="M1192 141h36M1192 152h36M1192 163h36" stroke="#f5f1e9" stroke-width="3"/>
+<text x="28" y="218" font-family="Arial,sans-serif" font-size="13" fill="#796c5b">Escopo aprovado: tema dentro do header e antes do menu no extremo direito.</text>
+</g>
+<text x="72" y="990" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#252422">Limite:</text><text x="136" y="990" font-family="Arial,sans-serif" font-size="15" fill="#4d4943">são estruturas aprovadas, não uma especificação de estilo final; dimensões, tokens e breakpoints continuam pendentes.</text>
+<text x="72" y="1027" font-family="Arial,sans-serif" font-size="14" fill="#796c5b">Demonstração simplificada; logotipo e cores ilustrados. Preserve os assets reais do produto ao implementar.</text>
+</svg>
