@@ -28,7 +28,7 @@ Os seletores e declarações visuais são preservados por folha CSS, com regra, 
 | Superfície | Entrada | Decisões mapeadas |
 |---|---|---|
 | Landing / ambientes | `app/index.html` | NAV-003, NAV-004, NAV-005, VIS-002 |
-| Como funciona | `app/how-it-works/index.html` | NAV-003, NAV-004, NAV-005, VIS-002 |
+| Como funciona | `app/how-it-works/index.html` | NAV-003, NAV-004, NAV-005, VIS-002, VIS-003 |
 | Quem somos | `app/about/index.html` | NAV-003, NAV-004, NAV-005, VIS-002 |
 | Viewer de ambiente | `app/viewer/index.html` | NAV-003, NAV-004, NAV-005, VIS-002, EST-01–03 |
 | Configurador | `app/config/index.html` | NAV-003/004/005, PRIVATE-HEADER-001, VIS-002, EST-01–06 |
@@ -57,6 +57,8 @@ Nomes iguais não asseguram estilo comum: regras locais e contexto alteram o res
 - **Informação de processo aprovada:** usar o azul homologado para orientações sobre funcionamento/processo. Essa categoria não é aviso, erro nem confirmação de sucesso. A administração atualmente define `--info` como `#245d87` no tema claro e `#a7d1f0` no escuro; o mapeamento das ocorrências no produto e a validação em DOM real ficam para a auditoria visual/runtime.
 - **Outras cores no CSS:** uso atual observado, não aprovação automática de tokens. A imagem de estados semânticos continua sendo referência candidata para erro, sucesso e aviso.
 - O mapa de aplicação em [DECISION_APPLICATION_MAP.md](DECISION_APPLICATION_MAP.md) liga decisões, rotas, HTML, CSS carregado e evidência runtime, sem tratar o vínculo como conformidade de implementação. A extração encontrou 459 ocorrências de cores literais e 43 custom properties. Não foi encontrado um namespace explícito `--space-*` / `--spacing-*`; o espaçamento está expresso em declarações CSS.
+
+**VIS-003 / FIND-004:** no tema escuro de `/how-it-works/`, `.study-art figcaption` tem tratamento visual escolhido: legenda integrada à figura sobre uma faixa escura na base. A escolha não fixa cores, opacidade/gradiente, dimensões ou comportamento responsivo; esses valores continuam pendentes de medição no DOM final.
 
 ## Responsividade, espaçamento e tipografia
 
