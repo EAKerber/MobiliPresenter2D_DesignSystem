@@ -144,3 +144,18 @@ O inventário estará pronto para orientar implementação quando cada decisão 
 O inventário detalhado está em [VISUAL_INVENTORY.md](VISUAL_INVENTORY.md) e [visual-inventory.json](visual-inventory.json), baseado no produto `main` no commit `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`. Abrange oito entradas HTML, oito folhas CSS, seletores e declarações visuais por regra, breakpoints, espaçamento, tipografia, cores literais, movimento e assets rastreados.
 
 A leitura documenta código estático; não substitui inspeção do DOM, captura visual, contraste runtime ou verificação de estados gerados por JavaScript. Assets sem referência estática ficam como não verificados. #A64D13 consta como base aprovada para promoção/comunicação comercial; variações e combinações por tema ainda ficam pendentes. Informação de processo usa o azul homologado e permanece separada de aviso, erro e sucesso.
+
+
+## 10. Auditoria visual em runtime — etapa seguinte
+
+O relatório da etapa está em [RUNTIME_AUDIT.md](RUNTIME_AUDIT.md), com dados estruturados em [runtime-evidence.json](runtime-evidence.json). A inspeção somente de leitura foi feita no site publicado em 2026-10-18; o commit exato entregue pelo Netlify não foi confirmado. O snapshot estático de referência continua sendo `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`.
+
+As rotas públicas landing, Como funciona, Quem somos e viewer foram observadas em 390, 768 e 1440 px, sem overflow horizontal. A tela de login administrativo também se manteve dentro da largura nos três tamanhos. Configurador e gerenciamento de acessos redirecionam sem sessão; as superfícies autenticadas ficam explicitamente **não verificadas**.
+
+O menu privado na tela de login abriu no primeiro clique e expôs os grupos esperados. Na landing pública, o primeiro clique durante `#introSplash` (opacidade 1 e captura de ponteiros ativa) não abriu o menu; após a animação, o menu abriu. O comportamento requer revisão, sem atribuir automaticamente a causa aos relatos nas páginas privadas.
+
+A triagem no DOM identificou pares abaixo de 4,5:1 em texto corrido do tema claro (4,47:1), em um rótulo cobre pequeno (3,89:1) e uma legenda no painel claro do tema escuro (1,78:1). A base promocional `#A64D13` com texto branco foi observada a 5,69:1 no badge atual. Esses resultados orientam a próxima revisão; não fixam variantes nem aprovam tokens adicionais. O inventário estático não encontrou um gate de contraste conectado às rotas do produto.
+
+As capturas desktop da landing em claro/escuro e do viewer foram mostradas para inspeção durante a auditoria, mas não foram guardadas como arquivos nesta PR. A estética do cabeçalho público permanece em aberto por NAV-005; a captura atual é referência do produto, não uma proposta aprovada.
+
+**Pendente de runtime:** administração autenticada, configuração, gerenciamento/convites, navegação completa por teclado, movimento reduzido e estados dinâmicos em todas as famílias.
