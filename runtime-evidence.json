@@ -379,5 +379,31 @@
     ],
     "runtimeContrastMeasured": false,
     "details": "See FINDINGS_REGISTER.md and product issue #208. Baseline contrast values are historical and were not remeasured against the production DOM."
-  }
+  },
+  "lightThemeReviewObservations": [
+    {
+      "route": "/config/",
+      "theme": "light",
+      "viewport": "narrow browser viewport",
+      "stage": "summary",
+      "selector": ".price-state__breakdown dt",
+      "observation": "The Módulos label appears almost illegible on the light summary card. Visual confirmation only; no new numeric computed contrast measurement."
+    },
+    {
+      "route": "/config/",
+      "theme": "light",
+      "viewport": "narrow browser viewport",
+      "stage": "services",
+      "selector": ".service-check.is-blocked",
+      "observation": "Disabled lighting option text appears strongly faded. Recorded for visual review only; control is unavailable due to dependencies and is not classified as a confirmed WCAG failure."
+    },
+    {
+      "route": "/config/",
+      "theme": "light and dark",
+      "viewport": "narrow browser viewport",
+      "stage": "services",
+      "selector": "[data-private-menu] and scene image",
+      "observation": "Scene image overlays and obscures part of the Como funciona menu link in both themes."
+    }
+  ]
 }
