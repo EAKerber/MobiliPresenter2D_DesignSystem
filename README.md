@@ -5,6 +5,7 @@ Registro de decisões de design, estado de homologação e evidências recuperad
 - [`index.html`](index.html): documento visual navegável, independente e sem dependências.
 - [`decisions.json`](decisions.json): registro estruturado das decisões, pendências, limites e itens a recuperar.
 - [`DECISION_APPLICATION_MAP.md`](DECISION_APPLICATION_MAP.md): cruzamento de decisões com rotas, HTML, CSS carregado e evidência runtime.
+- [`FINDINGS_REGISTER.md`](FINDINGS_REGISTER.md): registro de defeitos observados, inconsistências, homologações, decisões incompletas e limites.
 
 ## Como ler
 
