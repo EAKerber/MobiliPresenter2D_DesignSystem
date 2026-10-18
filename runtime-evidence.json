@@ -1,0 +1,259 @@
+{
+  "schema": "M2DRuntimeAudit1",
+  "observedAt": "2026-10-18",
+  "timezone": "America/Sao_Paulo",
+  "site": "https://mobilipresenter2d.netlify.app/",
+  "deployedRevision": null,
+  "deployedRevisionStatus": "not-verified",
+  "productSnapshot": {
+    "repository": "EAKerber/MobiliPresenter2D",
+    "branch": "main",
+    "commit": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
+    "note": "Static inventory snapshot; exact live Netlify revision not confirmed."
+  },
+  "scope": {
+    "readOnly": true,
+    "productCodeChanged": false,
+    "authenticationAttempted": false,
+    "automatedTestSuiteRun": false,
+    "screenshots": {
+      "shownInlineInTask": [
+        {
+          "route": "/",
+          "viewport": "1440x900",
+          "theme": "light"
+        },
+        {
+          "route": "/",
+          "viewport": "1440x900",
+          "theme": "dark"
+        },
+        {
+          "route": "/viewer/",
+          "viewport": "1440x900",
+          "theme": "dark"
+        }
+      ],
+      "persistedInRepository": false
+    }
+  },
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844,
+      "role": "mobile"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "role": "tablet"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "role": "desktop"
+    }
+  ],
+  "routeObservations": [
+    {
+      "requested": "/",
+      "actual": "/",
+      "access": "public",
+      "noHorizontalOverflow": [
+        390,
+        768,
+        1440
+      ],
+      "headerHeights": {
+        "390": 71,
+        "768": 89,
+        "1440": 89
+      }
+    },
+    {
+      "requested": "/how-it-works/",
+      "actual": "/how-it-works/",
+      "access": "public",
+      "noHorizontalOverflow": [
+        390,
+        768,
+        1440
+      ],
+      "headerHeights": {
+        "390": 71,
+        "768": 89,
+        "1440": 89
+      }
+    },
+    {
+      "requested": "/about/",
+      "actual": "/about/",
+      "access": "public",
+      "noHorizontalOverflow": [
+        390,
+        768,
+        1440
+      ],
+      "headerHeights": {
+        "390": 71,
+        "768": 89,
+        "1440": 89
+      }
+    },
+    {
+      "requested": "/viewer/",
+      "actual": "/viewer/",
+      "access": "public",
+      "noHorizontalOverflow": [
+        390,
+        768,
+        1440
+      ],
+      "publishedKitchenLoaded": true,
+      "headerHeights": {
+        "390": 65,
+        "768": 70,
+        "1440": 78
+      }
+    },
+    {
+      "requested": "/admin.html",
+      "actual": "/admin.html",
+      "access": "login-only",
+      "noHorizontalOverflow": [
+        390,
+        768,
+        1440
+      ],
+      "headerHeights": {
+        "390": 66,
+        "768": 68,
+        "1440": 78
+      }
+    },
+    {
+      "requested": "/config/",
+      "actual": "/access/",
+      "access": "redirect-without-session",
+      "noHorizontalOverflow": [
+        1440
+      ]
+    },
+    {
+      "requested": "/access/",
+      "actual": "/access/",
+      "access": "access-link-confirmation",
+      "noHorizontalOverflow": [
+        1440
+      ],
+      "emailLinkSentOrValidated": false
+    },
+    {
+      "requested": "/access/manage.html",
+      "actual": "/admin.html?returnTo=%2Faccess%2Fmanage.html",
+      "access": "redirect-without-session",
+      "authenticatedSurfaceObserved": false,
+      "noHorizontalOverflow": [
+        390,
+        768,
+        1440
+      ]
+    }
+  ],
+  "interactions": [
+    {
+      "route": "/",
+      "control": "#menuToggle",
+      "status": "conditional",
+      "evidence": "During active #introSplash (opacity 1, pointer-events auto), first click left menu closed. After overlay exit (observed around 1.8s; opacity 0 and pointer-events none), click opened primaryNav and aria-expanded became true.",
+      "interpretation": "Intro overlay intercepts early menu click; this does not establish cause of private-menu reports."
+    },
+    {
+      "route": "/admin.html",
+      "control": ".private-menu-toggle",
+      "viewport": "390x844",
+      "status": "opened-on-first-click",
+      "evidence": "aria-expanded true; private and public navigation groups visible. Signed-out state showed only Entrar na administração among private destinations."
+    }
+  ],
+  "contrastScreening": {
+    "method": "Computed browser text and solid-surface colors; WCAG relative luminance ratio. Exploratory technical screen, not independent certification.",
+    "candidates": [
+      {
+        "route": "/",
+        "selector": ".hero-description",
+        "theme": "light",
+        "foreground": "#706C66",
+        "background": "#F0EDE8",
+        "fontSize": "16px",
+        "ratio": 4.47,
+        "threshold": 4.5
+      },
+      {
+        "route": "/how-it-works/",
+        "selector": ".how-hero-note",
+        "theme": "light",
+        "foreground": "#706C66",
+        "background": "#F0EDE8",
+        "fontSize": "16px",
+        "ratio": 4.47,
+        "threshold": 4.5
+      },
+      {
+        "route": "/about/",
+        "selector": ".about-scale p:not(.eyebrow)",
+        "theme": "light",
+        "foreground": "#706C66",
+        "background": "#F0EDE8",
+        "fontSize": "16px",
+        "ratio": 4.47,
+        "threshold": 4.5
+      },
+      {
+        "route": "/how-it-works/",
+        "selector": ".study-band .eyebrow",
+        "theme": "light",
+        "foreground": "#8B6A40",
+        "background": "#E8E3DC",
+        "fontSize": "11.52px",
+        "ratio": 3.89,
+        "threshold": 4.5
+      },
+      {
+        "route": "/how-it-works/",
+        "selector": ".study-art figcaption",
+        "theme": "dark",
+        "foreground": "#C4BCB2",
+        "background": "#FCF9EF",
+        "ratio": 1.78,
+        "threshold": 4.5
+      }
+    ],
+    "observedApprovedBase": {
+      "route": "/how-it-works/",
+      "selector": ".launch-badge",
+      "theme": "dark",
+      "foreground": "#FFFFFF",
+      "background": "#A64D13",
+      "ratio": 5.69,
+      "note": "Confirms only this current pair on this component; no new variant approval."
+    },
+    "exclusions": [
+      "Image-overlaid viewer hotspots were not certified by text/background computation; inspect actual active states visually.",
+      "Pseudo-element, gradient and transparent compositing cases remain unverified."
+    ]
+  },
+  "contrastAutomation": {
+    "productWorkflowGateFound": false,
+    "source": "Static repository inventory from the previous stage",
+    "note": "The reported runtime pairs were measured during this audit, not detected by product CI."
+  },
+  "unverified": [
+    "Authenticated administration, access management, invitation flows and configurator",
+    "Full keyboard behavior: Escape, outside click, focus restoration and tab order",
+    "Runtime reduced-motion preference",
+    "Dynamic hover, pressed, focus, selection and loading state coverage",
+    "Contrast on images, gradients, pseudo-elements and transparent layers",
+    "Exact commit currently deployed on Netlify"
+  ]
+}
