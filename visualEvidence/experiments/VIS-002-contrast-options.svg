@@ -1,35 +1,27 @@
-# Pacote de revisão visual — NAV-005 e VIS-002
-
-**Status:** candidatos experimentais para revisão; nenhuma nova decisão foi homologada nesta etapa.  
-**Base de evidência:** produção em 2026-10-18, deploy Netlify `6ad518d3da1379029e04324f`, commit `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`.  
-**Registro canônico:** `decisions.json`. Este pacote não altera decisões ou tokens.
-
-## 1. Cabeçalho público — NAV-005
-
-![Alternativas experimentais para o cabeçalho público](NAV-005-public-header-options.svg)
-
-- **A — navegação exposta:** destinos visíveis em desktop; menu hambúrguer nos viewports estreitos.
-- **B — navegação compacta:** controles no cabeçalho e destinos dentro do menu em todos os viewports.
-
-As duas opções preservam o contrato funcional NAV-004. A amostra de logo é uma aproximação tipográfica/desenhada para comparar composição; não substitui o asset oficial. Cor, altura, tipografia, espaçamentos, ícones e tratamento do CTA são ilustrativos e não foram aprovados. A confirmação que falta é principalmente de composição: links expostos ou menu compacto.
-
-A referência publicada atual está em [landing-dark.jpg](../../public/landing/landing-dark.jpg). Ela mostra o cabeçalho atual; não é uma opção futura aprovada.
-
-## 2. Pares de contraste — VIS-002
-
-![Candidatos experimentais de contraste para dois achados do runtime](VIS-002-contrast-options.svg)
-
-A triagem runtime encontrou texto corrido em `#706C66` sobre `#F0EDE8` (4,47:1) e rótulo pequeno `#8B6A40` sobre `#E8E3DC` (3,89:1). Os candidatos mais escuros atendem ao alvo matemático de 4,5:1 para texto comum nos pares sólidos exibidos. Os valores foram calculados para comparação; precisam ser conferidos nos componentes/temas reais antes de adoção.
-
-- **Texto corrido:** A `#6D675F` (4,79:1) mantém tom mais próximo do atual; B `#675F55` (5,38:1) oferece maior margem.
-- **Rótulo quente:** A `#765832` (5,12:1) mantém proximidade com a família terrosa; B `#70522F` (5,60:1) oferece maior margem.
-
-Isso não transforma os candidatos em tokens. O azul homologado para informação de processo e a base promocional `#A64D13` permanecem conforme VIS-002; variantes de cobre por tema/superfície seguem pendentes.
-
-## Revisão solicitada
-
-1. Cabeçalho público: A, B, ou comentários sobre outra composição.
-2. Texto corrido: A ou B; se não houver preferência visual, escolha posterior pode priorizar a menor alteração que alcance contraste suficiente.
-3. Rótulo: A ou B; a escolha ainda deve ser validada no componente e tema de origem.
-
-Até essa revisão, `NAV-005` permanece aberto e os quatro hexadecimais candidatos continuam fora de `decisions.json`.
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="800" viewBox="0 0 1440 800">
+<rect width="1440" height="800" fill="#f3f0eb"/>
+<text x="72" y="70" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#745839" letter-spacing="2">VIS-002 · REVISÃO DE CONTRASTE</text>
+<text x="72" y="116" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#252422">Duas escolhas em contexto real</text>
+<text x="72" y="153" font-family="Arial,sans-serif" font-size="17" fill="#66615a">Os tons abaixo são candidatos calculados para leitura; nenhum foi adicionado como token ou homologado.</text>
+<g transform="translate(72 195)">
+<rect width="1296" height="250" rx="18" fill="#fff" stroke="#d4cec5"/>
+<text x="28" y="42" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#252422">A · Texto de apoio em superfície clara</text>
+<rect x="28" y="66" width="380" height="148" rx="12" fill="#F0EDE8" stroke="#ddd7cf"/>
+<text x="50" y="97" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#66615a">ATUAL · 4,47:1</text><text x="50" y="133" font-family="Arial,sans-serif" font-size="16" fill="#706C66">Móveis inteligentes, pensados para o seu espaço.</text><text x="50" y="180" font-family="Arial,sans-serif" font-size="13" fill="#66615a">#706C66 sobre #F0EDE8</text>
+<rect x="428" y="66" width="400" height="148" rx="12" fill="#F0EDE8" stroke="#ddd7cf"/>
+<text x="450" y="97" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#66615a">CANDIDATO A · 4,79:1</text><text x="450" y="133" font-family="Arial,sans-serif" font-size="16" fill="#6D675F">Móveis inteligentes, pensados para o seu espaço.</text><text x="450" y="180" font-family="Arial,sans-serif" font-size="13" fill="#66615a">#6D675F sobre #F0EDE8</text>
+<rect x="848" y="66" width="420" height="148" rx="12" fill="#F0EDE8" stroke="#ddd7cf"/>
+<text x="870" y="97" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#66615a">CANDIDATO B · 5,38:1</text><text x="870" y="133" font-family="Arial,sans-serif" font-size="16" fill="#675F55">Móveis inteligentes, pensados para o seu espaço.</text><text x="870" y="180" font-family="Arial,sans-serif" font-size="13" fill="#66615a">#675F55 sobre #F0EDE8</text>
+</g>
+<g transform="translate(72 480)">
+<rect width="1296" height="250" rx="18" fill="#fff" stroke="#d4cec5"/>
+<text x="28" y="42" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#252422">B · Rótulo pequeno em superfície quente</text>
+<rect x="28" y="66" width="380" height="148" rx="12" fill="#E8E3DC" stroke="#d8d1c8"/>
+<text x="50" y="97" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#66615a">ATUAL · 3,89:1</text><text x="50" y="133" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#8B6A40">PROJETO EM DESTAQUE</text><text x="50" y="180" font-family="Arial,sans-serif" font-size="13" fill="#66615a">#8B6A40 sobre #E8E3DC</text>
+<rect x="428" y="66" width="400" height="148" rx="12" fill="#E8E3DC" stroke="#d8d1c8"/>
+<text x="450" y="97" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#66615a">CANDIDATO A · 5,12:1</text><text x="450" y="133" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#765832">PROJETO EM DESTAQUE</text><text x="450" y="180" font-family="Arial,sans-serif" font-size="13" fill="#66615a">#765832 sobre #E8E3DC</text>
+<rect x="848" y="66" width="420" height="148" rx="12" fill="#E8E3DC" stroke="#d8d1c8"/>
+<text x="870" y="97" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#66615a">CANDIDATO B · 5,60:1</text><text x="870" y="133" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#70522F">PROJETO EM DESTAQUE</text><text x="870" y="180" font-family="Arial,sans-serif" font-size="13" fill="#66615a">#70522F sobre #E8E3DC</text>
+</g>
+<text x="72" y="766" font-family="Arial,sans-serif" font-size="13" fill="#796c5b">Contraste calculado para texto comum em superfícies sólidas. Uso, aparência e combinações por tema ainda exigem validação no DOM e revisão.</text>
+</svg>
