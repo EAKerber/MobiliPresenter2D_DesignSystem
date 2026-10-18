@@ -10,7 +10,7 @@
 
 Inspeção somente de leitura no site publicado, cobrindo páginas públicas e a tela de login administrativo. Foram observados DOM, tema, largura do documento, cabeçalhos, comportamento do menu e alguns pares de contraste em superfícies sólidas. A medição de contraste usa cores computadas pelo navegador e luminância relativa; é uma triagem técnica, não uma certificação WCAG nem aprovação visual.
 
-Nenhum código do produto foi alterado. Não houve tentativa de login, envio de link, acesso a dados privados ou execução de testes automatizados. Capturas adicionais foram persistidas em `visualEvidence/public/landing/` (claro e escuro) e `visualEvidence/public/viewer/` (escuro), em 1280 × 720. São referências do site publicado capturadas nesta retomada; não são propostas homologadas. O conjunto original mostrado inline em 1440 × 900 permanece distinto destas capturas.
+Nenhum código do produto foi alterado. Não houve tentativa de login, envio de link, acesso a dados privados ou execução de testes automatizados. Capturas adicionais foram persistidas como JPEG em 1280 × 720: [landing claro](visualEvidence/public/landing/landing-light.jpg), [landing escuro](visualEvidence/public/landing/landing-dark.jpg) e [viewer escuro](visualEvidence/public/viewer/viewer-dark.jpg). São referências do site publicado capturadas nesta retomada; não são propostas homologadas. O conjunto original mostrado inline em 1440 × 900 permanece distinto destas capturas.
 
 ## Cobertura de rotas e tamanhos
 
