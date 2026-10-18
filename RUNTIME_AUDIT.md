@@ -91,3 +91,8 @@ O inventário estático não encontrou um gate de contraste conectado às rotas 
 ## Reconciliação da triagem estática DS-04
 
 O issue [#208 do produto](https://github.com/EAKerber/MobiliPresenter2D/issues/208) foi atualizado após comparar seu baseline `67d3197` com o snapshot de produção `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`. No código, DS04-01 (carregamento do tema em `/access/`) e DS04-08 (fundo/texto do dock em tema claro) estão resolvidos. Permanecem candidatos estáticos DS04-02 a DS04-07, DS04-09, DS04-10 e DS04-12; DS04-11 está documentado como exceção técnica intencional. Essa reconciliação não inclui medidas runtime de contraste para cada seletor; os valores do relatório original continuam sendo medições do baseline, não do DOM atual. Veja a classificação detalhada no issue #208 e o [registro de achados](FINDINGS_REGISTER.md).
+
+
+## Revisão visual do Configurador em tema claro (2026-10-18)
+
+Em viewport estreito, a checagem visual em tema claro confirmou que o menu aberto continua atrás da imagem da cena e cobre parte do link “Como funciona” (também observado no tema escuro; [issue #214](https://github.com/EAKerber/MobiliPresenter2D/issues/214)). Na etapa Resumo, o rótulo “Módulos” em `.price-state__breakdown dt` aparece quase ilegível no cartão claro, confirmando visualmente DS04-07, sem nova razão numérica; registro em [issue #208](https://github.com/EAKerber/MobiliPresenter2D/issues/208). No painel Serviços, o texto da iluminação indisponível por dependência também parece muito atenuado. Esse controle está desabilitado, então foi anotado como revisão visual, não como falha WCAG confirmada. Nenhuma opção da configuração foi marcada ou alterada. O navegador foi devolvido ao tema escuro, etapa Serviços e menu aberto.
