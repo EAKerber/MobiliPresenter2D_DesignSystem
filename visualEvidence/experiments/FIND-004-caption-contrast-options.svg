@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1520" height="900" viewBox="0 0 1520 900" role="img" aria-labelledby="title desc">
-<title id="title">FIND-004 — opções experimentais para a legenda</title>
-<desc id="desc">O estado atual põe legenda clara diretamente sobre uma ilustração clara. Opção A separa a legenda em superfície escura abaixo da imagem. Opção B põe uma faixa escura na base da ilustração. Nenhuma alternativa está aprovada.</desc>
+<title id="title">FIND-004 — tratamento B escolhido; cores pendentes</title>
+<desc id="desc">O estado atual põe legenda clara diretamente sobre uma ilustração clara. Opção A separa a legenda em superfície escura abaixo da imagem. Opção B põe uma faixa escura na base da ilustração. A opção B foi escolhida para a composição; as cores e a opacidade continuam experimentais.</desc>
 <defs>
   <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#f4efe6"/><stop offset="1" stop-color="#ddd4c7"/></linearGradient>
   <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#d8cfc2"/><stop offset="1" stop-color="#c7bcad"/></linearGradient>
@@ -18,7 +18,7 @@
   </style>
 </defs>
 <rect width="1520" height="900" fill="#111110"/>
-<text x="56" y="64" class="label">FIND-004 · DECISÃO VISUAL PENDENTE</text>
+<text x="56" y="64" class="label">FIND-004 · OPÇÃO B ESCOLHIDA · CORES PENDENTES</text>
 <text x="56" y="112" class="title">Legenda sobre ilustração clara no tema escuro</text>
 <text x="56" y="148" class="sub">O estado atual mede 1,78:1. As propostas são experimentais; as cores são amostras, não tokens.</text>
 <!-- estado atual -->
@@ -73,7 +73,7 @@
 <!-- opção B -->
 <g transform="translate(1024 190)">
   <rect width="440" height="620" rx="18" class="card"/>
-  <text x="28" y="42" class="label">OPÇÃO B · SOBRE A IMAGEM</text>
+  <text x="28" y="42" class="label">OPÇÃO B · ESCOLHIDA</text>
   <text x="28" y="79" class="h">Faixa escura na base</text>
   <text x="28" y="109" class="small">Legenda permanece na figura, sobre fundo controlado.</text>
   <g transform="translate(24 137)">
@@ -96,5 +96,5 @@
   <text x="28" y="556" class="body">Mantém a legenda integrada à ilustração.</text>
   <text x="28" y="585" class="small">A faixa escurece uma parte da imagem.</text>
 </g>
-<text x="56" y="862" class="small">Prancha esquemática, não reproduz o componente final. Valores são demonstrativos e não homologam cores, dimensões ou tokens.</text>
+<text x="56" y="862" class="small">Opção B escolhida para a composição. Prancha esquemática; cores, opacidade, dimensões e tokens continuam pendentes.</text>
 </svg>
