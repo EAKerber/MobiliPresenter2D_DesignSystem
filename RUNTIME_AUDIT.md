@@ -96,3 +96,13 @@ O issue [#208 do produto](https://github.com/EAKerber/MobiliPresenter2D/issues/2
 ## Revisão visual do Configurador em tema claro (2026-10-18)
 
 Em viewport estreito, a checagem visual em tema claro confirmou que o menu aberto continua atrás da imagem da cena e cobre parte do link “Como funciona” (também observado no tema escuro; [issue #214](https://github.com/EAKerber/MobiliPresenter2D/issues/214)). Na etapa Resumo, o rótulo “Módulos” em `.price-state__breakdown dt` aparece quase ilegível no cartão claro, confirmando visualmente DS04-07, sem nova razão numérica; registro em [issue #208](https://github.com/EAKerber/MobiliPresenter2D/issues/208). No painel Serviços, o texto da iluminação indisponível por dependência também parece muito atenuado. Esse controle está desabilitado, então foi anotado como revisão visual, não como falha WCAG confirmada. Nenhuma opção da configuração foi marcada ou alterada. O navegador foi devolvido ao tema escuro, etapa Serviços e menu aberto.
+
+
+## Confirmação pontual do contador no Configurador (2026-10-18)
+
+Na sessão autenticada já aberta no navegador, em viewport de aproximadamente 500 × 600 px, tema escuro e etapa Serviços, o DOM acessível informou que o cenário estava sem módulos e a iluminação permanecia indisponível por dependência. Mesmo assim, a interface mostrou `8 de 8 itens incluídos`. Isso confirma novamente o estado descrito em FIND-006 / issue [#209](https://github.com/EAKerber/MobiliPresenter2D/issues/209); não identifica a causa do cálculo. O menu foi fechado para a observação, nenhuma opção foi alterada e nenhum dado de conta foi registrado. A captura desta sessão não foi adicionada a `visualEvidence`; as capturas existentes permanecem referências de outros estados e resoluções.
+
+
+## Validade das capturas anteriores
+
+O usuário observou que as capturas salvas anteriormente mostram uma versão anterior do cabeçalho. Apesar dos metadados históricos associarem essas imagens ao snapshot/deploy `298c114`, elas não devem ser usadas como referência visual atual dos cabeçalhos. Nesta continuação, o cabeçalho atual do Configurador foi observado no navegador, mas não houve substituição das capturas no repositório. A prancha de FIND-004 é um esquema experimental e não substitui capturas atuais do produto.

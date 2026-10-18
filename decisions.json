@@ -175,6 +175,24 @@
       "approvalSource": "User selection of the alternatives in the visual review."
     },
     {
+      "id": "VIS-003",
+      "status": "visual-treatment-approved-values-pending",
+      "verdict": "agreed",
+      "finding": "FIND-004",
+      "decision": "No tema escuro, manter a legenda integrada à ilustração sobre uma faixa escura na base da imagem (opção B), para criar um fundo de contraste controlado sem separar a legenda da figura.",
+      "approvedScope": "Somente a relação de composição: faixa escura atrás da legenda na base da imagem.",
+      "notApproved": [
+        "Cores exatas de texto/faixa e opacidade ou gradiente",
+        "Tokens globais, variantes por tema/superfície ou extensão para outros componentes",
+        "Dimensões, espaçamento e comportamento responsivo",
+        "Implementação no produto"
+      ],
+      "evidence": "A auditoria runtime encontrou contraste de 1,78:1 em .study-art figcaption no tema escuro. A escolha B foi feita após revisão da prancha de alternativas e do caso real publicado em /how-it-works/.",
+      "implementationAuthorized": false,
+      "approvedAt": "2026-10-18",
+      "approvalSource": "Seleção explícita do usuário da opção B."
+    },
+    {
       "id": "EST-01",
       "status": "direction-agreed",
       "context": "Configurador",
