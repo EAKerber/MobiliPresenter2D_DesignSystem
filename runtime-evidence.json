@@ -342,5 +342,16 @@
       "observation": "The scene oven image visually overlays the public navigation list and obscures part of the Como funciona link. Links remained present in the accessibility tree. Exact stacking or hit-testing cause not isolated; evidence includes the user-provided screenshot and live visual confirmation."
     }
   ],
-  "findingsRegister": "FINDINGS_REGISTER.md"
+  "findingsRegister": "FINDINGS_REGISTER.md",
+  "productBacklogIssues": {
+    "FIND-001": 215,
+    "FIND-002": 216,
+    "FIND-003": 216,
+    "FIND-004": 217,
+    "FIND-005": 212,
+    "FIND-006": 209,
+    "FIND-007": 213,
+    "FIND-008": 208,
+    "FIND-009": 214
+  }
 }
