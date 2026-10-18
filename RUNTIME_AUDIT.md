@@ -49,7 +49,7 @@ Após o usuário autenticar, `admin.html` carregou o editor e a mensagem de falh
 
 A sequência identificou uma inconsistência transitória: um estado do menu do Admin observado logo após o login ainda oferecia entrada, mas uma navegação nova para Admin mostrou as opções autenticadas. O menu funcionou nas verificações posteriores em Admin, Configurador e Gerenciar acessos. Isso não descarta a intermitência relatada nem explica sua causa.
 
-No Configurador, o indicador exibiu `8 de 8 itens incluídos` sem módulos selecionados; na etapa Serviços, a iluminação estava desabilitada por dependência e o mesmo total continuou visível. Essa contradição confirma a inconsistência funcional descrita no issue #209. A inspeção foi somente visual/DOM; nenhum estado foi alterado. O novo achado de sobreposição entre a cena e o menu em viewport estreito está em [FINDINGS_REGISTER.md](FINDINGS_REGISTER.md).
+No Configurador, o indicador exibiu `8 de 8 itens incluídos` sem módulos selecionados; na etapa Serviços, a iluminação estava desabilitada por dependência e o mesmo total continuou visível. Essa contradição confirma a inconsistência funcional descrita no issue #209. A inspeção foi somente visual/DOM; nenhum estado foi alterado. O novo achado de sobreposição entre a cena e o menu em viewport estreito está em [FINDINGS_REGISTER.md](FINDINGS_REGISTER.md) e no [issue #214](https://github.com/EAKerber/MobiliPresenter2D/issues/214). A inconsistência de sessão do menu está no [issue #213](https://github.com/EAKerber/MobiliPresenter2D/issues/213).
 
 ## Contraste: triagem em DOM real
 
