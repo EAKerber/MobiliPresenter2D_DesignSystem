@@ -14,7 +14,7 @@
   "scope": {
     "readOnly": true,
     "productCodeChanged": false,
-    "authenticationAttempted": false,
+    "authenticationAttempted": true,
     "automatedTestSuiteRun": false,
     "screenshots": {
       "shownInlineInTask": [
@@ -91,7 +91,10 @@
           "source": "Browser capture of the published production site"
         }
       ]
-    }
+    },
+    "authenticationCompletedByUser": true,
+    "authenticatedScreenshotsPersisted": false,
+    "privateAuthenticatedScreenshotsPersisted": false
   },
   "viewports": [
     {
@@ -316,5 +319,91 @@
     "Runtime reduced-motion preference",
     "Dynamic hover, pressed, focus, selection and loading state coverage",
     "Contrast on images, gradients, pseudo-elements and transparent layers"
+  ],
+  "authenticatedSessionObservations": [
+    {
+      "route": "/admin.html",
+      "state": "authenticated",
+      "observation": "Editor loaded on fresh navigation; post-login administrative-data error was not visible in that visit. Menu opened with private destinations and logout. A previous menu state immediately after sign-in showed the signed-out entry option; the transition inconsistency was not reproduced after fresh navigation."
+    },
+    {
+      "route": "/config/",
+      "state": "authenticated",
+      "observation": "Configurator loaded. Menu opened with private/public groups and logout. Indicator showed 8 of 8 items included while all seven modules were unselected; lighting was disabled by its dependency."
+    },
+    {
+      "route": "/access/manage.html",
+      "state": "authenticated",
+      "observation": "Management page loaded; menu opened with private/public groups and logout. Invitation values were not read or recorded."
+    },
+    {
+      "route": "/config/ menu overlay",
+      "state": "authenticated narrow viewport",
+      "observation": "The scene oven image visually overlays the public navigation list and obscures part of the Como funciona link. Links remained present in the accessibility tree. Exact stacking or hit-testing cause not isolated; evidence includes the user-provided screenshot and live visual confirmation."
+    }
+  ],
+  "findingsRegister": "FINDINGS_REGISTER.md",
+  "productBacklogIssues": {
+    "FIND-001": 215,
+    "FIND-002": 216,
+    "FIND-003": 216,
+    "FIND-004": 217,
+    "FIND-005": 212,
+    "FIND-006": 209,
+    "FIND-007": 213,
+    "FIND-008": 208,
+    "FIND-009": 214
+  },
+  "baselineAuditReconciliation": {
+    "productIssue": 208,
+    "baselineCommit": "67d31976c605c76c7ef10876d03fdeb17369ab78",
+    "productionCommit": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
+    "sourceReviewOnly": true,
+    "resolvedInSource": [
+      "DS04-01",
+      "DS04-08"
+    ],
+    "remainingStaticCandidates": [
+      "DS04-02",
+      "DS04-03",
+      "DS04-04",
+      "DS04-05",
+      "DS04-06",
+      "DS04-07",
+      "DS04-09",
+      "DS04-10",
+      "DS04-12"
+    ],
+    "explicitTechnicalException": [
+      "DS04-11"
+    ],
+    "runtimeContrastMeasured": false,
+    "details": "See FINDINGS_REGISTER.md and product issue #208. Baseline contrast values are historical and were not remeasured against the production DOM."
+  },
+  "lightThemeReviewObservations": [
+    {
+      "route": "/config/",
+      "theme": "light",
+      "viewport": "narrow browser viewport",
+      "stage": "summary",
+      "selector": ".price-state__breakdown dt",
+      "observation": "The Módulos label appears almost illegible on the light summary card. Visual confirmation only; no new numeric computed contrast measurement."
+    },
+    {
+      "route": "/config/",
+      "theme": "light",
+      "viewport": "narrow browser viewport",
+      "stage": "services",
+      "selector": ".service-check.is-blocked",
+      "observation": "Disabled lighting option text appears strongly faded. Recorded for visual review only; control is unavailable due to dependencies and is not classified as a confirmed WCAG failure."
+    },
+    {
+      "route": "/config/",
+      "theme": "light and dark",
+      "viewport": "narrow browser viewport",
+      "stage": "services",
+      "selector": "[data-private-menu] and scene image",
+      "observation": "Scene image overlays and obscures part of the Como funciona menu link in both themes."
+    }
   ]
 }
