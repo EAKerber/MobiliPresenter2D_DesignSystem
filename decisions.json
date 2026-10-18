@@ -43,28 +43,36 @@
       "decision": "Menu público abre e fecha pelo botão, responde a Escape e clique fora, permite navegação por teclado, expõe aria-expanded, devolve foco quando adequado e respeita preferência por movimento reduzido. Páginas públicas dão acesso a Ambientes (landing), Como funciona, Quem somos e Contato.",
       "notApproved": [
         "Estética do header; tratada separadamente em NAV-005."
-      ]
+      ],
+      "publicContactAccess": {
+        "status": "current-access-retained-with-approved-public-header-pattern",
+        "decision": "The existing 'Fale conosco' link to WhatsApp remains the public contact access under the user's approval of wide public-header option A. This does not establish a separate contact route."
+      }
     },
     {
       "id": "NAV-005",
-      "status": "organizational-direction-approved",
+      "status": "approved-for-wide-layout-structure",
       "verdict": "agreed",
       "decision": "Header global com acesso às quatro páginas públicas. Identificação do ambiente do viewer fica em área contextual separada do header; controles e interação da cena ficam no conteúdo do viewer. O viewer é subpágina de ambiente, portanto Ambientes não deve ser falsamente marcado como a página ativa.",
       "examplesNotApproved": [
         "Ambientes › Cozinha é somente exemplo de breadcrumb."
       ],
       "notApproved": [
-        "Composição/estética do header público",
-        "Altura",
-        "Tipografia",
-        "Cores",
-        "Logo",
-        "Aparência do menu",
-        "Apresentação do contexto"
+        "Exact header heights, spacing, typography, colors, icons and logo treatment",
+        "Compact/mobile breakpoint values and compositions"
       ],
       "future": [
         "Generalização multiambiente (ENV-001)."
-      ]
+      ],
+      "wideLayoutPatternsApproved": {
+        "publicPages": "Option A: retain the existing expanded/wide public-page pattern with the logo at left, public navigation exposed horizontally, and contact/theme controls in the established right-side area.",
+        "privatePages": "Option B: logo and current page/area identifier at left; theme control and hamburger at right, with the hamburger at the far edge.",
+        "secondaryNavigationPages": "Use a viewer-like contextual header for pages intended to be reached from another page. Move the theme control inside the header. In the right-side cluster, place the theme control to the left of a hamburger/menu at the far edge; retain contextual return navigation.",
+        "scope": "Approved for expanded/wide layouts only. Breakpoint values and compact/mobile compositions are not approved by this follow-up."
+      },
+      "implementationAuthorized": false,
+      "approvedAt": "2026-10-18",
+      "approvalSource": "User selection of the alternatives in the visual review."
     },
     {
       "id": "VIS-001",
@@ -75,15 +83,13 @@
     },
     {
       "id": "VIS-002",
-      "status": "conceptual-direction-approved",
+      "status": "conceptual-direction-and-scoped-pairs-approved",
       "verdict": "agreed",
       "decision": "Paleta-base de identidade compartilhada entre interfaces, com aplicação contextual. A arquitetura futura de tokens deve poder atender light e dark; não presumir ambos os modos em todas as rotas. Revisar contraste de texto, controles, foco e estados. Definir semanticamente erro, aviso, sucesso e informação, além de foco, seleção, hover, pressionado e desabilitado. Informação de processo usa o azul homologado; informação promocional de produto usa a cor terciária cobre com base aprovada #A64D13.",
       "notApproved": [
-        "Pares de contraste por tema/superfície",
-        "Variações de cobre",
-        "Aparências de outros estados",
-        "Troca de tema por rota",
-        "Implementação visual"
+        "Global tokenization or extension of these exact pairs to other surfaces/themes",
+        "Copper variants by theme or surface",
+        "Other state appearances, theme-by-route decisions and implementation details"
       ],
       "semanticColors": {
         "approvedDirection": "Estados semânticos reconhecíveis, harmonizados com a marca, com combinações adequadas por tema. Mensagens não dependem apenas da cor.",
@@ -118,16 +124,55 @@
       "contextualSelection": "Semântica compartilhada; intensidade da seleção varia por tarefa: viewer discreto e com cena protagonista; configurador mais explícito para distinguir opções próximas; admin forte e inequívoco em telas densas. Foco é independente e perceptível em todos os contextos/temas.",
       "est01Addendum": "No configurador, uma seleção que altera a configuração combina indicador explícito (ex. check) e destaque moderado de superfície ou borda, sem competir com o conteúdo. Foco não cria uma terceira aparência ornamentada.",
       "notYetSpecified": [
-        "Tokens light/dark",
-        "Pares finais de contraste",
-        "Variantes visuais",
-        "Espessuras/medidas",
-        "Tema por rota",
-        "Hover/pressed/disabled/loading",
-        "Variações do cobre por tema/superfície",
-        "Pares finais de contraste em componentes reais",
-        "Ligação das outras cores de estado às telas e tokens atuais"
-      ]
+        "Global token mapping and light/dark variants beyond the two approved contextual pairs",
+        "Additional final contrast pairs in other components, surfaces and themes",
+        "Visual variants and measurements for focus, selection, hover, pressed, disabled and loading",
+        "Copper variations by theme/surface outside approved base #A64D13",
+        "Mapping of other semantic state colors to actual screens and tokens"
+      ],
+      "approvedRuntimePairs": [
+        {
+          "status": "approved-contextual-pair",
+          "context": "Light-theme body support text on the audited warm surface",
+          "foreground": "#675F55",
+          "background": "#F0EDE8",
+          "contrast": "5.38:1",
+          "selected": "Option B in visual review",
+          "scope": "Exact inspected pair only; not a global text token.",
+          "routeSelectors": [
+            {
+              "route": "/",
+              "selector": ".hero-description"
+            },
+            {
+              "route": "/how-it-works/",
+              "selector": ".how-hero-note"
+            },
+            {
+              "route": "/about/",
+              "selector": ".about-scale p:not(.eyebrow)"
+            }
+          ]
+        },
+        {
+          "status": "approved-contextual-pair",
+          "context": "Light-theme small warm eyebrow label on the audited warm surface",
+          "foreground": "#70522F",
+          "background": "#E8E3DC",
+          "contrast": "5.60:1",
+          "selected": "Option B in visual review",
+          "scope": "Exact inspected pair only; not a global color token.",
+          "routeSelectors": [
+            {
+              "route": "/how-it-works/",
+              "selector": ".study-band .eyebrow"
+            }
+          ]
+        }
+      ],
+      "implementationAuthorized": false,
+      "approvedAt": "2026-10-18",
+      "approvalSource": "User selection of the alternatives in the visual review."
     },
     {
       "id": "EST-01",
