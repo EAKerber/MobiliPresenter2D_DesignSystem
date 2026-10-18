@@ -64,7 +64,7 @@ Os seguintes pares foram lidos no DOM, em estado visual estável, sobre fundos s
 | Como funciona, legenda de `.study-art` | Escuro | 1440 × 900 | `#C4BCB2` sobre `#FCF9EF` | 1,78:1 | Contraste baixo no painel claro mantido no tema escuro |
 | Como funciona, `.launch-badge` “Condição especial” | Escuro | 1440 × 900 | texto branco sobre `#A64D13` | 5,69:1 | Par atual acima de 4,5:1; não aprova outras variantes |
 
-Os três primeiros pares estão próximos do limite de 4,5:1, mas continuam abaixo dele. A legenda da ilustração é o caso mais evidente: a superfície clara da figura persiste no modo escuro, enquanto a legenda muda para um tom claro. O registro é de falha/candidato técnico no contexto observado; qualquer ajuste de cor deve respeitar a direção homologada e passar por revisão visual quando houver mais de uma solução.
+Os três primeiros pares estão próximos do limite de 4,5:1, mas continuam abaixo dele. A legenda da ilustração é o caso mais evidente: a superfície clara da figura persiste no modo escuro, enquanto a legenda muda para um tom claro. O registro é de falha/candidato técnico no contexto observado. A composição para corrigir este caso foi escolhida em VIS-003 (faixa escura na base da ilustração), mas ainda não há correção no produto; cor e opacidade/gradiente exigem medição e revisão antes da aplicação.
 
 A amostra promocional atual confirma que branco sobre a base aprovada `#A64D13` funciona neste componente e nesta superfície. Isso não homologa o uso em outros fundos, tamanhos de texto ou temas. As superfícies autenticadas do Admin — incluindo as opções mostradas no inventário estático — não tiveram contraste medido nesta sessão.
 
