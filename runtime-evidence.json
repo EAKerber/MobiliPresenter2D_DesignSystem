@@ -2,14 +2,14 @@
   "schema": "M2DRuntimeAudit1",
   "observedAt": "2026-10-18",
   "timezone": "America/Sao_Paulo",
-  "site": "https://mobilipresenter2d.netlify.app/",
-  "deployedRevision": null,
-  "deployedRevisionStatus": "not-verified",
+  "site": "https://casaemmodulos.casa/",
+  "deployedRevision": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
+  "deployedRevisionStatus": "verified-production-deploy",
   "productSnapshot": {
     "repository": "EAKerber/MobiliPresenter2D",
     "branch": "main",
     "commit": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
-    "note": "Static inventory snapshot; exact live Netlify revision not confirmed."
+    "note": "Static inventory snapshot matches the verified production Netlify deploy commit."
   },
   "scope": {
     "readOnly": true,
@@ -59,6 +59,36 @@
           "viewport": "1265x712",
           "format": "JPEG",
           "source": "Browser viewport capture of the published site"
+        },
+        {
+          "path": "visualEvidence/private/admin-login/admin-login-light.jpg",
+          "sourceRoute": "/admin.html",
+          "theme": "light",
+          "viewport": "1280x720",
+          "format": "JPEG",
+          "state": "signed-out, menu closed",
+          "deployedRevision": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
+          "source": "Browser capture of the published production site"
+        },
+        {
+          "path": "visualEvidence/private/admin-login/admin-login-dark.jpg",
+          "sourceRoute": "/admin.html",
+          "theme": "dark",
+          "viewport": "1280x720",
+          "format": "JPEG",
+          "state": "signed-out, menu closed",
+          "deployedRevision": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
+          "source": "Browser capture of the published production site"
+        },
+        {
+          "path": "visualEvidence/private/admin-login/admin-login-menu-dark.jpg",
+          "sourceRoute": "/admin.html",
+          "theme": "dark",
+          "viewport": "1280x720",
+          "format": "JPEG",
+          "state": "signed-out, private and public navigation groups expanded",
+          "deployedRevision": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
+          "source": "Browser capture of the published production site"
         }
       ]
     }
