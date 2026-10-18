@@ -11,7 +11,7 @@
 <rect x="428" y="66" width="400" height="148" rx="12" fill="#F0EDE8" stroke="#ddd7cf"/>
 <text x="450" y="97" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#66615a">CANDIDATO A · 4,79:1</text><text x="450" y="133" font-family="Arial,sans-serif" font-size="16" fill="#6D675F">Móveis inteligentes, pensados para o seu espaço.</text><text x="450" y="180" font-family="Arial,sans-serif" font-size="13" fill="#66615a">#6D675F sobre #F0EDE8</text>
 <rect x="848" y="66" width="420" height="148" rx="12" fill="#F0EDE8" stroke="#ddd7cf"/>
-<text x="870" y="97" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#66615a">CANDIDATO B · 5,38:1</text><text x="870" y="133" font-family="Arial,sans-serif" font-size="16" fill="#675F55">Móveis inteligentes, pensados para o seu espaço.</text><text x="870" y="180" font-family="Arial,sans-serif" font-size="13" fill="#66615a">#675F55 sobre #F0EDE8</text>
+<text x="870" y="97" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#66615a">APROVADO B · 5,38:1</text><text x="870" y="133" font-family="Arial,sans-serif" font-size="16" fill="#675F55">Móveis inteligentes, pensados para o seu espaço.</text><text x="870" y="180" font-family="Arial,sans-serif" font-size="13" fill="#66615a">#675F55 sobre #F0EDE8</text>
 </g>
 <g transform="translate(72 480)">
 <rect width="1296" height="250" rx="18" fill="#fff" stroke="#d4cec5"/>
@@ -21,7 +21,7 @@
 <rect x="428" y="66" width="400" height="148" rx="12" fill="#E8E3DC" stroke="#d8d1c8"/>
 <text x="450" y="97" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#66615a">CANDIDATO A · 5,12:1</text><text x="450" y="133" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#765832">PROJETO EM DESTAQUE</text><text x="450" y="180" font-family="Arial,sans-serif" font-size="13" fill="#66615a">#765832 sobre #E8E3DC</text>
 <rect x="848" y="66" width="420" height="148" rx="12" fill="#E8E3DC" stroke="#d8d1c8"/>
-<text x="870" y="97" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#66615a">CANDIDATO B · 5,60:1</text><text x="870" y="133" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#70522F">PROJETO EM DESTAQUE</text><text x="870" y="180" font-family="Arial,sans-serif" font-size="13" fill="#66615a">#70522F sobre #E8E3DC</text>
+<text x="870" y="97" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#66615a">APROVADO B · 5,60:1</text><text x="870" y="133" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#70522F">PROJETO EM DESTAQUE</text><text x="870" y="180" font-family="Arial,sans-serif" font-size="13" fill="#66615a">#70522F sobre #E8E3DC</text>
 </g>
-<text x="72" y="766" font-family="Arial,sans-serif" font-size="13" fill="#796c5b">Contraste calculado para texto comum em superfícies sólidas. Uso, aparência e combinações por tema ainda exigem validação no DOM e revisão.</text>
+<text x="72" y="766" font-family="Arial,sans-serif" font-size="13" fill="#796c5b">Opção B selecionada nos dois pares exatos. Não são tokens globais; revalidar no DOM antes da implementação.</text>
 </svg>
