@@ -51,14 +51,14 @@ O acesso sem sessão não expôs o configurador nem o gerenciamento de acessos. 
 
 Os seguintes pares foram lidos no DOM, em estado visual estável, sobre fundos sólidos. Para texto comum, valores abaixo de 4,5:1 ficam registrados como candidatos a correção técnica. A triagem não escolhe uma nova cor nem torna qualquer valor um token homologado.
 
-| Tela / seletor | Tema | Texto / superfície | Contraste | Leitura |
-|---|---|---|---:|---|
-| Landing, `.hero-description` | Claro | `#706C66` sobre `#F0EDE8`, 16 px | 4,47:1 | Abaixo de 4,5:1 |
-| Como funciona, `.how-hero-note` | Claro | `#706C66` sobre `#F0EDE8`, 16 px | 4,47:1 | Abaixo de 4,5:1 |
-| Quem somos, parágrafo de `.about-scale` | Claro | `#706C66` sobre `#F0EDE8`, 16 px | 4,47:1 | Abaixo de 4,5:1 |
-| Como funciona, `.eyebrow` em `.study-band` | Claro | `#8B6A40` sobre `#E8E3DC`, 11,52 px | 3,89:1 | Abaixo de 4,5:1 |
-| Como funciona, legenda de `.study-art` | Escuro | `#C4BCB2` sobre `#FCF9EF` | 1,78:1 | Contraste baixo no painel claro mantido no tema escuro |
-| Como funciona, `.launch-badge` “Condição especial” | Escuro | texto branco sobre `#A64D13` | 5,69:1 | Par atual acima de 4,5:1; não aprova outras variantes |
+| Tela / seletor | Tema | Viewport | Texto / superfície | Contraste | Leitura |
+|---|---|---:|---|---:|---|
+| Landing, `.hero-description` | Claro | 390 × 844 | `#706C66` sobre `#F0EDE8`, 16 px | 4,47:1 | Abaixo de 4,5:1 |
+| Como funciona, `.how-hero-note` | Claro | 1440 × 900 | `#706C66` sobre `#F0EDE8`, 16 px | 4,47:1 | Abaixo de 4,5:1 |
+| Quem somos, parágrafo de `.about-scale` | Claro | 1440 × 900 | `#706C66` sobre `#F0EDE8`, 16 px | 4,47:1 | Abaixo de 4,5:1 |
+| Como funciona, `.eyebrow` em `.study-band` | Claro | 1440 × 900 | `#8B6A40` sobre `#E8E3DC`, 11,52 px | 3,89:1 | Abaixo de 4,5:1 |
+| Como funciona, legenda de `.study-art` | Escuro | 1440 × 900 | `#C4BCB2` sobre `#FCF9EF` | 1,78:1 | Contraste baixo no painel claro mantido no tema escuro |
+| Como funciona, `.launch-badge` “Condição especial” | Escuro | 1440 × 900 | texto branco sobre `#A64D13` | 5,69:1 | Par atual acima de 4,5:1; não aprova outras variantes |
 
 Os três primeiros pares estão próximos do limite de 4,5:1, mas continuam abaixo dele. A legenda da ilustração é o caso mais evidente: a superfície clara da figura persiste no modo escuro, enquanto a legenda muda para um tom claro. O registro é de falha/candidato técnico no contexto observado; qualquer ajuste de cor deve respeitar a direção homologada e passar por revisão visual quando houver mais de uma solução.
 
