@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1520" height="900" viewBox="0 0 1520 900" role="img" aria-labelledby="title desc">
-<title id="title">FIND-004 — opções experimentais para a legenda da ilustração</title>
-<desc id="desc">Comparação do estado atual com duas alternativas: legenda em superfície escura separada da imagem ou sobre uma faixa escura opaca na base da imagem. Nenhuma alternativa está aprovada.</desc>
+<title id="title">FIND-004 — opções experimentais para a legenda</title>
+<desc id="desc">O estado atual põe legenda clara diretamente sobre uma ilustração clara. Opção A separa a legenda em superfície escura abaixo da imagem. Opção B põe uma faixa escura na base da ilustração. Nenhuma alternativa está aprovada.</desc>
 <defs>
   <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#f4efe6"/><stop offset="1" stop-color="#ddd4c7"/></linearGradient>
   <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#d8cfc2"/><stop offset="1" stop-color="#c7bcad"/></linearGradient>
-  <linearGradient id="overlay" x2="0" y2="1"><stop stop-color="#252321" stop-opacity=".10"/><stop offset=".5" stop-color="#252321" stop-opacity=".84"/><stop offset="1" stop-color="#252321"/></linearGradient>
+  <linearGradient id="overlay" x2="0" y2="1"><stop stop-color="#252321" stop-opacity=".08"/><stop offset=".45" stop-color="#252321" stop-opacity=".84"/><stop offset="1" stop-color="#252321"/></linearGradient>
   <style>
     text{font-family:Arial,Helvetica,sans-serif}
     .title{fill:#f4f0ea;font-size:34px;font-weight:700}
@@ -15,23 +15,21 @@
     .body{fill:#d7d1c8;font-size:17px}
     .small{fill:#aba49b;font-size:14px}
     .imageLabel{fill:#433d36;font-size:13px;font-weight:700;letter-spacing:1px}
-    .imageBody{fill:#70675e;font-size:18px}
   </style>
 </defs>
 <rect width="1520" height="900" fill="#111110"/>
 <text x="56" y="64" class="label">FIND-004 · DECISÃO VISUAL PENDENTE</text>
 <text x="56" y="112" class="title">Legenda sobre ilustração clara no tema escuro</text>
-<text x="56" y="148" class="sub">O estado atual mede 1,78:1. As duas propostas abaixo são experimentais; as cores são amostras, não tokens.</text>
-
-<!-- current -->
+<text x="56" y="148" class="sub">O estado atual mede 1,78:1. As propostas são experimentais; as cores são amostras, não tokens.</text>
+<!-- estado atual -->
 <g transform="translate(56 190)">
   <rect width="440" height="620" rx="18" class="card"/>
   <text x="28" y="42" class="label">ATUAL · PROBLEMA OBSERVADO</text>
-  <text x="28" y="79" class="h">Legenda sobre a imagem</text>
-  <text x="28" y="109" class="small">Texto claro em superfície clara · 1,78:1</text>
+  <text x="28" y="79" class="h">Texto direto sobre a arte</text>
+  <text x="28" y="109" class="small">Legenda clara sobre área clara · 1,78:1</text>
   <g transform="translate(24 137)">
     <rect width="392" height="286" rx="12" fill="url(#wall)"/>
-    <rect y="208" width="392" height="78" rx="0" fill="url(#floor)"/>
+    <rect y="208" width="392" height="78" fill="url(#floor)"/>
     <rect x="28" y="45" width="112" height="157" rx="3" fill="#b7aa98"/>
     <rect x="36" y="53" width="96" height="141" fill="#eee9df"/>
     <path d="M36 78h96M36 126h96" stroke="#c8beaf" stroke-width="3"/>
@@ -41,20 +39,19 @@
     <rect x="305" y="72" width="61" height="134" rx="7" fill="#9c958c"/>
     <rect x="312" y="79" width="47" height="112" rx="4" fill="#c7c1b8"/>
     <text x="20" y="253" class="imageLabel">ILUSTRAÇÃO CLARA</text>
+    <text x="18" y="278" fill="#c4bcb2" font-size="16">Legenda no estado atual</text>
   </g>
-  <rect x="24" y="423" width="392" height="90" rx="0" fill="#252321"/>
-  <text x="42" y="461" fill="#c4bcb2" font-size="17">Legenda no estado atual</text>
-  <text x="42" y="489" class="small">A legenda usa texto claro sobre a própria arte.</text>
-  <text x="28" y="556" class="body">Falha técnica confirmada na combinação medida.</text>
-  <text x="28" y="585" class="small">Referência: .study-art figcaption · tema escuro</text>
+  <text x="28" y="475" class="body">A legenda fica sobre a própria ilustração.</text>
+  <text x="28" y="505" class="small">Falha técnica confirmada na combinação medida.</text>
+  <text x="28" y="556" class="body">Referência: .study-art figcaption</text>
+  <text x="28" y="585" class="small">Tema escuro · superfície da arte #FCF9EF</text>
 </g>
-
-<!-- option A -->
+<!-- opção A -->
 <g transform="translate(540 190)">
   <rect width="440" height="620" rx="18" class="card"/>
   <text x="28" y="42" class="label">OPÇÃO A · ÁREA SEPARADA</text>
   <text x="28" y="79" class="h">Legenda abaixo da imagem</text>
-  <text x="28" y="109" class="small">A arte continua intacta; legenda ganha sua própria superfície.</text>
+  <text x="28" y="109" class="small">A arte continua intacta; legenda ganha sua superfície.</text>
   <g transform="translate(24 137)">
     <rect width="392" height="286" rx="12" fill="url(#wall)"/>
     <rect y="208" width="392" height="78" fill="url(#floor)"/>
@@ -69,17 +66,16 @@
   </g>
   <rect x="24" y="423" width="392" height="90" fill="#252321"/>
   <text x="42" y="461" fill="#f3eee6" font-size="17" font-weight="700">Legenda com contraste alto</text>
-  <text x="42" y="489" class="small">Texto #F3EEE6 · superfície #252321 · amostra 13,4:1</text>
+  <text x="42" y="489" class="small">#F3EEE6 em #252321 · amostra 13,56:1</text>
   <text x="28" y="556" class="body">Leitura estável sem cobrir detalhes da arte.</text>
   <text x="28" y="585" class="small">Pode aumentar a altura total do componente.</text>
 </g>
-
-<!-- option B -->
+<!-- opção B -->
 <g transform="translate(1024 190)">
   <rect width="440" height="620" rx="18" class="card"/>
   <text x="28" y="42" class="label">OPÇÃO B · SOBRE A IMAGEM</text>
   <text x="28" y="79" class="h">Faixa escura na base</text>
-  <text x="28" y="109" class="small">A legenda permanece dentro da figura, sobre fundo controlado.</text>
+  <text x="28" y="109" class="small">Legenda permanece na figura, sobre fundo controlado.</text>
   <g transform="translate(24 137)">
     <rect width="392" height="286" rx="12" fill="url(#wall)"/>
     <rect y="208" width="392" height="78" fill="url(#floor)"/>
@@ -92,13 +88,13 @@
     <rect x="305" y="72" width="61" height="134" rx="7" fill="#9c958c"/>
     <rect x="312" y="79" width="47" height="112" rx="4" fill="#c7c1b8"/>
     <rect y="188" width="392" height="98" fill="url(#overlay)"/>
-    <text x="22" y="246" fill="#f3eee6" font-size="17" font-weight="700">Legenda com contraste alto</text>
+    <text x="22" y="257" fill="#f3eee6" font-size="17" font-weight="700">Legenda com contraste alto</text>
   </g>
   <rect x="24" y="423" width="392" height="90" rx="8" fill="#252321"/>
   <text x="42" y="461" fill="#f3eee6" font-size="17" font-weight="700">Texto preserva a composição</text>
-  <text x="42" y="489" class="small">Branco #F3EEE6 sobre #252321 opaco · ~13,4:1</text>
+  <text x="42" y="489" class="small">Texto claro em faixa escura · amostra 13,56:1</text>
   <text x="28" y="556" class="body">Mantém a legenda integrada à ilustração.</text>
   <text x="28" y="585" class="small">A faixa escurece uma parte da imagem.</text>
 </g>
-<text x="56" y="862" class="small">Prancha esquemática para escolher tratamento; não reproduz o componente final nem homologa cores, dimensões ou tokens.</text>
+<text x="56" y="862" class="small">Prancha esquemática, não reproduz o componente final. Valores são demonstrativos e não homologam cores, dimensões ou tokens.</text>
 </svg>
