@@ -315,7 +315,6 @@
     "Full keyboard behavior: Escape, outside click, focus restoration and tab order",
     "Runtime reduced-motion preference",
     "Dynamic hover, pressed, focus, selection and loading state coverage",
-    "Contrast on images, gradients, pseudo-elements and transparent layers",
-    "Exact commit currently deployed on Netlify"
+    "Contrast on images, gradients, pseudo-elements and transparent layers"
   ]
 }
