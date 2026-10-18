@@ -34,7 +34,30 @@
           "theme": "dark"
         }
       ],
-      "persistedInRepository": false
+      "persistedInRepository": true,
+      "assets": [
+        {
+          "path": "visualEvidence/public/landing/landing-light.svg",
+          "sourceRoute": "/",
+          "theme": "light",
+          "viewport": "1280x720",
+          "format": "SVG with embedded JPEG capture"
+        },
+        {
+          "path": "visualEvidence/public/landing/landing-dark.svg",
+          "sourceRoute": "/",
+          "theme": "dark",
+          "viewport": "1280x720",
+          "format": "SVG with embedded JPEG capture"
+        },
+        {
+          "path": "visualEvidence/public/viewer/viewer-dark.svg",
+          "sourceRoute": "/viewer/",
+          "theme": "dark",
+          "viewport": "1280x720",
+          "format": "SVG with embedded JPEG capture"
+        }
+      ]
     }
   },
   "viewports": [
