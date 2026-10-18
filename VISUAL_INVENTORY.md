@@ -78,4 +78,4 @@ Os 128 arquivos rastreados se agrupam em 46 itens de cena/máscaras do configura
 - Seletores, valores e classes foram extraídos de CSS/HTML; não foi executada a aplicação em navegador nesta etapa.
 - Não foram calculados contrastes, avaliados screenshots, inferidos estados gerados por JavaScript nem declarados assets como órfãos.
 - As capturas e auditoria de DOM real serão uma etapa própria; só serão preparadas imagens para revisão quando restar uma escolha visual não determinada pelas decisões.
-- Este inventário documenta o estado observado. Ele não transforma cores ou métricas atuais em tokens homologados.
+- Este inventário documenta o estado observado. A aprovação explícita de `#A64D13` está registrada separadamente em `decisions.json`; presença de outras cores ou métricas no código não as transforma em tokens homologados.
