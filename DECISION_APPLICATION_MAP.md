@@ -16,7 +16,7 @@ As folhas foram lidas dos elementos `<link rel="stylesheet">` nas oito páginas 
 | URL | Superfície | HTML | CSS carregado | Decisões mapeadas | Evidência runtime |
 |---|---|---|---|---|---|
 | `/` | Landing / ambientes | `app/index.html` | `app/public-theme.css`<br>`app/landing/landing.css`<br>`app/ui-theme.css` | NAV-003, NAV-004, NAV-005, VIS-002 | Observada; sem overflow em 390/768/1440 px |
-| `/how-it-works/` | Como funciona | `app/how-it-works/index.html` | `app/public-theme.css`<br>`app/landing/landing.css`<br>`app/how-it-works/how-it-works.css`<br>`app/ui-theme.css` | NAV-003, NAV-004, NAV-005, VIS-002 | Observada; sem overflow em 390/768/1440 px |
+| `/how-it-works/` | Como funciona | `app/how-it-works/index.html` | `app/public-theme.css`<br>`app/landing/landing.css`<br>`app/how-it-works/how-it-works.css`<br>`app/ui-theme.css` | NAV-003, NAV-004, NAV-005, VIS-002, VIS-003 | Observada; sem overflow em 390/768/1440 px |
 | `/about/` | Quem somos | `app/about/index.html` | `app/public-theme.css`<br>`app/landing/landing.css`<br>`app/about/about.css`<br>`app/ui-theme.css` | NAV-003, NAV-004, NAV-005, VIS-002 | Observada; sem overflow em 390/768/1440 px |
 | `/viewer/` | Viewer de ambiente | `app/viewer/index.html` | `app/public-theme.css`<br>`app/viewer/viewer.css`<br>`app/ui-theme.css` | NAV-003, NAV-004, NAV-005, VIS-002, EST-01, EST-02, EST-03 | Observada; sem overflow em 390/768/1440 px |
 | `/config/` | Configurador | `app/config/index.html` | `app/styles.css`<br>`app/ui-theme.css` | NAV-003, NAV-004, PRIVATE-HEADER-001, VIS-002, EST-01, EST-02, EST-03, EST-04, EST-05, EST-06, NAV-005 | Redireciona sem sessão para `/access/`; área protegida não verificada |
@@ -38,6 +38,7 @@ O estado de `/config/` e `/access/manage.html` foi redirecionado sem sessão. Is
 | NAV-005 | `/`, `/how-it-works/`, `/about/`, `/viewer/`, `/config/`, `/admin.html`, `/access/`, `/access/manage.html` | 8 rota(s) no mapa estático; vínculo de tela não afirma conformidade da implementação |
 | VIS-001 | — | Sem rota específica no mapa atual; revisar escopo quando a decisão avançar |
 | VIS-002 | `/`, `/how-it-works/`, `/about/`, `/viewer/`, `/config/`, `/admin.html`, `/access/`, `/access/manage.html` | 8 rota(s) no mapa estático; vínculo de tela não afirma conformidade da implementação |
+| VIS-003 | `/how-it-works/` | Tratamento da legenda escolhido para `.study-art figcaption` no tema escuro; cores/opacidade finais e correção continuam pendentes |
 | EST-01 | `/viewer/`, `/config/` | 2 rota(s) no mapa estático; vínculo de tela não afirma conformidade da implementação |
 | EST-02 | `/viewer/`, `/config/`, `/admin.html`, `/access/manage.html` | 4 rota(s) no mapa estático; vínculo de tela não afirma conformidade da implementação |
 | EST-03 | `/viewer/`, `/config/` | 2 rota(s) no mapa estático; vínculo de tela não afirma conformidade da implementação |
@@ -55,6 +56,8 @@ O estado de `/config/` e `/access/manage.html` foi redirecionado sem sessão. Is
 **NAV-005:** o padrão largo público A aplica-se às rotas públicas; o padrão privado B aplica-se a `/config/`, `/admin.html`, `/access/` e `/access/manage.html`; o padrão contextual tipo viewer aplica-se a `/viewer/`. Os critérios exatos estão em `decisions.json`. Breakpoints, composição compacta, alturas, espaçamento, tipografia, cores e tratamento de ícones permanecem abertos.
 
 **VIS-002 — alvos de seletor com pares aprovados:** `.hero-description` em `/`, `.how-hero-note` em `/how-it-works/` e `.about-scale p:not(.eyebrow)` em `/about/` usam o par contextual claro aprovado `#675F55` sobre `#F0EDE8` (5,38:1). `.study-band .eyebrow` em `/how-it-works/` usa o par contextual aprovado `#70522F` sobre `#E8E3DC` (5,60:1). Os pares não são tokens globais e não aprovam variantes escuras.
+
+**VIS-003 / FIND-004:** em `/how-it-works/`, `.study-art figcaption` no tema escuro deve permanecer integrada à ilustração sobre uma faixa escura na base (opção B escolhida). A aprovação cobre apenas a composição; valores finais de cor e opacidade/gradiente exigem medição. A prancha e a decisão não representam correção aplicada no produto.
 
 ## Capturas e limites
 
