@@ -40,7 +40,7 @@
           "path": "visualEvidence/public/landing/landing-light.jpg",
           "sourceRoute": "/",
           "theme": "light",
-          "viewport": "1280x720",
+          "viewport": "1265x712",
           "format": "JPEG",
           "source": "Browser viewport capture of the published site"
         },
@@ -48,7 +48,7 @@
           "path": "visualEvidence/public/landing/landing-dark.jpg",
           "sourceRoute": "/",
           "theme": "dark",
-          "viewport": "1280x720",
+          "viewport": "1265x712",
           "format": "JPEG",
           "source": "Browser viewport capture of the published site"
         },
@@ -56,7 +56,7 @@
           "path": "visualEvidence/public/viewer/viewer-dark.jpg",
           "sourceRoute": "/viewer/",
           "theme": "dark",
-          "viewport": "1280x720",
+          "viewport": "1265x712",
           "format": "JPEG",
           "source": "Browser viewport capture of the published site"
         }
