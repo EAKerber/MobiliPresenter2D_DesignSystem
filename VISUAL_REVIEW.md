@@ -36,15 +36,10 @@ A aprovação é contextual: não cria tokens globais, não aprova variações d
 - Medir outros pares e estados; os dois aprovados não se generalizam.
 
 
-## FIND-004 — escolha pendente para a legenda
+## FIND-004 — tratamento visual escolhido; valores pendentes
 
-![Prancha esquemática com o estado atual e duas alternativas experimentais para a legenda](visualEvidence/experiments/FIND-004-caption-contrast-options.svg)
+![Prancha esquemática com o estado atual e duas alternativas para a legenda](visualEvidence/experiments/FIND-004-caption-contrast-options.svg)
 
-A auditoria runtime mediu 1,78:1 para `.study-art figcaption` clara sobre a superfície clara da ilustração no tema escuro. A prancha compara:
+A auditoria runtime mediu 1,78:1 para `.study-art figcaption` clara sobre a superfície clara da ilustração no tema escuro. Após revisar o caso real publicado em `/how-it-works/`, o usuário escolheu **B — faixa escura na base da ilustração**. A legenda permanece integrada à figura sobre um fundo de contraste controlado.
 
-- **A — área separada:** legenda abaixo da arte, em uma superfície escura própria; não cobre detalhes e aumenta a altura do componente.
-- **B — faixa sobre a arte:** legenda dentro da figura sobre uma faixa escura; mantém a composição compacta e escurece a borda inferior da ilustração.
-
-As cores na prancha são amostras de contraste, não tokens. A decisão estética permanece aberta; nenhuma alternativa foi registrada como aprovada. A prancha é esquemática e não substitui uma implementação fiel no componente.
-
-**Revisão solicitada:** qual tratamento prefere para este contexto — A ou B? Também pode pedir uma terceira solução.
+A aprovação cobre somente essa relação de composição. As cores e a opacidade/gradiente da faixa na prancha são amostras experimentais: continuam pendentes de medição e homologação. Também não ficam definidos dimensões, espaçamento, comportamento responsivo, extensão para outros temas/componentes nem implementação no produto. A prancha esquemática não substitui uma implementação fiel nem a auditoria do DOM final.
