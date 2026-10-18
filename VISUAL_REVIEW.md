@@ -11,7 +11,7 @@
 - **A — navegação exposta:** destinos visíveis em desktop; menu hambúrguer nos viewports estreitos.
 - **B — navegação compacta:** controles no cabeçalho e destinos dentro do menu em todos os viewports.
 
-As duas opções preservam o contrato funcional NAV-004. A amostra de logo é uma aproximação tipográfica/desenhada para comparar composição; não substitui o asset oficial. Cor, altura, tipografia, espaçamentos, ícones e tratamento do CTA são ilustrativos e não foram aprovados. A confirmação que falta é principalmente de composição: links expostos ou menu compacto.
+As duas opções preservam o contrato de interação NAV-004. A quarta entrada é mostrada como **Fale conosco**; o cabeçalho publicado direciona essa ação ao WhatsApp. Ainda precisa ser confirmado se isso cumpre a página/destino **Contato** do contrato NAV-004 ou se existe uma rota própria. A amostra de logo é uma aproximação tipográfica/desenhada para comparar composição; não substitui o asset oficial. Cor, altura, tipografia, espaçamentos, ícones e tratamento do CTA são ilustrativos e não foram aprovados. A confirmação que falta é principalmente de composição: links expostos ou menu compacto.
 
 A referência publicada atual está em [landing-dark.jpg](../../public/landing/landing-dark.jpg). Ela mostra o cabeçalho atual; não é uma opção futura aprovada.
 
@@ -29,7 +29,7 @@ Isso não transforma os candidatos em tokens. O azul homologado para informaçã
 ## Revisão solicitada
 
 1. Cabeçalho público: A, B, ou comentários sobre outra composição.
-2. Texto corrido: A ou B; se não houver preferência visual, escolha posterior pode priorizar a menor alteração que alcance contraste suficiente.
-3. Rótulo: A ou B; a escolha ainda deve ser validada no componente e tema de origem.
+2. Destino público Contato: confirmar se Fale conosco via WhatsApp satisfaz NAV-004 ou se o contrato exige uma rota pública própria.\n3. Texto corrido: A ou B; se não houver preferência visual, escolha posterior pode priorizar a menor alteração que alcance contraste suficiente.
+4. Rótulo: A ou B; a escolha ainda deve ser validada no componente e tema de origem.
 
 Até essa revisão, `NAV-005` permanece aberto e os quatro hexadecimais candidatos continuam fora de `decisions.json`.
