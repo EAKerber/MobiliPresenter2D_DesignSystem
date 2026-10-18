@@ -1,36 +1,37 @@
-# Pacote de revisão visual — NAV-005 e VIS-002
+# Registro da revisão visual — NAV-005 e VIS-002
 
-**Status:** candidatos experimentais para revisão; nenhuma nova decisão foi homologada nesta etapa.  
-**Base de evidência:** produção em 2026-10-18, deploy Netlify `6ad518d3da1379029e04324f`, commit `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`.  
-**Registro canônico:** `decisions.json`. Este pacote não altera decisões ou tokens.
+**Status:** seleções do usuário registradas em `decisions.json`. A aprovação cobre apenas os contextos e o escopo descritos.  
+**Base da auditoria runtime:** produção em 2026-10-18, deploy Netlify `6ad518d3da1379029e04324f`, commit `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`.  
+**Este pacote não implementa código do produto.**
 
-## 1. Cabeçalho público — NAV-005
+## NAV-005 — padrões largos de cabeçalho aprovados
 
-![Alternativas experimentais para o cabeçalho público](NAV-005-public-header-options.svg)
+![Estruturas largas aprovadas para páginas públicas, privadas e de segunda ordem](visualEvidence/approved/NAV-005-wide-header-patterns.svg)
 
-- **A — navegação exposta:** destinos visíveis em desktop; menu hambúrguer nos viewports estreitos.
-- **B — navegação compacta:** controles no cabeçalho e destinos dentro do menu em todos os viewports.
+- **Páginas públicas:** opção A, navegação exposta como no padrão já usado.
+- **Páginas privadas:** opção B, identificador da página/área junto da marca; tema e menu no lado direito.
+- **Navegação de segunda ordem:** composição contextual semelhante ao viewer. O controle de tema passa para dentro do cabeçalho e fica antes do menu; se houver hambúrguer, ele ocupa a extremidade direita.
 
-As duas opções preservam o contrato de interação NAV-004. A quarta entrada é mostrada como **Fale conosco**; o cabeçalho publicado direciona essa ação ao WhatsApp. Ainda precisa ser confirmado se isso cumpre a página/destino **Contato** do contrato NAV-004 ou se existe uma rota própria. A amostra de logo é uma aproximação tipográfica/desenhada para comparar composição; não substitui o asset oficial. Cor, altura, tipografia, espaçamentos, ícones e tratamento do CTA são ilustrativos e não foram aprovados. A confirmação que falta é principalmente de composição: links expostos ou menu compacto.
+Esta aprovação é para a versão expandida/larga. Breakpoints, composição compacta e medidas não foram definidos. O menu público continua sujeito ao contrato de teclado, Escape, clique fora, aria-expanded, foco e movimento reduzido de NAV-004.
 
-A referência publicada atual está em [landing-dark.jpg](../../public/landing/landing-dark.jpg). Ela mostra o cabeçalho atual; não é uma opção futura aprovada.
+A equivalência entre o destino **Contato** de NAV-004 e o link atual **Fale conosco** (WhatsApp) continua sem confirmação.
 
-## 2. Pares de contraste — VIS-002
+A prancha anterior de opções permanece em [NAV-005-public-header-options.svg](visualEvidence/experiments/NAV-005-public-header-options.svg) como comparação experimental. A prancha simplificada acima ilustra a decisão aprovada, mas não especifica tokens, dimensões nem o logo final.
 
-![Candidatos experimentais de contraste para dois achados do runtime](VIS-002-contrast-options.svg)
+## VIS-002 — pares exatos aprovados
 
-A triagem runtime encontrou texto corrido em `#706C66` sobre `#F0EDE8` (4,47:1) e rótulo pequeno `#8B6A40` sobre `#E8E3DC` (3,89:1). Os candidatos mais escuros atendem ao alvo matemático de 4,5:1 para texto comum nos pares sólidos exibidos. Os valores foram calculados para comparação; precisam ser conferidos nos componentes/temas reais antes de adoção.
+![Pares de contraste B selecionados](visualEvidence/experiments/VIS-002-contrast-options.svg)
 
-- **Texto corrido:** A `#6D675F` (4,79:1) mantém tom mais próximo do atual; B `#675F55` (5,38:1) oferece maior margem.
-- **Rótulo quente:** A `#765832` (5,12:1) mantém proximidade com a família terrosa; B `#70522F` (5,60:1) oferece maior margem.
+O usuário escolheu a opção B nos dois exemplos. `decisions.json` registra estes pares específicos:
 
-Isso não transforma os candidatos em tokens. O azul homologado para informação de processo e a base promocional `#A64D13` permanecem conforme VIS-002; variantes de cobre por tema/superfície seguem pendentes.
+- Texto corrido claro: `#675F55` em `#F0EDE8`, 5,38:1, nos contextos auditados da landing, Como funciona e Quem somos.
+- Rótulo quente claro: `#70522F` em `#E8E3DC`, 5,60:1, no rótulo auditado de Como funciona.
 
-## Revisão solicitada
+A aprovação é contextual: não cria tokens globais, não aprova variações dark nem autoriza extensão automática a outros componentes/superfícies. Os pares já atingem o alvo matemático de 4,5:1 para texto comum nas superfícies sólidas avaliadas; a aplicação deve ser revalidada no DOM antes de qualquer implementação do produto. A base promocional `#A64D13` e o azul de informação de processo mantêm seus papéis previamente homologados.
 
-1. Cabeçalho público: A, B, ou comentários sobre outra composição.
-2. Destino público Contato: confirmar se Fale conosco via WhatsApp satisfaz NAV-004 ou se o contrato exige uma rota pública própria.
-3. Texto corrido: A ou B; se não houver preferência visual, escolha posterior pode priorizar a menor alteração que alcance contraste suficiente.
-4. Rótulo: A ou B; a escolha ainda deve ser validada no componente e tema de origem.
+## Ainda aberto
 
-Até essa revisão, `NAV-005` permanece aberto e os quatro hexadecimais candidatos continuam fora de `decisions.json`.
+- Confirmar se Fale conosco/WhatsApp satisfaz o destino Contato ou se há uma rota pública própria.
+- Definir breakpoints e comportamento visual compacto/responsivo dos cabeçalhos.
+- Homologar dimensões, tipografia, cores, assets e estilo final dos cabeçalhos.
+- Medir outros pares e estados; os dois aprovados não se generalizam.
