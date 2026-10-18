@@ -41,16 +41,30 @@
       "status": "functional-contract-approved",
       "verdict": "agreed",
       "decision": "Menu público abre e fecha pelo botão, responde a Escape e clique fora, permite navegação por teclado, expõe aria-expanded, devolve foco quando adequado e respeita preferência por movimento reduzido. Páginas públicas dão acesso a Ambientes (landing), Como funciona, Quem somos e Contato.",
-      "notApproved": ["Estética do header; tratada separadamente em NAV-005."]
+      "notApproved": [
+        "Estética do header; tratada separadamente em NAV-005."
+      ]
     },
     {
       "id": "NAV-005",
       "status": "organizational-direction-approved",
       "verdict": "agreed",
       "decision": "Header global com acesso às quatro páginas públicas. Identificação do ambiente do viewer fica em área contextual separada do header; controles e interação da cena ficam no conteúdo do viewer. O viewer é subpágina de ambiente, portanto Ambientes não deve ser falsamente marcado como a página ativa.",
-      "examplesNotApproved": ["Ambientes › Cozinha é somente exemplo de breadcrumb."],
-      "notApproved": ["Composição/estética do header público", "Altura", "Tipografia", "Cores", "Logo", "Aparência do menu", "Apresentação do contexto"],
-      "future": ["Generalização multiambiente (ENV-001)."]
+      "examplesNotApproved": [
+        "Ambientes › Cozinha é somente exemplo de breadcrumb."
+      ],
+      "notApproved": [
+        "Composição/estética do header público",
+        "Altura",
+        "Tipografia",
+        "Cores",
+        "Logo",
+        "Aparência do menu",
+        "Apresentação do contexto"
+      ],
+      "future": [
+        "Generalização multiambiente (ENV-001)."
+      ]
     },
     {
       "id": "VIS-001",
@@ -64,7 +78,14 @@
       "status": "conceptual-direction-approved",
       "verdict": "agreed",
       "decision": "Paleta-base de identidade compartilhada entre interfaces, com aplicação contextual. A arquitetura futura de tokens deve poder atender light e dark; não presumir ambos os modos em todas as rotas. Revisar contraste de texto, controles, foco e estados. Definir semanticamente erro, aviso, sucesso e informação, além de foco, seleção, hover, pressionado e desabilitado.",
-      "notApproved": ["Hexadecimais", "Pares de contraste", "Aparências", "Variantes", "Troca de tema", "Implementação"],
+      "notApproved": [
+        "Hexadecimais",
+        "Pares de contraste",
+        "Aparências",
+        "Variantes",
+        "Troca de tema",
+        "Implementação"
+      ],
       "semanticColors": {
         "approvedDirection": "Estados semânticos reconhecíveis, harmonizados com a marca, com combinações adequadas por tema. Mensagens não dependem apenas da cor.",
         "functionalInformation": "Orientações e funcionamento podem usar azul ou outra combinação acessível; não obrigar todo conteúdo informativo ao azul.",
@@ -78,14 +99,28 @@
       },
       "contextualSelection": "Semântica compartilhada; intensidade da seleção varia por tarefa: viewer discreto e com cena protagonista; configurador mais explícito para distinguir opções próximas; admin forte e inequívoco em telas densas. Foco é independente e perceptível em todos os contextos/temas.",
       "est01Addendum": "No configurador, uma seleção que altera a configuração combina indicador explícito (ex. check) e destaque moderado de superfície ou borda, sem competir com o conteúdo. Foco não cria uma terceira aparência ornamentada.",
-      "notYetSpecified": ["Cores auxiliares exatas", "Tokens light/dark", "Pares finais de contraste", "Variantes visuais", "Espessuras/medidas", "Tema por rota", "Hover/pressed/disabled/loading"]
+      "notYetSpecified": [
+        "Cores auxiliares exatas",
+        "Tokens light/dark",
+        "Pares finais de contraste",
+        "Variantes visuais",
+        "Espessuras/medidas",
+        "Tema por rota",
+        "Hover/pressed/disabled/loading"
+      ]
     },
     {
       "id": "EST-01",
       "status": "direction-agreed",
       "context": "Configurador",
       "decision": "Seleção que altera a configuração combina indicador explícito com destaque moderado de superfície ou borda, mantendo legibilidade e distinção entre seleção e foco.",
-      "notYetSpecified": ["Formato do indicador", "Cores", "Espessuras", "Comportamento por tipo de seleção", "Contraste light/dark"],
+      "notYetSpecified": [
+        "Formato do indicador",
+        "Cores",
+        "Espessuras",
+        "Comportamento por tipo de seleção",
+        "Contraste light/dark"
+      ],
       "implementationAuthorized": false
     },
     {
@@ -93,35 +128,72 @@
       "status": "direction-agreed",
       "context": "Viewer, configurador e admin; temas light/dark",
       "decision": "Foco de teclado com contorno externo independente, perceptível e sem decoração excessiva. Focus-visible quando apropriado; preservar a aparência de seleção quando os estados coexistem sem criar terceira variante ornamentada.",
-      "notYetSpecified": ["Cor por tema/superfície", "Espessura e afastamento", "Limites de clipping", "Contraste em componentes reais", "Componentes especiais"],
+      "notYetSpecified": [
+        "Cor por tema/superfície",
+        "Espessura e afastamento",
+        "Limites de clipping",
+        "Contraste em componentes reais",
+        "Componentes especiais"
+      ],
       "implementationAuthorized": false
     },
     {
       "id": "EST-03",
       "status": "direction-agreed",
       "decision": "Hover informa interatividade; pressionado confirma a ação naquele instante. Nenhum se confunde com seleção persistente ou confirmação de conclusão. O feedback depende da família: botão pode ter micro movimento sutil; campos, seletores densos e cards técnicos permanecem geometricamente estáveis. Viewer discreto; configurador/admin explícitos sem agitação. Não depender de hover; suportar touch e respeitar movimento reduzido.",
-      "notYetSpecified": ["Escala", "Deslocamento", "Duração", "Easing", "Cores", "Sombras", "Exceções por componente"],
+      "notYetSpecified": [
+        "Escala",
+        "Deslocamento",
+        "Duração",
+        "Easing",
+        "Cores",
+        "Sombras",
+        "Exceções por componente"
+      ],
       "implementationAuthorized": false
     },
     {
       "id": "EST-04",
       "status": "direction-agreed",
       "decision": "Desabilitado (ação não permitida) e somente leitura (valor consultável, mas não editável) têm semântica e comportamento distintos. Somente leitura mantém legibilidade e, quando pertinente, permite seleção/cópia. Desabilitado não aciona; seu motivo deve ser compreensível quando necessário e não depender apenas de opacidade. Separar editabilidade, habilitação, publicação, disponibilidade na UI e seleção; não colapsar status. Evitar poluição visual com agrupamento por seção e informação no contexto da decisão, quando viável.",
-      "notYetSpecified": ["Combinações válidas", "Layout/localização por tela", "Indicadores de publicação e disponibilidade", "Diferenças entre permissão, publicação e estado comercial", "Acessibilidade/contraste", "Exceções"],
+      "notYetSpecified": [
+        "Combinações válidas",
+        "Layout/localização por tela",
+        "Indicadores de publicação e disponibilidade",
+        "Diferenças entre permissão, publicação e estado comercial",
+        "Acessibilidade/contraste",
+        "Exceções"
+      ],
       "implementationAuthorized": false
     },
     {
       "id": "EST-05",
       "status": "direction-agreed",
       "decision": "Bloquear somente ações com dependências ou riscos reais de conflito/duplicidade; regiões independentes permanecem utilizáveis. Operações críticas, especialmente publicação, recebem proteção e feedback explícitos. Distinguir carregamento, alterações locais, salvando/aguardando confirmação, persistência confirmada, falha/estado incerto e estados de publicação. Nunca indicar Salvo ou Publicado sem confirmação real.",
-      "notYetSpecified": ["Hierarquia/posição do feedback", "Retry e recuperação", "Concorrência/idempotência", "Offline", "Operações longas", "Publicação parcial", "Regras por controle/seção/operação"],
+      "notYetSpecified": [
+        "Hierarquia/posição do feedback",
+        "Retry e recuperação",
+        "Concorrência/idempotência",
+        "Offline",
+        "Operações longas",
+        "Publicação parcial",
+        "Regras por controle/seção/operação"
+      ],
       "implementationAuthorized": false
     },
     {
       "id": "EST-06",
       "status": "direction-agreed",
       "decision": "Feedback contextual junto à ação/área afetada. Estados relevantes permanecem visíveis; sucessos comuns são discretos; aviso global pode complementar operação crítica. Distinguir edição local, andamento, confirmação, falha e resultado desconhecido. Evitar feedback redundante.",
-      "notYetSpecified": ["Layout", "Mensagens", "Severidade/acessibilidade", "Duração e fechamento de feedback transitório", "Preservação local", "Retry/offline", "Conflitos e estado desconhecido"],
+      "notYetSpecified": [
+        "Layout",
+        "Mensagens",
+        "Severidade/acessibilidade",
+        "Duração e fechamento de feedback transitório",
+        "Preservação local",
+        "Retry/offline",
+        "Conflitos e estado desconhecido"
+      ],
       "implementationAuthorized": false
     },
     {
@@ -129,7 +201,14 @@
       "status": "direction-agreed",
       "decision": "Preservar edição local e evitar sobrescrita silenciosa. Resolver conflitos explicitamente no início; automação só após validação de segurança e confiabilidade. Não presumir produto sofisticado de diff/merge: conflito raro pede aviso compreensível, alternativas simples e registro da escolha.",
       "notificationPolicy": "Erro/aviso relevante não pode depender de toast efêmero. Manter feedback contextual persistente quando exigir ação e histórico consultável como complemento; não registrar cada interação ou sucesso trivial.",
-      "notYetSpecified": ["Regra de precedência e opções", "Forma do histórico", "Persistência e retenção", "Privacidade/expurgo", "Retry/offline/idempotência", "Preservação local em reload/fechamento"]
+      "notYetSpecified": [
+        "Regra de precedência e opções",
+        "Forma do histórico",
+        "Persistência e retenção",
+        "Privacidade/expurgo",
+        "Retry/offline/idempotência",
+        "Preservação local em reload/fechamento"
+      ]
     },
     {
       "id": "EST-08",
@@ -149,7 +228,11 @@
       "id": "EST-10",
       "status": "direction-agreed",
       "decision": "Histórico enxuto e contextual, com indicador discreto. Pendências permanecem acessíveis até resolução; ocorrências resolvidas têm retenção limitada e proporcional. Marcar como lida não significa resolvida. Agrupar eventos repetidos sem perder frequência/contexto; registrar resultados críticos; sucessos triviais não exigem registro. Separar histórico de auditoria administrativa e evitar dados sensíveis desnecessários.",
-      "notYetSpecified": ["Duração de retenção", "Critérios de descarte/encerramento", "Persistência entre sessões"]
+      "notYetSpecified": [
+        "Duração de retenção",
+        "Critérios de descarte/encerramento",
+        "Persistência entre sessões"
+      ]
     },
     {
       "id": "PRIVATE-HEADER-001",
@@ -176,22 +259,76 @@
     "DS-04-v2": {
       "status": "audit-reported-incomplete",
       "method": "Verificador CSSOM em Chromium com fixtures representativas.",
-      "reportedExamples": ["Contador de módulos", "Texto auxiliar da cena", "Número dos módulos", "Títulos de seção", "Detalhamento de preço", "Valor do rodapé", "Opções administrativas", "Mensagens de sucesso do Admin"],
+      "reportedExamples": [
+        "Contador de módulos",
+        "Texto auxiliar da cena",
+        "Número dos módulos",
+        "Títulos de seção",
+        "Detalhamento de preço",
+        "Valor do rodapé",
+        "Opções administrativas",
+        "Mensagens de sucesso do Admin"
+      ],
       "reportedContrastRange": "1.00:1–1.53:1 em problemas reportados",
-      "limits": "Não executou a aplicação completa com DOM dinâmico real; estados de autenticação e dados publicados não tiveram cobertura integral."
+      "limits": "Não executou a aplicação completa com DOM dinâmico real; estados de autenticação e dados publicados não tiveram cobertura integral.",
+      "issueReferences": [
+        "MobiliPresenter2D issue #208 — auditoria de temas",
+        "MobiliPresenter2D issue #209 — contador de módulos (problema funcional separado)"
+      ]
     },
     "v0.3-laboratory": {
-      "status": "experimental",
-      "notApproved": "Exemplos de comparação servem para fundamentar decisões futuras; não homologam automaticamente propostas estéticas."
+      "status": "experimental; alternatives are not homologated",
+      "contentsReportedInChat": [
+        "Seis comparações interativas antes/depois com alternância light/dark.",
+        "Duas alternativas para a barra de preço: manter superfície escura ou adaptar à superfície clara.",
+        "Cálculo de contraste em DOM/fixture ilustrativo.",
+        "Registro de pareceres e observações por componente.",
+        "Importação/exportação preservando EST-01 a EST-10."
+      ],
+      "reportedExample": {
+        "component": "botão de avanço no tema claro",
+        "contrastBefore": "2.20:1",
+        "contrastProposal": "4.96:1",
+        "limitation": "Valores de fixture isolado, não medição da produção; resultado não homologa a estética."
+      },
+      "archivedLocationReported": "MobiliPresenter2D / DesignSystem / Laboratorio",
+      "packageReported": "Inclui v0.2 original, decisões canônicas, laboratório, auditor e relatórios; arquivo ainda não importado neste repositório."
     },
     "DS-05": {
-      "status": "proposed-next-work",
-      "sequence": ["Validar detector em contador real, barra de preço/avanço e opções Admin", "Ampliar cobertura de temas, breakpoints, foco, seleção e estados gerados por JS", "Integrar exemplos, evidências e decisões ao laboratório"],
+      "status": "plano recomendado e trabalho previsto; não há resultado de execução DS-05A no material recuperado",
+      "sequence": [
+        "DS-05A: validar em DOM real o contador de módulos, barra de preço/próxima etapa e opções do Admin; detector deve achar os três casos sem regras específicas.",
+        "DS-05B: ampliar cobertura a light/dark/auto, breakpoints, hover, foco, seleção, desabilitado e estados gerados por JS; diferenciar PASS, FAIL, EXCEÇÃO e NÃO TESTADO.",
+        "DS-05C: ligar famílias reais, evidências, alternativas e decisões ao laboratório v0.3."
+      ],
       "notComplete": true
+    },
+    "v02Original": {
+      "status": "reported-in-chat; source not yet imported",
+      "filename": "MobiliPresenter2D_DesignSystem_Estatico_v0.2_unico.html",
+      "reportedContents": [
+        "Inventário de 43 famílias de componentes",
+        "Comparações visuais",
+        "Decisões de navegação",
+        "Importação/exportação JSON"
+      ],
+      "knownIssue": "A v0.2 poderia perder decisões EST detalhadas ao reexportar JSON; v0.3 foi descrita como separando o registro canônico das avaliações experimentais."
     }
   },
   "recoveryGaps": [
     "Texto original de GOV-001, NAV-001 e NAV-002: os checkpoints têm notas vazias.",
     "Artefatos originais do HTML provisório/v0.3 e inventário de 43 famílias ainda precisam ser recuperados/importados para este repositório."
-  ]
+  ],
+  "designDecisionWorkflow": {
+    "status": "proposed-method-from-chat-not-a-final-product-approval",
+    "principle": "O laboratório pode apoiar decisões futuras e preservar precedentes; o detector mede e apresenta evidência, mas não escolhe sozinho entre alternativas estéticas.",
+    "componentDecisionCard": [
+      "Componente original em light/dark com CSS e contraste calculado.",
+      "Uma ou mais alternativas renderizadas com o mesmo DOM e conteúdo.",
+      "Gate automático de contraste/acessibilidade.",
+      "Homologação visual humana quando existir escolha estética.",
+      "Decisão registrada e reutilizável para reduzir regressões."
+    ],
+    "noAutomaticApproval": true
+  }
 }
