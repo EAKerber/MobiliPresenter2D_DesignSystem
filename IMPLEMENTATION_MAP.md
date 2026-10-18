@@ -34,7 +34,7 @@ O produto é uma aplicação estática com múltiplas páginas HTML e folhas CSS
 | NAV-003 | Direção acordada | Conferir uso do favicon de “Como funciona” em todas as páginas | Confirmar cobertura e exceções antes de alterar páginas |
 | NAV-004 | Contrato funcional aprovado | Verificar abrir/fechar, Escape, clique fora, teclado, foco, `aria-expanded` e movimento reduzido | Não determina a estética do cabeçalho |
 | NAV-005 | Direção organizacional aprovada | Mapear header público, destinos, contexto do viewer e indicação de página ativa | Altura, tipografia, cores, logo, apresentação e estética do menu público continuam em aberto |
-| VIS-002 | Direção conceitual aprovada | Definir papéis semânticos e contextuais para informação, erro, sucesso, aviso, foco, seleção, hover, pressionado e desabilitado | Não fixa hexadecimais, pares de contraste, variantes, medidas, aparência ou tema por rota |
+| VIS-002 | Direção conceitual aprovada, com papéis cromáticos específicos homologados | Mapear semântica de informação de processo (azul) e promoção/comercial (cobre terciário `#A64D13`), além dos outros estados | Outros valores, pares de contraste, variantes, medidas, aparência e tema por rota seguem abertos |
 | EST-01 | Direção acordada | Localizar controles de seleção no configurador e verificar indicador explícito mais destaque moderado | Forma, cores, espessura e contraste ainda não definidos |
 | EST-02 | Direção acordada | Mapear foco de teclado separado da seleção | Cor, espessura, afastamento, clipping e contraste em cada superfície ainda não definidos |
 | EST-03 | Direção acordada | Separar hover, pressionado, seleção e conclusão; mapear movimento por família | Duração, easing, escala, deslocamento, cores e sombras ainda não definidos |
@@ -89,7 +89,7 @@ Essas classes têm escopos diferentes. Nomes repetidos como `.button`, `.brand`,
 
 Há vocabulários distintos e variáveis com o mesmo nome em áreas diferentes. `app/styles.css` ainda contém cores literais de interface; `app/admin/admin.css` define uma paleta própria e valores de estados; `app/ui-theme.css` adiciona substituições light/dark por rota e componente. A unificação exige primeiro decidir o mapa semântico e medir combinações em superfícies reais. Renomear variáveis ou substituir hexadecimais em lote pode mudar contrastes e significado.
 
-### Cores explicitamente não homologadas
+### Cores por estado de homologação
 
 - `#A64D13`: base aprovada da cor terciária promocional de produto/campanhas (2026-10-18). Variações e pares por tema/superfície ainda requerem contraste em contexto real.
 - Amostras da imagem “Exemplos de estados”: erro, sucesso, aviso e informação identificados como candidatos, não aprovados. Os ratios ilustrados não homologam seus hexadecimais.
@@ -125,7 +125,7 @@ Não criar uma pasta de tokens preenchida com valores de referência ou candidat
 - Resolver VIS-001 antes de assumir que todas as questões de identidade visual estão fechadas.
 - Recuperar a definição de CMP-001 antes de fixar uma governança de componentes.
 - Deixar ENV-001 no futuro, sem assumir seleção multiambiente.
-- Homologar valores de cor, pares de contraste, foco, seleção, estados e variantes por superfície/tema; os exemplos existentes são apenas referências.
+- Medir e homologar as variações e pares de contraste por superfície/tema, além das cores de foco, seleção e estados ainda sem valor aprovado; os swatches existentes continuam apenas como referências.
 - Importar ou localizar os fontes originais v0.2/v0.3 citados no registro se o inventário completo de 43 famílias, os exemplos e o laboratório forem necessários como base canônica.
 - Executar a revisão de contraste no DOM real e em estados dinâmicos. O registro DS-04 v2 declara cobertura incompleta; DS-05A/B/C aparece como plano, sem resultado de execução registrado.
 - Mapear o CSS inline de `app/access/manage.html` e os seletores de `app/config/index.html` na próxima revisão de código para completar a lista de classes com seus valores e estados.
@@ -139,7 +139,7 @@ O inventário estará pronto para orientar implementação quando cada decisão 
 **Sem execução de testes nesta etapa.** Este mapa não certifica contraste, acessibilidade nem a implementação runtime atual.
 
 
-## 9. Inventário visual estático — etapa seguinte
+## 9. Inventário visual estático — etapa atual
 
 O inventário detalhado está em [VISUAL_INVENTORY.md](VISUAL_INVENTORY.md) e [visual-inventory.json](visual-inventory.json), baseado no produto `main` no commit `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`. Abrange oito entradas HTML, oito folhas CSS, seletores e declarações visuais por regra, breakpoints, espaçamento, tipografia, cores literais, movimento e assets rastreados.
 
