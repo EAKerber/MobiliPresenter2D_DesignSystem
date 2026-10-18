@@ -4,7 +4,7 @@
 **Site observado:** [casaemmodulos.casa](https://casaemmodulos.casa/)  
 **Snapshot estático relacionado:** `EAKerber/MobiliPresenter2D` `main` em `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`, conforme inventário da etapa anterior.  
 **Deploy de produção verificado:** `6ad518d3da1379029e04324f`, pronto em 2026-10-18, commit `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a` ([commit do produto](https://github.com/EAKerber/MobiliPresenter2D/commit/298c11441f82cacfff2f809fd9e5ad6f1fc33c0a)).  
-**Decisões:** `decisions.json` continua sendo a fonte canônica.
+**Decisões:** `decisions.json` continua sendo a fonte canônica. O cruzamento entre decisões, rotas e folhas carregadas está em [DECISION_APPLICATION_MAP.md](DECISION_APPLICATION_MAP.md).
 
 ## Escopo e método
 
