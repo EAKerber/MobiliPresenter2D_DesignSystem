@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1110" viewBox="0 0 1440 1110">
+<rect width="1440" height="1110" fill="#f3f0eb"/>
+<text x="72" y="70" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#745839" letter-spacing="2">CASA EM MÓDULOS · NAV-005</text>
+<text x="72" y="116" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#252422">Cabeçalho público — alternativas experimentais</text>
+<text x="72" y="153" font-family="Arial,sans-serif" font-size="17" fill="#66615a">Duas composições para o mesmo contrato funcional. Medidas e aparência ainda não homologadas.</text>
+<g transform="translate(72 198)">
+<rect width="1296" height="350" rx="18" fill="#fff" stroke="#d4cec5"/>
+<text x="28" y="42" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#252422">A · Navegação exposta</text>
+<text x="28" y="70" font-family="Arial,sans-serif" font-size="14" fill="#66615a">Páginas visíveis no desktop; hambúrguer substitui os links em telas estreitas.</text>
+<rect x="28" y="98" width="1240" height="104" rx="12" fill="#201f1d"/>
+<g transform="translate(52 121)" fill="none" stroke-linecap="square" stroke-width="5"><path d="M2 47V20L32 3 62 20V47" stroke="#d8d0c4"/><path d="M32 3L62 20V47" stroke="#A64D13"/></g>
+<text x="130" y="157" font-family="Arial,sans-serif" font-size="23" font-weight="700" letter-spacing="3" fill="#f5f1e9">CASA<tspan fill="#D38A34" font-size="13"> EM</tspan></text><text x="131" y="177" font-family="Arial,sans-serif" font-size="11" letter-spacing="6" fill="#f5f1e9">MÓDULOS</text>
+<text x="412" y="158" font-family="Arial,sans-serif" font-size="16" fill="#eee9e1">Ambientes</text><text x="520" y="158" font-family="Arial,sans-serif" font-size="16" fill="#eee9e1">Como funciona</text><text x="668" y="158" font-family="Arial,sans-serif" font-size="16" fill="#eee9e1">Quem somos</text>
+<rect x="817" y="136" width="112" height="42" rx="8" fill="none" stroke="#8f7657"/><text x="845" y="163" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#f4eee5">Contato</text>
+<rect x="963" y="130" width="196" height="52" rx="8" fill="#8a6a43"/><text x="983" y="161" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#fff">FALE CONOSCO ↗</text>
+<rect x="1175" y="130" width="68" height="52" rx="26" fill="#2c2b28" stroke="#6a645d"/><circle cx="1195" cy="156" r="10" fill="none" stroke="#f5f1e9" stroke-width="2"/><text x="1211" y="161" font-family="Arial,sans-serif" font-size="12" fill="#f5f1e9">Escuro</text>
+<text x="28" y="250" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#252422">Leitura rápida</text><text x="28" y="278" font-family="Arial,sans-serif" font-size="15" fill="#4d4943">Os destinos ficam à vista; preserva a chamada de contato como ação separada.</text>
+<text x="28" y="315" font-family="Arial,sans-serif" font-size="13" fill="#796c5b">No mobile: menu acessível com os mesmos destinos, Escape, clique fora e foco.</text>
+</g>
+<g transform="translate(72 582)">
+<rect width="1296" height="350" rx="18" fill="#fff" stroke="#d4cec5"/>
+<text x="28" y="42" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#252422">B · Navegação compacta</text>
+<text x="28" y="70" font-family="Arial,sans-serif" font-size="14" fill="#66615a">Marca e controles no cabeçalho; os destinos aparecem ao abrir o menu em todas as resoluções.</text>
+<rect x="28" y="98" width="1240" height="104" rx="12" fill="#201f1d"/>
+<g transform="translate(52 121)" fill="none" stroke-linecap="square" stroke-width="5"><path d="M2 47V20L32 3 62 20V47" stroke="#d8d0c4"/><path d="M32 3L62 20V47" stroke="#A64D13"/></g>
+<text x="130" y="157" font-family="Arial,sans-serif" font-size="23" font-weight="700" letter-spacing="3" fill="#f5f1e9">CASA<tspan fill="#D38A34" font-size="13"> EM</tspan></text><text x="131" y="177" font-family="Arial,sans-serif" font-size="11" letter-spacing="6" fill="#f5f1e9">MÓDULOS</text>
+<rect x="1074" y="130" width="74" height="52" rx="26" fill="#2c2b28" stroke="#6a645d"/><circle cx="1097" cy="156" r="10" fill="none" stroke="#f5f1e9" stroke-width="2"/><text x="1113" y="161" font-family="Arial,sans-serif" font-size="12" fill="#f5f1e9">Escuro</text>
+<rect x="1164" y="130" width="79" height="52" rx="10" fill="#2c2b28" stroke="#8f7657"/><path d="M1184 146h38M1184 156h38M1184 166h38" stroke="#f5f1e9" stroke-width="3"/>
+<text x="28" y="250" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#252422">Menu expandido (amostra)</text>
+<rect x="28" y="265" width="1240" height="56" rx="10" fill="#f4f1eb" stroke="#ddd6cc"/>
+<text x="54" y="300" font-family="Arial,sans-serif" font-size="15" fill="#302e2a">Ambientes</text><text x="229" y="300" font-family="Arial,sans-serif" font-size="15" fill="#302e2a">Como funciona</text><text x="425" y="300" font-family="Arial,sans-serif" font-size="15" fill="#302e2a">Quem somos</text><text x="600" y="300" font-family="Arial,sans-serif" font-size="15" fill="#302e2a">Contato</text><text x="780" y="300" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#68543b">Fale conosco ↗</text>
+<text x="28" y="338" font-family="Arial,sans-serif" font-size="13" fill="#796c5b">Menu preserva os quatro destinos públicos aprovados; Fale conosco permanece ação contextual.</text>
+</g>
+<text x="72" y="985" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#252422">Referência atual:</text><text x="211" y="985" font-family="Arial,sans-serif" font-size="15" fill="#4d4943">o site publicado mostra links horizontais, ação Fale conosco e controle de tema; as opções acima não reproduzem o logo oficial.</text>
+<text x="72" y="1020" font-family="Arial,sans-serif" font-size="14" fill="#796c5b">Paleta, tipografia, tamanhos, ícones e dimensões são ilustrativos. Não são tokens nem especificações aprovadas.</text>
+<text x="72" y="1060" font-family="Arial,sans-serif" font-size="13" fill="#796c5b">Contrato de interação deve manter teclado, Escape, clique fora, aria-expanded, foco e movimento reduzido (NAV-004).</text>
+</svg>
