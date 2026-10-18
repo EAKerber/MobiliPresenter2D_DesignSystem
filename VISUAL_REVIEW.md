@@ -14,7 +14,7 @@
 
 Esta aprovação é para a versão expandida/larga. Breakpoints, composição compacta e medidas não foram definidos. O menu público continua sujeito ao contrato de teclado, Escape, clique fora, aria-expanded, foco e movimento reduzido de NAV-004.
 
-A equivalência entre o destino **Contato** de NAV-004 e o link atual **Fale conosco** (WhatsApp) continua sem confirmação.
+A escolha A mantém o link atual **Fale conosco** via WhatsApp como acesso público de contato. Isso não cria uma rota própria para Contato.
 
 A prancha anterior de opções permanece em [NAV-005-public-header-options.svg](visualEvidence/experiments/NAV-005-public-header-options.svg) como comparação experimental. A prancha simplificada acima ilustra a decisão aprovada, mas não especifica tokens, dimensões nem o logo final.
 
@@ -31,7 +31,6 @@ A aprovação é contextual: não cria tokens globais, não aprova variações d
 
 ## Ainda aberto
 
-- Confirmar se Fale conosco/WhatsApp satisfaz o destino Contato ou se há uma rota pública própria.
 - Definir breakpoints e comportamento visual compacto/responsivo dos cabeçalhos.
 - Homologar dimensões, tipografia, cores, assets e estilo final dos cabeçalhos.
 - Medir outros pares e estados; os dois aprovados não se generalizam.
