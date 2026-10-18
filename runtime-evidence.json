@@ -187,7 +187,8 @@
         "background": "#F0EDE8",
         "fontSize": "16px",
         "ratio": 4.47,
-        "threshold": 4.5
+        "threshold": 4.5,
+        "viewport": "390x844"
       },
       {
         "route": "/how-it-works/",
@@ -197,7 +198,8 @@
         "background": "#F0EDE8",
         "fontSize": "16px",
         "ratio": 4.47,
-        "threshold": 4.5
+        "threshold": 4.5,
+        "viewport": "1440x900"
       },
       {
         "route": "/about/",
@@ -207,7 +209,8 @@
         "background": "#F0EDE8",
         "fontSize": "16px",
         "ratio": 4.47,
-        "threshold": 4.5
+        "threshold": 4.5,
+        "viewport": "1440x900"
       },
       {
         "route": "/how-it-works/",
@@ -217,7 +220,8 @@
         "background": "#E8E3DC",
         "fontSize": "11.52px",
         "ratio": 3.89,
-        "threshold": 4.5
+        "threshold": 4.5,
+        "viewport": "1440x900"
       },
       {
         "route": "/how-it-works/",
@@ -226,7 +230,8 @@
         "foreground": "#C4BCB2",
         "background": "#FCF9EF",
         "ratio": 1.78,
-        "threshold": 4.5
+        "threshold": 4.5,
+        "viewport": "1440x900"
       }
     ],
     "observedApprovedBase": {
@@ -236,7 +241,8 @@
       "foreground": "#FFFFFF",
       "background": "#A64D13",
       "ratio": 5.69,
-      "note": "Confirms only this current pair on this component; no new variant approval."
+      "note": "Confirms only this current pair on this component; no new variant approval.",
+      "viewport": "1440x900"
     },
     "exclusions": [
       "Image-overlaid viewer hotspots were not certified by text/background computation; inspect actual active states visually.",
