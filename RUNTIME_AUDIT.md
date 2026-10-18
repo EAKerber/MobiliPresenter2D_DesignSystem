@@ -1,16 +1,16 @@
 # Auditoria visual em runtime
 
 **Observação:** 2026-10-18  
-**Site observado:** [mobilipresenter2d.netlify.app](https://mobilipresenter2d.netlify.app/)  
+**Site observado:** [casaemmodulos.casa](https://casaemmodulos.casa/)  
 **Snapshot estático relacionado:** `EAKerber/MobiliPresenter2D` `main` em `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`, conforme inventário da etapa anterior.  
-**Revisão/deploy ao vivo:** não foi possível confirmar qual commit de produto está publicado; a URL foi verificada diretamente.  
+**Deploy de produção verificado:** `6ad518d3da1379029e04324f`, pronto em 2026-10-18, commit `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a` ([commit do produto](https://github.com/EAKerber/MobiliPresenter2D/commit/298c11441f82cacfff2f809fd9e5ad6f1fc33c0a)).  
 **Decisões:** `decisions.json` continua sendo a fonte canônica.
 
 ## Escopo e método
 
 Inspeção somente de leitura no site publicado, cobrindo páginas públicas e a tela de login administrativo. Foram observados DOM, tema, largura do documento, cabeçalhos, comportamento do menu e alguns pares de contraste em superfícies sólidas. A medição de contraste usa cores computadas pelo navegador e luminância relativa; é uma triagem técnica, não uma certificação WCAG nem aprovação visual.
 
-Nenhum código do produto foi alterado. Não houve tentativa de login, envio de link, acesso a dados privados ou execução de testes automatizados. Capturas adicionais foram persistidas como JPEG em 1265 × 712: [landing claro](visualEvidence/public/landing/landing-light.jpg), [landing escuro](visualEvidence/public/landing/landing-dark.jpg) e [viewer escuro](visualEvidence/public/viewer/viewer-dark.jpg). São referências do site publicado capturadas nesta retomada; não são propostas homologadas. O conjunto original mostrado inline em 1440 × 900 permanece distinto destas capturas.
+Nenhum código do produto foi alterado. Não houve tentativa de login, envio de link, acesso a dados privados ou execução de testes automatizados. As capturas públicas persistidas como JPEG em 1265 × 712 são: [landing claro](visualEvidence/public/landing/landing-light.jpg), [landing escuro](visualEvidence/public/landing/landing-dark.jpg) e [viewer escuro](visualEvidence/public/viewer/viewer-dark.jpg). Elas documentam rotas públicas, portanto não demonstram o cabeçalho privado atualizado. Para isso, foram adicionadas capturas do login administrativo em 1280 × 720: [claro](visualEvidence/private/admin-login/admin-login-light.jpg), [escuro](visualEvidence/private/admin-login/admin-login-dark.jpg) e [menu escuro aberto](visualEvidence/private/admin-login/admin-login-menu-dark.jpg). Todas correspondem ao deploy de produção acima; são referências do estado publicado, não propostas homologadas. O conjunto original mostrado inline em 1440 × 900 permanece distinto destas capturas.
 
 ## Cobertura de rotas e tamanhos
 
