@@ -34,3 +34,17 @@ A aprovação é contextual: não cria tokens globais, não aprova variações d
 - Definir breakpoints e comportamento visual compacto/responsivo dos cabeçalhos.
 - Homologar dimensões, tipografia, cores, assets e estilo final dos cabeçalhos.
 - Medir outros pares e estados; os dois aprovados não se generalizam.
+
+
+## FIND-004 — escolha pendente para a legenda
+
+![Prancha esquemática com o estado atual e duas alternativas experimentais para a legenda](visualEvidence/experiments/FIND-004-caption-contrast-options.svg)
+
+A auditoria runtime mediu 1,78:1 para `.study-art figcaption` clara sobre a superfície clara da ilustração no tema escuro. A prancha compara:
+
+- **A — área separada:** legenda abaixo da arte, em uma superfície escura própria; não cobre detalhes e aumenta a altura do componente.
+- **B — faixa sobre a arte:** legenda dentro da figura sobre uma faixa escura; mantém a composição compacta e escurece a borda inferior da ilustração.
+
+As cores na prancha são amostras de contraste, não tokens. A decisão estética permanece aberta; nenhuma alternativa foi registrada como aprovada. A prancha é esquemática e não substitui uma implementação fiel no componente.
+
+**Revisão solicitada:** qual tratamento prefere para este contexto — A ou B? Também pode pedir uma terceira solução.
