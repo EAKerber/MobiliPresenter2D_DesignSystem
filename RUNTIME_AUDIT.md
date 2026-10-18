@@ -8,9 +8,9 @@
 
 ## Escopo e método
 
-Inspeção somente de leitura no site publicado, cobrindo páginas públicas e a tela de login administrativo. Foram observados DOM, tema, largura do documento, cabeçalhos, comportamento do menu e alguns pares de contraste em superfícies sólidas. A medição de contraste usa cores computadas pelo navegador e luminância relativa; é uma triagem técnica, não uma certificação WCAG nem aprovação visual.
+Inspeção somente de leitura no site publicado, cobrindo páginas públicas, a tela de login e rotas privadas em sessão autenticada. O usuário concluiu o login e autorizou a navegação; não registramos o e-mail nem conteúdo de convites. Foram observados DOM, tema, largura do documento, cabeçalhos, comportamento do menu e alguns pares de contraste em superfícies sólidas. A medição de contraste usa cores computadas pelo navegador e luminância relativa; é uma triagem técnica, não uma certificação WCAG nem aprovação visual.
 
-Nenhum código do produto foi alterado. Não houve tentativa de login, envio de link, acesso a dados privados ou execução de testes automatizados. As capturas públicas persistidas como JPEG em 1265 × 712 são: [landing claro](visualEvidence/public/landing/landing-light.jpg), [landing escuro](visualEvidence/public/landing/landing-dark.jpg) e [viewer escuro](visualEvidence/public/viewer/viewer-dark.jpg). Elas documentam rotas públicas, portanto não demonstram o cabeçalho privado atualizado. Para isso, foram adicionadas capturas do login administrativo em 1280 × 720: [claro](visualEvidence/private/admin-login/admin-login-light.jpg), [escuro](visualEvidence/private/admin-login/admin-login-dark.jpg) e [menu escuro aberto](visualEvidence/private/admin-login/admin-login-menu-dark.jpg). Todas correspondem ao deploy de produção acima; são referências do estado publicado, não propostas homologadas. O conjunto original mostrado inline em 1440 × 900 permanece distinto destas capturas.
+Nenhum código ou dado do produto foi alterado. Não foram enviados links, convites ou configurações, e nenhum teste automatizado foi executado. As capturas privadas autenticadas não foram persistidas no repositório. As capturas públicas persistidas como JPEG em 1265 × 712 são: [landing claro](visualEvidence/public/landing/landing-light.jpg), [landing escuro](visualEvidence/public/landing/landing-dark.jpg) e [viewer escuro](visualEvidence/public/viewer/viewer-dark.jpg). Elas documentam rotas públicas, portanto não demonstram o cabeçalho privado atualizado. Para isso, foram adicionadas capturas do login administrativo em 1280 × 720: [claro](visualEvidence/private/admin-login/admin-login-light.jpg), [escuro](visualEvidence/private/admin-login/admin-login-dark.jpg) e [menu escuro aberto](visualEvidence/private/admin-login/admin-login-menu-dark.jpg). Todas correspondem ao deploy de produção acima; são referências do estado publicado, não propostas homologadas. O conjunto original mostrado inline em 1440 × 900 permanece distinto destas capturas.
 
 ## Cobertura de rotas e tamanhos
 
@@ -43,9 +43,13 @@ No primeiro carregamento da landing, o primeiro clique no hambúrguer ocorreu en
 
 Isso localiza uma condição reproduzível em que a camada de introdução intercepta a interação inicial. Não prova que seja a causa dos relatos sobre páginas privadas. O menu público foi observado abrir depois que essa camada saiu; Escape, clique fora, retorno de foco, sequência completa por teclado e preferência por movimento reduzido não foram auditados aqui.
 
-### Rotas protegidas
+### Páginas protegidas: auditoria autenticada
 
-O acesso sem sessão não expôs o configurador nem o gerenciamento de acessos. As páginas que dependem dessas áreas ficam **não verificadas em runtime autenticado**; nenhuma conclusão sobre seus cabeçalhos, controles ou dados privados é inferida do redirecionamento.
+Após o usuário autenticar, `admin.html` carregou o editor e a mensagem de falha de carregamento não estava visível nessa visita. O menu abriu e apresentou Configurador, Administração, Gerenciar acessos e Sair. Em `/config/`, a configuração carregou; o menu mostrou os grupos privado e público e Sair. Em `/access/manage.html`, a página de gerenciamento e o menu também foram observados autenticados, sem ler ou registrar valores de convites.
+
+A sequência identificou uma inconsistência transitória: um estado do menu do Admin observado logo após o login ainda oferecia entrada, mas uma navegação nova para Admin mostrou as opções autenticadas. O menu funcionou nas verificações posteriores em Admin, Configurador e Gerenciar acessos. Isso não descarta a intermitência relatada nem explica sua causa.
+
+No Configurador, o indicador exibiu `8 de 8 itens incluídos` sem módulos selecionados; na etapa Serviços, a iluminação estava desabilitada por dependência e o mesmo total continuou visível. Essa contradição confirma a inconsistência funcional descrita no issue #209. A inspeção foi somente visual/DOM; nenhum estado foi alterado. O novo achado de sobreposição entre a cena e o menu em viewport estreito está em [FINDINGS_REGISTER.md](FINDINGS_REGISTER.md) e no [issue #214](https://github.com/EAKerber/MobiliPresenter2D/issues/214). A inconsistência de sessão do menu está no [issue #213](https://github.com/EAKerber/MobiliPresenter2D/issues/213).
 
 ## Contraste: triagem em DOM real
 
@@ -62,7 +66,7 @@ Os seguintes pares foram lidos no DOM, em estado visual estável, sobre fundos s
 
 Os três primeiros pares estão próximos do limite de 4,5:1, mas continuam abaixo dele. A legenda da ilustração é o caso mais evidente: a superfície clara da figura persiste no modo escuro, enquanto a legenda muda para um tom claro. O registro é de falha/candidato técnico no contexto observado; qualquer ajuste de cor deve respeitar a direção homologada e passar por revisão visual quando houver mais de uma solução.
 
-A amostra promocional atual confirma que branco sobre a base aprovada `#A64D13` funciona neste componente e nesta superfície. Isso não homologa o uso em outros fundos, tamanhos de texto ou temas. A tela autenticada de administração — incluindo as opções mostradas no inventário estático — não pôde ser medida.
+A amostra promocional atual confirma que branco sobre a base aprovada `#A64D13` funciona neste componente e nesta superfície. Isso não homologa o uso em outros fundos, tamanhos de texto ou temas. As superfícies autenticadas do Admin — incluindo as opções mostradas no inventário estático — não tiveram contraste medido nesta sessão.
 
 ## Automação de contraste
 
@@ -70,7 +74,6 @@ O inventário estático não encontrou um gate de contraste conectado às rotas 
 
 ## Estados não verificados
 
-- Administração autenticada, gerenciar acessos e convites, configurador e estados dinâmicos protegidos.
 - Teclado completo do menu: Escape, clique fora, retorno de foco e ordem de tabulação.
 - Preferência de movimento reduzido no navegador e efeitos runtime correspondentes.
 - Estados de foco, hover, pressionado, seleção e carregamento para todas as famílias.
@@ -81,5 +84,15 @@ O inventário estático não encontrou um gate de contraste conectado às rotas 
 1. VIS-002 agora registra dois pares contextuais aprovados para texto no tema claro; não são tokens globais e não resolvem os achados do tema escuro.
 2. NAV-005 agora aprova a estrutura larga: padrão A para páginas públicas, B para privadas e header contextual tipo viewer para páginas de segunda ordem. Estética final, medidas e layouts compactos continuam em aberto.
 3. Revalidar a camada de introdução e o primeiro clique no menu público como comportamento funcional, sem confundir esse achado com a navegação privada.
-4. Repetir a auditoria autenticada quando houver sessão permitida para observar o painel e o gerenciamento de acessos.
+4. Reproduzir a transição pós-login e reconciliar a triagem estática #208 com o snapshot atual; a primeira inspeção autenticada confirmou o contador incorreto, mas não substitui a auditoria de contraste nos dois temas.
 5. Planejar a etapa de aplicação visual no produto após revisar os padrões e fechar as medições restantes.
+
+
+## Reconciliação da triagem estática DS-04
+
+O issue [#208 do produto](https://github.com/EAKerber/MobiliPresenter2D/issues/208) foi atualizado após comparar seu baseline `67d3197` com o snapshot de produção `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`. No código, DS04-01 (carregamento do tema em `/access/`) e DS04-08 (fundo/texto do dock em tema claro) estão resolvidos. Permanecem candidatos estáticos DS04-02 a DS04-07, DS04-09, DS04-10 e DS04-12; DS04-11 está documentado como exceção técnica intencional. Essa reconciliação não inclui medidas runtime de contraste para cada seletor; os valores do relatório original continuam sendo medições do baseline, não do DOM atual. Veja a classificação detalhada no issue #208 e o [registro de achados](FINDINGS_REGISTER.md).
+
+
+## Revisão visual do Configurador em tema claro (2026-10-18)
+
+Em viewport estreito, a checagem visual em tema claro confirmou que o menu aberto continua atrás da imagem da cena e cobre parte do link “Como funciona” (também observado no tema escuro; [issue #214](https://github.com/EAKerber/MobiliPresenter2D/issues/214)). Na etapa Resumo, o rótulo “Módulos” em `.price-state__breakdown dt` aparece quase ilegível no cartão claro, confirmando visualmente DS04-07, sem nova razão numérica; registro em [issue #208](https://github.com/EAKerber/MobiliPresenter2D/issues/208). No painel Serviços, o texto da iluminação indisponível por dependência também parece muito atenuado. Esse controle está desabilitado, então foi anotado como revisão visual, não como falha WCAG confirmada. Nenhuma opção da configuração foi marcada ou alterada. O navegador foi devolvido ao tema escuro, etapa Serviços e menu aberto.
