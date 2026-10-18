@@ -75,11 +75,11 @@ O inventário estático não encontrou um gate de contraste conectado às rotas 
 - Preferência de movimento reduzido no navegador e efeitos runtime correspondentes.
 - Estados de foco, hover, pressionado, seleção e carregamento para todas as famílias.
 - Contraste de textos sobre imagens, gradientes, pseudo-elementos e camadas transparentes; leituras automáticas nesses contextos podem produzir falsos positivos.
-- Commit exato publicado no Netlify e eventuais diferenças entre o deploy e o snapshot estático.
 
 ## Próxima etapa recomendada
 
-1. Levar os achados de contraste para a etapa de homologação sem promover automaticamente cores atuais a tokens.
-2. Preparar comparação visual somente onde as decisões existentes deixam escolha estética em aberto, em especial a estética do cabeçalho público (NAV-005). A captura atual serve de referência do site; não é uma proposta homologada.
+1. VIS-002 agora registra dois pares contextuais aprovados para texto no tema claro; não são tokens globais e não resolvem os achados do tema escuro.
+2. NAV-005 agora aprova a estrutura larga: padrão A para páginas públicas, B para privadas e header contextual tipo viewer para páginas de segunda ordem. Estética final, medidas e layouts compactos continuam em aberto.
 3. Revalidar a camada de introdução e o primeiro clique no menu público como comportamento funcional, sem confundir esse achado com a navegação privada.
 4. Repetir a auditoria autenticada quando houver sessão permitida para observar o painel e o gerenciamento de acessos.
+5. Planejar a etapa de aplicação visual no produto após revisar os padrões e fechar as medições restantes.
