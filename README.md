@@ -1,16 +1,16 @@
 # MobiliPresenter2D Design System
 
-Registro navegável das decisões de design e seus estados de homologação.
+Registro de decisões de design, estado de homologação e evidências recuperadas dos chats do inventário.
 
-Abra [`index.html`](index.html) localmente ou pelo GitHub Pages para consultar o documento completo. O HTML é independente e não requer dependências.
+- [`index.html`](index.html): documento visual navegável, independente e sem dependências.
+- [`decisions.json`](decisions.json): registro estruturado das decisões, pendências, limites e itens a recuperar.
 
-## Estado do conteúdo
+## Como ler
 
-- Decisões homologadas são identificadas explicitamente.
-- Candidatos, referências cromáticas e experimentos permanecem separados.
-- Aprovar uma direção não significa que ela já foi implementada no produto.
-- A origem e os limites da evidência estão documentados no próprio HTML.
+- “Direção aprovada” registra acordo conceitual; não significa que todos os valores visuais foram fixados nem autoriza implementar no produto.
+- Referências de cor, candidatos e experiências do laboratório permanecem separados dos tokens oficiais.
+- Lacunas nos checkpoints são declaradas sem completar conteúdo por inferência.
 
-## Fonte de continuidade
+## Fontes
 
-A consolidação foi feita a partir dos chats “Inventário De Design System” e “Continuar Inventário Design System”, além das decisões fornecidas diretamente nesta conversa.
+Chats “Inventário De Design System” e “Continuar Inventário Design System”, incluindo checkpoints cumulativos até EST-08 e decisões EST-09/10, além das direções fornecidas pelo usuário nesta conversa.
