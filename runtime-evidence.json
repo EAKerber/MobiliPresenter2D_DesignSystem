@@ -14,7 +14,7 @@
   "scope": {
     "readOnly": true,
     "productCodeChanged": false,
-    "authenticationAttempted": false,
+    "authenticationAttempted": true,
     "automatedTestSuiteRun": false,
     "screenshots": {
       "shownInlineInTask": [
@@ -91,7 +91,10 @@
           "source": "Browser capture of the published production site"
         }
       ]
-    }
+    },
+    "authenticationCompletedByUser": true,
+    "authenticatedScreenshotsPersisted": false,
+    "privateAuthenticatedScreenshotsPersisted": false
   },
   "viewports": [
     {
@@ -316,5 +319,28 @@
     "Runtime reduced-motion preference",
     "Dynamic hover, pressed, focus, selection and loading state coverage",
     "Contrast on images, gradients, pseudo-elements and transparent layers"
-  ]
+  ],
+  "authenticatedSessionObservations": [
+    {
+      "route": "/admin.html",
+      "state": "authenticated",
+      "observation": "Editor loaded on fresh navigation; post-login administrative-data error was not visible in that visit. Menu opened with private destinations and logout. A previous menu state immediately after sign-in showed the signed-out entry option; the transition inconsistency was not reproduced after fresh navigation."
+    },
+    {
+      "route": "/config/",
+      "state": "authenticated",
+      "observation": "Configurator loaded. Menu opened with private/public groups and logout. Indicator showed 8 of 8 items included while all seven modules were unselected; lighting was disabled by its dependency."
+    },
+    {
+      "route": "/access/manage.html",
+      "state": "authenticated",
+      "observation": "Management page loaded; menu opened with private/public groups and logout. Invitation values were not read or recorded."
+    },
+    {
+      "route": "/config/ menu overlay",
+      "state": "authenticated narrow viewport",
+      "observation": "The scene oven image visually overlays the public navigation list and obscures part of the Como funciona link. Links remained present in the accessibility tree. Exact stacking or hit-testing cause not isolated; evidence includes the user-provided screenshot and live visual confirmation."
+    }
+  ],
+  "findingsRegister": "FINDINGS_REGISTER.md"
 }
