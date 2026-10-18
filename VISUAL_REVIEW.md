@@ -29,7 +29,8 @@ Isso não transforma os candidatos em tokens. O azul homologado para informaçã
 ## Revisão solicitada
 
 1. Cabeçalho público: A, B, ou comentários sobre outra composição.
-2. Destino público Contato: confirmar se Fale conosco via WhatsApp satisfaz NAV-004 ou se o contrato exige uma rota pública própria.\n3. Texto corrido: A ou B; se não houver preferência visual, escolha posterior pode priorizar a menor alteração que alcance contraste suficiente.
+2. Destino público Contato: confirmar se Fale conosco via WhatsApp satisfaz NAV-004 ou se o contrato exige uma rota pública própria.
+3. Texto corrido: A ou B; se não houver preferência visual, escolha posterior pode priorizar a menor alteração que alcance contraste suficiente.
 4. Rótulo: A ou B; a escolha ainda deve ser validada no componente e tema de origem.
 
 Até essa revisão, `NAV-005` permanece aberto e os quatro hexadecimais candidatos continuam fora de `decisions.json`.
