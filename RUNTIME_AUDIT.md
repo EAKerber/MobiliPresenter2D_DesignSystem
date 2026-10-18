@@ -86,3 +86,8 @@ O inventário estático não encontrou um gate de contraste conectado às rotas 
 3. Revalidar a camada de introdução e o primeiro clique no menu público como comportamento funcional, sem confundir esse achado com a navegação privada.
 4. Reproduzir a transição pós-login e reconciliar a triagem estática #208 com o snapshot atual; a primeira inspeção autenticada confirmou o contador incorreto, mas não substitui a auditoria de contraste nos dois temas.
 5. Planejar a etapa de aplicação visual no produto após revisar os padrões e fechar as medições restantes.
+
+
+## Reconciliação da triagem estática DS-04
+
+O issue [#208 do produto](https://github.com/EAKerber/MobiliPresenter2D/issues/208) foi atualizado após comparar seu baseline `67d3197` com o snapshot de produção `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`. No código, DS04-01 (carregamento do tema em `/access/`) e DS04-08 (fundo/texto do dock em tema claro) estão resolvidos. Permanecem candidatos estáticos DS04-02 a DS04-07, DS04-09, DS04-10 e DS04-12; DS04-11 está documentado como exceção técnica intencional. Essa reconciliação não inclui medidas runtime de contraste para cada seletor; os valores do relatório original continuam sendo medições do baseline, não do DOM atual. Veja a classificação detalhada no issue #208 e o [registro de achados](FINDINGS_REGISTER.md).
