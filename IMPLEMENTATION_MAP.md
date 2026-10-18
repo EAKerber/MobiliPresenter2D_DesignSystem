@@ -91,9 +91,9 @@ Há vocabulários distintos e variáveis com o mesmo nome em áreas diferentes. 
 
 ### Cores explicitamente não homologadas
 
-- `#A64D13`: estimativa aproximada do cobre da imagem; o registro informa 5,69:1 com branco. É referência de viabilidade, não token oficial.
+- `#A64D13`: base aprovada da cor terciária promocional de produto/campanhas (2026-10-18). Variações e pares por tema/superfície ainda requerem contraste em contexto real.
 - Amostras da imagem “Exemplos de estados”: erro, sucesso, aviso e informação identificados como candidatos, não aprovados. Os ratios ilustrados não homologam seus hexadecimais.
-- Hexadecimais já presentes no produto, incluindo `#8b6a40`, `#d8bc7c`, `#245d87`, verdes e vermelhos: uso atual observado. Presença no CSS não constitui homologação como token.
+- Informação de processo usa o azul homologado. A administração atualmente mapeia `--info` para `#245d87` no tema claro e `#a7d1f0` no escuro; a auditoria visual/runtime confirmará a aplicação em telas reais. Outros hexadecimais no produto seguem como uso atual, sem aprovação automática.
 
 ## 6. Organização recomendada para a próxima etapa
 
@@ -121,7 +121,7 @@ Não criar uma pasta de tokens preenchida com valores de referência ou candidat
 
 ## 7. Bloqueios e próximos dados necessários
 
-- Recuperar o texto original de GOV-001, NAV-001 e NAV-002; o JSON atual registra estados acordados sem a explicação.
+- GOV-001, NAV-001 e NAV-002: origem marcada como não recuperável nesta consolidação; IDs/estados preservados sem inferir texto decisório.
 - Resolver VIS-001 antes de assumir que todas as questões de identidade visual estão fechadas.
 - Recuperar a definição de CMP-001 antes de fixar uma governança de componentes.
 - Deixar ENV-001 no futuro, sem assumir seleção multiambiente.
@@ -137,3 +137,10 @@ Não criar uma pasta de tokens preenchida com valores de referência ou candidat
 O inventário estará pronto para orientar implementação quando cada decisão aplicável apontar para as rotas e famílias afetadas; cada componente indicar seus seletores e folha CSS; cada cor tiver status explícito (uso atual, referência, candidata ou homologada); os estados avaliados distinguirem evidência real de não testado; e os bloqueios acima tiverem responsável ou decisão seguinte registrada.
 
 **Sem execução de testes nesta etapa.** Este mapa não certifica contraste, acessibilidade nem a implementação runtime atual.
+
+
+## 9. Inventário visual estático — etapa seguinte
+
+O inventário detalhado está em [VISUAL_INVENTORY.md](VISUAL_INVENTORY.md) e [visual-inventory.json](visual-inventory.json), baseado no produto `main` no commit `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`. Abrange oito entradas HTML, oito folhas CSS, seletores e declarações visuais por regra, breakpoints, espaçamento, tipografia, cores literais, movimento e assets rastreados.
+
+A leitura documenta código estático; não substitui inspeção do DOM, captura visual, contraste runtime ou verificação de estados gerados por JavaScript. Assets sem referência estática ficam como não verificados. #A64D13 consta como base aprovada para promoção/comunicação comercial; variações e combinações por tema ainda ficam pendentes. Informação de processo usa o azul homologado e permanece separada de aviso, erro e sucesso.
