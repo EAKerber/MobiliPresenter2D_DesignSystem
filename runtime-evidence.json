@@ -353,5 +353,31 @@
     "FIND-007": 213,
     "FIND-008": 208,
     "FIND-009": 214
+  },
+  "baselineAuditReconciliation": {
+    "productIssue": 208,
+    "baselineCommit": "67d31976c605c76c7ef10876d03fdeb17369ab78",
+    "productionCommit": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
+    "sourceReviewOnly": true,
+    "resolvedInSource": [
+      "DS04-01",
+      "DS04-08"
+    ],
+    "remainingStaticCandidates": [
+      "DS04-02",
+      "DS04-03",
+      "DS04-04",
+      "DS04-05",
+      "DS04-06",
+      "DS04-07",
+      "DS04-09",
+      "DS04-10",
+      "DS04-12"
+    ],
+    "explicitTechnicalException": [
+      "DS04-11"
+    ],
+    "runtimeContrastMeasured": false,
+    "details": "See FINDINGS_REGISTER.md and product issue #208. Baseline contrast values are historical and were not remeasured against the production DOM."
   }
 }
