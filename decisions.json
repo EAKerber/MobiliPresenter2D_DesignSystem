@@ -43,7 +43,11 @@
       "decision": "Menu público abre e fecha pelo botão, responde a Escape e clique fora, permite navegação por teclado, expõe aria-expanded, devolve foco quando adequado e respeita preferência por movimento reduzido. Páginas públicas dão acesso a Ambientes (landing), Como funciona, Quem somos e Contato.",
       "notApproved": [
         "Estética do header; tratada separadamente em NAV-005."
-      ]
+      ],
+      "publicContactAccess": {
+        "status": "current-access-retained-with-approved-public-header-pattern",
+        "decision": "The existing 'Fale conosco' link to WhatsApp remains the public contact access under the user's approval of wide public-header option A. This does not establish a separate contact route."
+      }
     },
     {
       "id": "NAV-005",
@@ -55,8 +59,7 @@
       ],
       "notApproved": [
         "Exact header heights, spacing, typography, colors, icons and logo treatment",
-        "Compact/mobile breakpoint values and compositions",
-        "Whether the WhatsApp 'Fale conosco' destination satisfies the public Contato destination or requires a separate route"
+        "Compact/mobile breakpoint values and compositions"
       ],
       "future": [
         "Generalização multiambiente (ENV-001)."
