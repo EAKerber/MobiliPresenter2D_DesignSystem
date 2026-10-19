@@ -17,7 +17,7 @@
 
 ## Foco proposto
 
-- Tema claro: contorno cobre #A64D13 contra superfície #F8F5F0; contraste calculado 5,18:1.
+- Tema claro: contorno cobre #A64D13 contra superfície #F8F5F0; contraste calculado 5,23:1.
 - Tema escuro: contorno dourado #D8BC7C contra superfície #211F1C; contraste calculado 8,93:1.
 - Exemplo usa contorno de 4 px e afastamento de 3 px. Esses valores são somente uma visualização para tornar o foco fácil de localizar; a espessura e o offset ainda não estão homologados.
 - O foco deve continuar independente da seleção e não depender só de mudança de cor; revisar indicador de teclado em componentes reais.
@@ -28,9 +28,9 @@ Razões calculadas para cores sólidas e não arredondadas para alcançar limite
 
 | Par candidato | Razão |
 |---|---:|
-| Texto principal claro #292723 em #F3EFE9 | 13,19:1 |
+| Texto principal claro #292723 em #F3EFE9 | 13,01:1 |
 | Secundário claro #705C4B em #F3EFE9 | 5,52:1 |
-| Secundário claro #705C4B em #EBE5DD | 5,00:1 |
+| Secundário claro #705C4B em #EBE5DD | 5,05:1 |
 | Texto principal escuro #F0EAE1 em #171614 | 15,12:1 |
 | Secundário escuro #C7BBAA em #211F1C | 8,70:1 |
 
