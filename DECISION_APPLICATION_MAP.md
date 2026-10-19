@@ -11,6 +11,10 @@ Este mapa liga IDs de decisão às rotas, arquivos HTML e folhas CSS efetivament
 
 As folhas foram lidas dos elementos `<link rel="stylesheet">` nas oito páginas do commit do produto acima. Para regras, propriedades e seletores por folha, consulte o inventário JSON. Seletores são indicados como alvo direto apenas quando aparecem na evidência específica de VIS-002; não inferimos os demais vínculos a partir de nomes parecidos.
 
+## Informação de processo
+
+A decisão VIS-002 agora aprova a opção A como pares contextuais de texto: `#245D87` sobre `#F0EDE8` (6,01:1) no claro e `#A7D1F0` sobre `#211F1C` (10,19:1) no escuro. A aplicação registrada na Administração é `.message[aria-live="polite"][data-kind=""]` em `/admin.html`; o estado runtime observado ainda usa cores neutras. A escolha não cria tokens globais e não cobre outras superfícies, fundos, bordas ou ícones.
+
 ## Rotas, fontes visuais e evidência
 
 | URL | Superfície | HTML | CSS carregado | Decisões mapeadas | Evidência runtime |
