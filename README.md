@@ -18,3 +18,8 @@ Registro de decisões de design, estado de homologação e evidências recuperad
 ## Fontes
 
 Chats “Inventário De Design System” e “Continuar Inventário Design System”, incluindo checkpoints cumulativos até EST-08 e decisões EST-09/10, além das direções fornecidas pelo usuário nesta conversa.
+
+
+## Estado do produto
+
+O [inventário estático](VISUAL_INVENTORY.md) e o mapa de aplicação continuam referenciando o snapshot `298c114`. As verificações runtime posteriores e as correções dos achados #209 e #214 estão registradas em [PRODUCT_RECONCILIATION_2026-10-19.md](PRODUCT_RECONCILIATION_2026-10-19.md). A próxima regeneração deve usar o commit de produto `483ef2e`.

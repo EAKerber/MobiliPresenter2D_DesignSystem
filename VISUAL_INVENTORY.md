@@ -2,6 +2,9 @@
 
 **Snapshot:** 2026-10-18  
 **Produto observado:** [EAKerber/MobiliPresenter2D](https://github.com/EAKerber/MobiliPresenter2D), `main` em `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`.  
+
+**Atualização runtime (2026-10-19):** FIND-006 e FIND-009 foram corrigidos no produto e verificados no deploy `483ef2e`; consulte [PRODUCT_RECONCILIATION_2026-10-19.md](PRODUCT_RECONCILIATION_2026-10-19.md). Este inventário estático continua sendo o snapshot `298c114`; seus números não foram regenerados nesta atualização.
+
 **Registro:** `decisions.json`; detalhes por regra e rota em [`visual-inventory.json`](visual-inventory.json).  
 **Escopo:** CSS, marcação HTML estática e arquivos de imagem/vetor/fontes. Este inventário não altera o produto nem certifica o comportamento renderizado.
 

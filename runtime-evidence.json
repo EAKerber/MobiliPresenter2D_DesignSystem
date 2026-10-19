@@ -390,6 +390,30 @@
       "evidence": "evidence/runtime/configurator-summary-label-counter-2026-10-19.md",
       "observedAt": "2026-10-19",
       "screenshotPersisted": false
+    },
+    {
+      "requested": "/config/",
+      "actual": "/config/",
+      "access": "authenticated",
+      "viewport": "516x800 CSS px",
+      "themes": [
+        "light"
+      ],
+      "stageSequence": [
+        "modules"
+      ],
+      "preLoadCounter": "7 of 7; seven default module toggles checked",
+      "afterPublishedConfigurationLoad": {
+        "counter": "0 of 7 modules visible",
+        "checkedModuleToggles": 0,
+        "totalModuleToggles": 7,
+        "estimate": "R$ 0.00"
+      },
+      "productCommit": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+      "deployId": "6ad5a4e245dad08b373fcbd1",
+      "evidence": "After asynchronous published configuration was applied, all seven module toggles were unchecked and the counter matched 0/7.",
+      "screenshotPersisted": false,
+      "observedAt": "2026-10-19"
     }
   ],
   "interactions": [
@@ -439,6 +463,20 @@
       "interpretation": "The transition coincided with stage navigation; cause and persistence are not isolated.",
       "relatedIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/209",
       "evidenceFile": "evidence/runtime/configurator-summary-label-counter-2026-10-19.md"
+    },
+    {
+      "observedAt": "2026-10-19",
+      "route": "/config/",
+      "viewport": "516x800 CSS px",
+      "theme": "light",
+      "productCommit": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+      "productCodeChanged": false,
+      "control": "private menu toggle",
+      "status": "menu-scene-overlap-not-observed",
+      "evidence": "With the menu open, public destinations remained visible above the scene. Computed #viewerCard isolation was isolate.",
+      "relatedIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/214",
+      "evidenceFile": "PRODUCT_RECONCILIATION_2026-10-19.md",
+      "screenshotPersisted": false
     }
   ],
   "contrastScreening": {
@@ -916,6 +954,35 @@
         "Long page-identifier fallback remains untested.",
         "No product code or user preference was modified."
       ]
+    }
+  },
+  "latestRuntimeRelease": {
+    "observedAt": "2026-10-19",
+    "repository": "EAKerber/MobiliPresenter2D",
+    "branch": "main",
+    "productCommit": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+    "netlifyDeployId": "6ad5a4e245dad08b373fcbd1",
+    "deployStatus": "ready",
+    "staticInventoryCommit": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
+    "note": "Runtime follow-up only; static visual inventory has not been regenerated."
+  },
+  "productFindingResolutionStatus": {
+    "FIND-006": {
+      "productIssue": 209,
+      "status": "resolved",
+      "pullRequests": [
+        219,
+        220
+      ],
+      "evidence": "PRODUCT_RECONCILIATION_2026-10-19.md"
+    },
+    "FIND-009": {
+      "productIssue": 214,
+      "status": "resolved",
+      "pullRequests": [
+        221
+      ],
+      "evidence": "PRODUCT_RECONCILIATION_2026-10-19.md"
     }
   }
 }

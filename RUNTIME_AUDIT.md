@@ -220,3 +220,12 @@ Abaixo de 291 px, o padrão aprovado permite duas linhas e requer alvos de 44 ×
 No mesmo Resumo, .price-state__breakdown dt usa rgba(255,255,255,.68), 11 px / peso 750, vindo de styles.css?v=runtime-v40. O fundo do cartão interno é rgba(203,188,170,.13) sobre #fff em claro e sobre #1B1C1A em escuro. Contraste composto calculado: **1,05:1 em claro** e **6,95:1 em escuro**. O rótulo quase desaparece no cartão claro; falha abaixo de 4,5:1 confirmada em DOM real, [issue #208](https://github.com/EAKerber/MobiliPresenter2D/issues/208). A medição é uma verificação técnica exploratória, não certificação independente.
 
 Nenhum módulo foi alterado nem salvo, nenhum código foi modificado e a preferência de tema escuro foi restaurada. Nenhum screenshot raster desta visita foi persistido; o commit de deploy não foi identificado.
+
+
+## Reconciliação após correções publicadas (2026-10-19)
+
+O produto avançou para o commit [483ef2e](https://github.com/EAKerber/MobiliPresenter2D/commit/483ef2e6f76a562a3096516ef68d8dfe072ec21f), publicado no Netlify deploy `6ad5a4e245dad08b373fcbd1` (`ready`). As PRs #219 e #220 corrigiram a semântica e a atualização do contador; a PR #221 conteve as camadas da cena no cartão compacto. A página e o código do produto não foram alterados durante esta auditoria.
+
+No configurador em tema claro, viewport 516 × 800 CSS px, o primeiro estado DOM precedeu a carga assíncrona (7 módulos marcados, 7/7). Após aplicar a configuração publicada, os sete controles ficaram desmarcados e o contador passou a 0/7. Não foram feitas escolhas durante a carga; a interação antes de concluir a carga permanece fora do escopo atual por decisão do usuário.
+
+Com o menu aberto na mesma largura, a cena não cobriu os destinos públicos; a leitura DOM confirmou `isolation: isolate` em `.viewer-card`. A captura raster foi exibida durante a revisão, mas não foi persistida nesta atualização. Issues #209 e #214 foram fechados após a validação. Evidência estruturada e limites em [PRODUCT_RECONCILIATION_2026-10-19.md](PRODUCT_RECONCILIATION_2026-10-19.md).

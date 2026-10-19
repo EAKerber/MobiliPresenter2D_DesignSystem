@@ -1,6 +1,9 @@
 # Mapa de aplicação das decisões
 
 **Produto mapeado:** [EAKerber/MobiliPresenter2D](https://github.com/EAKerber/MobiliPresenter2D) no commit `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`.  
+
+**Atualização runtime (2026-10-19):** o deploy mais recente do produto é `483ef2e6f76a562a3096516ef68d8dfe072ec21f`. FIND-006/#209 e FIND-009/#214 foram resolvidos; ver [conciliação](PRODUCT_RECONCILIATION_2026-10-19.md). O mapa de arquivos abaixo continua ligado ao snapshot `298c114` e não foi regenerado nesta atualização.
+
 **Deploy runtime verificado:** `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`, observado em 2026-10-18.  
 **Fonte canônica das decisões:** [decisions.json](decisions.json).  
 **Inventário estático:** [visual-inventory.json](visual-inventory.json).
