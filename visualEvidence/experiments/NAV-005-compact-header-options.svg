@@ -57,7 +57,7 @@
   <g transform="translate(480 16)"><rect width="42" height="44" rx="10" class="btn"/><circle cx="21" cy="22" r="9" class="icon"/></g>
   <g transform="translate(532 16)"><rect width="42" height="44" rx="10" class="btn"/><path d="M11 14h20M11 22h20M11 30h20" class="icon"/></g>
  </g>
- <text x="28" y="442" class="copy">Mantém a identificação da área na mesma linha.</text>
+ <text x="28" y="457" class="copy">Mantém a identificação da área na mesma linha.</text>
  <!-- secondary -->
  <text x="28" y="493" class="label">NAVEGAÇÃO CONTEXTUAL</text>
  <g transform="translate(28 509)">
@@ -78,7 +78,7 @@
  <rect width="648" height="850" rx="18" class="card"/>
  <text x="28" y="44" class="label">OPÇÃO B · CONTEXTO EM DUAS LINHAS</text>
  <text x="28" y="79" class="h">Dar espaço para os rótulos</text>
- <text x="28" y="108" class="muted">Marca e contexto acima; controles mantêm tema antes do menu.</text>
+ <text x="28" y="108" class="muted">Marca, tema e menu em cima; contato ou contexto abaixo.</text>
  <!-- public -->
  <text x="28" y="160" class="label">PÁGINA PÚBLICA</text>
  <g transform="translate(28 176)">
@@ -88,9 +88,9 @@
    <path d="M18 7 34 18" fill="none" stroke="#a64d13" stroke-width="3"/>
    <text x="46" y="27" class="brand">CASA<tspan class="selected"> EM</tspan></text><text x="46" y="43" class="brandSmall">MÓDULOS</text>
   </g>
-  <g transform="translate(480 11)"><rect width="42" height="44" rx="10" class="btn"/><path d="M11 14h20M11 22h20M11 30h20" class="icon"/></g>
-  <text x="20" y="83" class="context">Tema</text><text x="76" y="83" class="muted">Contato no menu</text>
-  <g transform="translate(484 59)"><rect width="42" height="36" rx="9" class="btn"/><circle cx="21" cy="18" r="8" class="icon"/></g>
+  <g transform="translate(532 11)"><rect width="42" height="44" rx="10" class="btn"/><path d="M11 14h20M11 22h20M11 30h20" class="icon"/></g>
+  <text x="20" y="83" class="context">Fale conosco</text>
+  <g transform="translate(484 11)"><rect width="42" height="44" rx="10" class="btn"/><circle cx="21" cy="22" r="9" class="icon"/></g>
  </g>
  <text x="28" y="305" class="copy">Páginas e contato continuam agrupados no menu.</text>
  <!-- private -->
@@ -104,7 +104,7 @@
   </g>
   <g transform="translate(532 11)"><rect width="42" height="44" rx="10" class="btn"/><path d="M11 14h20M11 22h20M11 30h20" class="icon"/></g>
   <text x="20" y="84" class="context">Administração</text>
-  <g transform="translate(484 59)"><rect width="42" height="36" rx="9" class="btn"/><circle cx="21" cy="18" r="8" class="icon"/></g>
+  <g transform="translate(484 11)"><rect width="42" height="44" rx="10" class="btn"/><circle cx="21" cy="22" r="9" class="icon"/></g>
  </g>
  <text x="28" y="492" class="copy">O identificador permanece legível sem apertar a marca.</text>
  <!-- secondary -->
@@ -118,7 +118,7 @@
   </g>
   <g transform="translate(532 11)"><rect width="42" height="44" rx="10" class="btn"/><path d="M11 14h20M11 22h20M11 30h20" class="icon"/></g>
   <text x="20" y="84" class="context">← Ambientes</text>
-  <g transform="translate(484 59)"><rect width="42" height="36" rx="9" class="btn"/><circle cx="21" cy="18" r="8" class="icon"/></g>
+  <g transform="translate(484 11)"><rect width="42" height="44" rx="10" class="btn"/><circle cx="21" cy="22" r="9" class="icon"/></g>
  </g>
  <text x="28" y="678" class="copy">Preserva o retorno contextual em uma faixa própria.</text>
  <text x="28" y="698" class="muted">Risco a validar: mais altura em páginas com rolagem.</text>
