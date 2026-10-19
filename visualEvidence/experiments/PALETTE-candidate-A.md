@@ -9,11 +9,13 @@
 | Papel | Claro | Escuro | Estado |
 |---|---|---|---|
 | Canvas | #F3EFE9 | #171614 | Candidato quente, sem branco/preto puros |
-| Superfície | #F8F5F0 | #211F1C | Candidato |
+| Superfície | #F8F5F0 | #211F1C | Marfim quente opaco no claro; carvão quente no escuro. Substitui #FFFFFF como superfície candidata. |
 | Superfície suave | #EBE5DD | #2C2924 | Candidato |
 | Texto principal | #292723 | #F0EAE1 | Candidato, tons carvão/marfim quente |
 | Texto secundário | #705C4B | #C7BBAA | Candidato marrom quente; não é token |
 | Borda | #D6CCC0 | #4E4942 | Candidato, validar como controle e separador |
+
+A superfície clara usa #F8F5F0 em vez de branco puro. A proposta substitui valores de superfície #FFFFFF/#FFF na futura padronização visual; não altera brancos necessários dentro de fotografias, logos ou ilustrações.
 
 ## Foco proposto
 
