@@ -286,7 +286,7 @@
       "notYetSpecified": [
         "Global token mapping and light/dark variants beyond the two approved contextual pairs",
         "Additional final contrast pairs in other components, surfaces and themes",
-        "Visual variants and measurements for focus, selection, hover, pressed, disabled and loading",
+        "Global and other contextual visual variants and measurements for focus, selection, hover, pressed, disabled and loading remain unspecified",
         "Copper variations by theme/surface outside approved base #A64D13",
         "Mapping of other semantic state colors to actual screens and tokens",
         "Mapeamento dos valores aprovados da paleta para componentes/rotas e validação no DOM; variantes e pares técnicos de estados semânticos."
@@ -392,6 +392,14 @@
           "note": "Calculated for the listed opaque solid color pairs. Component transparency, combined backgrounds and runtime rendering still require validation."
         },
         "approvalSource": "Aprovação explícita do usuário após revisão visual da prancha PALETTE-candidate-A-v2.svg."
+      },
+      "disabledControlTreatment": {
+        "status": "approved-contextual-treatment; broader-pattern-pending",
+        "choice": "Option A — keep the current state",
+        "decision": "For the disabled lighting service option in configurator /config/, retain the observed current treatment `.service-check.is-blocked { opacity: .6 }`.",
+        "scope": "This resolves the visual choice for the observed control and dependency context only. It does not establish a global disabled token or approve treatments for other controls, routes, themes, or components.",
+        "approvalSource": "User chose to keep the current state in the current conversation.",
+        "productImplementation": "The product already used this treatment in the runtime observation; no product code change was requested or made."
       }
     },
     {
