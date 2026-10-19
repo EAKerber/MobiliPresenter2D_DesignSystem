@@ -90,7 +90,29 @@
           "deployedRevision": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
           "source": "Browser capture of the published production site"
         }
-      ]
+      ],
+      "currentPassDisplayed": [
+        {
+          "route": "/how-it-works/",
+          "viewport": "486x590 browser capture",
+          "theme": "dark",
+          "state": "top of page; compact header and hero"
+        },
+        {
+          "route": "/how-it-works/",
+          "viewport": "486x590 browser capture",
+          "theme": "light",
+          "state": "top of page; compact header and hero"
+        },
+        {
+          "route": "/admin.html",
+          "viewport": "1280x720 browser capture",
+          "theme": "dark",
+          "state": "authenticated admin editor; screenshot contains account context and was not persisted"
+        }
+      ],
+      "currentPassPersisted": false,
+      "currentPassNote": "The public and authenticated screenshots were visible in the browser session but were not saved as repository files in this checkpoint. The authenticated captures contain account/access data and were intentionally omitted."
     },
     "authenticationCompletedByUser": true,
     "authenticatedScreenshotsPersisted": false,
@@ -217,6 +239,14 @@
         768,
         1440
       ]
+    },
+    {
+      "requested": "/access/manage",
+      "actual": "/access/manage",
+      "access": "authenticated",
+      "noHorizontalOverflow": "not measured",
+      "menu": "Opened with private/public groups, signed-in account indicator, and logout",
+      "note": "No recipient values were copied into the audit."
     }
   ],
   "interactions": [
@@ -233,6 +263,13 @@
       "viewport": "390x844",
       "status": "opened-on-first-click",
       "evidence": "aria-expanded true; private and public navigation groups visible. Signed-out state showed only Entrar na administração among private destinations."
+    },
+    {
+      "route": "/how-it-works/",
+      "control": "menuToggle on compact browser viewport",
+      "status": "opened",
+      "evidence": "The accessibility tree listed Ambientes, Como funciona, and Quem somos. The WhatsApp link remained outside the menu.",
+      "interpretation": "The menu opens in this public state; contact placement diverges from approved NAV-005 compact structure."
     }
   ],
   "contrastScreening": {
@@ -340,13 +377,7 @@
     "source": "Static repository inventory from the previous stage",
     "note": "The reported runtime pairs were measured during this audit, not detected by product CI."
   },
-  "unverified": [
-    "Authenticated administration, access management, invitation flows and configurator",
-    "Full keyboard behavior: Escape, outside click, focus restoration and tab order",
-    "Runtime reduced-motion preference",
-    "Dynamic hover, pressed, focus, selection and loading state coverage",
-    "Contrast on images, gradients, pseudo-elements and transparent layers"
-  ],
+  "unverified": "Authenticated administration, access management, invitation flows and configurator,Full keyboard behavior: Escape, outside click, focus restoration and tab order,Runtime reduced-motion preference,Dynamic hover, pressed, focus, selection and loading state coverage,Contrast on images, gradients, pseudo-elements and transparent layers\\n- Current-pass screenshots were not persisted as repository image files; existing committed captures were identified as older than the current header.\\n- DOM contrast for the light-theme brand mark, exact CSS viewport width for the compact capture, and responsible brand asset/rule remain unverified.",
   "authenticatedSessionObservations": [
     {
       "route": "/admin.html",
@@ -367,6 +398,19 @@
       "route": "/config/ menu overlay",
       "state": "authenticated narrow viewport",
       "observation": "The scene oven image visually overlays the public navigation list and obscures part of the Como funciona link. Links remained present in the accessibility tree. Exact stacking or hit-testing cause not isolated; evidence includes the user-provided screenshot and live visual confirmation."
+    },
+    {
+      "route": "/admin.html",
+      "state": "authenticated after login; menu stale until reload",
+      "observation": "The editor loaded without the reported administrative-data error. First menu opening after login showed the anonymous entry action and omitted private routes/logout. Reloading the page synchronized the menu; it then showed Configurador, Administração, Gerenciar acessos, public routes, and logout. Reproduced once; cause unknown.",
+      "productBacklog": "https://github.com/EAKerber/MobiliPresenter2D/issues/213",
+      "productDataChanged": false
+    },
+    {
+      "route": "/access/manage",
+      "state": "authenticated",
+      "observation": "The page loaded in a new tab and its menu immediately showed private/public navigation and logout. Account and invitation values were not copied or persisted.",
+      "sideEffects": "No invitation sent; no access records changed."
     }
   ],
   "findingsRegister": "FINDINGS_REGISTER.md",
@@ -431,6 +475,14 @@
       "stage": "services",
       "selector": "[data-private-menu] and scene image",
       "observation": "Scene image overlays and obscures part of the Como funciona menu link in both themes."
+    },
+    {
+      "route": "/how-it-works/",
+      "theme": "light",
+      "viewport": "486x590 browser capture",
+      "stage": "compact header",
+      "selector": "brand mark and header surface",
+      "observation": "The mark nearly blends into the light header surface. Visual signal only; no DOM contrast ratio or responsible asset/CSS rule was identified."
     }
   ],
   "compactHeaderMeasurements": {
