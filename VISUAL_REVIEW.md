@@ -34,16 +34,16 @@ A medição atual encontrou a 320 px: marca + identificador com 189,9 px, logo 1
 
 As medidas recomendadas não são comportamento já existente nem breakpoints de CSS. O runtime foi medido apenas em tema escuro; o CSSOM confirma definições para os dois temas, mas não substitui uma medição renderizada do tema claro. Ver [NAV-005_RUNTIME_VALIDATION_2026-10-18.md](NAV-005_RUNTIME_VALIDATION_2026-10-18.md) para a tabela, cálculo e limites.
 
-## VIS-002 — pares contextuais e revisão estética
+## VIS-002 — pares contextuais e aprovação da paleta A
 
 ![Pares de contraste B selecionados](visualEvidence/experiments/VIS-002-contrast-options.svg)
 
-O usuário escolheu a opção B nos dois exemplos. Depois, reabriu esteticamente o tom secundário `#675F55`, que foi percebido como esverdeado; não aplicar o par até nova revisão. `#705C4B` aparece somente como candidata. O rótulo quente continua aprovado. `decisions.json` registra os escopos e o estado atualizado:
+O usuário escolheu a opção B nos dois exemplos. Depois, reabriu esteticamente o tom secundário `#675F55`, percebido como esverdeado. Na revisão seguinte, aprovou a paleta A, incluindo `#705C4B` como valor secundário de referência. O rótulo quente contextual continua aprovado. `decisions.json` registra os escopos e o estado atualizado:
 
-- Texto corrido claro: o par anterior era `#675F55` em `#F0EDE8`, 5,38:1; o usuário pediu reavaliação estética. Candidata marrom `#705C4B` em `#F0EDE8`, 5,41:1, não homologada.
+- Texto corrido claro: o par anterior era `#675F55` em `#F0EDE8`, 5,38:1; o usuário pediu reavaliação estética. A paleta aprovada usa `#705C4B` em `#F0EDE8`, 5,41:1; a aplicação nesses seletores aguarda mapeamento e validação DOM.
 - Rótulo quente claro: `#70522F` em `#E8E3DC`, 5,60:1, no rótulo auditado de Como funciona.
 
-A aprovação é contextual: não cria tokens globais, não aprova variações dark nem autoriza extensão automática a outros componentes/superfícies. Os pares já atingem o alvo matemático de 4,5:1 para texto comum nas superfícies sólidas avaliadas; a aplicação deve ser revalidada no DOM antes de qualquer implementação do produto. A base promocional `#A64D13` e o azul de informação de processo mantêm seus papéis previamente homologados.
+A aprovação da paleta A abrange seus valores de referência para claro/escuro, incluindo a cor secundária. Ela não cria tokens técnicos nem autoriza implementação no produto. O par `#675F55` foi supersedido; o rótulo quente `#70522F` continua aprovado somente para o contexto indicado. Contrastes são cálculos em superfícies sólidas e devem ser revalidados no DOM antes da aplicação. A base promocional `#A64D13` e o azul de informação de processo mantêm seus papéis previamente homologados.
 
 ## Ainda aberto
 
