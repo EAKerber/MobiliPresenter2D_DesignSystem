@@ -35,3 +35,7 @@ Os cinco arquivos CSS tiveram bytes, linhas, seletores de classe, regras visuais
 - Rotas e folhas carregadas permanecem oito HTML e oito CSS.
 
 A extração estática registra presença e contexto de uso; não homologa valores fora das decisões já registradas nem valida contraste/runtime por si só. As evidências do deploy e seus limites estão em [PRODUCT_RECONCILIATION_2026-10-19.md](PRODUCT_RECONCILIATION_2026-10-19.md).
+
+## Situação de achados homologados
+
+A comparação do CSS atual com as decisões mostra que as correções de FIND-002, FIND-003 e FIND-004 já estão no produto publicado via PR #219. Os issues do produto #216 e #217 continuam abertos porque ainda não foi feita a confirmação pós-deploy dos valores computados e do fundo composto no DOM. Não se reaproveitam os antigos contrastes medidos como resultado da versão nova.
