@@ -1,19 +1,19 @@
-# Proposta de paleta A — revisão visual (ajustada)
+# Paleta A — valores aprovados e aplicação pendente
 
-**Estado:** candidata, não homologada. Esta revisão incorpora o retorno do usuário: o secundário anterior pareceu esverdeado; o foco estava difícil de ler; evitar branco e preto puros.  
-**Prancha atual:** [PALETTE-candidate-A-v2.svg](PALETTE-candidate-A-v2.svg).  
+**Estado:** valores da paleta aprovados pelo usuário; aplicação no produto e validação por componente pendentes. O secundário anterior pareceu esverdeado; o foco estava difícil de ler; evitar branco e preto puros.  
+**Prancha aprovada como referência visual:** [PALETTE-candidate-A-v2.svg](PALETTE-candidate-A-v2.svg).  
 **Produto observado:** inventário estático do snapshot 298c11441f82cacfff2f809fd9e5ad6f1fc33c0a.
 
 ## Eixo neutro proposto
 
 | Papel | Claro | Escuro | Estado |
 |---|---|---|---|
-| Canvas | #E8E3DC | #171614 | Candidato quente, sem branco/preto puros |
-| Superfície | #F0EDE8 | #211F1C | Marfim quente opaco no claro; carvão quente no escuro. Substitui #FFFFFF como superfície candidata. |
-| Superfície suave | #DED9D2 | #2C2924 | Candidato |
+| Canvas | #E8E3DC | #171614 | Aprovado como valor de paleta; sem branco/preto puros |
+| Superfície | #F0EDE8 | #211F1C | Marfim quente opaco no claro; carvão quente no escuro. Substitui #FFFFFF como valor aprovado para a superfície de interface. |
+| Superfície suave | #DED9D2 | #2C2924 | Aprovado como valor de paleta |
 | Texto principal | #292723 | #F0EAE1 | Candidato, tons carvão/marfim quente |
-| Texto secundário | #705C4B | #C7BBAA | Candidato marrom quente; não é token |
-| Borda | #D6CCC0 | #4E4942 | Candidato, validar como controle e separador |
+| Texto secundário | #705C4B | #C7BBAA | Marrom quente aprovado como valor de paleta; token técnico ainda não criado |
+| Borda | #D6CCC0 | #4E4942 | Aprovado como valor de paleta; aplicação em controles/separadores ainda requer validação |
 
 A superfície clara usa #F0EDE8 em vez de branco puro. A proposta substitui valores de superfície #FFFFFF/#FFF na futura padronização visual; não altera brancos necessários dentro de fotografias, logos ou ilustrações.
 
@@ -21,7 +21,7 @@ A superfície clara usa #F0EDE8 em vez de branco puro. A proposta substitui valo
 
 - Tema claro: contorno ocre de marca #8B6A40 contra superfície #F0EDE8; contraste calculado 4,25:1.
 - Tema escuro: contorno dourado #D8BC7C contra superfície #211F1C; contraste calculado 8,93:1.
-- Exemplo usa contorno de 4 px e afastamento de 3 px. Esses valores são somente uma visualização para tornar o foco fácil de localizar; a espessura e o offset ainda não estão homologados.
+- O usuário aprovou a referência visual com contorno de 4 px e afastamento de 3 px. Aplicação e inspeção do foco de teclado em componentes reais continuam pendentes.
 - O foco deve continuar independente da seleção e não depender só de mudança de cor; revisar indicador de teclado em componentes reais.
 
 ## Contrastes de texto de referência
@@ -30,7 +30,7 @@ Razões calculadas para cores sólidas e não arredondadas para alcançar limite
 
 | Par candidato | Razão |
 |---|---:|
-| Texto principal claro #292723 em #E8E3DC | 13,01:1 |
+| Texto principal claro #292723 em #E8E3DC | 11,68:1 |
 | Secundário claro #705C4B em #F0EDE8 | 5,41:1 |
 | Texto principal escuro #F0EAE1 em #171614 | 15,12:1 |
 | Secundário escuro #C7BBAA em #211F1C | 8,70:1 |
@@ -43,6 +43,6 @@ Razões calculadas para cores sólidas e não arredondadas para alcançar limite
 
 ## Limites
 
-Somente pares contextuais que já constam em VIS-002 e o par específico VIS-003/FIND-004 estão homologados. Os valores desta prancha não mudam a fonte canônica nem o produto. Antes de aprovar a paleta completa, revisar a aparência dos secundários, a leitura do foco nos dois temas, estados semânticos, seleção/desabilitado e a variante promocional escura.
+Os valores de papel da paleta e o tratamento de foco mostrados nesta prancha foram aprovados e registrados em VIS-002. Isso não cria tokens nem autoriza implementação no produto. Estados semânticos, seleção/desabilitado e variante promocional escura continuam pendentes.
 
-Para os três seletores anteriormente associados a #675F55, o par candidato #705C4B em #F0EDE8 calcula 5,41:1. Continua sem aprovação estética.
+Para os três seletores anteriormente associados a #675F55, o par aprovado de paleta #705C4B em #F0EDE8 calcula 5,41:1; a aplicação ainda exige validação no DOM.
