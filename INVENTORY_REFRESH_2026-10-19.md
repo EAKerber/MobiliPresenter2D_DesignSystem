@@ -39,3 +39,5 @@ A extração estática registra presença e contexto de uso; não homologa valor
 ## Situação de achados homologados
 
 A comparação do CSS atual com as decisões mostra que as correções de FIND-002, FIND-003 e FIND-004 já estão no produto publicado via PR #219. Os issues do produto #216 e #217 continuam abertos porque ainda não foi feita a confirmação pós-deploy dos valores computados e do fundo composto no DOM. Não se reaproveitam os antigos contrastes medidos como resultado da versão nova.
+
+A fonte canônica `decisions.json` também foi reconciliada: VIS-002 e VIS-003 registram que os pares contextuais selecionados estão aplicados no CSS publicado, com confirmação do DOM pós-deploy ainda pendente. Isso registra o estado da implementação e não amplia a homologação nem aprova tokens globais.
