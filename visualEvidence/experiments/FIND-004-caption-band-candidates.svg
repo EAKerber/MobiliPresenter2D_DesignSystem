@@ -1,71 +1,75 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="790" viewBox="0 0 1200 790">
-<defs><style>
-text{font-family:Arial,Helvetica,sans-serif}
-.title{font-size:30px;font-weight:700;fill:#F0EDE8}
-.sub{font-size:15px;fill:#B9B7B0}
-.cardTitle{font-size:19px;font-weight:700;fill:#F0EDE8}
-.caption{font-size:12px;font-weight:600}
-.label{font-size:11px;font-weight:700;letter-spacing:1px;fill:#B9B7B0}
-.body{font-size:14px;fill:#E3DED5}
-.ratio{font-size:29px;font-weight:700;fill:#F0EDE8}
-.pass{font-size:10px;font-weight:700;fill:#BDE2C7}
-.small{font-size:11px;fill:#A9A69F}
-</style></defs>
+<defs><style>text{font-family:Arial,Helvetica,sans-serif}.title{font-size:30px;font-weight:700;fill:#F0EDE8}.sub{font-size:15px;fill:#B9B7B0}.cardTitle{font-size:19px;font-weight:700;fill:#F0EDE8}.caption{font-size:12px;font-weight:600}.label{font-size:11px;font-weight:700;letter-spacing:1px;fill:#B9B7B0}.body{font-size:14px;fill:#E3DED5}.ratio{font-size:29px;font-weight:700;fill:#F0EDE8}.pass{font-size:10px;font-weight:700;fill:#BDE2C7}.small{font-size:11px;fill:#A9A69F}</style></defs>
 <rect width="1200" height="790" fill="#171815"/>
 <text x="32" y="54" class="title">FIND-004 · Faixa para a legenda</text>
-<text x="32" y="84" class="sub">Experimento sobre a ilustração real de “Como funciona” · tema escuro</text>
-<text x="32" y="112" class="sub">A composição da faixa foi escolhida. Compare somente os tons candidatos; nenhum está homologado.</text>
+<text x="32" y="84" class="sub">Alternativas experimentais para a rota publicada “Como funciona” · tema escuro</text>
+<text x="32" y="112" class="sub">A composição da faixa já foi escolhida. Compare somente os tons candidatos; nenhum está homologado.</text>
 <g transform="translate(32,140)">
-  <rect width="352" height="606" rx="18" fill="#222320" stroke="#454640"/>
-  <text x="24" y="40" class="cardTitle">A · Neutro da interface</text>
-  <rect x="18" y="58" width="316" height="198" rx="12" fill="#FCF9EF"/>
-  <image x="18" y="58" width="316" height="198" preserveAspectRatio="xMidYMid meet" href="assets/estudo-espaco-runtime.webp"/>
-  <rect x="18" y="224" width="316" height="32" fill="#20211F"/>
-  <text x="28" y="244" class="caption" fill="#F0EDE8">Esquema conceitual de estudo do espaço</text>
-  <text x="24" y="297" class="label">COR DE TESTE</text>
-  <rect x="24" y="312" width="16" height="16" rx="4" fill="#20211F" stroke="#777"/>
-  <text x="50" y="326" class="body">#20211F · texto #F0EDE8</text>
-  <text x="24" y="367" class="label">CONTRASTE COMPUTADO</text>
-  <text x="24" y="404" class="ratio">13,85:1</text>
-  <rect x="205" y="380" width="123" height="34" rx="17" fill="#1F3329" stroke="#39734F"/>
-  <text x="266.5" y="402" text-anchor="middle" class="pass">AA · passa 4,5:1</text>
-  <text x="24" y="452" class="body">Antracito neutro; conversa com a superfície escura atual.</text>
-  <text x="24" y="515" class="small">EXPERIMENTAL · não homologado</text>
-  <text x="24" y="546" class="small">Mesma ilustração, corte e legenda.</text>
-</g><g transform="translate(424,140)">
-  <rect width="352" height="606" rx="18" fill="#222320" stroke="#454640"/>
-  <text x="24" y="40" class="cardTitle">B · Carvão quente</text>
-  <rect x="18" y="58" width="316" height="198" rx="12" fill="#FCF9EF"/>
-  <image x="18" y="58" width="316" height="198" preserveAspectRatio="xMidYMid meet" href="assets/estudo-espaco-runtime.webp"/>
-  <rect x="18" y="224" width="316" height="32" fill="#342B22"/>
-  <text x="28" y="244" class="caption" fill="#F0EDE8">Esquema conceitual de estudo do espaço</text>
-  <text x="24" y="297" class="label">COR DE TESTE</text>
-  <rect x="24" y="312" width="16" height="16" rx="4" fill="#342B22" stroke="#777"/>
-  <text x="50" y="326" class="body">#342B22 · texto #F0EDE8</text>
-  <text x="24" y="367" class="label">CONTRASTE COMPUTADO</text>
-  <text x="24" y="404" class="ratio">11,87:1</text>
-  <rect x="205" y="380" width="123" height="34" rx="17" fill="#1F3329" stroke="#39734F"/>
-  <text x="266.5" y="402" text-anchor="middle" class="pass">AA · passa 4,5:1</text>
-  <text x="24" y="452" class="body">Acrescenta calor sem usar o cobre promocional como faixa.</text>
-  <text x="24" y="515" class="small">EXPERIMENTAL · não homologado</text>
-  <text x="24" y="546" class="small">Mesma ilustração, corte e legenda.</text>
-</g><g transform="translate(816,140)">
-  <rect width="352" height="606" rx="18" fill="#222320" stroke="#454640"/>
-  <text x="24" y="40" class="cardTitle">C · Café profundo</text>
-  <rect x="18" y="58" width="316" height="198" rx="12" fill="#FCF9EF"/>
-  <image x="18" y="58" width="316" height="198" preserveAspectRatio="xMidYMid meet" href="assets/estudo-espaco-runtime.webp"/>
-  <rect x="18" y="224" width="316" height="32" fill="#4A2E1C"/>
-  <text x="28" y="244" class="caption" fill="#F0EDE8">Esquema conceitual de estudo do espaço</text>
-  <text x="24" y="297" class="label">COR DE TESTE</text>
-  <rect x="24" y="312" width="16" height="16" rx="4" fill="#4A2E1C" stroke="#777"/>
-  <text x="50" y="326" class="body">#4A2E1C · texto #F0EDE8</text>
-  <text x="24" y="367" class="label">CONTRASTE COMPUTADO</text>
-  <text x="24" y="404" class="ratio">10,59:1</text>
-  <rect x="205" y="380" width="123" height="34" rx="17" fill="#1F3329" stroke="#39734F"/>
-  <text x="266.5" y="402" text-anchor="middle" class="pass">AA · passa 4,5:1</text>
-  <text x="24" y="452" class="body">Aproxima a faixa dos tons de madeira e da identidade quente.</text>
-  <text x="24" y="515" class="small">EXPERIMENTAL · não homologado</text>
-  <text x="24" y="546" class="small">Mesma ilustração, corte e legenda.</text>
+<rect width="352" height="606" rx="18" fill="#222320" stroke="#454640"/>
+<text x="24" y="40" class="cardTitle">A · Neutro da interface</text>
+<rect x="18" y="58" width="316" height="198" rx="12" fill="#FCF9EF"/>
+<g fill="none" stroke="#363634" stroke-width="5" stroke-linecap="square">
+<path d="M52 86h82v54h62V86h79v130h-78v-35h-61v35H52z"/>
+<path d="M134 140v-28m62 28v-35m-61 91v28m61-49h31"/>
 </g>
-<text x="32" y="774" class="sub">Referência: produção /how-it-works/ · 18/10/2026 · 515 × 608 CSS px. Proporções calculadas para texto comum em fundo opaco.</text>
+<path d="M139 173h58" stroke="#8B6A40" stroke-width="4" stroke-dasharray="9 7"/>
+<rect x="18" y="224" width="316" height="32" fill="#20211F"/>
+<text x="28" y="244" class="caption" fill="#F0EDE8">Esquema conceitual de estudo do espaço</text>
+<text x="24" y="297" class="label">COR DE TESTE</text>
+<rect x="24" y="312" width="16" height="16" rx="4" fill="#20211F" stroke="#777"/>
+<text x="50" y="326" class="body">#20211F · texto #F0EDE8</text>
+<text x="24" y="367" class="label">CONTRASTE COMPUTADO</text>
+<text x="24" y="404" class="ratio">13,85:1</text>
+<rect x="205" y="380" width="123" height="34" rx="17" fill="#1F3329" stroke="#39734F"/>
+<text x="266.5" y="402" text-anchor="middle" class="pass">AA · passa 4,5:1</text>
+<text x="24" y="452" class="body">Antracito neutro; aproxima a faixa</text>
+<text x="24" y="473" class="body">da superfície escura atual.</text>
+<text x="24" y="535" class="small">EXPERIMENTAL · não homologado</text>
+<text x="24" y="564" class="small">Esquema da área da legenda; não é captura.</text>
+</g><g transform="translate(424,140)">
+<rect width="352" height="606" rx="18" fill="#222320" stroke="#454640"/>
+<text x="24" y="40" class="cardTitle">B · Carvão quente</text>
+<rect x="18" y="58" width="316" height="198" rx="12" fill="#FCF9EF"/>
+<g fill="none" stroke="#363634" stroke-width="5" stroke-linecap="square">
+<path d="M52 86h82v54h62V86h79v130h-78v-35h-61v35H52z"/>
+<path d="M134 140v-28m62 28v-35m-61 91v28m61-49h31"/>
+</g>
+<path d="M139 173h58" stroke="#8B6A40" stroke-width="4" stroke-dasharray="9 7"/>
+<rect x="18" y="224" width="316" height="32" fill="#342B22"/>
+<text x="28" y="244" class="caption" fill="#F0EDE8">Esquema conceitual de estudo do espaço</text>
+<text x="24" y="297" class="label">COR DE TESTE</text>
+<rect x="24" y="312" width="16" height="16" rx="4" fill="#342B22" stroke="#777"/>
+<text x="50" y="326" class="body">#342B22 · texto #F0EDE8</text>
+<text x="24" y="367" class="label">CONTRASTE COMPUTADO</text>
+<text x="24" y="404" class="ratio">11,87:1</text>
+<rect x="205" y="380" width="123" height="34" rx="17" fill="#1F3329" stroke="#39734F"/>
+<text x="266.5" y="402" text-anchor="middle" class="pass">AA · passa 4,5:1</text>
+<text x="24" y="452" class="body">Acrescenta calor sem usar o cobre</text>
+<text x="24" y="473" class="body">promocional como faixa.</text>
+<text x="24" y="535" class="small">EXPERIMENTAL · não homologado</text>
+<text x="24" y="564" class="small">Esquema da área da legenda; não é captura.</text>
+</g><g transform="translate(816,140)">
+<rect width="352" height="606" rx="18" fill="#222320" stroke="#454640"/>
+<text x="24" y="40" class="cardTitle">C · Café profundo</text>
+<rect x="18" y="58" width="316" height="198" rx="12" fill="#FCF9EF"/>
+<g fill="none" stroke="#363634" stroke-width="5" stroke-linecap="square">
+<path d="M52 86h82v54h62V86h79v130h-78v-35h-61v35H52z"/>
+<path d="M134 140v-28m62 28v-35m-61 91v28m61-49h31"/>
+</g>
+<path d="M139 173h58" stroke="#8B6A40" stroke-width="4" stroke-dasharray="9 7"/>
+<rect x="18" y="224" width="316" height="32" fill="#4A2E1C"/>
+<text x="28" y="244" class="caption" fill="#F0EDE8">Esquema conceitual de estudo do espaço</text>
+<text x="24" y="297" class="label">COR DE TESTE</text>
+<rect x="24" y="312" width="16" height="16" rx="4" fill="#4A2E1C" stroke="#777"/>
+<text x="50" y="326" class="body">#4A2E1C · texto #F0EDE8</text>
+<text x="24" y="367" class="label">CONTRASTE COMPUTADO</text>
+<text x="24" y="404" class="ratio">10,59:1</text>
+<rect x="205" y="380" width="123" height="34" rx="17" fill="#1F3329" stroke="#39734F"/>
+<text x="266.5" y="402" text-anchor="middle" class="pass">AA · passa 4,5:1</text>
+<text x="24" y="452" class="body">Aproxima a faixa dos tons de madeira</text>
+<text x="24" y="473" class="body">e da identidade quente.</text>
+<text x="24" y="535" class="small">EXPERIMENTAL · não homologado</text>
+<text x="24" y="564" class="small">Esquema da área da legenda; não é captura.</text>
+</g>
+<text x="32" y="774" class="sub">Ratios calculados para #F0EDE8 em cada fundo opaco. A ilustração original foi arquivada em visualEvidence/experiments/assets/.</text>
 </svg>
