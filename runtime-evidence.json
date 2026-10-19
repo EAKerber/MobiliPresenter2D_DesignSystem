@@ -456,6 +456,130 @@
       }
     ],
     "interpretation": "Observed transition lies between 340 and 350 CSS px in these samples; exact CSS breakpoint is not inferred. Current implementation behavior is evidence, not approval of a two-row compact design. NAV-005 option A approves a one-row composition; behavior when the items no longer fit remains pending.",
-    "screenshotPersisted": false
+    "screenshotPersisted": false,
+    "followUpValidation": {
+      "observedAtLocal": "2026-10-18",
+      "route": "/admin.html",
+      "access": "signed-out",
+      "themeRuntime": "dark",
+      "method": "Read-only DOM geometry in published page using explicit viewport overrides; override reset after capture.",
+      "samples": [
+        {
+          "viewportCssPx": 288,
+          "headerHeightPx": 104.2,
+          "layout": "two-row",
+          "brandWidthPx": 189.9,
+          "logoWidthPx": 105,
+          "pageIdentifierWidthPx": 75.9,
+          "actionsWidthPx": 119.1,
+          "themeTargetPx": "74.1 × 40",
+          "menuTargetPx": "40 × 40",
+          "horizontalOverflow": false
+        },
+        {
+          "viewportCssPx": 306,
+          "headerHeightPx": 104.2,
+          "layout": "two-row",
+          "brandWidthPx": 189.9,
+          "logoWidthPx": 105,
+          "pageIdentifierWidthPx": 75.9,
+          "actionsWidthPx": 119.1,
+          "themeTargetPx": "74.1 × 40",
+          "menuTargetPx": "40 × 40",
+          "horizontalOverflow": false
+        },
+        {
+          "viewportCssPx": 313,
+          "headerHeightPx": 104.2,
+          "layout": "two-row",
+          "brandWidthPx": 189.9,
+          "logoWidthPx": 105,
+          "pageIdentifierWidthPx": 75.9,
+          "actionsWidthPx": 119.1,
+          "themeTargetPx": "74.1 × 40",
+          "menuTargetPx": "40 × 40",
+          "horizontalOverflow": false
+        },
+        {
+          "viewportCssPx": 320,
+          "headerHeightPx": 104.2,
+          "layout": "two-row",
+          "brandWidthPx": 189.9,
+          "logoWidthPx": 105,
+          "pageIdentifierWidthPx": 75.9,
+          "actionsWidthPx": 119.1,
+          "themeTargetPx": "74.1 × 40",
+          "menuTargetPx": "40 × 40",
+          "horizontalOverflow": false
+        },
+        {
+          "viewportCssPx": 340,
+          "headerHeightPx": 104.2,
+          "layout": "two-row",
+          "brandWidthPx": 189.9,
+          "logoWidthPx": 105,
+          "pageIdentifierWidthPx": 75.9,
+          "actionsWidthPx": 119.1,
+          "themeTargetPx": "74.1 × 40",
+          "menuTargetPx": "40 × 40",
+          "horizontalOverflow": false
+        },
+        {
+          "viewportCssPx": 350,
+          "headerHeightPx": 62,
+          "layout": "single-row",
+          "brandWidthPx": 189.9,
+          "logoWidthPx": 105,
+          "pageIdentifierWidthPx": 75.9,
+          "actionsWidthPx": 119.1,
+          "themeTargetPx": "74.1 × 40",
+          "menuTargetPx": "40 × 40",
+          "horizontalOverflow": false
+        },
+        {
+          "viewportCssPx": 360,
+          "headerHeightPx": 62,
+          "layout": "single-row",
+          "brandWidthPx": 189.9,
+          "logoWidthPx": 105,
+          "pageIdentifierWidthPx": 75.9,
+          "actionsWidthPx": 119.1,
+          "themeTargetPx": "74.1 × 40",
+          "menuTargetPx": "40 × 40",
+          "horizontalOverflow": false
+        }
+      ],
+      "stylesheetReview": {
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "result": "Loaded stylesheets define theme-specific colors and shared geometry rules/media queries for this header; no theme-specific geometry override was found.",
+        "limitation": "Rendered geometry was measured only in dark mode to avoid changing the persisted theme preference."
+      },
+      "calculation": {
+        "logoBasePx": 105,
+        "maxReductionPercent": 30,
+        "logoFloorPx": 73.5,
+        "brandGapPx": 9,
+        "pageIdentifierPx": 75.9,
+        "resultingMinimumBrandWidthPx": 158.4,
+        "labeledThemeWidthBasisPx": 74.1,
+        "recommendedThemeAndMenuHitTargetsPx": "44 × 44 each",
+        "recommendedActionGapPx": 8,
+        "headerGapPx": 8,
+        "inlinePaddingPxPerSide": 14,
+        "labeledLayoutMinimumViewportPx": 321,
+        "iconOnlyOneRowMinimumViewportPx": 291,
+        "method": "Marca mínima = 73,5 + 9 + 75,9 = 158,4 px. Ações rotuladas = 74,1 + 8 + 44 = 126,1 px; acrescentar gap do header 8 e padding total 28: 320,5 px, arredondado para 321. Em icon-only: ações 44 + 8 + 44 = 96 px; total 158,4 + 96 + 8 + 28 = 290,4 px, arredondado para 291."
+      },
+      "interpretation": "Current production layout wraps through 340 px at sampled widths and uses 40 px high theme and 40 × 40 px menu targets at <=380 px. Measurements validate current behavior, not proposed design. Corrected recommendation: retain the theme label from 321 px; switch to icon-only at 320 px and below. Icon-only one-row composition is feasible from about 291 px; below that, allow two rows. These are calculated targets, not observed product behavior or CSS breakpoints.",
+      "limitations": [
+        "No live light-theme geometry capture; only CSS declarations reviewed for the light variant.",
+        "The proposal still requires a product implementation and a separate runtime check afterward.",
+        "Long page-identifier fallback remains untested.",
+        "No product code or user preference was modified."
+      ]
+    }
   }
 }
