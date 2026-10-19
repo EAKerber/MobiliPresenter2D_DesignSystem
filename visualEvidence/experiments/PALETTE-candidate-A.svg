@@ -10,7 +10,7 @@
 <rect x="28" y="212" width="564" height="62" rx="12" fill="#ebe5dd" stroke="#d6ccc0"/><text x="48" y="239" class="role" fill="#292723">Superfície suave · #EBE5DD</text><text x="48" y="261" class="hex" fill="#705c4b">Agrupamentos e áreas secundárias</text>
 <text x="28" y="315" class="sample" fill="#292723">Texto principal · #292723</text><text x="28" y="346" class="sample" fill="#705c4b">Texto secundário · #705C4B</text>
 <text x="28" y="378" class="note" fill="#705c4b">Contraste secundário: 5,52:1 em #F3EFE9; 5,00:1 em #EBE5DD</text>
-<rect x="28" y="400" width="564" height="2" fill="#d6ccc0"/><text x="28" y="437" class="role" fill="#292723">Foco · cobre de marca em contorno</text>
+<rect x="28" y="400" width="564" height="2" fill="#d6ccc0"/><text x="28" y="437" class="role" fill="#292723">Foco · ocre de marca em contorno</text>
 <rect x="56" y="458" width="510" height="84" rx="14" fill="#f8f5f0" stroke="#8b6a40" stroke-width="4"/>
 <text x="76" y="493" class="sample" fill="#292723">Botão ou campo focado</text><text x="76" y="520" class="note" fill="#705c4b">Contorno 4 px · afastamento 3 px ·  #8B6A40</text>
 <text x="28" y="570" class="note" fill="#705c4b">Foco contra superfície: 4,56:1. Tratamento de foco é candidato.</text>
