@@ -168,20 +168,21 @@
     },
     {
       "id": "VIS-002",
-      "status": "palette-base-and-focus-approved; component-mapping-and-runtime-validation-pending",
+      "status": "palette-base-focus-and-semantic-swatches-approved; component-mapping-and-runtime-validation-pending",
       "verdict": "agreed",
       "decision": "Paleta-base de identidade compartilhada entre interfaces, com aplicação contextual. A arquitetura futura de tokens deve poder atender light e dark; não presumir ambos os modos em todas as rotas. Revisar contraste de texto, controles, foco e estados. Definir semanticamente erro, aviso, sucesso e informação, além de foco, seleção, hover, pressionado e desabilitado. Informação de processo usa o azul homologado; informação promocional de produto usa a cor terciária cobre com base aprovada #A64D13. O usuário aprovou a paleta visual A: neutros quentes para claro e escuro, superfície clara marfim em vez de branco puro, superfície suave, textos, bordas e tratamento de foco em contorno.",
       "notApproved": [
-        "Global token implementation and assignment to every component/screen without mapping",
+        "Global token implementation or blanket assignment without component/route mapping",
         "Copper variants by theme or surface",
-        "Other state appearances beyond the approved palette reference, including error, warning, success, selection, hover, pressed, disabled and loading combinations",
+        "Component-specific mapping and application of the approved semantic swatches",
+        "Selection, hover, pressed, disabled and loading appearances beyond the existing approved directions",
         "Runtime application and component-specific contrast validation"
       ],
       "semanticColors": {
         "approvedDirection": "Estados semânticos reconhecíveis, harmonizados com a marca, com combinações adequadas por tema. Mensagens não dependem apenas da cor.",
         "functionalInformation": "Informações de processo e funcionamento usam o azul homologado. São informativas e não equivalem a aviso, erro ou confirmação de sucesso.",
         "editorialCommercial": "Informações promocionais de produto, campanhas, condições especiais e destaques institucionais pertencem à comunicação promocional/comercial. Não classificar a campanha de três meses como warning técnico.",
-        "candidateSwatches": "As amostras de erro, sucesso e aviso permanecem não aprovadas; a informação de processo mantém papel azul aprovado. A prancha experimental atual é visualEvidence/experiments/VIS-002-semantic-state-candidates.svg. A prancha VIS-002-contrast-options.svg é histórica: o par B foi reaberto e não deve ser tratado como homologado.",
+        "candidateSwatches": "A prancha A/B permanece como comparação experimental. Os pares de erro, sucesso e aviso foram selecionados por maior contraste em cada tema e registrados em selectedStatusSwatches; conferir o quadro aprovado visualEvidence/experiments/VIS-002-semantic-states-selected.svg.",
         "processInformation": {
           "status": "semantic-role-approved",
           "colorFamily": "blue homologated",
@@ -205,6 +206,47 @@
             "source": "previous image-based estimate",
             "status": "reference evidence, not a runtime audit"
           }
+        },
+        "selectedStatusSwatches": {
+          "status": "approved-contextual-pairs; component-mapping-and-runtime-validation-pending",
+          "selectionRule": "Em cada estado, selecionar separadamente para claro e escuro o par com maior contraste de texto entre as opções A e B.",
+          "error": {
+            "light": {
+              "foreground": "#8E382F",
+              "background": "#F0E5E1",
+              "contrast": "6.17:1"
+            },
+            "dark": {
+              "foreground": "#E7AAA2",
+              "background": "#352522",
+              "contrast": "7.41:1"
+            }
+          },
+          "success": {
+            "light": {
+              "foreground": "#35634A",
+              "background": "#E5ECE6",
+              "contrast": "5.76:1"
+            },
+            "dark": {
+              "foreground": "#A8CAB1",
+              "background": "#223129",
+              "contrast": "7.63:1"
+            }
+          },
+          "warning": {
+            "light": {
+              "foreground": "#70531E",
+              "background": "#EEE7D8",
+              "contrast": "5.79:1"
+            },
+            "dark": {
+              "foreground": "#E4C989",
+              "background": "#332C1E",
+              "contrast": "8.56:1"
+            }
+          },
+          "scope": "Aprovação dos pares contextuais de texto/fundo mostrados no quadro. Não atribui token global nem decide ícones, bordas, transparências ou mapeamento de componentes."
         }
       },
       "contextualSelection": "Semântica compartilhada; intensidade da seleção varia por tarefa: viewer discreto e com cena protagonista; configurador mais explícito para distinguir opções próximas; admin forte e inequívoco em telas densas. Foco é independente e perceptível em todos os contextos/temas.",
