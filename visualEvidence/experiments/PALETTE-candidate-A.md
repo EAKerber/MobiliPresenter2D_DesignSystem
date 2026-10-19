@@ -1,7 +1,7 @@
 # Proposta de paleta A — revisão visual (ajustada)
 
 **Estado:** candidata, não homologada. Esta revisão incorpora o retorno do usuário: o secundário anterior pareceu esverdeado; o foco estava difícil de ler; evitar branco e preto puros.  
-**Prancha:** [PALETTE-candidate-A-v2.svg](PALETTE-candidate-A.svg).  
+**Prancha atual:** [PALETTE-candidate-A-v2.svg](PALETTE-candidate-A-v2.svg).  
 **Produto observado:** inventário estático do snapshot 298c11441f82cacfff2f809fd9e5ad6f1fc33c0a.
 
 ## Eixo neutro proposto
