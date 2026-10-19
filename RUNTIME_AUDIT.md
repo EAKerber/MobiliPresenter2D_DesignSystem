@@ -103,6 +103,10 @@ Em viewport estreito, a checagem visual em tema claro confirmou que o menu abert
 Na sessão autenticada já aberta no navegador, em viewport de aproximadamente 500 × 600 px, tema escuro e etapa Serviços, o DOM acessível informou que o cenário estava sem módulos e a iluminação permanecia indisponível por dependência. Mesmo assim, a interface mostrou `8 de 8 itens incluídos`. Isso confirma novamente o estado descrito em FIND-006 / issue [#209](https://github.com/EAKerber/MobiliPresenter2D/issues/209); não identifica a causa do cálculo. O menu foi fechado para a observação, nenhuma opção foi alterada e nenhum dado de conta foi registrado. A captura desta sessão não foi adicionada a `visualEvidence`; as capturas existentes permanecem referências de outros estados e resoluções.
 
 
+## Observação do cabeçalho compacto atual (2026-10-18)
+
+Na rota pública `/how-it-works/`, a sessão do navegador estava em viewport de 515 × 608 px, tema escuro. O cabeçalho em uma linha mediu aproximadamente 78 px de altura; `.brand` ocupou 160 px a partir de x=14 e `.header-actions` 140 px a partir de x=346. O grupo mostra o atalho de contato, o controle do tema representado por ícone e o menu. Essa observação não cobre os cabeçalhos privados autenticados nem comprova comportamento em outros breakpoints. O screenshot foi observado inline durante a inspeção, mas não foi persistido como imagem nesta etapa.
+
 ## Validade das capturas anteriores
 
 O usuário observou que as capturas salvas anteriormente mostram uma versão anterior do cabeçalho. Apesar dos metadados históricos associarem essas imagens ao snapshot/deploy `298c114`, elas não devem ser usadas como referência visual atual dos cabeçalhos. Nesta continuação, o cabeçalho atual do Configurador foi observado no navegador, mas não houve substituição das capturas no repositório. A prancha de FIND-004 é um esquema experimental e não substitui capturas atuais do produto.
