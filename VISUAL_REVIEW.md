@@ -28,16 +28,12 @@ A prancha anterior de opções permanece em [NAV-005-public-header-options.svg](
 
 ### Regra compacta estreita aprovada
 
-No login administrativo publicado, o header atual usa uma linha a 350 px e duas linhas a 340 px. O usuário aprovou este comportamento de encaixe: manter o rótulo do tema enquanto a logo reduz até no máximo 30%; se for necessária redução maior para manter uma linha, passar o tema para ícone apenas. O identificador da página permanece completo e o hambúrguer na extremidade direita. Como referência de cálculo, a logo observada a 320 px tem 105 px de largura; o limite de redução nesse caso corresponde a aproximadamente 73,5 px.
+No login administrativo publicado, o header usa uma linha a 350 e 360 px e duas linhas nos pontos amostrados de 340 px ou menos. A opção A compacta aprovada continua sendo uma linha, com marca e identificador à esquerda, tema antes do menu na extremidade direita. A regra aprovada mantém o rótulo enquanto a logo reduz até 30%; depois, usa ícone-only.
 
-A prancha [NAV-005-narrow-theme-control-options.svg](visualEvidence/experiments/NAV-005-narrow-theme-control-options.svg) agora registra uma especificação responsiva definida pelo assistente a pedido do usuário, ainda sujeita à validação do DOM antes de qualquer aplicação no produto:
+A medição atual encontrou a 320 px: marca + identificador com 189,9 px, logo 105 px, tema 74,1 × 40 px e menu 40 × 40 px. A especificação recomendada pede alvos de 44 × 44 px e gaps definidos; atualizamos a conta para considerar os 8 px entre marca e ações. Assim, o rótulo cabe a partir de aproximadamente 321 px, o tema fica icon-only em 320 px e abaixo, e o modo icon-only mantém uma linha a partir de cerca de 291 px. Abaixo de 291 px, permitir duas linhas.
 
-- Logo com base de 105 px, flexível até o limite de 73,5 px; sem redução adicional.
-- Controle Claro/Escuro rotulado enquanto houver espaço para essa faixa. Mostrar apenas o ícone quando a largura interna do header chegar a 278 px ou menos — aproximadamente 306 px de viewport com margens laterais de 14 px.
-- Usar sol no tema claro e lua no escuro, área de toque de 44 × 44 px e 8 px de distância do hambúrguer. Nome acessível informa o tema atual; o estado pressionado acompanha o modo escuro.
-- Abaixo de 288 px de viewport, permitir duas linhas para preservar a logo mínima, o identificador completo e os controles.
+As medidas recomendadas não são comportamento já existente nem breakpoints de CSS. O runtime foi medido apenas em tema escuro; o CSSOM confirma definições para os dois temas, mas não substitui uma medição renderizada do tema claro. Ver [NAV-005_RUNTIME_VALIDATION_2026-10-18.md](NAV-005_RUNTIME_VALIDATION_2026-10-18.md) para a tabela, cálculo e limites.
 
-A conta usa as dimensões aproximadas registradas no runtime; o threshold não é uma medição de breakpoint do CSS atual. A especificação completa e a derivação estão em `decisions.json`; validação de DOM, tema e encaixe continuam antes da implementação do produto.
 ## VIS-002 — pares exatos aprovados
 
 ![Pares de contraste B selecionados](visualEvidence/experiments/VIS-002-contrast-options.svg)
@@ -51,8 +47,8 @@ A aprovação é contextual: não cria tokens globais, não aprova variações d
 
 ## Ainda aberto
 
-- Validar a proposta de NAV-005 no DOM atualizado, nos dois temas e em larguras próximas a 288, 306 e 320 px.
-- Confirmar que o fallback em duas linhas preserva o identificador completo em larguras menores que 288 px.
+- Revalidar no runtime a futura implementação de NAV-005 nos dois temas; esta sessão mediu a geometria atual apenas no tema escuro.
+- Confirmar o fallback com identificadores excepcionalmente longos e a transição recomendada após a implementação.
 - Medir outros pares e estados; os dois aprovados não se generalizam.
 
 
