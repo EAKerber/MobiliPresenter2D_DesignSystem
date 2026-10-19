@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="667" viewBox="0 0 1440 800">
 <rect width="1440" height="800" fill="#f3f0eb"/>
-<text x="72" y="70" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#745839" letter-spacing="2">VIS-002 · REVISÃO DE CONTRASTE</text>
+<text x="72" y="70" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#745839" letter-spacing="2">VIS-002 · REGISTRO HISTÓRICO · TEXTO SECUNDÁRIO REABERTO</text>
 <text x="72" y="116" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#252422">Duas escolhas em contexto real</text>
-<text x="72" y="153" font-family="Arial,sans-serif" font-size="17" fill="#66615a">Opção B foi aprovada nos dois pares específicos; A permanece como comparação. Os valores não são tokens globais.</text>
+<text x="72" y="153" font-family="Arial,sans-serif" font-size="17" fill="#66615a">A opção B do texto secundário foi aprovada antes, mas reaberta após revisão estética. O par contextual #70522F desta prancha é uma decisão separada e segue aprovado. Veja também VIS-002-semantic-state-candidates.svg.</text>
 <g transform="translate(72 195)">
 <rect width="1296" height="250" rx="18" fill="#fff" stroke="#d4cec5"/>
 <text x="28" y="42" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#252422">A · Texto de apoio em superfície clara</text>
@@ -11,7 +11,7 @@
 <rect x="428" y="66" width="400" height="148" rx="12" fill="#F0EDE8" stroke="#ddd7cf"/>
 <text x="450" y="97" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#66615a">CANDIDATO A · 4,79:1</text><text x="450" y="133" font-family="Arial,sans-serif" font-size="16" fill="#6D675F">Móveis inteligentes, pensados para o seu espaço.</text><text x="450" y="180" font-family="Arial,sans-serif" font-size="13" fill="#66615a">#6D675F sobre #F0EDE8</text>
 <rect x="848" y="66" width="420" height="148" rx="12" fill="#F0EDE8" stroke="#ddd7cf"/>
-<text x="870" y="97" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#66615a">APROVADO B · 5,38:1</text><text x="870" y="133" font-family="Arial,sans-serif" font-size="16" fill="#675F55">Móveis inteligentes, pensados para o seu espaço.</text><text x="870" y="180" font-family="Arial,sans-serif" font-size="13" fill="#66615a">#675F55 sobre #F0EDE8</text>
+<text x="870" y="97" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#66615a">REABERTO · NÃO HOMOLOGADO · 5,38:1</text><text x="870" y="133" font-family="Arial,sans-serif" font-size="16" fill="#675F55">Móveis inteligentes, pensados para o seu espaço.</text><text x="870" y="180" font-family="Arial,sans-serif" font-size="13" fill="#66615a">#675F55 sobre #F0EDE8</text>
 </g>
 <g transform="translate(72 480)">
 <rect width="1296" height="250" rx="18" fill="#fff" stroke="#d4cec5"/>
