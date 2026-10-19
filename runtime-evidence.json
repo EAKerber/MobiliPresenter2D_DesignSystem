@@ -89,6 +89,16 @@
           "state": "signed-out, private and public navigation groups expanded",
           "deployedRevision": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
           "source": "Browser capture of the published production site"
+        },
+        {
+          "path": "visualEvidence/public/how-it-works/how-it-works-light-compact-486x590.jpg",
+          "sourceRoute": "/how-it-works/",
+          "theme": "light",
+          "viewport": "486x590 browser capture",
+          "format": "JPEG",
+          "state": "top of page; settled light theme; compact header and hero",
+          "deployedRevision": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
+          "source": "CloudConvert browser capture of the published production site"
         }
       ],
       "currentPassDisplayed": [
@@ -111,8 +121,8 @@
           "state": "authenticated admin editor; screenshot contains account context and was not persisted"
         }
       ],
-      "currentPassPersisted": false,
-      "currentPassNote": "The public and authenticated screenshots were visible in the browser session but were not saved as repository files in this checkpoint. The authenticated captures contain account/access data and were intentionally omitted."
+      "currentPassPersisted": true,
+      "currentPassNote": "The stabilized public light-theme capture is persisted at visualEvidence/public/how-it-works/how-it-works-light-compact-486x590.jpg. Authenticated screenshots contain account/access data and were intentionally omitted."
     },
     "authenticationCompletedByUser": true,
     "authenticatedScreenshotsPersisted": false,
@@ -377,7 +387,7 @@
     "source": "Static repository inventory from the previous stage",
     "note": "The reported runtime pairs were measured during this audit, not detected by product CI."
   },
-  "unverified": "Authenticated administration, access management, invitation flows and configurator,Full keyboard behavior: Escape, outside click, focus restoration and tab order,Runtime reduced-motion preference,Dynamic hover, pressed, focus, selection and loading state coverage,Contrast on images, gradients, pseudo-elements and transparent layers\\n- Current-pass screenshots were not persisted as repository image files; existing committed captures were identified as older than the current header.\\n- DOM contrast for the light-theme brand mark, exact CSS viewport width for the compact capture, and responsible brand asset/rule remain unverified.",
+  "unverified": "Authenticated administration, access management, invitation flows and configurator,Full keyboard behavior: Escape, outside click, focus restoration and tab order,Runtime reduced-motion preference,Dynamic hover, pressed, focus, selection and loading state coverage,Contrast on images, gradients, pseudo-elements and transparent layers\\n- Authenticated screenshots from this pass were omitted because they contain account/access data; only the current public settled light-theme capture was persisted.\\n- DOM contrast for the light-theme brand mark, exact CSS viewport width for the compact capture, and responsible brand asset/rule remain unverified; the settled capture does not confirm a visual defect.",
   "authenticatedSessionObservations": [
     {
       "route": "/admin.html",
@@ -482,7 +492,7 @@
       "viewport": "486x590 browser capture",
       "stage": "compact header",
       "selector": "brand mark and header surface",
-      "observation": "The mark nearly blends into the light header surface. Visual signal only; no DOM contrast ratio or responsible asset/CSS rule was identified."
+      "observation": "The first frame after switching to light appeared faded; the settled repository capture and an independent capture show the mark legible against the light header. No visual contrast defect is confirmed. DOM contrast and responsible asset/CSS rule were not measured."
     }
   ],
   "compactHeaderMeasurements": {
