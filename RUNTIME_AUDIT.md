@@ -187,3 +187,5 @@ No snapshot AX inicial, antes de abrir Serviços, os sete controles de módulo a
 A captura de tela foi examinada durante a auditoria, mas não foi adicionada como arquivo raster ao repositório. A prancha de revisão persistida em [FIND-010-disabled-control-candidates.svg](visualEvidence/experiments/FIND-010-disabled-control-candidates.svg) é uma comparação vetorial experimental, não uma captura do produto. Ela compara a opacidade atual (.6), uma alternativa menos atenuada (.78) e uma opção sem opacidade no cartão com o texto secundário da paleta aprovada. Os contrastes nela são cálculos sobre superfícies sólidas de referência; não são medições do DOM composto do site.
 
 Nenhum estado de conta foi editado, nenhuma seleção foi salva e nenhum código do produto foi alterado.
+
+A escolha visual de FIND-010 foi registrada após a auditoria: o usuário selecionou A, mantendo a opacidade atual de `.6` para o controle de iluminação observado. Essa decisão é contextual; o padrão geral de estados desabilitados continua pendente.
