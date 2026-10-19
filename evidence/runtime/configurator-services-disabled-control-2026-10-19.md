@@ -15,7 +15,7 @@ The initial accessibility snapshot, before opening Serviços, had shown the seve
 
 The lighting label was `.service-check.is-blocked` with computed opacity `0.6`. The checkbox reported `disabled=true` and `checked=false`. The current dark muted token was `rgba(255, 255, 255, 0.48)`; the row border was `rgba(255, 255, 255, 0.1)`.
 
-The current opacity is the measured implementation. Alternative values and the secondary-text treatment in [FIND-010-disabled-control-candidates.svg](../../visualEvidence/experiments/FIND-010-disabled-control-candidates.svg) are visual experiments only. Their contrast ratios are calculated over the solid reference surfaces displayed on the board, not measured from the page's composed DOM.
+The current opacity is the measured implementation. The user chose Option A, keeping this `.6` treatment for this disabled lighting control and dependency context. This is a contextual choice, not a global disabled-state pattern. Options B and C in [FIND-010-disabled-control-candidates.svg](../../visualEvidence/experiments/FIND-010-disabled-control-candidates.svg) remain unselected experiments. Their contrast ratios are calculated over the solid reference surfaces displayed on the board, not measured from the page's composed DOM.
 
 ## Evidence limits
 
