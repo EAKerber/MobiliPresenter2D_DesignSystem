@@ -109,11 +109,11 @@
 <text x="640" y="754" class="muted">Comportamento</text>
 <text x="640" y="778" class="copy">• Sol/lua indica o tema atual</text>
 <text x="640" y="802" class="copy">• Logo encolhe só o necessário</text>
-<text x="640" y="847" class="muted">Com flex-shrink, 320 px estima logo em ~88 px (~16% menor).</text>
+<text x="640" y="847" class="muted">No cálculo corrigido, 320 px estima logo em ~103 px (~2% menor), já com tema icon-only.</text>
 <text x="640" y="877" class="muted">Rótulo a partir de ~321 px; recalcular após implementar.</text>
 
 <rect x="52" y="952" width="1096" height="82" rx="14" fill="#e7e0d7"/>
 <text x="76" y="983" class="h" font-size="17">Especificação definida a pedido do usuário</text>
-<text x="76" y="1008" class="copy">Rótulo a partir de ~321 px; tema icon-only a 320 px ou menos; duas linhas abaixo de ~291 px. Logo: 105–73,5 px; abaixo de 288 px, permitir duas linhas.</text>
+<text x="76" y="1008" class="copy">Rótulo a partir de ~321 px; tema icon-only a 320 px ou menos; duas linhas abaixo de ~291 px. Logo: 105–73,5 px; abaixo de 291 px, permitir duas linhas.</text>
 <text x="52" y="1060" class="muted">Alvos 44×44 px e gap de 8 px. Parâmetros são recomendação; validar no DOM atual antes de implementar.</text>
 </svg>
