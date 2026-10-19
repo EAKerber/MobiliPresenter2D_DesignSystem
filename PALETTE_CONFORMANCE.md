@@ -39,7 +39,7 @@ Esta lista aponta trabalhos requeridos pela evidência atual. Não é autorizaç
 
 | Área | Estado observado | Mudança para conformidade | Registro |
 |---|---|---|---|
-| `/`, `/how-it-works/`, `/about/` | Texto auxiliar claro medido em 4,47:1 nos seletores indicados | Não aplicar o par reaberto `#675F55`; revisar o candidato marrom `#705C4B` (5,41:1 na superfície `#F0EDE8`) e validar DOM após aprovação | FIND-002, issue produto #216 |
+| `/`, `/how-it-works/`, `/about/` | Texto auxiliar claro medido em 4,47:1 nos seletores indicados | Usar como referência o par de paleta aprovado `#705C4B` sobre `#F0EDE8` (5,41:1); mapear os seletores e validar DOM antes da aplicação | FIND-002, issue produto #216 |
 | `/how-it-works/` eyebrow | 3,89:1 no tema claro | Aplicar `#70522F` sobre `#E8E3DC` somente no seletor auditado | FIND-003, issue produto #216 |
 | `/how-it-works/` legenda da figura | 1,78:1 no estado auditado do tema escuro | Criar faixa opaca `#20211F` com texto `#F0EDE8`; manter a legenda visualmente integrada; conferir imagem e layout em viewports variados | FIND-004, issue produto #217 |
 | Configurador, etapas Serviços/Resumo | Contador reporta 8/8 com módulos desmarcados; iluminação indisponível entra no total | Corrigir primeiro a semântica/contagem (decisão funcional do produto); depois medir contraste no DOM em ambos temas | FIND-006, issue produto #209. Não é correção só de paleta. |
