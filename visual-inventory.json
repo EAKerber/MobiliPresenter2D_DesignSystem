@@ -1,9 +1,9 @@
 {
   "schema": "M2DVisualInventory1",
   "snapshot": {
-    "date": "2026-10-18",
+    "date": "2026-10-19",
     "productRepository": "EAKerber/MobiliPresenter2D",
-    "productCommit": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
+    "productCommit": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
     "scope": "Inventário estático de CSS, HTML e assets visuais; não inclui análise semântica do runtime JS nem validação visual do DOM."
   },
   "routes": [
@@ -134,9 +134,9 @@
     ],
     "css": {
       "app/about/about.css": {
-        "bytes": 5060,
-        "lines": 48,
-        "classSelectorCount": 67,
+        "bytes": 5202,
+        "lines": 51,
+        "classSelectorCount": 69,
         "uniqueClassSelectors": [
           "about-chapter",
           "about-chapter--principle",
@@ -1020,6 +1020,17 @@
               {
                 "property": "padding-inline",
                 "value": "18px"
+              }
+            ]
+          },
+          {
+            "selector": "html[data-theme=\"light\"] .about-scale p:not(.eyebrow)",
+            "atRules": [],
+            "line": 50,
+            "declarations": [
+              {
+                "property": "color",
+                "value": "#705C4B"
               }
             ]
           }
@@ -5146,9 +5157,9 @@
         ]
       },
       "app/how-it-works/how-it-works.css": {
-        "bytes": 28997,
-        "lines": 279,
-        "classSelectorCount": 343,
+        "bytes": 29289,
+        "lines": 285,
+        "classSelectorCount": 347,
         "uniqueClassSelectors": [
           "check-list",
           "closing-copy",
@@ -10696,13 +10707,50 @@
                 "value": "18px!important"
               }
             ]
+          },
+          {
+            "selector": "html[data-theme=\"light\"] .how-hero-note",
+            "atRules": [],
+            "line": 282,
+            "declarations": [
+              {
+                "property": "color",
+                "value": "#705C4B"
+              }
+            ]
+          },
+          {
+            "selector": "html[data-theme=\"light\"] .study-band .eyebrow",
+            "atRules": [],
+            "line": 283,
+            "declarations": [
+              {
+                "property": "color",
+                "value": "#70522F"
+              }
+            ]
+          },
+          {
+            "selector": "html[data-theme=\"dark\"] .study-art figcaption",
+            "atRules": [],
+            "line": 284,
+            "declarations": [
+              {
+                "property": "background",
+                "value": "#20211F"
+              },
+              {
+                "property": "color",
+                "value": "#F0EDE8"
+              }
+            ]
           }
         ]
       },
       "app/landing/landing.css": {
-        "bytes": 16344,
-        "lines": 196,
-        "classSelectorCount": 194,
+        "bytes": 16407,
+        "lines": 197,
+        "classSelectorCount": 195,
         "uniqueClassSelectors": [
           "benefit-grid",
           "benefit-item",
@@ -11788,6 +11836,17 @@
               {
                 "property": "margin-bottom",
                 "value": "7px"
+              }
+            ]
+          },
+          {
+            "selector": "html[data-theme=\"light\"] .hero-description",
+            "atRules": [],
+            "line": 51,
+            "declarations": [
+              {
+                "property": "color",
+                "value": "#705C4B"
               }
             ]
           },
@@ -14043,8 +14102,8 @@
         ]
       },
       "app/styles.css": {
-        "bytes": 46658,
-        "lines": 853,
+        "bytes": 46748,
+        "lines": 854,
         "classSelectorCount": 410,
         "uniqueClassSelectors": [
           "accessory-toggle",
@@ -15276,7 +15335,7 @@
               },
               {
                 "property": "color",
-                "value": "rgba(255, 255, 255, 0.68)"
+                "value": "var(--text)"
               },
               {
                 "property": "font-size",
@@ -20607,25 +20666,6 @@
             ]
           },
           {
-            "selector": "html[data-layout-profile=\"stacked\"] .viewer-card,\nhtml[data-layout-profile=\"compact\"] .viewer-card",
-            "atRules": [],
-            "line": 736,
-            "declarations": [
-              {
-                "property": "position",
-                "value": "sticky"
-              },
-              {
-                "property": "z-index",
-                "value": "5"
-              },
-              {
-                "property": "width",
-                "value": "min(100%, calc((48dvh - 70px) * 1.5))"
-              }
-            ]
-          },
-          {
             "selector": "html[data-layout-profile=\"stacked\"] #modulesPanel .module-stage-panes",
             "atRules": [],
             "line": 745,
@@ -20693,24 +20733,9 @@
             ]
           },
           {
-            "selector": "html[data-layout-profile=\"compact\"] .viewer-card",
-            "atRules": [],
-            "line": 763,
-            "declarations": [
-              {
-                "property": "position",
-                "value": "static"
-              },
-              {
-                "property": "width",
-                "value": "100%"
-              }
-            ]
-          },
-          {
             "selector": "html[data-layout-profile=\"compact\"] .flow-nav",
             "atRules": [],
-            "line": 764,
+            "line": 765,
             "declarations": [
               {
                 "property": "margin-top",
@@ -20719,9 +20744,51 @@
             ]
           },
           {
-            "selector": "html[data-layout-profile=\"compact\"] body:not(.has-bottom-dock) .controls",
+            "selector": "html[data-layout-profile=\"stacked\"] .viewer-card,\nhtml[data-layout-profile=\"compact\"] .viewer-card",
             "atRules": [],
             "line": 765,
+            "declarations": [
+              {
+                "property": "position",
+                "value": "sticky"
+              },
+              {
+                "property": "z-index",
+                "value": "5"
+              },
+              {
+                "property": "width",
+                "value": "min(100%, calc((48dvh - 70px) * 1.5))"
+              },
+              {
+                "property": "isolation",
+                "value": "isolate"
+              }
+            ]
+          },
+          {
+            "selector": "html[data-layout-profile=\"compact\"] .viewer-card",
+            "atRules": [],
+            "line": 766,
+            "declarations": [
+              {
+                "property": "position",
+                "value": "static"
+              },
+              {
+                "property": "width",
+                "value": "100%"
+              },
+              {
+                "property": "isolation",
+                "value": "isolate"
+              }
+            ]
+          },
+          {
+            "selector": "html[data-layout-profile=\"compact\"] body:not(.has-bottom-dock) .controls",
+            "atRules": [],
+            "line": 766,
             "declarations": [
               {
                 "property": "padding-bottom",
@@ -20732,7 +20799,7 @@
           {
             "selector": "html:is([data-layout-profile=\"stacked\"], [data-layout-profile=\"compact\"]) body.is-mobile-scene-pinned .viewer-anchor",
             "atRules": [],
-            "line": 768,
+            "line": 769,
             "declarations": [
               {
                 "property": "min-height",
@@ -20743,7 +20810,7 @@
           {
             "selector": "html:is([data-layout-profile=\"stacked\"], [data-layout-profile=\"compact\"]) body.is-mobile-scene-pinned .viewer-card",
             "atRules": [],
-            "line": 772,
+            "line": 773,
             "declarations": [
               {
                 "property": "position",
@@ -20770,7 +20837,7 @@
           {
             "selector": "html:is([data-layout-profile=\"stacked\"], [data-layout-profile=\"compact\"]) body.is-mobile-scene-pinned .viewer-pip-controls",
             "atRules": [],
-            "line": 784,
+            "line": 785,
             "declarations": [
               {
                 "property": "position",
@@ -20793,7 +20860,7 @@
           {
             "selector": "html:is([data-layout-profile=\"stacked\"], [data-layout-profile=\"compact\"]) .viewer-pip-control",
             "atRules": [],
-            "line": 793,
+            "line": 794,
             "declarations": [
               {
                 "property": "display",
@@ -20840,7 +20907,7 @@
           {
             "selector": "html:is([data-layout-profile=\"stacked\"], [data-layout-profile=\"compact\"]) .viewer-pip-control[aria-pressed=\"true\"]",
             "atRules": [],
-            "line": 806,
+            "line": 807,
             "declarations": [
               {
                 "property": "border-color",
@@ -20855,7 +20922,7 @@
           {
             "selector": "html:is([data-layout-profile=\"stacked\"], [data-layout-profile=\"compact\"]) .viewer-pip-control:focus-visible",
             "atRules": [],
-            "line": 810,
+            "line": 811,
             "declarations": [
               {
                 "property": "outline",
@@ -20870,7 +20937,7 @@
           {
             "selector": "html:is([data-layout-profile=\"stacked\"], [data-layout-profile=\"compact\"]) body.is-mobile-scene-pinned .viewer-card__footer",
             "atRules": [],
-            "line": 814,
+            "line": 815,
             "declarations": [
               {
                 "property": "display",
@@ -20881,7 +20948,7 @@
           {
             "selector": "html:is([data-layout-profile=\"stacked\"], [data-layout-profile=\"compact\"]) body.is-mobile-scene-pinned .viewer",
             "atRules": [],
-            "line": 817,
+            "line": 818,
             "declarations": [
               {
                 "property": "z-index",
@@ -20896,7 +20963,7 @@
           {
             "selector": "html:is([data-layout-profile=\"stacked\"], [data-layout-profile=\"compact\"]) body.is-mobile-scene-pinned .viewer-pip-resize-handle",
             "atRules": [],
-            "line": 821,
+            "line": 822,
             "declarations": [
               {
                 "property": "position",
@@ -20927,7 +20994,7 @@
           {
             "selector": "html:is([data-layout-profile=\"stacked\"], [data-layout-profile=\"compact\"]) body.is-mobile-scene-pinned .viewer-pip-resize-handle::after",
             "atRules": [],
-            "line": 833,
+            "line": 834,
             "declarations": [
               {
                 "property": "position",
@@ -20950,7 +21017,7 @@
           {
             "selector": "html:is([data-layout-profile=\"stacked\"], [data-layout-profile=\"compact\"]) body.is-mobile-scene-transparent .viewer",
             "atRules": [],
-            "line": 847,
+            "line": 848,
             "declarations": [
               {
                 "property": "opacity",
@@ -20961,7 +21028,7 @@
           {
             "selector": ".visually-hidden",
             "atRules": [],
-            "line": 850,
+            "line": 851,
             "declarations": [
               {
                 "property": "position",
@@ -20996,9 +21063,9 @@
         ]
       },
       "app/ui-theme.css": {
-        "bytes": 19384,
-        "lines": 348,
-        "classSelectorCount": 224,
+        "bytes": 19605,
+        "lines": 351,
+        "classSelectorCount": 227,
         "uniqueClassSelectors": [
           "access-brand-logo",
           "access-page",
@@ -21041,18 +21108,20 @@
           "multi-picker",
           "overview-highlights",
           "panel",
+          "price-state",
+          "price-state__breakdown",
           "private-header",
           "private-header__actions",
           "private-header__brand",
           "private-header__page-name",
           "private-menu",
-          "private-menu-toggle",
           "private-menu__account",
           "private-menu__email",
           "private-menu__group",
           "private-menu__links",
           "private-menu__logout",
           "private-menu__note",
+          "private-menu-toggle",
           "process-flow",
           "process-section",
           "production-intro",
@@ -21077,10 +21146,10 @@
           "topbar__inner",
           "ui-theme-context-row",
           "ui-theme-toggle",
-          "ui-theme-toggle--header",
           "ui-theme-toggle__glyph",
           "ui-theme-toggle__label-long",
           "ui-theme-toggle__label-short",
+          "ui-theme-toggle--header",
           "ui-theme-utility",
           "ui-theme-utility--access",
           "ui-theme-utility--viewer",
@@ -22279,9 +22348,42 @@
             ]
           },
           {
-            "selector": "html[data-theme=\"light\"] .button--secondary:hover",
+            "selector": "html[data-theme=\"light\"] .price-state",
             "atRules": [],
             "line": 202,
+            "declarations": [
+              {
+                "property": "background",
+                "value": "#F0EDE8"
+              }
+            ]
+          },
+          {
+            "selector": "html[data-theme=\"light\"] .price-state__breakdown > div",
+            "atRules": [],
+            "line": 203,
+            "declarations": [
+              {
+                "property": "border-top-color",
+                "value": "#D6CCC0"
+              }
+            ]
+          },
+          {
+            "selector": "html[data-theme=\"light\"] .price-state__breakdown dt",
+            "atRules": [],
+            "line": 204,
+            "declarations": [
+              {
+                "property": "color",
+                "value": "#292723"
+              }
+            ]
+          },
+          {
+            "selector": "html[data-theme=\"light\"] .button--secondary:hover",
+            "atRules": [],
+            "line": 205,
             "declarations": [
               {
                 "property": "background",
@@ -22292,7 +22394,7 @@
           {
             "selector": "html[data-theme=\"light\"] .module-card,\nhtml[data-theme=\"light\"] .global-option,\nhtml[data-theme=\"light\"] .handle-option,\nhtml[data-theme=\"light\"] .summary-list li",
             "atRules": [],
-            "line": 203,
+            "line": 206,
             "declarations": [
               {
                 "property": "background",
@@ -22303,7 +22405,7 @@
           {
             "selector": "html[data-theme=\"light\"] .module-card:hover,\nhtml[data-theme=\"light\"] .global-option:hover,\nhtml[data-theme=\"light\"] .handle-option:hover",
             "atRules": [],
-            "line": 207,
+            "line": 210,
             "declarations": [
               {
                 "property": "background",
@@ -22314,7 +22416,7 @@
           {
             "selector": "html[data-theme=\"light\"] .module-card__inspect:hover",
             "atRules": [],
-            "line": 210,
+            "line": 213,
             "declarations": [
               {
                 "property": "background",
@@ -22325,7 +22427,7 @@
           {
             "selector": "html[data-theme=\"light\"] .flow-step.is-active,\nhtml[data-theme=\"light\"] .module-card.is-selected,\nhtml[data-theme=\"light\"] .global-option.is-selected,\nhtml[data-theme=\"light\"] .handle-option.is-selected",
             "atRules": [],
-            "line": 211,
+            "line": 214,
             "declarations": [
               {
                 "property": "background",
@@ -22336,7 +22438,7 @@
           {
             "selector": "html[data-theme=\"light\"] .module-detail__price",
             "atRules": [],
-            "line": 215,
+            "line": 218,
             "declarations": [
               {
                 "property": "background",
@@ -22351,7 +22453,7 @@
           {
             "selector": "/* Keep the technical module-detail views on their validated pale canvas. */\n\nhtml[data-theme=\"light\"] .flow-actions[data-bottom-dock-enabled=\"true\"]",
             "atRules": [],
-            "line": 216,
+            "line": 219,
             "declarations": [
               {
                 "property": "background",
@@ -22366,7 +22468,7 @@
           {
             "selector": "/* Internal administration: scoped light UI equivalents. The auth API remains untouched. */\nhtml[data-theme=\"light\"]",
             "atRules": [],
-            "line": 222,
+            "line": 225,
             "declarations": [
               {
                 "property": "--bg",
@@ -22381,7 +22483,7 @@
           {
             "selector": "html[data-theme=\"light\"] .admin-topbar,\nhtml[data-theme=\"light\"] .stage-unassigned",
             "atRules": [],
-            "line": 228,
+            "line": 231,
             "declarations": [
               {
                 "property": "background",
@@ -22392,7 +22494,7 @@
           {
             "selector": "html[data-theme=\"light\"] .admin-form label,\nhtml[data-theme=\"light\"] .stage-name,\nhtml[data-theme=\"light\"] .admin-field > label,\nhtml[data-theme=\"light\"] .data-field",
             "atRules": [],
-            "line": 230,
+            "line": 233,
             "declarations": [
               {
                 "property": "color",
@@ -22403,7 +22505,7 @@
           {
             "selector": "html[data-theme=\"light\"] input[type=email],\nhtml[data-theme=\"light\"] input[type=password],\nhtml[data-theme=\"light\"] input[type=text],\nhtml[data-theme=\"light\"] input[type=number],\nhtml[data-theme=\"light\"] select,\nhtml[data-theme=\"light\"] textarea",
             "atRules": [],
-            "line": 234,
+            "line": 237,
             "declarations": [
               {
                 "property": "background",
@@ -22422,7 +22524,7 @@
           {
             "selector": "html[data-theme=\"light\"] .button--primary",
             "atRules": [],
-            "line": 240,
+            "line": 243,
             "declarations": [
               {
                 "property": "background",
@@ -22437,7 +22539,7 @@
           {
             "selector": "html[data-theme=\"light\"] .button--secondary",
             "atRules": [],
-            "line": 241,
+            "line": 244,
             "declarations": [
               {
                 "property": "background",
@@ -22448,7 +22550,7 @@
           {
             "selector": "html[data-theme=\"light\"] .stage-pool-item",
             "atRules": [],
-            "line": 242,
+            "line": 245,
             "declarations": [
               {
                 "property": "color",
@@ -22467,7 +22569,7 @@
           {
             "selector": "html[data-theme=\"light\"] .hierarchy-section,\nhtml[data-theme=\"light\"] .hierarchy-choice-options,\nhtml[data-theme=\"light\"] .material-targets,\nhtml[data-theme=\"light\"] .multi-picker,\nhtml[data-theme=\"light\"] .material-availability-list",
             "atRules": [],
-            "line": 243,
+            "line": 246,
             "declarations": [
               {
                 "property": "background",
@@ -22482,7 +22584,7 @@
           {
             "selector": "html[data-theme=\"light\"] .hierarchy-item",
             "atRules": [],
-            "line": 248,
+            "line": 251,
             "declarations": [
               {
                 "property": "background",
@@ -22497,7 +22599,7 @@
           {
             "selector": "html[data-theme=\"light\"] .admin-topbar__actions",
             "atRules": [],
-            "line": 249,
+            "line": 252,
             "declarations": [
               {
                 "property": "justify-content",
@@ -22508,7 +22610,7 @@
           {
             "selector": "html[data-theme=\"light\"] .text-button",
             "atRules": [],
-            "line": 250,
+            "line": 253,
             "declarations": [
               {
                 "property": "color",
@@ -22519,7 +22621,7 @@
           {
             "selector": "html[data-theme=\"light\"] code",
             "atRules": [],
-            "line": 251,
+            "line": 254,
             "declarations": [
               {
                 "property": "background",
@@ -22536,7 +22638,7 @@
             "atRules": [
               "@media(max-width: 650px)"
             ],
-            "line": 254,
+            "line": 257,
             "declarations": [
               {
                 "property": "justify-content",
@@ -22547,7 +22649,7 @@
           {
             "selector": "/* Access management page has scoped inline CSS; adapt only its explicit white control. */\nhtml[data-theme=\"dark\"] .access-page > header .access-brand-logo",
             "atRules": [],
-            "line": 256,
+            "line": 259,
             "declarations": [
               {
                 "property": "width",
@@ -22558,7 +22660,7 @@
           {
             "selector": "html[data-theme=\"dark\"] .access-page .panel",
             "atRules": [],
-            "line": 259,
+            "line": 262,
             "declarations": [
               {
                 "property": "background",
@@ -22569,7 +22671,7 @@
           {
             "selector": "html[data-theme=\"dark\"] .access-page button.secondary",
             "atRules": [],
-            "line": 260,
+            "line": 263,
             "declarations": [
               {
                 "property": "background",
@@ -22584,7 +22686,7 @@
           {
             "selector": "html[data-theme=\"dark\"] .access-page input",
             "atRules": [],
-            "line": 261,
+            "line": 264,
             "declarations": [
               {
                 "property": "background",
@@ -22599,7 +22701,7 @@
           {
             "selector": "/* Shared private-page header and role-aware menu. */\n.private-header",
             "atRules": [],
-            "line": 262,
+            "line": 268,
             "declarations": [
               {
                 "property": "position",
@@ -22607,7 +22709,7 @@
               },
               {
                 "property": "z-index",
-                "value": "30"
+                "value": "60"
               },
               {
                 "property": "display",
@@ -22650,7 +22752,7 @@
           {
             "selector": ".private-header__brand",
             "atRules": [],
-            "line": 271,
+            "line": 274,
             "declarations": [
               {
                 "property": "display",
@@ -22681,7 +22783,7 @@
           {
             "selector": ".private-header__brand img",
             "atRules": [],
-            "line": 272,
+            "line": 275,
             "declarations": [
               {
                 "property": "display",
@@ -22708,7 +22810,7 @@
           {
             "selector": ".private-header__page-name",
             "atRules": [],
-            "line": 273,
+            "line": 276,
             "declarations": [
               {
                 "property": "color",
@@ -22727,7 +22829,7 @@
           {
             "selector": ".private-header__actions",
             "atRules": [],
-            "line": 274,
+            "line": 277,
             "declarations": [
               {
                 "property": "display",
@@ -22754,7 +22856,7 @@
           {
             "selector": ".private-menu-toggle",
             "atRules": [],
-            "line": 275,
+            "line": 278,
             "declarations": [
               {
                 "property": "display",
@@ -22801,7 +22903,7 @@
           {
             "selector": ".private-menu-toggle:hover",
             "atRules": [],
-            "line": 280,
+            "line": 283,
             "declarations": [
               {
                 "property": "background",
@@ -22812,7 +22914,7 @@
           {
             "selector": ".private-menu-toggle span",
             "atRules": [],
-            "line": 281,
+            "line": 284,
             "declarations": [
               {
                 "property": "display",
@@ -22839,7 +22941,7 @@
           {
             "selector": ".private-menu",
             "atRules": [],
-            "line": 282,
+            "line": 285,
             "declarations": [
               {
                 "property": "position",
@@ -22898,7 +23000,7 @@
           {
             "selector": ".private-menu[hidden]",
             "atRules": [],
-            "line": 290,
+            "line": 293,
             "declarations": [
               {
                 "property": "display",
@@ -22909,7 +23011,7 @@
           {
             "selector": ".private-menu__group",
             "atRules": [],
-            "line": 291,
+            "line": 294,
             "declarations": [
               {
                 "property": "display",
@@ -22924,7 +23026,7 @@
           {
             "selector": ".private-menu__group + .private-menu__group",
             "atRules": [],
-            "line": 292,
+            "line": 295,
             "declarations": [
               {
                 "property": "padding-top",
@@ -22935,7 +23037,7 @@
           {
             "selector": ".private-menu__group h2",
             "atRules": [],
-            "line": 293,
+            "line": 296,
             "declarations": [
               {
                 "property": "margin",
@@ -22966,7 +23068,7 @@
           {
             "selector": ".private-menu__links",
             "atRules": [],
-            "line": 294,
+            "line": 297,
             "declarations": [
               {
                 "property": "display",
@@ -22981,7 +23083,7 @@
           {
             "selector": ".private-menu__links a",
             "atRules": [],
-            "line": 295,
+            "line": 298,
             "declarations": [
               {
                 "property": "display",
@@ -23012,7 +23114,7 @@
           {
             "selector": ".private-menu__links a:hover, .private-menu__links a[aria-current=\"page\"]",
             "atRules": [],
-            "line": 296,
+            "line": 299,
             "declarations": [
               {
                 "property": "background",
@@ -23027,7 +23129,7 @@
           {
             "selector": ".private-menu__note",
             "atRules": [],
-            "line": 297,
+            "line": 300,
             "declarations": [
               {
                 "property": "margin",
@@ -23050,7 +23152,7 @@
           {
             "selector": ".private-menu__account",
             "atRules": [],
-            "line": 298,
+            "line": 301,
             "declarations": [
               {
                 "property": "display",
@@ -23069,7 +23171,7 @@
           {
             "selector": ".private-menu__account[hidden]",
             "atRules": [],
-            "line": 299,
+            "line": 302,
             "declarations": [
               {
                 "property": "display",
@@ -23080,7 +23182,7 @@
           {
             "selector": ".private-menu__email",
             "atRules": [],
-            "line": 300,
+            "line": 303,
             "declarations": [
               {
                 "property": "color",
@@ -23095,7 +23197,7 @@
           {
             "selector": ".private-menu__logout",
             "atRules": [],
-            "line": 301,
+            "line": 304,
             "declarations": [
               {
                 "property": "display",
@@ -23162,7 +23264,7 @@
           {
             "selector": ".private-header .ui-theme-toggle",
             "atRules": [],
-            "line": 307,
+            "line": 310,
             "declarations": [
               {
                 "property": "min-height",
@@ -23173,7 +23275,7 @@
           {
             "selector": ".private-header .private-menu-toggle",
             "atRules": [],
-            "line": 313,
+            "line": 316,
             "declarations": [
               {
                 "property": "flex",
@@ -23184,7 +23286,7 @@
           {
             "selector": ".topbar.private-header",
             "atRules": [],
-            "line": 314,
+            "line": 317,
             "declarations": [
               {
                 "property": "padding-inline",
@@ -23195,7 +23297,7 @@
           {
             "selector": ".topbar.private-header .topbar__inner",
             "atRules": [],
-            "line": 315,
+            "line": 318,
             "declarations": [
               {
                 "property": "position",
@@ -23222,7 +23324,7 @@
           {
             "selector": ".topbar.private-header .private-header__actions",
             "atRules": [],
-            "line": 316,
+            "line": 319,
             "declarations": [
               {
                 "property": "margin-left",
@@ -23233,7 +23335,7 @@
           {
             "selector": "html[data-theme=\"dark\"] .private-header",
             "atRules": [],
-            "line": 317,
+            "line": 320,
             "declarations": [
               {
                 "property": "border-color",
@@ -23252,7 +23354,7 @@
           {
             "selector": "html[data-theme=\"dark\"] .private-header__page-name",
             "atRules": [],
-            "line": 318,
+            "line": 321,
             "declarations": [
               {
                 "property": "color",
@@ -23263,7 +23365,7 @@
           {
             "selector": "html[data-theme=\"dark\"] .private-menu",
             "atRules": [],
-            "line": 319,
+            "line": 322,
             "declarations": [
               {
                 "property": "border-color",
@@ -23286,7 +23388,7 @@
           {
             "selector": "html[data-theme=\"dark\"] .private-menu__group + .private-menu__group,\nhtml[data-theme=\"dark\"] .private-menu__account",
             "atRules": [],
-            "line": 320,
+            "line": 323,
             "declarations": [
               {
                 "property": "border-color",
@@ -23297,7 +23399,7 @@
           {
             "selector": "html[data-theme=\"dark\"] .private-menu__links a:hover,\nhtml[data-theme=\"dark\"] .private-menu__links a[aria-current=\"page\"]",
             "atRules": [],
-            "line": 322,
+            "line": 325,
             "declarations": [
               {
                 "property": "background",
@@ -23312,7 +23414,7 @@
           {
             "selector": "html[data-theme=\"dark\"] .private-menu-toggle",
             "atRules": [],
-            "line": 324,
+            "line": 327,
             "declarations": [
               {
                 "property": "border-color",
@@ -23327,7 +23429,7 @@
           {
             "selector": "html[data-theme=\"dark\"] .private-menu-toggle:hover",
             "atRules": [],
-            "line": 325,
+            "line": 328,
             "declarations": [
               {
                 "property": "background",
@@ -23338,7 +23440,7 @@
           {
             "selector": "html[data-theme=\"dark\"] .private-menu__logout",
             "atRules": [],
-            "line": 326,
+            "line": 329,
             "declarations": [
               {
                 "property": "border-color",
@@ -23357,7 +23459,7 @@
           {
             "selector": ".private-header .ui-theme-toggle--header",
             "atRules": [],
-            "line": 327,
+            "line": 330,
             "declarations": [
               {
                 "property": "border-color",
@@ -23372,7 +23474,7 @@
           {
             "selector": ".private-header .ui-theme-toggle--header:hover",
             "atRules": [],
-            "line": 328,
+            "line": 331,
             "declarations": [
               {
                 "property": "filter",
@@ -23385,7 +23487,7 @@
             "atRules": [
               "@media (max-width: 650px)"
             ],
-            "line": 330,
+            "line": 333,
             "declarations": [
               {
                 "property": "min-height",
@@ -23406,7 +23508,7 @@
             "atRules": [
               "@media (max-width: 650px)"
             ],
-            "line": 331,
+            "line": 334,
             "declarations": [
               {
                 "property": "gap",
@@ -23419,7 +23521,7 @@
             "atRules": [
               "@media (max-width: 650px)"
             ],
-            "line": 332,
+            "line": 335,
             "declarations": [
               {
                 "property": "width",
@@ -23436,7 +23538,7 @@
             "atRules": [
               "@media (max-width: 650px)"
             ],
-            "line": 333,
+            "line": 336,
             "declarations": [
               {
                 "property": "font-size",
@@ -23449,7 +23551,7 @@
             "atRules": [
               "@media (max-width: 650px)"
             ],
-            "line": 334,
+            "line": 337,
             "declarations": [
               {
                 "property": "gap",
@@ -23462,7 +23564,7 @@
             "atRules": [
               "@media (max-width: 650px)"
             ],
-            "line": 335,
+            "line": 338,
             "declarations": [
               {
                 "property": "padding-inline",
@@ -23479,7 +23581,7 @@
             "atRules": [
               "@media (max-width: 650px)"
             ],
-            "line": 336,
+            "line": 339,
             "declarations": [
               {
                 "property": "display",
@@ -23492,7 +23594,7 @@
             "atRules": [
               "@media (max-width: 650px)"
             ],
-            "line": 337,
+            "line": 340,
             "declarations": [
               {
                 "property": "display",
@@ -23505,7 +23607,7 @@
             "atRules": [
               "@media (max-width: 650px)"
             ],
-            "line": 339,
+            "line": 342,
             "declarations": [
               {
                 "property": "padding-inline",
@@ -23518,7 +23620,7 @@
             "atRules": [
               "@media (max-width: 380px)"
             ],
-            "line": 342,
+            "line": 345,
             "declarations": [
               {
                 "property": "width",
@@ -23531,7 +23633,7 @@
             "atRules": [
               "@media (max-width: 380px)"
             ],
-            "line": 343,
+            "line": 346,
             "declarations": [
               {
                 "property": "font-size",
@@ -23544,7 +23646,7 @@
             "atRules": [
               "@media (max-width: 380px)"
             ],
-            "line": 344,
+            "line": 347,
             "declarations": [
               {
                 "property": "min-width",
@@ -23565,7 +23667,7 @@
             "atRules": [
               "@media (max-width: 380px)"
             ],
-            "line": 345,
+            "line": 348,
             "declarations": [
               {
                 "property": "width",
@@ -26739,7 +26841,7 @@
         ]
       },
       "app/config/index.html": {
-        "bytes": 17001,
+        "bytes": 17002,
         "lines": 305,
         "staticClasses": [
           "accessory-toggle",
@@ -27257,7 +27359,7 @@
     }
   },
   "aggregate": {
-    "classSelectorNameCount": 426,
+    "classSelectorNameCount": 428,
     "staticMarkupClassNameCount": 251,
     "customPropertyNameCount": 43,
     "customProperties": {
@@ -27732,7 +27834,7 @@
         }
       ]
     },
-    "colorLiteralOccurrenceCount": 459,
+    "colorLiteralOccurrenceCount": 467,
     "uniqueColorLiteralValues": {
       "#111210": {
         "occurrences": 3,
@@ -27836,9 +27938,10 @@
         ]
       },
       "#20211f": {
-        "occurrences": 6,
+        "occurrences": 7,
         "files": [
           "app/admin/admin.css",
+          "app/how-it-works/how-it-works.css",
           "app/styles.css",
           "app/ui-theme.css"
         ]
@@ -27991,9 +28094,10 @@
         ]
       },
       "#f0ede8": {
-        "occurrences": 17,
+        "occurrences": 19,
         "files": [
           "app/admin/admin.css",
+          "app/how-it-works/how-it-works.css",
           "app/landing/landing.css",
           "app/public-theme.css",
           "app/ui-theme.css"
@@ -28467,12 +28571,6 @@
         ]
       },
       "rgba(255, 255, 255, 0.42)": {
-        "occurrences": 1,
-        "files": [
-          "app/styles.css"
-        ]
-      },
-      "rgba(255, 255, 255, 0.68)": {
         "occurrences": 1,
         "files": [
           "app/styles.css"
@@ -29196,6 +29294,32 @@
         "occurrences": 1,
         "files": [
           "app/viewer/viewer.css"
+        ]
+      },
+      "#705c4b": {
+        "occurrences": 3,
+        "files": [
+          "app/about/about.css",
+          "app/how-it-works/how-it-works.css",
+          "app/landing/landing.css"
+        ]
+      },
+      "#70522f": {
+        "occurrences": 1,
+        "files": [
+          "app/how-it-works/how-it-works.css"
+        ]
+      },
+      "#d6ccc0": {
+        "occurrences": 1,
+        "files": [
+          "app/ui-theme.css"
+        ]
+      },
+      "#292723": {
+        "occurrences": 1,
+        "files": [
+          "app/ui-theme.css"
         ]
       }
     },
