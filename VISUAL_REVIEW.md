@@ -14,6 +14,14 @@
 
 Esta aprovação é para a versão expandida/larga. Breakpoints, composição compacta e medidas não foram definidos. O menu público continua sujeito ao contrato de teclado, Escape, clique fora, aria-expanded, foco e movimento reduzido de NAV-004.
 
+### Experimento de cabeçalhos compactos
+
+![Duas composições experimentais de cabeçalhos compactos](visualEvidence/experiments/NAV-005-compact-header-options.svg)
+
+Na página pública publicada `/how-it-works/`, observei em 18/10/2026 um cabeçalho de uma linha em viewport de 515 × 608 px, tema escuro: marca de 160 px à esquerda e grupo de ações de 140 px à direita, com contato, controle de tema em ícone e menu. O cabeçalho mediu aproximadamente 78 px de altura. É uma observação de um único estado público e não define o layout compacto homologado.
+
+A prancha compara duas estruturas candidatas em largura ilustrativa de 390 px: **A**, uma linha com identificador contextual ao lado da marca e tema antes do menu; **B**, contexto e tema numa segunda linha, preservando o menu na extremidade. Em páginas públicas, A agrupa contato no menu; B também mantém contato no menu. As estruturas de admin autenticado e navegação contextual são propostas, pois não foram capturadas nesta viewport. Nenhuma opção está aprovada; breakpoint, tipografia, dimensões, ícones, comportamento dos nomes longos e posição do contato permanecem para revisão.
+
 A escolha A mantém o link atual **Fale conosco** via WhatsApp como acesso público de contato. Isso não cria uma rota própria para Contato.
 
 A prancha anterior de opções permanece em [NAV-005-public-header-options.svg](visualEvidence/experiments/NAV-005-public-header-options.svg) como comparação experimental. A prancha simplificada acima ilustra a decisão aprovada, mas não especifica tokens, dimensões nem o logo final.
