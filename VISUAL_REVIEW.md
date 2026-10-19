@@ -20,7 +20,7 @@ Esta aprovação é para a versão expandida/larga. Breakpoints, composição co
 
 Na página pública publicada `/how-it-works/`, observei em 18/10/2026 um cabeçalho de uma linha em viewport de 515 × 608 px, tema escuro: marca de 160 px à esquerda e grupo de ações de 140 px à direita, com contato, controle de tema em ícone e menu. O cabeçalho mediu aproximadamente 78 px de altura. É uma observação de um único estado público e não define o layout compacto homologado.
 
-A prancha compara duas estruturas candidatas em largura ilustrativa de 390 px: **A**, uma linha com identificador contextual ao lado da marca e tema antes do menu; **B**, contexto e tema numa segunda linha, preservando o menu na extremidade. Em páginas públicas, A agrupa contato no menu; B também mantém contato no menu. As estruturas de admin autenticado e navegação contextual são propostas, pois não foram capturadas nesta viewport. Nenhuma opção está aprovada; breakpoint, tipografia, dimensões, ícones, comportamento dos nomes longos e posição do contato permanecem para revisão.
+A prancha compara duas estruturas candidatas em largura ilustrativa de 390 px: **A**, uma linha com identificador contextual ao lado da marca, tema antes do menu e contato agrupado no menu público; **B**, marca, tema e menu na primeira linha, com contato público ou identificador contextual numa segunda linha. As estruturas de admin autenticado e navegação contextual são propostas, pois não foram capturadas nesta viewport. Nenhuma opção está aprovada; breakpoint, tipografia, dimensões, ícones, comportamento dos nomes longos e posição do contato permanecem para revisão.
 
 A escolha A mantém o link atual **Fale conosco** via WhatsApp como acesso público de contato. Isso não cria uma rota própria para Contato.
 
