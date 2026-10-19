@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1080" viewBox="0 0 1200 1080" role="img" aria-labelledby="title desc">
-<title id="title">NAV-005 — alternativas para manter uma linha a 320 px</title>
-<desc id="desc">Comparação entre o cabeçalho atual em duas linhas e duas alternativas compactas de uma linha. Alternativa 1 mantém a marca e usa controle de tema somente com ícone. Alternativa 2 mantém o rótulo do tema e reduz a marca. Ambas são candidatas esquemáticas, sem homologação.</desc>
+<title id="title">NAV-005 — regra aprovada de encaixe estreito para o header</title>
+<desc id="desc">Registro visual da regra aprovada: preservar o rótulo do tema enquanto a logo reduz até no máximo 30%; depois, mudar o tema para ícone apenas. A prancha mostra a implementação atual em duas linhas a 320 px e os dois estados da sequência aprovada. A decisão não fixa breakpoint nem detalhes do ícone.</desc>
 <defs><style>
  text{font-family:Arial,Helvetica,sans-serif}
  .title{fill:#292622;font-size:31px;font-weight:700}
@@ -24,9 +24,9 @@
  .tag{fill:#ece6de}
 </style></defs>
 <rect width="1200" height="1080" fill="#f0ede8"/>
-<text x="52" y="58" class="label">NAV-005 · CABEÇALHO COMPACTO · PONTO DE REVISÃO</text>
+<text x="52" y="58" class="label">NAV-005 · CABEÇALHO COMPACTO · REGRA ESTREITA APROVADA</text>
 <text x="52" y="103" class="title">Manter uma linha quando a largura aperta</text>
-<text x="52" y="136" class="sub">As opções preservam a composição aprovada: marca e Administração à esquerda; tema antes do menu à direita.</text>
+<text x="52" y="136" class="sub">A sequência aprovada preserva: marca e Administração à esquerda; tema antes do menu à direita.</text>
 <text x="52" y="162" class="muted">Viewport de referência: 320 px. A geometria abaixo parte da medição do login publicado; os controles são propostas, não medidas finais.</text>
 
 <rect x="52" y="188" width="1096" height="202" rx="16" class="card"/>
@@ -57,16 +57,16 @@
 
 <!-- alternative 1 -->
 <rect x="52" y="414" width="532" height="514" rx="16" class="card"/>
-<text x="76" y="450" class="label">ALTERNATIVA 1 · PRESERVAR A MARCA</text>
-<text x="76" y="480" class="h">Tema só com ícone</text>
-<text x="76" y="506" class="copy">Mantém o wordmark e “Administração” no tamanho atual.</text>
+<text x="76" y="450" class="label">ETAPA 2 · FALLBACK APROVADO</text>
+<text x="76" y="480" class="h">Quando a logo atinge o limite</text>
+<text x="76" y="506" class="copy">Após reduzir a logo até 30%, se faltar espaço, o tema passa a ícone.</text>
 <rect x="76" y="532" width="484" height="104" rx="10" class="darkbar"/>
-<g transform="translate(91 558)">
- <path d="M1 17 17 7 33 17v29H1z" fill="none" stroke="#eee8df" stroke-width="2.8"/>
- <path d="M17 7 33 17" fill="none" stroke="#a64d13" stroke-width="2.8"/>
- <text x="44" y="25" class="darktext" font-size="15" font-weight="700" letter-spacing="1.5">CASA<tspan fill="#e58b36"> EM</tspan></text>
- <text x="44" y="40" fill="#eee8df" font-size="7" letter-spacing="2.5">MÓDULOS</text>
- <text x="154" y="32" fill="#d5cec4" font-size="13">Administração</text>
+<g transform="translate(91 561)">
+ <path d="M1 14 13 6 25 14v23H1z" fill="none" stroke="#eee8df" stroke-width="2.4"/>
+ <path d="M13 6 25 14" fill="none" stroke="#a64d13" stroke-width="2.4"/>
+ <text x="33" y="20" class="darktext" font-size="12" font-weight="700" letter-spacing="1.1">CASA<tspan fill="#e58b36"> EM</tspan></text>
+ <text x="33" y="33" fill="#eee8df" font-size="6" letter-spacing="1.8">MÓDULOS</text>
+ <text x="111" y="25" fill="#d5cec4" font-size="12">Administração</text>
 </g>
 <g transform="translate(454 562)">
  <rect width="42" height="44" rx="9" class="btn"/>
@@ -77,17 +77,17 @@
 <text x="76" y="676" class="copy">Tema: ícone de claro/escuro com nome acessível.</text>
 <text x="76" y="699" class="copy">Menu continua no último controle, na extremidade.</text>
 <line x1="76" y1="724" x2="560" y2="724" class="border"/>
-<text x="76" y="754" class="muted">Impacto visual</text>
-<text x="76" y="778" class="copy">• Marca preservada</text>
+<text x="76" y="754" class="muted">Estado aprovado</text>
+<text x="76" y="778" class="copy">• Logo reduzida até o limite de 30%</text>
 <text x="76" y="802" class="copy">• Tema sem rótulo visível; estado precisa seguir acessível</text>
-<text x="76" y="847" class="muted">Candidata: estimativa de encaixe ≈ 308 px incluindo margens.</text>
-<text x="76" y="877" class="muted">Não homologada; requer conferência no DOM implementado.</text>
+<text x="76" y="847" class="muted">A logo fica no máximo 30% menor que a referência.</text>
+<text x="76" y="877" class="muted">Ícone exato e dimensões continuam pendentes.</text>
 
 <!-- alternative 2 -->
 <rect x="616" y="414" width="532" height="514" rx="16" class="card"/>
-<text x="640" y="450" class="label">ALTERNATIVA 2 · PRESERVAR O RÓTULO DO TEMA</text>
-<text x="640" y="480" class="h">Marca reduzida</text>
-<text x="640" y="506" class="copy">Mantém “Escuro” visível e reduz a escala do wordmark.</text>
+<text x="640" y="450" class="label">ETAPA 1 · PREFERÊNCIA APROVADA</text>
+<text x="640" y="480" class="h">Manter o tema rotulado</text>
+<text x="640" y="506" class="copy">O rótulo permanece visível enquanto a marca reduz até 30%.</text>
 <rect x="640" y="532" width="484" height="104" rx="10" class="darkbar"/>
 <g transform="translate(655 561)">
  <path d="M1 14 13 6 25 14v23H1z" fill="none" stroke="#eee8df" stroke-width="2.4"/>
@@ -109,11 +109,11 @@
 <text x="640" y="754" class="muted">Impacto visual</text>
 <text x="640" y="778" class="copy">• Rótulo “Escuro” permanece explícito</text>
 <text x="640" y="802" class="copy">• Marca fica cerca de 24% menor</text>
-<text x="640" y="847" class="muted">Candidata: estimativa de encaixe ≈ 313 px incluindo margens.</text>
-<text x="640" y="877" class="muted">Não homologada; requer conferência no DOM implementado.</text>
+<text x="640" y="847" class="muted">A 320 px, a ilustração mostra redução aproximada de 24%.</text>
+<text x="640" y="877" class="muted">Redução máxima aprovada: 30%; valores em CSS ainda pendentes.</text>
 
 <rect x="52" y="952" width="1096" height="82" rx="14" fill="#e7e0d7"/>
-<text x="76" y="983" class="h" font-size="17">Ponto para sua revisão</text>
-<text x="76" y="1008" class="copy">Qual compromisso prefere a 320 px: preservar a marca com tema só por ícone, ou preservar o rótulo do tema com marca menor?</text>
-<text x="52" y="1060" class="muted">Prancha experimental de composição. As larguras são estimativas a partir da medição atual; não define breakpoint, CSS, contraste ou implementação.</text>
+<text x="76" y="983" class="h" font-size="17">Regra homologada pelo usuário</text>
+<text x="76" y="1008" class="copy">Manter o tema rotulado durante a redução da logo, limitada a 30%; se for preciso reduzir além disso, usar o tema apenas com ícone.</text>
+<text x="52" y="1060" class="muted">Composição da regra aprovada; geometrias esquemáticas. Breakpoint, interpolação exata, glifo do ícone e estilo dos controles não estão especificados.</text>
 </svg>
