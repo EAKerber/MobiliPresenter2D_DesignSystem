@@ -34,7 +34,7 @@ Contraste calculado por luminância sRGB para pares sólidos. Os números são t
 | #C4BCB2 em #1B1C1A | 9,11:1 | Candidato de texto secundário escuro |
 | #D8BC7C em #111210 | 10,20:1 | Candidato de acento escuro |
 | Branco em #A64D13 | 5,69:1 | Referência para este par; não aprova todas as superfícies promocionais |
-| Amostras de estado sobre branco/escuro | 6,45:1 a 11,16:1 | Contraste calculado em amostras; combinações não homologadas |
+| Amostras de estado sobre branco/escuro | 7,02:1 a 7,44:1 no tema claro e 10,30:1 a 12,26:1 no escuro | Contraste calculado em amostras; combinações não homologadas |
 
 ## Divergências que a proposta pretende resolver
 
