@@ -139,7 +139,7 @@ A conta da recomendação anterior foi corrigida: com logo no piso (73,5 px), id
 
 ## Rechecagem de contraste da legenda de estudo (2026-10-18)
 
-Na rota publicada `/how-it-works/`, em tema escuro e viewport de 515 × 608 CSS px, a varredura DOM avaliou 161 elementos de texto usando cor computada e o ancestral opaco mais próximo. Um único par ficou abaixo de 4,5:1: `.study-art figcaption`, texto “Esquema conceitual de estudo do espaço”, `#C4BCB2` sobre `#FCF9EF`, fonte de 10,88 px, contraste **1,78:1**. Isso reproduz FIND-004, já conhecido; não é uma nova falha nem aprovação de valores. O usuário posteriormente aprovou a alternativa A: faixa opaca `#20211F` com texto `#F0EDE8` (13,85:1), registrada em VIS-003. A aplicação no produto continua pendente. Esta leitura DOM não certifica conteúdo sobre gradientes, transparência, pseudo-elementos ou imagem. Não houve alteração de tema, preferência, estado de conta ou código do produto; nenhuma captura foi persistida nesta checagem. Esta leitura DOM não certifica conteúdo sobre gradientes, transparência, pseudo-elementos ou imagem. Não houve alteração de tema, preferência, estado de conta ou código do produto; nenhuma captura foi persistida nesta checagem.
+Na rota publicada `/how-it-works/`, em tema escuro e viewport de 515 × 608 CSS px, a varredura DOM avaliou 161 elementos de texto usando cor computada e o ancestral opaco mais próximo. Um único par ficou abaixo de 4,5:1: `.study-art figcaption`, texto “Esquema conceitual de estudo do espaço”, `#C4BCB2` sobre `#FCF9EF`, fonte de 10,88 px, contraste **1,78:1**. Isso reproduz FIND-004, já conhecido; não é uma nova falha nem aprovação de valores. O usuário posteriormente aprovou a alternativa A: faixa opaca `#20211F` com texto `#F0EDE8` (13,85:1), registrada em VIS-003. A aplicação no produto continua pendente. Esta leitura DOM não certifica conteúdo sobre gradientes, transparência, pseudo-elementos ou imagem. Não houve alteração de tema, preferência, estado de conta ou código do produto; nenhuma captura foi persistida nesta checagem.
 
 ## Rechecagem ao vivo: cabeçalho público e sessão administrativa (2026-10-18)
 
@@ -156,6 +156,10 @@ O controle de tema apareceu apenas como ícone nessa largura da captura. A largu
 Em `/admin.html`, a autenticação carregou o editor sem a mensagem “Não foi possível carregar os dados administrativos”. Na primeira abertura do menu após o login, o menu ainda mostrava “Entrar na administração”, sem as rotas privadas e sem “Sair”. Recarregar a própria página sincronizou o estado; depois da recarga, o menu mostrou Configurador, Administração, Gerenciar acessos, as páginas públicas e a ação “Sair”. Essa sequência reproduz uma vez a inconsistência de sessão pós-login registrada em FIND-007 e no [backlog do produto, issue #213](https://github.com/EAKerber/MobiliPresenter2D/issues/213). Não determina sua causa nem descarta intermitência.
 
 Em uma aba autenticada de `/access/manage`, o conteúdo carregou e o menu já apresentou corretamente os grupos público e privado e a saída. A tela contém dados de conta e de convites; nenhum valor de destinatário foi copiado para os registros desta auditoria.
+
+### Classificação da mensagem de estado no Admin (2026-10-19)
+
+Na página publicada `/admin.html`, em tema escuro, uma mensagem visível de estado atual tinha `aria-live="polite"` e `data-kind=""`. O usuário confirmou que ela deriva do estado atual, portanto é informação de processo e deve usar o papel azul homologado, não o papel de sucesso. O DOM ainda renderiza o texto em `#C4BCB2` sobre `#111210`, com contraste calculado de 10,00:1: legibilidade suficiente neste par, mas o papel cromático aprovado não está aplicado. Dois outros elementos de mensagem não estavam visíveis; erro, aviso e outros estados não foram acionados. Registro detalhado em [evidência runtime](evidence/runtime/admin-dark-status-message-2026-10-19.md). Nenhuma configuração ou dado foi alterado.
 
 ### Limites e evidências
 
