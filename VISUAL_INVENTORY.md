@@ -1,55 +1,95 @@
-# Registro de achados e decisões
+# Inventário visual estático
 
-**Atualizado:** 2026-10-19  
-**Produto observado:** [site publicado](https://casaemmodulos.casa/) no deploy `6ad518d3da1379029e04324f`, commit `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`.  
-**Decisões canônicas:** [decisions.json](decisions.json). **Auditoria runtime:** [RUNTIME_AUDIT.md](RUNTIME_AUDIT.md).  
-Este registro separa defeitos reproduzidos, relatos intermitentes, triagem de snapshot antigo, decisões homologadas e direções acordadas. Nenhum item aqui implementa uma correção no produto.
+**Snapshot:** 2026-10-18  
+**Produto observado:** [EAKerber/MobiliPresenter2D](https://github.com/EAKerber/MobiliPresenter2D), `main` em `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`.  
 
-## Defeitos e inconsistências
+**Atualização runtime (2026-10-19):** FIND-006 e FIND-009 foram corrigidos no produto e verificados no deploy `483ef2e`; consulte [PRODUCT_RECONCILIATION_2026-10-19.md](PRODUCT_RECONCILIATION_2026-10-19.md). Este inventário estático continua sendo o snapshot `298c114`; seus números não foram regenerados nesta atualização.
 
-| ID | Situação | Evidência / alcance | Próximo passo |
-|---|---|---|---|
-| FIND-001 | **Falha funcional observada em runtime** | Na landing, o primeiro clique no menu durante a abertura foi interceptado por `#introSplash`; depois que a camada saiu, o menu abriu. É uma condição pública reproduzível e não prova a causa dos relatos em páginas privadas. Backlog: [issue #215](https://github.com/EAKerber/MobiliPresenter2D/issues/215). | Corrigir ou remover a interceptação e validar NAV-004 sem regressão no fluxo da abertura. |
-| FIND-002 | **Contraste insuficiente no estilo atual; par de correção aprovado, aplicação pendente** | `.hero-description`, `.how-hero-note` e `.about-scale p:not(.eyebrow)` registraram 4,47:1 no tema claro. O par anterior `#675F55` sobre `#F0EDE8` foi rejeitado esteticamente. A paleta aprovada substitui-o por `#705C4B` sobre `#F0EDE8` (5,41:1). Correção de escopo registrada em [issue #216](https://github.com/EAKerber/MobiliPresenter2D/issues/216). | Aplicar o par aprovado somente aos seletores mapeados; conferir o DOM final, demais temas e superfícies antes de fechar o achado. |
-| FIND-003 | **Contraste abaixo do limite; par contextual homologado, ainda não aplicado** | `.study-band .eyebrow`: 3,89:1. Par escolhido: `#70522F` sobre `#E8E3DC`, 5,60:1 nesse rótulo. Correção de escopo registrado em [issue #216](https://github.com/EAKerber/MobiliPresenter2D/issues/216). | Aplicar somente nesse contexto; manter outras superfícies e variações em aberto. |
-| FIND-004 | **Composição e par contextual homologados; implementação pendente** | Legenda de `.study-art` em `/how-it-works/`, tema escuro: o estado observado era `#C4BCB2` sobre `#FCF9EF`, 1,78:1. Rechecagem em 18/10/2026 no DOM publicado, viewport 515 × 608: 161 elementos varridos; somente esse par ficou abaixo de 4,5:1. O usuário aprovou a alternativa A da prancha: faixa opaca `#20211F` com texto `#F0EDE8`, contraste calculado 13,85:1. A escolha vale somente para essa legenda; não cria token global. | Aplicar no produto em mudança própria e revalidar contraste no DOM, responsividade, legibilidade da arte e movimento reduzido. Não generalizar para outros contextos. |
-| FIND-005 | **Relato intermitente; não reproduzido nesta observação** | [Issue #212](https://github.com/EAKerber/MobiliPresenter2D/issues/212): após login administrativo pode aparecer “Não foi possível carregar os dados administrativos” até recarregar. Após o usuário autenticar, uma navegação nova para `/admin.html` carregou o editor; a mensagem não estava presente. Isso não reproduz o primeiro acesso pós-login nem descarta a falha intermitente. | Reproduzir desde a transição de login, inspecionar sequência de sessão e solicitação, e registrar status sem dados sensíveis. |
-| FIND-006 | **Inconsistência funcional reproduzida no site publicado; causa não isolada** | [Issue #209](https://github.com/EAKerber/MobiliPresenter2D/issues/209): em 19/10/2026, `/config/`, tema escuro, viewport 1280 × 720, os sete toggles de inclusão da lista estavam em `Value=1` e “Incluído”, viewer em 8/8, estimativa R$ 8.740,00. Sem tocar nas caixas, naveguei ao Resumo: este passou a dizer “Nenhum módulo incluído”, 0 incluído(s), R$ 0,00, mas o viewer permaneceu 8/8. A mudança coincidiu com navegação de etapa; causa não isolada. Evidência em [configurator-summary-label-counter-2026-10-19.md](evidence/runtime/configurator-summary-label-counter-2026-10-19.md). | Definir significado e origem do contador; rastrear por que lista/Resumo divergem ao navegar e validar iluminação incluída/indisponível. Não substituir por número fixo. |
-| FIND-007 | **Estado de sessão do menu desatualizado reproduzido uma vez após login; recarga recupera** | No deploy `6ad518d3da1379029e04324f` (commit `298c114`), o editor de `/admin.html` carregou sem mensagem de erro de dados, mas a primeira abertura do menu após login mostrou “Entrar na administração” e omitiu rotas privadas e saída. Recarregar a página sincronizou o menu; depois disso ele exibiu Configurador, Administração, Gerenciar acessos, páginas públicas e “Sair”. Em `/access/manage`, o menu autenticado abriu corretamente em uma aba nova. Backlog: [issue #213](https://github.com/EAKerber/MobiliPresenter2D/issues/213). | Investigar atualização da sessão/menu após login nas rotas privadas e repetir a sequência. A recarga recupera o estado observado, mas não prova a causa nem corrige a transição. Manter separado de #212. |
-| FIND-008 | **Triagem estática antiga aberta; aplicabilidade parcial** | [Issue #208](https://github.com/EAKerber/MobiliPresenter2D/issues/208) registra 8 P1, 3 P2, 1 P3 e 4 exceções no baseline `67d3197`. A reconciliação do snapshot `298c114` está registrada no issue #208: DS04-01 e DS04-08 foram resolvidos no código; DS04-02 a DS04-07, DS04-09, DS04-10 e DS04-12 continuam com evidência estática de risco; DS04-11 está explicitado como exceção técnica. Os itens restantes aguardam inspeção DOM/runtime. | Aplicar os itens remanescentes por grupos após revisão e medir o DOM final; preservar as exceções editoriais, de cena e de amostras de produto justificadas. |
-| FIND-009 | **Falha visual reproduzida em viewport estreito** | No configurador autenticado, com o menu público aberto, a imagem do forno da cena é pintada sobre a lista de páginas públicas e cobre parte do link “Como funciona”, tanto no tema escuro quanto no claro. Os links continuam presentes na árvore de acessibilidade. A causa CSS/DOM ainda não foi isolada. Backlog: [issue #214](https://github.com/EAKerber/MobiliPresenter2D/issues/214). | Investigar contexto de empilhamento e hit testing entre cena e menu; confirmar correção em larguras estreitas e largas sem alterar os links ou a cena. |
-| FIND-010 | **Falha de contraste no rótulo do Resumo confirmada; tratamento do controle indisponível escolhido no contexto observado** | Em 19/10/2026, no Resumo do Configurador, `.price-state__breakdown dt` usou `rgba(255,255,255,.68)` a 11 px/peso 750 nos dois temas. Contraste composto calculado: **1,05:1 no claro** (`#fff` sob overlay `rgba(203,188,170,.13)`) e **6,95:1 no escuro** (`#1B1C1A` sob o mesmo overlay). A falha clara foi reproduzida em DOM real; rótulo quase branco. Correção visual vinculada a DS04-07 e [issue #208](https://github.com/EAKerber/MobiliPresenter2D/issues/208). Separadamente, o usuário escolheu manter `.service-check.is-blocked { opacity: .6 }` para Iluminação embutida nesse contexto; A não cria padrão global e B/C seguem não selecionadas na [prancha FIND-010](visualEvidence/experiments/FIND-010-disabled-control-candidates.svg). | Corrigir o par claro do rótulo com a paleta aprovada; manter a escolha `.6` restrita ao controle observado e avaliar outros estados desabilitados separadamente. Evidência: [auditoria runtime](evidence/runtime/configurator-summary-label-counter-2026-10-19.md). |
-| FIND-011 | **Marca legível no tema claro estabilizado; falha transitória não reproduzida** | Em 19/10/2026, em `/how-it-works/`, tema claro e viewport 486 × 590 CSS px, o logo estabilizado era `/branding/logo-light-380.png`, com opacidade 1 e filtro `none`; a marca apareceu escura e legível. A aparência desbotada ocorreu somente no frame de transição anterior e não se repetiu. Não foi confirmado defeito estável; contraste não textual do asset não foi medido numericamente. Evidência: [follow-up runtime](evidence/runtime/how-it-works-public-compact-header-2026-10-19.md). | Não abrir correção para a marca sem reprodução estável. Reavaliar apenas se o aspecto desbotado reaparecer após a transição. |
-| FIND-012 | **Divergência compacta de NAV-005 e corte abaixo de 320 px reproduzidos; backlog aberto** | No tema claro a 486 × 590 CSS px, a marca segue em 160 px, o tema fica icon-only em alvo de 44 × 44 px e o CTA WhatsApp permanece fora do menu. O menu listou Ambientes, Como funciona e Quem somos, sem contato. CSS oculta o rótulo do tema até 1150 px. No tema escuro, 360–290 px, o tema seguiu icon-only enquanto a marca reduziu no máximo 25% (120 px). A 291/290 px, `html/body` fixam 320 px e `.how-page` recorta o excesso; a 290 px, somente 11 px do alvo do menu ficam na área útil e o título é cortado. Evidência: [follow-up runtime](evidence/runtime/how-it-works-public-compact-header-2026-10-19.md). Correção no [issue #218 do produto](https://github.com/EAKerber/MobiliPresenter2D/issues/218). | Alinhar somente o cabeçalho público compacto a NAV-005: manter rótulo enquanto a marca reduz até 30%, agrupar contato no menu e permitir duas linhas abaixo de ~291 px sem recorte; validar pós-correção nos temas claro e escuro. |
+**Registro:** `decisions.json`; detalhes por regra e rota em [`visual-inventory.json`](visual-inventory.json).  
+**Escopo:** CSS, marcação HTML estática e arquivos de imagem/vetor/fontes. Este inventário não altera o produto nem certifica o comportamento renderizado.
 
-**Leitura de prioridade:** FIND-006 é a inconsistência funcional reproduzida de maior clareza no configurador; FIND-001 também foi observado em runtime. FIND-002/003 têm cor/par aprovados e aplicação pendente; FIND-004 tem composição e par aprovados, com aplicação e verificação pendentes. FIND-007 foi reproduzido uma vez após login e recuperou após recarga; a causa segue desconhecida. FIND-011 não confirmou defeito estável de marca; FIND-012 reproduziu uma divergência do cabeçalho compacto homologado e está no backlog do produto (#218).
+## Resumo do inventário
 
-## Decisões homologadas
+| Área | Registro estático |
+|---|---:|
+| Entradas HTML mapeadas | 8 |
+| Folhas CSS mapeadas | 8 |
+| Nomes de classe encontrados no CSS | 426 |
+| Nomes de classe em marcação HTML | 251 |
+| Custom properties CSS | 43 |
+| Ocorrências de cores literais | 459 |
+| Valores literais distintos | 235 |
+| Declarações de espaçamento | 750 |
+| Declarações CSS de movimento | 36 |
+| Keyframes | 8 |
+| Arquivos visuais rastreados em `app/` | 128 |
 
-| ID | O que foi homologado | Limite |
+Os seletores e declarações visuais são preservados por folha CSS, com regra, contexto `@media` e linha de origem no JSON. A leitura é lexical: aliases de cor ou classe podem ser usados em runtime, e a cascata final depende de DOM, ordem de importação e estado da aplicação.
+
+## Rotas e decisões relacionadas
+
+| Superfície | Entrada | Decisões mapeadas |
 |---|---|---|
-| NAV-005 | Estrutura larga A nas páginas públicas; B nas privadas; padrão contextual tipo viewer nas navegações de segunda ordem. Em compacto, opção A: linha única, marca e identificador/contexto à esquerda, tema antes do menu na extremidade direita; páginas públicas agrupam navegação e contato no menu. | Regra para larguras muito estreitas aprovada: manter rótulo do tema enquanto a logo reduz até 30%, depois usar controle icon-only; identificador permanece completo. Breakpoint exato, dimensões, espaçamento, tipografia, cores e glifo seguem em aberto. |
-| VIS-002 | Papel azul para informação funcional/de processo; base promocional cobre `#A64D13`; texto secundário `#705C4B`; rótulo quente FIND-003; pares de erro/sucesso/aviso escolhidos pela maior razão de contraste por estado/tema. | Aplicação das cores e pares aos componentes continua pendente. As aprovações são contextuais, não tokens globais; não aprovam usos fora do escopo nem substituem validação no DOM. |
-| PRIVATE-HEADER-001 | Contrato funcional para cabeçalhos privados, grupos de navegação por acesso e ordem dos controles, conforme `decisions.json`. | Observação runtime confirma comportamento em algumas rotas/estados, mas não comprova confiabilidade após login. |
+| Landing / ambientes | `app/index.html` | NAV-003, NAV-004, NAV-005, VIS-002 |
+| Como funciona | `app/how-it-works/index.html` | NAV-003, NAV-004, NAV-005, VIS-002, VIS-003 |
+| Quem somos | `app/about/index.html` | NAV-003, NAV-004, NAV-005, VIS-002 |
+| Viewer de ambiente | `app/viewer/index.html` | NAV-003, NAV-004, NAV-005, VIS-002, EST-01–03 |
+| Configurador | `app/config/index.html` | NAV-003/004/005, PRIVATE-HEADER-001, VIS-002, EST-01–06 |
+| Administração / login | `app/admin.html` | NAV-005, PRIVATE-HEADER-001, VIS-002, EST-02, EST-04–10 |
+| Login de acesso | `app/access/index.html` | NAV-005, PRIVATE-HEADER-001, VIS-002 |
+| Gerenciar acessos | `app/access/manage.html` | NAV-005, PRIVATE-HEADER-001, VIS-002, EST-02, EST-04–06 |
 
-## Direções acordadas e decisões incompletas
+## CSS, classes e estilos locais
 
-- **EST-01–10:** direções conceituais em `decisions.json`; cores, medidas, comportamento por componente e casos limite continuam pendentes em itens específicos.
-- **NAV-004:** contrato funcional do menu público definido; FIND-001 demonstra uma condição em que o primeiro clique não é atendido.
-- **NAV-005:** estruturas largas e compacta A estão aprovadas. Regra de encaixe estreito aprovada e valores recomendados definidos. A validação atual do DOM publicado encontrou duas linhas até 340 px e alvos de 40 px em viewport <=380 px. A conta recomendada foi corrigida: rótulo a partir de ~321 px, icon-only em 320 px ou menos e duas linhas abaixo de ~291 px. Geometria medida em tema escuro; proposta ainda sem implementação e validação posterior nos dois temas. Nenhum código do produto foi alterado.
-- **VIS-001:** pendente.
-- **CMP-001:** origem sem detalhe suficiente; revisão da biblioteca de componentes em andamento.
-- **ENV-001:** generalização multiambiente futura, não homologada.
-- **GOV-001, NAV-001 e NAV-002:** lacunas de origem encerradas como não recuperáveis; conteúdo desconhecido não foi reconstruído.
+| Folha | Nomes de classe encontrados | Observação |
+|---|---:|---|
+| `app/about/about.css` | 19 | Layout editorial e capítulos |
+| `app/admin/admin.css` | 110 | Formulários, hierarquia, estados e editor administrativo |
+| `app/how-it-works/how-it-works.css` | 82 | Conteúdo editorial, comparações e ilustrações |
+| `app/landing/landing.css` | 41 | Landing, header público, cards e menu |
+| `app/public-theme.css` | 0 | Base pública e regra global de movimento reduzido |
+| `app/styles.css` | 130 | Configurador e parte do viewer |
+| `app/ui-theme.css` | 86 | Controle de tema e adaptações por contexto |
+| `app/viewer/viewer.css` | 48 | Viewer e cena |
 
-## Não verificado nesta etapa
+Nomes iguais não asseguram estilo comum: regras locais e contexto alteram o resultado. Três páginas mantêm blocos `<style>` inline: `app/access/index.html` (996 bytes), `app/access/manage.html` (2.191 bytes) e `app/config/index.html` (432 bytes). Há ainda quatro atributos `style` em elementos de quatro páginas, incluindo `app/admin.html`; o JSON registra seus seletores/elementos e declarações. O HTML e CSS completos, com seletores, propriedades visuais e referências de assets, estão no JSON.
 
-- Causa e frequência do erro pós-login e do estado de menu desatualizado.
-- Contraste do contador em tema claro no runtime atual; issue #209 tem evidência estática anterior.
-- Contraste não textual do asset raster da marca; nenhuma falha visual estável foi confirmada no tema claro.
-- Contraste no DOM final dos achados restantes de #208; a reconciliação atual é estática e não inclui medição DOM por seletor.
-- Teclado completo, movimento reduzido e estados de hover, foco, seleção, pressionado e carregamento.
-- Implementação e validação runtime do par aprovado para a faixa FIND-004; extensão a outros temas/componentes não foi aprovada.
-- A captura pública atual de `/how-it-works/` em tema claro foi adicionada a `visualEvidence/public/how-it-works/how-it-works-light-compact-486x590.jpg`. A captura estabilizada mostra a marca legível; o primeiro frame após a troca de tema pareceu desbotado e não foi usado como evidência de defeito. As capturas antigas permanecem históricas. Capturas privadas autenticadas não foram persistidas porque expõem dados de conta e acessos.
+## Cores e semântica
 
-- A captura raster da observação de 19/10/2026 do cabeçalho público compacto não foi persistida; dimensões, estados e seletores estão descritos na evidência runtime vinculada a FIND-012.
+- **Base promocional terciária aprovada:** `#A64D13` para informação promocional de produto, campanhas e condições comerciais. Essa aprovação não fixa variantes por tema/superfície nem os pares de contraste. A regra `.launch-badge` em `app/how-it-works/how-it-works.css` já usa esse valor; isso é evidência de implementação atual, não aprovação automática de outros usos. O uso comercial não deve ser rotulado como `warning` técnico.
+- **Informação de processo aprovada:** opção A homologada como pares contextuais de texto: `#245D87` sobre `#F0EDE8` (6,01:1) no claro e `#A7D1F0` sobre `#211F1C` (10,19:1) no escuro. Não é aviso, erro nem confirmação de sucesso. Na Administração, o estado “configuração carregada” foi classificado como informação de processo; o DOM escuro ainda usa `#C4BCB2` sobre `#111210` (10,00:1), portanto a implementação não aplica o par aprovado. Evidência em [auditoria runtime](evidence/runtime/admin-dark-status-message-2026-10-19.md). A aprovação não cria tokens globais nem cobre outras superfícies, fundos, bordas ou ícones; o mapeamento de outras ocorrências permanece pendente.
+- **Estados técnicos:** erro, sucesso e aviso têm pares contextuais de texto/fundo aprovados pela regra de maior contraste em cada tema; os valores estão em `decisions.json` e na [prancha escolhida](visualEvidence/experiments/VIS-002-semantic-states-selected.svg). Isso não define tokens globais nem mapeia componentes. A prancha A/B continua experimental. O cobre promocional não é aviso técnico.
+- O mapa de aplicação em [DECISION_APPLICATION_MAP.md](DECISION_APPLICATION_MAP.md) liga decisões, rotas, HTML, CSS carregado e evidência runtime, sem tratar o vínculo como conformidade de implementação. A extração encontrou 459 ocorrências de cores literais e 43 custom properties. Não foi encontrado um namespace explícito `--space-*` / `--spacing-*`; o espaçamento está expresso em declarações CSS.
+
+**VIS-003 / FIND-004:** no tema escuro de `/how-it-works/`, `.study-art figcaption` tem composição e par contextual aprovados: texto `#F0EDE8` sobre faixa opaca `#20211F`, 13,85:1. Aplica-se somente a essa legenda; não é token global. Implementação no produto, dimensões, espaçamento e validação responsiva no DOM final permanecem pendentes.
+
+## Responsividade, espaçamento e tipografia
+
+Foram encontrados limites `max-width` em 13 valores: **360, 380, 400, 420, 480, 520, 650, 680, 700, 760, 900, 980 e 1150 px**, além de condições de orientação e regras de movimento reduzido. Há limites equivalentes com espaçamento/formatação diferente e três regras móveis repetidas na folha de administração. Isso é evidência para mapear; não indica que os limites devam ser unificados antes de revisar o layout.
+
+O JSON registra valores e contexto para margin/padding/gap, tipografia, dimensões, grid/flex, bordas, raios, sombras, foco e superfícies. Existem 750 declarações de espaçamento contabilizadas, sem escala única nomeada descoberta nesta leitura.
+
+## Movimento e microinterações
+
+Foram localizadas 36 declarações de `transition`, `animation` ou `scroll-behavior` e oito `@keyframes`. Regras explícitas de `prefers-reduced-motion` aparecem em quatro folhas: `how-it-works.css`, `landing.css`, `public-theme.css` e `styles.css` (duas regras nesta última). A cobertura efetiva depende de quais folhas cada rota carrega; isso será verificado na etapa de navegador, junto de estados hover, foco, pressionado e seleção.
+
+## Assets e ícones
+
+Os 128 arquivos rastreados se agrupam em 46 itens de cena/máscaras do configurador, 9 texturas de materiais, 8 arquivos de marca, 31 imagens/ilustrações de “Como funciona”, 26 assets da landing, 1 placeholder do viewer e 7 imagens em `app/reports` e `app/tools`. O JSON registra cada caminho, extensão e referência encontrada em HTML/CSS. Ausência de referência estática significa **não verificado**, não “sem uso”; referências dinâmicas em JavaScript pertencem ao inventário futuro do código.
+
+## Método e limites
+
+- Snapshot estático do commit indicado, sem alterações ao repositório do produto.
+- Seletores, valores e classes foram extraídos de CSS/HTML; não foi executada a aplicação em navegador nesta etapa.
+- Não foram calculados contrastes, avaliados screenshots, inferidos estados gerados por JavaScript nem declarados assets como órfãos.
+- As capturas e auditoria de DOM real serão uma etapa própria; só serão preparadas imagens para revisão quando restar uma escolha visual não determinada pelas decisões.
+- Este inventário documenta o estado observado. A aprovação explícita de `#A64D13` está registrada separadamente em `decisions.json`; presença de outras cores ou métricas no código não as transforma em tokens homologados.
+
+
+**NAV-005 compacto:** opção A aprovada somente como composição estrutural (linha única; marca e identificador/contexto à esquerda; tema antes do menu à direita; navegação e contato públicos no menu). Breakpoints e valores visuais permanecem pendentes; a prancha é esquemática e não prova layouts privados em runtime.
+
+
+**NAV-005 — observação responsiva adicional:** no login administrativo publicado, sem sessão e em tema escuro, o header observado tinha 62 px e uma linha a 350/360 px, mas 104,2 px e duas linhas a 320/335/340 px. Não houve overflow horizontal. A leitura veio do DOM, sem captura persistida; a composição A aprovada continua sendo estrutural e a estratégia para larguras abaixo da faixa de encaixe está pendente. Detalhes em [RUNTIME_AUDIT.md](RUNTIME_AUDIT.md).
+
+
+**NAV-005 — regra compacta estreita:** especificação definida a pedido do usuário: logo flexível entre 105 e 73,5 px; tema rotulado até largura interna de 278 px (aprox. 306 px de viewport); abaixo disso, sol/lua icon-only; controles de 44×44 px, gap de 8 px e fallback em duas linhas abaixo de 288 px. O identificador permanece completo. Valores derivados de medições aproximadas; validar no DOM atual. Não são tokens globais nem implementação.
