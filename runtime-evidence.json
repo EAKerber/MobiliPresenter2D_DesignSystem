@@ -367,6 +367,29 @@
         "productIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/218",
         "screenshotPersisted": false
       }
+    },
+    {
+      "requested": "/config/",
+      "actual": "/config/",
+      "access": "public",
+      "viewport": "1280x720 CSS px",
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "stageSequence": [
+        "modules",
+        "summary"
+      ],
+      "counterInitial": "8 of 8",
+      "initialIncludedModuleToggles": 7,
+      "initialEstimate": "R$ 8,740.00",
+      "summaryAfterNavigation": "Nenhum módulo incluído; 0 incluído(s); R$ 0.00",
+      "counterAfterNavigation": "8 of 8",
+      "cause": "unknown; state changed with stage navigation",
+      "evidence": "evidence/runtime/configurator-summary-label-counter-2026-10-19.md",
+      "observedAt": "2026-10-19",
+      "screenshotPersisted": false
     }
   ],
   "interactions": [
@@ -401,6 +424,21 @@
       "productIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/218",
       "evidenceFile": "evidence/runtime/how-it-works-public-compact-header-2026-10-19.md",
       "observedAt": "2026-10-19"
+    },
+    {
+      "observedAt": "2026-10-19",
+      "route": "/config/",
+      "viewport": "1280x720 CSS px",
+      "method": "Read-only browser DOM/accessibility tree; computed foreground and solid ancestor backgrounds composed in sRGB; WCAG relative-luminance calculation.",
+      "productCommit": "not independently identified during this follow-up",
+      "screenshotPersisted": false,
+      "productCodeChanged": false,
+      "control": "summary stage button",
+      "status": "counter-summary-contradiction-reproduced",
+      "evidence": "On initial Modules stage, seven inclusion toggles were Value=1 and viewer showed 8/8 with R$ 8,740.00. Without changing a checkbox, navigating to Summary showed no modules, 0 included, R$ 0.00 while viewer remained at 8/8.",
+      "interpretation": "The transition coincided with stage navigation; cause and persistence are not isolated.",
+      "relatedIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/209",
+      "evidenceFile": "evidence/runtime/configurator-summary-label-counter-2026-10-19.md"
     }
   ],
   "contrastScreening": {
@@ -500,6 +538,66 @@
         "result": "Only this pair was below 4.5:1 among the screened text elements on this route and state. The DOM scan does not certify text over images, gradients, pseudo-elements, or transparency.",
         "productCodeChanged": false,
         "screenshotPersisted": false
+      },
+      {
+        "observedAt": "2026-10-19",
+        "route": "/config/",
+        "viewport": "1280x720 CSS px",
+        "method": "Read-only browser DOM/accessibility tree; computed foreground and solid ancestor backgrounds composed in sRGB; WCAG relative-luminance calculation.",
+        "productCommit": "not independently identified during this follow-up",
+        "screenshotPersisted": false,
+        "productCodeChanged": false,
+        "theme": "light and dark",
+        "selector": ".price-state__breakdown dt",
+        "text": "Módulos",
+        "findings": [
+          {
+            "theme": "light",
+            "computedForeground": "rgba(255, 255, 255, 0.68)",
+            "fontSize": "11px",
+            "fontWeight": 750,
+            "overlayBackground": "rgba(203, 188, 170, 0.13)",
+            "opaqueAncestorBackground": "#FFFFFF",
+            "compositedForegroundRgb": [
+              252.84,
+              252.21,
+              251.46
+            ],
+            "compositedBackgroundRgb": [
+              248.24,
+              246.29,
+              243.95
+            ],
+            "ratio": 1.05,
+            "threshold": 4.5,
+            "status": "confirmed-below-threshold",
+            "relatedFinding": "FIND-010",
+            "relatedIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/208"
+          },
+          {
+            "theme": "dark",
+            "computedForeground": "rgba(255, 255, 255, 0.68)",
+            "fontSize": "11px",
+            "fontWeight": 750,
+            "overlayBackground": "rgba(203, 188, 170, 0.13)",
+            "opaqueAncestorBackground": "#1B1C1A",
+            "compositedForegroundRgb": [
+              189.36,
+              189.02,
+              187.71
+            ],
+            "compositedBackgroundRgb": [
+              49.88,
+              48.8,
+              44.72
+            ],
+            "ratio": 6.95,
+            "threshold": 4.5,
+            "status": "meets-threshold-for-observed-pair",
+            "relatedFinding": "FIND-010"
+          }
+        ],
+        "result": "The same hard-coded translucent white label foreground contrasts adequately in dark mode but nearly disappears on the light summary card."
       }
     ]
   },
@@ -554,7 +652,8 @@
     "FIND-006": 209,
     "FIND-007": 213,
     "FIND-008": 208,
-    "FIND-009": 214
+    "FIND-009": 214,
+    "FIND-010": 208
   },
   "baselineAuditReconciliation": {
     "productIssue": 208,
@@ -625,6 +724,22 @@
       "contrast": "No numeric text-color ratio calculated for the raster logo; non-text contrast not measured.",
       "evidenceFile": "evidence/runtime/how-it-works-public-compact-header-2026-10-19.md",
       "observedAt": "2026-10-19"
+    },
+    {
+      "observedAt": "2026-10-19",
+      "route": "/config/",
+      "viewport": "1280x720 CSS px",
+      "method": "Read-only browser DOM/accessibility tree; computed foreground and solid ancestor backgrounds composed in sRGB; WCAG relative-luminance calculation.",
+      "productCommit": "not independently identified during this follow-up",
+      "screenshotPersisted": false,
+      "productCodeChanged": false,
+      "theme": "light",
+      "stage": "summary",
+      "selector": ".price-state__breakdown dt",
+      "observation": "The Módulos label is rendered with rgba(255,255,255,.68) over the near-white summary card and appears nearly white; calculated composed contrast is 1.05:1.",
+      "contrast": "1.05:1 against the computed composite background; threshold 4.5:1 for 11px normal text.",
+      "relatedIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/208",
+      "evidenceFile": "evidence/runtime/configurator-summary-label-counter-2026-10-19.md"
     }
   ],
   "compactHeaderMeasurements": {

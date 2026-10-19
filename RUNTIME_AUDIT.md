@@ -211,3 +211,12 @@ No tema escuro, o tema permaneceu icon-only em 360, 340, 321, 320, 291 e 290 px.
 A 291 e 290 px, `html` e `body` mantiveram `min-width: 320px` de `public-theme.css`; `.how-page` aplica `overflow-x: clip`. O header ficou em uma linha com 320 px, sem o fallback de duas linhas. A 290 px, `documentElement.clientWidth=275`, `scrollWidth=320`, e o menu começa em x=264: somente 11 px do alvo de 42 px ficam na área útil. O título também aparece cortado. Isso amplia FIND-012 e o [issue #218](https://github.com/EAKerber/MobiliPresenter2D/issues/218).
 
 Abaixo de 291 px, o padrão aprovado permite duas linhas e requer alvos de 44 × 44 px. A verificação é observacional; ainda é necessária uma validação após a correção. Capturas raster dessa varredura não foram persistidas e larguras entre as amostras não foram medidas.
+
+
+## FIND-006 e FIND-010 — resumo do Configurador (2026-10-19)
+
+**Rota:** /config/ · **viewport:** 1280 × 720 CSS px · **temas:** claro e escuro. A observação começou em Módulos sem tocar em checkbox. Os sete controles de inclusão da lista estavam em Value=1, as linhas diziam “Incluído”, o viewer mostrava 8/8 e a estimativa R$ 8.740,00. Ao selecionar a etapa Resumo, sem alterar seleção intencionalmente, o Resumo passou a dizer “Nenhum módulo incluído”, 0 incluído(s), R$ 0,00; o viewer continuou em 8/8. A transição coincidiu com a mudança de etapa; causa não isolada. Evidência e limite em [runtime evidence](evidence/runtime/configurator-summary-label-counter-2026-10-19.md), produto [issue #209](https://github.com/EAKerber/MobiliPresenter2D/issues/209).
+
+No mesmo Resumo, .price-state__breakdown dt usa rgba(255,255,255,.68), 11 px / peso 750, vindo de styles.css?v=runtime-v40. O fundo do cartão interno é rgba(203,188,170,.13) sobre #fff em claro e sobre #1B1C1A em escuro. Contraste composto calculado: **1,05:1 em claro** e **6,95:1 em escuro**. O rótulo quase desaparece no cartão claro; falha abaixo de 4,5:1 confirmada em DOM real, [issue #208](https://github.com/EAKerber/MobiliPresenter2D/issues/208). A medição é uma verificação técnica exploratória, não certificação independente.
+
+Nenhum módulo foi alterado nem salvo, nenhum código foi modificado e a preferência de tema escuro foi restaurada. Nenhum screenshot raster desta visita foi persistido; o commit de deploy não foi identificado.
