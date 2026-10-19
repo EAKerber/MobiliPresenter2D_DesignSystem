@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1040" viewBox="0 0 1440 1040" role="img" aria-labelledby="title desc">
+<title id="title">NAV-005 — opção A escolhida para cabeçalhos compactos; medidas pendentes</title>
+<desc id="desc">A opção A foi escolhida para a composição estrutural compacta. A opção B permanece como comparação não selecionada. A aprovação cobre uma linha, marca com contexto à esquerda e tema antes do menu na extremidade direita; breakpoint e valores visuais continuam pendentes. A estrutura larga não é reaberta.</desc>
+<defs>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif}
+    .title{fill:#f4f0ea;font-size:34px;font-weight:700}
+    .sub{fill:#c5beb6;font-size:17px}
+    .card{fill:#1b1b1a;stroke:#514d47;stroke-width:1.5}
+    .label{fill:#e8c18a;font-size:15px;font-weight:700;letter-spacing:1.5px}
+    .h{fill:#f4f0ea;font-size:23px;font-weight:700}
+    .copy{fill:#d7d1c8;font-size:16px}
+    .muted{fill:#aba49b;font-size:14px}
+    .bar{fill:#f7f5f2;stroke:#ded9d1;stroke-width:1}
+    .brand{fill:#282522;font-size:16px;font-weight:700;letter-spacing:2px}
+    .brandSmall{fill:#282522;font-size:9px;letter-spacing:3px}
+    .context{fill:#5f584f;font-size:14px}
+    .icon{fill:none;stroke:#2c2925;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+    .btn{fill:#f7f5f2;stroke:#d5cec3;stroke-width:1}
+    .selected{fill:#a64d13}
+  </style>
+</defs>
+<rect width="1440" height="1220" fill="#111110"/>
+<text x="56" y="64" class="label">NAV-005 · COMPACTO · OPÇÃO A ESCOLHIDA · VALORES PENDENTES</text>
+<text x="56" y="112" class="title">Cabeçalhos em larguras compactas</text>
+<text x="56" y="148" class="sub">Composição A aprovada; prancha ilustrativa em 390 px. Não define breakpoint, cores ou medidas finais.</text>
+<text x="56" y="179" class="muted">No site publicado, a captura atual em 515 px mostra uma linha: marca à esquerda; contato, tema apenas por ícone e menu à direita. O identificador não aparece nesta página pública.</text>
+<!-- cards -->
+<g transform="translate(56 215)">
+ <rect width="648" height="720" rx="18" class="card"/>
+ <text x="28" y="44" class="label">OPÇÃO A · ESCOLHIDA</text>
+ <text x="28" y="79" class="h">Comprimir e manter o contexto</text>
+ <text x="28" y="108" class="muted">Tema compacto antes do menu; rótulos contextuais ficam junto à marca.</text>
+ <!-- public -->
+ <text x="28" y="160" class="label">PÁGINA PÚBLICA</text>
+ <g transform="translate(28 176)">
+  <rect width="590" height="76" rx="10" class="bar"/>
+  <g transform="translate(18 11)">
+   <path d="M2 18 18 7 34 18v31H2z" fill="none" stroke="#292622" stroke-width="3"/>
+   <path d="M18 7 34 18" fill="none" stroke="#a64d13" stroke-width="3"/>
+   <text x="46" y="27" class="brand">CASA<tspan class="selected"> EM</tspan></text><text x="46" y="43" class="brandSmall">MÓDULOS</text>
+  </g>
+  <g transform="translate(480 16)"><rect width="42" height="44" rx="10" class="btn"/><circle cx="21" cy="22" r="9" class="icon"/></g>
+  <g transform="translate(532 16)"><rect width="42" height="44" rx="10" class="btn"/><path d="M11 14h20M11 22h20M11 30h20" class="icon"/></g>
+ </g>
+ <text x="28" y="289" class="copy">Contato e páginas públicas ficam no menu.</text>
+ <!-- private -->
+ <text x="28" y="342" class="label">PÁGINA PRIVADA</text>
+ <g transform="translate(28 358)">
+  <rect width="590" height="76" rx="10" class="bar"/>
+  <g transform="translate(18 11)">
+   <path d="M2 18 18 7 34 18v31H2z" fill="none" stroke="#292622" stroke-width="3"/>
+   <path d="M18 7 34 18" fill="none" stroke="#a64d13" stroke-width="3"/>
+   <text x="46" y="27" class="brand">CASA<tspan class="selected"> EM</tspan></text><text x="46" y="43" class="brandSmall">MÓDULOS</text>
+  </g>
+  <text x="205" y="44" class="context">Administração</text>
+  <g transform="translate(480 16)"><rect width="42" height="44" rx="10" class="btn"/><circle cx="21" cy="22" r="9" class="icon"/></g>
+  <g transform="translate(532 16)"><rect width="42" height="44" rx="10" class="btn"/><path d="M11 14h20M11 22h20M11 30h20" class="icon"/></g>
+ </g>
+ <text x="28" y="457" class="copy">Mantém a identificação da área na mesma linha.</text>
+ <!-- secondary -->
+ <text x="28" y="493" class="label">NAVEGAÇÃO CONTEXTUAL</text>
+ <g transform="translate(28 509)">
+  <rect width="590" height="76" rx="10" class="bar"/>
+  <g transform="translate(18 11)">
+   <path d="M2 18 18 7 34 18v31H2z" fill="none" stroke="#292622" stroke-width="3"/>
+   <path d="M18 7 34 18" fill="none" stroke="#a64d13" stroke-width="3"/>
+   <text x="46" y="27" class="brand">CASA<tspan class="selected"> EM</tspan></text><text x="46" y="43" class="brandSmall">MÓDULOS</text>
+  </g>
+  <text x="205" y="44" class="context">← Ambientes</text>
+  <g transform="translate(480 16)"><rect width="42" height="44" rx="10" class="btn"/><circle cx="21" cy="22" r="9" class="icon"/></g>
+  <g transform="translate(532 16)"><rect width="42" height="44" rx="10" class="btn"/><path d="M11 14h20M11 22h20M11 30h20" class="icon"/></g>
+ </g>
+ <text x="28" y="604" class="copy">Preserva o retorno contextual antes do menu.</text>
+ <text x="28" y="624" class="muted">Risco a validar: densidade em larguras menores e nomes longos.</text>
+</g>
+<g transform="translate(736 215)">
+ <rect width="648" height="850" rx="18" class="card"/>
+ <text x="28" y="44" class="label">OPÇÃO B · COMPARAÇÃO NÃO SELECIONADA</text>
+ <text x="28" y="79" class="h">Dar espaço para os rótulos</text>
+ <text x="28" y="108" class="muted">Marca, tema e menu em cima; contato ou contexto abaixo.</text>
+ <!-- public -->
+ <text x="28" y="160" class="label">PÁGINA PÚBLICA</text>
+ <g transform="translate(28 176)">
+  <rect width="590" height="104" rx="10" class="bar"/>
+  <g transform="translate(18 8)">
+   <path d="M2 18 18 7 34 18v31H2z" fill="none" stroke="#292622" stroke-width="3"/>
+   <path d="M18 7 34 18" fill="none" stroke="#a64d13" stroke-width="3"/>
+   <text x="46" y="27" class="brand">CASA<tspan class="selected"> EM</tspan></text><text x="46" y="43" class="brandSmall">MÓDULOS</text>
+  </g>
+  <g transform="translate(532 11)"><rect width="42" height="44" rx="10" class="btn"/><path d="M11 14h20M11 22h20M11 30h20" class="icon"/></g>
+  <text x="20" y="83" class="context">Fale conosco</text>
+  <g transform="translate(484 11)"><rect width="42" height="44" rx="10" class="btn"/><circle cx="21" cy="22" r="9" class="icon"/></g>
+ </g>
+ <text x="28" y="305" class="copy">Páginas e contato continuam agrupados no menu.</text>
+ <!-- private -->
+ <text x="28" y="358" class="label">PÁGINA PRIVADA</text>
+ <g transform="translate(28 374)">
+  <rect width="590" height="104" rx="10" class="bar"/>
+  <g transform="translate(18 8)">
+   <path d="M2 18 18 7 34 18v31H2z" fill="none" stroke="#292622" stroke-width="3"/>
+   <path d="M18 7 34 18" fill="none" stroke="#a64d13" stroke-width="3"/>
+   <text x="46" y="27" class="brand">CASA<tspan class="selected"> EM</tspan></text><text x="46" y="43" class="brandSmall">MÓDULOS</text>
+  </g>
+  <g transform="translate(532 11)"><rect width="42" height="44" rx="10" class="btn"/><path d="M11 14h20M11 22h20M11 30h20" class="icon"/></g>
+  <text x="20" y="84" class="context">Administração</text>
+  <g transform="translate(484 11)"><rect width="42" height="44" rx="10" class="btn"/><circle cx="21" cy="22" r="9" class="icon"/></g>
+ </g>
+ <text x="28" y="502" class="copy">O identificador permanece legível sem apertar a marca.</text>
+ <!-- secondary -->
+ <text x="28" y="544" class="label">NAVEGAÇÃO CONTEXTUAL</text>
+ <g transform="translate(28 560)">
+  <rect width="590" height="104" rx="10" class="bar"/>
+  <g transform="translate(18 8)">
+   <path d="M2 18 18 7 34 18v31H2z" fill="none" stroke="#292622" stroke-width="3"/>
+   <path d="M18 7 34 18" fill="none" stroke="#a64d13" stroke-width="3"/>
+   <text x="46" y="27" class="brand">CASA<tspan class="selected"> EM</tspan></text><text x="46" y="43" class="brandSmall">MÓDULOS</text>
+  </g>
+  <g transform="translate(532 11)"><rect width="42" height="44" rx="10" class="btn"/><path d="M11 14h20M11 22h20M11 30h20" class="icon"/></g>
+  <text x="20" y="84" class="context">← Ambientes</text>
+  <g transform="translate(484 11)"><rect width="42" height="44" rx="10" class="btn"/><circle cx="21" cy="22" r="9" class="icon"/></g>
+ </g>
+ <text x="28" y="686" class="copy">Preserva o retorno contextual em uma faixa própria.</text>
+ <text x="28" y="710" class="muted">Risco a validar: mais altura em páginas com rolagem.</text>
+</g>
+<text x="56" y="980" class="sub">A opção A foi escolhida como estrutura compacta. A opção B permanece apenas para comparação.</text>
+<text x="56" y="1014" class="muted">A aprovação cobre somente a estrutura da opção A. Mockups usam controles e marca esquemáticos; dimensões, tokens, breakpoint e implementação não foram aprovados.</text>
+</svg>

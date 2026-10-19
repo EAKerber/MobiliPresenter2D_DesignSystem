@@ -82,7 +82,7 @@ O inventário estático não encontrou um gate de contraste conectado às rotas 
 ## Próxima etapa recomendada
 
 1. VIS-002 agora registra dois pares contextuais aprovados para texto no tema claro; não são tokens globais e não resolvem os achados do tema escuro.
-2. NAV-005 agora aprova a estrutura larga: padrão A para páginas públicas, B para privadas e header contextual tipo viewer para páginas de segunda ordem. Estética final, medidas e layouts compactos continuam em aberto.
+2. NAV-005 aprova as composições estruturais largas e compactas. No compacto, a opção A mantém uma linha, contexto junto da marca e tema antes do hambúrguer; breakpoints, medidas e tratamento visual continuam em aberto. A evidência runtime em 515 px é somente da rota pública.
 3. Revalidar a camada de introdução e o primeiro clique no menu público como comportamento funcional, sem confundir esse achado com a navegação privada.
 4. Reproduzir a transição pós-login e reconciliar a triagem estática #208 com o snapshot atual; a primeira inspeção autenticada confirmou o contador incorreto, mas não substitui a auditoria de contraste nos dois temas.
 5. Planejar a etapa de aplicação visual no produto após revisar os padrões e fechar as medições restantes.
@@ -103,6 +103,15 @@ Em viewport estreito, a checagem visual em tema claro confirmou que o menu abert
 Na sessão autenticada já aberta no navegador, em viewport de aproximadamente 500 × 600 px, tema escuro e etapa Serviços, o DOM acessível informou que o cenário estava sem módulos e a iluminação permanecia indisponível por dependência. Mesmo assim, a interface mostrou `8 de 8 itens incluídos`. Isso confirma novamente o estado descrito em FIND-006 / issue [#209](https://github.com/EAKerber/MobiliPresenter2D/issues/209); não identifica a causa do cálculo. O menu foi fechado para a observação, nenhuma opção foi alterada e nenhum dado de conta foi registrado. A captura desta sessão não foi adicionada a `visualEvidence`; as capturas existentes permanecem referências de outros estados e resoluções.
 
 
+## Observação do cabeçalho compacto atual (2026-10-18)
+
+Na rota pública `/how-it-works/`, a sessão do navegador estava em viewport de 515 × 608 px, tema escuro. O cabeçalho em uma linha mediu aproximadamente 78 px de altura; `.brand` ocupou 160 px a partir de x=14 e `.header-actions` 140 px a partir de x=346. O grupo mostra o atalho de contato, o controle do tema representado por ícone e o menu. Essa observação não cobre os cabeçalhos privados autenticados nem comprova comportamento em outros breakpoints. O screenshot foi observado inline durante a inspeção, mas não foi persistido como imagem nesta etapa.
+
 ## Validade das capturas anteriores
 
 O usuário observou que as capturas salvas anteriormente mostram uma versão anterior do cabeçalho. Apesar dos metadados históricos associarem essas imagens ao snapshot/deploy `298c114`, elas não devem ser usadas como referência visual atual dos cabeçalhos. Nesta continuação, o cabeçalho atual do Configurador foi observado no navegador, mas não houve substituição das capturas no repositório. A prancha de FIND-004 é um esquema experimental e não substitui capturas atuais do produto.
+
+
+### Decisão compacta posterior à captura
+
+Após a observação runtime acima, o usuário escolheu a opção A para a composição compacta de NAV-005. A escolha aprova somente a estrutura: linha única, marca com identificador/contexto à esquerda e tema antes do menu na extremidade direita; navegação e contato públicos ficam no menu. A captura em `/how-it-works/` é uma observação pública separada e não comprova os esquemas privados ou contextuais da prancha. Breakpoints e valores visuais seguem pendentes.
