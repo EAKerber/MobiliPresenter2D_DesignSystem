@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1080" viewBox="0 0 1200 1080" role="img" aria-labelledby="title desc">
-<title id="title">NAV-005 — regra aprovada de encaixe estreito para o header</title>
-<desc id="desc">Registro visual da regra aprovada: preservar o rótulo do tema enquanto a logo reduz até no máximo 30%; depois, mudar o tema para ícone apenas. A prancha mostra a implementação atual em duas linhas a 320 px e os dois estados da sequência aprovada. A decisão não fixa breakpoint nem detalhes do ícone.</desc>
+<title id="title">NAV-005 — especificação recomendada para encaixe estreito</title>
+<desc id="desc">Registro da regra aprovada e da especificação responsiva definida pelo assistente a pedido do usuário. O rótulo permanece até a logo se aproximar do limite de redução de 30%; depois, o tema passa para ícone. Os valores são estimativas derivadas do DOM publicado e exigem validação antes da implementação.</desc>
 <defs><style>
  text{font-family:Arial,Helvetica,sans-serif}
  .title{fill:#292622;font-size:31px;font-weight:700}
@@ -24,10 +24,10 @@
  .tag{fill:#ece6de}
 </style></defs>
 <rect width="1200" height="1080" fill="#f0ede8"/>
-<text x="52" y="58" class="label">NAV-005 · CABEÇALHO COMPACTO · REGRA ESTREITA APROVADA</text>
+<text x="52" y="58" class="label">NAV-005 · CABEÇALHO COMPACTO · PARÂMETROS RESPONSIVOS PROPOSTOS</text>
 <text x="52" y="103" class="title">Manter uma linha quando a largura aperta</text>
 <text x="52" y="136" class="sub">A sequência aprovada preserva: marca e Administração à esquerda; tema antes do menu à direita.</text>
-<text x="52" y="162" class="muted">Viewport de referência: 320 px. A geometria abaixo parte da medição do login publicado; os controles são propostas, não medidas finais.</text>
+<text x="52" y="162" class="muted">Base: login publicado. Proposta definida a pedido do usuário; validar as medidas no DOM atual antes de implementar.</text>
 
 <rect x="52" y="188" width="1096" height="202" rx="16" class="card"/>
 <text x="76" y="222" class="label">REFERÊNCIA · IMPLEMENTAÇÃO PUBLICADA A 320 PX</text>
@@ -57,9 +57,9 @@
 
 <!-- alternative 1 -->
 <rect x="52" y="414" width="532" height="514" rx="16" class="card"/>
-<text x="76" y="450" class="label">ETAPA 2 · FALLBACK APROVADO</text>
-<text x="76" y="480" class="h">Quando a logo atinge o limite</text>
-<text x="76" y="506" class="copy">Após reduzir a logo até 30%, se faltar espaço, o tema passa a ícone.</text>
+<text x="76" y="450" class="label">TEMA ICON-ONLY · APÓS O LIMITE</text>
+<text x="76" y="480" class="h">Quando falta espaço</text>
+<text x="76" y="506" class="copy">Até 278 px internos (≈306 px de viewport), usar tema só com ícone.</text>
 <rect x="76" y="532" width="484" height="104" rx="10" class="darkbar"/>
 <g transform="translate(91 561)">
  <path d="M1 14 13 6 25 14v23H1z" fill="none" stroke="#eee8df" stroke-width="2.4"/>
@@ -70,24 +70,24 @@
 </g>
 <g transform="translate(454 562)">
  <rect width="42" height="44" rx="9" class="btn"/>
- <circle cx="21" cy="22" r="9" class="icon"/>
+ <path d="M25 14a10 10 0 1 0 5 16 9 9 0 0 1-5-16z" class="icon"/>
  <rect x="50" y="0" width="42" height="44" rx="9" class="btn"/>
  <path d="M60 14h22M60 22h22M60 30h22" class="icon"/>
 </g>
 <text x="76" y="676" class="copy">Tema: ícone de claro/escuro com nome acessível.</text>
 <text x="76" y="699" class="copy">Menu continua no último controle, na extremidade.</text>
 <line x1="76" y1="724" x2="560" y2="724" class="border"/>
-<text x="76" y="754" class="muted">Estado aprovado</text>
-<text x="76" y="778" class="copy">• Logo reduzida até o limite de 30%</text>
-<text x="76" y="802" class="copy">• Tema sem rótulo visível; estado precisa seguir acessível</text>
-<text x="76" y="847" class="muted">A logo fica no máximo 30% menor que a referência.</text>
-<text x="76" y="877" class="muted">Ícone exato e dimensões continuam pendentes.</text>
+<text x="76" y="754" class="muted">Fallback recomendado</text>
+<text x="76" y="778" class="copy">• Piso calculado: 73,5 px</text>
+<text x="76" y="802" class="copy">• Nome acessível informa o modo atual</text>
+<text x="76" y="847" class="muted">Alvo do tema e do menu: 44×44 px.</text>
+<text x="76" y="877" class="muted">Vão de 8 px; desenho não está em escala.</text>
 
 <!-- alternative 2 -->
 <rect x="616" y="414" width="532" height="514" rx="16" class="card"/>
-<text x="640" y="450" class="label">ETAPA 1 · PREFERÊNCIA APROVADA</text>
-<text x="640" y="480" class="h">Manter o tema rotulado</text>
-<text x="640" y="506" class="copy">O rótulo permanece visível enquanto a marca reduz até 30%.</text>
+<text x="640" y="450" class="label">TEMA ROTULADO · ANTES DO LIMITE</text>
+<text x="640" y="480" class="h">Logo encolhe conforme necessário</text>
+<text x="640" y="506" class="copy">Base 105 px; flex reduz até 73,5 px, sem encolher o identificador.</text>
 <rect x="640" y="532" width="484" height="104" rx="10" class="darkbar"/>
 <g transform="translate(655 561)">
  <path d="M1 14 13 6 25 14v23H1z" fill="none" stroke="#eee8df" stroke-width="2.4"/>
@@ -103,17 +103,17 @@
  <rect x="82" y="0" width="42" height="44" rx="9" class="btn"/>
  <path d="M92 14h22M92 22h22M92 30h22" class="icon"/>
 </g>
-<text x="640" y="676" class="copy">Tema: controle com rótulo e estado visíveis.</text>
-<text x="640" y="699" class="copy">Logo menor; mantém o identificador completo.</text>
+<text x="640" y="676" class="copy">320 px: logo estimada em 88 px (redução de ~16%).</text>
+<text x="640" y="699" class="copy">Identificador completo; controles preservam 44×44 px.</text>
 <line x1="640" y1="724" x2="1124" y2="724" class="border"/>
-<text x="640" y="754" class="muted">Impacto visual</text>
-<text x="640" y="778" class="copy">• Rótulo “Escuro” permanece explícito</text>
-<text x="640" y="802" class="copy">• Marca fica cerca de 24% menor</text>
-<text x="640" y="847" class="muted">A 320 px, a ilustração mostra redução aproximada de 24%.</text>
-<text x="640" y="877" class="muted">Redução máxima aprovada: 30%; valores em CSS ainda pendentes.</text>
+<text x="640" y="754" class="muted">Comportamento</text>
+<text x="640" y="778" class="copy">• Sol/lua indica o tema atual</text>
+<text x="640" y="802" class="copy">• Logo encolhe só o necessário</text>
+<text x="640" y="847" class="muted">Com flex-shrink, 320 px estima logo em ~88 px (~16% menor).</text>
+<text x="640" y="877" class="muted">Limiar calculado em 278 px úteis; confirmar o encaixe no DOM.</text>
 
 <rect x="52" y="952" width="1096" height="82" rx="14" fill="#e7e0d7"/>
-<text x="76" y="983" class="h" font-size="17">Regra homologada pelo usuário</text>
-<text x="76" y="1008" class="copy">Manter o tema rotulado durante a redução da logo, limitada a 30%; se for preciso reduzir além disso, usar o tema apenas com ícone.</text>
-<text x="52" y="1060" class="muted">Composição da regra aprovada; geometrias esquemáticas. Breakpoint, interpolação exata, glifo do ícone e estilo dos controles não estão especificados.</text>
+<text x="76" y="983" class="h" font-size="17">Especificação definida a pedido do usuário</text>
+<text x="76" y="1008" class="copy">Rótulo até 278 px úteis (~306 px de viewport); sol/lua icon-only abaixo. Logo: 105–73,5 px; abaixo de 288 px, permitir duas linhas.</text>
+<text x="52" y="1060" class="muted">Alvos 44×44 px e gap de 8 px. Parâmetros são recomendação; validar no DOM atual antes de implementar.</text>
 </svg>
