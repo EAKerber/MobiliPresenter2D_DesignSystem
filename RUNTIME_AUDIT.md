@@ -159,7 +159,7 @@ Em uma aba autenticada de `/access/manage`, o conteúdo carregou e o menu já ap
 
 ### Classificação da mensagem de estado no Admin (2026-10-19)
 
-Na página publicada `/admin.html`, em tema escuro, uma mensagem visível de estado atual tinha `aria-live="polite"` e `data-kind=""`. O usuário confirmou que ela deriva do estado atual, portanto é informação de processo e deve usar o papel azul homologado, não o papel de sucesso. O DOM ainda renderiza o texto em `#C4BCB2` sobre `#111210`, com contraste calculado de 10,00:1: legibilidade suficiente neste par, mas o papel cromático aprovado não está aplicado. Dois outros elementos de mensagem não estavam visíveis; erro, aviso e outros estados não foram acionados. Registro detalhado em [evidência runtime](evidence/runtime/admin-dark-status-message-2026-10-19.md). Nenhuma configuração ou dado foi alterado.
+Na página publicada `/admin.html`, em tema escuro, uma mensagem visível de estado atual tinha `aria-live="polite"` e `data-kind=""`. O usuário confirmou que ela deriva do estado atual, portanto é informação de processo e não sucesso. Na revisão VIS-002, escolheu a opção A: `#A7D1F0` sobre `#211F1C` (10,19:1) no tema escuro, e `#245D87` sobre `#F0EDE8` (6,01:1) no claro. O DOM ainda renderiza o texto escuro em `#C4BCB2` sobre `#111210`, com contraste calculado de 10,00:1: legibilidade suficiente neste par, mas o par azul aprovado não está aplicado. A decisão é contextual e não cria tokens globais. Dois outros elementos de mensagem não estavam visíveis; erro, aviso e outros estados não foram acionados. Registro detalhado em [evidência runtime](evidence/runtime/admin-dark-status-message-2026-10-19.md). Nenhuma configuração ou dado foi alterado.
 
 ### Limites e evidências
 
