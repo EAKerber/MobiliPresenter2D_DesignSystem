@@ -42,4 +42,4 @@ Razões calculadas para cores sólidas e não arredondadas para alcançar limite
 
 ## Limites
 
-Somente pares contextuais que já constam em VIS-002 e o par específico VIS-003/FIND-004 estão homologados. Os valores desta prancha não mudam a fonte canônica nem o produto. Antes de aprovar a paleta completa, revisar a aparência dos secundários, a leitura do foco nos dois temas, estados semânticos, seleção/desabilitado e a variante promocional escura.
+Somente pares contextuais que já constam em VIS-002 e o par específico VIS-003/FIND-004 estão homologados. Os valores desta prancha não mudam a fonte canônica nem o produto. Antes de aprovar a paleta completa, revisar a aparência dos secundários, a leitura do foco nos dois temas, estados semânticos, seleção/desabilitado e a variante promocional escura.\n\nPara os três seletores anteriormente associados a #675F55, o par candidato #705C4B em #F0EDE8 calcula 5,41:1. Continua sem aprovação estética.
