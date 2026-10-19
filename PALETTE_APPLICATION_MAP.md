@@ -41,7 +41,7 @@ A paleta aprovada não significa que o produto já está conforme. O mesmo papel
 - **Informação de processo:** papel azul aprovado. Valores atuais `--info #245D87` no claro e `#A7D1F0` no escuro em `app/admin/admin.css` são uso atual, não tokens homologados.
 - **Promoção de produto/campanha:** base cobre `#A64D13` aprovada. Existe em `app/how-it-works/how-it-works.css`, `.launch-badge`, como fundo. Texto, superfícies e variantes continuam pendentes.
 - **FIND-004:** legenda da ilustração usa par aprovado localmente `#F0EDE8` sobre faixa `#20211F`, somente em `.study-art figcaption` no tema escuro.
-- **Erro, sucesso e aviso:** não generalizar cores candidatas nem usar cobre promocional como aviso técnico.
+- **Erro, sucesso e aviso:** tons ainda sem homologação. Compare as opções A/B na [prancha experimental VIS-002](visualEvidence/experiments/VIS-002-semantic-state-candidates.svg); os números representam apenas contraste de texto sobre fundos sólidos. A antiga [prancha de contraste](visualEvidence/experiments/VIS-002-contrast-options.svg) foi marcada como histórica após reabertura da opção B. Não generalizar as amostras nem usar cobre promocional como aviso técnico.
 
 ## Ocorrências que exigem triagem, não substituição automática
 
