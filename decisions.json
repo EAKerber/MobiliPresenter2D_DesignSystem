@@ -58,10 +58,8 @@
         "Ambientes › Cozinha é somente exemplo de breadcrumb."
       ],
       "notApproved": [
-        "Exact breakpoint values and responsive width thresholds",
-        "Exact header heights, spacing, typography, colors, hit-target dimensions and icon glyph/surface treatment",
-        "Logo sizing interpolation outside the measured 320 px reference and treatment of other unusually long contextual labels",
-        "Behavior below the minimum usable viewport width and product implementation"
+        "Aplicação do comportamento no código do produto até validação DOM da proposta",
+        "Comportamento com identificadores contextuais excepcionalmente longos"
       ],
       "future": [
         "Generalização multiambiente (ENV-001)."
@@ -79,19 +77,54 @@
         "publicPages": "Option A: preserve a single-row header. Keep the brand at left; place the compact theme control immediately before the hamburger at the far right. Group public page navigation and the existing contact access in the hamburger menu.",
         "privatePages": "Option A: preserve a single row with the brand and current page/area identifier together at left; place the theme control immediately before the hamburger at the far right. At very narrow widths, apply compactNarrowFitRule.",
         "secondaryNavigationPages": "Option A: preserve a single row with the brand and contextual return label together at left; place the theme control before the menu/hamburger at the far right.",
-        "scope": "Structural composition plus the approved narrow-fit behavior. This does not set exact breakpoints, pixel sizes, spacing, typography, colors, exact icon glyph or control surface styling, nor authorize product implementation."
+        "scope": "Estrutura aprovada mais a regra de encaixe estreito. A especificação técnica recomendada registra valores estreitos de logo e controles, limiar do container e fallback abaixo da largura mínima; esses valores vêm de medições aproximadas e exigem validação runtime. Ela não autoriza implementação no produto nem define padrões para outros componentes."
       },
       "compactNarrowFitRule": {
-        "status": "approved-behavioral-rule-values-pending",
+        "status": "approved-behavioral-rule-with-assistant-defined-values-runtime-validation-pending",
         "rule": "Keep the theme control's text label visible while reducing the logo as needed, up to a maximum 30% reduction. If the one-row header would require reducing the logo further, change the theme control to icon-only. Keep the full page/area identifier and place the hamburger at the far right.",
         "reference": "The published /admin.html header at a 320 CSS px viewport showed .brand__logo at 105 px wide. For this observed case, a 30% reduction is approximately 73.5 px. This is a calculation reference for the compact header, not a global logo token.",
         "accessibility": "The icon-only theme control must retain an accessible name/state description.",
         "stillOpen": [
-          "Exact width at which the theme control switches to icon-only",
-          "Exact logo sizing interpolation and control dimensions/gaps",
-          "Exact icon glyph and control surface treatment",
-          "Behavior below the minimum usable viewport width"
+          "Validar no DOM atual a interpolação do flex, o limiar do container e o encaixe nos dois temas.",
+          "Rever o fallback com identificadores de página excepcionalmente longos."
         ]
+      },
+      "compactNarrowFitImplementationSpec": {
+        "status": "assistant-defined-at-user-request; runtime-validation-pending",
+        "scope": "Header compacto de páginas privadas; preservar a estrutura aprovada.",
+        "measurementBasis": {
+          "viewportCssPx": 320,
+          "horizontalPaddingCssPxPerSide": 14,
+          "brandPlusIdentifierCssPx": 190,
+          "actionClusterLabeledCssPx": 119,
+          "note": "Valores aproximados da auditoria runtime publicada; o DOM final precisa confirmar o modelo."
+        },
+        "logo": {
+          "flexBasisCssPx": 105,
+          "minWidthCssPx": 73.5,
+          "maxReductionPercent": 30,
+          "behavior": "Deixar flex-shrink reduzir a logo somente conforme a falta de espaço, sem reduzir abaixo de 73,5 px. Identificador da página não encolhe nem é truncado.",
+          "at320ViewportApproxWidthCssPx": 88,
+          "at320ReductionApproxPercent": 16
+        },
+        "themeControl": {
+          "label": "Manter o rótulo Claro/Escuro enquanto a logo puder encaixar sem exceder a redução máxima.",
+          "iconOnlyWhenAvailableHeaderWidthAtOrBelowCssPx": 278,
+          "approximateViewportThresholdCssPx": 306,
+          "thresholdDerivation": "190 + 119 - (105 - 73,5) = 277,5 px de conteúdo. Arredondar para 278 px; com 14 px de padding de cada lado, equivale a cerca de 306 px de viewport.",
+          "icon": "Ícone de estado: sol no tema claro e lua no tema escuro. Nome acessível informa o tema atual; aria-pressed acompanha o estado escuro.",
+          "targetCssPx": "44 × 44",
+          "hamburgerTargetCssPx": "44 × 44",
+          "gapCssPx": 8
+        },
+        "compactMinimum": {
+          "oneRowViewportCssPx": 288,
+          "below": "Abaixo de 288 px, permitir duas linhas em vez de comprimir mais a logo, reduzir o identificador ou causar overflow. Manter o tema icon-only.",
+          "rationale": "Com 14 px laterais, logo no mínimo (73,5 px), identificador preservado e dois alvos de 44 px com 8 px entre eles, o conteúdo estimado é 254,5 px; sobra 5,5 px em 288 px de viewport."
+        },
+        "implementation": "Não autorizada neste registro. Implementar depois da validação DOM e revisão da especificação no repositório do produto.",
+        "specificationSource": "Valores definidos pelo assistente a pedido do usuário, derivados da geometria publicada e da regra de redução homologada.",
+        "statusNotice": "Especificação recomendada e definida; ainda não é evidência de funcionamento em runtime nem token global."
       }
     },
     {
