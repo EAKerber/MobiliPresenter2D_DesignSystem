@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1040" viewBox="0 0 1440 1040" role="img" aria-labelledby="title desc">
-<title id="title">NAV-005 — opções experimentais de cabeçalho compacto</title>
-<desc id="desc">Duas composições candidatas para cabeçalhos compactos em páginas públicas, privadas e de navegação contextual. Nenhuma opção foi homologada. A estrutura larga já aprovada não é reaberta.</desc>
+<title id="title">NAV-005 — opção A escolhida para cabeçalhos compactos; medidas pendentes</title>
+<desc id="desc">A opção A foi escolhida para a composição estrutural compacta. A opção B permanece como comparação não selecionada. A aprovação cobre uma linha, marca com contexto à esquerda e tema antes do menu na extremidade direita; breakpoint e valores visuais continuam pendentes. A estrutura larga não é reaberta.</desc>
 <defs>
   <style>
     text{font-family:Arial,Helvetica,sans-serif}
@@ -21,14 +21,14 @@
   </style>
 </defs>
 <rect width="1440" height="1220" fill="#111110"/>
-<text x="56" y="64" class="label">NAV-005 · COMPACTO · CANDIDATOS NÃO HOMOLOGADOS</text>
+<text x="56" y="64" class="label">NAV-005 · COMPACTO · OPÇÃO A ESCOLHIDA · VALORES PENDENTES</text>
 <text x="56" y="112" class="title">Cabeçalhos em larguras compactas</text>
-<text x="56" y="148" class="sub">A aprovação existente cobre apenas o layout largo. Prancha estrutural em 390 px; não define breakpoint, cores ou medidas finais.</text>
+<text x="56" y="148" class="sub">Composição A aprovada; prancha ilustrativa em 390 px. Não define breakpoint, cores ou medidas finais.</text>
 <text x="56" y="179" class="muted">No site publicado, a captura atual em 515 px mostra uma linha: marca à esquerda; contato, tema apenas por ícone e menu à direita. O identificador não aparece nesta página pública.</text>
 <!-- cards -->
 <g transform="translate(56 215)">
  <rect width="648" height="720" rx="18" class="card"/>
- <text x="28" y="44" class="label">OPÇÃO A · UMA LINHA COM IDENTIDADE VISÍVEL</text>
+ <text x="28" y="44" class="label">OPÇÃO A · ESCOLHIDA</text>
  <text x="28" y="79" class="h">Comprimir e manter o contexto</text>
  <text x="28" y="108" class="muted">Tema compacto antes do menu; rótulos contextuais ficam junto à marca.</text>
  <!-- public -->
@@ -76,7 +76,7 @@
 </g>
 <g transform="translate(736 215)">
  <rect width="648" height="850" rx="18" class="card"/>
- <text x="28" y="44" class="label">OPÇÃO B · CONTEXTO EM DUAS LINHAS</text>
+ <text x="28" y="44" class="label">OPÇÃO B · COMPARAÇÃO NÃO SELECIONADA</text>
  <text x="28" y="79" class="h">Dar espaço para os rótulos</text>
  <text x="28" y="108" class="muted">Marca, tema e menu em cima; contato ou contexto abaixo.</text>
  <!-- public -->
@@ -123,6 +123,6 @@
  <text x="28" y="686" class="copy">Preserva o retorno contextual em uma faixa própria.</text>
  <text x="28" y="710" class="muted">Risco a validar: mais altura em páginas com rolagem.</text>
 </g>
-<text x="56" y="980" class="sub">Perguntas para revisão: preservar o identificador em duas linhas compensa a altura extra? Em páginas públicas compactas, manter contato visível ou agrupá-lo no menu?</text>
-<text x="56" y="1014" class="muted">Prancha experimental; não homologa nenhuma composição. Mockups usam controles e marca esquemáticos, sem dimensões, tokens ou breakpoint aprovados.</text>
+<text x="56" y="980" class="sub">A opção A foi escolhida como estrutura compacta. A opção B permanece apenas para comparação.</text>
+<text x="56" y="1014" class="muted">A aprovação cobre somente a estrutura da opção A. Mockups usam controles e marca esquemáticos; dimensões, tokens, breakpoint e implementação não foram aprovados.</text>
 </svg>
