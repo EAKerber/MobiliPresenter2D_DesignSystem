@@ -52,10 +52,12 @@ A aprovação é contextual: não cria tokens globais, não aprova variações d
 - Medir outros pares e estados; os dois aprovados não se generalizam.
 
 
-## FIND-004 — tratamento visual escolhido; valores pendentes
+## FIND-004 — tratamento e par contextual aprovados; aplicação pendente
 
 ![Prancha esquemática com o estado atual e duas alternativas para a legenda](visualEvidence/experiments/FIND-004-caption-contrast-options.svg)
 
 A auditoria runtime mediu 1,78:1 para `.study-art figcaption` clara sobre a superfície clara da ilustração no tema escuro. Após revisar o caso real publicado em `/how-it-works/`, o usuário escolheu **B — faixa escura na base da ilustração**. A legenda permanece integrada à figura sobre um fundo de contraste controlado.
 
-A aprovação cobre somente essa relação de composição. As cores e a opacidade/gradiente da faixa na prancha são amostras experimentais: continuam pendentes de medição e homologação. Também não ficam definidos dimensões, espaçamento, comportamento responsivo, extensão para outros temas/componentes nem implementação no produto. A prancha esquemática não substitui uma implementação fiel nem a auditoria do DOM final.
+A escolha posterior do usuário foi A — neutro da interface, com faixa opaca #20211F e texto #F0EDE8. O contraste calculado para esse par é 13,85:1. Esta seleção substitui as amostras experimentais da prancha para este caso e passa a constar como par contextual homologado em decisions.json.
+
+O escopo é somente .study-art figcaption em /how-it-works/, tema escuro. O par não é token global e não se estende automaticamente a outras superfícies. Dimensões, espaçamento e comportamento responsivo ainda precisam ser conferidos ao aplicar; a implementação e auditoria final no DOM permanecem pendentes. A prancha é esquemática e não substitui a página implementada.
