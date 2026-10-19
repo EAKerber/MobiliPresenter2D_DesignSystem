@@ -306,6 +306,33 @@
     "exclusions": [
       "Image-overlaid viewer hotspots were not certified by text/background computation; inspect actual active states visually.",
       "Pseudo-element, gradient and transparent compositing cases remain unverified."
+    ],
+    "followUpObservations": [
+      {
+        "observedAt": "2026-10-18",
+        "route": "/how-it-works/",
+        "theme": "dark",
+        "viewport": "515x608 CSS px",
+        "scrollY": 4725,
+        "method": "Read-only DOM computed foreground and nearest opaque ancestor background; WCAG relative luminance calculation. Text elements screened: 161. Threshold used: 4.5:1 for normal text.",
+        "findings": [
+          {
+            "selector": ".study-art figcaption",
+            "text": "Esquema conceitual de estudo do espaço",
+            "foreground": "#C4BCB2",
+            "background": "#FCF9EF",
+            "fontSize": "10.88px",
+            "fontWeight": 400,
+            "ratio": 1.78,
+            "threshold": 4.5,
+            "status": "confirmed-below-threshold",
+            "relatedFinding": "FIND-004"
+          }
+        ],
+        "result": "Only this pair was below 4.5:1 among the screened text elements on this route and state. The DOM scan does not certify text over images, gradients, pseudo-elements, or transparency.",
+        "productCodeChanged": false,
+        "screenshotPersisted": false
+      }
     ]
   },
   "contrastAutomation": {
