@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1000" viewBox="0 0 1280 1000" role="img" aria-labelledby="title desc">
 <title id="title">FIND-010 · nível de atenuação do controle indisponível</title>
 <desc id="desc">Comparação experimental de três tratamentos para o controle de iluminação indisponível no configurador, em superfícies claras e escuras. A é o estilo atual, B atenua menos e C mantém o texto secundário legível sem opacidade no cartão.</desc>
 <defs><style>
 text{font-family:Inter,Arial,sans-serif}.k{font-size:14px;font-weight:700;letter-spacing:1.4px;fill:#705C4B}.h{font-size:34px;font-weight:700;fill:#292723}.sub{font-size:17px;fill:#705C4B}.note{font-size:14px;fill:#292723}.cardH{font-size:23px;font-weight:700;fill:#292723}.small{font-size:13px;fill:#705C4B}.label{font-size:14px;font-weight:700}.body{font-size:13px}.tag{font-size:11px;font-weight:700;letter-spacing:.8px}
 </style></defs>
 <rect width="1600" height="1120" fill="#E8E3DC"/>
-<text x="64" y="56" class="k">FIND-010 · CONTROLE INDISPONÍVEL</text>
-<text x="64" y="104" class="h">Quanto deve ser atenuado?</text>
-<text x="64" y="137" class="sub">A opção “Iluminação embutida” fica desabilitada até que dois módulos sejam incluídos.</text>
-<rect x="64" y="160" width="1472" height="66" rx="12" fill="#DED9D2"/>
-<text x="84" y="188" class="note"><tspan font-weight="700">Direção já acordada:</tspan> o estado indisponível deve continuar distinguível, sem perder a leitura da orientação que explica como habilitá-lo.</text>
-<text x="84" y="211" class="small">Prancha experimental em superfícies da paleta aprovada. A não foi escolhida; B e C não são padrões. Nada foi alterado no produto.</text>
-<g transform="translate(64 252)">
+<text x="40" y="56" class="k">FIND-010 · CONTROLE INDISPONÍVEL</text>
+<text x="40" y="104" class="h">Quanto deve ser atenuado?</text>
+<text x="40" y="137" class="sub">A opção “Iluminação embutida” fica desabilitada até que dois módulos sejam incluídos.</text>
+<rect x="40" y="160" width="1200" height="66" rx="12" fill="#DED9D2"/>
+<text x="60" y="188" class="note"><tspan font-weight="700">Direção já acordada:</tspan> o estado indisponível deve continuar distinguível, sem perder a leitura da orientação que explica como habilitá-lo.</text>
+<text x="60" y="211" class="small">Prancha experimental em superfícies da paleta aprovada. A não foi escolhida; B e C não são padrões. Nada foi alterado no produto.</text>
+<g transform="translate(40 252) scale(.82)">
 <rect width="470" height="780" rx="18" fill="#F0EDE8" stroke="#D6CCC0"/>
 <text x="24" y="42" class="cardH">A · Atual</text>
 <text x="24" y="68" class="small">Opacity: .6 no cartão inteiro</text>
@@ -35,7 +35,7 @@ text{font-family:Inter,Arial,sans-serif}.k{font-size:14px;font-weight:700;letter
 <text x="44" y="655" class="small" fill="#C7BBAA">Texto principal 6,08:1 · orientação 2,61:1</text>
 <text x="24" y="716" class="note"><tspan font-weight="700">Leitura:</tspan> sinaliza bloqueio com força,</text><text x="24" y="740" class="note">mas apaga a explicação junto com o controle.</text>
 </g>
-<g transform="translate(565 252)">
+<g transform="translate(447 252) scale(.82)">
 <rect width="470" height="780" rx="18" fill="#F0EDE8" stroke="#D6CCC0"/>
 <text x="24" y="42" class="cardH">B · Atenuação menor</text>
 <text x="24" y="68" class="small">Opacity: .78 no cartão inteiro</text>
@@ -59,7 +59,7 @@ text{font-family:Inter,Arial,sans-serif}.k{font-size:14px;font-weight:700;letter
 <text x="44" y="655" class="small" fill="#C7BBAA">Texto principal 9,35:1 · orientação 3,47:1</text>
 <text x="24" y="716" class="note"><tspan font-weight="700">Leitura:</tspan> ainda atenua o grupo; preserva</text><text x="24" y="740" class="note">um pouco mais de leitura que o estado atual.</text>
 </g>
-<g transform="translate(1066 252)">
+<g transform="translate(854 252) scale(.82)">
 <rect width="470" height="780" rx="18" fill="#F0EDE8" stroke="#D6CCC0"/>
 <text x="24" y="42" class="cardH">C · Legível e indisponível</text>
 <text x="24" y="68" class="small">Sem opacidade no cartão; tom secundário</text>
@@ -79,6 +79,6 @@ text{font-family:Inter,Arial,sans-serif}.k{font-size:14px;font-weight:700;letter
 <text x="44" y="655" class="small" fill="#C7BBAA">Texto de orientação 8,70:1</text>
 <text x="24" y="716" class="note"><tspan font-weight="700">Leitura:</tspan> distingue pelo controle e pelo</text><text x="24" y="740" class="note">texto secundário, sem enfraquecer a explicação.</text>
 </g>
-<rect x="64" y="1054" width="1472" height="42" rx="10" fill="#DED9D2"/>
-<text x="84" y="1081" class="small">As razões de contraste são comparativas sobre os fundos sólidos apresentados. O estado disabled tem exceções nos critérios de contraste; legibilidade e distinção visual ainda devem ser avaliadas.</text>
+<rect x="40" y="920" width="1200" height="56" rx="10" fill="#DED9D2"/>
+<text x="60" y="944" class="small">Razões de contraste calculadas sobre fundos sólidos de referência. O estado disabled tem exceções em alguns critérios; legibilidade e distinção continuam necessárias.</text>
 </svg>
