@@ -202,3 +202,12 @@ As regras lidas nas folhas da página foram: navegação pública oculta até 90
 Na revisão do tema claro estabilizado, a marca ficou escura e legível. A imagem era `/branding/logo-light-380.png`, com opacidade 1 e filtro `none`. A aparência desbotada do primeiro frame não se repetiu; nenhum defeito estável foi confirmado. O contraste não textual da imagem não foi medido numericamente.
 
 Detalhes e limites em [how-it-works-public-compact-header-2026-10-19.md](evidence/runtime/how-it-works-public-compact-header-2026-10-19.md). Não foi salvo um screenshot raster desta visita e o commit do deploy atual não foi identificado. A preferência anterior de tema escuro foi restaurada; menu fechado. Nenhuma configuração ou código do produto foi alterado.
+
+
+### Follow-up responsivo — 360–290 CSS px (2026-10-19)
+
+No tema escuro, o tema permaneceu icon-only em 360, 340, 321, 320, 291 e 290 px. A marca foi 129,6 px em 360, 122,4 px em 340 e chegou ao mínimo de 120 px em 321 px. Portanto, em 321 px o rótulo já estava oculto embora a marca estivesse reduzida somente 25% em relação aos 160 px do header compacto de 486 px.
+
+A 291 e 290 px, `html` e `body` mantiveram `min-width: 320px` de `public-theme.css`; `.how-page` aplica `overflow-x: clip`. O header ficou em uma linha com 320 px, sem o fallback de duas linhas. A 290 px, `documentElement.clientWidth=275`, `scrollWidth=320`, e o menu começa em x=264: somente 11 px do alvo de 42 px ficam na área útil. O título também aparece cortado. Isso amplia FIND-012 e o [issue #218](https://github.com/EAKerber/MobiliPresenter2D/issues/218).
+
+Abaixo de 291 px, o padrão aprovado permite duas linhas e requer alvos de 44 × 44 px. A verificação é observacional; ainda é necessária uma validação após a correção. Capturas raster dessa varredura não foram persistidas e larguras entre as amostras não foram medidas.
