@@ -80,51 +80,83 @@
         "scope": "Estrutura aprovada mais a regra de encaixe estreito. A especificação técnica recomendada registra valores estreitos de logo e controles, limiar do container e fallback abaixo da largura mínima; esses valores vêm de medições aproximadas e exigem validação runtime. Ela não autoriza implementação no produto nem define padrões para outros componentes."
       },
       "compactNarrowFitRule": {
-        "status": "approved-behavioral-rule-with-assistant-defined-values-runtime-validation-pending",
+        "status": "approved-behavioral-rule-with-corrected-assistant-defined-values; post-implementation-validation-pending",
         "rule": "Keep the theme control's text label visible while reducing the logo as needed, up to a maximum 30% reduction. If the one-row header would require reducing the logo further, change the theme control to icon-only. Keep the full page/area identifier and place the hamburger at the far right.",
         "reference": "The published /admin.html header at a 320 CSS px viewport showed .brand__logo at 105 px wide. For this observed case, a 30% reduction is approximately 73.5 px. This is a calculation reference for the compact header, not a global logo token.",
         "accessibility": "The icon-only theme control must retain an accessible name/state description.",
         "stillOpen": [
-          "Validar no DOM atual a interpolação do flex, o limiar do container e o encaixe nos dois temas.",
+          "Validar a composição recomendada em runtime após eventual implementação, nos dois temas.",
           "Rever o fallback com identificadores de página excepcionalmente longos."
         ]
       },
       "compactNarrowFitImplementationSpec": {
-        "status": "assistant-defined-at-user-request; runtime-validation-pending",
+        "status": "assistant-defined-at-user-request; current-product-geometry-runtime-measured; corrected-recommendation-pending-post-implementation-validation",
         "scope": "Header compacto de páginas privadas; preservar a estrutura aprovada.",
         "measurementBasis": {
           "viewportCssPx": 320,
           "horizontalPaddingCssPxPerSide": 14,
-          "brandPlusIdentifierCssPx": 190,
-          "actionClusterLabeledCssPx": 119,
-          "note": "Valores aproximados da auditoria runtime publicada; o DOM final precisa confirmar o modelo."
+          "brandPlusIdentifierCssPx": 189.9,
+          "brandGapCssPx": 9,
+          "pageIdentifierCssPx": 75.9,
+          "headerGapCssPx": 8,
+          "currentActionClusterCssPx": 119.1,
+          "currentThemeTargetCssPx": "74.1 × 40",
+          "currentHamburgerTargetCssPx": "40 × 40",
+          "observedAtLocal": "2026-10-18",
+          "runtimeTheme": "dark",
+          "measuredViewportsCssPx": [
+            288,
+            306,
+            313,
+            320,
+            340,
+            350,
+            360
+          ],
+          "note": "DOM atual: duas linhas até 340 px nos pontos amostrados, sem overflow; a proposta continua sendo cálculo e não comportamento implementado."
         },
         "logo": {
           "flexBasisCssPx": 105,
           "minWidthCssPx": 73.5,
           "maxReductionPercent": 30,
           "behavior": "Deixar flex-shrink reduzir a logo somente conforme a falta de espaço, sem reduzir abaixo de 73,5 px. Identificador da página não encolhe nem é truncado.",
-          "at320ViewportApproxWidthCssPx": 88,
-          "at320ReductionApproxPercent": 16
+          "at320ViewportApproxWidthCssPx": 103,
+          "at320ReductionApproxPercent": 2
         },
         "themeControl": {
-          "label": "Manter o rótulo Claro/Escuro enquanto a logo puder encaixar sem exceder a redução máxima.",
-          "iconOnlyWhenAvailableHeaderWidthAtOrBelowCssPx": 278,
-          "approximateViewportThresholdCssPx": 306,
-          "thresholdDerivation": "190 + 119 - (105 - 73,5) = 277,5 px de conteúdo. Arredondar para 278 px; com 14 px de padding de cada lado, equivale a cerca de 306 px de viewport.",
+          "label": "Manter o rótulo até cerca de 321 px de viewport, se a logo couber com redução de no máximo 30%; usar ícone-only em 320 px ou menos.",
+          "iconOnlyWhenAvailableHeaderWidthAtOrBelowCssPx": 292.5,
+          "approximateViewportThresholdCssPx": 320,
+          "thresholdDerivation": "Marca mínima = 73,5 + 9 + 75,9 = 158,4 px. Ações rotuladas = 74,1 + gap recomendado 8 + menu 44 = 126,1 px. Com gap do header 8 e margens totais 28, exige 320,5 px; arredondar para 321 px para manter rótulo; icon-only em 320 px ou menos.",
           "icon": "Ícone de estado: sol no tema claro e lua no tema escuro. Nome acessível informa o tema atual; aria-pressed acompanha o estado escuro.",
           "targetCssPx": "44 × 44",
           "hamburgerTargetCssPx": "44 × 44",
           "gapCssPx": 8
         },
         "compactMinimum": {
-          "oneRowViewportCssPx": 288,
+          "oneRowViewportCssPx": 291,
           "below": "Abaixo de 288 px, permitir duas linhas em vez de comprimir mais a logo, reduzir o identificador ou causar overflow. Manter o tema icon-only.",
-          "rationale": "Com 14 px laterais, logo no mínimo (73,5 px), identificador preservado e dois alvos de 44 px com 8 px entre eles, o conteúdo estimado é 254,5 px; sobra 5,5 px em 288 px de viewport."
+          "rationale": "Com logo no piso, identificador, controles 44×44 px, gap entre ações 8 px, gap do header 8 px e margens de 14 px por lado, a composição icon-only exige 290,4 px; arredondar para 291 px. Abaixo, permitir duas linhas."
         },
         "implementation": "Não autorizada neste registro. Implementar depois da validação DOM e revisão da especificação no repositório do produto.",
         "specificationSource": "Valores definidos pelo assistente a pedido do usuário, derivados da geometria publicada e da regra de redução homologada.",
-        "statusNotice": "Especificação recomendada e definida; ainda não é evidência de funcionamento em runtime nem token global."
+        "statusNotice": "Especificação recomendada e definida; ainda não é evidência de funcionamento em runtime nem token global.",
+        "runtimeValidation": {
+          "status": "current-product-geometry-validated-at-sampled-widths; proposed-values-calculated-not-implemented",
+          "evidenceFile": "NAV-005_RUNTIME_VALIDATION_2026-10-18.md",
+          "samples": [
+            288,
+            306,
+            313,
+            320,
+            340,
+            350,
+            360
+          ],
+          "themeMeasured": "dark",
+          "lightTheme": "stylesheet declarations inspected; live DOM geometry not measured",
+          "implementationChanged": false
+        }
       }
     },
     {
