@@ -88,3 +88,8 @@ Na rota pública `/how-it-works/`, a 486 × 590 CSS px, o header manteve a marca
 ### NAV-005 — validação estreita adicional (2026-10-19)
 
 Em /how-it-works/, o tema permanece icon-only a partir de 360 px, inclusive em 321 px, enquanto a marca ainda está entre 120–129,6 px (redução máxima observada de 25%). Em 291/290 px, `html/body` impõem `min-width:320px`, `.how-page` recorta o excesso e o header não adota o fallback de duas linhas. A 290 px, o alvo do menu fica quase todo fora da área útil. Isso amplia FIND-012 e [issue #218](https://github.com/EAKerber/MobiliPresenter2D/issues/218). A medição completa consta em [evidência runtime](evidence/runtime/how-it-works-public-compact-header-2026-10-19.md).
+
+
+## Configurador — resumo, contador e contraste (2026-10-19)
+
+Em /config/, o selector .price-state__breakdown dt carregado em styles.css?v=runtime-v40 usa texto branco translúcido de 11 px nos dois temas. No resumo claro, a composição sobre #fff com overlay rgba(203,188,170,.13) resulta em 1,05:1; no escuro, 6,95:1. FIND-010 / DS04-07 e a correção visual estão no [issue #208](https://github.com/EAKerber/MobiliPresenter2D/issues/208). O mesmo acesso também reproduziu o contador 8/8 ao lado de um resumo sem módulos e R$ 0,00 após navegar ao Resumo, FIND-006 / [issue #209](https://github.com/EAKerber/MobiliPresenter2D/issues/209). A evidência completa está em [configurator-summary-label-counter-2026-10-19.md](evidence/runtime/configurator-summary-label-counter-2026-10-19.md).
