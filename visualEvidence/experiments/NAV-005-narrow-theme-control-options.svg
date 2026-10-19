@@ -98,7 +98,7 @@
 </g>
 <g transform="translate(900 562)">
  <rect width="74" height="44" rx="20" class="btn"/>
- <circle cx="17" cy="22" r="8" class="icon"/>
+ <path d="M21 14a10 10 0 1 0 5 16 9 9 0 0 1-5-16z" class="icon"/>
  <text x="31" y="26" fill="#302c27" font-size="10" font-weight="700">Escuro</text>
  <rect x="82" y="0" width="42" height="44" rx="9" class="btn"/>
  <path d="M92 14h22M92 22h22M92 30h22" class="icon"/>
