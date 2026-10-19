@@ -84,3 +84,6 @@ Os 128 arquivos rastreados se agrupam em 46 itens de cena/máscaras do configura
 
 
 **NAV-005 compacto:** opção A aprovada somente como composição estrutural (linha única; marca e identificador/contexto à esquerda; tema antes do menu à direita; navegação e contato públicos no menu). Breakpoints e valores visuais permanecem pendentes; a prancha é esquemática e não prova layouts privados em runtime.
+
+
+**NAV-005 — observação responsiva adicional:** no login administrativo publicado, sem sessão e em tema escuro, o header observado tinha 62 px e uma linha a 350/360 px, mas 104,2 px e duas linhas a 320/335/340 px. Não houve overflow horizontal. A leitura veio do DOM, sem captura persistida; a composição A aprovada continua sendo estrutural e a estratégia para larguras abaixo da faixa de encaixe está pendente. Detalhes em [RUNTIME_AUDIT.md](RUNTIME_AUDIT.md).
