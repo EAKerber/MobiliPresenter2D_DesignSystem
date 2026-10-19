@@ -48,6 +48,10 @@ Esta lista aponta trabalhos requeridos pela evidência atual. Não é autorizaç
 | Menu no configurador estreito | Uma imagem da cena cobre link do menu em largura estreita | Corrigir empilhamento/hit-testing e revalidar a interação; não classificar como paleta | FIND-009, issue #214 |
 | Labels e controles Ativa / Iniciar ativo | Cor atual é inconsistente entre telas | Aplicar papel informativo aprovado somente após identificar se descreve processo, estado ou configuração; evitar solução baseada em cor sem semântica confirmada | VIS-002 / EST-01, pendente de mapeamento |
 
+## Proposta inicial para revisão
+
+A primeira consolidação está no [quadro experimental da paleta candidata A](visualEvidence/experiments/PALETTE-candidate-A.svg) e em [sua especificação](visualEvidence/experiments/PALETTE-candidate-A.md). Ela reutiliza os neutros e estados mais recorrentes do snapshot, mas não converte esses valores em tokens oficiais. Os contrastes do quadro são pares de amostra; os estados de foco, indisponível, seleção e a promoção no tema escuro seguem para revisão.
+
 ## Como fechar a paleta total
 
 A paleta global ainda não está fechada porque os papéis de processo têm família aprovada sem pares exatos, e estados técnicos, superfícies, tema e componentes não têm pares homologados suficientes. O caminho proposto:
