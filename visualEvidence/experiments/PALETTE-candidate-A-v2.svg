@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="940" viewBox="0 0 1360 940">
+<defs><style>text{font-family:Arial,Helvetica,sans-serif}.title{font-size:32px;font-weight:700}.sub{font-size:16px}.head{font-size:20px;font-weight:700}.role{font-size:14px;font-weight:700}.hex{font-size:13px;font-family:monospace}.sample{font-size:15px;font-weight:700}.note{font-size:13px}</style></defs>
+<rect width="1360" height="940" fill="#e9e2d8"/>
+<text x="40" y="55" class="title" fill="#292723">Paleta candidata A · neutros quentes</text>
+<text x="40" y="86" class="sub" fill="#705c4b">Sem branco ou preto puros. Secundário mais marrom; foco com contorno destacado.</text>
+<g transform="translate(40 120)"><rect width="620" height="635" rx="20" fill="#e8e3dc" stroke="#d6ccc0"/>
+<text x="28" y="44" class="head" fill="#292723">Tema claro · candidato</text>
+<rect x="28" y="64" width="564" height="62" rx="12" fill="#e8e3dc" stroke="#d6ccc0"/><text x="48" y="91" class="role" fill="#292723">Canvas · #E8E3DC</text><text x="48" y="113" class="hex" fill="#705c4b">Fundo quente claro</text>
+<rect x="28" y="138" width="564" height="62" rx="12" fill="#f0ede8" stroke="#d6ccc0"/><text x="48" y="165" class="role" fill="#292723">Superfície · #F0EDE8</text><text x="48" y="187" class="hex" fill="#705c4b">Cartões e controles</text>
+<rect x="28" y="212" width="564" height="62" rx="12" fill="#ded9d2" stroke="#d6ccc0"/><text x="48" y="239" class="role" fill="#292723">Superfície suave · #DED9D2</text><text x="48" y="261" class="hex" fill="#705c4b">Agrupamentos e áreas secundárias</text>
+<text x="28" y="315" class="sample" fill="#292723">Texto principal · #292723</text><text x="28" y="346" class="sample" fill="#705c4b">Texto secundário · #705C4B</text>
+<text x="28" y="378" class="note" fill="#705c4b">Contraste secundário: 4,95:1 em #E8E3DC; 4,50:1 em #DED9D2</text>
+<rect x="28" y="400" width="564" height="2" fill="#d6ccc0"/><text x="28" y="437" class="role" fill="#292723">Foco · ocre de marca em contorno</text>
+<rect x="56" y="458" width="510" height="84" rx="14" fill="#f0ede8" stroke="#8b6a40" stroke-width="4"/>
+<text x="76" y="493" class="sample" fill="#292723">Botão ou campo focado</text><text x="76" y="520" class="note" fill="#705c4b">Contorno 4 px · afastamento 3 px ·  #8B6A40</text>
+<text x="28" y="570" class="note" fill="#705c4b">Foco contra superfície: 4,25:1. Tratamento de foco é candidato.</text>
+<text x="28" y="609" class="role" fill="#6e512e">Promoção · manter #A64D13 como papel próprio</text>
+</g>
+<g transform="translate(700 120)"><rect width="620" height="635" rx="20" fill="#171614" stroke="#4e4942"/>
+<text x="28" y="44" class="head" fill="#f0eae1">Tema escuro · candidato</text>
+<rect x="28" y="64" width="564" height="62" rx="12" fill="#171614" stroke="#4e4942"/><text x="48" y="91" class="role" fill="#f0eae1">Canvas · #171614</text><text x="48" y="113" class="hex" fill="#c7bbaa">Carvão quente</text>
+<rect x="28" y="138" width="564" height="62" rx="12" fill="#211f1c" stroke="#4e4942"/><text x="48" y="165" class="role" fill="#f0eae1">Superfície · #211F1C</text><text x="48" y="187" class="hex" fill="#c7bbaa">Cartões e controles</text>
+<rect x="28" y="212" width="564" height="62" rx="12" fill="#2c2924" stroke="#4e4942"/><text x="48" y="239" class="role" fill="#f0eae1">Superfície suave · #2C2924</text><text x="48" y="261" class="hex" fill="#c7bbaa">Agrupamentos e áreas secundárias</text>
+<text x="28" y="315" class="sample" fill="#f0eae1">Texto principal · #F0EAE1</text><text x="28" y="346" class="sample" fill="#c7bbaa">Texto secundário · #C7BBAA</text>
+<text x="28" y="378" class="note" fill="#c7bbaa">Contraste secundário: 8,70:1 em #211F1C</text>
+<rect x="28" y="400" width="564" height="2" fill="#4e4942"/><text x="28" y="437" class="role" fill="#f0eae1">Foco · dourado quente em contorno</text>
+<rect x="56" y="458" width="510" height="84" rx="14" fill="#211f1c" stroke="#d8bc7c" stroke-width="4"/>
+<text x="76" y="493" class="sample" fill="#f0eae1">Botão ou campo focado</text><text x="76" y="520" class="note" fill="#c7bbaa">Contorno 4 px · afastamento 3 px · #D8BC7C</text>
+<text x="28" y="570" class="note" fill="#c7bbaa">Foco contra superfície: 8,93:1. Contorno claro e visível.</text>
+<text x="28" y="609" class="role" fill="#d8bc7c">Informação de processo continua azul; promoção é cobre</text>
+</g>
+<text x="40" y="805" class="head" fill="#292723">Mudanças nesta revisão</text>
+<text x="40" y="835" class="sub" fill="#705c4b">Removidos #675F55 como proposta de secundário global e #6E512E como foco. Cores de texto/fundo deixam de usar branco e preto puros.</text>
+<text x="40" y="865" class="sub" fill="#705c4b">O foco usa contorno espesso em cada tema, em vez de texto/acento discreto. Ambos os pares excedem 3:1 em superfície sólida.</text>
+<text x="40" y="910" class="note" fill="#705c4b">Paleta aprovada pelo usuário em 2026-10-18. Contrastes calculados para pares sólidos; aplicação por componente ainda requer validação DOM. Cobre promocional e azul processual permanecem distintos.</text>
+</svg>

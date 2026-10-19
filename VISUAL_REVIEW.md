@@ -34,16 +34,16 @@ A medição atual encontrou a 320 px: marca + identificador com 189,9 px, logo 1
 
 As medidas recomendadas não são comportamento já existente nem breakpoints de CSS. O runtime foi medido apenas em tema escuro; o CSSOM confirma definições para os dois temas, mas não substitui uma medição renderizada do tema claro. Ver [NAV-005_RUNTIME_VALIDATION_2026-10-18.md](NAV-005_RUNTIME_VALIDATION_2026-10-18.md) para a tabela, cálculo e limites.
 
-## VIS-002 — pares exatos aprovados
+## VIS-002 — pares contextuais e aprovação da paleta A
 
 ![Pares de contraste B selecionados](visualEvidence/experiments/VIS-002-contrast-options.svg)
 
-O usuário escolheu a opção B nos dois exemplos. `decisions.json` registra estes pares específicos:
+O usuário escolheu a opção B nos dois exemplos. Depois, reabriu esteticamente o tom secundário `#675F55`, percebido como esverdeado. Na revisão seguinte, aprovou a paleta A, incluindo `#705C4B` como valor secundário de referência. O rótulo quente contextual continua aprovado. `decisions.json` registra os escopos e o estado atualizado:
 
-- Texto corrido claro: `#675F55` em `#F0EDE8`, 5,38:1, nos contextos auditados da landing, Como funciona e Quem somos.
+- Texto corrido claro: o par anterior era `#675F55` em `#F0EDE8`, 5,38:1; o usuário pediu reavaliação estética. A paleta aprovada usa `#705C4B` em `#F0EDE8`, 5,41:1; a aplicação nesses seletores aguarda mapeamento e validação DOM.
 - Rótulo quente claro: `#70522F` em `#E8E3DC`, 5,60:1, no rótulo auditado de Como funciona.
 
-A aprovação é contextual: não cria tokens globais, não aprova variações dark nem autoriza extensão automática a outros componentes/superfícies. Os pares já atingem o alvo matemático de 4,5:1 para texto comum nas superfícies sólidas avaliadas; a aplicação deve ser revalidada no DOM antes de qualquer implementação do produto. A base promocional `#A64D13` e o azul de informação de processo mantêm seus papéis previamente homologados.
+A aprovação da paleta A abrange seus valores de referência para claro/escuro, incluindo a cor secundária. Ela não cria tokens técnicos nem autoriza implementação no produto. O par `#675F55` foi supersedido; o rótulo quente `#70522F` continua aprovado somente para o contexto indicado. Contrastes são cálculos em superfícies sólidas e devem ser revalidados no DOM antes da aplicação. A base promocional `#A64D13` e o azul de informação de processo mantêm seus papéis previamente homologados.
 
 ## Ainda aberto
 
@@ -61,3 +61,12 @@ A auditoria runtime mediu 1,78:1 para `.study-art figcaption` clara sobre a supe
 A escolha posterior do usuário foi A — neutro da interface, com faixa opaca #20211F e texto #F0EDE8. O contraste calculado para esse par é 13,85:1. Esta seleção substitui as amostras experimentais da prancha para este caso e passa a constar como par contextual homologado em decisions.json.
 
 O escopo é somente .study-art figcaption em /how-it-works/, tema escuro. O par não é token global e não se estende automaticamente a outras superfícies. Dimensões, espaçamento e comportamento responsivo ainda precisam ser conferidos ao aplicar; a implementação e auditoria final no DOM permanecem pendentes. A prancha é esquemática e não substitui a página implementada.
+
+
+## VIS-002 — paleta-base e tratamento de foco aprovados
+
+O usuário aprovou a paleta A apresentada em [PALETTE-candidate-A-v2.svg](visualEvidence/experiments/PALETTE-candidate-A-v2.svg). A aprovação abrange os valores de canvas, superfícies, textos e bordas para claro/escuro e o tratamento de foco ilustrado (contorno de 4 px, afastamento de 3 px). Os pares calculados e seus limites estão no registro canônico [decisions.json](decisions.json).
+
+A homologação define os valores da paleta de referência; ainda não cria tokens de código nem autoriza aplicação no produto. O mapa de componentes/rotas, a validação dos contrastes no DOM real e a conferência do foco de teclado seguem para as próximas etapas. Informação de processo permanece azul e promoção usa cobre, sem alterações; os demais estados semânticos e variações do cobre seguem pendentes.
+
+A revisão matemática corrigiu a prancha: texto principal claro em canvas claro é 11,68:1; texto secundário #705C4B é 5,41:1 na superfície #F0EDE8, 4,95:1 no canvas #E8E3DC e 4,50:1 na superfície suave #DED9D2. Os outros pares mostrados estão registrados em decisions.json. São cálculos de cores opacas, não auditoria runtime.

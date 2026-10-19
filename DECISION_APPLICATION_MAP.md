@@ -55,7 +55,7 @@ O estado de `/config/` e `/access/manage.html` foi redirecionado sem sessão. Is
 
 **NAV-005:** o padrão largo público A aplica-se às rotas públicas; o padrão privado B aplica-se a `/config/`, `/admin.html`, `/access/` e `/access/manage.html`; o padrão contextual tipo viewer aplica-se a `/viewer/`. Para larguras compactas, a opção A está aprovada estruturalmente: linha única, marca e identificador/contexto à esquerda, tema antes do menu na extremidade direita; páginas públicas agrupam navegação e contato no menu. Em cabeçalhos privados estreitos, manter o rótulo do tema enquanto a logo reduz até 30%; se mais redução for necessária, usar tema apenas por ícone, preservando identificador e ordem dos controles. Os critérios exatos estão em `decisions.json`. Breakpoints, interpolação, dimensões, espaçamento, tipografia, cores e glifo do ícone permanecem abertos.
 
-**VIS-002 — alvos de seletor com pares aprovados:** `.hero-description` em `/`, `.how-hero-note` em `/how-it-works/` e `.about-scale p:not(.eyebrow)` em `/about/` usam o par contextual claro aprovado `#675F55` sobre `#F0EDE8` (5,38:1). `.study-band .eyebrow` em `/how-it-works/` usa o par contextual aprovado `#70522F` sobre `#E8E3DC` (5,60:1). Os pares não são tokens globais e não aprovam variantes escuras.
+**VIS-002 — alvos auditados:** `.hero-description` em `/`, `.how-hero-note` em `/how-it-works/` e `.about-scale p:not(.eyebrow)` em `/about/` estavam em 4,47:1. O par antes escolhido `#675F55` sobre `#F0EDE8` (5,38:1) foi reaberto após feedback estético e não deve ser aplicado até nova escolha; `#705C4B` está em avaliação, sem homologação. `.study-band .eyebrow` continua com o par contextual aprovado `#70522F` sobre `#E8E3DC` (5,60:1). Nenhum deles é token global nem aprova variantes escuras.
 
 **VIS-003 / FIND-004:** em `/how-it-works/`, `.study-art figcaption` no tema escuro permanece integrada à ilustração sobre uma faixa opaca `#20211F`, com texto `#F0EDE8` (13,85:1). O usuário selecionou A para este caso. É um par contextual, não token global. Aplicação e validação final no DOM do produto continuam pendentes; a prancha não representa uma correção aplicada.
 
@@ -70,3 +70,8 @@ Não há captura atual de superfícies autenticadas. Estados de teclado completo
 
 
 **NAV-005 — encaixe estreito:** a regra aprovada limita a redução da logo a 30%, preserva o identificador e então troca o tema rotulado por ícone. A validação atual mediu o produto em 288–360 px: duas linhas até 340 px e uma linha em 350/360 px; alvos atuais de 40 px. A recomendação calculada foi corrigida: manter rótulo a partir de ~321 px, icon-only em 320 px ou menos e duas linhas abaixo de ~291 px, com alvos de 44×44 px. Ela ainda não está implementada no produto; requer revalidação posterior nos dois temas. Evidência: [NAV-005_RUNTIME_VALIDATION_2026-10-18.md](NAV-005_RUNTIME_VALIDATION_2026-10-18.md), `decisions.json` e [prancha NAV-005](visualEvidence/experiments/NAV-005-narrow-theme-control-options.svg).
+
+
+## VIS-002 — paleta-base aprovada
+
+A aprovação de valores e os limites de aplicação estão mapeados em [PALETTE_APPLICATION_MAP.md](PALETTE_APPLICATION_MAP.md). O mapa identifica duplicação entre folhas globais de tema, configurador e administração, distingue os papéis já homologados dos valores de uso atual e orienta a próxima etapa: atribuição por componente e validação runtime.
