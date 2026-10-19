@@ -34,7 +34,7 @@ A medição atual encontrou a 320 px: marca + identificador com 189,9 px, logo 1
 
 As medidas recomendadas não são comportamento já existente nem breakpoints de CSS. O runtime foi medido apenas em tema escuro; o CSSOM confirma definições para os dois temas, mas não substitui uma medição renderizada do tema claro. Ver [NAV-005_RUNTIME_VALIDATION_2026-10-18.md](NAV-005_RUNTIME_VALIDATION_2026-10-18.md) para a tabela, cálculo e limites.
 
-## VIS-002 — pares exatos aprovados
+## VIS-002 — pares contextuais e revisão estética
 
 ![Pares de contraste B selecionados](visualEvidence/experiments/VIS-002-contrast-options.svg)
 
