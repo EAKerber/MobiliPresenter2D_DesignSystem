@@ -3,7 +3,7 @@
 **Observado:** 2026-10-19  
 **Produto:** [EAKerber/MobiliPresenter2D](https://github.com/EAKerber/MobiliPresenter2D)  
 **Deploy publicado:** [483ef2e6f76a562a3096516ef68d8dfe072ec21f](https://github.com/EAKerber/MobiliPresenter2D/commit/483ef2e6f76a562a3096516ef68d8dfe072ec21f), Netlify deploy `6ad5a4e245dad08b373fcbd1`, estado `ready`.  
-**Inventário estático:** ainda baseado no commit anterior `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`; os números e extrações estáticas não foram regenerados nesta atualização.
+**Estado do inventário no registro inicial:** o inventário ainda apontava para `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`. A atualização estática contra o deploy publicado foi concluída depois e está documentada em [INVENTORY_REFRESH_2026-10-19.md](INVENTORY_REFRESH_2026-10-19.md).
 
 ## Correções reconciliadas
 
@@ -24,6 +24,6 @@ Na mesma largura, abri o menu. Os grupos de navegação e seus links ficaram vis
 
 As medições anteriores que descrevem o estado do produto no commit `298c114` permanecem como evidência histórica daquele snapshot; não devem ser lidas como estado atual desses dois achados.
 
-## Próxima atualização do inventário
+## Próxima atualização runtime
 
-A próxima regeneração estática deve apontar para o commit de produto `483ef2e` e registrar a nova origem como snapshot atual, atualizando apenas os arquivos afetados e preservando as referências históricas. A auditoria runtime continua pendente para os estados listados em `FINDINGS_REGISTER.md`, inclusive o primeiro clique no menu público, a transição de sessão após login e o cabeçalho público compacto.
+O inventário estático foi atualizado para `483ef2e` em uma etapa separada, preservando `298c114` como evidência histórica. A auditoria runtime continua pendente para os estados listados em `FINDINGS_REGISTER.md`, inclusive o primeiro clique no menu público, a transição de sessão após login e o cabeçalho público compacto.
