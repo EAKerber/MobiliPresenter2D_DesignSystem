@@ -159,6 +159,6 @@ Em uma aba autenticada de `/access/manage`, o conteúdo carregou e o menu já ap
 
 ### Limites e evidências
 
-Nenhum dado do catálogo foi alterado e nenhum convite foi enviado. A comparação de tema alterou temporariamente a preferência visual no navegador e ela foi restaurada ao escuro.
+Nenhum dado do catálogo foi alterado e nenhum convite foi enviado. A comparação de tema alterou temporariamente a preferência visual. O primeiro frame após mudar para claro pareceu desbotar a marca, mas a captura estabilizada persistida em [evidência pública](visualEvidence/public/how-it-works/how-it-works-light-compact-486x590.jpg) e uma captura independente mostram a marca escura legível. Não foi confirmado defeito visual de contraste. O navegador foi restaurado ao tema escuro após a captura.
 
-As capturas do navegador foram exibidas na sessão para inspeção, mas não foram persistidas como arquivos neste checkpoint. As imagens já versionadas foram apontadas pelo usuário como pertencentes à interface anterior; até substituí-las, devem ser tratadas como referências históricas, não evidência atual. Capturas autenticadas não foram gravadas porque expõem informações de conta e acesso. A medição de contraste DOM da marca, a largura CSS real da captura compacta e a identificação dos seletores/asset da marca permanecem pendentes.
+A captura pública atual estabilizada em tema claro foi persistida em `visualEvidence/public/how-it-works/how-it-works-light-compact-486x590.jpg`. As imagens antigas permanecem referências históricas. Capturas autenticadas não foram gravadas porque expõem informações de conta e acesso. A medição de contraste DOM da marca, a largura CSS real da captura compacta e a identificação dos seletores/asset permanecem pendentes.
