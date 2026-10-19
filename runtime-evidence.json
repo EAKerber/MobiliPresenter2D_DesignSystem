@@ -405,5 +405,57 @@
       "selector": "[data-private-menu] and scene image",
       "observation": "Scene image overlays and obscures part of the Como funciona menu link in both themes."
     }
-  ]
+  ],
+  "compactHeaderMeasurements": {
+    "route": "/admin.html",
+    "access": "signed-out",
+    "theme": "dark",
+    "method": "Read-only DOM geometry from published page at explicit CSS viewport sizes.",
+    "samples": [
+      {
+        "viewport": "390x844",
+        "headerHeightPx": 65.9,
+        "layout": "single-row",
+        "brandAndContextWidthPx": 216.9,
+        "actionsWidthPx": 127.1,
+        "horizontalOverflow": false
+      },
+      {
+        "viewport": "360x760",
+        "headerHeightPx": 62,
+        "layout": "single-row",
+        "horizontalOverflow": false
+      },
+      {
+        "viewport": "350x760",
+        "headerHeightPx": 62,
+        "layout": "single-row",
+        "horizontalOverflow": false
+      },
+      {
+        "viewport": "340x760",
+        "headerHeightPx": 104.2,
+        "layout": "two-row",
+        "brandAndContextWidthPx": 189.9,
+        "actionsWidthPx": 119.1,
+        "horizontalOverflow": false
+      },
+      {
+        "viewport": "335x760",
+        "headerHeightPx": 104.2,
+        "layout": "two-row",
+        "horizontalOverflow": false
+      },
+      {
+        "viewport": "320x760",
+        "headerHeightPx": 104.2,
+        "layout": "two-row",
+        "brandAndContextWidthPx": 189.9,
+        "actionsWidthPx": 119.1,
+        "horizontalOverflow": false
+      }
+    ],
+    "interpretation": "Observed transition lies between 340 and 350 CSS px in these samples; exact CSS breakpoint is not inferred. Current implementation behavior is evidence, not approval of a two-row compact design. NAV-005 option A approves a one-row composition; behavior when the items no longer fit remains pending.",
+    "screenshotPersisted": false
+  }
 }

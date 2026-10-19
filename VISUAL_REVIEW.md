@@ -16,15 +16,19 @@ Esta aprovação é para a versão expandida/larga. Breakpoints, composição co
 
 ### NAV-005 — composição compacta aprovada
 
-![Duas composições experimentais de cabeçalhos compactos](visualEvidence/experiments/NAV-005-compact-header-options.svg)
+![Opção A escolhida e opção B mantida como comparação para cabeçalhos compactos](visualEvidence/experiments/NAV-005-compact-header-options.svg)
 
-Na página pública publicada `/how-it-works/`, observei em 18/10/2026 um cabeçalho de uma linha em viewport de 515 × 608 px, tema escuro: marca de 160 px à esquerda e grupo de ações de 140 px à direita, com contato, controle de tema em ícone e menu. O cabeçalho mediu aproximadamente 78 px de altura. É uma observação de um único estado público e não define o layout compacto homologado.
+Na página pública publicada `/how-it-works/`, observei em 18/10/2026 um cabeçalho de uma linha em viewport de 515 × 608 px, tema escuro: marca de 160 px à esquerda e grupo de ações de 140 px à direita, com contato, controle de tema em ícone e menu. O cabeçalho mediu aproximadamente 78 px de altura. É uma observação de um único estado público; a escolha estrutural compacta foi registrada separadamente e não pode ser inferida dessa captura.
 
 O usuário escolheu **opção A** para a composição compacta: uma linha; marca e identificador/contexto juntos à esquerda; controle de tema imediatamente antes do hambúrguer, que permanece na extremidade direita. Nas páginas públicas, navegação e acesso de contato ficam agrupados no menu. A opção B permanece na prancha apenas como comparação não selecionada. A estrutura aprovada é composicional; breakpoint, tipografia, dimensões, ícones/estilo dos controles e comportamento de nomes longos continuam pendentes. Admin autenticado e navegação contextual não foram capturados nessa viewport, portanto a prancha é referência esquemática, não evidência runtime dessas rotas.
 
 A escolha A mantém o link atual **Fale conosco** via WhatsApp como acesso público de contato. Isso não cria uma rota própria para Contato.
 
 A prancha anterior de opções permanece em [NAV-005-public-header-options.svg](visualEvidence/experiments/NAV-005-public-header-options.svg) como comparação experimental. A prancha acima registra a escolha estrutural A e mantém B como comparação; não especifica tokens, dimensões nem o logo final.
+
+### Ponto de revisão compacto identificado em runtime
+
+No login administrativo publicado, a estrutura atual usa uma linha em 350 px e duas linhas em 340 px. A seleção da opção A aprovou a composição de uma linha, mas ainda não definiu como acomodar o conjunto quando a largura disponível diminui. A faixa observada delimita a investigação; não é um breakpoint homologado. Medições e limites estão em [RUNTIME_AUDIT.md](RUNTIME_AUDIT.md) e [runtime-evidence.json](runtime-evidence.json). Nenhuma alternativa visual para reduzir/truncar os elementos foi homologada.
 
 ## VIS-002 — pares exatos aprovados
 
@@ -39,8 +43,8 @@ A aprovação é contextual: não cria tokens globais, não aprova variações d
 
 ## Ainda aberto
 
-- Definir breakpoints e comportamento responsivo entre larguras; homologar medidas, tipografia, cores, assets, estilo dos controles e tratamento de nomes longos.
-- Homologar dimensões, tipografia, cores, assets e estilo final dos cabeçalhos.
+- Definir o comportamento em larguras muito estreitas: no login administrativo, o header atual quebra entre 340 e 350 px, enquanto a composição A aprovada é de uma linha. Decidir se haverá redução de marca/identificador, truncamento contextual ou um fallback mais estreito; não inferir uma solução a partir da captura atual.
+- Homologar dimensões, tipografia, cores, assets e estilo dos controles dos cabeçalhos.
 - Medir outros pares e estados; os dois aprovados não se generalizam.
 
 

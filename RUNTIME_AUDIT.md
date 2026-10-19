@@ -115,3 +115,10 @@ O usuário observou que as capturas salvas anteriormente mostram uma versão ant
 ### Decisão compacta posterior à captura
 
 Após a observação runtime acima, o usuário escolheu a opção A para a composição compacta de NAV-005. A escolha aprova somente a estrutura: linha única, marca com identificador/contexto à esquerda e tema antes do menu na extremidade direita; navegação e contato públicos ficam no menu. A captura em `/how-it-works/` é uma observação pública separada e não comprova os esquemas privados ou contextuais da prancha. Breakpoints e valores visuais seguem pendentes.
+
+
+## Cabeçalho compacto no login administrativo (2026-10-18)
+
+A página publicada `/admin.html` foi observada sem sessão iniciada, no tema escuro, usando leituras geométricas do DOM em larguras CSS compactas. Em 390 × 844 px, o header tinha 65,9 px de altura, marca + identificador “Administração” com 216,9 px e ações com 127,1 px, dispostos em uma linha. Em 360 × 760 px e 350 × 760 px, o header media 62 px e permanecia em uma linha. Em 340 × 760 px, 335 × 760 px e 320 × 760 px, media 104,2 px: marca/identificador na primeira linha e controles na segunda. Não houve overflow horizontal nos tamanhos verificados.
+
+A transição observada ocorreu entre 340 e 350 px; isso não determina o breakpoint CSS exato nem recomenda um valor. O registro descreve o comportamento publicado atual, não aprova o empilhamento nem o considera uma falha. A opção A de NAV-005 aprova a estrutura compacta de uma linha; a estratégia para larguras em que marca, contexto e controles não cabem juntos continua pendente. Não foi persistida uma captura de tela desta observação; os números vieram da geometria do DOM.
