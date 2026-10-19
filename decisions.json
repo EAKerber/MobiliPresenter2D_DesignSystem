@@ -193,7 +193,24 @@
             "dark": "#a7d1f0",
             "source": "EAKerber/MobiliPresenter2D app/admin/admin.css",
             "status": "current usage; confirm its mapping against live route states in the visual/runtime audit."
-          }
+          },
+          "runtimeExamples": [
+            {
+              "id": "ADMIN-CURRENT-CONFIGURATION-STATUS",
+              "status": "approved-process-information; product-implementation-pending",
+              "context": "Admin /admin.html, dark theme; live status for the currently loaded configuration.",
+              "selector": ".message[aria-live=\"polite\"][data-kind=\"\"]",
+              "decision": "Treat this message as information about the current process/state, not as a success confirmation. Use the homologated blue information role.",
+              "currentAppearance": {
+                "foreground": "#C4BCB2",
+                "background": "#111210",
+                "contrast": "10.00:1",
+                "note": "Runtime measurement of the current appearance; it does not represent the approved blue treatment."
+              },
+              "evidence": "evidence/runtime/admin-dark-status-message-2026-10-19.md",
+              "approvalSource": "User confirmed this classification in the current conversation after distinguishing a message derived from current state from feedback caused by an action."
+            }
+          ]
         },
         "promotionalTertiary": {
           "status": "approved-base",

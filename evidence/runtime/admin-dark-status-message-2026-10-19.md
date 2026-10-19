@@ -18,9 +18,9 @@ The authenticated administration page was fully loaded. One visible `.message` e
 
 The measured contrast exceeds WCAG AA for ordinary text in this observed state. This does not establish the contrast or appearance of other message types, light theme, or other surfaces.
 
-## Classification to resolve
+## Approved classification
 
-The text communicates a successful configuration load, while the component has no explicit `data-kind`. The current observation cannot determine whether the product should treat it as a success confirmation or as process information. Under VIS-002, process information uses the approved blue role; success confirmations use the selected success pair. Keep this instance unmapped until its semantic role is assigned. Do not infer a contrast defect from this observation.
+The user confirmed that this message derives from the current state, rather than from an action just performed. It is therefore **process information**, not a success confirmation, and its semantic role is the homologated blue information color from VIS-002. The observed muted foreground is the current product styling; changing it to blue remains product implementation work and was not performed in this audit.
 
 ## Limits
 
