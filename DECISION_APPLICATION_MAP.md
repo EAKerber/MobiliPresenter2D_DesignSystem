@@ -79,3 +79,7 @@ Não há captura atual de superfícies autenticadas. Estados de teclado completo
 ## VIS-002 — paleta-base aprovada
 
 A aprovação de valores e os limites de aplicação estão mapeados em [PALETTE_APPLICATION_MAP.md](PALETTE_APPLICATION_MAP.md). O mapa identifica duplicação entre folhas globais de tema, configurador e administração, distingue os papéis já homologados dos valores de uso atual e orienta a próxima etapa: atribuição por componente e validação runtime.
+
+## NAV-005 — verificação pública compacta em runtime (2026-10-19)
+
+Na rota pública `/how-it-works/`, a 486 × 590 CSS px, o header manteve a marca em 160 px e exibiu o tema icon-only. O CSS oculta os rótulos do controle de tema até 1150 px. Com o menu aberto, havia os três links públicos, mas nenhum contato; o WhatsApp permanecia como CTA fora do menu. Isso diverge do padrão compacto aprovado. A marca estabilizada no tema claro veio de `logo-light-380.png`, sem filtro/opacidade, e permaneceu legível. Evidência e limites em [how-it-works-public-compact-header-2026-10-19.md](evidence/runtime/how-it-works-public-compact-header-2026-10-19.md); correção do produto em [issue #218](https://github.com/EAKerber/MobiliPresenter2D/issues/218).
