@@ -64,3 +64,6 @@ O estado de `/config/` e `/access/manage.html` foi redirecionado sem sessão. Is
 Capturas runtime persistidas nesta etapa: [landing claro](visualEvidence/public/landing/landing-light.jpg), [landing escuro](visualEvidence/public/landing/landing-dark.jpg), [viewer escuro](visualEvidence/public/viewer/viewer-dark.jpg), [login administrativo claro](visualEvidence/private/admin-login/admin-login-light.jpg), [login administrativo escuro](visualEvidence/private/admin-login/admin-login-dark.jpg) e [menu do login aberto](visualEvidence/private/admin-login/admin-login-menu-dark.jpg).
 
 Não há captura atual de superfícies autenticadas. Estados de teclado completos, movimento reduzido, foco/hover/pressionado/seleção/carregamento, camadas transparentes e leitura de assets referenciados apenas por JavaScript ficam **não verificados**. O inventário futuro de JavaScript poderá completar a ligação de eventos e estados aos componentes depois da etapa visual.
+
+
+**NAV-005 — evidência compacta:** a captura do DOM no login sem sessão indica uma linha a 350 px e duas linhas a 340 px (tema escuro; sem overflow nos estados testados). Isso descreve a implementação publicada; não estabelece breakpoint ou solução visual para caber na composição A. Ver [RUNTIME_AUDIT.md](RUNTIME_AUDIT.md).
