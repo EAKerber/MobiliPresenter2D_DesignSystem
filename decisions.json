@@ -182,17 +182,17 @@
         "approvedDirection": "Estados semânticos reconhecíveis, harmonizados com a marca, com combinações adequadas por tema. Mensagens não dependem apenas da cor.",
         "functionalInformation": "Informações de processo e funcionamento usam o azul homologado. São informativas e não equivalem a aviso, erro ou confirmação de sucesso.",
         "editorialCommercial": "Informações promocionais de produto, campanhas, condições especiais e destaques institucionais pertencem à comunicação promocional/comercial. Não classificar a campanha de três meses como warning técnico.",
-        "candidateSwatches": "A prancha A/B permanece como comparação experimental. Os pares de erro, sucesso e aviso foram selecionados por maior contraste em cada tema e registrados em selectedStatusSwatches; conferir o quadro aprovado visualEvidence/experiments/VIS-002-semantic-states-selected.svg.",
+        "candidateSwatches": "A/B review of process-information text pairs completed: option A selected and recorded under processInformation.approvedPairs. The selected error, success and warning pairs remain in selectedStatusSwatches; other candidate boards retain their own review status.",
         "processInformation": {
-          "status": "semantic-role-approved",
+          "status": "semantic-role-and-contextual-text-pairs-approved; product-implementation-pending",
           "colorFamily": "blue homologated",
-          "decision": "Usar o azul homologado para instruções e informações sobre o funcionamento/processo.",
+          "decision": "Informação de processo usa texto azul: #245D87 sobre a superfície clara aprovada #F0EDE8 (6.01:1) e #A7D1F0 sobre a superfície escura aprovada #211F1C (10.19:1). A escolha corresponde à opção A da revisão VIS-002 e aprova somente esses pares de texto nos contextos mostrados.",
           "existingImplementation": {
             "token": "--info",
             "light": "#245d87",
             "dark": "#a7d1f0",
             "source": "EAKerber/MobiliPresenter2D app/admin/admin.css",
-            "status": "current usage; confirm its mapping against live route states in the visual/runtime audit."
+            "status": "Current product usage; exact foreground values now approved only in the contextual pairs above. Token assignment and other consumers remain to be mapped."
           },
           "runtimeExamples": [
             {
@@ -210,7 +210,22 @@
               "evidence": "evidence/runtime/admin-dark-status-message-2026-10-19.md",
               "approvalSource": "User confirmed this classification in the current conversation after distinguishing a message derived from current state from feedback caused by an action."
             }
-          ]
+          ],
+          "approvedPairs": {
+            "light": {
+              "foreground": "#245D87",
+              "background": "#F0EDE8",
+              "contrast": "6.01:1"
+            },
+            "dark": {
+              "foreground": "#A7D1F0",
+              "background": "#211F1C",
+              "contrast": "10.19:1"
+            },
+            "scope": "Pares contextuais de texto para informação de processo nas superfícies aprovadas. Não aprovam tokens globais, fundos/bordas/ícones, outras superfícies ou implementação no produto.",
+            "selectedOption": "A",
+            "approvalSource": "User selected option A in the visual review in the current conversation."
+          }
         },
         "promotionalTertiary": {
           "status": "approved-base",
