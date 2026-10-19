@@ -87,3 +87,6 @@ Os 128 arquivos rastreados se agrupam em 46 itens de cena/máscaras do configura
 
 
 **NAV-005 — observação responsiva adicional:** no login administrativo publicado, sem sessão e em tema escuro, o header observado tinha 62 px e uma linha a 350/360 px, mas 104,2 px e duas linhas a 320/335/340 px. Não houve overflow horizontal. A leitura veio do DOM, sem captura persistida; a composição A aprovada continua sendo estrutural e a estratégia para larguras abaixo da faixa de encaixe está pendente. Detalhes em [RUNTIME_AUDIT.md](RUNTIME_AUDIT.md).
+
+
+**NAV-005 — regra compacta estreita:** o usuário aprovou manter o rótulo do tema enquanto a logo reduz até no máximo 30%; se necessário reduzir mais, trocar o tema para ícone apenas. O identificador permanece completo. O valor exato de troca e o glifo continuam pendentes; isso não define token de tamanho global para a marca.

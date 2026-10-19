@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1080" viewBox="0 0 1200 1080" role="img" aria-labelledby="title desc">
+<title id="title">NAV-005 — regra aprovada de encaixe estreito para o header</title>
+<desc id="desc">Registro visual da regra aprovada: preservar o rótulo do tema enquanto a logo reduz até no máximo 30%; depois, mudar o tema para ícone apenas. A prancha mostra a implementação atual em duas linhas a 320 px e os dois estados da sequência aprovada. A decisão não fixa breakpoint nem detalhes do ícone.</desc>
+<defs><style>
+ text{font-family:Arial,Helvetica,sans-serif}
+ .title{fill:#292622;font-size:31px;font-weight:700}
+ .sub{fill:#625a50;font-size:16px}
+ .label{fill:#86541e;font-size:13px;font-weight:700;letter-spacing:1.3px}
+ .h{fill:#292622;font-size:20px;font-weight:700}
+ .copy{fill:#514b44;font-size:14px}
+ .muted{fill:#726b63;font-size:12px}
+ .card{fill:#fffdfa;stroke:#d5cec4;stroke-width:1.5}
+ .bar{fill:#f5f2ed;stroke:#cfc8be;stroke-width:1.3}
+ .darkbar{fill:#1d1c1a;stroke:#514c45;stroke-width:1.3}
+ .darktext{fill:#f2eee8}
+ .brand{fill:#282522;font-size:17px;font-weight:700;letter-spacing:2px}
+ .small{fill:#282522;font-size:8px;letter-spacing:2.6px}
+ .ctx{fill:#625a50;font-size:14px}
+ .btn{fill:#fffdfa;stroke:#cfc8be;stroke-width:1.2}
+ .icon{fill:none;stroke:#302c27;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+ .lighticon{fill:none;stroke:#eae5de;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+ .border{stroke:#ddd6cc;stroke-width:1}
+ .accent{fill:#a64d13}
+ .tag{fill:#ece6de}
+</style></defs>
+<rect width="1200" height="1080" fill="#f0ede8"/>
+<text x="52" y="58" class="label">NAV-005 · CABEÇALHO COMPACTO · REGRA ESTREITA APROVADA</text>
+<text x="52" y="103" class="title">Manter uma linha quando a largura aperta</text>
+<text x="52" y="136" class="sub">A sequência aprovada preserva: marca e Administração à esquerda; tema antes do menu à direita.</text>
+<text x="52" y="162" class="muted">Viewport de referência: 320 px. A geometria abaixo parte da medição do login publicado; os controles são propostas, não medidas finais.</text>
+
+<rect x="52" y="188" width="1096" height="202" rx="16" class="card"/>
+<text x="76" y="222" class="label">REFERÊNCIA · IMPLEMENTAÇÃO PUBLICADA A 320 PX</text>
+<text x="76" y="250" class="h">Hoje, os controles passam para uma segunda linha</text>
+<rect x="76" y="268" width="500" height="94" rx="10" class="darkbar"/>
+<!-- current brand -->
+<g transform="translate(98 286)">
+ <path d="M1 17 17 7 33 17v29H1z" fill="none" stroke="#eee8df" stroke-width="2.8"/>
+ <path d="M17 7 33 17" fill="none" stroke="#a64d13" stroke-width="2.8"/>
+ <text x="44" y="25" class="darktext" font-size="15" font-weight="700" letter-spacing="1.5">CASA<tspan fill="#e58b36"> EM</tspan></text>
+ <text x="44" y="40" fill="#eee8df" font-size="7" letter-spacing="2.5">MÓDULOS</text>
+ <text x="154" y="32" fill="#d5cec4" font-size="13">Administração</text>
+</g>
+<g transform="translate(98 332)">
+ <rect width="116" height="28" rx="13" fill="#272522" stroke="#777066"/>
+ <circle cx="16" cy="14" r="7" class="lighticon"/>
+ <text x="30" y="18" class="darktext" font-size="11" font-weight="700">Escuro</text>
+ <rect x="126" y="0" width="62" height="28" rx="7" fill="#272522" stroke="#777066"/>
+ <path d="M141 8h32M141 14h32M141 20h32" class="lighticon"/>
+</g>
+<text x="602" y="286" class="copy">No DOM: marca + identificador ≈ 190 px;</text>
+<text x="602" y="308" class="copy">grupo de ações ≈ 119 px; margens laterais de 14 px.</text>
+<text x="602" y="342" class="copy">O total não cabe em 292 px de área útil;</text>
+<text x="602" y="364" class="copy">o header mediu 104,2 px e não teve overflow.</text>
+<rect x="1010" y="206" width="106" height="27" rx="13" class="tag"/>
+<text x="1025" y="224" class="label" font-size="11">ATUAL</text>
+
+<!-- alternative 1 -->
+<rect x="52" y="414" width="532" height="514" rx="16" class="card"/>
+<text x="76" y="450" class="label">ETAPA 2 · FALLBACK APROVADO</text>
+<text x="76" y="480" class="h">Quando a logo atinge o limite</text>
+<text x="76" y="506" class="copy">Após reduzir a logo até 30%, se faltar espaço, o tema passa a ícone.</text>
+<rect x="76" y="532" width="484" height="104" rx="10" class="darkbar"/>
+<g transform="translate(91 561)">
+ <path d="M1 14 13 6 25 14v23H1z" fill="none" stroke="#eee8df" stroke-width="2.4"/>
+ <path d="M13 6 25 14" fill="none" stroke="#a64d13" stroke-width="2.4"/>
+ <text x="33" y="20" class="darktext" font-size="12" font-weight="700" letter-spacing="1.1">CASA<tspan fill="#e58b36"> EM</tspan></text>
+ <text x="33" y="33" fill="#eee8df" font-size="6" letter-spacing="1.8">MÓDULOS</text>
+ <text x="111" y="25" fill="#d5cec4" font-size="12">Administração</text>
+</g>
+<g transform="translate(454 562)">
+ <rect width="42" height="44" rx="9" class="btn"/>
+ <circle cx="21" cy="22" r="9" class="icon"/>
+ <rect x="50" y="0" width="42" height="44" rx="9" class="btn"/>
+ <path d="M60 14h22M60 22h22M60 30h22" class="icon"/>
+</g>
+<text x="76" y="676" class="copy">Tema: ícone de claro/escuro com nome acessível.</text>
+<text x="76" y="699" class="copy">Menu continua no último controle, na extremidade.</text>
+<line x1="76" y1="724" x2="560" y2="724" class="border"/>
+<text x="76" y="754" class="muted">Estado aprovado</text>
+<text x="76" y="778" class="copy">• Logo reduzida até o limite de 30%</text>
+<text x="76" y="802" class="copy">• Tema sem rótulo visível; estado precisa seguir acessível</text>
+<text x="76" y="847" class="muted">A logo fica no máximo 30% menor que a referência.</text>
+<text x="76" y="877" class="muted">Ícone exato e dimensões continuam pendentes.</text>
+
+<!-- alternative 2 -->
+<rect x="616" y="414" width="532" height="514" rx="16" class="card"/>
+<text x="640" y="450" class="label">ETAPA 1 · PREFERÊNCIA APROVADA</text>
+<text x="640" y="480" class="h">Manter o tema rotulado</text>
+<text x="640" y="506" class="copy">O rótulo permanece visível enquanto a marca reduz até 30%.</text>
+<rect x="640" y="532" width="484" height="104" rx="10" class="darkbar"/>
+<g transform="translate(655 561)">
+ <path d="M1 14 13 6 25 14v23H1z" fill="none" stroke="#eee8df" stroke-width="2.4"/>
+ <path d="M13 6 25 14" fill="none" stroke="#a64d13" stroke-width="2.4"/>
+ <text x="33" y="20" class="darktext" font-size="12" font-weight="700" letter-spacing="1.1">CASA<tspan fill="#e58b36"> EM</tspan></text>
+ <text x="33" y="33" fill="#eee8df" font-size="6" letter-spacing="1.8">MÓDULOS</text>
+ <text x="111" y="25" fill="#d5cec4" font-size="12">Administração</text>
+</g>
+<g transform="translate(900 562)">
+ <rect width="74" height="44" rx="20" class="btn"/>
+ <circle cx="17" cy="22" r="8" class="icon"/>
+ <text x="31" y="26" fill="#302c27" font-size="10" font-weight="700">Escuro</text>
+ <rect x="82" y="0" width="42" height="44" rx="9" class="btn"/>
+ <path d="M92 14h22M92 22h22M92 30h22" class="icon"/>
+</g>
+<text x="640" y="676" class="copy">Tema: controle com rótulo e estado visíveis.</text>
+<text x="640" y="699" class="copy">Logo menor; mantém o identificador completo.</text>
+<line x1="640" y1="724" x2="1124" y2="724" class="border"/>
+<text x="640" y="754" class="muted">Impacto visual</text>
+<text x="640" y="778" class="copy">• Rótulo “Escuro” permanece explícito</text>
+<text x="640" y="802" class="copy">• Marca fica cerca de 24% menor</text>
+<text x="640" y="847" class="muted">A 320 px, a ilustração mostra redução aproximada de 24%.</text>
+<text x="640" y="877" class="muted">Redução máxima aprovada: 30%; valores em CSS ainda pendentes.</text>
+
+<rect x="52" y="952" width="1096" height="82" rx="14" fill="#e7e0d7"/>
+<text x="76" y="983" class="h" font-size="17">Regra homologada pelo usuário</text>
+<text x="76" y="1008" class="copy">Manter o tema rotulado durante a redução da logo, limitada a 30%; se for preciso reduzir além disso, usar o tema apenas com ícone.</text>
+<text x="52" y="1060" class="muted">Composição da regra aprovada; geometrias esquemáticas. Breakpoint, interpolação exata, glifo do ícone e estilo dos controles não estão especificados.</text>
+</svg>

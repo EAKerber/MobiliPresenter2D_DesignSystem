@@ -53,7 +53,7 @@ O estado de `/config/` e `/access/manage.html` foi redirecionado sem sessão. Is
 | CMP-001 | — | Governança, origem não recuperável, componente sem especificação ou direção futura; sem tela concreta inferida |
 | ENV-001 | — | Governança, origem não recuperável, componente sem especificação ou direção futura; sem tela concreta inferida |
 
-**NAV-005:** o padrão largo público A aplica-se às rotas públicas; o padrão privado B aplica-se a `/config/`, `/admin.html`, `/access/` e `/access/manage.html`; o padrão contextual tipo viewer aplica-se a `/viewer/`. Para larguras compactas, a opção A está aprovada estruturalmente: linha única, marca e identificador/contexto à esquerda, tema antes do menu na extremidade direita; páginas públicas agrupam navegação e contato no menu. Os critérios exatos estão em `decisions.json`. Breakpoints, alturas, espaçamento, tipografia, cores, ícones/estilo dos controles e comportamento de rótulos longos permanecem abertos.
+**NAV-005:** o padrão largo público A aplica-se às rotas públicas; o padrão privado B aplica-se a `/config/`, `/admin.html`, `/access/` e `/access/manage.html`; o padrão contextual tipo viewer aplica-se a `/viewer/`. Para larguras compactas, a opção A está aprovada estruturalmente: linha única, marca e identificador/contexto à esquerda, tema antes do menu na extremidade direita; páginas públicas agrupam navegação e contato no menu. Em cabeçalhos privados estreitos, manter o rótulo do tema enquanto a logo reduz até 30%; se mais redução for necessária, usar tema apenas por ícone, preservando identificador e ordem dos controles. Os critérios exatos estão em `decisions.json`. Breakpoints, interpolação, dimensões, espaçamento, tipografia, cores e glifo do ícone permanecem abertos.
 
 **VIS-002 — alvos de seletor com pares aprovados:** `.hero-description` em `/`, `.how-hero-note` em `/how-it-works/` e `.about-scale p:not(.eyebrow)` em `/about/` usam o par contextual claro aprovado `#675F55` sobre `#F0EDE8` (5,38:1). `.study-band .eyebrow` em `/how-it-works/` usa o par contextual aprovado `#70522F` sobre `#E8E3DC` (5,60:1). Os pares não são tokens globais e não aprovam variantes escuras.
 
@@ -67,3 +67,6 @@ Não há captura atual de superfícies autenticadas. Estados de teclado completo
 
 
 **NAV-005 — evidência compacta:** a captura do DOM no login sem sessão indica uma linha a 350 px e duas linhas a 340 px (tema escuro; sem overflow nos estados testados). Isso descreve a implementação publicada; não estabelece breakpoint ou solução visual para caber na composição A. Ver [RUNTIME_AUDIT.md](RUNTIME_AUDIT.md).
+
+
+**NAV-005 — encaixe estreito homologado:** em cabeçalhos privados, preservar o rótulo do tema enquanto a logo reduz no máximo 30%; acima desse limite, passar o tema para ícone apenas. Manter identificador completo e hambúrguer na extremidade direita. O valor de troca exato não está homologado; ver `decisions.json` e prancha comparativa.
