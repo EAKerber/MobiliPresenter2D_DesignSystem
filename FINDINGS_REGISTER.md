@@ -27,7 +27,7 @@ Este registro separa defeitos reproduzidos, relatos intermitentes, triagem de sn
 | ID | O que foi homologado | Limite |
 |---|---|---|
 | NAV-005 | Estrutura larga A nas páginas públicas; B nas privadas; padrão contextual tipo viewer nas navegações de segunda ordem. Em compacto, opção A: linha única, marca e identificador/contexto à esquerda, tema antes do menu na extremidade direita; páginas públicas agrupam navegação e contato no menu. | Regra para larguras muito estreitas aprovada: manter rótulo do tema enquanto a logo reduz até 30%, depois usar controle icon-only; identificador permanece completo. Breakpoint exato, dimensões, espaçamento, tipografia, cores e glifo seguem em aberto. |
-| VIS-002 | Papel azul para informação funcional/de processo; base promocional cobre `#A64D13`; pares claros exatos usados em FIND-002/003. | A base cobre não aprova automaticamente combinações; pares claros não são tokens globais nem aprovam tema escuro. |
+| VIS-002 | Papel azul para informação funcional/de processo; base promocional cobre `#A64D13`; par de rótulo quente FIND-003. | O par secundário claro de FIND-002 foi reaberto por feedback estético e aguarda nova escolha. Pares são contextuais, não tokens globais; não aprovam tema escuro. |
 | PRIVATE-HEADER-001 | Contrato funcional para cabeçalhos privados, grupos de navegação por acesso e ordem dos controles, conforme `decisions.json`. | Observação runtime confirma comportamento em algumas rotas/estados, mas não comprova confiabilidade após login. |
 
 ## Direções acordadas e decisões incompletas
