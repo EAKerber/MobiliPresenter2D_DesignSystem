@@ -1,6 +1,6 @@
 # Paleta e conformidade visual
 
-**Estado:** registro de valores contextualizados e plano de fechamento da paleta; não declara uma paleta global integralmente homologada.  
+**Estado:** registro de valores contextualizados e plano de fechamento da paleta; registra a paleta-base aprovada, mas ainda não declara conformidade global da interface.  
 **Fonte canônica de decisões:** [decisions.json](decisions.json).  
 **Produto mapeado:** snapshot `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`; deploy/runtime observado em 2026-10-18.  
 **Inventário:** [VISUAL_INVENTORY.md](VISUAL_INVENTORY.md), [visual-inventory.json](visual-inventory.json) e [DECISION_APPLICATION_MAP.md](DECISION_APPLICATION_MAP.md).
@@ -23,9 +23,11 @@ Contraste é uma condição necessária, mas não prova sozinho a conformidade: 
 
 | Papel / contexto | Valor ou par | Estado | Limite |
 |---|---|---|---|
+| Base neutra aprovada para paleta de interface | Canvas claro/escuro `#E8E3DC` / `#171614`; superfície `#F0EDE8` / `#211F1C`; superfície suave `#DED9D2` / `#2C2924`; textos `#292723` / `#F0EAE1` e `#705C4B` / `#C7BBAA`; bordas `#D6CCC0` / `#4E4942` | Valores de paleta aprovados pelo usuário (VIS-002) | Aplicação por componente e verificação de contraste no DOM pendentes. `#F0EDE8` evita branco puro; `#171614` evita preto puro. |
+| Foco da paleta aprovada | Contorno `#8B6A40` / `#D8BC7C`, 4 px com offset 3 px | Tratamento visual aprovado (VIS-002) | Validar teclado e contraste em componentes reais. |
 | Informação promocional de produto e campanhas | Base cobre `#A64D13` | Papel e base aprovados (VIS-002) | Não é warning técnico. Variantes light/dark, superfícies, texto e contraste continuam por homologar. |
 | Informação de processo/funcionamento | Família azul | Papel aprovado (VIS-002); valores exatos ainda não homologados como tokens | `--info: #245d87` (light) e `#a7d1f0` (dark) existem em `app/admin/admin.css`; são uso atual a conferir no runtime, não valores oficiais. |
-| Texto auxiliar claro em três contextos públicos auditados | Par anterior `#675F55` sobre `#F0EDE8`; substituto candidato `#705C4B` | Par anterior reaberto após feedback estético; novo tom não aprovado | `.hero-description`, `.how-hero-note`, `.about-scale p:not(.eyebrow)`. Não implementar até nova revisão; ver PR20.
+| Texto auxiliar claro em três contextos públicos auditados | Par anterior `#675F55` sobre `#F0EDE8`; substituto aprovado na paleta `#705C4B` | Par anterior reaberto após feedback estético; tom da paleta aprovado; aplicação pendente | `.hero-description`, `.how-hero-note`, `.about-scale p:not(.eyebrow)`. Não implementar até nova revisão; ver PR20.
 | Rótulo quente claro em Como funciona | `#70522F` sobre `#E8E3DC`, 5,60:1 | Par contextual aprovado (VIS-002) | `.study-band .eyebrow` somente. |
 | Legenda da ilustração no tema escuro | `#F0EDE8` sobre `#20211F`, 13,85:1 | Par contextual aprovado (VIS-003 / FIND-004), seleção A | `.study-art figcaption` em `/how-it-works/`, tema escuro. Não global; aplicação no produto pendente. |
 | Erro, sucesso e aviso técnico | Sem token homologado neste registro | Semântica reconhecível e harmonizada com marca é direção; valores/candidatos visuais não aprovados | Não reaproveitar cobre promocional como warning automaticamente. |
@@ -50,7 +52,7 @@ Esta lista aponta trabalhos requeridos pela evidência atual. Não é autorizaç
 
 ## Proposta inicial para revisão
 
-A revisão solicitada retirou `#675F55` do papel de secundário geral, substituiu o foco discreto `#6E512E` por contornos mais visíveis, e trocou a superfície branca pura `#FFFFFF` por marfim quente `#F0EDE8`. A regra é para superfícies de interface; não altera imagens, logotipos ou ilustrações. Veja os arquivos abaixo. A primeira consolidação está no [quadro experimental da paleta candidata A](visualEvidence/experiments/PALETTE-candidate-A-v2.svg) e em [sua especificação](visualEvidence/experiments/PALETTE-candidate-A.md). Ela reutiliza os neutros e estados mais recorrentes do snapshot, mas não converte esses valores em tokens oficiais. Os contrastes do quadro são pares de amostra; os estados de foco, indisponível, seleção e a promoção no tema escuro seguem para revisão.
+O usuário aprovou a paleta A: ela retira `#675F55` do papel secundário, substitui o foco discreto `#6E512E` por contornos mais visíveis e troca a superfície branca pura `#FFFFFF` por marfim quente `#F0EDE8`. A regra é para superfícies de interface; não altera imagens, logotipos ou ilustrações. Veja os arquivos abaixo. A decisão está registrada no [quadro da paleta A](visualEvidence/experiments/PALETTE-candidate-A-v2.svg) e em [sua especificação](visualEvidence/experiments/PALETTE-candidate-A.md). Ela reutiliza os neutros e estados mais recorrentes do snapshot, e mantém esses papéis como valores homologados de paleta. A criação de tokens e a aplicação no produto ainda dependem do inventário de componentes, mapeamento e validação runtime. Os contrastes do quadro são pares de amostra; os estados de foco, indisponível, seleção e a promoção no tema escuro seguem para revisão.
 
 ## Como fechar a paleta total
 
