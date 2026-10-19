@@ -39,7 +39,8 @@ A aprovação é contextual: não cria tokens globais, não aprova variações d
 
 ## Ainda aberto
 
-- Definir breakpoints e comportamento responsivo entre larguras; homologar medidas, tipografia, cores, assets, estilo dos controles e tratamento de nomes longos.
+- Definir o comportamento em larguras muito estreitas: no login administrativo, o header atual quebra entre 340 e 350 px, enquanto a composição A aprovada é de uma linha. Decidir se haverá redução de marca/identificador, truncamento contextual ou um fallback mais estreito; não inferir uma solução a partir da captura atual.
+- Homologar medidas, tipografia, cores, assets e estilo dos controles.
 - Homologar dimensões, tipografia, cores, assets e estilo final dos cabeçalhos.
 - Medir outros pares e estados; os dois aprovados não se generalizam.
 
@@ -51,3 +52,8 @@ A aprovação é contextual: não cria tokens globais, não aprova variações d
 A auditoria runtime mediu 1,78:1 para `.study-art figcaption` clara sobre a superfície clara da ilustração no tema escuro. Após revisar o caso real publicado em `/how-it-works/`, o usuário escolheu **B — faixa escura na base da ilustração**. A legenda permanece integrada à figura sobre um fundo de contraste controlado.
 
 A aprovação cobre somente essa relação de composição. As cores e a opacidade/gradiente da faixa na prancha são amostras experimentais: continuam pendentes de medição e homologação. Também não ficam definidos dimensões, espaçamento, comportamento responsivo, extensão para outros temas/componentes nem implementação no produto. A prancha esquemática não substitui uma implementação fiel nem a auditoria do DOM final.
+
+
+### Ponto de revisão compacto identificado em runtime
+
+No login administrativo publicado, a estrutura atual usa uma linha em 350 px e duas linhas em 340 px. A seleção da opção A aprovou a composição de uma linha, mas ainda não definiu como acomodar o conjunto quando a largura disponível diminui. A faixa observada delimita a investigação; não é um breakpoint homologado. Medições e limites estão em [RUNTIME_AUDIT.md](RUNTIME_AUDIT.md) e [runtime-evidence.json](runtime-evidence.json). Nenhuma alternativa visual para reduzir/truncar os elementos foi homologada.
