@@ -51,16 +51,17 @@
     },
     {
       "id": "NAV-005",
-      "status": "approved-for-wide-and-compact-layout-structure",
+      "status": "approved-for-wide-and-compact-structure-with-narrow-fit-rule",
       "verdict": "agreed",
       "decision": "Header global com acesso às quatro páginas públicas. Identificação do ambiente do viewer fica em área contextual separada do header; controles e interação da cena ficam no conteúdo do viewer. O viewer é subpágina de ambiente, portanto Ambientes não deve ser falsamente marcado como a página ativa.",
       "examplesNotApproved": [
         "Ambientes › Cozinha é somente exemplo de breadcrumb."
       ],
       "notApproved": [
-        "Exact header heights, spacing, typography, colors, icons and logo treatment",
-        "Breakpoint values and responsive thresholds",
-        "Compact control dimensions, labels/icons, truncation/wrapping behavior and exact placement at intermediate widths"
+        "Exact breakpoint values and responsive width thresholds",
+        "Exact header heights, spacing, typography, colors, hit-target dimensions and icon glyph/surface treatment",
+        "Logo sizing interpolation outside the measured 320 px reference and treatment of other unusually long contextual labels",
+        "Behavior below the minimum usable viewport width and product implementation"
       ],
       "future": [
         "Generalização multiambiente (ENV-001)."
@@ -73,12 +74,24 @@
       },
       "implementationAuthorized": false,
       "approvedAt": "2026-10-18",
-      "approvalSource": "User selection of option A in the NAV-005 compact-header visual review.",
+      "approvalSource": "User selection of wide/compact header patterns, compact option A, and narrow-fit rule: keep the theme label while reducing the logo by no more than 30%, then switch the theme control to icon-only.",
       "compactLayoutPatternsApproved": {
         "publicPages": "Option A: preserve a single-row header. Keep the brand at left; place the compact theme control immediately before the hamburger at the far right. Group public page navigation and the existing contact access in the hamburger menu.",
-        "privatePages": "Option A: preserve a single row with the brand and current page/area identifier together at left; place the theme control immediately before the hamburger at the far right.",
+        "privatePages": "Option A: preserve a single row with the brand and current page/area identifier together at left; place the theme control immediately before the hamburger at the far right. At very narrow widths, apply compactNarrowFitRule.",
         "secondaryNavigationPages": "Option A: preserve a single row with the brand and contextual return label together at left; place the theme control before the menu/hamburger at the far right.",
-        "scope": "Structural composition only. This extends NAV-005 approval to compact layouts but does not set breakpoint values, exact dimensions, spacing, typography, colors, icon/control styling, wrapping or truncation behavior, or product implementation."
+        "scope": "Structural composition plus the approved narrow-fit behavior. This does not set exact breakpoints, pixel sizes, spacing, typography, colors, exact icon glyph or control surface styling, nor authorize product implementation."
+      },
+      "compactNarrowFitRule": {
+        "status": "approved-behavioral-rule-values-pending",
+        "rule": "Keep the theme control's text label visible while reducing the logo as needed, up to a maximum 30% reduction. If the one-row header would require reducing the logo further, change the theme control to icon-only. Keep the full page/area identifier and place the hamburger at the far right.",
+        "reference": "The published /admin.html header at a 320 CSS px viewport showed .brand__logo at 105 px wide. For this observed case, a 30% reduction is approximately 73.5 px. This is a calculation reference for the compact header, not a global logo token.",
+        "accessibility": "The icon-only theme control must retain an accessible name/state description.",
+        "stillOpen": [
+          "Exact width at which the theme control switches to icon-only",
+          "Exact logo sizing interpolation and control dimensions/gaps",
+          "Exact icon glyph and control surface treatment",
+          "Behavior below the minimum usable viewport width"
+        ]
       }
     },
     {
