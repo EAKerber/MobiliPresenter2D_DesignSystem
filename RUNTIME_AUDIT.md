@@ -82,7 +82,7 @@ O inventário estático não encontrou um gate de contraste conectado às rotas 
 ## Próxima etapa recomendada
 
 1. VIS-002 agora registra dois pares contextuais aprovados para texto no tema claro; não são tokens globais e não resolvem os achados do tema escuro.
-2. NAV-005 agora aprova a estrutura larga: padrão A para páginas públicas, B para privadas e header contextual tipo viewer para páginas de segunda ordem. Estética final, medidas e layouts compactos continuam em aberto.
+2. NAV-005 aprova as composições estruturais largas e compactas. No compacto, a opção A mantém uma linha, contexto junto da marca e tema antes do hambúrguer; breakpoints, medidas e tratamento visual continuam em aberto. A evidência runtime em 515 px é somente da rota pública.
 3. Revalidar a camada de introdução e o primeiro clique no menu público como comportamento funcional, sem confundir esse achado com a navegação privada.
 4. Reproduzir a transição pós-login e reconciliar a triagem estática #208 com o snapshot atual; a primeira inspeção autenticada confirmou o contador incorreto, mas não substitui a auditoria de contraste nos dois temas.
 5. Planejar a etapa de aplicação visual no produto após revisar os padrões e fechar as medições restantes.
@@ -110,3 +110,8 @@ Na rota pública `/how-it-works/`, a sessão do navegador estava em viewport de 
 ## Validade das capturas anteriores
 
 O usuário observou que as capturas salvas anteriormente mostram uma versão anterior do cabeçalho. Apesar dos metadados históricos associarem essas imagens ao snapshot/deploy `298c114`, elas não devem ser usadas como referência visual atual dos cabeçalhos. Nesta continuação, o cabeçalho atual do Configurador foi observado no navegador, mas não houve substituição das capturas no repositório. A prancha de FIND-004 é um esquema experimental e não substitui capturas atuais do produto.
+
+
+### Decisão compacta posterior à captura
+
+Após a observação runtime acima, o usuário escolheu a opção A para a composição compacta de NAV-005. A escolha aprova somente a estrutura: linha única, marca com identificador/contexto à esquerda e tema antes do menu na extremidade direita; navegação e contato públicos ficam no menu. A captura em `/how-it-works/` é uma observação pública separada e não comprova os esquemas privados ou contextuais da prancha. Breakpoints e valores visuais seguem pendentes.
