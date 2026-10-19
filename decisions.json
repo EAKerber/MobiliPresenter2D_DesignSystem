@@ -261,21 +261,27 @@
     },
     {
       "id": "VIS-003",
-      "status": "visual-treatment-approved-values-pending",
+      "status": "visual-treatment-and-scoped-color-pair-approved; product-implementation-pending",
       "verdict": "agreed",
       "finding": "FIND-004",
-      "decision": "No tema escuro, manter a legenda integrada à ilustração sobre uma faixa escura na base da imagem (opção B), para criar um fundo de contraste controlado sem separar a legenda da figura.",
-      "approvedScope": "Somente a relação de composição: faixa escura atrás da legenda na base da imagem.",
+      "decision": "No tema escuro, manter a legenda integrada à ilustração sobre uma faixa escura opaca na base. Para FIND-004, o usuário escolheu a alternativa A: faixa #20211F com texto #F0EDE8 (contraste calculado 13,85:1).",
+      "approvedScope": "Somente a composição e o par sólido desta legenda: .study-art figcaption em /how-it-works/, tema escuro.",
       "notApproved": [
-        "Cores exatas de texto/faixa e opacidade ou gradiente",
-        "Tokens globais, variantes por tema/superfície ou extensão para outros componentes",
-        "Dimensões, espaçamento e comportamento responsivo",
-        "Implementação no produto"
+        "Token global de superfície/texto ou extensão para outros componentes e temas",
+        "Gradiente, opacidade, dimensões, espaçamento e comportamento responsivo",
+        "Implementação no produto; requer auditoria do DOM final após mudança"
       ],
-      "evidence": "A auditoria runtime encontrou contraste de 1,78:1 em .study-art figcaption no tema escuro. A escolha B foi feita após revisão da prancha de alternativas e do caso real publicado em /how-it-works/.",
+      "evidence": "Auditoria runtime em 2026-10-18 encontrou #C4BCB2 sobre #FCF9EF, 1,78:1. A prancha experimental comparou três cores sólidas; a seleção A fixa o par #F0EDE8 sobre #20211F com 13,85:1.",
       "implementationAuthorized": false,
       "approvedAt": "2026-10-18",
-      "approvalSource": "Seleção explícita do usuário da opção B."
+      "approvalSource": "Seleção explícita do usuário da alternativa A na prancha FIND-004.",
+      "approvedPair": {
+        "foreground": "#F0EDE8",
+        "background": "#20211F",
+        "contrast": "13.85:1",
+        "status": "approved-contextual-pair",
+        "scope": "FIND-004 only; not a global token"
+      }
     },
     {
       "id": "EST-01",
