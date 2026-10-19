@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000">
+<defs><style>.k{font:700 15px Arial,sans-serif;letter-spacing:2px;fill:#705C4B}.t{font:700 36px Arial,sans-serif;fill:#292723}.sub{font:17px Arial,sans-serif;fill:#5E574F}.state{font:700 20px Arial,sans-serif;fill:#292723}.hint{font:14px Arial,sans-serif;fill:#5E574F}.mode{font:700 11px Arial,sans-serif;letter-spacing:1px}.msg{font:700 19px Arial,sans-serif}.ratio{font:14px Arial,sans-serif}.note{font:14px Arial,sans-serif;fill:#5E574F}.paper{font:700 13px Arial,sans-serif;letter-spacing:1px}.promo{font:700 19px Arial,sans-serif;fill:#F0EDE8}</style></defs>
+<rect width="1440" height="1000" fill="#E8E3DC"/>
+<text x="72" y="58" class="k">VIS-002 · SELEÇÃO HOMOLOGADA · MAPEAMENTO PENDENTE</text>
+<text x="72" y="110" class="t">Maior contraste em cada estado e tema</text>
+<text x="72" y="146" class="sub">Para cada estado, foi escolhido separadamente o par de texto e fundo com maior contraste entre as opções A/B.</text>
+<text x="72" y="178" class="note">A escolha homologa estes pares contextuais. Atribuição a componentes e validação no DOM continuam pendentes.</text>
+<text x="342" y="224" class="paper" fill="#705C4B">CLARO</text><text x="830" y="224" class="paper" fill="#705C4B">ESCURO</text>
+<!-- Error -->
+<g transform="translate(72 242)"><rect width="1296" height="128" rx="18" fill="#F0EDE8" stroke="#D6CCC0"/><text x="24" y="48" class="state">Erro</text><text x="24" y="76" class="hint">Não foi possível salvar.</text>
+<rect x="258" y="16" width="500" height="96" rx="14" fill="#F0E5E1"/><text x="278" y="42" class="mode" fill="#8E382F">ERRO · TEMA CLARO</text><text x="278" y="70" class="msg" fill="#8E382F">Não foi possível salvar.</text><text x="278" y="95" class="ratio" fill="#8E382F">#8E382F sobre #F0E5E1 · 6,17:1</text>
+<rect x="774" y="16" width="498" height="96" rx="14" fill="#352522"/><text x="794" y="42" class="mode" fill="#E7AAA2">ERRO · TEMA ESCURO</text><text x="794" y="70" class="msg" fill="#E7AAA2">Não foi possível salvar.</text><text x="794" y="95" class="ratio" fill="#E7AAA2">#E7AAA2 sobre #352522 · 7,41:1</text></g>
+<!-- Success -->
+<g transform="translate(72 390)"><rect width="1296" height="128" rx="18" fill="#F0EDE8" stroke="#D6CCC0"/><text x="24" y="48" class="state">Sucesso</text><text x="24" y="76" class="hint">Alterações salvas.</text>
+<rect x="258" y="16" width="500" height="96" rx="14" fill="#E5ECE6"/><text x="278" y="42" class="mode" fill="#35634A">SUCESSO · TEMA CLARO</text><text x="278" y="70" class="msg" fill="#35634A">Alterações salvas.</text><text x="278" y="95" class="ratio" fill="#35634A">#35634A sobre #E5ECE6 · 5,76:1</text>
+<rect x="774" y="16" width="498" height="96" rx="14" fill="#223129"/><text x="794" y="42" class="mode" fill="#A8CAB1">SUCESSO · TEMA ESCURO</text><text x="794" y="70" class="msg" fill="#A8CAB1">Alterações salvas.</text><text x="794" y="95" class="ratio" fill="#A8CAB1">#A8CAB1 sobre #223129 · 7,63:1</text></g>
+<!-- Warning -->
+<g transform="translate(72 538)"><rect width="1296" height="128" rx="18" fill="#F0EDE8" stroke="#D6CCC0"/><text x="24" y="48" class="state">Aviso</text><text x="24" y="76" class="hint">Confira antes de continuar.</text>
+<rect x="258" y="16" width="500" height="96" rx="14" fill="#EEE7D8"/><text x="278" y="42" class="mode" fill="#70531E">AVISO · TEMA CLARO</text><text x="278" y="70" class="msg" fill="#70531E">Confira antes de continuar.</text><text x="278" y="95" class="ratio" fill="#70531E">#70531E sobre #EEE7D8 · 5,79:1</text>
+<rect x="774" y="16" width="498" height="96" rx="14" fill="#332C1E"/><text x="794" y="42" class="mode" fill="#E4C989">AVISO · TEMA ESCURO</text><text x="794" y="70" class="msg" fill="#E4C989">Confira antes de continuar.</text><text x="794" y="95" class="ratio" fill="#E4C989">#E4C989 sobre #332C1E · 8,56:1</text></g>
+<text x="72" y="716" class="k">OUTROS PAPÉIS MANTIDOS</text>
+<g transform="translate(72 740)"><rect width="620" height="158" rx="18" fill="#F0EDE8" stroke="#D6CCC0"/><text x="24" y="38" class="paper" fill="#245D87">INFORMAÇÃO DE PROCESSO · AZUL</text><text x="24" y="76" font-family="Arial,sans-serif" font-size="17" fill="#245D87">A etapa ainda não foi publicada.</text><text x="24" y="112" class="note">Papel semântico aprovado; exemplo de valores em uso.</text><text x="24" y="136" class="note">Contraste no fundo de referência claro: 6,01:1.</text></g>
+<g transform="translate(716 740)"><rect width="652" height="158" rx="18" fill="#A64D13"/><text x="24" y="38" class="paper" fill="#F0EDE8">COMUNICAÇÃO PROMOCIONAL · COBRE</text><text x="24" y="76" class="promo">Condição especial por três meses</text><text x="24" y="112" font-family="Arial,sans-serif" font-size="14" fill="#F0EDE8">#A64D13 · base aprovada · não é aviso técnico</text><text x="24" y="136" font-family="Arial,sans-serif" font-size="14" fill="#F0EDE8">Texto #F0EDE8 sobre cobre: 4,87:1.</text></g>
+<text x="72" y="945" class="note">Contraste calculado para texto comum sobre fundos sólidos; os valores não comprovam contraste de ícones, bordas ou composições com transparência.</text>
+</svg>
