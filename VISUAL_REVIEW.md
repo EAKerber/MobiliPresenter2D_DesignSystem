@@ -30,7 +30,14 @@ A prancha anterior de opções permanece em [NAV-005-public-header-options.svg](
 
 No login administrativo publicado, o header atual usa uma linha a 350 px e duas linhas a 340 px. O usuário aprovou este comportamento de encaixe: manter o rótulo do tema enquanto a logo reduz até no máximo 30%; se for necessária redução maior para manter uma linha, passar o tema para ícone apenas. O identificador da página permanece completo e o hambúrguer na extremidade direita. Como referência de cálculo, a logo observada a 320 px tem 105 px de largura; o limite de redução nesse caso corresponde a aproximadamente 73,5 px.
 
-A prancha [NAV-005-narrow-theme-control-options.svg](visualEvidence/experiments/NAV-005-narrow-theme-control-options.svg) mostra a sequência aprovada. O ponto de troca exato, a interpolação do tamanho e o desenho do ícone continuam pendentes; a faixa observada não é um breakpoint homologado. Medições do comportamento atual estão em [RUNTIME_AUDIT.md](RUNTIME_AUDIT.md) e [runtime-evidence.json](runtime-evidence.json).
+A prancha [NAV-005-narrow-theme-control-options.svg](visualEvidence/experiments/NAV-005-narrow-theme-control-options.svg) agora registra uma especificação responsiva definida pelo assistente a pedido do usuário, ainda sujeita à validação do DOM antes de qualquer aplicação no produto:
+
+- Logo com base de 105 px, flexível até o limite de 73,5 px; sem redução adicional.
+- Controle Claro/Escuro rotulado enquanto houver espaço para essa faixa. Mostrar apenas o ícone quando a largura interna do header chegar a 278 px ou menos — aproximadamente 306 px de viewport com margens laterais de 14 px.
+- Usar sol no tema claro e lua no escuro, área de toque de 44 × 44 px e 8 px de distância do hambúrguer. Nome acessível informa o tema atual; o estado pressionado acompanha o modo escuro.
+- Abaixo de 288 px de viewport, permitir duas linhas para preservar a logo mínima, o identificador completo e os controles.
+
+A conta usa as dimensões aproximadas registradas no runtime; o threshold não é uma medição de breakpoint do CSS atual. A especificação completa e a derivação estão em `decisions.json`; validação de DOM, tema e encaixe continuam antes da implementação do produto.
 ## VIS-002 — pares exatos aprovados
 
 ![Pares de contraste B selecionados](visualEvidence/experiments/VIS-002-contrast-options.svg)
@@ -44,8 +51,8 @@ A aprovação é contextual: não cria tokens globais, não aprova variações d
 
 ## Ainda aberto
 
-- Medir no DOM o ponto de troca entre tema rotulado e tema por ícone, e validar a redução máxima de 30% da logo em larguras próximas ao encaixe.
-- Definir o ícone exato, as dimensões dos controles e o comportamento de outros identificadores contextuais longos.
+- Validar a proposta de NAV-005 no DOM atualizado, nos dois temas e em larguras próximas a 288, 306 e 320 px.
+- Confirmar que o fallback em duas linhas preserva o identificador completo em larguras menores que 288 px.
 - Medir outros pares e estados; os dois aprovados não se generalizam.
 
 
