@@ -26,7 +26,7 @@ Este registro separa defeitos reproduzidos, relatos intermitentes, triagem de sn
 
 | ID | O que foi homologado | Limite |
 |---|---|---|
-| NAV-005 | Estrutura larga A nas páginas públicas; B nas privadas; padrão contextual tipo viewer nas navegações de segunda ordem. Em compacto, opção A: linha única, marca e identificador/contexto à esquerda, tema antes do menu na extremidade direita; páginas públicas agrupam navegação e contato no menu. | Breakpoints, dimensões, espaçamento, tipografia, cores, estilo dos controles e comportamento de rótulos longos seguem em aberto. |
+| NAV-005 | Estrutura larga A nas páginas públicas; B nas privadas; padrão contextual tipo viewer nas navegações de segunda ordem. Em compacto, opção A: linha única, marca e identificador/contexto à esquerda, tema antes do menu na extremidade direita; páginas públicas agrupam navegação e contato no menu. | Regra para larguras muito estreitas aprovada: manter rótulo do tema enquanto a logo reduz até 30%, depois usar controle icon-only; identificador permanece completo. Breakpoint exato, dimensões, espaçamento, tipografia, cores e glifo seguem em aberto. |
 | VIS-002 | Papel azul para informação funcional/de processo; base promocional cobre `#A64D13`; pares claros exatos usados em FIND-002/003. | A base cobre não aprova automaticamente combinações; pares claros não são tokens globais nem aprovam tema escuro. |
 | PRIVATE-HEADER-001 | Contrato funcional para cabeçalhos privados, grupos de navegação por acesso e ordem dos controles, conforme `decisions.json`. | Observação runtime confirma comportamento em algumas rotas/estados, mas não comprova confiabilidade após login. |
 
@@ -34,7 +34,7 @@ Este registro separa defeitos reproduzidos, relatos intermitentes, triagem de sn
 
 - **EST-01–10:** direções conceituais em `decisions.json`; cores, medidas, comportamento por componente e casos limite continuam pendentes em itens específicos.
 - **NAV-004:** contrato funcional do menu público definido; FIND-001 demonstra uma condição em que o primeiro clique não é atendido.
-- **NAV-005:** estruturas largas e composição compacta A estão aprovadas; dimensões, breakpoints e detalhes visuais permanecem pendentes.
+- **NAV-005:** estruturas largas e compacta A estão aprovadas, incluindo regra de logo até -30% e tema icon-only após o limite; breakpoint e detalhes visuais permanecem pendentes.
 - **VIS-001:** pendente.
 - **CMP-001:** origem sem detalhe suficiente; revisão da biblioteca de componentes em andamento.
 - **ENV-001:** generalização multiambiente futura, não homologada.
