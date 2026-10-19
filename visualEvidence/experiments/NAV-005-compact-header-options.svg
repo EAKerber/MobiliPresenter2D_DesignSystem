@@ -71,8 +71,8 @@
   <g transform="translate(480 16)"><rect width="42" height="44" rx="10" class="btn"/><circle cx="21" cy="22" r="9" class="icon"/></g>
   <g transform="translate(532 16)"><rect width="42" height="44" rx="10" class="btn"/><path d="M11 14h20M11 22h20M11 30h20" class="icon"/></g>
  </g>
- <text x="28" y="591" class="copy">Preserva o retorno contextual antes do menu.</text>
- <text x="28" y="611" class="muted">Risco a validar: densidade em larguras menores e nomes longos.</text>
+ <text x="28" y="604" class="copy">Preserva o retorno contextual antes do menu.</text>
+ <text x="28" y="624" class="muted">Risco a validar: densidade em larguras menores e nomes longos.</text>
 </g>
 <g transform="translate(736 215)">
  <rect width="648" height="850" rx="18" class="card"/>
@@ -106,7 +106,7 @@
   <text x="20" y="84" class="context">Administração</text>
   <g transform="translate(484 11)"><rect width="42" height="44" rx="10" class="btn"/><circle cx="21" cy="22" r="9" class="icon"/></g>
  </g>
- <text x="28" y="492" class="copy">O identificador permanece legível sem apertar a marca.</text>
+ <text x="28" y="502" class="copy">O identificador permanece legível sem apertar a marca.</text>
  <!-- secondary -->
  <text x="28" y="544" class="label">NAVEGAÇÃO CONTEXTUAL</text>
  <g transform="translate(28 560)">
@@ -120,8 +120,8 @@
   <text x="20" y="84" class="context">← Ambientes</text>
   <g transform="translate(484 11)"><rect width="42" height="44" rx="10" class="btn"/><circle cx="21" cy="22" r="9" class="icon"/></g>
  </g>
- <text x="28" y="678" class="copy">Preserva o retorno contextual em uma faixa própria.</text>
- <text x="28" y="698" class="muted">Risco a validar: mais altura em páginas com rolagem.</text>
+ <text x="28" y="686" class="copy">Preserva o retorno contextual em uma faixa própria.</text>
+ <text x="28" y="710" class="muted">Risco a validar: mais altura em páginas com rolagem.</text>
 </g>
 <text x="56" y="980" class="sub">Perguntas para revisão: preservar o identificador em duas linhas compensa a altura extra? Em páginas públicas compactas, manter contato visível ou agrupá-lo no menu?</text>
 <text x="56" y="1014" class="muted">Prancha experimental; não homologa nenhuma composição. Mockups usam controles e marca esquemáticos, sem dimensões, tokens ou breakpoint aprovados.</text>
