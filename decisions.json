@@ -140,7 +140,7 @@
         },
         "implementation": "Não autorizada neste registro. Implementar depois da validação DOM e revisão da especificação no repositório do produto.",
         "specificationSource": "Valores definidos pelo assistente a pedido do usuário, derivados da geometria publicada e da regra de redução homologada.",
-        "statusNotice": "Especificação recomendada e definida; ainda não é evidência de funcionamento em runtime nem token global.",
+        "statusNotice": "A geometria da implementação atual foi medida no runtime. Os parâmetros recomendados são cálculos para uma futura mudança e não comprovam funcionamento; não são tokens globais.",
         "runtimeValidation": {
           "status": "current-product-geometry-validated-at-sampled-widths; proposed-values-calculated-not-implemented",
           "evidenceFile": "NAV-005_RUNTIME_VALIDATION_2026-10-18.md",
