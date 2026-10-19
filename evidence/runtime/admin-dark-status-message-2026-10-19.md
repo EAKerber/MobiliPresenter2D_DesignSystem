@@ -20,7 +20,12 @@ The measured contrast exceeds WCAG AA for ordinary text in this observed state. 
 
 ## Approved classification
 
-The user confirmed that this message derives from the current state, rather than from an action just performed. It is therefore **process information**, not a success confirmation, and its semantic role is the homologated blue information color from VIS-002. The observed muted foreground is the current product styling; changing it to blue remains product implementation work and was not performed in this audit.
+The user confirmed that this message derives from the current state, rather than from an action just performed. It is therefore **process information**, not a success confirmation. The user selected option A in the VIS-002 review, approving these contextual text pairs:
+
+- Light: `#245D87` on `#F0EDE8` — `6.01:1`.
+- Dark: `#A7D1F0` on `#211F1C` — `10.19:1`.
+
+The live dark Admin message still renders as `#C4BCB2` on `#111210` (`10.00:1`). Its contrast is sufficient in this observed state, but its color does not use the approved blue pair. Product implementation remains pending and was not performed in this audit. The approval does not establish global tokens or approve other surfaces, backgrounds, borders, or icons.
 
 ## Limits
 
