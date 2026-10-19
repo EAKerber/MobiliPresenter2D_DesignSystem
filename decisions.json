@@ -168,7 +168,7 @@
     },
     {
       "id": "VIS-002",
-      "status": "conceptual-direction-and-scoped-pairs-approved",
+      "status": "conceptual-direction-approved; one-scoped-pair-under-aesthetic-reconsideration",
       "verdict": "agreed",
       "decision": "Paleta-base de identidade compartilhada entre interfaces, com aplicação contextual. A arquitetura futura de tokens deve poder atender light e dark; não presumir ambos os modos em todas as rotas. Revisar contraste de texto, controles, foco e estados. Definir semanticamente erro, aviso, sucesso e informação, além de foco, seleção, hover, pressionado e desabilitado. Informação de processo usa o azul homologado; informação promocional de produto usa a cor terciária cobre com base aprovada #A64D13.",
       "notApproved": [
@@ -213,11 +213,12 @@
         "Additional final contrast pairs in other components, surfaces and themes",
         "Visual variants and measurements for focus, selection, hover, pressed, disabled and loading",
         "Copper variations by theme/surface outside approved base #A64D13",
-        "Mapping of other semantic state colors to actual screens and tokens"
+        "Mapping of other semantic state colors to actual screens and tokens",
+        "Substituição do par claro de texto auxiliar #675F55; #705C4B é somente candidato até aprovação visual"
       ],
       "approvedRuntimePairs": [
         {
-          "status": "approved-contextual-pair",
+          "status": "reconsideration-requested",
           "context": "Light-theme body support text on the audited warm surface",
           "foreground": "#675F55",
           "background": "#F0EDE8",
@@ -237,7 +238,15 @@
               "route": "/about/",
               "selector": ".about-scale p:not(.eyebrow)"
             }
-          ]
+          ],
+          "previousStatus": "approved-contextual-pair",
+          "reconsiderationReason": "Em revisão posterior da proposta de paleta, o usuário considerou #675F55 esverdeado e não aprovou seu uso como cor secundária geral. Não aplicar esse par nos seletores listados até nova revisão do tom.",
+          "candidateReplacement": {
+            "foreground": "#705C4B",
+            "background": "#F0EDE8",
+            "contrast": "5.41:1",
+            "status": "candidate-not-approved"
+          }
         },
         {
           "status": "approved-contextual-pair",
