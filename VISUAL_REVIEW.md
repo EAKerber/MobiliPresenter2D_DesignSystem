@@ -38,9 +38,9 @@ As medidas recomendadas não são comportamento já existente nem breakpoints de
 
 ![Pares de contraste B selecionados](visualEvidence/experiments/VIS-002-contrast-options.svg)
 
-O usuário escolheu a opção B nos dois exemplos. `decisions.json` registra estes pares específicos:
+O usuário escolheu a opção B nos dois exemplos. Depois, reabriu esteticamente o tom secundário `#675F55`, que foi percebido como esverdeado; não aplicar o par até nova revisão. `#705C4B` aparece somente como candidata. O rótulo quente continua aprovado. `decisions.json` registra os escopos e o estado atualizado:
 
-- Texto corrido claro: `#675F55` em `#F0EDE8`, 5,38:1, nos contextos auditados da landing, Como funciona e Quem somos.
+- Texto corrido claro: o par anterior era `#675F55` em `#F0EDE8`, 5,38:1; o usuário pediu reavaliação estética. Candidata marrom `#705C4B` em `#F0EDE8`, 5,41:1, não homologada.
 - Rótulo quente claro: `#70522F` em `#E8E3DC`, 5,60:1, no rótulo auditado de Como funciona.
 
 A aprovação é contextual: não cria tokens globais, não aprova variações dark nem autoriza extensão automática a outros componentes/superfícies. Os pares já atingem o alvo matemático de 4,5:1 para texto comum nas superfícies sólidas avaliadas; a aplicação deve ser revalidada no DOM antes de qualquer implementação do produto. A base promocional `#A64D13` e o azul de informação de processo mantêm seus papéis previamente homologados.
