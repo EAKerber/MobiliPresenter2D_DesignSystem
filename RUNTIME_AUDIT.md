@@ -189,3 +189,16 @@ A captura de tela foi examinada durante a auditoria, mas não foi adicionada com
 Nenhum estado de conta foi editado, nenhuma seleção foi salva e nenhum código do produto foi alterado.
 
 A escolha visual de FIND-010 foi registrada após a auditoria: o usuário selecionou A, mantendo a opacidade atual de `.6` para o controle de iluminação observado. Essa decisão é contextual; o padrão geral de estados desabilitados continua pendente.
+
+
+## NAV-005 e FIND-011 — cabeçalho público compacto (2026-10-19)
+
+**Rota:** `/how-it-works/` · **tema:** claro · **viewport:** 486 × 590 CSS px. O viewport reportado pelo browser era 486 px; a largura útil do documento era 471 px devido à barra de rolagem. O header mediu 470,67 × 77,93 px.
+
+A marca permaneceu com 160 × 57,26 px. O CTA WhatsApp mediu 38 × 38 px e ficou fora do menu. O controle de tema mediu 44 × 44 px, só com ícone, embora a marca não tivesse sido reduzida; o botão manteve nome acessível descrevendo o tema atual e o próximo. O menu abriu na primeira interação e listou Ambientes, Como funciona e Quem somos, sem link de contato.
+
+As regras lidas nas folhas da página foram: navegação pública oculta até 900 px e exposta quando o menu abre; controle de tema do cabeçalho icon-only até 1150 px; CTA WhatsApp icon-only até 520 px. Esse resultado diverge do comportamento compacto aprovado em NAV-005. Correção registrada em [MobiliPresenter2D issue #218](https://github.com/EAKerber/MobiliPresenter2D/issues/218).
+
+Na revisão do tema claro estabilizado, a marca ficou escura e legível. A imagem era `/branding/logo-light-380.png`, com opacidade 1 e filtro `none`. A aparência desbotada do primeiro frame não se repetiu; nenhum defeito estável foi confirmado. O contraste não textual da imagem não foi medido numericamente.
+
+Detalhes e limites em [how-it-works-public-compact-header-2026-10-19.md](evidence/runtime/how-it-works-public-compact-header-2026-10-19.md). Não foi salvo um screenshot raster desta visita e o commit do deploy atual não foi identificado. A preferência anterior de tema escuro foi restaurada; menu fechado. Nenhuma configuração ou código do produto foi alterado.

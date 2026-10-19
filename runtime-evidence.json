@@ -257,6 +257,22 @@
       "noHorizontalOverflow": "not measured",
       "menu": "Opened with private/public groups, signed-in account indicator, and logout",
       "note": "No recipient values were copied into the audit."
+    },
+    {
+      "requested": "/how-it-works/",
+      "actual": "/how-it-works/",
+      "access": "public",
+      "viewport": "486x590 CSS px",
+      "theme": "light",
+      "headerHeightPx": 77.93,
+      "headerWidthPx": 470.67,
+      "brandWidthPx": 160,
+      "menuOpened": true,
+      "compactHeaderDeviation": "Theme label hidden before brand reduction; WhatsApp contact remains outside expanded public menu.",
+      "currentProductCommit": "not independently identified during this follow-up",
+      "evidence": "evidence/runtime/how-it-works-public-compact-header-2026-10-19.md",
+      "observedAt": "2026-10-19",
+      "screenshotPersisted": false
     }
   ],
   "interactions": [
@@ -280,6 +296,17 @@
       "status": "opened",
       "evidence": "The accessibility tree listed Ambientes, Como funciona, and Quem somos. The WhatsApp link remained outside the menu.",
       "interpretation": "The menu opens in this public state; contact placement diverges from approved NAV-005 compact structure."
+    },
+    {
+      "route": "/how-it-works/",
+      "control": "#menuToggle",
+      "status": "opened-on-first-click; compact contents diverge from NAV-005",
+      "theme": "light",
+      "viewport": "486x590 CSS px",
+      "evidence": "Expanded primaryNav exposed Ambientes, Como funciona, Quem somos. No contact/WhatsApp link was present; .header-cta remained visible outside the menu.",
+      "productIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/218",
+      "evidenceFile": "evidence/runtime/how-it-works-public-compact-header-2026-10-19.md",
+      "observedAt": "2026-10-19"
     }
   ],
   "contrastScreening": {
@@ -387,7 +414,7 @@
     "source": "Static repository inventory from the previous stage",
     "note": "The reported runtime pairs were measured during this audit, not detected by product CI."
   },
-  "unverified": "Authenticated administration, access management, invitation flows and configurator,Full keyboard behavior: Escape, outside click, focus restoration and tab order,Runtime reduced-motion preference,Dynamic hover, pressed, focus, selection and loading state coverage,Contrast on images, gradients, pseudo-elements and transparent layers\\n- Authenticated screenshots from this pass were omitted because they contain account/access data; only the current public settled light-theme capture was persisted.\\n- DOM contrast for the light-theme brand mark, exact CSS viewport width for the compact capture, and responsible brand asset/rule remain unverified; the settled capture does not confirm a visual defect.",
+  "unverified": "Authenticated administration, access management, invitation flows and configurator,Full keyboard behavior: Escape, outside click, focus restoration and tab order,Runtime reduced-motion preference,Dynamic hover, pressed, focus, selection and loading state coverage,Contrast on images, gradients, pseudo-elements and transparent layers\\n- Authenticated screenshots from this pass were omitted because they contain account/access data; only the current public settled light-theme capture was persisted.\\n- Numeric non-text contrast for the raster light-theme logo remains unmeasured. The follow-up identified the 486 × 590 CSS viewport, asset source, opacity and filter; no stable visual defect was observed.",
   "authenticatedSessionObservations": [
     {
       "route": "/admin.html",
@@ -493,6 +520,17 @@
       "stage": "compact header",
       "selector": "brand mark and header surface",
       "observation": "The first frame after switching to light appeared faded; the settled repository capture and an independent capture show the mark legible against the light header. No visual contrast defect is confirmed. DOM contrast and responsible asset/CSS rule were not measured."
+    },
+    {
+      "route": "/how-it-works/",
+      "theme": "light",
+      "viewport": "486x590 CSS px",
+      "stage": "settled compact header",
+      "selector": "header .brand img",
+      "observation": "After the theme transition settled, the logo appeared dark and legible. currentSrc was /branding/logo-light-380.png, computed opacity 1, filter none. The earlier washed-out appearance was transient and not reproduced in the settled state.",
+      "contrast": "No numeric text-color ratio calculated for the raster logo; non-text contrast not measured.",
+      "evidenceFile": "evidence/runtime/how-it-works-public-compact-header-2026-10-19.md",
+      "observedAt": "2026-10-19"
     }
   ],
   "compactHeaderMeasurements": {
