@@ -1,56 +1,45 @@
-# Proposta de paleta A — revisão visual
+# Proposta de paleta A — revisão visual (ajustada)
 
-**Estado:** candidata, não homologada. Derivada dos valores mais recorrentes no inventário do produto `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`; não altera o produto.  
-**Prancha:** [PALETTE-candidate-A.svg](PALETTE-candidate-A.svg)  
-**Registro vigente:** [decisions.json](../../decisions.json). Catálogo observado: [visual-inventory.json](../../visual-inventory.json), campos aggregate.customProperties e uniqueColorLiteralValues.
+**Estado:** candidata, não homologada. Esta revisão incorpora o retorno do usuário: o secundário anterior pareceu esverdeado; o foco estava difícil de ler; evitar branco e preto puros.  
+**Prancha:** [PALETTE-candidate-A.svg](PALETTE-candidate-A.svg).  
+**Produto observado:** inventário estático do snapshot 298c11441f82cacfff2f809fd9e5ad6f1fc33c0a.
 
-## Proposta de base
+## Eixo neutro proposto
 
-| Papel | Claro | Escuro | Situação |
+| Papel | Claro | Escuro | Estado |
 |---|---|---|---|
-| Canvas | #F7F5F2 | #111210 | Valores atuais recorrentes; adoção global proposta |
-| Superfície | #FFFFFF | #1B1C1A | Valores atuais recorrentes |
-| Superfície suave | #F0EDE8 | #20211F | Valores atuais recorrentes |
-| Texto principal | #22211F | #F4F1EB | Valores atuais recorrentes |
-| Texto secundário | #675F55 | #C4BCB2 | Claro: par aprovado apenas nos seletores VIS-002. Escuro: uso atual sem homologação global |
-| Linha/borda | #DED9D2 | #4A4843 | Valores públicos atuais; confirmar contraste para controles |
-| Acento/foco | #6E512E | #D8BC7C | Valores atuais; proposta de unificação; foco precisa de teste não textual |
-| Informação de processo | #245D87 | #A7D1F0 | Papel azul aprovado; valores são uso atual do admin e precisam homologação contextual |
-| Sucesso | #176344 | #A9DDB6 | Valores atuais do admin; candidatos |
-| Erro | #A32323 | #FFAAA0 | Valores atuais do admin; candidatos |
-| Aviso técnico | #795000 | #F4CB80 | Valores atuais do admin; candidatos |
-| Promoção/campanha | base #A64D13 | variante escura pendente | Base aprovada; não é aviso técnico. Texto branco sobre a base: 5,69:1; harmonização dark requer revisão |
+| Canvas | #F3EFE9 | #171614 | Candidato quente, sem branco/preto puros |
+| Superfície | #F8F5F0 | #211F1C | Candidato |
+| Superfície suave | #EBE5DD | #2C2924 | Candidato |
+| Texto principal | #292723 | #F0EAE1 | Candidato, tons carvão/marfim quente |
+| Texto secundário | #705C4B | #C7BBAA | Candidato marrom quente; não é token |
+| Borda | #D6CCC0 | #4E4942 | Candidato, validar como controle e separador |
 
-## Contrastes de referência
+## Foco proposto
 
-Contraste calculado por luminância sRGB para pares sólidos. Os números são triagem de candidato, não prova de conformidade do produto.
+- Tema claro: contorno cobre #A64D13 contra superfície #F8F5F0; contraste calculado 5,18:1.
+- Tema escuro: contorno dourado #D8BC7C contra superfície #211F1C; contraste calculado 8,93:1.
+- Exemplo usa contorno de 4 px e afastamento de 3 px. Esses valores são somente uma visualização para tornar o foco fácil de localizar; a espessura e o offset ainda não estão homologados.
+- O foco deve continuar independente da seleção e não depender só de mudança de cor; revisar indicador de teclado em componentes reais.
 
-| Par | Razão | Limite |
-|---|---:|---|
-| #22211F em #F7F5F2 | 14,78:1 | Candidato de texto principal claro |
-| #675F55 em #F0EDE8 | 5,38:1 | Aprovado apenas nos seletores VIS-002 |
-| #6E512E em #F7F5F2 | 6,70:1 | Candidato de texto/acento claro; foco requer teste não textual |
-| #F4F1EB em #111210 | 16,66:1 | Candidato de texto principal escuro |
-| #C4BCB2 em #1B1C1A | 9,11:1 | Candidato de texto secundário escuro |
-| #D8BC7C em #111210 | 10,20:1 | Candidato de acento escuro |
-| Branco em #A64D13 | 5,69:1 | Referência para este par; não aprova todas as superfícies promocionais |
-| Amostras de estado sobre branco/escuro | 7,02:1 a 7,44:1 no tema claro e 10,30:1 a 12,26:1 no escuro | Contraste calculado em amostras; combinações não homologadas |
+## Contrastes de texto de referência
 
-## Divergências que a proposta pretende resolver
+Razões calculadas para cores sólidas e não arredondadas para alcançar limites. Não equivalem a teste do DOM.
 
-- O produto tem 43 custom properties e 235 valores literais únicos no snapshot estático; isso inclui cores sobrepostas, alpha, sombras, ilustrações e detalhes que não devem virar paleta sem análise.
-- A base pública e os temas do configurador/admin repetem tons próximos com papéis e nomes diferentes: public-*, bg, background, surface, raised e surface-raised.
-- Valores de texto secundário e acento divergem entre arquivos. No admin, muted inclui #C4BCB2, #6B6259 e #706C66; público usa #706C66/#C4BCB2.
-- O admin define valores para quatro estados semânticos, mas combinações reais com fundos e componentes precisam de confirmação no DOM. Não são tokens homologados.
-- Cobre e azul têm papéis aprovados distintos; a proposta preserva essa separação.
+| Par candidato | Razão |
+|---|---:|
+| Texto principal claro #292723 em #F3EFE9 | 13,19:1 |
+| Secundário claro #705C4B em #F3EFE9 | 5,52:1 |
+| Secundário claro #705C4B em #EBE5DD | 5,00:1 |
+| Texto principal escuro #F0EAE1 em #171614 | 15,12:1 |
+| Secundário escuro #C7BBAA em #211F1C | 8,70:1 |
 
-## Decisões para homologar ou ajustar
+## Mantidos como papéis separados
 
-1. Aprovar ou ajustar o eixo neutro quente claro/escuro.
-2. Aprovar ou ajustar texto secundário, borda e acento/foco como base compartilhada.
-3. Rever estados de erro/sucesso/aviso/informação em claro e escuro, com pares e formatos de componente; nenhum estado deve depender apenas da cor.
-4. Definir como a promoção em tema escuro usa #A64D13 ou uma variante clara; não inferir preferência apenas pela razão com texto branco.
-5. Definir seleção e disabled após revisar seus contextos e os contratos EST-01–06.
-6. Após a aprovação visual, registrar pares em decisions.json e só então publicar tokens/aplicar em famílias da UI com verificação runtime.
+- Informação de processo usa azul; promoção de produto/campanha usa cobre com base homologada #A64D13.
+- A base promocional não vira aviso técnico; variações por tema e superfície continuam pendentes.
+- Cores de erro, sucesso e aviso permanecem candidatas até a revisão de amostras e pares em light/dark.
 
-A proposta A preserva neutros quentes da marca, usa a direção aprovada para promoção e reserva azul para informação de processo. Só os pares contextuais já registrados em VIS-002 e VIS-003 são oficiais.
+## Limites
+
+Somente pares contextuais que já constam em VIS-002 e o par específico VIS-003/FIND-004 estão homologados. Os valores desta prancha não mudam a fonte canônica nem o produto. Antes de aprovar a paleta completa, revisar a aparência dos secundários, a leitura do foco nos dois temas, estados semânticos, seleção/desabilitado e a variante promocional escura.
