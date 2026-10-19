@@ -28,7 +28,7 @@ A prancha anterior de opções permanece em [NAV-005-public-header-options.svg](
 
 ### Ponto de revisão compacto identificado em runtime
 
-No login administrativo publicado, a estrutura atual usa uma linha em 350 px e duas linhas em 340 px. A seleção da opção A aprovou a composição de uma linha, mas ainda não definiu como acomodar o conjunto quando a largura disponível diminui. A faixa observada delimita a investigação; não é um breakpoint homologado. Medições e limites estão em [RUNTIME_AUDIT.md](RUNTIME_AUDIT.md) e [runtime-evidence.json](runtime-evidence.json). Nenhuma alternativa visual para reduzir/truncar os elementos foi homologada.
+No login administrativo publicado, a estrutura atual usa uma linha em 350 px e duas linhas em 340 px. A seleção da opção A aprovou a composição de uma linha, mas ainda não definiu como acomodar o conjunto quando a largura disponível diminui. A faixa observada delimita a investigação; não é um breakpoint homologado. Medições e limites estão em [RUNTIME_AUDIT.md](RUNTIME_AUDIT.md) e [runtime-evidence.json](runtime-evidence.json). A prancha [NAV-005-narrow-theme-control-options.svg](visualEvidence/experiments/NAV-005-narrow-theme-control-options.svg) compara duas candidatas para 320 px: tema somente por ícone mantendo a marca, ou tema com rótulo e marca reduzida. Ambas preservam o contexto completo e a linha única; as medidas são estimativas, sem homologação.
 
 ## VIS-002 — pares exatos aprovados
 
