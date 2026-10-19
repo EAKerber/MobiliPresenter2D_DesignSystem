@@ -58,7 +58,7 @@ Nomes iguais não asseguram estilo comum: regras locais e contexto alteram o res
 - **Outras cores no CSS:** uso atual observado, não aprovação automática de tokens. A imagem de estados semânticos continua sendo referência candidata para erro, sucesso e aviso.
 - O mapa de aplicação em [DECISION_APPLICATION_MAP.md](DECISION_APPLICATION_MAP.md) liga decisões, rotas, HTML, CSS carregado e evidência runtime, sem tratar o vínculo como conformidade de implementação. A extração encontrou 459 ocorrências de cores literais e 43 custom properties. Não foi encontrado um namespace explícito `--space-*` / `--spacing-*`; o espaçamento está expresso em declarações CSS.
 
-**VIS-003 / FIND-004:** no tema escuro de `/how-it-works/`, `.study-art figcaption` tem tratamento visual escolhido: legenda integrada à figura sobre uma faixa escura na base. A escolha não fixa cores, opacidade/gradiente, dimensões ou comportamento responsivo; esses valores continuam pendentes de medição no DOM final.
+**VIS-003 / FIND-004:** no tema escuro de `/how-it-works/`, `.study-art figcaption` tem composição e par contextual aprovados: texto `#F0EDE8` sobre faixa opaca `#20211F`, 13,85:1. Aplica-se somente a essa legenda; não é token global. Implementação no produto, dimensões, espaçamento e validação responsiva no DOM final permanecem pendentes.
 
 ## Responsividade, espaçamento e tipografia
 

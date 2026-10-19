@@ -38,7 +38,7 @@ O estado de `/config/` e `/access/manage.html` foi redirecionado sem sessão. Is
 | NAV-005 | `/`, `/how-it-works/`, `/about/`, `/viewer/`, `/config/`, `/admin.html`, `/access/`, `/access/manage.html` | 8 rota(s) no mapa estático; vínculo de tela não afirma conformidade da implementação |
 | VIS-001 | — | Sem rota específica no mapa atual; revisar escopo quando a decisão avançar |
 | VIS-002 | `/`, `/how-it-works/`, `/about/`, `/viewer/`, `/config/`, `/admin.html`, `/access/`, `/access/manage.html` | 8 rota(s) no mapa estático; vínculo de tela não afirma conformidade da implementação |
-| VIS-003 | `/how-it-works/` | Tratamento da legenda escolhido para `.study-art figcaption` no tema escuro; cores/opacidade finais e correção continuam pendentes |
+| VIS-003 | `/how-it-works/` | Composição e par contextual aprovados para `.study-art figcaption` no tema escuro (`#F0EDE8` sobre `#20211F`, 13,85:1); aplicação e validação no DOM pendentes |
 | EST-01 | `/viewer/`, `/config/` | 2 rota(s) no mapa estático; vínculo de tela não afirma conformidade da implementação |
 | EST-02 | `/viewer/`, `/config/`, `/admin.html`, `/access/manage.html` | 4 rota(s) no mapa estático; vínculo de tela não afirma conformidade da implementação |
 | EST-03 | `/viewer/`, `/config/` | 2 rota(s) no mapa estático; vínculo de tela não afirma conformidade da implementação |
@@ -57,7 +57,7 @@ O estado de `/config/` e `/access/manage.html` foi redirecionado sem sessão. Is
 
 **VIS-002 — alvos de seletor com pares aprovados:** `.hero-description` em `/`, `.how-hero-note` em `/how-it-works/` e `.about-scale p:not(.eyebrow)` em `/about/` usam o par contextual claro aprovado `#675F55` sobre `#F0EDE8` (5,38:1). `.study-band .eyebrow` em `/how-it-works/` usa o par contextual aprovado `#70522F` sobre `#E8E3DC` (5,60:1). Os pares não são tokens globais e não aprovam variantes escuras.
 
-**VIS-003 / FIND-004:** em `/how-it-works/`, `.study-art figcaption` no tema escuro deve permanecer integrada à ilustração sobre uma faixa escura na base (opção B escolhida). A aprovação cobre apenas a composição; valores finais de cor e opacidade/gradiente exigem medição. A prancha e a decisão não representam correção aplicada no produto.
+**VIS-003 / FIND-004:** em `/how-it-works/`, `.study-art figcaption` no tema escuro permanece integrada à ilustração sobre uma faixa opaca `#20211F`, com texto `#F0EDE8` (13,85:1). O usuário selecionou A para este caso. É um par contextual, não token global. Aplicação e validação final no DOM do produto continuam pendentes; a prancha não representa uma correção aplicada.
 
 ## Capturas e limites
 
