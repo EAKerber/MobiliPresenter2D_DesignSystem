@@ -181,7 +181,7 @@
         "approvedDirection": "Estados semânticos reconhecíveis, harmonizados com a marca, com combinações adequadas por tema. Mensagens não dependem apenas da cor.",
         "functionalInformation": "Informações de processo e funcionamento usam o azul homologado. São informativas e não equivalem a aviso, erro ou confirmação de sucesso.",
         "editorialCommercial": "Informações promocionais de produto, campanhas, condições especiais e destaques institucionais pertencem à comunicação promocional/comercial. Não classificar a campanha de três meses como warning técnico.",
-        "candidateSwatches": "A imagem Exemplos de estados identifica as amostras de erro, sucesso, aviso e informação como candidatas não aprovadas. Isso descreve os swatches e seus pares, não revoga o papel semântico aprovado do azul de informação de processo.",
+        "candidateSwatches": "As amostras de erro, sucesso e aviso permanecem não aprovadas; a informação de processo mantém papel azul aprovado. A prancha experimental atual é visualEvidence/experiments/VIS-002-semantic-state-candidates.svg. A prancha VIS-002-contrast-options.svg é histórica: o par B foi reaberto e não deve ser tratado como homologado.",
         "processInformation": {
           "status": "semantic-role-approved",
           "colorFamily": "blue homologated",
