@@ -135,7 +135,7 @@
         },
         "compactMinimum": {
           "oneRowViewportCssPx": 291,
-          "below": "Abaixo de 288 px, permitir duas linhas em vez de comprimir mais a logo, reduzir o identificador ou causar overflow. Manter o tema icon-only.",
+          "below": "Abaixo de 291 px, permitir duas linhas em vez de comprimir mais a logo, reduzir o identificador ou causar overflow. Manter o tema icon-only.",
           "rationale": "Com logo no piso, identificador, controles 44×44 px, gap entre ações 8 px, gap do header 8 px e margens de 14 px por lado, a composição icon-only exige 290,4 px; arredondar para 291 px. Abaixo, permitir duas linhas."
         },
         "implementation": "Não autorizada neste registro. Implementar depois da validação DOM e revisão da especificação no repositório do produto.",
