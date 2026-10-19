@@ -70,3 +70,8 @@ Não há captura atual de superfícies autenticadas. Estados de teclado completo
 
 
 **NAV-005 — encaixe estreito:** a regra aprovada limita a redução da logo a 30%, preserva o identificador e então troca o tema rotulado por ícone. A validação atual mediu o produto em 288–360 px: duas linhas até 340 px e uma linha em 350/360 px; alvos atuais de 40 px. A recomendação calculada foi corrigida: manter rótulo a partir de ~321 px, icon-only em 320 px ou menos e duas linhas abaixo de ~291 px, com alvos de 44×44 px. Ela ainda não está implementada no produto; requer revalidação posterior nos dois temas. Evidência: [NAV-005_RUNTIME_VALIDATION_2026-10-18.md](NAV-005_RUNTIME_VALIDATION_2026-10-18.md), `decisions.json` e [prancha NAV-005](visualEvidence/experiments/NAV-005-narrow-theme-control-options.svg).
+
+
+## VIS-002 — paleta-base aprovada
+
+A aprovação de valores e os limites de aplicação estão mapeados em [PALETTE_APPLICATION_MAP.md](PALETTE_APPLICATION_MAP.md). O mapa identifica duplicação entre folhas globais de tema, configurador e administração, distingue os papéis já homologados dos valores de uso atual e orienta a próxima etapa: atribuição por componente e validação runtime.
