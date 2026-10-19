@@ -166,3 +166,26 @@ Na página publicada `/admin.html`, em tema escuro, uma mensagem visível de est
 Nenhum dado do catálogo foi alterado e nenhum convite foi enviado. A comparação de tema alterou temporariamente a preferência visual. O primeiro frame após mudar para claro pareceu desbotar a marca, mas a captura estabilizada persistida em [evidência pública](visualEvidence/public/how-it-works/how-it-works-light-compact-486x590.jpg) e uma captura independente mostram a marca escura legível. Não foi confirmado defeito visual de contraste. O navegador foi restaurado ao tema escuro após a captura.
 
 A captura pública atual estabilizada em tema claro foi persistida em `visualEvidence/public/how-it-works/how-it-works-light-compact-486x590.jpg`. As imagens antigas permanecem referências históricas. Capturas autenticadas não foram gravadas porque expõem informações de conta e acesso. A medição de contraste DOM da marca, a largura CSS real da captura compacta e a identificação dos seletores/asset permanecem pendentes.
+
+
+## FIND-010 e FIND-006 — etapa Serviços no Configurador (2026-10-19)
+
+**Rota:** `/config/` · **tema:** escuro · **viewport:** 1280 × 720.  
+A página foi aberta em uma aba de leitura. Naveguei da etapa Módulos para Serviços e não alterei nenhuma opção intencionalmente.
+
+No estado capturado em Serviços:
+
+- O contador do viewer mostrava **8 de 8 itens incluídos**.
+- As sete caixas dos módulos estavam desmarcadas (`Value=0`) na árvore de acessibilidade.
+- `#lightingToggle` estava desabilitado e desmarcado. A orientação informa que é necessário incluir a lateral da geladeira e o aéreo da pia.
+- A estimativa mostrava `R$ 0,00`.
+- A classe do rótulo era `.service-check is-blocked`, com opacidade computada `0.6`; o controle estava `disabled=true`, `checked=false`.
+- O muted escuro computado era `rgba(255, 255, 255, 0.48)`; a borda do cartão era `rgba(255, 255, 255, 0.1)`.
+
+No snapshot AX inicial, antes de abrir Serviços, os sete controles de módulo apareciam com `Value=1`. A mudança para `Value=0` coincidiu com a navegação de etapa. A observação confirma a contradição entre contador, seleção e estimativa naquele momento, mas não determina se houve estado inicial desatualizado, reset ao trocar etapa ou outra causa; não foi verificada persistência após recarga.
+
+A captura de tela foi examinada durante a auditoria, mas não foi adicionada como arquivo raster ao repositório. A prancha de revisão persistida em [FIND-010-disabled-control-candidates.svg](visualEvidence/experiments/FIND-010-disabled-control-candidates.svg) é uma comparação vetorial experimental, não uma captura do produto. Ela compara a opacidade atual (.6), uma alternativa menos atenuada (.78) e uma opção sem opacidade no cartão com o texto secundário da paleta aprovada. Os contrastes nela são cálculos sobre superfícies sólidas de referência; não são medições do DOM composto do site.
+
+Nenhum estado de conta foi editado, nenhuma seleção foi salva e nenhum código do produto foi alterado.
+
+A escolha visual de FIND-010 foi registrada após a auditoria: o usuário selecionou A, mantendo a opacidade atual de `.6` para o controle de iluminação observado. Essa decisão é contextual; o padrão geral de estados desabilitados continua pendente.

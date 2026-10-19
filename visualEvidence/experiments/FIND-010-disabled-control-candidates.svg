@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="938" viewBox="0 0 1280 1000" role="img" aria-labelledby="title desc">
+<title id="title">FIND-010 · nível de atenuação do controle indisponível</title>
+<desc id="desc">Registro da escolha A para o controle de iluminação indisponível observado no configurador: manter o estilo atual. B e C permanecem alternativas experimentais não selecionadas.</desc>
+<defs><style>
+text{font-family:Inter,Arial,sans-serif}.k{font-size:14px;font-weight:700;letter-spacing:1.4px;fill:#705C4B}.h{font-size:34px;font-weight:700;fill:#292723}.sub{font-size:17px;fill:#705C4B}.note{font-size:14px;fill:#292723}.cardH{font-size:23px;font-weight:700;fill:#292723}.small{font-size:13px;fill:#705C4B}.label{font-size:14px;font-weight:700}.body{font-size:13px}.tag{font-size:11px;font-weight:700;letter-spacing:.8px}
+</style></defs>
+<rect width="1600" height="1120" fill="#E8E3DC"/>
+<text x="40" y="56" class="k">FIND-010 · CONTROLE INDISPONÍVEL</text>
+<text x="40" y="104" class="h">Quanto deve ser atenuado?</text>
+<text x="40" y="137" class="sub">A opção “Iluminação embutida” fica desabilitada até que dois módulos sejam incluídos.</text>
+<rect x="40" y="160" width="1200" height="66" rx="12" fill="#DED9D2"/>
+<text x="60" y="188" class="note"><tspan font-weight="700">Direção já acordada:</tspan> o estado indisponível deve continuar distinguível, sem perder a leitura da orientação que explica como habilitá-lo.</text>
+<text x="60" y="211" class="small">Registro da escolha contextual; comparações seguem experimentais. A escolhida: manter o estado atual neste controle. B e C não foram selecionadas e não são padrões. Nada foi alterado no produto.</text>
+<g transform="translate(40 252) scale(.82)">
+<rect width="470" height="780" rx="18" fill="#F0EDE8" stroke="#D6CCC0"/>
+<text x="24" y="42" class="cardH">A · Escolhida: estado atual</text>
+<text x="24" y="68" class="small">Escolhida para Iluminação embutida neste contexto</text>
+<rect x="24" y="92" width="422" height="275" rx="14" fill="#F0EDE8" stroke="#D6CCC0"/>
+<text x="44" y="122" class="tag" fill="#705C4B">CLARO · FUNDO #F0EDE8</text>
+<rect x="44" y="145" width="382" height="190" rx="12" fill="#F0EDE8" stroke="#D6CCC0"/>
+<g opacity=".6">
+<rect x="62" y="177" width="20" height="20" rx="2" fill="none" stroke="#706C66" stroke-width="2"/>
+<text x="98" y="190" class="label" fill="#22211F">Iluminação embutida</text>
+<text x="98" y="217" class="body" fill="#706C66">Serviço global que realça a bancada</text><text x="98" y="237" class="body" fill="#706C66">e requer dois módulos específicos.</text>
+</g>
+<text x="44" y="357" class="small">Texto principal 4,06:1 · orientação 2,23:1</text>
+<rect x="24" y="390" width="422" height="275" rx="14" fill="#211F1C"/>
+<text x="44" y="420" class="tag" fill="#C7BBAA">ESCURO · FUNDO #211F1C</text>
+<rect x="44" y="443" width="382" height="190" rx="12" fill="#211F1C" stroke="#4E4942"/>
+<g opacity=".6">
+<rect x="62" y="475" width="20" height="20" rx="2" fill="none" stroke="#8C8984" stroke-width="2"/>
+<text x="98" y="488" class="label" fill="#F4F1EB">Iluminação embutida</text>
+<text x="98" y="515" class="body" fill="#86827D">Serviço global que realça a bancada</text><text x="98" y="535" class="body" fill="#86827D">e requer dois módulos específicos.</text>
+</g>
+<text x="44" y="655" class="small" fill="#C7BBAA">Texto principal 6,08:1 · orientação 2,61:1</text>
+<text x="24" y="716" class="note"><tspan font-weight="700">Leitura:</tspan> sinaliza bloqueio com força,</text><text x="24" y="740" class="note">mas apaga a explicação junto com o controle.</text>
+</g>
+<g transform="translate(447 252) scale(.82)">
+<rect width="470" height="780" rx="18" fill="#F0EDE8" stroke="#D6CCC0"/>
+<text x="24" y="42" class="cardH">B · Não selecionada</text>
+<text x="24" y="68" class="small">Opacity: .78 no cartão inteiro</text>
+<rect x="24" y="92" width="422" height="275" rx="14" fill="#F0EDE8" stroke="#D6CCC0"/>
+<text x="44" y="122" class="tag" fill="#705C4B">CLARO · FUNDO #F0EDE8</text>
+<rect x="44" y="145" width="382" height="190" rx="12" fill="#F0EDE8" stroke="#D6CCC0"/>
+<g opacity=".78">
+<rect x="62" y="177" width="20" height="20" rx="2" fill="none" stroke="#706C66" stroke-width="2"/>
+<text x="98" y="190" class="label" fill="#22211F">Iluminação embutida</text>
+<text x="98" y="217" class="body" fill="#706C66">Serviço global que realça a bancada</text><text x="98" y="237" class="body" fill="#706C66">e requer dois módulos específicos.</text>
+</g>
+<text x="44" y="357" class="small">Texto principal 7,13:1 · orientação 3,02:1</text>
+<rect x="24" y="390" width="422" height="275" rx="14" fill="#211F1C"/>
+<text x="44" y="420" class="tag" fill="#C7BBAA">ESCURO · FUNDO #211F1C</text>
+<rect x="44" y="443" width="382" height="190" rx="12" fill="#211F1C" stroke="#4E4942"/>
+<g opacity=".78">
+<rect x="62" y="475" width="20" height="20" rx="2" fill="none" stroke="#8C8984" stroke-width="2"/>
+<text x="98" y="488" class="label" fill="#F4F1EB">Iluminação embutida</text>
+<text x="98" y="515" class="body" fill="#86827D">Serviço global que realça a bancada</text><text x="98" y="535" class="body" fill="#86827D">e requer dois módulos específicos.</text>
+</g>
+<text x="44" y="655" class="small" fill="#C7BBAA">Texto principal 9,35:1 · orientação 3,47:1</text>
+<text x="24" y="716" class="note"><tspan font-weight="700">Leitura:</tspan> ainda atenua o grupo; preserva</text><text x="24" y="740" class="note">um pouco mais de leitura que o estado atual.</text>
+</g>
+<g transform="translate(854 252) scale(.82)">
+<rect width="470" height="780" rx="18" fill="#F0EDE8" stroke="#D6CCC0"/>
+<text x="24" y="42" class="cardH">C · Não selecionada</text>
+<text x="24" y="68" class="small">Sem opacidade no cartão; tom secundário</text>
+<rect x="24" y="92" width="422" height="275" rx="14" fill="#F0EDE8" stroke="#D6CCC0"/>
+<text x="44" y="122" class="tag" fill="#705C4B">CLARO · FUNDO #F0EDE8</text>
+<rect x="44" y="145" width="382" height="190" rx="12" fill="#F0EDE8" stroke="#D6CCC0"/>
+<rect x="62" y="177" width="20" height="20" rx="2" fill="none" stroke="#8B8177" stroke-width="2"/>
+<text x="98" y="190" class="label" fill="#705C4B">Iluminação embutida</text>
+<text x="98" y="217" class="body" fill="#705C4B">Serviço global que realça a bancada</text><text x="98" y="237" class="body" fill="#705C4B">e requer dois módulos específicos.</text>
+<text x="44" y="357" class="small">Texto de orientação 5,41:1</text>
+<rect x="24" y="390" width="422" height="275" rx="14" fill="#211F1C"/>
+<text x="44" y="420" class="tag" fill="#C7BBAA">ESCURO · FUNDO #211F1C</text>
+<rect x="44" y="443" width="382" height="190" rx="12" fill="#211F1C" stroke="#4E4942"/>
+<rect x="62" y="475" width="20" height="20" rx="2" fill="none" stroke="#857C70" stroke-width="2"/>
+<text x="98" y="488" class="label" fill="#C7BBAA">Iluminação embutida</text>
+<text x="98" y="515" class="body" fill="#C7BBAA">Serviço global que realça a bancada</text><text x="98" y="535" class="body" fill="#C7BBAA">e requer dois módulos específicos.</text>
+<text x="44" y="655" class="small" fill="#C7BBAA">Texto de orientação 8,70:1</text>
+<text x="24" y="716" class="note"><tspan font-weight="700">Leitura:</tspan> distingue pelo controle e pelo</text><text x="24" y="740" class="note">texto secundário, sem enfraquecer a explicação.</text>
+</g>
+<rect x="40" y="920" width="1200" height="56" rx="10" fill="#DED9D2"/>
+<text x="60" y="944" class="small">Razões de contraste calculadas sobre fundos sólidos de referência. O estado disabled tem exceções em alguns critérios; legibilidade e distinção continuam necessárias.</text>
+</svg>
