@@ -43,6 +43,20 @@ A paleta aprovada não significa que o produto já está conforme. O mesmo papel
 - **FIND-004:** legenda da ilustração usa par aprovado localmente `#F0EDE8` sobre faixa `#20211F`, somente em `.study-art figcaption` no tema escuro.
 - **Erro, sucesso e aviso:** pares de texto/fundo aprovados pela regra de maior contraste em cada estado e tema; valores e razão estão na [prancha de pares escolhidos](visualEvidence/experiments/VIS-002-semantic-states-selected.svg) e no bloco `selectedStatusSwatches` de `decisions.json`. Aplicação a componentes, tokens globais, ícones e superfícies compostas ainda não foi homologada. A [prancha A/B](visualEvidence/experiments/VIS-002-semantic-state-candidates.svg) continua como comparação experimental. A [prancha anterior de contraste](visualEvidence/experiments/VIS-002-contrast-options.svg) registra que o antigo par de texto secundário foi reaberto. O cobre promocional não é aviso técnico.
 
+
+### Estado semântico existente na Administração
+
+Leitura estática de `app/admin/admin.css` no snapshot `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`. “Claro/escuro atual” indica os valores declarados nos temas; não confirma o fundo efetivo no DOM.
+
+| Papel/token atual | Claro atual | Escuro atual | Uso CSS localizado | Par de texto/fundo escolhido | Diferença / trabalho pendente |
+|---|---|---|---|---|---|
+| Erro · `--error` | `#A32323` | `#FFAAA0` | `.message[data-kind=error]` define apenas a cor do texto | Claro `#8E382F / #F0E5E1` · 6,17:1; escuro `#E7AAA2 / #352522` · 7,41:1 | Os dois valores de texto diferem. A regra atual não define os fundos aprovados. |
+| Sucesso · `--success` | `#176344` | `#A9DDB6` | `.message[data-kind=success]` define apenas a cor do texto | Claro `#35634A / #E5ECE6` · 5,76:1; escuro `#A8CAB1 / #223129` · 7,63:1 | Os valores de texto diferem e o fundo não está definido nessa regra. |
+| Aviso · `--warning` | `#795000` | `#F4CB80` | Token declarado; sem seletor consumidor encontrado nessa folha | Claro `#70531E / #EEE7D8` · 5,79:1; escuro `#E4C989 / #332C1E` · 8,56:1 | Localizar consumidores dinâmicos, sem presumir que a declaração seja usada. |
+| Informação · `--info` | `#245D87` | `#A7D1F0` | Token declarado; sem seletor consumidor encontrado nessa folha | Papel azul aprovado; amostra atual sobre superfície de referência: claro 6,01:1 e escuro 10,19:1 | Valores coincidem com a referência em uso; rota, consumidor e fundo efetivo precisam de verificação runtime. |
+
+Os pares escolhidos incluem fundos suaves específicos. Não basta substituir as variáveis de texto nas regras atuais: primeiro é necessário identificar a superfície real de cada mensagem e decidir se o componente recebe fundo semântico ou usa o texto sobre a superfície neutra. A inspeção desta folha não cobre estilo inline gerado por JavaScript nem outras folhas CSS.
+
 ## Ocorrências que exigem triagem, não substituição automática
 
 O snapshot estático contém valores puros brancos em declarações de interface, incluindo `#FFF` (17 ocorrências) e `#FFFFFF` (5); é necessário confirmar cada ocorrência por seletor e tema. O preto puro `#000` aparece em sombras da estrutura do configurador/viewer, não como cor geral de interface no mapa extraído. Transparências de branco/preto também aparecem em bordas e overlays: devem ser compostas sobre a superfície real antes de decidir conformidade.
