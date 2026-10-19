@@ -61,3 +61,12 @@ A auditoria runtime mediu 1,78:1 para `.study-art figcaption` clara sobre a supe
 A escolha posterior do usuário foi A — neutro da interface, com faixa opaca #20211F e texto #F0EDE8. O contraste calculado para esse par é 13,85:1. Esta seleção substitui as amostras experimentais da prancha para este caso e passa a constar como par contextual homologado em decisions.json.
 
 O escopo é somente .study-art figcaption em /how-it-works/, tema escuro. O par não é token global e não se estende automaticamente a outras superfícies. Dimensões, espaçamento e comportamento responsivo ainda precisam ser conferidos ao aplicar; a implementação e auditoria final no DOM permanecem pendentes. A prancha é esquemática e não substitui a página implementada.
+
+
+## VIS-002 — paleta-base e tratamento de foco aprovados
+
+O usuário aprovou a paleta A apresentada em [PALETTE-candidate-A-v2.svg](visualEvidence/experiments/PALETTE-candidate-A-v2.svg). A aprovação abrange os valores de canvas, superfícies, textos e bordas para claro/escuro e o tratamento de foco ilustrado (contorno de 4 px, afastamento de 3 px). Os pares calculados e seus limites estão no registro canônico [decisions.json](decisions.json).
+
+A homologação define os valores da paleta de referência; ainda não cria tokens de código nem autoriza aplicação no produto. O mapa de componentes/rotas, a validação dos contrastes no DOM real e a conferência do foco de teclado seguem para as próximas etapas. Informação de processo permanece azul e promoção usa cobre, sem alterações; os demais estados semânticos e variações do cobre seguem pendentes.
+
+A revisão matemática corrigiu a prancha: texto principal claro em canvas claro é 11,68:1; texto secundário #705C4B é 5,41:1 na superfície #F0EDE8, 4,95:1 no canvas #E8E3DC e 4,50:1 na superfície suave #DED9D2. Os outros pares mostrados estão registrados em decisions.json. São cálculos de cores opacas, não auditoria runtime.
