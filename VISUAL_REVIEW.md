@@ -26,10 +26,11 @@ A escolha A mantém o link atual **Fale conosco** via WhatsApp como acesso públ
 
 A prancha anterior de opções permanece em [NAV-005-public-header-options.svg](visualEvidence/experiments/NAV-005-public-header-options.svg) como comparação experimental. A prancha acima registra a escolha estrutural A e mantém B como comparação; não especifica tokens, dimensões nem o logo final.
 
-### Ponto de revisão compacto identificado em runtime
+### Regra compacta estreita aprovada
 
-No login administrativo publicado, a estrutura atual usa uma linha em 350 px e duas linhas em 340 px. A seleção da opção A aprovou a composição de uma linha, mas ainda não definiu como acomodar o conjunto quando a largura disponível diminui. A faixa observada delimita a investigação; não é um breakpoint homologado. Medições e limites estão em [RUNTIME_AUDIT.md](RUNTIME_AUDIT.md) e [runtime-evidence.json](runtime-evidence.json). A prancha [NAV-005-narrow-theme-control-options.svg](visualEvidence/experiments/NAV-005-narrow-theme-control-options.svg) compara duas candidatas para 320 px: tema somente por ícone mantendo a marca, ou tema com rótulo e marca reduzida. Ambas preservam o contexto completo e a linha única; as medidas são estimativas, sem homologação.
+No login administrativo publicado, o header atual usa uma linha a 350 px e duas linhas a 340 px. O usuário aprovou este comportamento de encaixe: manter o rótulo do tema enquanto a logo reduz até no máximo 30%; se for necessária redução maior para manter uma linha, passar o tema para ícone apenas. O identificador da página permanece completo e o hambúrguer na extremidade direita. Como referência de cálculo, a logo observada a 320 px tem 105 px de largura; o limite de redução nesse caso corresponde a aproximadamente 73,5 px.
 
+A prancha [NAV-005-narrow-theme-control-options.svg](visualEvidence/experiments/NAV-005-narrow-theme-control-options.svg) mostra a sequência aprovada. O ponto de troca exato, a interpolação do tamanho e o desenho do ícone continuam pendentes; a faixa observada não é um breakpoint homologado. Medições do comportamento atual estão em [RUNTIME_AUDIT.md](RUNTIME_AUDIT.md) e [runtime-evidence.json](runtime-evidence.json).
 ## VIS-002 — pares exatos aprovados
 
 ![Pares de contraste B selecionados](visualEvidence/experiments/VIS-002-contrast-options.svg)
@@ -43,8 +44,8 @@ A aprovação é contextual: não cria tokens globais, não aprova variações d
 
 ## Ainda aberto
 
-- Definir o comportamento em larguras muito estreitas: no login administrativo, o header atual quebra entre 340 e 350 px, enquanto a composição A aprovada é de uma linha. Decidir se haverá redução de marca/identificador, truncamento contextual ou um fallback mais estreito; não inferir uma solução a partir da captura atual.
-- Homologar dimensões, tipografia, cores, assets e estilo dos controles dos cabeçalhos.
+- Medir no DOM o ponto de troca entre tema rotulado e tema por ícone, e validar a redução máxima de 30% da logo em larguras próximas ao encaixe.
+- Definir o ícone exato, as dimensões dos controles e o comportamento de outros identificadores contextuais longos.
 - Medir outros pares e estados; os dois aprovados não se generalizam.
 
 
