@@ -272,7 +272,101 @@
       "currentProductCommit": "not independently identified during this follow-up",
       "evidence": "evidence/runtime/how-it-works-public-compact-header-2026-10-19.md",
       "observedAt": "2026-10-19",
-      "screenshotPersisted": false
+      "screenshotPersisted": false,
+      "narrowWidthSweep": {
+        "observedAt": "2026-10-19",
+        "theme": "dark",
+        "samples": [
+          {
+            "viewport": 360,
+            "innerWidth": 360,
+            "documentClientWidth": 345,
+            "bodyWidth": 344.7,
+            "headerWidth": 344.7,
+            "headerHeight": 68,
+            "brandWidth": 129.6,
+            "themeTarget": 44,
+            "themeLabelVisible": false,
+            "layout": "single-row",
+            "horizontalOverflow": false
+          },
+          {
+            "viewport": 340,
+            "innerWidth": 340,
+            "documentClientWidth": 325,
+            "bodyWidth": 324.7,
+            "headerWidth": 324.7,
+            "headerHeight": 68,
+            "brandWidth": 122.4,
+            "themeTarget": 44,
+            "themeLabelVisible": false,
+            "layout": "single-row",
+            "horizontalOverflow": false
+          },
+          {
+            "viewport": 321,
+            "innerWidth": 321,
+            "documentClientWidth": 306,
+            "bodyWidth": 320,
+            "headerWidth": 320,
+            "headerHeight": 68,
+            "brandWidth": 120,
+            "themeTarget": 44,
+            "themeLabelVisible": false,
+            "layout": "single-row; 320px min-width clips 14px",
+            "horizontalOverflow": true
+          },
+          {
+            "viewport": 320,
+            "innerWidth": 320,
+            "documentClientWidth": 305,
+            "bodyWidth": 320,
+            "headerWidth": 320,
+            "headerHeight": 68,
+            "brandWidth": 120,
+            "themeTarget": 44,
+            "themeLabelVisible": false,
+            "layout": "single-row; 320px min-width clips 15px",
+            "horizontalOverflow": true
+          },
+          {
+            "viewport": 291,
+            "innerWidth": 291,
+            "documentClientWidth": 276,
+            "bodyWidth": 320,
+            "headerWidth": 320,
+            "headerHeight": 68,
+            "brandWidth": 120,
+            "themeTarget": 44,
+            "themeLabelVisible": false,
+            "layout": "single-row; clipped; body/html min-width 320px",
+            "documentScrollWidth": 320,
+            "horizontalOverflow": true
+          },
+          {
+            "viewport": 290,
+            "innerWidth": 290,
+            "documentClientWidth": 275,
+            "bodyWidth": 320,
+            "headerWidth": 320,
+            "headerHeight": 68,
+            "brandWidth": 120,
+            "themeTarget": 44,
+            "themeLabelVisible": false,
+            "layout": "single-row; clipped; body/html min-width 320px",
+            "documentScrollWidth": 320,
+            "horizontalOverflow": true,
+            "menuButtonVisibleWidth": 11
+          }
+        ],
+        "sourceRules": {
+          "htmlBodyMinWidth": "320px in public-theme.css?v=gold-system-r1",
+          "pageOverflowX": "clip on .how-page in how-it-works.css",
+          "themeIconOnly": "@media (max-width: 1150px) in ui-theme.css?v=ds01-theme-v1"
+        },
+        "productIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/218",
+        "screenshotPersisted": false
+      }
     }
   ],
   "interactions": [
