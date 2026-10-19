@@ -124,6 +124,15 @@ A página publicada `/admin.html` foi observada sem sessão iniciada, no tema es
 A transição observada ocorreu entre 340 e 350 px; isso não determina o breakpoint CSS exato nem recomenda um valor. O registro descreve o comportamento publicado atual, não aprova o empilhamento nem o considera uma falha. A opção A de NAV-005 aprova a estrutura compacta de uma linha; a estratégia para larguras em que marca, contexto e controles não cabem juntos continua pendente. Não foi persistida uma captura de tela desta observação; os números vieram da geometria do DOM.
 
 
-### Regra compacta estreita aprovada posteriormente
+### Especificação compacta estreita anterior — substituída
 
-O usuário aprovou manter o rótulo do controle de tema enquanto a logo reduz até no máximo 30%; se uma redução maior for necessária para manter a linha única, o controle passa a exibir somente o ícone. A pedido do usuário, foi definida esta especificação recomendada: logo com flex basis de 105 px e piso de 73,5 px; mudança para ícone quando a largura interna chegar a 278 px (aprox. 306 px de viewport com 14 px de margens); sol no claro/lua no escuro; alvos de 44×44 px com gap de 8 px; abaixo de 288 px, permitir duas linhas mantendo marca mínima e identificador completo. Cálculo: 190 px de marca/contexto + 119 px de ações - 31,5 px de redução máxima = 277,5 px de conteúdo mínimo estimado. Em 320 px, a redução estimada é ~17 px, deixando a logo perto de 88 px (~16%). Isso deriva de medições aproximadas do DOM publicado, não mede o breakpoint CSS e precisa ser validado no DOM atual antes de qualquer implementação.
+A versão anterior usava um limiar de 278 px internos (~306 px de viewport) e piso de uma linha de 288 px. Esses valores foram recalculados após medir os vãos entre marca, ações e header no DOM publicado. Use a especificação corrigida logo abaixo e em `decisions.json`; a versão anterior não deve ser usada como parâmetro atual.
+
+
+## Validação estreita adicional do cabeçalho (2026-10-18)
+
+O login administrativo publicado foi medido no tema escuro em 288, 306, 313, 320, 340, 350 e 360 CSS px. O header atual ocupa 104,2 px e usa duas linhas até 340 px nos pontos amostrados; em 350 e 360 px ocupa 62 px e usa uma linha. Em 320 px, marca + Administração medem 189,9 px; logo 105 px; identificador 75,9 px; grupo atual de ações 119,1 px. Em larguras até 380 px, o tema mede 74,1 × 40 px e o menu 40 × 40 px. Não houve overflow horizontal. A composição atual, portanto, não segue a linha única compacta aprovada; a medição descreve o produto, não aprova o empilhamento.
+
+A conferência do CSSOM encontrou regras de cor específicas para claro/escuro e geometria compartilhada para este header. A geometria DOM foi medida apenas no tema escuro para não alterar a preferência persistida. Os detalhes e limites estão em [NAV-005_RUNTIME_VALIDATION_2026-10-18.md](NAV-005_RUNTIME_VALIDATION_2026-10-18.md).
+
+A conta da recomendação anterior foi corrigida: com logo no piso (73,5 px), identificador e gaps observados, alvos recomendados de 44 × 44 px, gap de ações de 8 px, gap do header de 8 px e margens totais de 28 px, o tema rotulado cabe a partir de cerca de 321 px; icon-only é necessário em 320 px ou menos. Em icon-only, uma linha requer cerca de 291 px; abaixo disso, permitir duas linhas. São parâmetros calculados para a futura implementação, não dimensões ou breakpoints observados no produto.

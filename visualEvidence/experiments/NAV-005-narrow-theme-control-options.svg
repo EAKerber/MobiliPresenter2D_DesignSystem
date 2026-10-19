@@ -59,7 +59,7 @@
 <rect x="52" y="414" width="532" height="514" rx="16" class="card"/>
 <text x="76" y="450" class="label">TEMA ICON-ONLY · APÓS O LIMITE</text>
 <text x="76" y="480" class="h">Quando falta espaço</text>
-<text x="76" y="506" class="copy">Até 278 px internos (≈306 px de viewport), usar tema só com ícone.</text>
+<text x="76" y="506" class="copy">A 320 px ou menos, usar tema só com ícone.</text>
 <rect x="76" y="532" width="484" height="104" rx="10" class="darkbar"/>
 <g transform="translate(91 561)">
  <path d="M1 14 13 6 25 14v23H1z" fill="none" stroke="#eee8df" stroke-width="2.4"/>
@@ -103,17 +103,17 @@
  <rect x="82" y="0" width="42" height="44" rx="9" class="btn"/>
  <path d="M92 14h22M92 22h22M92 30h22" class="icon"/>
 </g>
-<text x="640" y="676" class="copy">320 px: logo estimada em 88 px (redução de ~16%).</text>
+<text x="640" y="676" class="copy">320 px: logo estimada em ~103 px (~2% menor), com tema icon-only.</text>
 <text x="640" y="699" class="copy">Identificador completo; controles preservam 44×44 px.</text>
 <line x1="640" y1="724" x2="1124" y2="724" class="border"/>
 <text x="640" y="754" class="muted">Comportamento</text>
 <text x="640" y="778" class="copy">• Sol/lua indica o tema atual</text>
 <text x="640" y="802" class="copy">• Logo encolhe só o necessário</text>
-<text x="640" y="847" class="muted">Com flex-shrink, 320 px estima logo em ~88 px (~16% menor).</text>
-<text x="640" y="877" class="muted">Limiar calculado em 278 px úteis; confirmar o encaixe no DOM.</text>
+<text x="640" y="847" class="muted">No cálculo corrigido, 320 px estima logo em ~103 px (~2% menor), já com tema icon-only.</text>
+<text x="640" y="877" class="muted">Rótulo a partir de ~321 px; recalcular após implementar.</text>
 
 <rect x="52" y="952" width="1096" height="82" rx="14" fill="#e7e0d7"/>
 <text x="76" y="983" class="h" font-size="17">Especificação definida a pedido do usuário</text>
-<text x="76" y="1008" class="copy">Rótulo até 278 px úteis (~306 px de viewport); sol/lua icon-only abaixo. Logo: 105–73,5 px; abaixo de 288 px, permitir duas linhas.</text>
+<text x="76" y="1008" class="copy">Rótulo a partir de ~321 px; tema icon-only a 320 px ou menos; duas linhas abaixo de ~291 px. Logo: 105–73,5 px; abaixo de 291 px, permitir duas linhas.</text>
 <text x="52" y="1060" class="muted">Alvos 44×44 px e gap de 8 px. Parâmetros são recomendação; validar no DOM atual antes de implementar.</text>
 </svg>

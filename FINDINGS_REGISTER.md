@@ -34,7 +34,7 @@ Este registro separa defeitos reproduzidos, relatos intermitentes, triagem de sn
 
 - **EST-01–10:** direções conceituais em `decisions.json`; cores, medidas, comportamento por componente e casos limite continuam pendentes em itens específicos.
 - **NAV-004:** contrato funcional do menu público definido; FIND-001 demonstra uma condição em que o primeiro clique não é atendido.
-- **NAV-005:** estruturas largas e compacta A estão aprovadas. Especificação de encaixe estreito definida a pedido do usuário: flex 105–73,5 px; icon-only abaixo de 278 px internos (~306 px de viewport); alvos 44×44 px, gap 8 px e duas linhas abaixo de 288 px. Falta validar os valores no DOM atual; nenhum código do produto foi alterado.
+- **NAV-005:** estruturas largas e compacta A estão aprovadas. Regra de encaixe estreito aprovada e valores recomendados definidos. A validação atual do DOM publicado encontrou duas linhas até 340 px e alvos de 40 px em viewport <=380 px. A conta recomendada foi corrigida: rótulo a partir de ~321 px, icon-only em 320 px ou menos e duas linhas abaixo de ~291 px. Geometria medida em tema escuro; proposta ainda sem implementação e validação posterior nos dois temas. Nenhum código do produto foi alterado.
 - **VIS-001:** pendente.
 - **CMP-001:** origem sem detalhe suficiente; revisão da biblioteca de componentes em andamento.
 - **ENV-001:** generalização multiambiente futura, não homologada.
