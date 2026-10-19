@@ -963,8 +963,8 @@
     "productCommit": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
     "netlifyDeployId": "6ad5a4e245dad08b373fcbd1",
     "deployStatus": "ready",
-    "staticInventoryCommit": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
-    "note": "Runtime follow-up only; static visual inventory has not been regenerated."
+    "staticInventoryCommit": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+    "note": "Static visual inventory reconciled against this release; JavaScript semantics and DOM visual audit remain separate scopes."
   },
   "productFindingResolutionStatus": {
     "FIND-006": {

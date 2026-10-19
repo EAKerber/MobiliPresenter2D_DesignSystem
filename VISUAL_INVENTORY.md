@@ -1,9 +1,9 @@
 # Inventário visual estático
 
-**Snapshot:** 2026-10-18  
-**Produto observado:** [EAKerber/MobiliPresenter2D](https://github.com/EAKerber/MobiliPresenter2D), `main` em `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`.  
+**Snapshot:** 2026-10-19  
+**Produto observado:** [EAKerber/MobiliPresenter2D](https://github.com/EAKerber/MobiliPresenter2D), `main` em `483ef2e6f76a562a3096516ef68d8dfe072ec21f`.  
 
-**Atualização runtime (2026-10-19):** FIND-006 e FIND-009 foram corrigidos no produto e verificados no deploy `483ef2e`; consulte [PRODUCT_RECONCILIATION_2026-10-19.md](PRODUCT_RECONCILIATION_2026-10-19.md). Este inventário estático continua sendo o snapshot `298c114`; seus números não foram regenerados nesta atualização.
+**Atualização runtime:** FIND-006 e FIND-009 foram corrigidos e verificados no deploy `483ef2e`; veja [PRODUCT_RECONCILIATION_2026-10-19.md](PRODUCT_RECONCILIATION_2026-10-19.md). Os arquivos CSS e HTML alterados entre o snapshot anterior e este commit foram reconciliados em [INVENTORY_REFRESH_2026-10-19.md](INVENTORY_REFRESH_2026-10-19.md). JavaScript continua fora do escopo estático.
 
 **Registro:** `decisions.json`; detalhes por regra e rota em [`visual-inventory.json`](visual-inventory.json).  
 **Escopo:** CSS, marcação HTML estática e arquivos de imagem/vetor/fontes. Este inventário não altera o produto nem certifica o comportamento renderizado.
@@ -14,11 +14,11 @@
 |---|---:|
 | Entradas HTML mapeadas | 8 |
 | Folhas CSS mapeadas | 8 |
-| Nomes de classe encontrados no CSS | 426 |
+| Nomes de classe encontrados no CSS | 428 |
 | Nomes de classe em marcação HTML | 251 |
 | Custom properties CSS | 43 |
-| Ocorrências de cores literais | 459 |
-| Valores literais distintos | 235 |
+| Ocorrências de cores literais | 467 |
+| Valores literais distintos | 238 |
 | Declarações de espaçamento | 750 |
 | Declarações CSS de movimento | 36 |
 | Keyframes | 8 |

@@ -1,7 +1,7 @@
 {
   "schema": "M2DReview1",
   "project": "MobiliPresenter2D",
-  "consolidationDate": "2026-10-18",
+  "consolidationDate": "2026-10-19",
   "sources": [
     "ChatGPT: Inventário De Design System",
     "ChatGPT: Continuar Inventário Design System",
@@ -168,7 +168,7 @@
     },
     {
       "id": "VIS-002",
-      "status": "palette-base-focus-and-semantic-swatches-approved; component-mapping-and-runtime-validation-pending",
+      "status": "palette-base-focus-and-semantic-swatches-approved; selected contextual corrections applied to product; remaining mapping and runtime validation pending",
       "verdict": "agreed",
       "decision": "Paleta-base de identidade compartilhada entre interfaces, com aplicação contextual. A arquitetura futura de tokens deve poder atender light e dark; não presumir ambos os modos em todas as rotas. Revisar contraste de texto, controles, foco e estados. Definir semanticamente erro, aviso, sucesso e informação, além de foco, seleção, hover, pressionado e desabilitado. Informação de processo usa o azul homologado; informação promocional de produto usa a cor terciária cobre com base aprovada #A64D13. O usuário aprovou a paleta visual A: neutros quentes para claro e escuro, superfície clara marfim em vez de branco puro, superfície suave, textos, bordas e tratamento de foco em contorno.",
       "notApproved": [
@@ -320,11 +320,11 @@
             "foreground": "#705C4B",
             "background": "#F0EDE8",
             "contrast": "5.41:1",
-            "status": "approved-palette-pair; product-application-pending"
+            "status": "approved-palette-pair; product-CSS-applied; post-deploy-DOM-validation-pending"
           }
         },
         {
-          "status": "approved-contextual-pair",
+          "status": "approved-contextual-pair; product-CSS-applied; post-deploy-DOM-validation-pending",
           "context": "Light-theme small warm eyebrow label on the audited warm surface",
           "foreground": "#70522F",
           "background": "#E8E3DC",
@@ -400,11 +400,47 @@
         "scope": "This resolves the visual choice for the observed control and dependency context only. It does not establish a global disabled token or approve treatments for other controls, routes, themes, or components.",
         "approvalSource": "User chose to keep the current state in the current conversation.",
         "productImplementation": "The product already used this treatment in the runtime observation; no product code change was requested or made."
+      },
+      "contextualProductImplementation": {
+        "status": "selected homologated text pairs applied in published product CSS; computed styles and rendered contrast after deployment remain unverified",
+        "productCommit": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+        "netlifyDeployId": "6ad5a4e245dad08b373fcbd1",
+        "pullRequest": 219,
+        "contexts": [
+          {
+            "route": "/",
+            "selector": ".hero-description",
+            "theme": "light",
+            "foreground": "#705C4B",
+            "background": "#F0EDE8"
+          },
+          {
+            "route": "/how-it-works/",
+            "selector": ".how-hero-note",
+            "theme": "light",
+            "foreground": "#705C4B",
+            "background": "#F0EDE8"
+          },
+          {
+            "route": "/about/",
+            "selector": ".about-scale p:not(.eyebrow)",
+            "theme": "light",
+            "foreground": "#705C4B",
+            "background": "#F0EDE8"
+          },
+          {
+            "route": "/how-it-works/",
+            "selector": ".study-band .eyebrow",
+            "theme": "light",
+            "foreground": "#70522F",
+            "background": "#E8E3DC"
+          }
+        ]
       }
     },
     {
       "id": "VIS-003",
-      "status": "visual-treatment-and-scoped-color-pair-approved; product-implementation-pending",
+      "status": "visual-treatment-and-scoped-color-pair-approved; product-CSS-applied; post-deploy-runtime-validation-pending",
       "verdict": "agreed",
       "finding": "FIND-004",
       "decision": "No tema escuro, manter a legenda integrada à ilustração sobre uma faixa escura opaca na base. Para FIND-004, o usuário escolheu a alternativa A: faixa #20211F com texto #F0EDE8 (contraste calculado 13,85:1).",
@@ -412,7 +448,7 @@
       "notApproved": [
         "Token global de superfície/texto ou extensão para outros componentes e temas",
         "Gradiente, opacidade, dimensões, espaçamento e comportamento responsivo",
-        "Implementação no produto; requer auditoria do DOM final após mudança"
+        "Contraste, superfície composta e comportamento responsivo precisam de validação runtime após a implementação."
       ],
       "evidence": "Auditoria runtime em 2026-10-18 encontrou #C4BCB2 sobre #FCF9EF, 1,78:1. A prancha experimental comparou três cores sólidas; a seleção A fixa o par #F0EDE8 sobre #20211F com 13,85:1.",
       "implementationAuthorized": false,
@@ -424,6 +460,15 @@
         "contrast": "13.85:1",
         "status": "approved-contextual-pair",
         "scope": "FIND-004 only; not a global token"
+      },
+      "implementationEvidence": {
+        "productCommit": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+        "netlifyDeployId": "6ad5a4e245dad08b373fcbd1",
+        "pullRequest": 219,
+        "route": "/how-it-works/",
+        "selector": ".study-art figcaption",
+        "theme": "dark",
+        "status": "rule present in published CSS; runtime computed style and visual review pending"
       }
     },
     {
