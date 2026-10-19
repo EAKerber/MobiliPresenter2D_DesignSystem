@@ -140,3 +140,25 @@ A conta da recomendação anterior foi corrigida: com logo no piso (73,5 px), id
 ## Rechecagem de contraste da legenda de estudo (2026-10-18)
 
 Na rota publicada `/how-it-works/`, em tema escuro e viewport de 515 × 608 CSS px, a varredura DOM avaliou 161 elementos de texto usando cor computada e o ancestral opaco mais próximo. Um único par ficou abaixo de 4,5:1: `.study-art figcaption`, texto “Esquema conceitual de estudo do espaço”, `#C4BCB2` sobre `#FCF9EF`, fonte de 10,88 px, contraste **1,78:1**. Isso reproduz FIND-004, já conhecido; não é uma nova falha nem aprovação de valores. A decisão B (faixa escura na base da ilustração) permanece a direção escolhida; cor e opacidade da faixa ainda requerem medição e homologação. Esta leitura DOM não certifica conteúdo sobre gradientes, transparência, pseudo-elementos ou imagem. Não houve alteração de tema, preferência, estado de conta ou código do produto; nenhuma captura foi persistida nesta checagem.
+
+## Rechecagem ao vivo: cabeçalho público e sessão administrativa (2026-10-18)
+
+**Origem observada:** navegador conectado, site publicado em `https://casaemmodulos.casa/`. O deploy atual foi confirmado como `6ad518d3da1379029e04324f`, commit `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a` de `main`.
+
+### Página pública compacta
+
+Em `/how-it-works/`, o navegador mostrou a página em viewport de 486 × 590 px. O tema escuro e o claro foram observados; a preferência foi restaurada ao escuro ao fim da comparação. O menu abriu e listou Ambientes, Como funciona e Quem somos. O atalho do WhatsApp permaneceu no cabeçalho, fora do menu, divergindo da estrutura compacta pública homologada em NAV-005, que agrupa navegação e contato dentro do menu.
+
+O controle de tema apareceu apenas como ícone nessa largura da captura. A largura CSS efetiva não foi lida nesta sessão, portanto não classifico o ponto exato como quebra do limiar aprovado. No tema claro, a marca quase se confunde com a superfície do cabeçalho; trata-se de observação visual, sem contraste calculado no DOM e sem causa isolada (asset ou regra CSS). Esses itens estão em FIND-011/012. Nenhum valor novo foi homologado.
+
+### Administração e gerenciamento de acessos
+
+Em `/admin.html`, a autenticação carregou o editor sem a mensagem “Não foi possível carregar os dados administrativos”. Na primeira abertura do menu após o login, o menu ainda mostrava “Entrar na administração”, sem as rotas privadas e sem “Sair”. Recarregar a própria página sincronizou o estado; depois da recarga, o menu mostrou Configurador, Administração, Gerenciar acessos, as páginas públicas e a ação “Sair”. Essa sequência reproduz uma vez a inconsistência de sessão pós-login registrada em FIND-007 e no [backlog do produto, issue #213](https://github.com/EAKerber/MobiliPresenter2D/issues/213). Não determina sua causa nem descarta intermitência.
+
+Em uma aba autenticada de `/access/manage`, o conteúdo carregou e o menu já apresentou corretamente os grupos público e privado e a saída. A tela contém dados de conta e de convites; nenhum valor de destinatário foi copiado para os registros desta auditoria.
+
+### Limites e evidências
+
+Nenhum dado do catálogo foi alterado e nenhum convite foi enviado. A comparação de tema alterou temporariamente a preferência visual. O primeiro frame após mudar para claro pareceu desbotar a marca, mas a captura estabilizada persistida em [evidência pública](visualEvidence/public/how-it-works/how-it-works-light-compact-486x590.jpg) e uma captura independente mostram a marca escura legível. Não foi confirmado defeito visual de contraste. O navegador foi restaurado ao tema escuro após a captura.
+
+A captura pública atual estabilizada em tema claro foi persistida em `visualEvidence/public/how-it-works/how-it-works-light-compact-486x590.jpg`. As imagens antigas permanecem referências históricas. Capturas autenticadas não foram gravadas porque expõem informações de conta e acesso. A medição de contraste DOM da marca, a largura CSS real da captura compacta e a identificação dos seletores/asset permanecem pendentes.
