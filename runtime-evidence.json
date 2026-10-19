@@ -270,7 +270,9 @@
       "menuOpened": true,
       "compactHeaderDeviation": "Theme label hidden before brand reduction; WhatsApp contact remains outside expanded public menu.",
       "currentProductCommit": "not independently identified during this follow-up",
-      "evidence": "evidence/runtime/how-it-works-public-compact-header-2026-10-19.md"
+      "evidence": "evidence/runtime/how-it-works-public-compact-header-2026-10-19.md",
+      "observedAt": "2026-10-19",
+      "screenshotPersisted": false
     }
   ],
   "interactions": [
@@ -303,7 +305,8 @@
       "viewport": "486x590 CSS px",
       "evidence": "Expanded primaryNav exposed Ambientes, Como funciona, Quem somos. No contact/WhatsApp link was present; .header-cta remained visible outside the menu.",
       "productIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/218",
-      "evidenceFile": "evidence/runtime/how-it-works-public-compact-header-2026-10-19.md"
+      "evidenceFile": "evidence/runtime/how-it-works-public-compact-header-2026-10-19.md",
+      "observedAt": "2026-10-19"
     }
   ],
   "contrastScreening": {
@@ -526,7 +529,8 @@
       "selector": "header .brand img",
       "observation": "After the theme transition settled, the logo appeared dark and legible. currentSrc was /branding/logo-light-380.png, computed opacity 1, filter none. The earlier washed-out appearance was transient and not reproduced in the settled state.",
       "contrast": "No numeric text-color ratio calculated for the raster logo; non-text contrast not measured.",
-      "evidenceFile": "evidence/runtime/how-it-works-public-compact-header-2026-10-19.md"
+      "evidenceFile": "evidence/runtime/how-it-works-public-compact-header-2026-10-19.md",
+      "observedAt": "2026-10-19"
     }
   ],
   "compactHeaderMeasurements": {
