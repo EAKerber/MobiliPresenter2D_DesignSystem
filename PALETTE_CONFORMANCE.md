@@ -25,7 +25,7 @@ Contraste é uma condição necessária, mas não prova sozinho a conformidade: 
 |---|---|---|---|
 | Informação promocional de produto e campanhas | Base cobre `#A64D13` | Papel e base aprovados (VIS-002) | Não é warning técnico. Variantes light/dark, superfícies, texto e contraste continuam por homologar. |
 | Informação de processo/funcionamento | Família azul | Papel aprovado (VIS-002); valores exatos ainda não homologados como tokens | `--info: #245d87` (light) e `#a7d1f0` (dark) existem em `app/admin/admin.css`; são uso atual a conferir no runtime, não valores oficiais. |
-| Texto auxiliar claro em três contextos públicos auditados | `#675F55` sobre `#F0EDE8`, 5,38:1 | Par contextual aprovado (VIS-002) | `.hero-description`, `.how-hero-note`, `.about-scale p:not(.eyebrow)`. Não global, não dark. |
+| Texto auxiliar claro em três contextos públicos auditados | Par anterior `#675F55` sobre `#F0EDE8`; substituto candidato `#705C4B` | Par anterior reaberto após feedback estético; novo tom não aprovado | `.hero-description`, `.how-hero-note`, `.about-scale p:not(.eyebrow)`. Não implementar até nova revisão; ver PR20.
 | Rótulo quente claro em Como funciona | `#70522F` sobre `#E8E3DC`, 5,60:1 | Par contextual aprovado (VIS-002) | `.study-band .eyebrow` somente. |
 | Legenda da ilustração no tema escuro | `#F0EDE8` sobre `#20211F`, 13,85:1 | Par contextual aprovado (VIS-003 / FIND-004), seleção A | `.study-art figcaption` em `/how-it-works/`, tema escuro. Não global; aplicação no produto pendente. |
 | Erro, sucesso e aviso técnico | Sem token homologado neste registro | Semântica reconhecível e harmonizada com marca é direção; valores/candidatos visuais não aprovados | Não reaproveitar cobre promocional como warning automaticamente. |
@@ -37,7 +37,7 @@ Esta lista aponta trabalhos requeridos pela evidência atual. Não é autorizaç
 
 | Área | Estado observado | Mudança para conformidade | Registro |
 |---|---|---|---|
-| `/`, `/how-it-works/`, `/about/` | Texto auxiliar claro medido em 4,47:1 nos seletores indicados | Aplicar o par contextual homologado `#675F55` / `#F0EDE8`; conferir DOM final e superfície | FIND-002, issue produto #216 |
+| `/`, `/how-it-works/`, `/about/` | Texto auxiliar claro medido em 4,47:1 nos seletores indicados | Não aplicar o par reaberto `#675F55`; revisar o candidato marrom `#705C4B` (5,41:1 na superfície `#F0EDE8`) e validar DOM após aprovação | FIND-002, issue produto #216 |
 | `/how-it-works/` eyebrow | 3,89:1 no tema claro | Aplicar `#70522F` sobre `#E8E3DC` somente no seletor auditado | FIND-003, issue produto #216 |
 | `/how-it-works/` legenda da figura | 1,78:1 no estado auditado do tema escuro | Criar faixa opaca `#20211F` com texto `#F0EDE8`; manter a legenda visualmente integrada; conferir imagem e layout em viewports variados | FIND-004, issue produto #217 |
 | Configurador, etapas Serviços/Resumo | Contador reporta 8/8 com módulos desmarcados; iluminação indisponível entra no total | Corrigir primeiro a semântica/contagem (decisão funcional do produto); depois medir contraste no DOM em ambos temas | FIND-006, issue produto #209. Não é correção só de paleta. |
@@ -50,7 +50,7 @@ Esta lista aponta trabalhos requeridos pela evidência atual. Não é autorizaç
 
 ## Proposta inicial para revisão
 
-A primeira consolidação está no [quadro experimental da paleta candidata A](visualEvidence/experiments/PALETTE-candidate-A.svg) e em [sua especificação](visualEvidence/experiments/PALETTE-candidate-A.md). Ela reutiliza os neutros e estados mais recorrentes do snapshot, mas não converte esses valores em tokens oficiais. Os contrastes do quadro são pares de amostra; os estados de foco, indisponível, seleção e a promoção no tema escuro seguem para revisão.
+A revisão solicitada retirou `#675F55` do papel de secundário geral e substituiu o foco discreto `#6E512E` por contornos de foco mais visíveis nos dois temas; evita branco e preto puros. Veja os arquivos abaixo. A primeira consolidação está no [quadro experimental da paleta candidata A](visualEvidence/experiments/PALETTE-candidate-A.svg) e em [sua especificação](visualEvidence/experiments/PALETTE-candidate-A.md). Ela reutiliza os neutros e estados mais recorrentes do snapshot, mas não converte esses valores em tokens oficiais. Os contrastes do quadro são pares de amostra; os estados de foco, indisponível, seleção e a promoção no tema escuro seguem para revisão.
 
 ## Como fechar a paleta total
 
