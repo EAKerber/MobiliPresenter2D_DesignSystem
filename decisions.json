@@ -168,13 +168,14 @@
     },
     {
       "id": "VIS-002",
-      "status": "conceptual-direction-approved; one-scoped-pair-under-aesthetic-reconsideration",
+      "status": "palette-base-and-focus-approved; component-mapping-and-runtime-validation-pending",
       "verdict": "agreed",
-      "decision": "Paleta-base de identidade compartilhada entre interfaces, com aplicação contextual. A arquitetura futura de tokens deve poder atender light e dark; não presumir ambos os modos em todas as rotas. Revisar contraste de texto, controles, foco e estados. Definir semanticamente erro, aviso, sucesso e informação, além de foco, seleção, hover, pressionado e desabilitado. Informação de processo usa o azul homologado; informação promocional de produto usa a cor terciária cobre com base aprovada #A64D13.",
+      "decision": "Paleta-base de identidade compartilhada entre interfaces, com aplicação contextual. A arquitetura futura de tokens deve poder atender light e dark; não presumir ambos os modos em todas as rotas. Revisar contraste de texto, controles, foco e estados. Definir semanticamente erro, aviso, sucesso e informação, além de foco, seleção, hover, pressionado e desabilitado. Informação de processo usa o azul homologado; informação promocional de produto usa a cor terciária cobre com base aprovada #A64D13. O usuário aprovou a paleta visual A: neutros quentes para claro e escuro, superfície clara marfim em vez de branco puro, superfície suave, textos, bordas e tratamento de foco em contorno.",
       "notApproved": [
-        "Global tokenization or extension of these exact pairs to other surfaces/themes",
+        "Global token implementation and assignment to every component/screen without mapping",
         "Copper variants by theme or surface",
-        "Other state appearances, theme-by-route decisions and implementation details"
+        "Other state appearances beyond the approved palette reference, including error, warning, success, selection, hover, pressed, disabled and loading combinations",
+        "Runtime application and component-specific contrast validation"
       ],
       "semanticColors": {
         "approvedDirection": "Estados semânticos reconhecíveis, harmonizados com a marca, com combinações adequadas por tema. Mensagens não dependem apenas da cor.",
@@ -214,11 +215,11 @@
         "Visual variants and measurements for focus, selection, hover, pressed, disabled and loading",
         "Copper variations by theme/surface outside approved base #A64D13",
         "Mapping of other semantic state colors to actual screens and tokens",
-        "Substituição do par claro de texto auxiliar #675F55; #705C4B é somente candidato até aprovação visual"
+        "Mapeamento dos valores aprovados da paleta para componentes/rotas e validação no DOM; variantes e pares técnicos de estados semânticos."
       ],
       "approvedRuntimePairs": [
         {
-          "status": "reconsideration-requested",
+          "status": "previous-pair-reopened-and-superseded-by-approved-palette",
           "context": "Light-theme body support text on the audited warm surface",
           "foreground": "#675F55",
           "background": "#F0EDE8",
@@ -240,12 +241,12 @@
             }
           ],
           "previousStatus": "approved-contextual-pair",
-          "reconsiderationReason": "Em revisão posterior da proposta de paleta, o usuário considerou #675F55 esverdeado e não aprovou seu uso como cor secundária geral. Não aplicar esse par nos seletores listados até nova revisão do tom.",
+          "reconsiderationReason": "O usuário rejeitou esteticamente #675F55 como tom secundário. A paleta A agora aprova #705C4B no papel secundário; aplicação nos seletores listados ainda precisa de validação DOM.",
           "candidateReplacement": {
             "foreground": "#705C4B",
             "background": "#F0EDE8",
             "contrast": "5.41:1",
-            "status": "candidate-not-approved"
+            "status": "approved-palette-pair; product-application-pending"
           }
         },
         {
@@ -266,7 +267,58 @@
       ],
       "implementationAuthorized": false,
       "approvedAt": "2026-10-18",
-      "approvalSource": "User selection of the alternatives in the visual review."
+      "approvalSource": "User selection of the alternatives in the visual review.",
+      "approvedPalette": {
+        "status": "approved-for-design-system-palette; product-application-pending",
+        "scope": "Valores e papéis apresentados na prancha PALETTE-candidate-A-v2.svg. A aprovação define a paleta de referência; não cria tokens técnicos nem autoriza implementação no produto.",
+        "colors": {
+          "canvas": {
+            "light": "#E8E3DC",
+            "dark": "#171614"
+          },
+          "surface": {
+            "light": "#F0EDE8",
+            "dark": "#211F1C"
+          },
+          "surfaceSoft": {
+            "light": "#DED9D2",
+            "dark": "#2C2924"
+          },
+          "textPrimary": {
+            "light": "#292723",
+            "dark": "#F0EAE1"
+          },
+          "textSecondary": {
+            "light": "#705C4B",
+            "dark": "#C7BBAA"
+          },
+          "border": {
+            "light": "#D6CCC0",
+            "dark": "#4E4942"
+          },
+          "focusOutline": {
+            "light": "#8B6A40",
+            "dark": "#D8BC7C"
+          }
+        },
+        "focusTreatment": {
+          "outlineWidthCssPx": 4,
+          "offsetCssPx": 3,
+          "status": "approved-visual-reference; verify keyboard focus appearance in real components"
+        },
+        "contrast": {
+          "primaryLightOnCanvas": "11.68:1",
+          "secondaryLightOnSurface": "5.41:1",
+          "secondaryLightOnCanvas": "4.95:1",
+          "secondaryLightOnSoftSurface": "4.50:1",
+          "primaryDarkOnCanvas": "15.12:1",
+          "secondaryDarkOnSurface": "8.70:1",
+          "focusLightOnSurface": "4.25:1",
+          "focusDarkOnSurface": "8.93:1",
+          "note": "Calculated for the listed opaque solid color pairs. Component transparency, combined backgrounds and runtime rendering still require validation."
+        },
+        "approvalSource": "Aprovação explícita do usuário após revisão visual da prancha PALETTE-candidate-A-v2.svg."
+      }
     },
     {
       "id": "VIS-003",
