@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="920" viewBox="0 0 1440 920" role="img" aria-labelledby="title desc">
-<title id="title">Candidatos para informação de processo em claro e escuro</title>
+<title id="title">Opção A aprovada para informação de processo em claro e escuro</title>
 <desc id="desc">Comparação experimental entre o azul atualmente usado como referência e uma alternativa com maior contraste, em superfícies claras e escuras homologadas.</desc>
 <defs>
 <style>
@@ -26,8 +26,8 @@ text{font-family:Inter,Arial,sans-serif}
 
 <g transform="translate(64 242)">
 <rect width="638" height="548" rx="18" fill="#F0EDE8" stroke="#D6CCC0"/>
-<text x="28" y="44" class="cardTitle">A · Referência atual</text>
-<text x="28" y="72" class="cardSub">Valores existentes no CSS; servem de comparação, ainda não são tokens oficiais.</text>
+<text x="28" y="44" class="cardTitle">A · Escolhida e aprovada</text>
+<text x="28" y="72" class="cardSub">Pares de texto aprovados para informação de processo nestas superfícies.</text>
 <rect x="28" y="102" width="278" height="260" rx="14" fill="#F0EDE8" stroke="#D6CCC0"/>
 <text x="46" y="128" class="themeLabel" fill="#705C4B">TEMA CLARO · SUPERFÍCIE #F0EDE8</text>
 <circle cx="60" cy="174" r="13" fill="none" stroke="#245D87" stroke-width="2"/>
@@ -49,7 +49,7 @@ text{font-family:Inter,Arial,sans-serif}
 
 <g transform="translate(738 242)">
 <rect width="638" height="548" rx="18" fill="#F0EDE8" stroke="#D6CCC0"/>
-<text x="28" y="44" class="cardTitle">B · Maior contraste</text>
+<text x="28" y="44" class="cardTitle">B · Não selecionada</text>
 <text x="28" y="72" class="cardSub">Alternativa mais profunda no claro e mais luminosa no escuro.</text>
 <rect x="28" y="102" width="278" height="260" rx="14" fill="#F0EDE8" stroke="#D6CCC0"/>
 <text x="46" y="128" class="themeLabel" fill="#705C4B">TEMA CLARO · SUPERFÍCIE #F0EDE8</text>
@@ -67,9 +67,9 @@ text{font-family:Inter,Arial,sans-serif}
 <text x="340" y="334" class="ratio" fill="#BDD5E3">#BDD5E3 · 10,80:1</text>
 <text x="28" y="405" class="note"><tspan font-weight="700">Leitura:</tspan> mantém azul sem aproximar do verde.</text>
 <text x="28" y="431" class="note">Mais contraste nos dois temas; tom escuro mais suave.</text>
-<text x="28" y="505" class="small">Candidata de estudo · ainda não homologada</text>
+<text x="28" y="505" class="small">Alternativa não escolhida</text>
 </g>
 <rect x="64" y="816" width="1312" height="64" rx="12" fill="#DED9D2"/>
-<text x="84" y="843" class="note"><tspan font-weight="700">Escopo da escolha:</tspan> apenas os tons do texto de informação de processo nestas superfícies claras/escuras.</text>
+<text x="84" y="843" class="note"><tspan font-weight="700">Opção A aprovada:</tspan> texto de informação de processo nestas superfícies claras/escuras.</text>
 <text x="84" y="865" class="small">Fundos, bordas, ícones, uso em outras superfícies e tokens técnicos seguem separados. Os valores foram calculados sobre as superfícies da paleta aprovada.</text>
 </svg>
