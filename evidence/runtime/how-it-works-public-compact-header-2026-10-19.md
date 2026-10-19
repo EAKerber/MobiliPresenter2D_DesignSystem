@@ -30,3 +30,12 @@ After the light-theme transition settled at 486 × 590, the logo was visibly dar
 ## Evidence limits
 
 No raster screenshot was persisted in this repository for this follow-up; the observation is recorded from the live screenshot and read-only DOM. The current deployment commit was not identified, and behavior at other compact widths was not tested in this follow-up. The earlier dark-theme browser preference was restored and the menu was left closed. No account data, product settings, or product code were changed.
+
+
+## Follow-up narrow-width sweep (2026-10-19, dark theme)
+
+The same public route was checked at 360, 340, 321, 320, 291 and 290 CSS px. The theme remained icon-only at every sample. The logo measured 129.6 px at 360, 122.4 px at 340, and the 120 px minimum from 321 downwards. Thus the icon-only rule activates while the logo remains at or above 75% of its 160 px reference size; at 321 px, NAV-005 says the theme label should still remain visible.
+
+At 291 and 290 px, `html` and `body` had `min-width: 320px`; `.how-page` had `overflow-x: clip`. The page stayed in a 320 px, one-row header instead of wrapping. At 290 px, the document client width was 275 px and scroll width 320 px; the menu target starts at x=264 and extends to x=306, leaving only 11 px visible inside the document client area. The screenshot also showed clipped heading text. The hamburger remains in the DOM and has an accessible name, but most of its visual hit target is outside the clipped area.
+
+These measurements add a second compact-header defect to [product issue #218](https://github.com/EAKerber/MobiliPresenter2D/issues/218): current public layout clips content below the 320 px minimum and does not switch to the approved two-row fallback below approximately 291 px. Exact behavior between sampled widths remains unmeasured. No raster screenshot was saved for this sweep.
