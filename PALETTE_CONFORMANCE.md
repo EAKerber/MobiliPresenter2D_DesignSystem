@@ -50,7 +50,7 @@ Esta lista aponta trabalhos requeridos pela evidência atual. Não é autorizaç
 
 ## Proposta inicial para revisão
 
-A revisão solicitada retirou `#675F55` do papel de secundário geral e substituiu o foco discreto `#6E512E` por contornos de foco mais visíveis nos dois temas; evita branco e preto puros. Veja os arquivos abaixo. A primeira consolidação está no [quadro experimental da paleta candidata A](visualEvidence/experiments/PALETTE-candidate-A.svg) e em [sua especificação](visualEvidence/experiments/PALETTE-candidate-A.md). Ela reutiliza os neutros e estados mais recorrentes do snapshot, mas não converte esses valores em tokens oficiais. Os contrastes do quadro são pares de amostra; os estados de foco, indisponível, seleção e a promoção no tema escuro seguem para revisão.
+A revisão solicitada retirou `#675F55` do papel de secundário geral, substituiu o foco discreto `#6E512E` por contornos mais visíveis, e trocou a superfície branca pura `#FFFFFF` por marfim quente `#F8F5F0`. A regra é para superfícies de interface; não altera imagens, logotipos ou ilustrações. Veja os arquivos abaixo. A primeira consolidação está no [quadro experimental da paleta candidata A](visualEvidence/experiments/PALETTE-candidate-A.svg) e em [sua especificação](visualEvidence/experiments/PALETTE-candidate-A.md). Ela reutiliza os neutros e estados mais recorrentes do snapshot, mas não converte esses valores em tokens oficiais. Os contrastes do quadro são pares de amostra; os estados de foco, indisponível, seleção e a promoção no tema escuro seguem para revisão.
 
 ## Como fechar a paleta total
 
