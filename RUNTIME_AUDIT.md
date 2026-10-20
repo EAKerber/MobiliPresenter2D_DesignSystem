@@ -242,3 +242,10 @@ A inspeção do JavaScript servido encontrou cópias separadas do barramento de 
 A chamada POST /api/access/session e a URL direta /.netlify/functions/access-session-status retornaram 404 com HTML, embora as rotas e a função estejam declaradas no main consultado. As chamadas equivalentes de configuração e bootstrap administrativo responderam 200. Esta falha de fallback está separada no [issue #222](https://github.com/EAKerber/MobiliPresenter2D/issues/222); não foi criada nem validada uma sessão temporária e esse 404 não explica o caso de Netlify Identity.
 
 Nenhum e-mail, convite, configuração ou dado administrativo foi copiado para a evidência. Nenhum dado ou código de produto foi alterado. O SHA exato do deploy servido nesta visita não foi verificado independentemente.
+
+
+### Análise estática do caminho de carregamento Admin (#212)
+
+No bundle servido, o login por formulário aguarda a autenticação, obtém o JWT, grava o cookie e somente então emite o evento e retorna o usuário. O listener de autenticação também chama showUser(user), de modo que o listener e o formulário iniciam duas execuções próximas. Porém ensureAdminData mantém adminDataPromise enquanto a leitura está pendente, agrupando os pedidos a /api/admin-bootstrap; após essa leitura, ambas as execuções ainda podem chamar loadSettings.
+
+O texto literal “Não foi possível carregar os dados administrativos.” é disparado quando /api/admin-bootstrap responde fora de 2xx. A função publicada no main consulta getUser() do Netlify Identity e distingue 401 sem usuário, 403 sem permissão e 503 se Identity estiver indisponível; o cliente não preserva essa distinção e exibe a mesma mensagem. Portanto, há concorrência de UI, mas uma corrida simples antes da gravação do cookie não é a hipótese mais forte no caminho normal do formulário, e o bootstrap é coalescido em uma única chamada. Uma divergência transitória na resolução do usuário pelo contexto Netlify continua possível, mas não foi demonstrada. Capturar status HTTP, duração e request ID sem dados pessoais/token na próxima ocorrência separaria essas hipóteses. Nenhuma instrumentação foi implantada.
