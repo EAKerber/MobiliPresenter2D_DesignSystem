@@ -262,3 +262,14 @@ O texto literal “Não foi possível carregar os dados administrativos.” é d
 ## Acompanhamento de publicação do FIND-007 (2026-10-20)
 
 A correção de sincronização de sessão foi integrada ao produto pela [PR #223](https://github.com/EAKerber/MobiliPresenter2D/pull/223), commit [`1878ae1`](https://github.com/EAKerber/MobiliPresenter2D/commit/1878ae1057ce7c6190e0c8cb08a1f3baadd49463). O deploy de produção [`6ad6c3b51b6be05647167f94`](https://app.netlify.com/projects/mobilipresenter2d/deploys/6ad6c3b51b6be05647167f94) está `ready` e publicou esse SHA. A verificação do menu após login não foi feita: o contexto de navegador disponível estava anônimo. FIND-007/#213 fica como correção publicada, validação autenticada pendente; sem essa validação não é marcado como resolvido.
+
+
+## Cabeçalho e menu de confirmação de acesso (2026-10-20)
+
+Em produção, `/access/` foi observada em contexto isolado sem sessão, viewport 390 × 844 CSS px, nos temas claro e escuro. As capturas com o menu aberto estão em [tema claro](visualEvidence/private/access-confirmation/access-menu-light-2026-10-20.jpg) e [tema escuro](visualEvidence/private/access-confirmation/access-menu-dark-2026-10-20.jpg). A revisão está vinculada ao commit do produto `1878ae1057ce7c6190e0c8cb08a1f3baadd49463` e ao deploy `6ad6c3b51b6be05647167f94`.
+
+O menu abriu no primeiro clique; Escape o fechou e devolveu o foco ao controle. No estado anônimo, havia uma rota privada (“Entrar na administração”) e cinco destinos públicos. A largura permaneceu sem overflow. O link de acesso não continha token válido; a experiência autenticada e o consumo de link válido seguem pendentes. A chamada sem token a `POST /api/access/session` respondeu 404 e continua separada em FIND-014/#222.
+
+A superfície do cabeçalho e do menu claro computou `#FFFFFF`, enquanto a paleta homologada usa `#F0EDE8` para a superfície clara. No tema escuro, cabeçalho `#171816` e menu `#1B1C1A` também diferem dos neutros de referência `#171614` e `#211F1C`. O contraste de texto não foi reprovado; a pendência é de conformidade cromática por componente, registrada em FIND-015. Não houve alteração no produto.
+
+A evidência detalhada, geometria, cores computadas e limites estão em [auditoria runtime de /access/](evidence/runtime/access-confirmation-menu-2026-10-20.md).

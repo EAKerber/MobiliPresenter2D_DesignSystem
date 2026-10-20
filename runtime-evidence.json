@@ -119,6 +119,26 @@
           "state": "signed-out login form; menu closed",
           "deployedRevision": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
           "source": "Browser capture of the published production site in an isolated signed-out context"
+        },
+        {
+          "path": "visualEvidence/private/access-confirmation/access-menu-light-2026-10-20.jpg",
+          "sourceRoute": "/access/",
+          "theme": "light",
+          "viewport": "390x844 CSS px; DPR 1",
+          "format": "JPEG",
+          "state": "signed-out isolated context; missing access token; private and public menu groups expanded",
+          "deployedRevision": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+          "source": "Browser capture of the published production site"
+        },
+        {
+          "path": "visualEvidence/private/access-confirmation/access-menu-dark-2026-10-20.jpg",
+          "sourceRoute": "/access/",
+          "theme": "dark",
+          "viewport": "390x844 CSS px; DPR 1",
+          "format": "JPEG",
+          "state": "signed-out isolated context; missing access token; private and public menu groups expanded",
+          "deployedRevision": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+          "source": "Browser capture of the published production site"
         }
       ],
       "currentPassDisplayed": [
@@ -145,10 +165,22 @@
           "viewport": "1036x582 CSS px",
           "theme": "light and dark",
           "state": "signed-out administrative login form; screenshot persisted under visualEvidence/private/admin-login"
+        },
+        {
+          "route": "/access/",
+          "viewport": "390x844 CSS px",
+          "theme": "light",
+          "state": "signed-out; no valid access token; private and public menu expanded"
+        },
+        {
+          "route": "/access/",
+          "viewport": "390x844 CSS px",
+          "theme": "dark",
+          "state": "signed-out; no valid access token; private and public menu expanded"
         }
       ],
       "currentPassPersisted": true,
-      "currentPassNote": "Current signed-out login captures for the published product snapshot 483ef2e are persisted under visualEvidence/private/admin-login. Authenticated editor screenshots were omitted because they contain account/access data."
+      "currentPassNote": "Current signed-out login captures for the published product snapshot 483ef2e are persisted under visualEvidence/private/admin-login. Authenticated editor screenshots were omitted because they contain account/access data. Capturas atuais da confirmação de acesso em produção, 390×844 CSS px, temas claro/escuro e menu aberto, estão em visualEvidence/private/access-confirmation. O token estava ausente; a validação autenticada segue pendente."
     },
     "authenticationCompletedByUser": true,
     "authenticatedScreenshotsPersisted": false,
@@ -261,9 +293,49 @@
       "actual": "/access/",
       "access": "access-link-confirmation",
       "noHorizontalOverflow": [
+        390,
         1440
       ],
-      "emailLinkSentOrValidated": false
+      "emailLinkSentOrValidated": false,
+      "viewport": "390x844 CSS px; DPR 1",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "menu": {
+        "openedOnFirstClick": true,
+        "closedWithEscape": true,
+        "focusReturnedToToggle": true,
+        "signedOutPrivateLinks": [
+          "Entrar na administração"
+        ],
+        "publicLinks": [
+          "Ambientes",
+          "Cozinha",
+          "Como funciona",
+          "Quem somos",
+          "Fale conosco"
+        ],
+        "authenticatedState": "not tested"
+      },
+      "tokenState": "No valid token supplied; page showed the expected request-new-link message.",
+      "currentProductCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+      "deployId": "6ad6c3b51b6be05647167f94",
+      "surfaces": {
+        "light": {
+          "header": "#FFFFFF",
+          "menu": "#FFFFFF",
+          "body": "#F7F5F2",
+          "foreground": "#22211F"
+        },
+        "dark": {
+          "header": "#171816",
+          "menu": "#1B1C1A",
+          "body": "#111210",
+          "foreground": "#F4F1EB"
+        }
+      },
+      "evidence": "evidence/runtime/access-confirmation-menu-2026-10-20.md"
     },
     {
       "requested": "/access/manage.html",
@@ -503,6 +575,23 @@
       "relatedIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/214",
       "evidenceFile": "PRODUCT_RECONCILIATION_2026-10-19.md",
       "screenshotPersisted": false
+    },
+    {
+      "observedAt": "2026-10-20",
+      "route": "/access/",
+      "viewport": "390x844 CSS px",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "productCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+      "deployId": "6ad6c3b51b6be05647167f94",
+      "productCodeChanged": false,
+      "control": "private menu toggle",
+      "status": "opened-on-first-click; Escape closed and focus returned to toggle",
+      "evidence": "Signed-out private group listed only Entrar na administração; public group listed Ambientes, Cozinha, Como funciona, Quem somos and Fale conosco. No horizontal overflow. No valid access token was supplied, so authenticated links were not evaluated.",
+      "relatedFinding": "FIND-015",
+      "evidenceFile": "evidence/runtime/access-confirmation-menu-2026-10-20.md"
     }
   ],
   "contrastScreening": {
