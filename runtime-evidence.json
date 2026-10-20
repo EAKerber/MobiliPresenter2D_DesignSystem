@@ -99,6 +99,26 @@
           "state": "top of page; settled light theme; compact header and hero",
           "deployedRevision": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
           "source": "CloudConvert browser capture of the published production site"
+        },
+        {
+          "path": "visualEvidence/private/admin-login/admin-login-light-2026-10-19.svg",
+          "sourceRoute": "/admin.html",
+          "theme": "light",
+          "viewport": "1036x582 CSS px; raster 1554x873 at DPR 1.5",
+          "format": "SVG with embedded JPEG capture",
+          "state": "signed-out login form; menu closed",
+          "deployedRevision": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+          "source": "Browser capture of the published production site in an isolated signed-out context"
+        },
+        {
+          "path": "visualEvidence/private/admin-login/admin-login-dark-2026-10-19.svg",
+          "sourceRoute": "/admin.html",
+          "theme": "dark (automatic)",
+          "viewport": "1036x582 CSS px; raster 1554x873 at DPR 1.5",
+          "format": "SVG with embedded JPEG capture",
+          "state": "signed-out login form; menu closed",
+          "deployedRevision": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+          "source": "Browser capture of the published production site in an isolated signed-out context"
         }
       ],
       "currentPassDisplayed": [
@@ -119,10 +139,16 @@
           "viewport": "1280x720 browser capture",
           "theme": "dark",
           "state": "authenticated admin editor; screenshot contains account context and was not persisted"
+        },
+        {
+          "route": "/admin.html",
+          "viewport": "1036x582 CSS px",
+          "theme": "light and dark",
+          "state": "signed-out administrative login form; screenshot persisted under visualEvidence/private/admin-login"
         }
       ],
       "currentPassPersisted": true,
-      "currentPassNote": "The stabilized public light-theme capture is persisted at visualEvidence/public/how-it-works/how-it-works-light-compact-486x590.jpg. Authenticated screenshots contain account/access data and were intentionally omitted."
+      "currentPassNote": "Current signed-out login captures for the published product snapshot 483ef2e are persisted under visualEvidence/private/admin-login. Authenticated editor screenshots were omitted because they contain account/access data."
     },
     "authenticationCompletedByUser": true,
     "authenticatedScreenshotsPersisted": false,
@@ -636,6 +662,89 @@
           }
         ],
         "result": "The same hard-coded translucent white label foreground contrasts adequately in dark mode but nearly disappears on the light summary card."
+      },
+      {
+        "observedAt": "2026-10-19",
+        "route": "/admin.html",
+        "viewport": "1036x582 CSS px",
+        "method": "Read-only browser computed styles; sRGB composition of text and solid ancestor backgrounds; WCAG relative luminance ratio. Exploratory screen, not independent certification.",
+        "productCommit": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+        "access": "authenticated admin editor; screenshot not persisted",
+        "theme": "light and dark",
+        "screenshotPersisted": false,
+        "productCodeChanged": false,
+        "findings": [
+          {
+            "selector": ".initial-state-option",
+            "text": "Iniciar visível no configurador",
+            "fontSize": "10px",
+            "theme": "light",
+            "computedForeground": "#706C66",
+            "compositedBackground": "#EAE7E2",
+            "ratio": 4.22,
+            "threshold": 4.5,
+            "status": "confirmed-below-threshold",
+            "relatedFinding": "FIND-013",
+            "relatedIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/208"
+          },
+          {
+            "selector": ".initial-state-option",
+            "text": "Iniciar visível no configurador",
+            "fontSize": "10px",
+            "theme": "dark",
+            "computedForeground": "#C4BCB2",
+            "compositedBackground": "#232321",
+            "ratio": 8.36,
+            "threshold": 4.5,
+            "status": "meets-threshold-for-observed-pair",
+            "relatedFinding": "FIND-013"
+          },
+          {
+            "selector": ".switch",
+            "text": "Ativa",
+            "fontSize": "12px",
+            "theme": "light",
+            "computedForeground": "#706C66",
+            "compositedBackground": "#FFFFFF",
+            "ratio": 5.22,
+            "threshold": 4.5,
+            "status": "meets-threshold-for-observed-pair"
+          },
+          {
+            "selector": ".switch",
+            "text": "Ativa",
+            "fontSize": "12px",
+            "theme": "dark",
+            "computedForeground": "#C4BCB2",
+            "compositedBackground": "#1B1C1A",
+            "ratio": 9.11,
+            "threshold": 4.5,
+            "status": "meets-threshold-for-observed-pair"
+          },
+          {
+            "selector": "#saveMessage",
+            "text": "Configuração carregada",
+            "fontSize": "13px",
+            "theme": "light",
+            "computedForeground": "#706C66",
+            "compositedBackground": "#F7F5F2",
+            "ratio": 4.79,
+            "threshold": 4.5,
+            "status": "meets-threshold-for-observed-pair"
+          },
+          {
+            "selector": "#saveMessage",
+            "text": "Configuração carregada",
+            "fontSize": "13px",
+            "theme": "dark",
+            "computedForeground": "#C4BCB2",
+            "compositedBackground": "#111210",
+            "ratio": 10,
+            "threshold": 4.5,
+            "status": "meets-threshold-for-observed-pair"
+          }
+        ],
+        "result": "The light-theme initial-state label is below the 4.5:1 screening threshold; the two other observed examples remain above it."
       }
     ]
   },
@@ -691,7 +800,8 @@
     "FIND-007": 213,
     "FIND-008": 208,
     "FIND-009": 214,
-    "FIND-010": 208
+    "FIND-010": 208,
+    "FIND-013": 208
   },
   "baselineAuditReconciliation": {
     "productIssue": 208,
