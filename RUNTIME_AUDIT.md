@@ -238,3 +238,27 @@ Acesse `/admin.html` numa janela de navegador isolada, sem sessão, para verific
 No editor autenticado do mesmo deploy `483ef2e6f76a562a3096516ef68d8dfe072ec21f`, viewport 1036 × 582 CSS px, a leitura de computed styles e fundo efetivo composto em sRGB mediu `.initial-state-option` (“Iniciar visível no configurador”, 10 px) em **4,22:1 no claro** e **8,36:1 no escuro**. O tema claro fica abaixo do limiar de triagem 4,5:1. Os controles “Ativa” (`.switch`, 12 px) mediram 5,22:1 e 9,11:1; `#saveMessage` (13 px) mediu 4,79:1 e 10,00:1, respectivamente. Assim, não se atribui esta falha aos outros dois pares examinados.
 
 O achado FIND-013 foi registrado no [backlog do produto, issue #208](https://github.com/EAKerber/MobiliPresenter2D/issues/208), e sua evidência detalhada está em [admin-initial-state-label-contrast-2026-10-19.md](evidence/runtime/admin-initial-state-label-contrast-2026-10-19.md). A medição é técnica e exploratória, não certificação. Nenhuma opção, dado, código ou configuração administrativa foi alterada; não houve tentativa de login ou uso de credenciais. O formulário pode ser visto nas [capturas claras e escuras](../../visualEvidence/private/admin-login/admin-login-light-2026-10-19.svg).
+
+
+## Revisão do fluxo de login e sessão (2026-10-19)
+
+Na sessão de produção autenticada pelo usuário, as chamadas de Netlify Identity para token e usuário responderam 200. Em /admin.html, o editor carregou na primeira visita; o bootstrap administrativo e as leituras de configuração responderam 200, e a mensagem de falha do issue [#212](https://github.com/EAKerber/MobiliPresenter2D/issues/212) não apareceu. Isso não reproduz nem descarta a falha intermitente.
+
+A primeira abertura do menu na mesma página após o login continuou mostrando “Entrar na administração”, sem rotas privadas ou saída. Sem recarregar nem sair, uma navegação nova para /access/manage.html mostrou imediatamente o menu autenticado correto. Em /config/, a configuração publicada carregou sem alerta e indicou 0 de 7 módulos. Reproduções e limites estão em [auth-session-flow-2026-10-19.md](evidence/runtime/auth-session-flow-2026-10-19.md) e no [issue #213](https://github.com/EAKerber/MobiliPresenter2D/issues/213).
+
+A inspeção do JavaScript servido encontrou cópias separadas do barramento de eventos de autenticação em core/private-navigation.bundle.js e admin/admin.bundle.js, com listas de listeners locais por módulo. A hipótese de alta confiança é que o evento emitido pelo bundle administrativo não chega ao listener do cabeçalho; a navegação nova recupera o usuário persistido. Ainda não há correção ou teste isolado, portanto a causa permanece como hipótese técnica, não resolução.
+
+A chamada POST /api/access/session e a URL direta /.netlify/functions/access-session-status retornaram 404 com HTML, embora as rotas e a função estejam declaradas no main consultado. As chamadas equivalentes de configuração e bootstrap administrativo responderam 200. Esta falha de fallback está separada no [issue #222](https://github.com/EAKerber/MobiliPresenter2D/issues/222); não foi criada nem validada uma sessão temporária e esse 404 não explica o caso de Netlify Identity.
+
+Nenhum e-mail, convite, configuração ou dado administrativo foi copiado para a evidência. Nenhum dado ou código de produto foi alterado. O SHA exato do deploy servido nesta visita não foi verificado independentemente.
+
+
+### Análise estática do caminho de carregamento Admin (#212)
+
+No bundle servido, o login por formulário aguarda a autenticação, obtém o JWT, grava o cookie e somente então emite o evento e retorna o usuário. O listener de autenticação também chama showUser(user), de modo que o listener e o formulário iniciam duas execuções próximas. Porém ensureAdminData mantém adminDataPromise enquanto a leitura está pendente, agrupando os pedidos a /api/admin-bootstrap; após essa leitura, ambas as execuções ainda podem chamar loadSettings.
+
+O texto literal “Não foi possível carregar os dados administrativos.” é disparado quando /api/admin-bootstrap responde fora de 2xx. A função publicada no main consulta getUser() do Netlify Identity e distingue 401 sem usuário, 403 sem permissão e 503 se Identity estiver indisponível; o cliente não preserva essa distinção e exibe a mesma mensagem. Portanto, há concorrência de UI, mas uma corrida simples antes da gravação do cookie não é a hipótese mais forte no caminho normal do formulário, e o bootstrap é coalescido em uma única chamada. Uma divergência transitória na resolução do usuário pelo contexto Netlify continua possível, mas não foi demonstrada. Capturar status HTTP, duração e request ID sem dados pessoais/token na próxima ocorrência separaria essas hipóteses. Nenhuma instrumentação foi implantada.
+
+## Acompanhamento de publicação do FIND-007 (2026-10-20)
+
+A correção de sincronização de sessão foi integrada ao produto pela [PR #223](https://github.com/EAKerber/MobiliPresenter2D/pull/223), commit [`1878ae1`](https://github.com/EAKerber/MobiliPresenter2D/commit/1878ae1057ce7c6190e0c8cb08a1f3baadd49463). O deploy de produção [`6ad6c3b51b6be05647167f94`](https://app.netlify.com/projects/mobilipresenter2d/deploys/6ad6c3b51b6be05647167f94) está `ready` e publicou esse SHA. A verificação do menu após login não foi feita: o contexto de navegador disponível estava anônimo. FIND-007/#213 fica como correção publicada, validação autenticada pendente; sem essa validação não é marcado como resolvido.
