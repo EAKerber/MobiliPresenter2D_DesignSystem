@@ -102,13 +102,31 @@ try {
         };
       },{selectors:probes[route]});
       item.loaded=true;
-      item.ok=item.httpStatus>=200&&item.httpStatus<400 && (route!=='/viewer/' || item.snapshot.selectors['.viewer-block']?.count>0);
+      item.ok=item.httpStatus>=200 && item.httpStatus<400
+        && item.snapshot.themeResolved===theme && item.errors.length===0
+        && (route!=='/viewer/' || item.snapshot.selectors['.viewer-block']?.count>0);
+      if (item.snapshot.themeResolved!==theme) item.note='Resolved theme mismatch with requested theme';
+      if (item.errors.length) item.note='Uncaught page exceptions: '+item.errors.length;
     } catch(e) { item.note=String(e.message||e).slice(0,400); }
     report.observations.push(item);
-    console.log(JSON.stringify({route,width,theme,ok:item.ok,httpStatus:item.httpStatus,elementCount:item.snapshot?.elementCount,failedResponses:item.failures.length,note:item.note}));
+    console.log(JSON.stringify({route,width,theme,resolved:item.snapshot?.themeResolved,ok:item.ok,httpStatus:item.httpStatus,elementCount:item.snapshot?.elementCount,benefits:item.snapshot?.selectors?.['.benefit-item']?.count,viewerBlocks:item.snapshot?.selectors?.['.viewer-block']?.count,hotspots:item.snapshot?.selectors?.['.scene-hotspot']?.count,failedResponses:item.failures.length,pageExceptions:item.errors.length,note:item.note}));
     await context.close();
   }
 } finally { await browser.close(); }
+for (const route of routes) for (const width of widths) {
+  const a=report.observations.find(x=>x.route===route&&x.width===width&&x.theme==='light');
+  const b=report.observations.find(x=>x.route===route&&x.width===width&&x.theme==='dark');
+  if (!a?.snapshot || !b?.snapshot) continue;
+  const selector=route==='/viewer/' ? '.viewer-heading' : route==='/' ? '.site-header' : '.eyebrow';
+  const light=a.snapshot.selectors[selector]?.examples[0]?.computed || {};
+  const dark=b.snapshot.selectors[selector]?.examples[0]?.computed || {};
+  console.log('THEME_CSS_DELTA '+JSON.stringify({route,width,selector,
+    light:{color:light.color,backgroundColor:light.backgroundColor},
+    dark:{color:dark.color,backgroundColor:dark.backgroundColor},
+    colorChanged:light.color!==dark.color,
+    backgroundChanged:light.backgroundColor!==dark.backgroundColor
+  }));
+}
 const output=process.env.M2D_AUDIT_OUTPUT||'artifacts/public-dom-audit.json';
 await mkdir(dirname(output),{recursive:true});
 await writeFile(output,JSON.stringify(report,null,2)+'\n','utf8');
