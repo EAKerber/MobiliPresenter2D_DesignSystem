@@ -709,7 +709,7 @@
     "FIND-008": 208,
     "FIND-009": 214,
     "FIND-010": 208,
-    "FIND-013": 222
+    "FIND-014": 222
   },
   "baselineAuditReconciliation": {
     "productIssue": 208,
@@ -1038,7 +1038,8 @@
     "menu": {
       "sameAdminDocumentAfterLogin": "stale signed-out entry item; private routes and logout omitted",
       "newAuthenticatedNavigation": "/access/manage.html menu contained private/public navigation and logout",
-      "likelyCause": "Admin and private-navigation bundles each contain a separate module-local auth event bus; the login event likely does not reach the header listener. High-confidence code-based hypothesis, not a verified fix."
+      "likelyCause": "Admin and private-navigation bundles each contain a separate module-local auth event bus; the login event likely does not reach the header listener. High-confidence code-based hypothesis, not a verified fix.",
+      "postFixRuntimeVerification": "Pending: the browser context available on 2026-10-20 was anonymous, so post-login and logout behavior was not exercised."
     },
     "configurator": {
       "route": "/config/",
@@ -1070,6 +1071,19 @@
       "productDataChanged": false,
       "productCodeChanged": false
     },
-    "evidence": "evidence/runtime/auth-session-flow-2026-10-19.md"
+    "evidence": "evidence/runtime/auth-session-flow-2026-10-19.md",
+    "productCorrection": {
+      "pullRequest": 223,
+      "mergedCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+      "mergedAt": "2026-10-20T01:28:20Z",
+      "productionDeploy": {
+        "id": "6ad6c3b51b6be05647167f94",
+        "state": "ready",
+        "publishedAt": "2026-10-20T01:28:40.575Z",
+        "commit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463"
+      },
+      "productIssue": 213,
+      "status": "deployed; authenticated runtime verification pending"
+    }
   }
 }
