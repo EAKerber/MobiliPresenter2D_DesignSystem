@@ -58,7 +58,7 @@ try {
           await page.waitForFunction(()=>{
             const root=document.querySelector('#viewerLayout');
             return root && (root.querySelector('.viewer-block')||root.querySelector('.viewer-public-error'));
-          },{timeout:15000});
+          },null,{timeout:15000});
         } catch { item.note='Viewer never resolved to a block or a public error in 15s'; }
       } else if (route==='/') {
         try{await page.waitForSelector('#benefits .benefit-item',{timeout:7000})}
