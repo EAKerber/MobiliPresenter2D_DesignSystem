@@ -48,3 +48,9 @@ O caminho normal de login do bundle aguarda Identity, obtém o JWT e grava o coo
 A mensagem literal observada pelo usuário é emitida quando /api/admin-bootstrap retorna não-2xx. A função admin-bootstrap diferencia 401 (Identity não resolve usuário), 403 (sem permissão) e 503 (Identity indisponível), mas o cliente transforma todos esses casos na mesma mensagem. O código enfraquece a hipótese simples de a chamada ocorrer antes do cookie no fluxo normal; ainda permite investigar desacordo temporário do contexto Identity no Netlify, indisponibilidade ou outra resposta HTTP. Sem status/duração da execução que falhou, a causa permanece aberta.
 
 Registro seguro sugerido para futura captura: marcos da autenticação e bootstrap, presença do cookie apenas como booleano, status HTTP, duração e request ID. Não registrar token, e-mail, corpo de resposta ou conteúdo administrativo. Nenhuma instrumentação foi implantada.
+
+## Acompanhamento da correção publicada (2026-10-20)
+
+A PR [#223 do produto](https://github.com/EAKerber/MobiliPresenter2D/pull/223) foi integrada à `main` no commit [`1878ae1`](https://github.com/EAKerber/MobiliPresenter2D/commit/1878ae1057ce7c6190e0c8cb08a1f3baadd49463). A Netlify publicou o mesmo commit em produção no deploy [`6ad6c3b51b6be05647167f94`](https://app.netlify.com/projects/mobilipresenter2d/deploys/6ad6c3b51b6be05647167f94), estado `ready`, publicado às 01:28:40 UTC de 20/10/2026.
+
+A mudança corrige a sincronização entre o login administrativo e a navegação privada. Nesta revisão, o navegador disponível estava anônimo; não houve autenticação nem teste pós-login/saída. Portanto, a publicação foi confirmada, mas a correção runtime do FIND-007/#213 continua sem confirmação autenticada e o issue do produto permanece aberto. Nenhum e-mail, token ou dado de conta foi registrado.
