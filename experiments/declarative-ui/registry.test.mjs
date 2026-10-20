@@ -35,3 +35,17 @@ test('validated compiled data is a snapshot, not a live mutable source alias',()
   input.landing.benefits[0].label='MUTATED AFTER VALIDATION';
   assert.equal(renderCompiled(compiled)[0].result[0].children[1].text,oldLabel);
 });
+
+test('compiled snapshot is deeply frozen and cannot be mutated after validation',()=>{
+  const compiled=compilePage(manifest,sources,registry());
+  assert.equal(Object.isFrozen(compiled.sections[0].data),true);
+  assert.equal(Object.isFrozen(compiled.sections[0].data[0]),true);
+  assert.throws(()=>{compiled.sections[0].data[0].label='changed';},TypeError);
+});
+test('dataRef cannot traverse getters even when key exists',()=>{
+  let invocations=0;
+  const obj={landing:{}};
+  Object.defineProperty(obj.landing,'benefits',{enumerable:true,get(){invocations++;return sources.landing.benefits;}});
+  failure(manifest,obj,'invalid-reference');
+  assert.equal(invocations,0);
+});
