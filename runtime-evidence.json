@@ -212,7 +212,7 @@
         }
       ],
       "currentPassPersisted": true,
-      "currentPassNote": "Current signed-out login captures for the published product snapshot 483ef2e are persisted under visualEvidence/private/admin-login. Authenticated editor screenshots were omitted because they contain account/access data. Capturas atuais da confirmação de acesso em produção, 390×844 CSS px, temas claro/escuro e menu aberto, estão em visualEvidence/private/access-confirmation. O token estava ausente; a validação autenticada segue pendente. A tela de login administrativo também foi capturada em 390×844 CSS px nos dois temas, com o menu aberto, sem credenciais."
+      "currentPassNote": "Current signed-out login captures for the published product snapshot 483ef2e are persisted under visualEvidence/private/admin-login. Authenticated editor screenshots were omitted because they contain account/access data. Capturas atuais da confirmação de acesso em produção, 390×844 CSS px, temas claro/escuro e menu aberto, estão em visualEvidence/private/access-confirmation. O token estava ausente; a validação autenticada segue pendente. A tela de login administrativo também foi capturada em 390×844 CSS px nos dois temas, com o menu aberto, sem credenciais. Uma aba autenticada de /config/ mostrou a navegação privada correta durante a leitura; nenhuma captura foi salva porque o menu pode conter dados da conta. O estado das abas anônimas e os limites estão em evidence/runtime/private-menu-cross-tab-state-2026-10-20.md."
     },
     "authenticationCompletedByUser": true,
     "authenticatedScreenshotsPersisted": false,
@@ -567,6 +567,38 @@
       "evidence": "After asynchronous published configuration was applied, all seven module toggles were unchecked and the counter matched 0/7.",
       "screenshotPersisted": false,
       "observedAt": "2026-10-19"
+    },
+    {
+      "requested": "/config/",
+      "actual": "/config/",
+      "access": "authenticated existing browser tab",
+      "observedAt": "2026-10-20",
+      "viewport": "1036x582 CSS px",
+      "noHorizontalOverflow": [
+        1036
+      ],
+      "menu": {
+        "authenticatedPrivateLinks": [
+          "Configurador",
+          "Administração",
+          "Gerenciar acessos"
+        ],
+        "publicLinks": [
+          "Ambientes",
+          "Cozinha",
+          "Como funciona",
+          "Quem somos",
+          "Fale conosco"
+        ],
+        "logoutVisible": true,
+        "openedAndClosed": true,
+        "escapeRestoredFocus": true,
+        "emailPersisted": false
+      },
+      "productCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+      "deployId": "6ad6c3b51b6be05647167f94",
+      "evidence": "evidence/runtime/private-menu-cross-tab-state-2026-10-20.md",
+      "note": "Existing open tab was read without login/logout; a 400 POST to /.netlify/identity/token appeared in its network request list. Request body/headers were not inspected."
     }
   ],
   "interactions": [
@@ -656,6 +688,19 @@
       "evidence": "Signed-out private group listed only Entrar na administração; public group listed Ambientes, Cozinha, Como funciona, Quem somos and Fale conosco. No horizontal overflow. No valid access token was supplied, so authenticated links were not evaluated.",
       "relatedFinding": "FIND-015",
       "evidenceFile": "evidence/runtime/access-confirmation-menu-2026-10-20.md"
+    },
+    {
+      "observedAt": "2026-10-20",
+      "route": "private pages across open tabs",
+      "viewport": "existing /config/ tab 1036x582 CSS px; new /admin.html tab",
+      "control": "role-aware private menu",
+      "status": "mixed authenticated and anonymous DOM states",
+      "evidence": "/config/ menu showed private destinations and Sair; existing /admin.html and /access/manage.html menus showed only the anonymous admin entry; a new /admin.html tab also showed the anonymous login form. No login/logout or reload was performed.",
+      "relatedFinding": "FIND-007",
+      "evidenceFile": "evidence/runtime/private-menu-cross-tab-state-2026-10-20.md",
+      "productCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+      "deployId": "6ad6c3b51b6be05647167f94",
+      "productCodeChanged": false
     }
   ],
   "contrastScreening": {
@@ -957,6 +1002,18 @@
       "observation": "The public route and direct Netlify function URL returned 404 HTML. No temporary access session was created or validated. Configuration/admin-bootstrap endpoints remained available.",
       "productBacklog": "https://github.com/EAKerber/MobiliPresenter2D/issues/222",
       "productDataChanged": false
+    },
+    {
+      "route": "private menu cross-tab state",
+      "state": "mixed; read-only observation",
+      "observation": "On the existing /config/ tab, the menu showed Configurador, Administração, Gerenciar acessos, public routes, and Sair. Existing /admin.html and /access/manage.html tabs showed Entrar na administração and public routes without Sair. A new /admin.html tab opened the anonymous login form. No login/logout was performed and existing pages were not reloaded.",
+      "networkClue": "Existing /config/ request list included POST /.netlify/identity/token status 400; request body and headers not inspected. New anonymous /admin.html requested POST /api/access/session and received 404, separately tracked by issue #222.",
+      "evidence": "evidence/runtime/private-menu-cross-tab-state-2026-10-20.md",
+      "productBacklog": "https://github.com/EAKerber/MobiliPresenter2D/issues/213",
+      "accountEmailPersisted": false,
+      "invitationValuesPersisted": false,
+      "productDataChanged": false,
+      "productCodeChanged": false
     }
   ],
   "findingsRegister": "FINDINGS_REGISTER.md",
@@ -1303,7 +1360,8 @@
       "sameAdminDocumentAfterLogin": "stale signed-out entry item; private routes and logout omitted",
       "newAuthenticatedNavigation": "/access/manage.html menu contained private/public navigation and logout",
       "likelyCause": "Admin and private-navigation bundles each contain a separate module-local auth event bus; the login event likely does not reach the header listener. High-confidence code-based hypothesis, not a verified fix.",
-      "postFixRuntimeVerification": "Pending: the browser context available on 2026-10-20 was anonymous, so post-login and logout behavior was not exercised."
+      "postFixRuntimeVerification": "Partial: a aba /config/ exibiu o menu autenticado, mas abas existentes /admin.html e /access/manage.html exibiram o estado anônimo; uma nova aba /admin.html também abriu anônima. Não houve login/logout controlado nesta visita, então a transição no mesmo documento e a validade/propagação da sessão continuam pendentes.",
+      "currentCrossPageObservation": "evidence/runtime/private-menu-cross-tab-state-2026-10-20.md"
     },
     "configurator": {
       "route": "/config/",
@@ -1347,7 +1405,7 @@
         "commit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463"
       },
       "productIssue": 213,
-      "status": "deployed; authenticated runtime verification pending"
+      "status": "Correção publicada; observada diferença de estado entre abas autenticada/anônimas; validação controlada de pós-login e saída ainda pendente."
     }
   }
 }
