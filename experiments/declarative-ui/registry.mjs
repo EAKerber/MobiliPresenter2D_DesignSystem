@@ -22,6 +22,30 @@ function resolve(source, path) {
   }
   return current;
 }
+// Copy validated-input candidates as inert JSON values; no dependency on structuredClone.
+function copyJson(v, seen = new Set(), depth = 0) {
+  if (depth > 16) throw new TypeError('JSON nesting too deep');
+  if (v === null || typeof v === 'string' || typeof v === 'boolean') return v;
+  if (typeof v === 'number' && Number.isFinite(v)) return v;
+  if (!record(v) && !Array.isArray(v)) throw new TypeError('not a JSON value');
+  if (seen.has(v)) throw new TypeError('cyclic JSON value');
+  seen.add(v);
+  let copy;
+  if (Array.isArray(v)) {
+    if (v.length > 1000) throw new TypeError('JSON array too large');
+    copy = v.map(item => copyJson(item, seen, depth + 1));
+  } else {
+    copy = Object.create(null);
+    for (const key of Object.keys(v)) {
+      if (FORBIDDEN.has(key)) throw new TypeError('unsafe JSON key');
+      const descriptor = Object.getOwnPropertyDescriptor(v, key);
+      if (!descriptor || !Object.hasOwn(descriptor,'value')) throw new TypeError('JSON accessors disallowed');
+      copy[key] = copyJson(descriptor.value, seen, depth + 1);
+    }
+  }
+  seen.delete(v);
+  return copy;
+}
 export function createRegistry(definitions) {
   if (!Array.isArray(definitions)) throw new TypeError('definitions must be array');
   const components = new Map();
@@ -52,7 +76,7 @@ export function compilePage(manifest, sources, registry) {
     if (!def) throw new CompositionError('unknown-component',path+'.type');
     if (!def.variants.includes(item.variant)) throw new CompositionError('unsupported-variant',path+'.variant');
     let data;
-    try { data = structuredClone(resolve(sources,item.dataRef)); }
+    try { data = copyJson(resolve(sources,item.dataRef)); }
     catch (error) {
       if (error instanceof CompositionError) throw error;
       throw new CompositionError('invalid-data',path+'.dataRef');
