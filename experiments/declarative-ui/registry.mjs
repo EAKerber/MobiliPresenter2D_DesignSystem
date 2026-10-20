@@ -18,7 +18,9 @@ function resolve(source, path) {
   let current = source;
   for (const key of keys) {
     if (!record(current) || !Object.hasOwn(current,key)) throw new CompositionError('missing-reference', path);
-    current = current[key];
+    const own = Object.getOwnPropertyDescriptor(current,key);
+    if (!own || !Object.hasOwn(own,'value')) throw new CompositionError('invalid-reference',path);
+    current = own.value;
   }
   return current;
 }
@@ -45,6 +47,13 @@ function copyJson(v, seen = new Set(), depth = 0) {
   }
   seen.delete(v);
   return copy;
+}
+function freezeJson(value) {
+  if (value && typeof value==='object') {
+    for (const child of Object.values(value)) freezeJson(child);
+    Object.freeze(value);
+  }
+  return value;
 }
 export function createRegistry(definitions) {
   if (!Array.isArray(definitions)) throw new TypeError('definitions must be array');
@@ -84,7 +93,7 @@ export function compilePage(manifest, sources, registry) {
     let valid = false;
     try { valid = def.validate(data,item.variant) === true; } catch (_) { /* no data or stack leak */ }
     if (!valid) throw new CompositionError('invalid-data',path+'.dataRef');
-    return Object.freeze({ id:item.id, type:item.type, variant:item.variant, data, def });
+    return Object.freeze({ id:item.id, type:item.type, variant:item.variant, data:freezeJson(data), def });
   });
   return Object.freeze({ route:manifest.route, sections:Object.freeze(sections) });
 }
