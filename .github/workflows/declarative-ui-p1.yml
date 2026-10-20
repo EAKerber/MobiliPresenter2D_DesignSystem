@@ -1,0 +1,29 @@
+name: Declarative UI P1 isolated tests
+
+on:
+  push:
+    branches:
+      - architecture/dom-css-consolidation-20261020
+    paths:
+      - "experiments/declarative-ui/**"
+      - ".github/workflows/declarative-ui-p1.yml"
+  pull_request:
+    paths:
+      - "experiments/declarative-ui/**"
+      - ".github/workflows/declarative-ui-p1.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  node-contract:
+    name: Node 22 contract tests (no product runtime)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Test isolated declarative UI registry
+        run: node --test experiments/declarative-ui/registry.test.mjs
