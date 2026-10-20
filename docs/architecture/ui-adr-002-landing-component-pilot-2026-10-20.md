@@ -55,3 +55,17 @@
 ## Estado de homologação
 
 Aprovado **tecnicamente para permanecer em branch experimental**, não para `main`. Este ADR registra decisões de implementação e resultados concretos. Não modifica `decisions.json` do Design System, que segue sendo autoridade de homologação visual.
+
+## P2-C — Smoke de interação, engine WebKit e falha isolada
+
+**Executado em 2026-10-20:** [GitHub Actions #39505432196](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39505432196), **SUCCESS** na branch de produto `experiment/ui-declarative-landing-benefits-20261020`, head `a475734d79cf518a5be1884288361adad6064d8f`.
+
+- **Node:** `7 tests / 7 pass / 0 fail`; contrato preexistente de cutover público passou.
+- **Comparação antes/depois:** `4/4 PASS` em Chromium (390/1366, claro/escuro), com `domEqual=true`, `computedCssEqual=true`, `geometryEqual=true`, `screenshotEqual=true`, `errors=0` para a faixa `#benefits`.
+- **Interação pública candidata:** Chromium (390), WebKit (390), WebKit (1366): três cenários `LANDING_INTERACTION_PASS`, com 4 benefícios, 3 mini-benefícios, 5 ambientes, seleção da cozinha, menu correspondente ao breakpoint e 0 exceções. No desktop, testar a navegação visível, não o hamburger oculto.
+- **Falha simulada:** interceptação do script `/landing/benefit-strip.js` e aborto controlado. `LANDING_COMPONENT_FAILURE_ISOLATED`: zero benefícios inventados, 3 mini-benefícios presentes, 5 ambientes presentes, 0 exceções não tratadas, cozinha ainda funcional.
+- **Correção restrita aos testes:** a primeira tentativa do novo smoke [#39505292893](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39505292893) clicava incorretamente no botão de menu **oculto por CSS no desktop**, gerando timeout. O teste foi corrigido para conferir a navegação de desktop quando `menuToggle` não está visível; não houve alteração de CSS/layout/funcionalidade para esse ajuste. A execução final acima é a autoridade do gate.
+
+**P2-C está PASS nos cenários descritos**. Não provar dispositivos físicos, interação completa das páginas privadas, performance nem ausência de regressões fora da faixa. Não iniciar preview/merge como consequência automática; considerar P3 somente após medir um segundo consumidor e risco/custo do registry compartilhado.
+
+**Próximo gate técnico:** revisar peso/complexidade do novo registro frente ao valor real de reúso, executar análise de performance inicial e decidir se a abstração deve permanecer local à Landing. Uma futura PR draft no produto só deve ser aberta após avaliar o custo de deploy preview. Permanecem intactas decisões visuais homologadas, schema V5 e política de dados.
