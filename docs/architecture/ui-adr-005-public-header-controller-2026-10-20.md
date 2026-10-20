@@ -73,3 +73,19 @@ A execução [Actions #39507803390](https://github.com/EAKerber/MobiliPresenter2
 5. O teste foi ampliado para conferir Enter → primeiro link com foco → Escape → botão com foco, além dos gates de visual. A execução final para esse ajuste deve ser registrada **separadamente**; não usar o PASS anterior como prova de comportamento ainda não testado.
 
 **Regra de aceitação:** restaurar foco sem modificar capturas abertas com ponteiro, sem duplo listener e sem prejudicar navegação por mouse ou toque. Não alterar `decisions.json`; o contrato NAV-004 já aprovado é a autoridade.
+
+## Medida de custo estático da consolidação
+
+Medição sobre os conteúdos efetivos recuperados do GitHub na `main@1878ae1` e branch candidata após os ajustes de foco, com comprimento de string de fonte em JS (unidades UTF-16; não é payload de rede, bytes UTF-8, gzip ou memória):
+
+| Arquivo | `main` | candidato | Diferença |
+|---|---:|---:|---:|
+| `app/landing/landing.js` | 9762 | 9099 | -663 |
+| `app/how-it-works/how-it-works.js` | 3317 | 2357 | -960 |
+| `app/landing/header-menu.js` | 813 | 1212 | +399 |
+| `app/index.html` | 5827 | 5901 | +74 |
+| `app/how-it-works/index.html` | 30454 | 30548 | +94 |
+| `app/about/index.html` | 6522 | 6544 | +22 |
+| **Subtotal desses seis arquivos** |  |  | **-1034** |
+
+Houve remoção líquida de **1224 unidades de texto JS** nos três controladores e redução líquida de **1034 unidades** nesses seis arquivos. **A Landing e a página Como funciona fazem uma requisição de script a mais** para o controlador compartilhado; isso não deve ser convertido automaticamente em alegação de melhora de performance. O ganho defensável é **uma única implementação de comportamento de navegação para três rotas**, com gates reproduzíveis.
