@@ -51,7 +51,12 @@ export function compilePage(manifest, sources, registry) {
     const def = registry?.get?.(item.type);
     if (!def) throw new CompositionError('unknown-component',path+'.type');
     if (!def.variants.includes(item.variant)) throw new CompositionError('unsupported-variant',path+'.variant');
-    const data = resolve(sources,item.dataRef);
+    let data;
+    try { data = structuredClone(resolve(sources,item.dataRef)); }
+    catch (error) {
+      if (error instanceof CompositionError) throw error;
+      throw new CompositionError('invalid-data',path+'.dataRef');
+    }
     let valid = false;
     try { valid = def.validate(data,item.variant) === true; } catch (_) { /* no data or stack leak */ }
     if (!valid) throw new CompositionError('invalid-data',path+'.dataRef');
