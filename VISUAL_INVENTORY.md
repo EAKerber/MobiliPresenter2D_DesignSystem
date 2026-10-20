@@ -1,9 +1,11 @@
 # Inventário visual estático
 
-**Snapshot:** 2026-10-19  
-**Produto observado:** [EAKerber/MobiliPresenter2D](https://github.com/EAKerber/MobiliPresenter2D), `main` em `483ef2e6f76a562a3096516ef68d8dfe072ec21f`.  
+**Snapshot:** 2026-10-20  
+**Produto observado:** [EAKerber/MobiliPresenter2D](https://github.com/EAKerber/MobiliPresenter2D), `main` em `1878ae1057ce7c6190e0c8cb08a1f3baadd49463`.  
 
 **Atualização runtime:** FIND-006 e FIND-009 foram corrigidos e verificados no deploy `483ef2e`; veja [PRODUCT_RECONCILIATION_2026-10-19.md](PRODUCT_RECONCILIATION_2026-10-19.md). Os arquivos CSS e HTML alterados entre o snapshot anterior e este commit foram reconciliados em [INVENTORY_REFRESH_2026-10-19.md](INVENTORY_REFRESH_2026-10-19.md). JavaScript continua fora do escopo estático.
+
+**Reconciliação 2026-10-20:** a marcação HTML foi conferida contra o commit atual. A página `/access/` agora contém o menu privado; os quatro seletores de classe já estavam definidos em `app/ui-theme.css`. Administração teve apenas atualização dos identificadores de cache nos links de CSS/JS. Sem mudanças de CSS ou assets; interação pós-login não foi revalidada. Detalhes em [INVENTORY_REFRESH_2026-10-20.md](INVENTORY_REFRESH_2026-10-20.md).
 
 **Registro:** `decisions.json`; detalhes por regra e rota em [`visual-inventory.json`](visual-inventory.json).  
 **Escopo:** CSS, marcação HTML estática e arquivos de imagem/vetor/fontes. Este inventário não altera o produto nem certifica o comportamento renderizado.
