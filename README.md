@@ -22,4 +22,4 @@ Chats “Inventário De Design System” e “Continuar Inventário Design Syste
 
 ## Estado do produto
 
-O [inventário estático](VISUAL_INVENTORY.md) e o mapa de aplicação apontam para o commit do produto `483ef2e`. A reconciliação do delta desde o snapshot anterior e as verificações runtime estão registradas em [INVENTORY_REFRESH_2026-10-19.md](INVENTORY_REFRESH_2026-10-19.md) e [PRODUCT_RECONCILIATION_2026-10-19.md](PRODUCT_RECONCILIATION_2026-10-19.md).
+O [inventário estático](VISUAL_INVENTORY.md) e o mapa de aplicação apontam para o commit do produto `1878ae1`. A reconciliação do delta desde o snapshot anterior e as verificações runtime estão registradas em [INVENTORY_REFRESH_2026-10-20.md](INVENTORY_REFRESH_2026-10-20.md) e [PRODUCT_RECONCILIATION_2026-10-19.md](PRODUCT_RECONCILIATION_2026-10-19.md).

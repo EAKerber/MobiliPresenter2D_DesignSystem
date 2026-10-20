@@ -1085,14 +1085,15 @@
     }
   },
   "latestRuntimeRelease": {
-    "observedAt": "2026-10-19",
+    "observedAt": "2026-10-20",
     "repository": "EAKerber/MobiliPresenter2D",
     "branch": "main",
-    "productCommit": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
-    "netlifyDeployId": "6ad5a4e245dad08b373fcbd1",
+    "productCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+    "netlifyDeployId": "6ad6c3b51b6be05647167f94",
     "deployStatus": "ready",
-    "staticInventoryCommit": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
-    "note": "Static visual inventory reconciled against this release; JavaScript semantics and DOM visual audit remain separate scopes."
+    "staticInventoryCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+    "note": "Deploy de produção confirmado no commit indicado. O inventário estático cobre as mudanças HTML/CSS/assets desde 483ef2e; a validação autenticada pós-login segue pendente em FIND-007.",
+    "publishedAt": "2026-10-20T01:28:40.575Z"
   },
   "productFindingResolutionStatus": {
     "FIND-006": {
