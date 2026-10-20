@@ -1,7 +1,7 @@
 # UI-ADR-003 — Segundo consumidor real: benefícios compactos e padrão na mesma Landing
 
 **Data:** 2026-10-20  
-**Status:** decisão técnica experimental aplicada na branch isolada do produto; **gates de navegador P3 em validação no momento do primeiro registro**. Este ADR não homologa extensão do registro para outras páginas, não altera `decisions.json` e não aprova publicação/merge.  
+**Status:** decisão técnica experimental aplicada na branch isolada do produto; **P3 gates Node e browser PASS**. Este ADR não homologa extensão do registro para outras páginas, não altera `decisions.json` e não aprova publicação/merge.  
 **Produto:** `EAKerber/MobiliPresenter2D`, branch [`experiment/ui-declarative-landing-benefits-20261020`](https://github.com/EAKerber/MobiliPresenter2D/tree/experiment/ui-declarative-landing-benefits-20261020), baseada em `main@1878ae1`.  
 **Design System:** `EAKerber/MobiliPresenter2D_DesignSystem`, branch `architecture/dom-css-consolidation-20261020`, [PR #39](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/39).  
 **Antecedentes:** [UI-ADR-001](ui-adr-001-declarative-boundaries-2026-10-20.md), [UI-ADR-002](ui-adr-002-landing-component-pilot-2026-10-20.md).
@@ -41,6 +41,23 @@ A abstração do primeiro piloto foi capaz de reproduzir fielmente a faixa infer
 - `tests/landing-benefit-browser-gate.mjs`: `main` vs branch, 390/1366 px, light/dark, **ambos grupos** com igualdade de DOM, CSS computado, geometria e screenshots recortadas (4 cenários).
 - `tests/landing-interaction-gate.mjs`: Chromium 390, WebKit 390/1366, menu conforme breakpoint, cozinha, 5 ambientes, 7 benefícios somados; falha de script injetada sem exceções não tratadas.
 - Adotar resultado somente após CI **final**, não inferir PASS de workflows intermediários: commits parciais geraram falhas de build/contrato transitórias enquanto o código e os testes estavam sendo atualizados, e devem ser classificados por revisão SHA.
+
+## Fechamento comprovado de P3 — 2026-10-20
+
+**Execução final:** [GitHub Actions #39506584577](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39506584577), commit do produto `176cd0931056ad6814317f3aa580a624f6f2e871`, workflow `Declarative Landing benefits isolated pilot`: conclusão **success**.
+
+| Gate | Evidência | Resultado |
+|---|---|---|
+| Contrato de composição, variantes e rejeição de valores inválidos | `node --test`: 10 testes, 10 pass, 0 fail | **PASS** |
+| Contrato público existente | `node tests/public-cutover-contract.cjs`; valida dados editoriais, origem de ícones e roteamento | **PASS** |
+| Duas regiões versus a `main` intacta | Chromium 390/1366 px, light/dark. 4/4: `domEqual`, `computedCssEqual`, `geometryEqual`, `screenshotEqual`, `compactScreenshotEqual` = true, 0 erros | **PASS** |
+| Interação Landing | Chromium 390, WebKit 390, WebKit 1366; 4 benefícios, 3 compactos, 5 ambientes, cozinha e menu conforme largura, 0 exceções | **PASS** |
+| Falha de script injetada | Sem renderer de benefícios, nenhuma vantagem falsamente criada; 5 ambientes e navegação para cozinha continuam, 0 exceções | **PASS** |
+| Publicação/preview/merge | Branch experimental, sem PR no produto, sem deploy disparado para o piloto | **NÃO EXECUTADO POR ESCOPO** |
+| Compatibilidade física iPad / zoom / long-term performance | Não executada | **PENDENTE** |
+| Segundo consumidor em outra página | Nenhum contrato semanticamente equivalente demonstrado | **PENDENTE** |
+
+A primeira sequência de commits intermediários mostrou falhas transitórias porque `landing.js`, testes e parser `dataRef` evoluíram em passos distintos. Elas não são evidência de regressão no commit final; o último workflow é o gate válido. Foram corrigidas duas causas concretas: `miniBenefits` foi inicialmente rejeitado pela política lexical de `dataRef` que só admitia lowercase, e o contrato de teste de cutover ainda esperava o caminho de ícone hardcoded no renderer. Ambos passaram após correção. O workflow passou a cancelar execuções obsoletas para conter custo de CI.
 
 ## Critério de promoção / parada
 
