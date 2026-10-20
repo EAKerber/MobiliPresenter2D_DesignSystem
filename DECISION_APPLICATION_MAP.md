@@ -1,10 +1,10 @@
 # Mapa de aplicação das decisões
 
-**Produto mapeado:** [EAKerber/MobiliPresenter2D](https://github.com/EAKerber/MobiliPresenter2D) no commit `483ef2e6f76a562a3096516ef68d8dfe072ec21f`.  
+**Produto mapeado:** [EAKerber/MobiliPresenter2D](https://github.com/EAKerber/MobiliPresenter2D) no commit `1878ae1057ce7c6190e0c8cb08a1f3baadd49463`.  
 
-**Atualização (2026-10-19):** inventário estático e evidência runtime foram reconciliados com o deploy `483ef2e6f76a562a3096516ef68d8dfe072ec21f`. FIND-006/#209 e FIND-009/#214 foram resolvidos; ver [conciliação](PRODUCT_RECONCILIATION_2026-10-19.md). O delta de três commits e os sete arquivos alterados estão em [INVENTORY_REFRESH_2026-10-19.md](INVENTORY_REFRESH_2026-10-19.md).
+**Atualização (2026-10-19):** inventário estático e evidência runtime foram reconciliados com o deploy `483ef2e6f76a562a3096516ef68d8dfe072ec21f`. FIND-006/#209 e FIND-009/#214 foram resolvidos; ver [conciliação](PRODUCT_RECONCILIATION_2026-10-19.md). O delta anterior está em [INVENTORY_REFRESH_2026-10-19.md](INVENTORY_REFRESH_2026-10-19.md); a atualização estática atual está em [INVENTORY_REFRESH_2026-10-20.md](INVENTORY_REFRESH_2026-10-20.md).
 
-**Deploy runtime verificado:** `483ef2e6f76a562a3096516ef68d8dfe072ec21f`, Netlify deploy `6ad5a4e245dad08b373fcbd1`, estado `ready`, observado em 2026-10-19.  
+**Último deploy publicado:** `1878ae1057ce7c6190e0c8cb08a1f3baadd49463`, Netlify deploy `6ad6c3b51b6be05647167f94`, estado `ready`, publicado em 2026-10-20. A auditoria visual runtime detalhada ainda cobre o deploy `483ef2e`; a validação autenticada pós-login está pendente em FIND-007.  
 **Fonte canônica das decisões:** [decisions.json](decisions.json).  
 **Inventário estático:** [visual-inventory.json](visual-inventory.json).
 
@@ -27,8 +27,8 @@ A decisão VIS-002 agora aprova a opção A como pares contextuais de texto: `#2
 | `/about/` | Quem somos | `app/about/index.html` | `app/public-theme.css`<br>`app/landing/landing.css`<br>`app/about/about.css`<br>`app/ui-theme.css` | NAV-003, NAV-004, NAV-005, VIS-002 | Observada; sem overflow em 390/768/1440 px |
 | `/viewer/` | Viewer de ambiente | `app/viewer/index.html` | `app/public-theme.css`<br>`app/viewer/viewer.css`<br>`app/ui-theme.css` | NAV-003, NAV-004, NAV-005, VIS-002, EST-01, EST-02, EST-03 | Observada; sem overflow em 390/768/1440 px |
 | `/config/` | Configurador | `app/config/index.html` | `app/styles.css`<br>`app/ui-theme.css` | NAV-003, NAV-004, PRIVATE-HEADER-001, VIS-002, EST-01, EST-02, EST-03, EST-04, EST-05, EST-06, NAV-005 | Redireciona sem sessão para `/access/`; área protegida não verificada |
-| `/admin.html` | Administração / login | `app/admin.html` | `app/admin/admin.css`<br>`app/ui-theme.css` | NAV-003, PRIVATE-HEADER-001, VIS-002, EST-02, EST-04, EST-05, EST-06, EST-07, EST-08, EST-09, EST-10, NAV-005 | Login e sessão autenticada observados. Após login, menu ficou anônimo até recarga; depois exibiu páginas privadas e saída. Erro de carregamento administrativo não apareceu. Ver FIND-007 e `RUNTIME_AUDIT.md`. |
-| `/access/` | Login de acesso | `app/access/index.html` | `app/public-theme.css`<br>`app/ui-theme.css` | NAV-003, PRIVATE-HEADER-001, VIS-002, NAV-005 | Página aberta; link não enviado/validado; sem overflow em 1440 px |
+| `/admin.html` | Administração / login | `app/admin.html` | `app/admin/admin.css`<br>`app/ui-theme.css` | NAV-003, PRIVATE-HEADER-001, VIS-002, EST-02, EST-04, EST-05, EST-06, EST-07, EST-08, EST-09, EST-10, NAV-005 | Observação anterior ao fix: menu permanecia anônimo após login. Correção integrada no commit `1878ae1` e publicada; validação autenticada pós-fix pendente (FIND-007). Evidência histórica em `RUNTIME_AUDIT.md`. |
+| `/access/` | Login de acesso | `app/access/index.html` | `app/public-theme.css`<br>`app/ui-theme.css` | NAV-003, PRIVATE-HEADER-001, VIS-002, NAV-005 | Menu privado adicionado à marcação no commit `1878ae1`; seletores compartilhados já existem em `ui-theme.css`. Link não enviado/validado; estado autenticado do menu não revalidado |
 | `/access/manage.html` | Gerenciar acessos | `app/access/manage.html` | `app/public-theme.css`<br>`app/ui-theme.css` | NAV-003, PRIVATE-HEADER-001, VIS-002, EST-02, EST-04, EST-05, EST-06, NAV-005 | Redirecionamento sem sessão já observado. Em `/access/manage`, sessão autenticada, conteúdo carregou e o menu mostrou páginas privadas/públicas e saída. Valores de convites não foram registrados. |
 
 O estado de `/config/` e `/access/manage.html` foi redirecionado sem sessão. Isso valida o comportamento de acesso observado, não o conteúdo protegido, seu cabeçalho autenticado ou seus dados.
