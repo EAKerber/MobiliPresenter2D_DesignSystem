@@ -1,7 +1,7 @@
 # UI-P0/P1 — Checkpoint e plano de implementação incremental
 
 **Data:** 2026-10-20  
-**Estado confirmado:** P0 inventário de ownership estático **documentado**, P1 prova de contrato **isolada** com 11 casos passando no harness em memória; **nenhum código de produção alterado**.  
+**Estado confirmado:** P0 inventário de ownership estático **documentado**, P1 prova de contrato **isolada** com 13 testes Node 22 nativos passando; **nenhum código de produção alterado**.  
 **Decisão técnica:** [UI-ADR-001](ui-adr-001-declarative-boundaries-2026-10-20.md).  
 **Auditoria fonte:** [P0 DOM+JS](dom-js-component-ownership-2026-10-20.md).  
 **Experimento:** [registry.mjs](../../experiments/declarative-ui/registry.mjs), [Landing fixture](../../experiments/declarative-ui/landing-benefits.mjs), [testes](../../experiments/declarative-ui/registry.test.mjs).
@@ -17,7 +17,7 @@
 | P1-C — sem montagem parcial | compilar/validar seções antes de renderizar; teste de erro na segunda seção verifica zero chamadas de renderer | **PASS experimental** |
 | P1-D — snapshot de dados | copia JSON portátil antes da validação e renderização; mutação posterior no objeto-fonte não altera descritor | **PASS experimental** |
 | P0-R — DOM real/computed CSS nos estados e viewports | requer instrumentação de navegador/fixtures + contraste + interação | **PENDENTE** |
-| P1-E — execução `node --test` nativa | Node 22 GitHub Actions: [pull_request](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/39502842741) e [push](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/39502842309); 11 testes, 0 falhas. Nenhum navegador exercitado pelo teste P1. | **PASS Node; browser separado** |
+| P1-E — execução `node --test` nativa | Node 22 GitHub Actions: [pull_request](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/39502842741) e [push](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/39502842309); 13 testes, 0 falhas. Nenhum navegador exercitado pelo teste P1. | **PASS Node; browser separado** |
 
 **Precisão da evidência de testes:** os 11 casos foram executados in-memory usando exatamente as três fontes recuperadas do GitHub, com transformação de `import/export` para um executor JS e pequeno shim de `node:test`; todos passaram. **Isso não equivale a** `node --test` nativo, Playwright, Safari/iPad, DOM real nem inspeção visual. Uma tentativa de baixar as fontes diretamente no container para rodar Node falhou por DNS; não alegar suíte Node passada.
 
@@ -68,3 +68,10 @@ O protótipo usa cópia de valores JSON com limite de profundidade, rejeita cicl
 Se P3 não demonstrar uso legítimo por uma segunda superfície, **não forçar** a universalização de `benefit-strip`: mantê-lo como módulo de domínio da Landing. O objetivo é reduzir fontes duplicadas e risco de manutenção, não maximizar o número de abstrações nem o tamanho de um catálogo de componentes.
 
 **Não modificar `decisions.json` para registrar estas escolhas:** ele é canônico para homologação de design. Este ADR contém **decisões técnicas experimentais**; promovê-las a padrão de produto requer os gates e eventual aprovação de escopo.
+
+## Atualização de execução — P0-R e P2 shadow
+
+- [P0-R Chromium #39503394834](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/39503394834) e [#39503582819](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/39503582819): 16/16 observações públicas, quatro rotas, dois temas, duas larguras; HTTP 200, tema resolvido correto, sem erros de recurso/JS registrados.
+- [P2 shadow #39503582819](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/39503582819): descritores `benefit-strip@1` equivalentes ao DOM público da Landing (4/4 linhas, tags, classes, ordem, imagens e textos); não houve montagem ou substituição no produto.
+- [P1 Node nativo #39503470216](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/39503470216): 13 testes, 13 PASS, 0 FAIL após endurecer snapshot profundamente congelado e caminhos dataRef sem getters.
+- **Próxima fronteira:** se a integração no produto for autorizada, testar o mesmo renderer em modo sombra na branch do produto e depois comparar computed CSS/funcionalidade antes de alterar a montagem real. Testes com acesso privado, WebKit/iPad e mudanças de theme behavior continuam gates independentes.
