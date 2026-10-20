@@ -35,7 +35,7 @@ function copyJson(v, seen = new Set(), depth = 0) {
     if (v.length > 1000) throw new TypeError('JSON array too large');
     copy = v.map(item => copyJson(item, seen, depth + 1));
   } else {
-    copy = Object.create(null);
+    copy = {};
     for (const key of Object.keys(v)) {
       if (FORBIDDEN.has(key)) throw new TypeError('unsafe JSON key');
       const descriptor = Object.getOwnPropertyDescriptor(v, key);
