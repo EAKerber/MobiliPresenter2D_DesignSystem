@@ -273,3 +273,10 @@ O menu abriu no primeiro clique; Escape o fechou e devolveu o foco ao controle. 
 A superfície do cabeçalho e do menu claro computou `#FFFFFF`, enquanto a paleta homologada usa `#F0EDE8` para a superfície clara. No tema escuro, cabeçalho `#171816` e menu `#1B1C1A` também diferem dos neutros de referência `#171614` e `#211F1C`. O contraste de texto não foi reprovado; a pendência é de conformidade cromática por componente, registrada em FIND-015. Não houve alteração no produto.
 
 A evidência detalhada, geometria, cores computadas e limites estão em [auditoria runtime de /access/](evidence/runtime/access-confirmation-menu-2026-10-20.md).
+
+
+## Login administrativo anônimo em viewport móvel (2026-10-20)
+
+Em `/admin.html`, viewport 390 × 844 CSS px, temas claro e escuro, o cabeçalho manteve a marca e o identificador “Administração” à esquerda, tema e menu à direita. O formulário apareceu sem preencher credenciais. O menu abriu na primeira interação, listou uma página privada e cinco públicas; Escape fechou e restaurou foco. Capturas: [menu claro](visualEvidence/private/admin-login/admin-login-menu-light-2026-10-20.jpg) e [menu escuro](visualEvidence/private/admin-login/admin-login-menu-dark-2026-10-20.jpg).
+
+O cabeçalho claro computou `#F0EDE8`, conforme a superfície aprovada; o menu computou `#FFFFFF`. Em tema escuro, cabeçalho `#171816`, menu `#1B1C1A` e fundo `#111210`. O texto permaneceu legível na captura; nenhuma falha de contraste foi afirmada. O menu usa `z-index: 80` sobre o cabeçalho `z-index: 60`. Acesso autenticado, pós-login e saída continuam sem revalidação aqui. Evidência: [auditoria do login administrativo](evidence/runtime/admin-login-menu-2026-10-20.md).

@@ -36,3 +36,5 @@ O cabeçalho computou `z-index: 60`; o menu, `z-index: 80`. O menu cobre conteú
 Os arquivos da rota e o bundle de navegação carregaram com status 200. A chamada sem token a `POST /api/access/session` respondeu 404, observação já rastreada separadamente em FIND-014 e no [issue #222](https://github.com/EAKerber/MobiliPresenter2D/issues/222). Sem um token válido, a resposta não valida nem invalida o caminho de criação/consumo de uma sessão temporária.
 
 Nenhum código do produto foi modificado. Nenhuma credencial, email ou convite foi usado ou copiado.
+
+A tela administrativa anônima foi capturada no mesmo commit e viewport. Sua evidência está em [admin-login-menu-2026-10-20.md](admin-login-menu-2026-10-20.md); nela o cabeçalho claro usa a superfície aprovada, enquanto o menu ainda usa branco puro.
