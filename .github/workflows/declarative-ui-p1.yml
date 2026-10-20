@@ -7,10 +7,6 @@ on:
     paths:
       - "experiments/declarative-ui/**"
       - ".github/workflows/declarative-ui-p1.yml"
-  pull_request:
-    paths:
-      - "experiments/declarative-ui/**"
-      - ".github/workflows/declarative-ui-p1.yml"
 
 permissions:
   contents: read
