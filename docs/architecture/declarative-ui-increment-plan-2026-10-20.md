@@ -17,7 +17,7 @@
 | P1-C — sem montagem parcial | compilar/validar seções antes de renderizar; teste de erro na segunda seção verifica zero chamadas de renderer | **PASS experimental** |
 | P1-D — snapshot de dados | copia JSON portátil antes da validação e renderização; mutação posterior no objeto-fonte não altera descritor | **PASS experimental** |
 | P0-R — DOM real/computed CSS nos estados e viewports | requer instrumentação de navegador/fixtures + contraste + interação | **PENDENTE** |
-| P1-E — execução `node --test` nativa e navegador real | suite `.test.mjs` no repositório; foi possível executar o mesmo código recuperado da branch após remover sintaxe ESM e usar shim mínimo de `node:test`/assert | **NÃO ATESTADO nativamente** |
+| P1-E — execução `node --test` nativa | Node 22 GitHub Actions: [pull_request](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/39502842741) e [push](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/39502842309); 11 testes, 0 falhas. Nenhum navegador exercitado pelo teste P1. | **PASS Node; browser separado** |
 
 **Precisão da evidência de testes:** os 11 casos foram executados in-memory usando exatamente as três fontes recuperadas do GitHub, com transformação de `import/export` para um executor JS e pequeno shim de `node:test`; todos passaram. **Isso não equivale a** `node --test` nativo, Playwright, Safari/iPad, DOM real nem inspeção visual. Uma tentativa de baixar as fontes diretamente no container para rodar Node falhou por DNS; não alegar suíte Node passada.
 
