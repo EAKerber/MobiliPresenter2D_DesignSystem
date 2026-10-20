@@ -1,0 +1,2699 @@
+{
+  "schema": "M2DDomCssStaticCrosswalk1",
+  "createdAt": "2026-10-20",
+  "sourceRepository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "sourceRevision": "507be364c29d83bda8ed6c772b330ee66122eb44",
+  "productInventoryRevision": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+  "scope": "HTML static class-name to CSS class selector name, stylesheet loading per route and lexical cross-file overlaps. Not DOM rendered, not computed CSS, not CSS property conflicts.",
+  "routes": [
+    {
+      "url": "/",
+      "htmlFile": "app/index.html",
+      "stylesheets": [
+        "app/public-theme.css",
+        "app/landing/landing.css",
+        "app/ui-theme.css"
+      ],
+      "staticClassCount": 36,
+      "classes": [
+        {
+          "className": "benefit-grid",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "benefit-strip",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "brand",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "button",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "button-copper",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "button-dark",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "carousel-controls",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "environment-art",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "environment-art--feature",
+          "stylesheets": []
+        },
+        {
+          "className": "environment-browser",
+          "stylesheets": []
+        },
+        {
+          "className": "environment-feature",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "environment-track",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "environment-window",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "environments-section",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "eyebrow",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "feature-art",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "feature-availability",
+          "stylesheets": []
+        },
+        {
+          "className": "feature-copy",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "feature-image-error",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "header-actions",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "header-cta",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "hero",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "hero-art",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "hero-copy",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "hero-description",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "hero-lead",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "intro-mark",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "intro-splash",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "intro-words",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "menu-toggle",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "mini-benefits",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "pagination",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "section-heading",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "site-footer",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "site-header",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "story-section",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/ui-theme.css"
+          ]
+        }
+      ],
+      "lexicallyCoLoadedClassNames": [
+        "eyebrow",
+        "site-header",
+        "button-copper",
+        "button-dark",
+        "button-primary",
+        "header-actions",
+        "header-cta",
+        "hero",
+        "menu-open",
+        "story-section"
+      ],
+      "knownCoverage": "static-html-class-to-css-class-name-only"
+    },
+    {
+      "url": "/how-it-works/",
+      "htmlFile": "app/how-it-works/index.html",
+      "stylesheets": [
+        "app/public-theme.css",
+        "app/landing/landing.css",
+        "app/how-it-works/how-it-works.css",
+        "app/ui-theme.css"
+      ],
+      "staticClassCount": 89,
+      "classes": [
+        {
+          "className": "brand",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "button",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "button-copper",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "closing-copy",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "closing-hero",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "closing-notes",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "closing-shade",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "closing-signature",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "commercial-clarity",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "comparison-brand-logo",
+          "stylesheets": []
+        },
+        {
+          "className": "comparison-card",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "comparison-card-featured",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "comparison-grid",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "comparison-illustration",
+          "stylesheets": []
+        },
+        {
+          "className": "comparison-marker",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "comparison-marker-featured",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "comparison-marker-standard",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "comparison-section",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "economy-action",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "economy-action-icon",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "economy-card",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "economy-detail",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "economy-grid",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "economy-section",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "economy-synthesis",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "eyebrow",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "finish-band",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "finish-copy",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "finish-examples",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "finish-signature",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "foundation-arrow",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "foundation-body",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "foundation-item",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "foundation-list",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "foundation-number",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "foundations-section",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "header-actions",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "header-cta",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "how-hero",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "how-hero-art",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "how-hero-copy",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "how-hero-lead",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "how-hero-note",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "how-page",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "how-video-bridge",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "image-disclaimer",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "integration-callout",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "launch-badge",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "launch-card",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "launch-copy",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "menu-toggle",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "module-card",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "module-card-tall",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "module-grid",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "modules-section",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "process-flow",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "process-section",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "production-flow",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "production-intro",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "production-panel",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "quality-copy",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "quality-disclaimer",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "quality-lead",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "quality-points",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "quality-section",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "receiving-card",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "receiving-icon",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "receiving-options",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "section",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "section-intro",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "section-intro-left",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "site-footer",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "site-header",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "stage-number",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "staged-flow",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "staged-section",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "step-icon",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "step-number",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "story-introduction",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "story-text-copy",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "story-text-heading",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "story-text-section",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "study-art",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "study-band",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "study-copy",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "study-space-illustration",
+          "stylesheets": []
+        },
+        {
+          "className": "study-topics",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "video-bridge-copy",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        },
+        {
+          "className": "video-embed",
+          "stylesheets": [
+            "app/how-it-works/how-it-works.css"
+          ]
+        }
+      ],
+      "lexicallyCoLoadedClassNames": [
+        "eyebrow",
+        "comparison-marker-featured",
+        "foundation-item",
+        "foundation-number",
+        "integration-callout",
+        "module-card",
+        "process-flow",
+        "process-section",
+        "production-intro",
+        "production-panel",
+        "quality-copy",
+        "quality-lead",
+        "site-footer",
+        "site-header",
+        "stage-number",
+        "study-art",
+        "study-band",
+        "study-copy",
+        "study-topics",
+        "button-copper",
+        "button-dark",
+        "button-primary",
+        "header-actions",
+        "header-cta",
+        "hero",
+        "menu-open",
+        "story-section"
+      ],
+      "knownCoverage": "static-html-class-to-css-class-name-only"
+    },
+    {
+      "url": "/about/",
+      "htmlFile": "app/about/index.html",
+      "stylesheets": [
+        "app/public-theme.css",
+        "app/landing/landing.css",
+        "app/about/about.css",
+        "app/ui-theme.css"
+      ],
+      "staticClassCount": 27,
+      "classes": [
+        {
+          "className": "about-chapter",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "about-chapter--principle",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "about-chapter__body",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "about-chapter__index",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "about-closing",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "about-closing__actions",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "about-closing__signature",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "about-hero",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "about-hero__copy",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "about-hero__lead",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "about-hero__note",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "about-hero__rule",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "about-page",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "about-scale",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "about-scale__copy",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "about-scale__stat",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "about-skip",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "about-text-link",
+          "stylesheets": [
+            "app/about/about.css"
+          ]
+        },
+        {
+          "className": "brand",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "button",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "button-copper",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "eyebrow",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/about/about.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "header-actions",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "header-cta",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "menu-toggle",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "site-footer",
+          "stylesheets": [
+            "app/landing/landing.css"
+          ]
+        },
+        {
+          "className": "site-header",
+          "stylesheets": [
+            "app/landing/landing.css",
+            "app/ui-theme.css"
+          ]
+        }
+      ],
+      "lexicallyCoLoadedClassNames": [
+        "eyebrow",
+        "site-header",
+        "button-copper",
+        "button-dark",
+        "button-primary",
+        "header-actions",
+        "header-cta",
+        "hero",
+        "menu-open",
+        "story-section"
+      ],
+      "knownCoverage": "static-html-class-to-css-class-name-only"
+    },
+    {
+      "url": "/viewer/",
+      "htmlFile": "app/viewer/index.html",
+      "stylesheets": [
+        "app/public-theme.css",
+        "app/viewer/viewer.css",
+        "app/ui-theme.css"
+      ],
+      "staticClassCount": 9,
+      "classes": [
+        {
+          "className": "back-link",
+          "stylesheets": [
+            "app/viewer/viewer.css"
+          ]
+        },
+        {
+          "className": "eyebrow",
+          "stylesheets": [
+            "app/viewer/viewer.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "viewer-brand",
+          "stylesheets": [
+            "app/viewer/viewer.css"
+          ]
+        },
+        {
+          "className": "viewer-brand__logo",
+          "stylesheets": [
+            "app/viewer/viewer.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "viewer-footer",
+          "stylesheets": [
+            "app/viewer/viewer.css"
+          ]
+        },
+        {
+          "className": "viewer-header",
+          "stylesheets": [
+            "app/viewer/viewer.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "viewer-heading",
+          "stylesheets": [
+            "app/viewer/viewer.css"
+          ]
+        },
+        {
+          "className": "viewer-layout",
+          "stylesheets": [
+            "app/viewer/viewer.css"
+          ]
+        },
+        {
+          "className": "viewer-page",
+          "stylesheets": [
+            "app/viewer/viewer.css"
+          ]
+        }
+      ],
+      "lexicallyCoLoadedClassNames": [
+        "eyebrow",
+        "module-detail__dimension-line",
+        "module-detail__view-shape",
+        "detail-row",
+        "dimension-pill",
+        "overview-highlights",
+        "technical-view",
+        "technical-view--focus",
+        "viewer-brand__logo",
+        "viewer-header"
+      ],
+      "knownCoverage": "static-html-class-to-css-class-name-only"
+    },
+    {
+      "url": "/config/",
+      "htmlFile": "app/config/index.html",
+      "stylesheets": [
+        "app/styles.css",
+        "app/ui-theme.css"
+      ],
+      "staticClassCount": 72,
+      "classes": [
+        {
+          "className": "accessory-toggle",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "alignment-grid",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "brand",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "brand__logo",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "button",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "button--primary",
+          "stylesheets": [
+            "app/styles.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "button--secondary",
+          "stylesheets": [
+            "app/styles.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "button__wide-label",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "config-section",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "configuration-value",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "controls",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "finish-controls",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "finish-heading",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "finish-help",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "finish-section",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "flow-actions",
+          "stylesheets": [
+            "app/styles.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "flow-group-grid",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "flow-group-grid--embedded",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "flow-group-shell",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "flow-group-shell--embedded",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "flow-item-stack",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "flow-nav",
+          "stylesheets": [
+            "app/styles.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "flow-nav__scene-pin",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "flow-stage-layout",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "global-options",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "handle-fieldset",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "handle-options",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "layer-status",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "layer-status__indicator",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "module-detail",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "module-detail-placeholder",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "module-list",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "module-stage-pane",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "module-stage-pane--detail",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "module-stage-pane--list",
+          "stylesheets": []
+        },
+        {
+          "className": "module-stage-panes",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "panel",
+          "stylesheets": [
+            "app/styles.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "panel__header",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "private-header",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-header--config",
+          "stylesheets": []
+        },
+        {
+          "className": "private-header__actions",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-header__brand",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-header__page-name",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu-toggle",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu__account",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu__email",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "scene-hotspots",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "scene-layer",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "selection-frame",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "service-check",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "service-section",
+          "stylesheets": []
+        },
+        {
+          "className": "services-checklist",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "services-panel",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "sr-only",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "stone-color-layer",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "summary-flow-section",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "summary-panel",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "swatches",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "topbar",
+          "stylesheets": [
+            "app/styles.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "topbar__actions",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "topbar__inner",
+          "stylesheets": [
+            "app/styles.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "viewer",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "viewer-anchor",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "viewer-card",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "viewer-card__footer",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "viewer-pin-sentinel",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "viewer-pip-control",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "viewer-pip-controls",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "viewer-pip-resize-handle",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "visually-hidden",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        },
+        {
+          "className": "workspace",
+          "stylesheets": [
+            "app/styles.css"
+          ]
+        }
+      ],
+      "lexicallyCoLoadedClassNames": [
+        "button--primary",
+        "button--secondary",
+        "module-card",
+        "flow-actions",
+        "flow-nav",
+        "flow-step",
+        "global-option",
+        "handle-option",
+        "module-card__inspect",
+        "module-detail__dimension-line",
+        "module-detail__price",
+        "module-detail__view-shape",
+        "panel",
+        "price-state",
+        "price-state__breakdown",
+        "summary-list",
+        "topbar",
+        "topbar__inner"
+      ],
+      "knownCoverage": "static-html-class-to-css-class-name-only"
+    },
+    {
+      "url": "/admin.html",
+      "htmlFile": "app/admin.html",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/ui-theme.css"
+      ],
+      "staticClassCount": 48,
+      "classes": [
+        {
+          "className": "admin-card",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "admin-field",
+          "stylesheets": [
+            "app/admin/admin.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "admin-form",
+          "stylesheets": [
+            "app/admin/admin.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "admin-heading",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "admin-heading__meta",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "admin-main",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "admin-note",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "admin-tab",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "admin-tab-panel",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "admin-tabs",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "admin-tabs--nested",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "admin-topbar",
+          "stylesheets": [
+            "app/admin/admin.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "admin-topbar__actions",
+          "stylesheets": [
+            "app/admin/admin.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "auth-actions",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "auth-card",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "brand",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "brand__logo",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "button",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "button--primary",
+          "stylesheets": [
+            "app/admin/admin.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "button--secondary",
+          "stylesheets": [
+            "app/admin/admin.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "data-field",
+          "stylesheets": [
+            "app/admin/admin.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "editor-actions",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "editor-actions__buttons",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "editor-grid",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "eyebrow",
+          "stylesheets": [
+            "app/admin/admin.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "intro",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "is-active",
+          "stylesheets": []
+        },
+        {
+          "className": "library-pager",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "library-section",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "message",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "object-pager",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "object-tab-panel",
+          "stylesheets": []
+        },
+        {
+          "className": "panel-toolbar",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "password-field",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "password-reveal",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "private-header",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-header__actions",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-header__brand",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-header__page-name",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu-toggle",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu__account",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu__email",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu__logout",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "stage-add-tools",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "stages-list",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        },
+        {
+          "className": "text-button",
+          "stylesheets": [
+            "app/admin/admin.css",
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "visually-hidden",
+          "stylesheets": [
+            "app/admin/admin.css"
+          ]
+        }
+      ],
+      "lexicallyCoLoadedClassNames": [
+        "eyebrow",
+        "admin-field",
+        "admin-form",
+        "admin-topbar",
+        "admin-topbar__actions",
+        "button--primary",
+        "button--secondary",
+        "data-field",
+        "hierarchy-choice-options",
+        "hierarchy-item",
+        "hierarchy-section",
+        "material-availability-list",
+        "material-targets",
+        "multi-picker",
+        "stage-name",
+        "stage-pool-item",
+        "stage-unassigned",
+        "text-button"
+      ],
+      "knownCoverage": "static-html-class-to-css-class-name-only"
+    },
+    {
+      "url": "/access/",
+      "htmlFile": "app/access/index.html",
+      "stylesheets": [
+        "app/public-theme.css",
+        "app/ui-theme.css"
+      ],
+      "staticClassCount": 10,
+      "classes": [
+        {
+          "className": "access-page",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "access-private-header",
+          "stylesheets": []
+        },
+        {
+          "className": "admin-topbar__actions",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "back",
+          "stylesheets": []
+        },
+        {
+          "className": "eyebrow",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-header",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-header__actions",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-header__brand",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-header__page-name",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu-toggle",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        }
+      ],
+      "lexicallyCoLoadedClassNames": [],
+      "knownCoverage": "static-html-class-to-css-class-name-only"
+    },
+    {
+      "url": "/access/manage.html",
+      "htmlFile": "app/access/manage.html",
+      "stylesheets": [
+        "app/public-theme.css",
+        "app/ui-theme.css"
+      ],
+      "staticClassCount": 18,
+      "classes": [
+        {
+          "className": "access-brand-logo",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "access-page",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "access-private-header",
+          "stylesheets": []
+        },
+        {
+          "className": "admin-topbar__actions",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "eyebrow",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "intro",
+          "stylesheets": []
+        },
+        {
+          "className": "panel",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-header",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-header__actions",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-header__brand",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-header__page-name",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu-toggle",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu__account",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu__email",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu__logout",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "secondary",
+          "stylesheets": []
+        },
+        {
+          "className": "toolbar",
+          "stylesheets": []
+        }
+      ],
+      "lexicallyCoLoadedClassNames": [],
+      "knownCoverage": "static-html-class-to-css-class-name-only"
+    }
+  ],
+  "sharedClassNamesAcrossStylesheets": [
+    {
+      "className": "admin-field",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "admin-form",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "admin-topbar",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "admin-topbar__actions",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "brand",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/landing/landing.css",
+        "app/styles.css"
+      ]
+    },
+    {
+      "className": "brand__logo",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/styles.css"
+      ]
+    },
+    {
+      "className": "button",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/landing/landing.css",
+        "app/styles.css"
+      ]
+    },
+    {
+      "className": "button--primary",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/styles.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "button--secondary",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/styles.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "button-copper",
+      "stylesheets": [
+        "app/landing/landing.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "button-dark",
+      "stylesheets": [
+        "app/landing/landing.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "button-primary",
+      "stylesheets": [
+        "app/landing/landing.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "comparison-marker-featured",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "data-field",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "detail-row",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "dimension-pill",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "eyebrow",
+      "stylesheets": [
+        "app/about/about.css",
+        "app/admin/admin.css",
+        "app/how-it-works/how-it-works.css",
+        "app/landing/landing.css",
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "finish-layer",
+      "stylesheets": [
+        "app/styles.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "flow-actions",
+      "stylesheets": [
+        "app/styles.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "flow-nav",
+      "stylesheets": [
+        "app/styles.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "flow-step",
+      "stylesheets": [
+        "app/styles.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "foundation-item",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "foundation-number",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "global-option",
+      "stylesheets": [
+        "app/styles.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "handle-option",
+      "stylesheets": [
+        "app/styles.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "header-actions",
+      "stylesheets": [
+        "app/landing/landing.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "header-cta",
+      "stylesheets": [
+        "app/landing/landing.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "hero",
+      "stylesheets": [
+        "app/landing/landing.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "hierarchy-choice-options",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "hierarchy-item",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "hierarchy-section",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "integration-callout",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "layer-group",
+      "stylesheets": [
+        "app/styles.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "material-availability-list",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "material-targets",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "menu-open",
+      "stylesheets": [
+        "app/landing/landing.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "module-card",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/styles.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "module-card__inspect",
+      "stylesheets": [
+        "app/styles.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "module-detail__dimension-line",
+      "stylesheets": [
+        "app/styles.css",
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "module-detail__price",
+      "stylesheets": [
+        "app/styles.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "module-detail__view-shape",
+      "stylesheets": [
+        "app/styles.css",
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "multi-picker",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "overview-highlights",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "panel",
+      "stylesheets": [
+        "app/styles.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "price-state",
+      "stylesheets": [
+        "app/styles.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "price-state__breakdown",
+      "stylesheets": [
+        "app/styles.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "process-flow",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "process-section",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "production-intro",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "production-panel",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "quality-copy",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "quality-lead",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "scene-hotspot",
+      "stylesheets": [
+        "app/styles.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "scene-hotspot__tag",
+      "stylesheets": [
+        "app/styles.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "scene-hotspots",
+      "stylesheets": [
+        "app/styles.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "scene-layer",
+      "stylesheets": [
+        "app/styles.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "selection-frame",
+      "stylesheets": [
+        "app/styles.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "site-footer",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/landing/landing.css"
+      ]
+    },
+    {
+      "className": "site-header",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/landing/landing.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "stage-name",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "stage-number",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "stage-pool-item",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "stage-unassigned",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "story-section",
+      "stylesheets": [
+        "app/landing/landing.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "structure-layer",
+      "stylesheets": [
+        "app/styles.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "structure-layer--highlight",
+      "stylesheets": [
+        "app/styles.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "structure-layer--shadow",
+      "stylesheets": [
+        "app/styles.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "study-art",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "study-band",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "study-copy",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "study-topics",
+      "stylesheets": [
+        "app/how-it-works/how-it-works.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "summary-list",
+      "stylesheets": [
+        "app/styles.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "technical-view",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "technical-view--focus",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "text-button",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "topbar",
+      "stylesheets": [
+        "app/styles.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "topbar__inner",
+      "stylesheets": [
+        "app/styles.css",
+        "app/ui-theme.css"
+      ]
+    },
+    {
+      "className": "viewer-brand__logo",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "viewer-header",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ]
+    },
+    {
+      "className": "visually-hidden",
+      "stylesheets": [
+        "app/admin/admin.css",
+        "app/styles.css"
+      ]
+    }
+  ],
+  "classOverlapCount": 80,
+  "manualTriageCandidates": [
+    {
+      "className": "module-card",
+      "verdict": "different-contracts-editorial-vs-configurator"
+    },
+    {
+      "className": "button",
+      "verdict": "multiple-visual-bases-review-variants"
+    },
+    {
+      "className": "brand",
+      "verdict": "separate-brand-media-from-header-slot"
+    },
+    {
+      "className": "eyebrow",
+      "verdict": "possibly-shared-typographic-roles-with-contextual-variants"
+    },
+    {
+      "className": "scene-hotspot",
+      "verdict": "identical-base-declarations-review-shared-contract"
+    },
+    {
+      "className": "visually-hidden",
+      "verdict": "identical-utility-review-safe-deduplication"
+    }
+  ],
+  "status": "preliminary",
+  "nextEvidence": "rendered DOM; dynamic class and JS template analysis; CSS cascade/computed properties per representative theme,width,session,state"
+}
