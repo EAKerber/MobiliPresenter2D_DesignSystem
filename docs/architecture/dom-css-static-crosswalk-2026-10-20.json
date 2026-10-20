@@ -2,8 +2,8 @@
   "schema": "M2DDomCssStaticCrosswalk1",
   "createdAt": "2026-10-20",
   "sourceRepository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "sourceRevision": "507be364c29d83bda8ed6c772b330ee66122eb44",
-  "productInventoryRevision": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+  "sourceRevision": "0b3e22326b95171fd835b378ae135c4a72d387d3",
+  "productInventoryRevision": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
   "scope": "HTML static class-name to CSS class selector name, stylesheet loading per route and lexical cross-file overlaps. Not DOM rendered, not computed CSS, not CSS property conflicts.",
   "routes": [
     {
@@ -236,15 +236,15 @@
         }
       ],
       "lexicallyCoLoadedClassNames": [
-        "eyebrow",
-        "site-header",
         "button-copper",
         "button-dark",
         "button-primary",
+        "eyebrow",
         "header-actions",
         "header-cta",
         "hero",
         "menu-open",
+        "site-header",
         "story-section"
       ],
       "knownCoverage": "static-html-class-to-css-class-name-only"
@@ -814,11 +814,18 @@
         }
       ],
       "lexicallyCoLoadedClassNames": [
-        "eyebrow",
+        "button-copper",
+        "button-dark",
+        "button-primary",
         "comparison-marker-featured",
+        "eyebrow",
         "foundation-item",
         "foundation-number",
+        "header-actions",
+        "header-cta",
+        "hero",
         "integration-callout",
+        "menu-open",
         "module-card",
         "process-flow",
         "process-section",
@@ -829,18 +836,11 @@
         "site-footer",
         "site-header",
         "stage-number",
+        "story-section",
         "study-art",
         "study-band",
         "study-copy",
-        "study-topics",
-        "button-copper",
-        "button-dark",
-        "button-primary",
-        "header-actions",
-        "header-cta",
-        "hero",
-        "menu-open",
-        "story-section"
+        "study-topics"
       ],
       "knownCoverage": "static-html-class-to-css-class-name-only"
     },
@@ -1025,15 +1025,15 @@
         }
       ],
       "lexicallyCoLoadedClassNames": [
-        "eyebrow",
-        "site-header",
         "button-copper",
         "button-dark",
         "button-primary",
+        "eyebrow",
         "header-actions",
         "header-cta",
         "hero",
         "menu-open",
+        "site-header",
         "story-section"
       ],
       "knownCoverage": "static-html-class-to-css-class-name-only"
@@ -1107,11 +1107,11 @@
         }
       ],
       "lexicallyCoLoadedClassNames": [
+        "detail-row",
+        "dimension-pill",
         "eyebrow",
         "module-detail__dimension-line",
         "module-detail__view-shape",
-        "detail-row",
-        "dimension-pill",
         "overview-highlights",
         "technical-view",
         "technical-view--focus",
@@ -1566,12 +1566,12 @@
       "lexicallyCoLoadedClassNames": [
         "button--primary",
         "button--secondary",
-        "module-card",
         "flow-actions",
         "flow-nav",
         "flow-step",
         "global-option",
         "handle-option",
+        "module-card",
         "module-card__inspect",
         "module-detail__dimension-line",
         "module-detail__price",
@@ -1889,7 +1889,6 @@
         }
       ],
       "lexicallyCoLoadedClassNames": [
-        "eyebrow",
         "admin-field",
         "admin-form",
         "admin-topbar",
@@ -1897,6 +1896,7 @@
         "button--primary",
         "button--secondary",
         "data-field",
+        "eyebrow",
         "hierarchy-choice-options",
         "hierarchy-item",
         "hierarchy-section",
@@ -1917,7 +1917,7 @@
         "app/public-theme.css",
         "app/ui-theme.css"
       ],
-      "staticClassCount": 10,
+      "staticClassCount": 14,
       "classes": [
         {
           "className": "access-page",
@@ -1970,7 +1970,31 @@
           ]
         },
         {
+          "className": "private-menu",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
           "className": "private-menu-toggle",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu__account",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu__email",
+          "stylesheets": [
+            "app/ui-theme.css"
+          ]
+        },
+        {
+          "className": "private-menu__logout",
           "stylesheets": [
             "app/ui-theme.css"
           ]
@@ -2695,5 +2719,12 @@
     }
   ],
   "status": "preliminary",
-  "nextEvidence": "rendered DOM; dynamic class and JS template analysis; CSS cascade/computed properties per representative theme,width,session,state"
+  "nextEvidence": "rendered DOM; dynamic class and JS template analysis; CSS cascade/computed properties per representative theme,width,session,state",
+  "reconciliation": {
+    "date": "2026-10-20",
+    "source": "visual-inventory.json at DesignSystem main",
+    "oldProductRevision": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+    "changes": "access/index.html adds private-menu + __account/email/logout; admin.html script/css query versions changed; CSS files unchanged; source inventory now 1878ae1",
+    "scope": "static DOM and CSS only; not browser computed styles"
+  }
 }
