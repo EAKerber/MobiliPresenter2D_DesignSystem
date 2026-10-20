@@ -39,3 +39,12 @@ Não reproduzi a mensagem de falha de dados nesta visita. A autenticação, o bo
 - Nenhum dado de catálogo, convite, configuração, tema ou sessão foi salvo/alterado pela inspeção.
 - Não foi executada suíte automatizada nem houve correção de código.
 - Validar o caso da sessão temporária requer uma sessão temporária válida; ela não foi criada durante esta auditoria.
+
+
+## Análise estática do caminho do issue #212
+
+O caminho normal de login do bundle aguarda Identity, obtém o JWT e grava o cookie antes de emitir o evento e retornar o usuário. Em seguida, o formulário chama showUser(user). O listener do mesmo bundle também chama showUser(user), portanto há duas execuções próximas. ensureAdminData, entretanto, compartilha adminDataPromise e deve agrupar a chamada a /api/admin-bootstrap. As duas execuções podem seguir para loadSettings após a promessa ser resolvida.
+
+A mensagem literal observada pelo usuário é emitida quando /api/admin-bootstrap retorna não-2xx. A função admin-bootstrap diferencia 401 (Identity não resolve usuário), 403 (sem permissão) e 503 (Identity indisponível), mas o cliente transforma todos esses casos na mesma mensagem. O código enfraquece a hipótese simples de a chamada ocorrer antes do cookie no fluxo normal; ainda permite investigar desacordo temporário do contexto Identity no Netlify, indisponibilidade ou outra resposta HTTP. Sem status/duração da execução que falhou, a causa permanece aberta.
+
+Registro seguro sugerido para futura captura: marcos da autenticação e bootstrap, presença do cookie apenas como booleano, status HTTP, duração e request ID. Não registrar token, e-mail, corpo de resposta ou conteúdo administrativo. Nenhuma instrumentação foi implantada.
