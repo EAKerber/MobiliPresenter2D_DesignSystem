@@ -1,9 +1,9 @@
 {
   "schema": "M2DVisualInventory1",
   "snapshot": {
-    "date": "2026-10-19",
+    "date": "2026-10-20",
     "productRepository": "EAKerber/MobiliPresenter2D",
-    "productCommit": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+    "productCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
     "scope": "Inventário estático de CSS, HTML e assets visuais; não inclui análise semântica do runtime JS nem validação visual do DOM."
   },
   "routes": [
@@ -25932,8 +25932,8 @@
         "inlineStyleAttributes": []
       },
       "app/access/index.html": {
-        "bytes": 2890,
-        "lines": 44,
+        "bytes": 3295,
+        "lines": 50,
         "staticClasses": [
           "access-page",
           "access-private-header",
@@ -25944,7 +25944,11 @@
           "private-header__actions",
           "private-header__brand",
           "private-header__page-name",
-          "private-menu-toggle"
+          "private-menu",
+          "private-menu-toggle",
+          "private-menu__account",
+          "private-menu__email",
+          "private-menu__logout"
         ],
         "inlineStyleBlocks": [
           {
@@ -26747,7 +26751,7 @@
         ]
       },
       "app/admin.html": {
-        "bytes": 11369,
+        "bytes": 11351,
         "lines": 117,
         "staticClasses": [
           "admin-card",
