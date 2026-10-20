@@ -229,3 +229,16 @@ O produto avançou para o commit [483ef2e](https://github.com/EAKerber/MobiliPre
 No configurador em tema claro, viewport 516 × 800 CSS px, o primeiro estado DOM precedeu a carga assíncrona (7 módulos marcados, 7/7). Após aplicar a configuração publicada, os sete controles ficaram desmarcados e o contador passou a 0/7. Não foram feitas escolhas durante a carga; a interação antes de concluir a carga permanece fora do escopo atual por decisão do usuário.
 
 Com o menu aberto na mesma largura, a cena não cobriu os destinos públicos; a leitura DOM confirmou `isolation: isolate` em `.viewer-card`. A captura raster foi exibida durante a revisão, mas não foi persistida nesta atualização. Issues #209 e #214 foram fechados após a validação. Evidência estruturada e limites em [PRODUCT_RECONCILIATION_2026-10-19.md](PRODUCT_RECONCILIATION_2026-10-19.md).
+
+
+## Revisão do fluxo de login e sessão (2026-10-19)
+
+Na sessão de produção autenticada pelo usuário, as chamadas de Netlify Identity para token e usuário responderam 200. Em /admin.html, o editor carregou na primeira visita; o bootstrap administrativo e as leituras de configuração responderam 200, e a mensagem de falha do issue [#212](https://github.com/EAKerber/MobiliPresenter2D/issues/212) não apareceu. Isso não reproduz nem descarta a falha intermitente.
+
+A primeira abertura do menu na mesma página após o login continuou mostrando “Entrar na administração”, sem rotas privadas ou saída. Sem recarregar nem sair, uma navegação nova para /access/manage.html mostrou imediatamente o menu autenticado correto. Em /config/, a configuração publicada carregou sem alerta e indicou 0 de 7 módulos. Reproduções e limites estão em [auth-session-flow-2026-10-19.md](evidence/runtime/auth-session-flow-2026-10-19.md) e no [issue #213](https://github.com/EAKerber/MobiliPresenter2D/issues/213).
+
+A inspeção do JavaScript servido encontrou cópias separadas do barramento de eventos de autenticação em core/private-navigation.bundle.js e admin/admin.bundle.js, com listas de listeners locais por módulo. A hipótese de alta confiança é que o evento emitido pelo bundle administrativo não chega ao listener do cabeçalho; a navegação nova recupera o usuário persistido. Ainda não há correção ou teste isolado, portanto a causa permanece como hipótese técnica, não resolução.
+
+A chamada POST /api/access/session e a URL direta /.netlify/functions/access-session-status retornaram 404 com HTML, embora as rotas e a função estejam declaradas no main consultado. As chamadas equivalentes de configuração e bootstrap administrativo responderam 200. Esta falha de fallback está separada no [issue #222](https://github.com/EAKerber/MobiliPresenter2D/issues/222); não foi criada nem validada uma sessão temporária e esse 404 não explica o caso de Netlify Identity.
+
+Nenhum e-mail, convite, configuração ou dado administrativo foi copiado para a evidência. Nenhum dado ou código de produto foi alterado. O SHA exato do deploy servido nesta visita não foi verificado independentemente.
