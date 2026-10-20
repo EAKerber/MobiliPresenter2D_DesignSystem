@@ -1021,7 +1021,19 @@
         200
       ],
       "editorLoadedOnFirstVisit": true,
-      "reportedLoadErrorReproduced": false
+      "reportedLoadErrorReproduced": false,
+      "diagnosis": {
+        "exactUiErrorSource": "/api/admin-bootstrap non-2xx; the client currently maps all non-2xx statuses to the same generic administrative-data message",
+        "serverStatuses": {
+          "401": "Netlify Identity did not resolve an authenticated user",
+          "403": "Identity user exists but lacks administration permission",
+          "503": "Netlify Identity unavailable"
+        },
+        "loginOrdering": "Browser login awaits Identity, obtains the JWT, writes the auth cookie, emits the login event, then returns the user for the form handler.",
+        "overlap": "Both the auth listener and form submit handler call showUser(user); adminDataPromise coalesces the bootstrap request, but both continuations may call loadSettings.",
+        "assessment": "A UI overlap exists, but a simple bootstrap-before-cookie race is weakened by the observed order and single-flight bootstrap. Transient disagreement between browser identity and Netlify function identity context remains possible, as does an Identity outage; neither is proven.",
+        "nextSignal": "Record bootstrap status, elapsed time, and request ID without user data or credentials on a future occurrence. No diagnostic instrumentation was deployed."
+      }
     },
     "menu": {
       "sameAdminDocumentAfterLogin": "stale signed-out entry item; private routes and logout omitted",
