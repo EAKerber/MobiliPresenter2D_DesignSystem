@@ -1,0 +1,42 @@
+name: Public DOM read-only probe
+
+on:
+  push:
+    branches:
+      - architecture/dom-css-consolidation-20261020
+    paths:
+      - "experiments/public-dom/**"
+      - ".github/workflows/public-dom-audit.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  browser:
+    name: Chromium DOM and computed CSS — public GET only
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install isolated browser instrumentation
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.0
+          npx playwright install --with-deps chromium
+      - name: Audit public routes (no login or write)
+        env:
+          M2D_AUDIT_BASE_URL: https://casaemmodulos.casa
+          M2D_AUDIT_WIDTHS: "390,1366"
+          M2D_AUDIT_THEMES: "light,dark"
+          M2D_AUDIT_OUTPUT: artifacts/public-dom-audit.json
+        run: node experiments/public-dom/audit-public-dom.mjs
+      - name: Retain evidence even when a route fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-dom-audit
+          path: artifacts/public-dom-audit.json
+          if-no-files-found: warn
+          retention-days: 7
