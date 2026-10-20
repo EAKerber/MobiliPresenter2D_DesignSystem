@@ -678,6 +678,23 @@
       "state": "authenticated",
       "observation": "The page loaded in a new tab and its menu immediately showed private/public navigation and logout. Account and invitation values were not copied or persisted.",
       "sideEffects": "No invitation sent; no access records changed."
+    },
+    {
+      "route": "/admin.html",
+      "state": "authenticated immediately after user login",
+      "observation": "Identity token/user and admin bootstrap/configuration reads returned 200 and the editor loaded without the intermittent administrative-data error. The same-document menu still showed the signed-out entry item after login. A new authenticated navigation to /access/manage.html populated the role-aware private/public menu and logout. Menu values/account details were not copied.",
+      "productBacklog": [
+        "https://github.com/EAKerber/MobiliPresenter2D/issues/212",
+        "https://github.com/EAKerber/MobiliPresenter2D/issues/213"
+      ],
+      "productDataChanged": false
+    },
+    {
+      "route": "POST /api/access/session",
+      "state": "unauthenticated temporary-session fallback probe",
+      "observation": "The public route and direct Netlify function URL returned 404 HTML. No temporary access session was created or validated. Configuration/admin-bootstrap endpoints remained available.",
+      "productBacklog": "https://github.com/EAKerber/MobiliPresenter2D/issues/222",
+      "productDataChanged": false
     }
   ],
   "findingsRegister": "FINDINGS_REGISTER.md",
@@ -691,7 +708,8 @@
     "FIND-007": 213,
     "FIND-008": 208,
     "FIND-009": 214,
-    "FIND-010": 208
+    "FIND-010": 208,
+    "FIND-013": 222
   },
   "baselineAuditReconciliation": {
     "productIssue": 208,
@@ -984,5 +1002,62 @@
       ],
       "evidence": "PRODUCT_RECONCILIATION_2026-10-19.md"
     }
+  },
+  "authFlowReview": {
+    "observedAtLocal": "2026-10-19",
+    "site": "https://casaemmodulos.casa/",
+    "deployedCommit": "unknown; exact live deploy SHA not independently verified during this pass",
+    "readOnly": true,
+    "login": {
+      "completedByUser": true,
+      "identityTokenStatus": 200,
+      "identityUserStatus": 200
+    },
+    "adminData": {
+      "route": "/admin.html",
+      "adminBootstrapStatus": 200,
+      "configurationStatuses": [
+        200,
+        200
+      ],
+      "editorLoadedOnFirstVisit": true,
+      "reportedLoadErrorReproduced": false
+    },
+    "menu": {
+      "sameAdminDocumentAfterLogin": "stale signed-out entry item; private routes and logout omitted",
+      "newAuthenticatedNavigation": "/access/manage.html menu contained private/public navigation and logout",
+      "likelyCause": "Admin and private-navigation bundles each contain a separate module-local auth event bus; the login event likely does not reach the header listener. High-confidence code-based hypothesis, not a verified fix."
+    },
+    "configurator": {
+      "route": "/config/",
+      "buyerConfigurationStatus": 200,
+      "initialCount": "0 of 7 visible modules",
+      "errorVisible": false
+    },
+    "temporaryAccessSessionFallback": {
+      "route": "POST /api/access/session",
+      "status": 404,
+      "directFunctionRoute": "/.netlify/functions/access-session-status",
+      "directFunctionStatus": 404,
+      "comparisonRoutes": {
+        "configuration": 200,
+        "adminBootstrap": 200
+      },
+      "sourceMainDeclaresRouteAndFunction": true,
+      "temporarySessionValidated": false,
+      "productIssue": 222
+    },
+    "productIssues": {
+      "adminLoadIntermittent": 212,
+      "stalePostLoginMenu": 213,
+      "temporarySessionFallback404": 222
+    },
+    "privacy": {
+      "accountEmailPersisted": false,
+      "invitationValuesPersisted": false,
+      "productDataChanged": false,
+      "productCodeChanged": false
+    },
+    "evidence": "evidence/runtime/auth-session-flow-2026-10-19.md"
   }
 }
