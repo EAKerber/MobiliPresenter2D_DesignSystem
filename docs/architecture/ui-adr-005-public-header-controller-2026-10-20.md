@@ -1,7 +1,7 @@
 # UI-ADR-005 — Controlador único do menu público sem migrar o HTML para JSON
 
 **Data:** 2026-10-20  
-**Estado:** **P4-NAV primeira validação diferencial PASS; verificação final de foco NAV-004 em execução.** Não homologado para merge, publicação ou alteração visual de NAV-005.  
+**Estado:** **P4-NAV PASS técnico: visual, Chromium/WebKit e foco NAV-004**. Não homologado para merge, publicação ou alteração visual de NAV-005.  
 **Produto de referência:** `EAKerber/MobiliPresenter2D@1878ae1057ce7c6190e0c8cb08a1f3baadd49463` (`main`), candidato `experiment/shared-public-header-controller-20261020`.  
 **Design System:** `EAKerber/MobiliPresenter2D_DesignSystem`, `architecture/dom-css-consolidation-20261020`, [PR #39](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/39).  
 **Decisão mãe:** [UI-ADR-004](ui-adr-004-cross-page-reuse-gate-2026-10-20.md) — compartilhar controlador do cabeçalho **sem** renderizar cabeçalho por JS nem estender PageComposition.
@@ -89,3 +89,24 @@ Medição sobre os conteúdos efetivos recuperados do GitHub na `main@1878ae1` e
 | **Subtotal desses seis arquivos** |  |  | **-1034** |
 
 Houve remoção líquida de **1224 unidades de texto JS** nos três controladores e redução líquida de **1034 unidades** nesses seis arquivos. **A Landing e a página Como funciona fazem uma requisição de script a mais** para o controlador compartilhado; isso não deve ser convertido automaticamente em alegação de melhora de performance. O ganho defensável é **uma única implementação de comportamento de navegação para três rotas**, com gates reproduzíveis.
+
+## Fechamento do gate P4-NAV — 2026-10-20
+
+**Execução final comprovada:** [GitHub Actions #39508130387](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39508130387) no commit `fdeb931af285f6cf76795ccdd50a8b75d0f25aef` da branch de produto: workflow `Public header controller isolated gate`, conclusão **SUCCESS**. Run anterior [#39507803390](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39507803390) também havia passado, antes de aperfeiçoar a política de foco.
+
+| Gate | Evidência da execução final | Resultado |
+|---|---|---|
+| Sintaxe e contrato público | `node --check` para 3 JS; `node tests/public-cutover-contract.cjs` | **PASS** |
+| UI/DOM/CSS/geometria e captura regional | `P4_NAV_VISUAL_EQUIVALENCE`, 12 cenários (3 rotas × 2 larguras × 2 temas), `initialAndOpenEqual=true`, `pixelsEqual=true`, sem erros | **12/12 PASS** |
+| Interação por teclado/pointer e script único | `P4_NAV_FUNCTIONAL`, 12 cenários (3 rotas × 2 larguras × Chromium/WebKit), 0 exceções | **12/12 PASS** |
+| Foco NAV-004 | Em menu móvel: `Enter` abre e foca primeiro link; `Escape` fecha e devolve foco ao toggle; clique fora e link fecham; clique normal no toggle abre/fecha sem duplo listener | **PASS automatizado** |
+| Landing preservada | 5 ambientes, 3 mini-benefícios, 4 benefícios, CTA cozinha, animação/hint não removida do código | **Smoke funcional PASS no recorte**, timing de animações ainda precisa de inspeção real |
+| Como funciona preservado | IIFE do painel explicativo mantida no código; renderização de `main` validada | **PASS de carregamento**, interação específica do painel não ensaiada nesta matriz |
+| Experimento produto isolado | Branch própria, sem product PR, merge ou pedido de deploy; `main` não modificada | **PASS de isolamento** |
+| Safari/iPad físico, touch real, todos os estados NAV-005, foco com leitores de tela | Fora do recorte atual | **PENDENTE** |
+
+A avaliação de markup/estilos/pixels é para o cabeçalho e sua área visível no estado fechado/aberto, não uma prova geral de fidelidade de todas as páginas. A adequação ao NAV-004 é suportada pelos casos automatizados realizados; não equivale à homologação de acessibilidade integral.
+
+### Veredito
+
+**ADOTAR como padrão técnico proposto o controlador público único** (`header-menu.js`) para rotas com o mesmo contrato de menu, mantendo HTML estático + CSS existente. **Não promover `PageCompositionExperimental` a schema global**, nem fundir esta branch com a branch de benefícios. A decisão de levar o patch à produção depende de revisão/PR em checkpoint próprio e dos gates restantes, não deste relatório.
