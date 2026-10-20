@@ -6,7 +6,7 @@
 
 - `registry.mjs`: `createRegistry` com tipos/variantes permitidos, `compilePage` com validação completa e snapshot JSON, `renderCompiled` que devolve descritores sem montar DOM.
 - `landing-benefits.mjs`: manifesto/fixture para `landing/benefit-strip@1`, reproduzindo quatro entradas existentes da `CASA_PUBLIC_LANDING.benefits` e o formato `.benefit-item` (div, img alt vazio, span).
-- `registry.test.mjs`: 11 testes para sucesso/ordem/estrutura, restrições de tipo e variante, referência ausente/unsafe, ID duplicado, campo CSS não permitido, origem de imagem não autorizada, ausência de render parcial, registro duplicado e snapshot estável.
+- `registry.test.mjs`: 13 testes para sucesso/ordem/estrutura, restrições de tipo e variante, referência ausente/unsafe, ID duplicado, campo CSS não permitido, origem de imagem não autorizada, ausência de render parcial, registro duplicado e snapshot estável.
 
 ## Executar em ambiente Node com os arquivos locais
 
@@ -28,6 +28,6 @@ Não exige dependências ou browser. A suite usa Node built-ins e ESM; seu resul
 
 ## Evidência de validação nesta branch
 
-Em 2026-10-20, os 11 testes foram executados **nativamente em Node 22 por GitHub Actions**, com `node --test experiments/declarative-ui/registry.test.mjs`: **11 PASS, 0 FAIL**. [Execução PR #39502842741](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/39502842741) e [execução push #39502842309](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/39502842309), ambas SUCCESS. Também houve execução in-memory prévia com shim; essa prova anterior não substitui a nativa. **Ainda não são testes de navegador, captura visual, integração com o produto ou produção.**
+Em 2026-10-20, os 13 testes foram executados **nativamente em Node 22 por GitHub Actions**, com `node --test experiments/declarative-ui/registry.test.mjs`: **13 PASS, 0 FAIL**. O conjunto cresceu dos 11 iniciais para incluir snapshot profundamente congelado e proteção contra getters nas referências. [Execução PR #39502842741](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/39502842741) e [execução push #39502842309](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/39502842309), ambas SUCCESS. Também houve execução in-memory prévia com shim; essa prova anterior não substitui a nativa. **Ainda não são testes de navegador, captura visual, integração com o produto ou produção.**
 
 Referências: [UI-ADR-001](../../docs/architecture/ui-adr-001-declarative-boundaries-2026-10-20.md) e [plano incremental](../../docs/architecture/declarative-ui-increment-plan-2026-10-20.md).
