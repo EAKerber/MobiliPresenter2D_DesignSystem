@@ -787,6 +787,23 @@
       "state": "authenticated",
       "observation": "The page loaded in a new tab and its menu immediately showed private/public navigation and logout. Account and invitation values were not copied or persisted.",
       "sideEffects": "No invitation sent; no access records changed."
+    },
+    {
+      "route": "/admin.html",
+      "state": "authenticated immediately after user login",
+      "observation": "Identity token/user and admin bootstrap/configuration reads returned 200 and the editor loaded without the intermittent administrative-data error. The same-document menu still showed the signed-out entry item after login. A new authenticated navigation to /access/manage.html populated the role-aware private/public menu and logout. Menu values/account details were not copied.",
+      "productBacklog": [
+        "https://github.com/EAKerber/MobiliPresenter2D/issues/212",
+        "https://github.com/EAKerber/MobiliPresenter2D/issues/213"
+      ],
+      "productDataChanged": false
+    },
+    {
+      "route": "POST /api/access/session",
+      "state": "unauthenticated temporary-session fallback probe",
+      "observation": "The public route and direct Netlify function URL returned 404 HTML. No temporary access session was created or validated. Configuration/admin-bootstrap endpoints remained available.",
+      "productBacklog": "https://github.com/EAKerber/MobiliPresenter2D/issues/222",
+      "productDataChanged": false
     }
   ],
   "findingsRegister": "FINDINGS_REGISTER.md",
@@ -801,7 +818,8 @@
     "FIND-008": 208,
     "FIND-009": 214,
     "FIND-010": 208,
-    "FIND-013": 208
+    "FIND-013": 208,
+    "FIND-014": 222
   },
   "baselineAuditReconciliation": {
     "productIssue": 208,
@@ -1093,6 +1111,89 @@
         221
       ],
       "evidence": "PRODUCT_RECONCILIATION_2026-10-19.md"
+    }
+  },
+  "authFlowReview": {
+    "observedAtLocal": "2026-10-19",
+    "site": "https://casaemmodulos.casa/",
+    "deployedCommit": "unknown; exact live deploy SHA not independently verified during this pass",
+    "readOnly": true,
+    "login": {
+      "completedByUser": true,
+      "identityTokenStatus": 200,
+      "identityUserStatus": 200
+    },
+    "adminData": {
+      "route": "/admin.html",
+      "adminBootstrapStatus": 200,
+      "configurationStatuses": [
+        200,
+        200
+      ],
+      "editorLoadedOnFirstVisit": true,
+      "reportedLoadErrorReproduced": false,
+      "diagnosis": {
+        "exactUiErrorSource": "/api/admin-bootstrap non-2xx; the client currently maps all non-2xx statuses to the same generic administrative-data message",
+        "serverStatuses": {
+          "401": "Netlify Identity did not resolve an authenticated user",
+          "403": "Identity user exists but lacks administration permission",
+          "503": "Netlify Identity unavailable"
+        },
+        "loginOrdering": "Browser login awaits Identity, obtains the JWT, writes the auth cookie, emits the login event, then returns the user for the form handler.",
+        "overlap": "Both the auth listener and form submit handler call showUser(user); adminDataPromise coalesces the bootstrap request, but both continuations may call loadSettings.",
+        "assessment": "A UI overlap exists, but a simple bootstrap-before-cookie race is weakened by the observed order and single-flight bootstrap. Transient disagreement between browser identity and Netlify function identity context remains possible, as does an Identity outage; neither is proven.",
+        "nextSignal": "Record bootstrap status, elapsed time, and request ID without user data or credentials on a future occurrence. No diagnostic instrumentation was deployed."
+      }
+    },
+    "menu": {
+      "sameAdminDocumentAfterLogin": "stale signed-out entry item; private routes and logout omitted",
+      "newAuthenticatedNavigation": "/access/manage.html menu contained private/public navigation and logout",
+      "likelyCause": "Admin and private-navigation bundles each contain a separate module-local auth event bus; the login event likely does not reach the header listener. High-confidence code-based hypothesis, not a verified fix.",
+      "postFixRuntimeVerification": "Pending: the browser context available on 2026-10-20 was anonymous, so post-login and logout behavior was not exercised."
+    },
+    "configurator": {
+      "route": "/config/",
+      "buyerConfigurationStatus": 200,
+      "initialCount": "0 of 7 visible modules",
+      "errorVisible": false
+    },
+    "temporaryAccessSessionFallback": {
+      "route": "POST /api/access/session",
+      "status": 404,
+      "directFunctionRoute": "/.netlify/functions/access-session-status",
+      "directFunctionStatus": 404,
+      "comparisonRoutes": {
+        "configuration": 200,
+        "adminBootstrap": 200
+      },
+      "sourceMainDeclaresRouteAndFunction": true,
+      "temporarySessionValidated": false,
+      "productIssue": 222
+    },
+    "productIssues": {
+      "adminLoadIntermittent": 212,
+      "stalePostLoginMenu": 213,
+      "temporarySessionFallback404": 222
+    },
+    "privacy": {
+      "accountEmailPersisted": false,
+      "invitationValuesPersisted": false,
+      "productDataChanged": false,
+      "productCodeChanged": false
+    },
+    "evidence": "evidence/runtime/auth-session-flow-2026-10-19.md",
+    "productCorrection": {
+      "pullRequest": 223,
+      "mergedCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+      "mergedAt": "2026-10-20T01:28:20Z",
+      "productionDeploy": {
+        "id": "6ad6c3b51b6be05647167f94",
+        "state": "ready",
+        "publishedAt": "2026-10-20T01:28:40.575Z",
+        "commit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463"
+      },
+      "productIssue": 213,
+      "status": "deployed; authenticated runtime verification pending"
     }
   }
 }
