@@ -27,3 +27,11 @@ test('later error prevents ALL render calls',()=>{
   assert.equal(called,0);
 });
 test('component registrations must be unique',()=>assert.throws(()=>createRegistry([benefitStrip,benefitStrip]),/duplicate component type/));
+
+test('validated compiled data is a snapshot, not a live mutable source alias',()=>{
+  const input={landing:{benefits:sources.landing.benefits.map(x=>({...x}))}};
+  const compiled=compilePage(manifest,input,registry());
+  const oldLabel=compiled.sections[0].data[0].label;
+  input.landing.benefits[0].label='MUTATED AFTER VALIDATION';
+  assert.equal(renderCompiled(compiled)[0].result[0].children[1].text,oldLabel);
+});
