@@ -28,6 +28,6 @@ Não exige dependências ou browser. A suite usa Node built-ins e ESM; seu resul
 
 ## Evidência de validação nesta branch
 
-Em 2026-10-20, 11 testes passaram num executor JS in-memory sobre os conteúdos **recuperados do GitHub após os commits**. O executor removeu `import/export` e simulou as funções mínimas de `node:test` e `assert`. **Isso não foi uma execução Node `--test` nativa.** Houve tentativa de obter o conteúdo via `curl` no container para executar Node, mas o ambiente não resolveu `raw.githubusercontent.com`. Não marcar testes de navegador, captura visual, CI ou produção como PASS.
+Em 2026-10-20, os 11 testes foram executados **nativamente em Node 22 por GitHub Actions**, com `node --test experiments/declarative-ui/registry.test.mjs`: **11 PASS, 0 FAIL**. [Execução PR #39502842741](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/39502842741) e [execução push #39502842309](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/39502842309), ambas SUCCESS. Também houve execução in-memory prévia com shim; essa prova anterior não substitui a nativa. **Ainda não são testes de navegador, captura visual, integração com o produto ou produção.**
 
 Referências: [UI-ADR-001](../../docs/architecture/ui-adr-001-declarative-boundaries-2026-10-20.md) e [plano incremental](../../docs/architecture/declarative-ui-increment-plan-2026-10-20.md).
