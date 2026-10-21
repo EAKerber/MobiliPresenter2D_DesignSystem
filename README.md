@@ -6,6 +6,7 @@
 Registro de decisões de design, estado de homologação e evidências recuperadas dos chats do inventário.
 
 - [`index.html`](index.html): documento visual navegável, independente e sem dependências.
+- [**ARC-01…ARC-16 — contrato arquitetural consolidado e roadmap de execução**](docs/ARCHITECTURE_DECISIONS_ARC01_ARC16_AND_EXECUTION_2026-10-21.md): decisões das quatro rodadas, tokens/componentes Vanilla, extração abrangente de textos, governança e gates de migração. **Ler antes dos planos experimentais da PR #39**.
 - [`docs/ROADMAP_AND_CURRENT_STAGE_2026-10-21.md`](docs/ROADMAP_AND_CURRENT_STAGE_2026-10-21.md): plano geral, etapa atual, critérios de conformidade e continuidade.
 - [`decisions.json`](decisions.json): registro estruturado das decisões, pendências, limites e itens a recuperar.
 - [**Contratos de navegação por profundidade e preflight obrigatório**](docs/NAVIGATION_DEPTH_AUTHORITY_GATE_2026-10-21.md): índice NAV-004/NAV-005 por primeiro nível, Viewer (profundidade 2) e áreas privadas. **Consultar antes de abrir issue, planejar header ou modificar UI**; não usar memória de chat como fonte de homologação.
