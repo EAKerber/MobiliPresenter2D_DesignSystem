@@ -11,6 +11,8 @@ Registro de decisões de design, estado de homologação e evidências recuperad
 - [`FINDINGS_REGISTER.md`](FINDINGS_REGISTER.md): registro de defeitos observados, inconsistências, homologações, decisões incompletas e limites.
 - [`PALETTE_CONFORMANCE.md`](PALETTE_CONFORMANCE.md): paleta classificada por estado, mudanças necessárias e critérios verificáveis de conformidade.
 
+- [**Handover MobiliPresenter2D — preview #230 (21/10/2026)**](docs/HANDOVER_MOBILIPRESENTER2D_PREVIEW230_2026-10-21.md): situação atual da PR, ordem NAV-005 corrigida, feedback visual, testes, bloqueios de autenticação, preço e próximos gates. Ler antes de retomar produto ou preparar merge.
+
 ## Como ler
 
 - “Direção aprovada” registra acordo conceitual; não significa que todos os valores visuais foram fixados nem autoriza implementar no produto.
