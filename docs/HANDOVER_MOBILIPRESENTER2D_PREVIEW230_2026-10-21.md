@@ -1,3 +1,11 @@
+# Atualização posterior ao handover — PR #230 mesclada em produção (21/10/2026)
+
+A referência antiga a DRAFT/HOLD está superada pelo aceite posterior do usuário, que esclareceu que desejava integrar a PR #230 **junto** com a publicação opcional de preços. GitHub reconheceu [PR #230](https://github.com/EAKerber/MobiliPresenter2D/pull/230) como **MERGED** em `main@840a0cd`; produção Netlify [`6ad90766`](https://app.netlify.com/projects/mobilipresenter2d/deploys/6ad90766ea3c4933358fdb03) **ready** no SHA exato. Resultado composto: Auth P0, acordeões, cabeçalho NAV-005 de profundidade 2, Viewer editorial e capacidade de preço base OFF por padrão.
+
+Gates pré-merge [UX #39654374644](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39654374644) e [preço #39653868962](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39653868962) PASS. As divergências antigas de CI e a inspeção manual iPad/logout/reauth continuam pendentes. Nenhuma configuração administrativa de preço foi ativada, nenhum dado comercial real foi publicado pelo agente e não se deve tratar `ready` como teste humano dos fluxos.
+
+---
+
 # Handover operacional — MobiliPresenter2D / revisão do preview #230 (21/10/2026)
 
 **Tipo:** checkpoint factual, plano de retomada e registro do feedback mais recente do usuário.  
