@@ -1,0 +1,430 @@
+{
+  "schema": "M2DComponentOwnershipV0/0.1",
+  "status": "static evidence and candidate contracts, not a runtime verification or approval to migrate",
+  "productHead": "840a0cda361b3ce215fc934badc26df72dffc6e8",
+  "designSystemDecisions": "decisions.json at Design System main 2026-10-21",
+  "inventoryScope": [
+    "8 HTML routes",
+    "8 CSS stylesheets",
+    "selected application JS/controllers"
+  ],
+  "records": [
+    {
+      "id": "C01",
+      "family": "public-primary-header",
+      "consumers": [
+        "/",
+        "/about/",
+        "/how-it-works/"
+      ],
+      "html": [
+        "app/index.html",
+        "app/about/index.html",
+        "app/how-it-works/index.html"
+      ],
+      "css": [
+        "app/landing/landing.css",
+        "app/ui-theme.css"
+      ],
+      "js": [
+        "app/landing/landing.js",
+        "app/landing/header-menu.js",
+        "app/how-it-works/how-it-works.js"
+      ],
+      "authority": [
+        "NAV-004",
+        "NAV-005.wideLayoutPatternsApproved.publicPages",
+        "NAV-005.compactLayoutPatternsApproved.publicPages"
+      ],
+      "status": "confirmed duplicated HTML; menu controller behavior divergent",
+      "target": "shared build-time HTML fragments by approved variant + separate public menu controller",
+      "risk": "high",
+      "gate": "NAV-005 per-route theme/viewport/ARIA/focus + #215/#218"
+    },
+    {
+      "id": "C02",
+      "family": "public-secondary-header",
+      "consumers": [
+        "/viewer/"
+      ],
+      "html": [
+        "app/viewer/index.html"
+      ],
+      "css": [
+        "app/viewer/viewer.css",
+        "app/ui-theme.css"
+      ],
+      "js": [
+        "app/landing/header-menu.js",
+        "app/core/ui-theme.js"
+      ],
+      "authority": [
+        "NAV-004",
+        "NAV-005.wideLayoutPatternsApproved.secondaryNavigationPages",
+        "NAV-005.compactLayoutPatternsApproved.secondaryNavigationPages"
+      ],
+      "status": "distinct variant; reused public controller; layout changed by #230",
+      "target": "variant-specific build fragment and layout; share behavior, do NOT reuse public primary markup blindly",
+      "risk": "high",
+      "gate": "logo-left/right ← Ambientes-theme-menu; viewport/active navigation/keyboard"
+    },
+    {
+      "id": "C03",
+      "family": "private-shell-and-navigation",
+      "consumers": [
+        "/config/",
+        "/admin.html",
+        "/access/",
+        "/access/manage.html"
+      ],
+      "html": [
+        "app/config/index.html",
+        "app/admin.html",
+        "app/access/index.html",
+        "app/access/manage.html"
+      ],
+      "css": [
+        "app/ui-theme.css",
+        "app/styles.css",
+        "app/admin/admin.css"
+      ],
+      "js": [
+        "app/core/private-navigation.js"
+      ],
+      "authority": [
+        "NAV-005.wideLayoutPatternsApproved.privatePages",
+        "NAV-005.compactLayoutPatternsApproved.privatePages",
+        "PRIVATE-HEADER-001"
+      ],
+      "status": "duplicated structural markup; common auth-aware private controller; post-login issues #212/#213",
+      "target": "private build-time fragment with authorized session controller preserved separately",
+      "risk": "critical",
+      "gate": "role/session/logout/onAuthChange, focus and compact variant, no route or auth regressions"
+    },
+    {
+      "id": "C04",
+      "family": "theme-toggle-and-brand-variants",
+      "consumers": [
+        "/",
+        "/about/",
+        "/how-it-works/",
+        "/viewer/",
+        "/config/",
+        "/admin.html",
+        "/access/",
+        "/access/manage.html"
+      ],
+      "html": [
+        "all 8 route HTML files"
+      ],
+      "css": [
+        "app/ui-theme.css",
+        "app/public-theme.css"
+      ],
+      "js": [
+        "app/core/ui-theme.js"
+      ],
+      "authority": [
+        "VIS-002",
+        "NAV-005"
+      ],
+      "status": "shared runtime exists; selectors and theme overrides remain dispersed",
+      "target": "preserve controller owner and approved scoped tokens, map computed CSS before consolidation",
+      "risk": "medium",
+      "gate": "auto/light/dark, stored preference, brand asset swaps, focus/reduced motion"
+    },
+    {
+      "id": "C05",
+      "family": "focus-and-accessibility-utilities",
+      "consumers": [
+        "public and private routes"
+      ],
+      "html": [
+        "app/index.html",
+        "app/config/index.html",
+        "app/admin.html"
+      ],
+      "css": [
+        "app/public-theme.css",
+        "app/ui-theme.css",
+        "app/styles.css",
+        "app/admin/admin.css"
+      ],
+      "js": [],
+      "authority": [
+        "VIS-002",
+        "NAV-004",
+        "EST-01",
+        "EST-02"
+      ],
+      "status": "candidate overlapping focus/visually-hidden declarations; selector/cascade equivalence not proven",
+      "target": "approved focus pairs + narrow utility extraction when equality verified",
+      "risk": "medium",
+      "gate": "computed styles light/dark, keyboard, hidden/visible, forced state"
+    },
+    {
+      "id": "C06",
+      "family": "buttons-and-controls",
+      "consumers": [
+        "all routes, especially Config and Admin"
+      ],
+      "html": [
+        "app/config/index.html",
+        "app/admin.html",
+        "app/index.html"
+      ],
+      "css": [
+        "app/ui-theme.css",
+        "app/landing/landing.css",
+        "app/admin/admin.css",
+        "app/styles.css"
+      ],
+      "js": [
+        "app/app.js",
+        "app/admin/admin.js"
+      ],
+      "authority": [
+        "VIS-002",
+        "EST-01",
+        "EST-02",
+        "EST-03",
+        "EST-04"
+      ],
+      "status": "similar names/classes across contexts; no proven same contract for all",
+      "target": "inventory semantic roles, variants and states first; share only equivalent primitives",
+      "risk": "high",
+      "gate": "all states, disabled/read-only, contrast, pointer/keyboard"
+    },
+    {
+      "id": "C07",
+      "family": "feedback-and-operation-states",
+      "consumers": [
+        "/admin.html",
+        "/access/",
+        "/access/manage.html",
+        "/config/",
+        "/viewer/"
+      ],
+      "html": [
+        "app/admin.html",
+        "app/access/index.html",
+        "app/access/manage.html"
+      ],
+      "css": [
+        "app/ui-theme.css",
+        "app/admin/admin.css",
+        "app/styles.css"
+      ],
+      "js": [
+        "app/admin/admin.js",
+        "app/access/access.js",
+        "app/access/manage.js",
+        "app/viewer/viewer.js"
+      ],
+      "authority": [
+        "EST-04",
+        "EST-05",
+        "EST-06",
+        "EST-07",
+        "EST-08",
+        "EST-09",
+        "EST-10"
+      ],
+      "status": "UI messages and statuses dispersed; operation semantics must remain domain-owned",
+      "target": "presentational feedback variants; no generic retry/save authority",
+      "risk": "high",
+      "gate": "errors, unknown state, retry safety, draft/commit integrity, aria-live"
+    },
+    {
+      "id": "C08",
+      "family": "landing-environment-carousel",
+      "consumers": [
+        "/"
+      ],
+      "html": [
+        "app/index.html"
+      ],
+      "css": [
+        "app/landing/landing.css"
+      ],
+      "js": [
+        "app/landing/landing.js",
+        "app/landing/data.js"
+      ],
+      "authority": [
+        "NAV-005",
+        "VIS-002"
+      ],
+      "status": "page-specific behavior; #224 sync bug, #215 click bug",
+      "target": "keep specialized component, reusing tokens and shared controls; fix behavior separately",
+      "risk": "medium",
+      "gate": "scroll/selected environment correlation, mobile/desktop, reduced motion"
+    },
+    {
+      "id": "C09",
+      "family": "landing-editorial-benefits",
+      "consumers": [
+        "/"
+      ],
+      "html": [
+        "app/index.html"
+      ],
+      "css": [
+        "app/landing/landing.css"
+      ],
+      "js": [
+        "app/landing/data.js",
+        "app/landing/landing.js"
+      ],
+      "authority": [
+        "ARC-05",
+        "ARC-07",
+        "ARC-09"
+      ],
+      "status": "existing local structured content + renderer; PageCompositionExperimental is unmerged",
+      "target": "local data-driven display plus shared UI primitives; universal registry not mandatory",
+      "risk": "low",
+      "gate": "same content and visual baseline, no extra framework"
+    },
+    {
+      "id": "C10",
+      "family": "viewer-scene-and-technical-views",
+      "consumers": [
+        "/viewer/",
+        "/config/"
+      ],
+      "html": [
+        "app/viewer/index.html",
+        "app/config/index.html"
+      ],
+      "css": [
+        "app/viewer/viewer.css",
+        "app/styles.css"
+      ],
+      "js": [
+        "app/core/scene-component.js",
+        "app/viewer/scene-adapters.js",
+        "app/viewer/technical-views.js",
+        "app/app.js"
+      ],
+      "authority": [
+        "ConfiguratorPresentation2D 1.1",
+        "Scene2D",
+        "PublicModulePresentation2D"
+      ],
+      "status": "specialized domain renderers with shared core; visual reuse not established globally",
+      "target": "keep domain projections/renderers; share tokens and truly equivalent UI components",
+      "risk": "critical",
+      "gate": "scene layering, geometry, selection, prices, public projection allowlist"
+    },
+    {
+      "id": "C11",
+      "family": "configurator-stage-and-selection",
+      "consumers": [
+        "/config/"
+      ],
+      "html": [
+        "app/config/index.html"
+      ],
+      "css": [
+        "app/styles.css"
+      ],
+      "js": [
+        "app/app.js",
+        "app/core/presentation-contract.js",
+        "app/core/flow-layout.js"
+      ],
+      "authority": [
+        "ConfiguratorAdministration2D 5.0",
+        "ConfiguratorPresentation2D 1.1"
+      ],
+      "status": "schema-driven implementation complete; must avoid double semantic authority",
+      "target": "preserve domain compositors; map UI primitives and presentation profiles for token adoption",
+      "risk": "critical",
+      "gate": "CP-SD-00..06 no regressions, v5 buyer flow"
+    },
+    {
+      "id": "C12",
+      "family": "admin-v5-authoring",
+      "consumers": [
+        "/admin.html"
+      ],
+      "html": [
+        "app/admin.html"
+      ],
+      "css": [
+        "app/admin/admin.css",
+        "app/ui-theme.css"
+      ],
+      "js": [
+        "app/admin/admin.js",
+        "app/core/administration-v5.js"
+      ],
+      "authority": [
+        "ConfiguratorAdministration2D 5.0",
+        "EST-05",
+        "EST-08",
+        "EST-09"
+      ],
+      "status": "large dynamic forms, feedback, pricing and save contracts; existing identity bundling",
+      "target": "incremental visual primitives only, no alteration of auth/data persistence",
+      "risk": "critical",
+      "gate": "draft fidelity, save/GET, conflict handling, authenticated flows"
+    },
+    {
+      "id": "C13",
+      "family": "public-text-and-localization",
+      "consumers": [
+        "all 8 routes"
+      ],
+      "html": [
+        "all 8 route HTML files"
+      ],
+      "css": [],
+      "js": [
+        "app/landing/data.js",
+        "app/landing/landing.js",
+        "app/core/ui-theme.js",
+        "app/core/private-navigation.js",
+        "app/app.js",
+        "app/admin/admin.js"
+      ],
+      "authority": [
+        "ARC-09",
+        "ARC-13"
+      ],
+      "status": "826 heuristic candidates recorded across 26 source files; not human-classified",
+      "target": "comprehensive coverage table, pt-BR catalog in product, incremental extraction, no CMS",
+      "risk": "medium",
+      "gate": "all localizable text in scope or justified exclusion; exact rendering and interpolation; V5 data ownership"
+    },
+    {
+      "id": "C14",
+      "family": "build-and-delivery",
+      "consumers": [
+        "all 8 routes"
+      ],
+      "html": [
+        "app/*.html and app/*/index.html"
+      ],
+      "css": [
+        "app/ui-theme.css",
+        "app/public-theme.css"
+      ],
+      "js": [
+        "package.json",
+        "netlify.toml",
+        "app/scripts/build-static.sh"
+      ],
+      "authority": [
+        "ARC-02",
+        "ARC-03",
+        "ARC-14"
+      ],
+      "status": "Netlify publishes app and root npm build bundles JS; app/scripts/build-static.sh creates app/dist separately",
+      "target": "specify deterministic token and HTML fragment generation within actual Netlify pipeline, no duplicate output authority",
+      "risk": "high",
+      "gate": "build equivalence, no overwrite of canonical hand-authored files, cache/version and rollback"
+    }
+  ]
+}
