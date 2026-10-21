@@ -1,6 +1,6 @@
 # Registro de achados e decisões
 
-**Atualizado:** 2026-10-20
+**Atualizado:** 2026-10-21
 **Deploy de produção mais recente considerado:** [site publicado](https://casaemmodulos.casa/) no deploy `6ad6c3b51b6be05647167f94`, commit `1878ae1057ce7c6190e0c8cb08a1f3baadd49463`. Cada achado mantém o snapshot e a data próprios; este cabeçalho não redata evidências históricas.
 **Decisões canônicas:** [decisions.json](decisions.json). **Auditoria runtime:** [RUNTIME_AUDIT.md](RUNTIME_AUDIT.md).  
 Este registro separa defeitos reproduzidos, relatos intermitentes, triagem de snapshot antigo, decisões homologadas e direções acordadas. Nenhum item aqui implementa uma correção no produto.
