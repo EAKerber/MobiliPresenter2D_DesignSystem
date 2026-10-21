@@ -1,3 +1,9 @@
+# Atualização — PR #230 integrada sem regressão do controle de preços (21/10/2026)
+
+O produto agora está em [`main@840a0cda361b3ce215fc934badc26df72dffc6e8`](https://github.com/EAKerber/MobiliPresenter2D/commit/840a0cda361b3ce215fc934badc26df72dffc6e8), com a [PR #230 mesclada](https://github.com/EAKerber/MobiliPresenter2D/pull/230) e o controle de preço base (#228) **preservado**. O deploy de produção Netlify `6ad90766ea3c4933358fdb03` está `ready` para esse SHA. Gate de preços [#39653868962](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39653868962) PASS; gate UX [#39654374644](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39654374644) PASS. O controle segue OFF para documentos sem autorização publicada. Não foram ativados preços nem executados testes administrativos ON/OFF reais; validação manual e iPad continuam pendentes.
+
+---
+
 # Status efetivo — main do produto, 21/10/2026
 
 **IMPLEMENTADO E PUBLICADO COM AUTORIZAÇÃO PADRÃO OFF:** [MobiliPresenter2D `main@026f04aa`](https://github.com/EAKerber/MobiliPresenter2D/commit/026f04aa88beae41d1242288421b658670d048d4). [Netlify produção `6ad903c1`](https://app.netlify.com/projects/mobilipresenter2d/deploys/6ad903c1720d8e369a3954d9) `ready` para esse SHA. Não confundir implementação de opção com **ativação/publicação efetiva de preços**: é necessário uma gravação Admin V5 voluntária e confirmada.
