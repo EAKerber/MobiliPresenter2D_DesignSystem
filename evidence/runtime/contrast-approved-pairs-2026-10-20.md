@@ -23,7 +23,7 @@ Os quatro contextos VIS-002 correspondem aos pares de texto homologados; o escop
 
 A composição da legenda em `/how-it-works/`, tema escuro, foi revista novamente em uma captura da página publicada no dia **2026-10-21**. Essa captura foi uma checagem visual separada: seu viewport CSS não foi verificado e o arquivo não foi persistido naquela revisão. Uma nova captura contextual, feita em 2026-10-21 com viewport CSS 1280 × 720 verificado, foi salva em [visualEvidence](../../visualEvidence/public/how-it-works/vis003-caption-dark-2026-10-21.svg). Ela não é a origem dos valores numéricos acima, que correspondem à leitura DOM de 2026-10-20; uma checagem DOM independente da legenda escura em 2026-10-21 também retornou 13,85:1, registrada separadamente em [runtime-evidence.json](../../runtime-evidence.json).
 
-A pasta `visualEvidence/public/how-it-works/` não recebe uma nova imagem nesta revisão; nenhum link de screenshot é publicado sem o arquivo correspondente.
+A nova captura persistida é somente evidência contextual do caso FIND-004; ela não fundamenta os valores numéricos de contraste.
 
 ## Limites e backlog
 
