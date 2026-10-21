@@ -134,7 +134,7 @@ Somente com este checklist completo para **uma família específica** marcar “
 - **Movimento reduzido**: para o caso de máquina com configuração de sistema `prefers-reduced-motion: reduce` true, não tratar a supressão de splash/hint como defeito sem reproduzir a preferência.
 - **Retenção de artefatos**: CI pode guardar JSON/screenshots só sete dias; persistir suma técnica com SHA e resultados na DS para evitar perda de contexto.
 - **CI preexistente**: branch main de produto registrou runs com falhas em workflows não relacionados; comparar por test/run/commit, não pelo número bruto de checks verdes.
-- **Conflito de branch DS**: branch PR #39 divergiu de DS main por um commit; rebase/merge deve ser conduzido somente após revisar delta e assegurar não sobrescrever inventário recente. Não tentar sincronização destrutiva.
+- **Conflito de branch DS**: PR #39 divergiu de DS main por um commit e GitHub reportou `mergeable_state=dirty` em 20/10. O commit exclusivo da main atualizou README, inventário e mapas. O README da branch foi alinhado semanticamente ao conteúdo da main, mas a PR **não está comprovadamente mergeable**; revisar a integração antes de abrir gate de merge, sem sobrescrever inventário nem usar force-push.
 - **Economia e custo**: P4-NAV reduziu código-fonte medido, mas adicionou script externo a Landing e How; medir requests e parse/cache em browser antes de afirmar ganho de performance.
 
 ## 8. Gate de encerramento da etapa atual
