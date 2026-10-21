@@ -67,7 +67,7 @@ Caso uma falhe, a regra pode ser **variante com escopo**, **homônimo não compa
 | **R15 / alta** | Promoção de `PageComposition` universal cria overengineering e confusão de schema | P3 custo estático +10.352 caracteres nos quatro JS | manter local, exigir consumidor entre páginas semanticamente real e benefício medido |
 | **R16 / média** | Documentos de vários snapshots divergem e confundem gates | mapas 19/10 vs `main` 20/10; P0-R historical pending | índice canônico, SHAs, superseded/partial, revisão incremental sem apagar histórico |
 | **R17 / média** | CI já vermelha na main por questão não relacionada | histórico de workflows de Mobile/Stone/Summary na main | comparar mesmo teste/commit/fixture, classificar preexistência |
-| **R18 / média** | Tentar merge de branch DS defasada sobrescreve inventário | PR #39 divergiu 1 commit da DS main na verificação 20/10 | inspecionar diferenças e rebase controlado antes de merge, nunca forçar |
+| **R18 / alta — bloqueio atual** | Tentar merge de branch DS defasada sobrescreve inventário | PR #39 divergiu 1 commit da DS main e GitHub reportou `mergeable_state=dirty` (conflito) em 20/10; main mudou README, inventário e mapas | reconciliar README e merge-base com revisão explícita, integrar main na branch somente após inspeção; nunca force-push/merge automático |
 | **R19 / alta** | Dados públicos ausentes recebem fallback privado | public projection, segurança allowlist | fail closed e teste endpoint sem dados; não permitir catálogo de fallback |
 | **R20 / média** | Exportar CSS/layout sem teste de zoom/altura causa overflow invisível | FIND-012 + breakpoints estáticos | 320/390/486/768/1366 + alturas curtas, zoom, orientação e labels longos |
 
