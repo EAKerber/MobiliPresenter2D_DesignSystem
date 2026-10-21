@@ -286,7 +286,7 @@
       "notYetSpecified": [
         "Global token mapping and light/dark variants beyond the two approved contextual pairs",
         "Additional final contrast pairs in other components, surfaces and themes",
-        "Global and other contextual visual variants and measurements for focus, selection, hover, pressed, disabled and loading remain unspecified",
+        "Component mapping and runtime keyboard-focus validation for the approved outline; other contextual visual variants and measurements for selection, hover, pressed, disabled and loading remain unspecified",
         "Copper variations by theme/surface outside approved base #A64D13",
         "Mapping of other semantic state colors to actual screens and tokens",
         "Mapeamento dos valores aprovados da paleta para componentes/rotas e validação no DOM; variantes e pares técnicos de estados semânticos."
@@ -552,13 +552,27 @@
       "context": "Viewer, configurador e admin; temas light/dark",
       "decision": "Foco de teclado com contorno externo independente, perceptível e sem decoração excessiva. Focus-visible quando apropriado; preservar a aparência de seleção quando os estados coexistem sem criar terceira variante ornamentada.",
       "notYetSpecified": [
-        "Cor por tema/superfície",
-        "Espessura e afastamento",
-        "Limites de clipping",
-        "Contraste em componentes reais",
-        "Componentes especiais"
+        "Mapping to actual components, surfaces and themes",
+        "Clipping/occlusion boundaries and keyboard-focus visibility in real components",
+        "Contrast where rendered backgrounds differ from the approved opaque palette surfaces",
+        "Special component treatments"
       ],
-      "implementationAuthorized": false
+      "implementationAuthorized": false,
+      "approvedPaletteReference": {
+        "status": "approved-visual-reference; component runtime validation pending",
+        "colors": {
+          "light": "#8B6A40",
+          "dark": "#D8BC7C"
+        },
+        "outlineWidthCssPx": 4,
+        "offsetCssPx": 3,
+        "contrastOnApprovedSurface": {
+          "light": "4.25:1 on #F0EDE8",
+          "dark": "8.93:1 on #211F1C"
+        },
+        "source": "VIS-002.approvedPalette.focusTreatment",
+        "limits": "Reference applies to listed opaque palette surfaces only. Per-component background composition, clipping, keyboard visibility and implementation are not yet verified; product implementation remains unauthorized."
+      }
     },
     {
       "id": "EST-03",
