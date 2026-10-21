@@ -1,5 +1,8 @@
 # MobiliPresenter2D Design System
 
+> **V0-A realizado (21/10/2026):** [auditoria pós-PR #230, ownership, textos e build](docs/V0A_POST230_OWNERSHIP_LOCALIZATION_AND_BUILD_AUDIT_2026-10-21.md). Foram mapeados 14 contratos/famílias e indexadas 826 ocorrências *candidatas* de localização em 26 fontes; **não** são strings aprovadas nem cobertura integral. V0-B e gates runtime permanecem pendentes. Sem código de produto alterado.
+
+
 > **Direção arquitetural atual (21/10):** stack de interface exclusivamente **HTML/CSS/JS puros**; tokens e componentes nativos como base de TODAS as páginas (inclusive Landing); configuração por dados para Configurador/Viewer e ferramentas derivadas do seu núcleo. Consultar [arquitetura confirmada, gates e decisões técnicas pendentes](docs/ARCHITECTURE_VANILLA_COMPONENTS_AND_DOMAIN_DATA_2026-10-21.md). O plano experimental da PR #39 não equivale a framework adotado. Produto em `main@840a0cd`, PR #230 mesclada; conferir head ao retomar.
 
 
