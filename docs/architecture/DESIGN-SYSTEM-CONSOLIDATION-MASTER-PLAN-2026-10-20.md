@@ -25,7 +25,7 @@ Um sistema de interfaces com identidade coerente e editabilidade proporcional ao
 | Camada | Autoridade e regra | Proibições na presente fase |
 |---|---|---|
 | Design decisions | `decisions.json`, com escopo, status, aprovação e exemplo; decisões estéticas não surgem de um CSS encontrado | promover paleta incidental a token; preencher lacuna de decisão sem usuário |
-| Estilo base/tema | ``public-theme.css`, ``ui-theme.css`, tokens aprovados por contexto | globais sem escopo; reordenação não medida; tema herdado como permissão |
+| Estilo base/tema | `public-theme.css`, `ui-theme.css`, tokens aprovados por contexto | globais sem escopo; reordenação não medida; tema herdado como permissão |
 | Shell público | HTML semântico de cada página, menu compartilhado por controlador | recriar cabeçalhos com JS/JSON; apagar `aria-current` ou contextualização |
 | Landing | `landing/data.js` e componentes locais, estado de carrossel/arte/benefícios | CMS, API admin, motor universal só para remover `createElement` |
 | Viewer | projeção pública allowlisted, blocos e cena/technical views especializadas | fallback para catálogo privado; schema administrativo na página pública |
@@ -128,7 +128,7 @@ Só propor release após revisão no Design System/PR de produto independente, c
 - **Evidência compartilhável:** comando, SHA, browser/motor e versão, viewport CSS, DPR, zoom, tema, reduced-motion, estado, horário, seletor/rota, fixture, baseline/candidato, resultado e limitações.
 - **Falhas**: marcar preexistente, introduzida, flaky/indeterminada, ambiente/provider, ou dado indisponível; nunca “PASS” por causa de ferramenta que não executou.
 - **Política de CSS:** evitar globalização, `!important` compensatório, reordenação de import ou novos estilos de fallback sem classificação de cascade.
-- **Homologação:** ADR técnico não substitui escolha visual do usuário nem altera ``decisions.json` sozinho.
+- **Homologação:** ADR técnico não substitui escolha visual do usuário nem altera `decisions.json` sozinho.
 
 ## 6. Matriz de testes base e expansão por evidências
 
@@ -157,9 +157,9 @@ Revisar criteriosamente ao fim de cada gate; desistir da extração é resultado
 
 Ler, nesta ordem:
 1. Este plano diretor e [estado atual](CSS-READINESS-AND-CURRENT-GATE-2026-10-20.md).
-2. [Matriz CSS/riscos](CSS-OWNERSHIP-RISKS-2026-10-20.md), ``decisions.json`, `FINDINGS_REGISTER.md` e `PALETTE_CONFORMANCE.md`.
+2. [Matriz CSS/riscos](CSS-OWNERSHIP-RISKS-2026-10-20.md), `decisions.json`, `FINDINGS_REGISTER.md` e `PALETTE_CONFORMANCE.md`.
 3. [UI-ADR-001](ui-adr-001-declarative-boundaries-2026-10-20.md) a [UI-ADR-005](ui-adr-005-public-header-controller-2026-10-20.md); conferir qual técnica foi experimentada e qual **não** foi promovida.
-4. Revalidar `main`/PRs atuais antes de editar. Produkt `main@1878ae1` e DS main `0b3e223` são apenas o estado observado em 20/10. A branch DS estava **1 commit atrás** de DS main e à frente com docs experimentais; GitHub indicava PR #39 mergeable. Não presumir ausência de conflitos futuros.
+4. Revalidar `main`/PRs atuais antes de editar. Produto `main@1878ae1` e DS main `0b3e223` são apenas o estado observado em 20/10. A branch DS estava **1 commit atrás** de DS main e à frente com docs experimentais; GitHub indicava PR #39 mergeable. Não presumir ausência de conflitos futuros.
 5. Escolher um **único incremento/gate**, registrar plan→evidence→result→decision→rollback; anexar prints/relatórios relevantes e persistir sumário no repositório para sobreviver à retenção temporária de artifacts.
 6. Não juntar automaticamente as branches do piloto de benefícios e da navegação; manter histórias e decisões separadas.
 
