@@ -1,3 +1,16 @@
+# Status efetivo — main do produto, 21/10/2026
+
+**IMPLEMENTADO E PUBLICADO COM AUTORIZAÇÃO PADRÃO OFF:** [MobiliPresenter2D `main@026f04aa`](https://github.com/EAKerber/MobiliPresenter2D/commit/026f04aa88beae41d1242288421b658670d048d4). [Netlify produção `6ad903c1`](https://app.netlify.com/projects/mobilipresenter2d/deploys/6ad903c1720d8e369a3954d9) `ready` para esse SHA. Não confundir implementação de opção com **ativação/publicação efetiva de preços**: é necessário uma gravação Admin V5 voluntária e confirmada.
+
+- A versão integrada foi portada **da feature para a main diretamente**, sem incorporar NAV-005 ou outras alterações da PR #230 (continua DRAFT/HOLD).
+- Em produção, Admin → Preços oferece o checkbox global para valores base; por contrato ausente/legado=OFF. Viewer com DTO 0.2 negociado mostra apenas `basePriceCents` válido/positivo quando ON for publicado. Leitores antigos 0.1 seguem sem preços.
+- [Gate isolado #39652058042](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39652058042) PASS e [gate main #39652406203](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39652406203) PASS; build e variant fidelity na main PASS após `test-core.js` ajustar asserções das versões de cache. Gate real de publicar ON/OFF + inspeção anônima continua PENDING; nada foi ativado pelo agente.
+- Registro de arquitetura específico da main: [viewer-base-price-publication-main-2026-10-21.md](https://github.com/EAKerber/MobiliPresenter2D/blob/main/docs/architecture/viewer-base-price-publication-main-2026-10-21.md).
+
+O trecho seguinte é o checkpoint **histórico anterior à integração**, preservado para recuperar a pesquisa e a separação da PR #230.
+
+---
+
 # Checkpoint de implementação — publicação opcional de preço base no Viewer
 
 **Data:** 2026-10-21. **Tipo:** registro técnico, não homologação visual e não autorização de release.
