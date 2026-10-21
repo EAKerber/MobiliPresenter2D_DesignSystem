@@ -1,5 +1,8 @@
 # Proposta v0 — arquitetura CSS por contratos de componentes (2026-10-20)
 
+> **Leitura atual (20/10/2026):** esta é uma proposta conceitual **ainda não implementada** para reestruturação de CSS. A prontidão real, fases e blockers estão no [plano diretor](DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md), no [gate da etapa atual](CSS-READINESS-AND-CURRENT-GATE-2026-10-20.md) e no [registro de riscos](CSS-OWNERSHIP-RISKS-2026-10-20.md). Pilotos de JS concluídos desde sua redação **não** são autorização para aplicar a estrutura proposta aos oito CSS em massa.
+
+
 > **Estado:** arquitetura candidata para revisão; não homologada, não implementada e sem alteração do repositório de produto.  
 > **Base de evidência:** [baseline DOM × CSS](dom-css-consolidation-baseline-2026-10-20.md), `visual-inventory.json`, `DECISION_APPLICATION_MAP.md`, `PALETTE_APPLICATION_MAP.md` e `decisions.json`.  
 > **Objetivo:** reduzir duplicação e acoplamento entre páginas mantendo a identidade visual já aprovada. O design de CSS não deve antecipar decisões pendentes de componente.
