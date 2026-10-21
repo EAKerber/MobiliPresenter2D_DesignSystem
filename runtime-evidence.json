@@ -745,6 +745,106 @@
           }
         ],
         "result": "The light-theme initial-state label is below the 4.5:1 screening threshold; the two other observed examples remain above it."
+      },
+      {
+        "observationId": "VISUAL-POSTDEPLOY-APPROVED-CONTRAST-PAIRS-2026-10-20",
+        "observedAt": "2026-10-20",
+        "site": "https://casaemmodulos.casa/",
+        "productCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+        "netlifyDeployId": "6ad6c3b51b6be05647167f94",
+        "deployStatus": "ready",
+        "viewportCssPx": "1280x720",
+        "method": "Read-only browser computed foreground and opaque effective background; WCAG relative-luminance contrast calculation. Values recorded to two decimals; screening evidence, not independent certification.",
+        "findings": [
+          {
+            "route": "/",
+            "selector": ".hero-description",
+            "theme": "light",
+            "foreground": "#705C4B",
+            "background": "#F0EDE8",
+            "ratio": "5.41:1",
+            "decision": "VIS-002",
+            "status": "approved-pair-post-deploy-DOM-verified"
+          },
+          {
+            "route": "/how-it-works/",
+            "selector": ".how-hero-note",
+            "theme": "light",
+            "foreground": "#705C4B",
+            "background": "#F0EDE8",
+            "ratio": "5.41:1",
+            "decision": "VIS-002",
+            "status": "approved-pair-post-deploy-DOM-verified"
+          },
+          {
+            "route": "/about/",
+            "selector": ".about-scale p:not(.eyebrow)",
+            "theme": "light",
+            "foreground": "#705C4B",
+            "background": "#F0EDE8",
+            "ratio": "5.41:1",
+            "decision": "VIS-002",
+            "status": "approved-pair-post-deploy-DOM-verified"
+          },
+          {
+            "route": "/how-it-works/",
+            "selector": ".study-band .eyebrow",
+            "theme": "light",
+            "foreground": "#70522F",
+            "background": "#E8E3DC",
+            "ratio": "5.60:1",
+            "decision": "VIS-002",
+            "status": "approved-pair-post-deploy-DOM-verified"
+          },
+          {
+            "route": "/how-it-works/",
+            "selector": ".study-art figcaption",
+            "theme": "dark",
+            "foreground": "#F0EDE8",
+            "background": "#20211F",
+            "ratio": "13.85:1",
+            "decision": "VIS-003",
+            "status": "approved-pair-post-deploy-DOM-verified"
+          }
+        ],
+        "screenshot": {
+          "route": "/how-it-works/",
+          "theme": "dark",
+          "capturedOn": "2026-10-21",
+          "browserBitmapPx": "1265x712",
+          "cropBitmapPx": "625x250",
+          "cropOriginBitmapPx": "600,430",
+          "browserCssViewport": "not verified for this capture",
+          "purpose": "Separately reviewed production-page figure and caption; not evidence for the numeric contrast measurements."
+        },
+        "evidenceFile": "evidence/runtime/contrast-approved-pairs-2026-10-20.md",
+        "screenshotPersisted": false,
+        "productCodeChanged": false,
+        "limitations": [
+          "Only the listed selectors, routes, themes, and opaque pairs were measured.",
+          "The audit does not establish global token conformance or validate unmeasured themes, surfaces, states, keyboard focus, or responsive behavior.",
+          "Related product issues remain open; this evidence does not close them."
+        ]
+      },
+      {
+        "observationId": "VISUAL-CURRENT-DARK-CAPTION-2026-10-21",
+        "observedAt": "2026-10-21",
+        "route": "/how-it-works/",
+        "theme": "dark",
+        "viewportCssPx": "1280x720",
+        "method": "Read-only computed DOM foreground and opaque effective background, with WCAG relative-luminance ratio.",
+        "productCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+        "netlifyDeployId": "6ad6c3b51b6be05647167f94",
+        "deployStatus": "ready",
+        "selector": ".study-art figcaption",
+        "foreground": "#F0EDE8",
+        "background": "#20211F",
+        "contrast": "13.85:1",
+        "decision": "VIS-003",
+        "status": "approved-pair-current-production-DOM-rechecked",
+        "productCodeChanged": false,
+        "screenshotPersisted": false,
+        "note": "A separate screenshot was reviewed on 2026-10-21, but its CSS viewport was not verified and it was not persisted in the repository. It is visual context only, not support for this numeric ratio."
       }
     ]
   },

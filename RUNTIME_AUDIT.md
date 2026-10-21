@@ -262,3 +262,14 @@ O texto literal “Não foi possível carregar os dados administrativos.” é d
 ## Acompanhamento de publicação do FIND-007 (2026-10-20)
 
 A correção de sincronização de sessão foi integrada ao produto pela [PR #223](https://github.com/EAKerber/MobiliPresenter2D/pull/223), commit [`1878ae1`](https://github.com/EAKerber/MobiliPresenter2D/commit/1878ae1057ce7c6190e0c8cb08a1f3baadd49463). O deploy de produção [`6ad6c3b51b6be05647167f94`](https://app.netlify.com/projects/mobilipresenter2d/deploys/6ad6c3b51b6be05647167f94) está `ready` e publicou esse SHA. A verificação do menu após login não foi feita: o contexto de navegador disponível estava anônimo. FIND-007/#213 fica como correção publicada, validação autenticada pendente; sem essa validação não é marcado como resolvido.
+
+
+## Adendo — pares de contraste aprovados após o deploy (2026-10-20)
+
+**Produto:** `EAKerber/MobiliPresenter2D@1878ae1057ce7c6190e0c8cb08a1f3baadd49463`  
+**Deploy de produção:** `6ad6c3b51b6be05647167f94`, `ready`.  
+**Viewport CSS:** 1280x720; consulta DOM somente de leitura.
+
+Foram verificados no DOM publicado os pares contextuais aprovados para três textos auxiliares claros e um rótulo eyebrow claro, além da legenda escura de FIND-004. Os valores, seletores, método, limites e captura da legenda estão em [evidência de contraste pós-deploy](evidence/runtime/contrast-approved-pairs-2026-10-20.md). Uma captura separada da página publicada foi revisada em 2026-10-21, mas seu arquivo não foi persistido nesta PR.
+
+O adendo confirma somente as combinações calculadas e os estados listados na evidência; não declara conformidade global, não valida outros temas/estados/componentes e não fecha os issues #216/#217. Os registros de 2026-10-18 e 2026-10-19 permanecem históricos e inalterados. Nenhum código, preferência, dado de conta ou estado do produto foi alterado durante esta verificação.

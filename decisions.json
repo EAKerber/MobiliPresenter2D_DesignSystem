@@ -320,11 +320,11 @@
             "foreground": "#705C4B",
             "background": "#F0EDE8",
             "contrast": "5.41:1",
-            "status": "approved-palette-pair; product-CSS-applied; post-deploy-DOM-validation-pending"
+            "status": "approved-palette-pair; product-CSS-applied; post-deploy-DOM-verified-in-listed-light-contexts"
           }
         },
         {
-          "status": "approved-contextual-pair; product-CSS-applied; post-deploy-DOM-validation-pending",
+          "status": "approved-contextual-pair; product-CSS-applied; post-deploy-DOM-verified-in-listed-light-context",
           "context": "Light-theme small warm eyebrow label on the audited warm surface",
           "foreground": "#70522F",
           "background": "#E8E3DC",
@@ -402,9 +402,9 @@
         "productImplementation": "The product already used this treatment in the runtime observation; no product code change was requested or made."
       },
       "contextualProductImplementation": {
-        "status": "selected homologated text pairs applied in published product CSS; computed styles and rendered contrast after deployment remain unverified",
-        "productCommit": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
-        "netlifyDeployId": "6ad5a4e245dad08b373fcbd1",
+        "status": "Four approved contextual pairs (three secondary-text routes and one eyebrow) are present in published product CSS and verified in computed DOM after deployment; remaining component mapping, themes and surfaces remain pending.",
+        "productCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+        "netlifyDeployId": "6ad6c3b51b6be05647167f94",
         "pullRequest": 219,
         "contexts": [
           {
@@ -412,35 +412,87 @@
             "selector": ".hero-description",
             "theme": "light",
             "foreground": "#705C4B",
-            "background": "#F0EDE8"
+            "background": "#F0EDE8",
+            "runtimeStatus": "post-deploy-DOM-verified",
+            "contrast": "5.41:1"
           },
           {
             "route": "/how-it-works/",
             "selector": ".how-hero-note",
             "theme": "light",
             "foreground": "#705C4B",
-            "background": "#F0EDE8"
+            "background": "#F0EDE8",
+            "runtimeStatus": "post-deploy-DOM-verified",
+            "contrast": "5.41:1"
           },
           {
             "route": "/about/",
             "selector": ".about-scale p:not(.eyebrow)",
             "theme": "light",
             "foreground": "#705C4B",
-            "background": "#F0EDE8"
+            "background": "#F0EDE8",
+            "runtimeStatus": "post-deploy-DOM-verified",
+            "contrast": "5.41:1"
           },
           {
             "route": "/how-it-works/",
             "selector": ".study-band .eyebrow",
             "theme": "light",
             "foreground": "#70522F",
-            "background": "#E8E3DC"
+            "background": "#E8E3DC",
+            "runtimeStatus": "post-deploy-DOM-verified",
+            "contrast": "5.60:1"
           }
-        ]
+        ],
+        "postDeployRuntimeVerification": {
+          "observedAt": "2026-10-20",
+          "status": "verified-for-listed-contexts-only",
+          "viewportCssPx": "1280x720",
+          "evidenceFile": "evidence/runtime/contrast-approved-pairs-2026-10-20.md",
+          "rows": [
+            {
+              "route": "/",
+              "selector": ".hero-description",
+              "theme": "light",
+              "foreground": "#705C4B",
+              "background": "#F0EDE8",
+              "ratio": "5.41:1",
+              "decision": "VIS-002"
+            },
+            {
+              "route": "/how-it-works/",
+              "selector": ".how-hero-note",
+              "theme": "light",
+              "foreground": "#705C4B",
+              "background": "#F0EDE8",
+              "ratio": "5.41:1",
+              "decision": "VIS-002"
+            },
+            {
+              "route": "/about/",
+              "selector": ".about-scale p:not(.eyebrow)",
+              "theme": "light",
+              "foreground": "#705C4B",
+              "background": "#F0EDE8",
+              "ratio": "5.41:1",
+              "decision": "VIS-002"
+            },
+            {
+              "route": "/how-it-works/",
+              "selector": ".study-band .eyebrow",
+              "theme": "light",
+              "foreground": "#70522F",
+              "background": "#E8E3DC",
+              "ratio": "5.60:1",
+              "decision": "VIS-002"
+            }
+          ]
+        }
       }
     },
     {
       "id": "VIS-003",
-      "status": "visual-treatment-and-scoped-color-pair-approved; product-CSS-applied; post-deploy-runtime-validation-pending",
+      "status": "visual-treatment-and-scoped-color-pair-approved; product-CSS-applied; approved-dark-caption-pair-post-deploy-runtime-verified",
       "verdict": "agreed",
       "finding": "FIND-004",
       "decision": "No tema escuro, manter a legenda integrada à ilustração sobre uma faixa escura opaca na base. Para FIND-004, o usuário escolheu a alternativa A: faixa #20211F com texto #F0EDE8 (contraste calculado 13,85:1).",
@@ -462,13 +514,22 @@
         "scope": "FIND-004 only; not a global token"
       },
       "implementationEvidence": {
-        "productCommit": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
-        "netlifyDeployId": "6ad5a4e245dad08b373fcbd1",
+        "productCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+        "netlifyDeployId": "6ad6c3b51b6be05647167f94",
         "pullRequest": 219,
         "route": "/how-it-works/",
         "selector": ".study-art figcaption",
         "theme": "dark",
-        "status": "rule present in published CSS; runtime computed style and visual review pending"
+        "status": "Approved foreground and opaque background computed in the published DOM; the visual composition was reviewed in a separate browser capture on 2026-10-21, but that image is not persisted in this PR. Responsive and other-theme scope remains unverified.",
+        "postDeployVerification": {
+          "observedAt": "2026-10-20",
+          "foreground": "#F0EDE8",
+          "background": "#20211F",
+          "contrast": "13.85:1",
+          "viewportCssPx": "1280x720",
+          "evidenceFile": "evidence/runtime/contrast-approved-pairs-2026-10-20.md",
+          "visualReview": "A separate browser capture was reviewed on 2026-10-21; it is not persisted in this PR and is not the 2026-10-20 DOM measurement."
+        }
       }
     },
     {

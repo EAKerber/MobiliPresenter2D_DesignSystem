@@ -2,7 +2,7 @@
 
 **Estado:** registro de valores contextualizados e plano de fechamento da paleta; registra a paleta-base aprovada, mas ainda não declara conformidade global da interface.  
 **Fonte canônica de decisões:** [decisions.json](decisions.json).  
-**Produto mapeado:** snapshot `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`; deploy/runtime observado em 2026-10-18.  
+**Baseline histórica do documento:** snapshot `298c11441f82cacfff2f809fd9e5ad6f1fc33c0a`; veja o adendo de runtime em 2026-10-20 para a publicação atual.  
 **Inventário:** [VISUAL_INVENTORY.md](VISUAL_INVENTORY.md), [visual-inventory.json](visual-inventory.json) e [DECISION_APPLICATION_MAP.md](DECISION_APPLICATION_MAP.md).
 
 ## O que conformidade quer dizer
@@ -27,9 +27,9 @@ Contraste é uma condição necessária, mas não prova sozinho a conformidade: 
 | Foco da paleta aprovada | Contorno `#8B6A40` / `#D8BC7C`, 4 px com offset 3 px | Tratamento visual aprovado (VIS-002) | Validar teclado e contraste em componentes reais. |
 | Informação promocional de produto e campanhas | Base cobre `#A64D13` | Papel e base aprovados (VIS-002) | Não é warning técnico. Variantes light/dark, superfícies, texto e contraste continuam por homologar. |
 | Informação de processo/funcionamento | Claro: `#245D87` sobre `#F0EDE8` (6,01:1); escuro: `#A7D1F0` sobre `#211F1C` (10,19:1) | Pares contextuais de texto aprovados pela opção A (VIS-002); aplicação no produto pendente | Em `/admin.html`, a mensagem de estado atual sobre configuração carregada foi classificada como informação de processo. O DOM escuro ainda a mostra em `#C4BCB2` sobre `#111210`, 10,00:1, então não usa o par aprovado. A aprovação não cria tokens globais nem cobre outras superfícies, fundos, bordas ou ícones; ver evidência runtime. |
-| Texto auxiliar claro em três contextos públicos auditados | `#705C4B` sobre `#F0EDE8` (5,41:1) | Par anterior `#675F55` rejeitado esteticamente; substituto aprovado na paleta; aplicação pendente | `.hero-description`, `.how-hero-note`, `.about-scale p:not(.eyebrow)`. Implementar apenas nesses contextos e validar DOM nos temas usados. Ver FIND-002 e issue produto #216.
-| Rótulo quente claro em Como funciona | `#70522F` sobre `#E8E3DC`, 5,60:1 | Par contextual aprovado (VIS-002) | `.study-band .eyebrow` somente. |
-| Legenda da ilustração no tema escuro | `#F0EDE8` sobre `#20211F`, 13,85:1 | Par contextual aprovado (VIS-003 / FIND-004), seleção A | `.study-art figcaption` em `/how-it-works/`, tema escuro. Não global; aplicação no produto pendente. |
+| Texto auxiliar claro em três contextos públicos auditados | `#705C4B` sobre `#F0EDE8` (5,41:1) | Par aprovado, aplicado e verificado pós-deploy no tema claro nos três seletores listados | `.hero-description`, `.how-hero-note`, `.about-scale p:not(.eyebrow)`. Sem promoção a token global. FIND-002 / issue #216 permanece aberto.
+| Rótulo quente claro em Como funciona | `#70522F` sobre `#E8E3DC`, 5,60:1 | Par contextual aprovado e verificado pós-deploy no tema claro | `.study-band .eyebrow` somente. Sem promoção a token global.
+| Legenda da ilustração no tema escuro | `#F0EDE8` sobre `#20211F`, 13,85:1 | Par contextual aprovado (VIS-003 / FIND-004), seleção A; DOM verificado em 2026-10-20 e rechecado em 2026-10-21; captura visual da segunda data não persistida | `.study-art figcaption` em `/how-it-works/`, tema escuro. Não global; issue #217 permanece aberto.
 | Erro, sucesso e aviso técnico | Pares contextuais de texto/fundo aprovados para cada estado e tema | Seleção do usuário pela maior razão de contraste entre as alternativas; pares aprovados não equivalem a tokens globais nem definem todos os usos | Mapear os componentes reais, preservar distinção semântica e validar superfícies; não reaproveitar cobre promocional como aviso técnico. Ver `decisions.json` e a prancha `VIS-002-semantic-states-selected.svg`. |
 | Foco, seleção, hover, pressionado, desabilitado e carregamento | Sem paleta completa homologada | Direções de comportamento em VIS-002 e EST-01–06; combinações por componente/tema pendentes | Validar indicação não cromática e estados reais. |
 
@@ -39,9 +39,9 @@ Esta lista aponta trabalhos requeridos pela evidência atual. Não é autorizaç
 
 | Área | Estado observado | Mudança para conformidade | Registro |
 |---|---|---|---|
-| `/`, `/how-it-works/`, `/about/` | Texto auxiliar claro medido em 4,47:1 nos seletores indicados | Usar como referência o par de paleta aprovado `#705C4B` sobre `#F0EDE8` (5,41:1); mapear os seletores e validar DOM antes da aplicação | FIND-002, issue produto #216 |
-| `/how-it-works/` eyebrow | 3,89:1 no tema claro | Aplicar `#70522F` sobre `#E8E3DC` somente no seletor auditado | FIND-003, issue produto #216 |
-| `/how-it-works/` legenda da figura | 1,78:1 no estado auditado do tema escuro | Criar faixa opaca `#20211F` com texto `#F0EDE8`; manter a legenda visualmente integrada; conferir imagem e layout em viewports variados | FIND-004, issue produto #217 |
+| `/`, `/how-it-works/`, `/about/` | Pares anteriores mediram 4,47:1; depois da PR #219, os três seletores aprovados mediram 5,41:1 no DOM publicado em 2026-10-20 | Mantido conforme homologado nos três contextos; sem generalização. Issue #216 permanece aberto | FIND-002 |
+| `/how-it-works/` eyebrow | Após a aplicação, `#70522F` sobre `#E8E3DC` mediu 5,60:1 no DOM publicado em 2026-10-20 | Par mantido somente no seletor homologado; issue #216 permanece aberto | FIND-003 |
+| `/how-it-works/` legenda da figura | Após a aplicação, `#F0EDE8` sobre faixa opaca `#20211F` mediu 13,85:1 no DOM publicado em 2026-10-20; revisão visual separada em captura de navegador em 2026-10-21 (arquivo não persistido) | Par visual aprovado foi confirmado no viewport observado; responsividade e demais temas não foram verificados. Issue #217 permanece aberto | FIND-004 |
 | Configurador, etapas Serviços/Resumo | Contador reporta 8/8 com módulos desmarcados; iluminação indisponível entra no total | Corrigir primeiro a semântica/contagem (decisão funcional do produto); depois medir contraste no DOM em ambos temas | FIND-006, issue produto #209. Não é correção só de paleta. |
 | Configurador, Resumo claro | Rótulo Módulos com legibilidade baixa observada, sem razão runtime nova | Medir par real; selecionar/aplicar um par aprovado e verificar hierarquia | FIND-010, issue produto #208 |
 | Administração / editor | Auditoria estática antiga aponta riscos remanescentes em DS04-02–07, 09–10 e 12; inspeção runtime por seletor pendente | Confirmar cada achado em DOM real nos temas/estados; corrigir apenas os confirmados e registrar exceções justificadas | FIND-008, issue produto #208 |
@@ -83,3 +83,9 @@ A paleta global ainda não está fechada porque os papéis de processo têm fam�
 - `decisions.json` — fonte canônica de decisões, aprovações e limites.
 - `visual-inventory.json` — inventário estático com linha de origem e contexto.
 - `FINDINGS_REGISTER.md` — defeitos e pendências observados.
+
+## Adendo runtime — validação pós-deploy de contextos aprovados (2026-10-20)
+
+A publicação de produção `1878ae1057ce7c6190e0c8cb08a1f3baadd49463` / Netlify `6ad6c3b51b6be05647167f94` foi inspecionada em `1280x720` CSS px. O DOM confirmou os três textos auxiliares claros em 5,41:1, o rótulo eyebrow claro em 5,60:1 e a faixa escura da legenda FIND-004 em 13,85:1. Valores, seletores e limitações estão em [evidência detalhada](evidence/runtime/contrast-approved-pairs-2026-10-20.md); uma captura da legenda foi revisada separadamente em 2026-10-21, mas seu arquivo não foi persistido nesta PR.
+
+Esta confirmação substitui apenas o estado “pós-deploy pendente” para os seletores/temas listados. Os issues #216 e #217 continuam abertos até serem atualizados no backlog do produto. Não declara conformidade de toda a paleta, não promove tokens globais e não valida outros papéis, superfícies, interações, foco ou breakpoints. O corpo histórico do documento continua útil para baseline anterior à aplicação.
