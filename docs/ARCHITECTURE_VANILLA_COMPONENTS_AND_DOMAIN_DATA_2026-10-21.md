@@ -1,5 +1,8 @@
 # Direção arquitetural — Vanilla Web, componentes/tokens globais e dados por domínio
 
+> **ADENDO NORMATIVO — 16 decisões concluídas (21/10/2026):** [ARC-01…ARC-16 e roadmap de execução](ARCHITECTURE_DECISIONS_ARC01_ARC16_AND_EXECUTION_2026-10-21.md) passa a ser o contrato arquitetural atualizado. Este arquivo permanece como contexto e análise anterior ao questionário. ARC-13 adota **extração abrangente de textos localizáveis**, com execução em lotes; ARC-16 exige gate de equivalência/benefício **e** inventário/resolução ou exceção explícita das duplicações reais. HTML compartilhado no build e tokens DS→produto via PR versionada são agora decisões, não hipóteses. Relatos de iPad antigo são melhoria futura baixa prioridade; não usar módulo fictício como experimento obrigatório. Preservar tickets gerais de autenticação e gates reais necessários.
+
+
 **Data:** 2026-10-21. **Estado:** decisões de direção expressas pelo usuário; desenho técnico de execução e alternativas recomendadas; **nenhuma implementação, token visual novo, migração de dados, merge de PR #39 ou publicação autorizados por este registro**.
 **Produto verificado:** `EAKerber/MobiliPresenter2D@840a0cda361b3ce215fc934badc26df72dffc6e8` (PR #230 e controle global de preços integrados).
 **Design System:** `EAKerber/MobiliPresenter2D_DesignSystem`, `decisions.json` mantém exclusividade sobre homologações visuais. **Não** incorporar automaticamente documentos experimentais da PR #39, que permanece draft e divergente.
