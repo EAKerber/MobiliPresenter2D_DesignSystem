@@ -113,3 +113,30 @@ Este checkpoint foi reconferido no GitHub depois da interrupção do chat, sem a
 - **Produto #228:** preço base ainda **não implementado**, controle global OFF aprovado e esperado em **Admin → Preços**; publicação V5/projeção allowlisted, revogação e valor zero permanecem gate separado.
 
 **Estado do handover:** recuperação documental concluída em **ambos os repositórios, sem novo preview e sem commits de produto**. Novos agentes devem começar pela issue #229 e pelo presente documento, confirmar se os SHAs ainda são atuais e resolver gates de preview/autenticação/CI antes de pedir merge.
+
+## 8. Retomada verificada — preview e CI (21/10/2026, após checkpoint)
+
+**Fontes observadas diretamente:** GitHub PR #230, Netlify deploy ID `6ad8df92e3607a308457c73f`, Actions #39627779877 e logs dos workflows da PR comparados com execuções de `main`. Esta seção atualiza os fatos da seção 7; não altera homologações nem autoriza merge.
+
+### Deploy Preview agora identificado (readback independente)
+
+- URL oficial: [deploy-preview-230--mobilipresenter2d.netlify.app](https://deploy-preview-230--mobilipresenter2d.netlify.app).
+- Deploy Netlify: [`6ad8df92e3607a308457c73f`](https://app.netlify.com/projects/mobilipresenter2d/deploys/6ad8df92e3607a308457c73f), `context=deploy-preview`, `review_id=230`, `state=ready`, `commit_ref=24bbeadba8ec231c8c9f603c4da5116ab8a5ce3e`. **Não é deploy de produção.**
+- O head da PR segue `24bbeadb` e `main` do produto segue `1878ae1`; logo, não há justificativa para novo deploy apenas para propagar a correção NAV-005.
+- **Distinção do gate:** deploy pronto e SHA conferido **não** equivalem a inspeção visual do Viewer atualizado, teste WebKit real, login real ou autorização de publicação. Inspeção visual externa em navegador permanece **PENDING**.
+
+### Classificação por comparação com baseline
+
+| Check da PR #230 | Evidência em PR | Evidência prévia na main | Classificação |
+|---|---|---|---|
+| Mobile browser | [#39627788582](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39627788582) `getLayoutProfile` ausente | [#39353608197](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39353608197) mesmo TypeError | **BASELINE FAIL**; não atribuir ao diff da #230 |
+| Stone browser | [#39627788371](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39627788371) timeout `waitForFunction` | [#39353608149](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39353608149) timeout idêntico | **BASELINE FAIL** |
+| Summary pricing | [#39627788381](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39627788381) timeout `waitForFunction` | [#39353608435](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39353608435) timeout idêntico | **BASELINE FAIL** |
+| Admin hierarchy | [#39627788356](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39627788356) selector `cabinet-finishes` timeout e job cancelado | [#39353608218](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39353608218) mesmo selector timeout, cancelamento | **BASELINE FAIL / CANCELLED** |
+| Public routing static | [#39627788439](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39627788439), 3/7 tests fail: `publicState.entities` indefinido e allowlist divergente | [#39200818054](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39200818054) mesmos testes e erros | **BASELINE FAIL**, fileset de teste/projeção igual na main e na branch |
+| Public routing browser | no preview a rotina exige `class="workspace"` em `/config/`, após esperar 5 min | baseline do mesmo workflow não fornece prova de sessão privada real | **TEST CONTRACT BLOCKED**: pré-condição incompatível com rota autenticada; não converter em PASS artificialmente |
+| `current-build`, `current-asset-gates`, `variants` e suíte integrada | PASS; suíte isolada [#39627779877](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39627779877) | checks protegidos/isolados | **PASS no recorte testado** |
+
+**Leitura correta:** os checks vermelhos conhecidos são preexistentes e merecem dívida de manutenção própria, mas isso não homologa login real nem prova ausência total de regressão. Falhas dos browser checks de domínio envolvem pré-condições antigas de acesso a `/config/`, hoje privado; corrigir a **estratégia de teste** com sessão autorizada/fixtures locais explícitas, sem abrir a rota nem omitir a autenticação.
+
+**HOLD final da PR #230:** 1) inspeção visual real do preview SHA `24bbeadb` para NAV-005, telas estreitas e foco; 2) WebKit 390 claro/escuro em `how-it-works` (diferenças de pixels sem diferença funcional conhecida); 3) fluxo controlado de primeiro login/reauth/menu/logout, incluindo iPad quando possível; 4) `https://wa.me/` sem destinatário no Viewer: validar contato oficial antes de substituir; 5) aprovação explícita para merge. Não criar preview adicional, não alterar preços, não permitir GET privado.
