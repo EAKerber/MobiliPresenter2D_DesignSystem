@@ -1,0 +1,413 @@
+{
+  "schema": "M2DV0BSourceCoverage/0.1",
+  "productCommit": "840a0cda361b3ce215fc934badc26df72dffc6e8",
+  "observations": {
+    "htmlPages": 8,
+    "runtimeFirstPartyJS": 54,
+    "v0AIndexedJS": 18,
+    "v0BAdditionalSourcesRead": 34,
+    "unreadLargeDomainSources": 2,
+    "originalCandidateOccurrences": 826
+  },
+  "confidence": "Source path accounting; NOT comprehensive localizable string inventory nor full parser. V0-B additional JS read and selectively examined, but NOT exhaustively extracted. Server Netlify function strings, dynamic DOM and HTML inline scripts require review.",
+  "sourceClasses": {
+    "ui_display_strings": [
+      "app/core/ui-theme.js FULL/SHORT + concatenated ARIA labels (missed by V0-A)",
+      "app/landing/landing.js miniBenefits labels in inline array (missed by V0-A)",
+      "app/how-it-works/how-it-works.js economy panel explanation map (missed by V0-A)",
+      "app/core/technical-drawings.js Vista lateral/Vista frontal and technical captions (additional source)",
+      "app/core/admin-bootstrap-retry.mjs user-visible admin login/load feedback (additional source)",
+      "app/core/pricing.js Estimativa da composição (additional source)"
+    ],
+    "domain_owned_not_UI_tokens": [
+      "app/data/catalog-data.js product labels/descriptions and price option titles",
+      "app/data/hierarchy-defaults.js stage/item labels",
+      "app/data/scene-data.js scene entities/labels",
+      "app/data/mock-price-book.js commercial price metadata",
+      "app/core/configuration.js default materials/products",
+      "app/core/legacy-stage-repair.js recovery/history text; classify reachability first"
+    ],
+    "technical_diagnostics_not_automatically_localized": [
+      "app/core/administration-v5.js contract error strings",
+      "app/core/flow-layout.js invariant/renderer error messages",
+      "app/core/flow-model.js normalization diagnostics",
+      "app/core/published-configuration.js internal storage state codes"
+    ]
+  },
+  "html": [
+    {
+      "path": "app/index.html",
+      "phase": "V0-A heuristic index",
+      "classification": "HTML text and accessibility attributes; dynamic DOM requires separate audit"
+    },
+    {
+      "path": "app/about/index.html",
+      "phase": "V0-A heuristic index",
+      "classification": "HTML text and accessibility attributes; dynamic DOM requires separate audit"
+    },
+    {
+      "path": "app/how-it-works/index.html",
+      "phase": "V0-A heuristic index",
+      "classification": "HTML text and accessibility attributes; dynamic DOM requires separate audit"
+    },
+    {
+      "path": "app/viewer/index.html",
+      "phase": "V0-A heuristic index",
+      "classification": "HTML text and accessibility attributes; dynamic DOM requires separate audit"
+    },
+    {
+      "path": "app/config/index.html",
+      "phase": "V0-A heuristic index",
+      "classification": "HTML text and accessibility attributes; dynamic DOM requires separate audit"
+    },
+    {
+      "path": "app/admin.html",
+      "phase": "V0-A heuristic index",
+      "classification": "HTML text and accessibility attributes; dynamic DOM requires separate audit"
+    },
+    {
+      "path": "app/access/index.html",
+      "phase": "V0-A heuristic index",
+      "classification": "HTML text and accessibility attributes; dynamic DOM requires separate audit"
+    },
+    {
+      "path": "app/access/manage.html",
+      "phase": "V0-A heuristic index",
+      "classification": "HTML text and accessibility attributes; dynamic DOM requires separate audit"
+    }
+  ],
+  "js": [
+    {
+      "path": "app/access/access.js",
+      "bytes": 1470,
+      "phase": "V0-A heuristic index",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/access/manage.js",
+      "bytes": 5267,
+      "phase": "V0-A heuristic index",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/admin/admin.js",
+      "bytes": 107428,
+      "phase": "V0-A heuristic index",
+      "classification": "dynamic UI and domain flows mixed"
+    },
+    {
+      "path": "app/app.js",
+      "bytes": 123860,
+      "phase": "V0-A heuristic index",
+      "classification": "dynamic UI and domain flows mixed"
+    },
+    {
+      "path": "app/core/admin-bootstrap-retry.mjs",
+      "bytes": 2316,
+      "phase": "V0-B additional static source reading",
+      "classification": "auth/admin feedback/error semantics"
+    },
+    {
+      "path": "app/core/administration-v5.js",
+      "bytes": 15157,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/browser-compat.js",
+      "bytes": 1565,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/configuration.js",
+      "bytes": 37875,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/fingerprint.js",
+      "bytes": 1332,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/finishes.js",
+      "bytes": 2584,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/flow-layout.js",
+      "bytes": 6163,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/flow-model.js",
+      "bytes": 16491,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/hierarchy-administration.js",
+      "bytes": 12572,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/hierarchy-editor.js",
+      "bytes": 10813,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/item-capabilities.js",
+      "bytes": 2635,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/keyboard-shortcuts.js",
+      "bytes": 23629,
+      "phase": "V0-A heuristic index",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/layout-profiles.js",
+      "bytes": 1086,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/legacy-stage-repair.js",
+      "bytes": 5078,
+      "phase": "V0-B additional static source reading",
+      "classification": "legacy/recovery messages (classify active reachability)"
+    },
+    {
+      "path": "app/core/presentation-contract.js",
+      "bytes": 10760,
+      "phase": "V0-A heuristic index",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/pricing-contract.js",
+      "bytes": 8533,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/pricing.js",
+      "bytes": 7217,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/private-navigation.js",
+      "bytes": 7819,
+      "phase": "V0-A heuristic index",
+      "classification": "shared UI/controller"
+    },
+    {
+      "path": "app/core/public-module-projection.js",
+      "bytes": 9170,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/published-buyer-projection.js",
+      "bytes": 5400,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/published-configuration.js",
+      "bytes": 2007,
+      "phase": "V0-B additional static source reading",
+      "classification": "server storage boundary (not user-facing by default)"
+    },
+    {
+      "path": "app/core/runtime-contracts.js",
+      "bytes": 2045,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/scene-component.js",
+      "bytes": 8785,
+      "phase": "V0-A heuristic index",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/scene-geometry.js",
+      "bytes": 846,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/state.js",
+      "bytes": 2987,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/stone.js",
+      "bytes": 10129,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/technical-drawings.js",
+      "bytes": 10500,
+      "phase": "V0-B additional static source reading",
+      "classification": "user-facing technical caption candidates"
+    },
+    {
+      "path": "app/core/ui-theme.js",
+      "bytes": 6780,
+      "phase": "V0-A heuristic index",
+      "classification": "shared UI/controller"
+    },
+    {
+      "path": "app/core/v5-normal-save.js",
+      "bytes": 3151,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/v5-publication-inspection.js",
+      "bytes": 2082,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/v5-publication-migration.js",
+      "bytes": 3535,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/validation.js",
+      "bytes": 5495,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/core/visibility.js",
+      "bytes": 3852,
+      "phase": "V0-B additional static source reading",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/data/catalog-data.js",
+      "bytes": 13719,
+      "phase": "V0-B additional static source reading",
+      "classification": "domain-owned data (localization requires separate business review)"
+    },
+    {
+      "path": "app/data/configurator-settings.js",
+      "bytes": 905,
+      "phase": "V0-B additional static source reading",
+      "classification": "domain-owned data (localization requires separate business review)"
+    },
+    {
+      "path": "app/data/hierarchy-defaults.js",
+      "bytes": 3242,
+      "phase": "V0-B additional static source reading",
+      "classification": "domain-owned data (localization requires separate business review)"
+    },
+    {
+      "path": "app/data/mask-data.js",
+      "bytes": 309610,
+      "phase": "domain artifact; not read; not certified",
+      "classification": "domain-owned data (localization requires separate business review)"
+    },
+    {
+      "path": "app/data/mock-price-book.js",
+      "bytes": 2509,
+      "phase": "V0-B additional static source reading",
+      "classification": "domain-owned data (localization requires separate business review)"
+    },
+    {
+      "path": "app/data/presentation-policy-defaults.js",
+      "bytes": 1564,
+      "phase": "V0-B additional static source reading",
+      "classification": "domain-owned data (localization requires separate business review)"
+    },
+    {
+      "path": "app/data/scene-data.js",
+      "bytes": 11219,
+      "phase": "V0-B additional static source reading",
+      "classification": "domain-owned data (localization requires separate business review)"
+    },
+    {
+      "path": "app/data/stone-data.js",
+      "bytes": 1298823,
+      "phase": "domain artifact; not read; not certified",
+      "classification": "domain-owned data (localization requires separate business review)"
+    },
+    {
+      "path": "app/how-it-works/how-it-works.js",
+      "bytes": 3345,
+      "phase": "V0-A heuristic index",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/landing/data.js",
+      "bytes": 1857,
+      "phase": "V0-A heuristic index",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/landing/header-menu.js",
+      "bytes": 813,
+      "phase": "V0-A heuristic index",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/landing/landing.js",
+      "bytes": 9763,
+      "phase": "V0-A heuristic index",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/viewer/data.js",
+      "bytes": 1011,
+      "phase": "V0-A heuristic index",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/viewer/public-data.js",
+      "bytes": 2554,
+      "phase": "V0-A heuristic index",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/viewer/scene-adapters.js",
+      "bytes": 17241,
+      "phase": "V0-A heuristic index",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/viewer/technical-views.js",
+      "bytes": 4328,
+      "phase": "V0-A heuristic index",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    },
+    {
+      "path": "app/viewer/viewer.js",
+      "bytes": 10639,
+      "phase": "V0-A heuristic index",
+      "classification": "UI/runtime/core; distinguish visible from diagnostic messages"
+    }
+  ],
+  "gaps": [
+    "All current UI-facing strings still require robust JS/HTML parsing and consumer tracing, including template literals, concatenations, function arguments, arrays, inline text maps",
+    "Classify server API message ownership separately, avoiding new public leakage",
+    "Large generated mask-data and stone-data not text-audited; no inference of content or localizability",
+    "Dynamic DOM runtime and accessibility tree states not tested in browser",
+    "Semantic key reuse, RTL/plurals/Intl interpolation and visual impact of longer strings not tested"
+  ],
+  "nextGate": "V0-B1 build reproducible source scanner or AST tool using existing Node build; review all UI/domains per authoring authority and keyed pt-BR coverage matrix; no automatic replacement"
+}
