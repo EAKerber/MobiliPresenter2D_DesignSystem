@@ -1,0 +1,3827 @@
+{
+  "schema": "M2DLocalizationCandidateIndex/0.1",
+  "partition": "HTML and public entrypoints",
+  "productHead": "840a0cda361b3ce215fc934badc26df72dffc6e8",
+  "method": "heuristic scan, unreviewed; NOT exhaustive and may contain false positives; excludes DOM runtime, multiline JS, domain-data translations, scripts embedded in HTML",
+  "hashes": {
+    "app/index.html": "251582e39dcc3e4a5b7905cd32df57f19f55929d",
+    "app/about/index.html": "006717b7b1ca75a6270e5f54ce1b626fbcb2867b",
+    "app/how-it-works/index.html": "c064dc1da87836ab6e2773365c592dfadebb519b",
+    "app/viewer/index.html": "41d10ee6b29018c39e2ef2ee7c098ac9391f7cd8",
+    "app/config/index.html": "97c284c9831de05607ede0d024e4d919a898b7fa",
+    "app/admin.html": "60139eb4f63680ce2fee394cf7988b728b218d08",
+    "app/access/index.html": "e28c09fd31d81f4cfded3f82a7244f8b10dddb2c",
+    "app/access/manage.html": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+    "app/landing/data.js": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+    "app/landing/landing.js": "c85c49c163b0af6d6dda30cd9fb8771f851ec496",
+    "app/landing/header-menu.js": "411c5ef6463ba716fb6452430a53c598a5aebe84",
+    "app/how-it-works/how-it-works.js": "e8804b668e428b643d42e130a7c386fa5903e40a",
+    "app/viewer/viewer.js": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+    "app/viewer/data.js": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+    "app/viewer/public-data.js": "68b78120ba4be4798ff367eaa6ba840278abe6eb"
+  },
+  "unreadable": [],
+  "candidates": [
+    {
+      "source": "app/index.html",
+      "line": 14,
+      "kind": "html_text",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 21,
+      "kind": "html_text",
+      "value": "moderno",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 21,
+      "kind": "html_text",
+      "value": "inteligente",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 21,
+      "kind": "html_text",
+      "value": "inovador",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 21,
+      "kind": "html_text",
+      "value": "econômico",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 24,
+      "kind": "html_text",
+      "value": "Ambientes",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 24,
+      "kind": "html_text",
+      "value": "Como funciona",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 24,
+      "kind": "html_text",
+      "value": "Quem somos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 25,
+      "kind": "html_text",
+      "value": "Fale conosco",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 32,
+      "kind": "html_text",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 33,
+      "kind": "html_text",
+      "value": "Monte.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 33,
+      "kind": "html_text",
+      "value": "Escolha.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 33,
+      "kind": "html_text",
+      "value": "Aproveite.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 34,
+      "kind": "html_text",
+      "value": "Móveis inteligentes, pensados para o seu espaço e para o seu orçamento.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 35,
+      "kind": "html_text",
+      "value": "Um novo conceito em mobiliário que une projeto, fabricação e instalação em uma solução simples, prática e acessível.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 37,
+      "kind": "html_text",
+      "value": "Conheça nossos ambientes",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 45,
+      "kind": "html_text",
+      "value": "Você escolhe o que precisa",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 45,
+      "kind": "html_text",
+      "value": "A gente já sabe como fazer.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 53,
+      "kind": "html_text",
+      "value": "Imagem temporariamente indisponível.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 54,
+      "kind": "html_text",
+      "value": "Seu ambiente, do seu jeito",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 54,
+      "kind": "html_text",
+      "value": "Explorar a cozinha",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 54,
+      "kind": "html_text",
+      "value": "Visualização em breve",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 58,
+      "kind": "html_text",
+      "value": "Simples do início ao fim",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 58,
+      "kind": "html_text",
+      "value": "Do seu espaço ao ambiente pronto.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 58,
+      "kind": "html_text",
+      "value": "Escolha o ambiente, conheça os módulos e encontre uma solução que acompanha sua rotina.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 58,
+      "kind": "html_text",
+      "value": "Encontre seu ambiente",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 60,
+      "kind": "html_text",
+      "value": "Móveis modulares pensados para a vida real.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 60,
+      "kind": "html_text",
+      "value": "Voltar aos ambientes ↑",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 21,
+      "kind": "html_attr_aria-label",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 21,
+      "kind": "html_attr_alt",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 21,
+      "kind": "html_attr_aria-label",
+      "value": "Moderno, inteligente, inovador e econômico",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 23,
+      "kind": "html_attr_aria-label",
+      "value": "Casa em Módulos, início",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 23,
+      "kind": "html_attr_alt",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 24,
+      "kind": "html_attr_aria-label",
+      "value": "Navegação principal",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 25,
+      "kind": "html_attr_aria-label",
+      "value": "Fale conosco pelo WhatsApp",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 26,
+      "kind": "html_attr_aria-label",
+      "value": "Abrir menu",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 36,
+      "kind": "html_attr_aria-label",
+      "value": "Vantagens",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 39,
+      "kind": "html_attr_alt",
+      "value": "Ambiente planejado com a interface Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 42,
+      "kind": "html_attr_aria-label",
+      "value": "Vantagens Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 49,
+      "kind": "html_attr_aria-label",
+      "value": "Ambientes anteriores",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 49,
+      "kind": "html_attr_aria-label",
+      "value": "Página do carrossel",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 49,
+      "kind": "html_attr_aria-label",
+      "value": "Próximos ambientes",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/index.html",
+      "line": 60,
+      "kind": "html_attr_alt",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 9,
+      "kind": "html_text",
+      "value": "Quem somos | Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 12,
+      "kind": "html_text",
+      "value": "Pular para o conteúdo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 13,
+      "kind": "html_text",
+      "value": "Ambientes",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 13,
+      "kind": "html_text",
+      "value": "Como funciona",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 13,
+      "kind": "html_text",
+      "value": "Quem somos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 13,
+      "kind": "html_text",
+      "value": "Fale conosco",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 16,
+      "kind": "html_text",
+      "value": "Quem somos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 16,
+      "kind": "html_text",
+      "value": "Uma vida inteira de marcenaria. Uma experiência que deu origem a uma nova forma de produzir móveis.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 16,
+      "kind": "html_text",
+      "value": "A Casa em Módulos nasceu de uma ideia inovadora, mas foi construída sobre uma base sólida: décadas de conhecimento, experiência e resultados reais na indústria moveleira.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 17,
+      "kind": "html_text",
+      "value": "Experiência que atravessa gerações",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 17,
+      "kind": "html_text",
+      "value": "Do primeiro móvel",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 17,
+      "kind": "html_text",
+      "value": "à produção em escala.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 17,
+      "kind": "html_text",
+      "value": "Conhecimento aplicado em cada etapa.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 20,
+      "kind": "html_text",
+      "value": "As raízes",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 20,
+      "kind": "html_text",
+      "value": "Um ofício aprendido desde a essência",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 20,
+      "kind": "html_text",
+      "value": "Essa história começa com Volmir, que, aos 13 anos, deu seus primeiros passos na marcenaria ao lado do pai. Em uma época em que os móveis eram produzidos artesanalmente, utilizando madeira natural, aprendeu o ofício desde a sua essência: o cuidado com a matéria-prima, os detalhes do acabamento e cada etapa do processo produtivo.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 20,
+      "kind": "html_text",
+      "value": "Com o passar dos anos, a experiência se transformou em conhecimento, e o conhecimento abriu caminho para desafios cada vez maiores. Dos primeiros móveis residenciais aos projetos completos de interiores, vieram também empreendimentos comerciais, revestimentos técnicos para teatros e grandes projetos hoteleiros.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 22,
+      "kind": "html_text",
+      "value": "apartamentos mobiliados",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 22,
+      "kind": "html_text",
+      "value": "em uma única operação",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 22,
+      "kind": "html_text",
+      "value": "Produção em larga escala",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 22,
+      "kind": "html_text",
+      "value": "Precisão que se repete. Qualidade em cada unidade.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 22,
+      "kind": "html_text",
+      "value": "Mas foi na produção em larga escala que essa trajetória alcançou um de seus maiores diferenciais.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 22,
+      "kind": "html_text",
+      "value": "Ao longo de sua carreira, Volmir desenvolveu a capacidade de transformar projetos complexos em processos produtivos organizados, eficientes e reproduzíveis, chegando a executar empreendimentos com mais de 200 apartamentos mobiliados em uma única operação.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 22,
+      "kind": "html_text",
+      "value": "O verdadeiro sucesso dessas realizações não esteve apenas na quantidade de móveis produzidos, mas na capacidade de manter um elevado padrão de qualidade, precisão e acabamento em cada unidade, cumprindo prazos e otimizando recursos.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 23,
+      "kind": "html_text",
+      "value": "O que aprendemos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 23,
+      "kind": "html_text",
+      "value": "Excelência também é saber produzir",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 23,
+      "kind": "html_text",
+      "value": "Afinal, produzir um móvel com excelência exige conhecimento. Produzir centenas deles, mantendo a mesma excelência, exige algo ainda maior: domínio técnico, planejamento, inteligência produtiva e uma profunda compreensão de cada etapa da fabricação.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 24,
+      "kind": "html_text",
+      "value": "Da experiência à inovação",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 24,
+      "kind": "html_text",
+      "value": "E é justamente dessa experiência comprovada que nasce a Casa em Módulos.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 24,
+      "kind": "html_text",
+      "value": "Trouxemos para o mobiliário residencial a inteligência dos grandes processos produtivos, combinando padronização, qualidade e eficiência para tornar móveis bem planejados mais acessíveis.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 24,
+      "kind": "html_text",
+      "value": "Porque acreditamos que a inovação não está apenas em criar algo novo, mas também em descobrir maneiras mais inteligentes de fazer aquilo que já sabemos fazer muito bem.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 24,
+      "kind": "html_text",
+      "value": "Casa em Módulos. A experiência de quem sabe produzir em grande escala, com o cuidado de quem aprendeu a fazer cada móvel como se fosse único.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 24,
+      "kind": "html_text",
+      "value": "Veja como funciona",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 24,
+      "kind": "html_text",
+      "value": "Conheça nossos ambientes",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 26,
+      "kind": "html_text",
+      "value": "Móveis modulares pensados para a vida real.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 26,
+      "kind": "html_text",
+      "value": "Voltar ao início ↑",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 13,
+      "kind": "html_attr_aria-label",
+      "value": "Casa em Módulos, início",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 13,
+      "kind": "html_attr_alt",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 13,
+      "kind": "html_attr_aria-label",
+      "value": "Navegação principal",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 13,
+      "kind": "html_attr_aria-label",
+      "value": "Fale conosco pelo WhatsApp",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 13,
+      "kind": "html_attr_aria-label",
+      "value": "Abrir menu",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 17,
+      "kind": "html_attr_aria-label",
+      "value": "Experiência de produção",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/about/index.html",
+      "line": 26,
+      "kind": "html_attr_alt",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 14,
+      "kind": "html_text",
+      "value": "Como funciona | Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 25,
+      "kind": "html_text",
+      "value": "Ambientes",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 26,
+      "kind": "html_text",
+      "value": "Como funciona",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 27,
+      "kind": "html_text",
+      "value": "Quem somos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 29,
+      "kind": "html_text",
+      "value": "Fale conosco",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 36,
+      "kind": "html_text",
+      "value": "Como funciona",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 37,
+      "kind": "html_text",
+      "value": "A evolução do móvel",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 37,
+      "kind": "html_text",
+      "value": "sob medida.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 38,
+      "kind": "html_text",
+      "value": "Qualidade, inteligência e valores acessíveis para você montar a casa do seu jeito.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 39,
+      "kind": "html_text",
+      "value": "Para quem pesquisa, compara e quer aproveitar melhor o espaço e o investimento.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 40,
+      "kind": "html_text",
+      "value": "Veja como funciona",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 48,
+      "kind": "html_text",
+      "value": "Conheça a proposta",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 48,
+      "kind": "html_text",
+      "value": "Uma nova forma de pensar sua casa.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 48,
+      "kind": "html_text",
+      "value": "Qualidade de marcenaria, inteligência de indústria e liberdade para escolher no seu tempo.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 48,
+      "kind": "html_text",
+      "value": "Assistir no YouTube ↗",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 52,
+      "kind": "html_text",
+      "value": "Nossa origem",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 52,
+      "kind": "html_text",
+      "value": "Uma nova forma de pensar o mobiliário.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 53,
+      "kind": "html_text",
+      "value": "Quando chega o momento de mobiliar um apartamento, existe uma pergunta que quase todo mundo acaba fazendo:",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 53,
+      "kind": "html_text",
+      "value": "Como ter um móvel bonito, bem feito, resistente e pensado para o meu espaço… sem transformar isso em um investimento muito maior do que eu gostaria?",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 53,
+      "kind": "html_text",
+      "value": "Foi tentando responder a essa pergunta que nasceu a Casa em Módulos.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 53,
+      "kind": "html_text",
+      "value": "Não para criar simplesmente mais uma linha de móveis.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 53,
+      "kind": "html_text",
+      "value": "Mas para propor uma nova maneira de pensar, escolher, produzir e comprar mobiliário.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 53,
+      "kind": "html_text",
+      "value": "Uma maneira que reúne aquilo que existe de melhor na marcenaria com aquilo que a indústria sabe fazer de melhor.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 53,
+      "kind": "html_text",
+      "value": "Qualidade de marcenaria. Inteligência de indústria. Economia para a sua vida.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 55,
+      "kind": "html_text",
+      "value": "As fundações da Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 55,
+      "kind": "html_text",
+      "value": "O que sustenta essa nova forma de fazer móveis.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 57,
+      "kind": "html_text",
+      "value": "Evoluir a forma de produzir",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 57,
+      "kind": "html_text",
+      "value": "Uma indústria mais inteligente para tornar a qualidade acessível.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 57,
+      "kind": "html_text",
+      "value": "A construção civil evoluiu. Os processos industriais evoluíram. A tecnologia evoluiu. A maneira como compramos evoluiu. E acreditamos que a forma de produzir móveis também pode evoluir.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 57,
+      "kind": "html_text",
+      "value": "A Casa em Módulos nasce dessa ideia.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 58,
+      "kind": "html_text",
+      "value": "Eficiência com liberdade",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 58,
+      "kind": "html_text",
+      "value": "Padronizar processos sem padronizar pessoas.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 58,
+      "kind": "html_text",
+      "value": "Produzir melhor para custar menos. Comprar em escala sem obrigar todos a escolherem a mesma coisa. Reduzir desperdício sem reduzir qualidade. Simplificar a compra sem simplificar o produto.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 58,
+      "kind": "html_text",
+      "value": "Dar liberdade para o cliente comprar no seu tempo.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 59,
+      "kind": "html_text",
+      "value": "Transparência faz parte do produto",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 59,
+      "kind": "html_text",
+      "value": "Sem letras pequenas. Sem pegadinhas.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 59,
+      "kind": "html_text",
+      "value": "Você entende o que está comprando. Entende como foi produzido. Entende de onde vem a economia. E sabe exatamente o que vai receber.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 59,
+      "kind": "html_text",
+      "value": "Sem letras pequenas. Sem pegadinhas. Sem promessas difíceis de entender.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 59,
+      "kind": "html_text",
+      "value": "Porque transparência, para nós, não é apenas uma forma de vender.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 59,
+      "kind": "html_text",
+      "value": "Faz parte do produto.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 65,
+      "kind": "html_text",
+      "value": "Três formas de atender necessidades diferentes",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 66,
+      "kind": "html_text",
+      "value": "O que muda em cada modelo?",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 67,
+      "kind": "html_text",
+      "value": "As características variam conforme produto, projeto e fornecedor. Veja como cada formato costuma organizar a escolha e a produção.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 72,
+      "kind": "html_text",
+      "value": "Móveis prontos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 74,
+      "kind": "html_text",
+      "value": "Adaptação",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 74,
+      "kind": "html_text",
+      "value": "Dimensões e configurações da linha.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 75,
+      "kind": "html_text",
+      "value": "Qualidade",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 75,
+      "kind": "html_text",
+      "value": "Varia conforme o produto e o fabricante.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 76,
+      "kind": "html_text",
+      "value": "Personalização",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 76,
+      "kind": "html_text",
+      "value": "Opções oferecidas pela linha.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 77,
+      "kind": "html_text",
+      "value": "Custo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 77,
+      "kind": "html_text",
+      "value": "Varia conforme produto e configuração.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 78,
+      "kind": "html_text",
+      "value": "Compra por etapas",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 78,
+      "kind": "html_text",
+      "value": "Depende da linha e da disponibilidade.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 79,
+      "kind": "html_text",
+      "value": "Produção",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 79,
+      "kind": "html_text",
+      "value": "Produção da linha do fabricante.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 84,
+      "kind": "html_text",
+      "value": "Planejados tradicionais",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 86,
+      "kind": "html_text",
+      "value": "Adaptação",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 86,
+      "kind": "html_text",
+      "value": "Projeto definido para o ambiente.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 87,
+      "kind": "html_text",
+      "value": "Qualidade",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 87,
+      "kind": "html_text",
+      "value": "Definida por materiais, projeto e execução.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 88,
+      "kind": "html_text",
+      "value": "Personalização",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 88,
+      "kind": "html_text",
+      "value": "Definida durante o projeto.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 89,
+      "kind": "html_text",
+      "value": "Custo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 89,
+      "kind": "html_text",
+      "value": "Varia conforme projeto, materiais e serviço.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 90,
+      "kind": "html_text",
+      "value": "Compra por etapas",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 90,
+      "kind": "html_text",
+      "value": "Definida com o prestador.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 91,
+      "kind": "html_text",
+      "value": "Produção",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 91,
+      "kind": "html_text",
+      "value": "Produção conforme o projeto.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 96,
+      "kind": "html_text",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 98,
+      "kind": "html_text",
+      "value": "Adaptação",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 98,
+      "kind": "html_text",
+      "value": "Combinação de módulos estudados para o empreendimento.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 99,
+      "kind": "html_text",
+      "value": "Qualidade",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 99,
+      "kind": "html_text",
+      "value": "Padrão de marcenaria conforme especificações do projeto.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 100,
+      "kind": "html_text",
+      "value": "Personalização",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 100,
+      "kind": "html_text",
+      "value": "Combinações de módulos, acabamentos e acessórios disponíveis.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 101,
+      "kind": "html_text",
+      "value": "Custo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 101,
+      "kind": "html_text",
+      "value": "Busca valores acessíveis por eficiência e escala.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 102,
+      "kind": "html_text",
+      "value": "Compra por etapas",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 102,
+      "kind": "html_text",
+      "value": "Possibilidade prevista no modelo, conforme regras comerciais.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 103,
+      "kind": "html_text",
+      "value": "Produção",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 103,
+      "kind": "html_text",
+      "value": "Organizada a partir de uma plataforma modular por empreendimento.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 110,
+      "kind": "html_text",
+      "value": "Tudo começa pelo empreendimento",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 110,
+      "kind": "html_text",
+      "value": "Estudo primeiro, soluções certas desde o início.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 110,
+      "kind": "html_text",
+      "value": "Antes de vender qualquer móvel, estudamos o empreendimento. Analisamos as plantas dos apartamentos, as medidas, os espaços disponíveis, a circulação, os pontos importantes de cada ambiente e as necessidades mais comuns de quem vai morar ali.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 110,
+      "kind": "html_text",
+      "value": "A partir desse estudo, desenvolvemos uma biblioteca de módulos pensada especificamente para aquele empreendimento. As medidas e proporções já foram estudadas, e os módulos foram planejados para funcionar individualmente ou em conjunto. Parte importante da engenharia já chega pronta para você.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 111,
+      "kind": "html_text",
+      "value": "Esquema conceitual de estudo do espaço",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 113,
+      "kind": "html_text",
+      "value": "Plantas e dimensões",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 113,
+      "kind": "html_text",
+      "value": "Analisamos as medidas, proporções e restrições de cada ambiente antes de definir as composições possíveis.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 114,
+      "kind": "html_text",
+      "value": "Circulação e ergonomia",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 114,
+      "kind": "html_text",
+      "value": "Observamos passagens, aberturas e a maneira como os espaços são usados no dia a dia.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 115,
+      "kind": "html_text",
+      "value": "Necessidades de armazenamento",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 115,
+      "kind": "html_text",
+      "value": "Desenvolvemos soluções para as necessidades comuns de cada ambiente, com módulos que podem funcionar individualmente ou em conjunto.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 121,
+      "kind": "html_text",
+      "value": "Soluções que se combinam",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 122,
+      "kind": "html_text",
+      "value": "Uma base modular. Muitas composições.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 123,
+      "kind": "html_text",
+      "value": "O repertório interno reúne soluções estudadas para cada empreendimento. As peças podem funcionar individualmente e se integrar em composições para diferentes ambientes.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 124,
+      "kind": "html_text",
+      "value": "Entre os exemplos estão módulos inferiores e aéreos, torres, gaveteiros, armários, nichos, painéis e bancadas. A seleção varia por empreendimento.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 127,
+      "kind": "html_text",
+      "value": "Módulo aéreo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 128,
+      "kind": "html_text",
+      "value": "Torre",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 129,
+      "kind": "html_text",
+      "value": "Módulo inferior",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 130,
+      "kind": "html_text",
+      "value": "Armário",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 134,
+      "kind": "html_text",
+      "value": "Estudados em conjunto, sem deixar os ambientes iguais.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 134,
+      "kind": "html_text",
+      "value": "Você escolhe combinações e acabamentos entre as opções previstas para o seu projeto.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 140,
+      "kind": "html_text",
+      "value": "Economia no processo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 141,
+      "kind": "html_text",
+      "value": "Por que custa menos?",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 142,
+      "kind": "html_text",
+      "value": "Na marcenaria individual, cada projeto exige uma parte maior do trabalho técnico. Aqui, a engenharia desenvolvida para o empreendimento é aproveitada em diferentes apartamentos. A economia vem do processo, sem retirar qualidade.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 145,
+      "kind": "html_text",
+      "value": "Compra em escala",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 145,
+      "kind": "html_text",
+      "value": "Mais volume concentrado amplia o poder de negociação de insumos.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 146,
+      "kind": "html_text",
+      "value": "Compras coletivas",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 146,
+      "kind": "html_text",
+      "value": "Uma base comum atende diferentes composições do empreendimento.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 147,
+      "kind": "html_text",
+      "value": "Produção planejada",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 147,
+      "kind": "html_text",
+      "value": "Processos repetíveis ajudam a organizar a produção.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 148,
+      "kind": "html_text",
+      "value": "Aproveitamento de material",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 148,
+      "kind": "html_text",
+      "value": "Planos de corte organizados ajudam a aproveitar melhor as chapas.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 149,
+      "kind": "html_text",
+      "value": "Engenharia já estudada",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 149,
+      "kind": "html_text",
+      "value": "Soluções-base não precisam ser redesenhadas do zero a cada escolha.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 150,
+      "kind": "html_text",
+      "value": "Menos retrabalho",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 150,
+      "kind": "html_text",
+      "value": "Padrões e conferências contribuem para reduzir repetição de trabalho.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 153,
+      "kind": "html_text",
+      "value": "A economia está na forma de planejar e produzir.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 158,
+      "kind": "html_text",
+      "value": "Escolha no seu ritmo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 159,
+      "kind": "html_text",
+      "value": "Comece pelo que você precisa agora.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 160,
+      "kind": "html_text",
+      "value": "A chegada a um novo apartamento concentra despesas. Você pode priorizar os ambientes essenciais e ampliar a composição depois, conforme sua necessidade e disponibilidade financeira.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 163,
+      "kind": "html_text",
+      "value": "Cozinha",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 163,
+      "kind": "html_text",
+      "value": "Comece pelo ambiente prioritário.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 164,
+      "kind": "html_text",
+      "value": "Lavanderia",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 164,
+      "kind": "html_text",
+      "value": "Acrescente o que fizer sentido.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 165,
+      "kind": "html_text",
+      "value": "Sala",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 165,
+      "kind": "html_text",
+      "value": "Inclua outros ambientes no seu ritmo.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 166,
+      "kind": "html_text",
+      "value": "Quarto",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 166,
+      "kind": "html_text",
+      "value": "Complete em outro momento.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 167,
+      "kind": "html_text",
+      "value": "Escritório",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 167,
+      "kind": "html_text",
+      "value": "Continue quando quiser.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 173,
+      "kind": "html_text",
+      "value": "Escolhas que dão personalidade",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 174,
+      "kind": "html_text",
+      "value": "Acabamentos e detalhes do seu jeito.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 175,
+      "kind": "html_text",
+      "value": "Combine módulos, cores, padrões e acessórios entre as opções disponíveis para o seu projeto. A base é modular; a composição continua pessoal.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 176,
+      "kind": "html_text",
+      "value": "Padronizado por dentro. Seu por fora.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 179,
+      "kind": "html_text",
+      "value": "Cores e acabamentos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 180,
+      "kind": "html_text",
+      "value": "Puxadores lineares",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 181,
+      "kind": "html_text",
+      "value": "Puxadores tipo botão",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 188,
+      "kind": "html_text",
+      "value": "Eficiência no processo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 189,
+      "kind": "html_text",
+      "value": "A economia vem da organização da produção.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 190,
+      "kind": "html_text",
+      "value": "Equipamentos especializados, produção em série e equipe experiente tornam cada etapa mais previsível — sem depender de reduzir as especificações de materiais e componentes.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 193,
+      "kind": "html_text",
+      "value": "Corte",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 193,
+      "kind": "html_text",
+      "value": "Planos de corte organizam as chapas para seguir as medidas previstas no projeto.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 194,
+      "kind": "html_text",
+      "value": "Usinagem e furação",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 194,
+      "kind": "html_text",
+      "value": "Equipamentos especializados repetem encaixes e pontos de montagem com consistência.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 195,
+      "kind": "html_text",
+      "value": "Acabamento",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 195,
+      "kind": "html_text",
+      "value": "A sequência de produção prepara cada peça antes da montagem.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 196,
+      "kind": "html_text",
+      "value": "Montagem e controle",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 196,
+      "kind": "html_text",
+      "value": "Uma equipe experiente confere componentes, encaixes e especificações.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 200,
+      "kind": "html_text",
+      "value": "Materiais e componentes",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 201,
+      "kind": "html_text",
+      "value": "Qualidade definida em cada detalhe.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 202,
+      "kind": "html_text",
+      "value": "Caixaria em MDF, fundos revestidos, dobradiças com amortecimento e corrediças telescópicas reforçadas: cada componente segue a especificação definida para o projeto.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 204,
+      "kind": "html_text",
+      "value": "Caixaria e portas",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 204,
+      "kind": "html_text",
+      "value": "MDF de 18 mm para uma estrutura firme e frentes consistentes.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 205,
+      "kind": "html_text",
+      "value": "Fundos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 205,
+      "kind": "html_text",
+      "value": "MDF de 6 mm com revestimento melamínico nas duas faces.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 206,
+      "kind": "html_text",
+      "value": "Dobradiças",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 206,
+      "kind": "html_text",
+      "value": "Amortecimento para um fechamento mais suave.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 207,
+      "kind": "html_text",
+      "value": "Corrediças",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 207,
+      "kind": "html_text",
+      "value": "Telescópicas reforçadas, especificadas para uso frequente.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 210,
+      "kind": "html_text",
+      "value": "A configuração de cada módulo e as condições da garantia constam no respectivo projeto e contrato.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 215,
+      "kind": "html_text",
+      "value": "Como funciona na prática",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 216,
+      "kind": "html_text",
+      "value": "Da escolha do ambiente à forma de receber seus módulos.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 217,
+      "kind": "html_text",
+      "value": "Um caminho claro para definir o que entra no projeto e como os módulos chegam até você.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 220,
+      "kind": "html_text",
+      "value": "Escolha o ambiente",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 220,
+      "kind": "html_text",
+      "value": "Cozinha, sala, quarto, escritório ou lavanderia.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 221,
+      "kind": "html_text",
+      "value": "Escolha os módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 221,
+      "kind": "html_text",
+      "value": "Veja as soluções previstas para o empreendimento.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 222,
+      "kind": "html_text",
+      "value": "Monte a composição",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 222,
+      "kind": "html_text",
+      "value": "Combine as peças para o espaço e a rotina.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 223,
+      "kind": "html_text",
+      "value": "Defina acabamentos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 223,
+      "kind": "html_text",
+      "value": "Escolha entre as opções disponíveis no projeto.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 224,
+      "kind": "html_text",
+      "value": "Faça a conferência técnica",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 224,
+      "kind": "html_text",
+      "value": "Revise medidas e condições antes da produção.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 225,
+      "kind": "html_text",
+      "value": "Produção dos módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 225,
+      "kind": "html_text",
+      "value": "As peças seguem para fabricação e controle.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 227,
+      "kind": "html_text",
+      "value": "Transparência em todas as etapas",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 227,
+      "kind": "html_text",
+      "value": "Tudo claro antes da contratação.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 227,
+      "kind": "html_text",
+      "value": "Antes da decisão, cada proposta deve esclarecer materiais e componentes, itens incluídos e opcionais, modalidades de recebimento, prazos, instalação, garantia e valor final.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 227,
+      "kind": "html_text",
+      "value": "As condições aplicáveis constam na proposta e no contrato de cada projeto.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 231,
+      "kind": "html_text",
+      "value": "Opção 1",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 231,
+      "kind": "html_text",
+      "value": "Instalação pela equipe",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 231,
+      "kind": "html_text",
+      "value": "Uma equipe técnica especializada faz a montagem com segurança e precisão, conforme o projeto, e entrega o ambiente pronto para uso.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 235,
+      "kind": "html_text",
+      "value": "Opção 2",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 235,
+      "kind": "html_text",
+      "value": "Retirada no ponto definido",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 235,
+      "kind": "html_text",
+      "value": "Os módulos são conferidos e embalados com segurança. Você pode retirar no ponto definido e instalar no seu ritmo ou com profissional de confiança, seguindo as orientações do projeto.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 243,
+      "kind": "html_text",
+      "value": "Qualidade de marcenaria. Inteligência de indústria.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 243,
+      "kind": "html_text",
+      "value": "Economia para a sua vida.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 243,
+      "kind": "html_text",
+      "value": "Um projeto pensado para o seu espaço, para o seu orçamento e para o seu jeito de morar.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 243,
+      "kind": "html_text",
+      "value": "Seu espaço. Do seu jeito.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 243,
+      "kind": "html_text",
+      "value": "Conheça os ambientes",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 249,
+      "kind": "html_text",
+      "value": "Condição especial",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 249,
+      "kind": "html_text",
+      "value": "3 meses",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 252,
+      "kind": "html_text",
+      "value": "Lançamento deste empreendimento",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 253,
+      "kind": "html_text",
+      "value": "A concentração de pedidos durante o lançamento ajuda a organizar compras e produção em maior escala. Os valores desta campanha valem por 3 meses; depois, a tabela pode ser atualizada e os valores podem mudar. Mesmo após o lançamento, a proposta continuará muito competitiva frente à marcenaria tradicional de qualidade equivalente, pois a biblioteca ",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 256,
+      "kind": "html_text",
+      "value": "As imagens desta página são ilustrativas; produtos e opções disponíveis podem variar conforme o projeto.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 260,
+      "kind": "html_text",
+      "value": "Móveis modulares pensados para a vida real.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 260,
+      "kind": "html_text",
+      "value": "Voltar ao início ↑",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 23,
+      "kind": "html_attr_aria-label",
+      "value": "Casa em Módulos, início",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 23,
+      "kind": "html_attr_alt",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 24,
+      "kind": "html_attr_aria-label",
+      "value": "Navegação principal",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 29,
+      "kind": "html_attr_aria-label",
+      "value": "Fale conosco pelo WhatsApp",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 30,
+      "kind": "html_attr_aria-label",
+      "value": "Abrir menu",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 43,
+      "kind": "html_attr_alt",
+      "value": "Render ilustrativo de sala integrada à cozinha, em tons de madeira e luz acolhedora",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 49,
+      "kind": "html_attr_title",
+      "value": "Casa em Módulos — apresentação institucional",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 83,
+      "kind": "html_attr_alt",
+      "value": "Ilustração conceitual de módulo inferior para pia e módulo aéreo, com cotas sem medidas numéricas",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 111,
+      "kind": "html_attr_alt",
+      "value": "Ilustração conceitual de uma planta com medidas e circulação analisadas",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 112,
+      "kind": "html_attr_aria-label",
+      "value": "Aspectos analisados no estudo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 127,
+      "kind": "html_attr_alt",
+      "value": "Render ilustrativo de módulo aéreo cinza com portas e nicho aberto",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 128,
+      "kind": "html_attr_alt",
+      "value": "Render ilustrativo de uma torre modular cinza alta",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 129,
+      "kind": "html_attr_alt",
+      "value": "Render ilustrativo de módulo inferior cinza com gavetas, portas, bancada e pia",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 130,
+      "kind": "html_attr_alt",
+      "value": "Render ilustrativo de um armário modular cinza de duas portas",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 133,
+      "kind": "html_attr_alt",
+      "value": "Ilustração de um módulo individual conectado a uma composição com outros módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 145,
+      "kind": "html_attr_alt",
+      "value": "Ilustração de chapas concentradas em uma composição",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 146,
+      "kind": "html_attr_alt",
+      "value": "Ilustração de diferentes composições conectadas a uma plataforma comum",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 147,
+      "kind": "html_attr_alt",
+      "value": "Ilustração de módulos repetidos em uma sequência organizada",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 148,
+      "kind": "html_attr_alt",
+      "value": "Ilustração de peças organizadas sobre uma chapa, com sobra visível",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 149,
+      "kind": "html_attr_alt",
+      "value": "Ilustração de um espaço estudado antes de definir os módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 150,
+      "kind": "html_attr_alt",
+      "value": "Ilustração de módulos acompanhados por uma lista de conferência",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 179,
+      "kind": "html_attr_alt",
+      "value": "Render conceitual de quatro amostras de acabamento em tons claros e madeirados",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 180,
+      "kind": "html_attr_alt",
+      "value": "Puxadores lineares em diferentes acabamentos: preto, dourado e cromado",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 181,
+      "kind": "html_attr_alt",
+      "value": "Render conceitual de puxadores tipo botão em preto, cromado, dourado e cobre",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 228,
+      "kind": "html_attr_aria-label",
+      "value": "Duas formas de receber os módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 241,
+      "kind": "html_attr_alt",
+      "value": "Render ilustrativo de sala integrada à cozinha, com iluminação quente",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 245,
+      "kind": "html_attr_aria-label",
+      "value": "Condição de lançamento e aviso sobre imagens",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 247,
+      "kind": "html_attr_aria-label",
+      "value": "Condição especial por três meses",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/index.html",
+      "line": 260,
+      "kind": "html_attr_alt",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/index.html",
+      "line": 14,
+      "kind": "html_text",
+      "value": "Cozinha modular | Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/index.html",
+      "line": 25,
+      "kind": "html_text",
+      "value": "← Ambientes",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/index.html",
+      "line": 28,
+      "kind": "html_text",
+      "value": "Ambientes",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/index.html",
+      "line": 29,
+      "kind": "html_text",
+      "value": "Como funciona",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/index.html",
+      "line": 30,
+      "kind": "html_text",
+      "value": "Quem somos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/index.html",
+      "line": 31,
+      "kind": "html_text",
+      "value": "Fale conosco",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/index.html",
+      "line": 36,
+      "kind": "html_text",
+      "value": "Conheça os módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/index.html",
+      "line": 36,
+      "kind": "html_text",
+      "value": "Cozinha Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/index.html",
+      "line": 36,
+      "kind": "html_text",
+      "value": "Selecione uma peça na cena para ver suas informações, vistas e detalhes.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/index.html",
+      "line": 39,
+      "kind": "html_text",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/index.html",
+      "line": 39,
+      "kind": "html_text",
+      "value": "Voltar aos ambientes ↑",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/index.html",
+      "line": 22,
+      "kind": "html_attr_aria-label",
+      "value": "Casa em Módulos — início",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/index.html",
+      "line": 22,
+      "kind": "html_attr_alt",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/index.html",
+      "line": 26,
+      "kind": "html_attr_aria-label",
+      "value": "Abrir menu",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/index.html",
+      "line": 27,
+      "kind": "html_attr_aria-label",
+      "value": "Navegação pública",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/index.html",
+      "line": 31,
+      "kind": "html_attr_aria-label",
+      "value": "Fale conosco pelo WhatsApp",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 24,
+      "kind": "html_text",
+      "value": "Casa em Módulos — Configurador",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 49,
+      "kind": "html_text",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 50,
+      "kind": "html_text",
+      "value": "Monte sua cozinha por módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 57,
+      "kind": "html_text",
+      "value": "Recomeçar",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 100,
+      "kind": "html_text",
+      "value": "de",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 100,
+      "kind": "html_text",
+      "value": "módulos visíveis",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 102,
+      "kind": "html_text",
+      "value": "Selecione um módulo na cena para abrir sua ficha.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 110,
+      "kind": "html_text",
+      "value": "⌖ Fixar cena",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 116,
+      "kind": "html_text",
+      "value": "Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 117,
+      "kind": "html_text",
+      "value": "Inclua apenas o que faz sentido para o seu ambiente.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 124,
+      "kind": "html_text",
+      "value": "Detalhes do módulo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 125,
+      "kind": "html_text",
+      "value": "Selecione um módulo na cena ou na lista para consultar medidas, componentes e acabamentos.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 142,
+      "kind": "html_text",
+      "value": "Uma cor e um puxador para a composição. A caixaria permanece clara.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 156,
+      "kind": "html_text",
+      "value": "Escolha global; o valor é rateado somente nas frentes aplicáveis de cada módulo.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 163,
+      "kind": "html_text",
+      "value": "Uma escolha global, aplicada uma vez à composição.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 174,
+      "kind": "html_text",
+      "value": "Rodapé de pedra",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 174,
+      "kind": "html_text",
+      "value": "Acabamento global para a composição.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 186,
+      "kind": "html_text",
+      "value": "Serviços",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 186,
+      "kind": "html_text",
+      "value": "Serviços globais que impactam uma vez o conjunto.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 192,
+      "kind": "html_text",
+      "value": "Iluminação embutida",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 192,
+      "kind": "html_text",
+      "value": "Serviço global que realça a bancada e requer a lateral da geladeira e o aéreo da pia.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 202,
+      "kind": "html_text",
+      "value": "Sua composição",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 202,
+      "kind": "html_text",
+      "value": "Revise antes de solicitar a proposta.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 213,
+      "kind": "html_text",
+      "value": "Continuar para acabamentos →",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 47,
+      "kind": "html_attr_alt",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 55,
+      "kind": "html_attr_aria-label",
+      "value": "Restaurar",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 59,
+      "kind": "html_attr_aria-label",
+      "value": "Abrir menu",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 60,
+      "kind": "html_attr_aria-label",
+      "value": "Menu do site",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 73,
+      "kind": "html_attr_aria-label",
+      "value": "Visualização da cozinha",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 74,
+      "kind": "html_attr_aria-label",
+      "value": "Controles da mini-cena",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 75,
+      "kind": "html_attr_aria-label",
+      "value": "Liberar cena",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 75,
+      "kind": "html_attr_title",
+      "value": "Liberar cena",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 76,
+      "kind": "html_attr_aria-label",
+      "value": "Alternar transparência",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 76,
+      "kind": "html_attr_title",
+      "value": "Alternar transparência",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 77,
+      "kind": "html_attr_aria-label",
+      "value": "Alterar tamanho da mini-cena",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 77,
+      "kind": "html_attr_title",
+      "value": "Alterar tamanho",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 85,
+      "kind": "html_attr_alt",
+      "value": "Cenário da cozinha sem os módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 92,
+      "kind": "html_attr_aria-label",
+      "value": "Módulos selecionáveis na cena",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 109,
+      "kind": "html_attr_aria-label",
+      "value": "Etapas da configuração",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 110,
+      "kind": "html_attr_aria-label",
+      "value": "Fixar cena durante a configuração",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 122,
+      "kind": "html_attr_aria-label",
+      "value": "Detalhes do módulo selecionado",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 127,
+      "kind": "html_attr_aria-label",
+      "value": "Detalhes do módulo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 129,
+      "kind": "html_attr_aria-label",
+      "value": "Lista de módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/config/index.html",
+      "line": 135,
+      "kind": "html_attr_aria-label",
+      "value": "Acabamentos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 13,
+      "kind": "html_text",
+      "value": "Administração — Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 19,
+      "kind": "html_text",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 19,
+      "kind": "html_text",
+      "value": "Administração",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 26,
+      "kind": "html_text",
+      "value": "Sair",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 34,
+      "kind": "html_text",
+      "value": "Acesso restrito",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 35,
+      "kind": "html_text",
+      "value": "Painel administrativo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 36,
+      "kind": "html_text",
+      "value": "Entre com uma conta administrativa convidada para editar as etapas e os itens disponíveis no configurador.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 38,
+      "kind": "html_text",
+      "value": "E-mail",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 40,
+      "kind": "html_text",
+      "value": "Senha",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 43,
+      "kind": "html_text",
+      "value": "Mostrar",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 46,
+      "kind": "html_text",
+      "value": "Entrar",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 46,
+      "kind": "html_text",
+      "value": "Esqueci minha senha",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 51,
+      "kind": "html_text",
+      "value": "Nova senha",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 54,
+      "kind": "html_text",
+      "value": "Mostrar",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 57,
+      "kind": "html_text",
+      "value": "Salvar senha",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 63,
+      "kind": "html_text",
+      "value": "Acesso restrito",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 63,
+      "kind": "html_text",
+      "value": "Esta conta não é administradora",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 64,
+      "kind": "html_text",
+      "value": "Peça a um responsável para adicionar o papel",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 64,
+      "kind": "html_text",
+      "value": "admin",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 64,
+      "kind": "html_text",
+      "value": "à sua conta no Netlify Identity.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 70,
+      "kind": "html_text",
+      "value": "Configurador público",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 70,
+      "kind": "html_text",
+      "value": "Administração do catálogo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 70,
+      "kind": "html_text",
+      "value": "Configure etapas, conteúdo dos objetos, acabamentos e valores publicados.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 71,
+      "kind": "html_text",
+      "value": "Versão —",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 74,
+      "kind": "html_text",
+      "value": "Etapas",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 75,
+      "kind": "html_text",
+      "value": "Dados dos objetos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 76,
+      "kind": "html_text",
+      "value": "Cores e acabamentos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 77,
+      "kind": "html_text",
+      "value": "Dependências e eventos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 78,
+      "kind": "html_text",
+      "value": "Preços",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 80,
+      "kind": "html_text",
+      "value": "Arraste os itens entre etapas. Itens sem etapa aparecem na lista de disponíveis. Etapas de módulos e resumo são essenciais.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 80,
+      "kind": "html_text",
+      "value": "Personalizada",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 80,
+      "kind": "html_text",
+      "value": "Acabamentos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 80,
+      "kind": "html_text",
+      "value": "Serviços",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 80,
+      "kind": "html_text",
+      "value": "Adicionar etapa",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 82,
+      "kind": "html_text",
+      "value": "← Anterior",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 82,
+      "kind": "html_text",
+      "value": "Objeto",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 82,
+      "kind": "html_text",
+      "value": "Próximo →",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 83,
+      "kind": "html_text",
+      "value": "Conteúdo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 83,
+      "kind": "html_text",
+      "value": "Imagens e máscaras",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 88,
+      "kind": "html_text",
+      "value": "Biblioteca de cores e texturas",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 88,
+      "kind": "html_text",
+      "value": "A mesma biblioteca pode abastecer frentes, pedras e modelos de puxador.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 88,
+      "kind": "html_text",
+      "value": "Adicionar material",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 89,
+      "kind": "html_text",
+      "value": "Opções e disponibilidade por acabamento",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 89,
+      "kind": "html_text",
+      "value": "Configure separadamente pedras e materiais de cada puxador. Pedra e rodapé compartilham a escolha; a disponibilidade do serviço de rodapé continua independente.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 90,
+      "kind": "html_text",
+      "value": "Disponibilidade das cores de MDF",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 90,
+      "kind": "html_text",
+      "value": "Ative as cores para clientes e escolha se cada uma vale para o conjunto todo ou para módulos específicos.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 92,
+      "kind": "html_text",
+      "value": "Regras de dependência",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 92,
+      "kind": "html_text",
+      "value": "Um objeto pode exigir outros módulos ou itens visíveis para ser habilitado.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 92,
+      "kind": "html_text",
+      "value": "Adicionar dependência",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 92,
+      "kind": "html_text",
+      "value": "Eventos de configuração",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 92,
+      "kind": "html_text",
+      "value": "Altere dimensões ou ative/desative um módulo ou serviço quando outro item for ligado ou desligado.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 92,
+      "kind": "html_text",
+      "value": "Adicionar evento",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 94,
+      "kind": "html_text",
+      "value": "Persistir Puxadores no v3",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 94,
+      "kind": "html_text",
+      "value": "Publicar configuração",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 19,
+      "kind": "html_attr_aria-label",
+      "value": "Casa em Módulos, início",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 19,
+      "kind": "html_attr_alt",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 21,
+      "kind": "html_attr_aria-label",
+      "value": "Abrir menu",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 22,
+      "kind": "html_attr_aria-label",
+      "value": "Menu do site",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 43,
+      "kind": "html_attr_aria-label",
+      "value": "Mostrar senha",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 43,
+      "kind": "html_attr_title",
+      "value": "Mostrar senha",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 54,
+      "kind": "html_attr_aria-label",
+      "value": "Mostrar senha",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 54,
+      "kind": "html_attr_title",
+      "value": "Mostrar senha",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 73,
+      "kind": "html_attr_aria-label",
+      "value": "Áreas de administração",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 80,
+      "kind": "html_attr_aria-label",
+      "value": "Tipo da nova etapa",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin.html",
+      "line": 83,
+      "kind": "html_attr_aria-label",
+      "value": "Dados do objeto",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/index.html",
+      "line": 9,
+      "kind": "html_text",
+      "value": "Acesso ao configurador | Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/index.html",
+      "line": 26,
+      "kind": "html_text",
+      "value": "Confirmar acesso",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/index.html",
+      "line": 33,
+      "kind": "html_text",
+      "value": "Sair",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/index.html",
+      "line": 39,
+      "kind": "html_text",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/index.html",
+      "line": 40,
+      "kind": "html_text",
+      "value": "Confirmar acesso ao configurador",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/index.html",
+      "line": 41,
+      "kind": "html_text",
+      "value": "O link recebido por email vale por 3 horas e pode ser usado uma única vez. Confirme abaixo para abrir o configurador.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/index.html",
+      "line": 42,
+      "kind": "html_text",
+      "value": "Confirmar e continuar",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/index.html",
+      "line": 43,
+      "kind": "html_text",
+      "value": "Verificando o link…",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/index.html",
+      "line": 44,
+      "kind": "html_text",
+      "value": "Voltar ao início",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/index.html",
+      "line": 26,
+      "kind": "html_attr_aria-label",
+      "value": "Casa em Módulos, início",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/index.html",
+      "line": 26,
+      "kind": "html_attr_alt",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/index.html",
+      "line": 28,
+      "kind": "html_attr_aria-label",
+      "value": "Abrir menu",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/index.html",
+      "line": 29,
+      "kind": "html_attr_aria-label",
+      "value": "Menu do site",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 14,
+      "kind": "html_text",
+      "value": "Gerenciar acessos | Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 45,
+      "kind": "html_text",
+      "value": "Gerenciar acessos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 52,
+      "kind": "html_text",
+      "value": "Sair",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 59,
+      "kind": "html_text",
+      "value": "Acesso do configurador",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 60,
+      "kind": "html_text",
+      "value": "Gerenciar convites temporários",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 61,
+      "kind": "html_text",
+      "value": "Envie um link de acesso individual, válido por três horas e com resgate único. Somente contas internas com papel admin ou staff podem usar esta página.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 63,
+      "kind": "html_text",
+      "value": "Entrar com Netlify Identity",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 65,
+      "kind": "html_text",
+      "value": "Email",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 66,
+      "kind": "html_text",
+      "value": "Senha",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 67,
+      "kind": "html_text",
+      "value": "Entrar",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 70,
+      "kind": "html_text",
+      "value": "Acesso restrito",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 70,
+      "kind": "html_text",
+      "value": "Esta conta não tem o papel admin ou staff.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 73,
+      "kind": "html_text",
+      "value": "Email do destinatário",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 74,
+      "kind": "html_text",
+      "value": "Enviar link de acesso",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 77,
+      "kind": "html_text",
+      "value": "Acessos recentes",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 77,
+      "kind": "html_text",
+      "value": "Atualizar",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 45,
+      "kind": "html_attr_aria-label",
+      "value": "Casa em Módulos, início",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 45,
+      "kind": "html_attr_alt",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 47,
+      "kind": "html_attr_aria-label",
+      "value": "Abrir menu",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.html",
+      "line": 48,
+      "kind": "html_attr_aria-label",
+      "value": "Menu do site",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 2,
+      "kind": "js_contextual",
+      "value": "Casa em Módulos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 3,
+      "kind": "js_contextual",
+      "value": "Móveis inteligentes, pensados para o seu espaço e para o seu orçamento.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 5,
+      "kind": "js_contextual",
+      "value": "cozinha",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 5,
+      "kind": "js_contextual",
+      "value": "Cozinha",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 5,
+      "kind": "js_contextual",
+      "value": "Cozinha modular",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 5,
+      "kind": "js_contextual",
+      "value": "Funcionalidade e beleza para o coração da casa.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 5,
+      "kind": "js_contextual",
+      "value": "Explorar a cozinha",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 6,
+      "kind": "js_contextual",
+      "value": "sala",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 6,
+      "kind": "js_contextual",
+      "value": "Sala",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 6,
+      "kind": "js_contextual",
+      "value": "Sala modular",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 6,
+      "kind": "js_contextual",
+      "value": "Conforto e estilo para viver bons momentos.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 7,
+      "kind": "js_contextual",
+      "value": "quarto",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 7,
+      "kind": "js_contextual",
+      "value": "Quarto",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 7,
+      "kind": "js_contextual",
+      "value": "Quarto modular",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 7,
+      "kind": "js_contextual",
+      "value": "Soluções inteligentes para o seu descanso.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 8,
+      "kind": "js_contextual",
+      "value": "escritorio",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 8,
+      "kind": "js_contextual",
+      "value": "Escritório",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 8,
+      "kind": "js_contextual",
+      "value": "Escritório modular",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 8,
+      "kind": "js_contextual",
+      "value": "Produtividade com organização e design.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 9,
+      "kind": "js_contextual",
+      "value": "lavanderia",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 9,
+      "kind": "js_contextual",
+      "value": "Lavanderia",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 9,
+      "kind": "js_contextual",
+      "value": "Lavanderia modular",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 9,
+      "kind": "js_contextual",
+      "value": "Praticidade que facilita o dia a dia.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 12,
+      "kind": "js_contextual",
+      "value": "Qualidade de móvel planejado",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 13,
+      "kind": "js_contextual",
+      "value": "Praticidade de um sistema modular",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 14,
+      "kind": "js_contextual",
+      "value": "Preço pensado para o seu projeto",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/data.js",
+      "line": 15,
+      "kind": "js_contextual",
+      "value": "Entrega e instalação especializada",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/landing.js",
+      "line": 32,
+      "kind": "js_contextual",
+      "value": "strong",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/landing.js",
+      "line": 96,
+      "kind": "js_contextual",
+      "value": "${environment.action}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/landing.js",
+      "line": 133,
+      "kind": "js_contextual",
+      "value": "strong",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/landing.js",
+      "line": 142,
+      "kind": "js_contextual",
+      "value": "Mostrar grupo ${index + 1}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/landing.js",
+      "line": 180,
+      "kind": "js_contextual",
+      "value": "Abrir menu",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/landing.js",
+      "line": 191,
+      "kind": "js_contextual",
+      "value": "Fechar menu",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/landing.js",
+      "line": 191,
+      "kind": "js_contextual",
+      "value": "Abrir menu",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/header-menu.js",
+      "line": 9,
+      "kind": "js_contextual",
+      "value": "Fechar menu",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/landing/header-menu.js",
+      "line": 9,
+      "kind": "js_contextual",
+      "value": "Abrir menu",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/how-it-works.js",
+      "line": 11,
+      "kind": "js_contextual",
+      "value": "Fechar menu",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/how-it-works.js",
+      "line": 11,
+      "kind": "js_contextual",
+      "value": "Abrir menu",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/how-it-works/how-it-works.js",
+      "line": 41,
+      "kind": "js_contextual",
+      "value": "h3",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/viewer.js",
+      "line": 26,
+      "kind": "js_contextual",
+      "value": "Nenhum módulo está visível no viewer neste momento.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/viewer.js",
+      "line": 92,
+      "kind": "js_contextual",
+      "value": "Mostrar vista ${index + 1}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/viewer.js",
+      "line": 95,
+      "kind": "js_contextual",
+      "value": "${currentView + 1} / ${keys.length}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/viewer.js",
+      "line": 102,
+      "kind": "js_contextual",
+      "value": "${currentView + 1} / ${count}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/viewer.js",
+      "line": 127,
+      "kind": "js_contextual",
+      "value": "img",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/viewer.js",
+      "line": 127,
+      "kind": "js_contextual",
+      "value": "lazy",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/viewer.js",
+      "line": 135,
+      "kind": "js_contextual",
+      "value": "scene",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/viewer.js",
+      "line": 135,
+      "kind": "js_contextual",
+      "value": "Selecionado: ${module.number} · ${module.title}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/viewer.js",
+      "line": 150,
+      "kind": "js_contextual",
+      "value": "Vista anterior",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/viewer.js",
+      "line": 152,
+      "kind": "js_contextual",
+      "value": "Próxima vista",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/viewer.js",
+      "line": 173,
+      "kind": "js_contextual",
+      "value": "Carregando informações publicadas…",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/viewer.js",
+      "line": 183,
+      "kind": "js_contextual",
+      "value": "Informações temporariamente indisponíveis. Tente novamente mais tarde.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 7,
+      "kind": "js_contextual",
+      "value": "Detalhe do módulo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 7,
+      "kind": "js_contextual",
+      "value": "focus",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 8,
+      "kind": "js_contextual",
+      "value": "Perspectiva aberta",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 8,
+      "kind": "js_contextual",
+      "value": "isometric-open",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 9,
+      "kind": "js_contextual",
+      "value": "Vista interna",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 9,
+      "kind": "js_contextual",
+      "value": "internal",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 10,
+      "kind": "js_contextual",
+      "value": "Vista frontal",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 10,
+      "kind": "js_contextual",
+      "value": "front",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 11,
+      "kind": "js_contextual",
+      "value": "Vista lateral",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 11,
+      "kind": "js_contextual",
+      "value": "side",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 12,
+      "kind": "js_contextual",
+      "value": "internal-front",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 12,
+      "kind": "js_contextual",
+      "value": "Vista interna / frontal",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 13,
+      "kind": "js_contextual",
+      "value": "Vista isométrica",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 13,
+      "kind": "js_contextual",
+      "value": "isometric",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 16,
+      "kind": "js_contextual",
+      "value": "components",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 16,
+      "kind": "js_contextual",
+      "value": "Componentes",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 16,
+      "kind": "js_contextual",
+      "value": "assets/icon-placeholder.svg",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 17,
+      "kind": "js_contextual",
+      "value": "requirements",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 17,
+      "kind": "js_contextual",
+      "value": "Requisitos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/data.js",
+      "line": 17,
+      "kind": "js_contextual",
+      "value": "assets/icon-placeholder.svg",
+      "status": "candidate-unreviewed"
+    }
+  ]
+}
