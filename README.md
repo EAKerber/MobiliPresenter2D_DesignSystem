@@ -1,5 +1,8 @@
 # MobiliPresenter2D Design System
 
+> **Direção arquitetural atual (21/10):** stack de interface exclusivamente **HTML/CSS/JS puros**; tokens e componentes nativos como base de TODAS as páginas (inclusive Landing); configuração por dados para Configurador/Viewer e ferramentas derivadas do seu núcleo. Consultar [arquitetura confirmada, gates e decisões técnicas pendentes](docs/ARCHITECTURE_VANILLA_COMPONENTS_AND_DOMAIN_DATA_2026-10-21.md). O plano experimental da PR #39 não equivale a framework adotado. Produto em `main@840a0cd`, PR #230 mesclada; conferir head ao retomar.
+
+
 Registro de decisões de design, estado de homologação e evidências recuperadas dos chats do inventário.
 
 - [`index.html`](index.html): documento visual navegável, independente e sem dependências.
