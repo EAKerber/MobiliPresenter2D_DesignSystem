@@ -159,7 +159,7 @@ Ler, nesta ordem:
 1. Este plano diretor e [estado atual](CSS-READINESS-AND-CURRENT-GATE-2026-10-20.md).
 2. [Matriz CSS/riscos](CSS-OWNERSHIP-RISKS-2026-10-20.md), `decisions.json`, `FINDINGS_REGISTER.md` e `PALETTE_CONFORMANCE.md`.
 3. [UI-ADR-001](ui-adr-001-declarative-boundaries-2026-10-20.md) a [UI-ADR-005](ui-adr-005-public-header-controller-2026-10-20.md); conferir qual técnica foi experimentada e qual **não** foi promovida.
-4. Revalidar `main`/PRs atuais antes de editar. Produto `main@1878ae1` e DS main `0b3e223` são apenas o estado observado em 20/10. A branch DS estava **1 commit atrás** de DS main e à frente com docs experimentais; GitHub indicava PR #39 mergeable. Não presumir ausência de conflitos futuros.
+4. Revalidar `main`/PRs atuais antes de editar. Produto `main@1878ae1` e DS main `0b3e223` são apenas o estado observado em 20/10. A branch DS está **1 commit atrás** de DS main e à frente com docs experimentais. Após mudanças simultâneas no README, o GitHub reportou PR #39 com `mergeable_state=dirty` (conflito) em 20/10; o commit principal alterou `README.md`, mapas e inventário. A branch passou a preservar a redação atual do README de `main`, mas **não foi criada integração da main na branch nem houve merge**. Recalcular conflito e reconciliar com revisão, sem force-push ou sobrescrita de inventário.
 5. Escolher um **único incremento/gate**, registrar plan→evidence→result→decision→rollback; anexar prints/relatórios relevantes e persistir sumário no repositório para sobreviver à retenção temporária de artifacts.
 6. Não juntar automaticamente as branches do piloto de benefícios e da navegação; manter histórias e decisões separadas.
 
