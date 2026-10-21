@@ -1,5 +1,8 @@
 # UI-P0/P1 — Checkpoint e plano de implementação incremental
 
+> **Aviso de versão (20/10/2026):** este arquivo documenta o plano P0/P1 originalmente formulado e contém estados textuais históricos que podem estar superados (por exemplo, P0-R “pendente” na matriz inicial). O estado **mais recente e canônico** desta trilha está no [plano diretor](DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md), no [gate atual CSS/P4-NAV](CSS-READINESS-AND-CURRENT-GATE-2026-10-20.md) e em [UI-ADR-002](ui-adr-002-landing-component-pilot-2026-10-20.md)–[UI-ADR-005](ui-adr-005-public-header-controller-2026-10-20.md). Preservar a matriz histórica para proveniência; não repetir procedimentos agora marcados como concluídos.
+
+
 **Data:** 2026-10-20  
 **Estado confirmado:** P0 inventário de ownership estático **documentado**, P1 prova de contrato **isolada** com 13 testes Node 22 nativos passando; **nenhum código de produção alterado**.  
 **Decisão técnica:** [UI-ADR-001](ui-adr-001-declarative-boundaries-2026-10-20.md).  
