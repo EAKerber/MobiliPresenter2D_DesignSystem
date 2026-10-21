@@ -23,7 +23,7 @@ A [captura persistida](../../visualEvidence/public/landing/g1-lavanderia-selecte
 
 **Hipótese técnica, ainda não comprovada como causa exclusiva:** no código publicado em `app/landing/landing.js` do commit `1878ae1`, `revealCard()` reage a qualquer borda fora da janela e escolhe o grupo pela posição da borda esquerda. Uma medição durante a auditoria encontrou o cartão cerca de 0,16 CSS px além da borda direita; arredondamento fracionário pode disparar a condição e, como a borda esquerda ainda está dentro da janela, escolher o grupo 1. O runtime confirma o comportamento; não confirma ainda qual margem/tolerância é a correção adequada.
 
-O issue [#207](https://github.com/EAKerber/MobiliPresenter2D/issues/207) cobre a indicação “Visualização em breve” para ambientes sem viewer e inclui teste de troca rápida, mas não registra esta divergência de paginação. Nenhum novo issue do produto foi aberto nesta etapa; FIND-016 permanece documentado aqui como defeito runtime e candidato a backlog específico.
+O issue [#207](https://github.com/EAKerber/MobiliPresenter2D/issues/207) cobre a indicação “Visualização em breve” para ambientes sem viewer e inclui teste de troca rápida, mas não registra esta divergência de paginação. A falha foi registrada no backlog do produto como [issue #224](https://github.com/EAKerber/MobiliPresenter2D/issues/224); o issue #207 continua separado por cobrir apenas a indicação de disponibilidade.
 
 ## Limites e continuidade
 
