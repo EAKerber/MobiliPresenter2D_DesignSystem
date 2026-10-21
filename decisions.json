@@ -315,7 +315,7 @@
             }
           ],
           "previousStatus": "approved-contextual-pair",
-          "reconsiderationReason": "O usuário rejeitou esteticamente #675F55 como tom secundário. A paleta A agora aprova #705C4B no papel secundário; aplicação nos seletores listados ainda precisa de validação DOM.",
+          "reconsiderationReason": "O usuário rejeitou esteticamente #675F55 como tom secundário. A paleta A aprovou #705C4B no papel secundário; PR #219 aplicou o par nos seletores listados e a PR #42 verificou-os no DOM publicado em tema claro. A validação é contextual e não cria token global.",
           "candidateReplacement": {
             "foreground": "#705C4B",
             "background": "#F0EDE8",
@@ -500,7 +500,7 @@
       "notApproved": [
         "Token global de superfície/texto ou extensão para outros componentes e temas",
         "Gradiente, opacidade, dimensões, espaçamento e comportamento responsivo",
-        "Contraste, superfície composta e comportamento responsivo precisam de validação runtime após a implementação."
+        "A composição e o par da legenda foram verificados no DOM publicado em tema escuro; tema claro, responsividade, superfícies compostas e extensão a outros componentes permanecem não verificados."
       ],
       "evidence": "Auditoria runtime em 2026-10-18 encontrou #C4BCB2 sobre #FCF9EF, 1,78:1. A prancha experimental comparou três cores sólidas; a seleção A fixa o par #F0EDE8 sobre #20211F com 13,85:1.",
       "implementationAuthorized": false,
