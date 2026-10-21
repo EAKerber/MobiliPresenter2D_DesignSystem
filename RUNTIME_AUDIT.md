@@ -262,3 +262,12 @@ O texto literal “Não foi possível carregar os dados administrativos.” é d
 ## Acompanhamento de publicação do FIND-007 (2026-10-20)
 
 A correção de sincronização de sessão foi integrada ao produto pela [PR #223](https://github.com/EAKerber/MobiliPresenter2D/pull/223), commit [`1878ae1`](https://github.com/EAKerber/MobiliPresenter2D/commit/1878ae1057ce7c6190e0c8cb08a1f3baadd49463). O deploy de produção [`6ad6c3b51b6be05647167f94`](https://app.netlify.com/projects/mobilipresenter2d/deploys/6ad6c3b51b6be05647167f94) está `ready` e publicou esse SHA. A verificação do menu após login não foi feita: o contexto de navegador disponível estava anônimo. FIND-007/#213 fica como correção publicada, validação autenticada pendente; sem essa validação não é marcado como resolvido.
+
+
+## Auditoria runtime pública G1 (2026-10-21)
+
+A auditoria G1 exercitou a landing pública e o painel econômico de “Como funciona” no deploy `6ad6c3b51b6be05647167f94`, commit `1878ae1057ce7c6190e0c8cb08a1f3baadd49463`. A [evidência detalhada](evidence/runtime/public-landing-g1-audit-2026-10-21.md) registra método e limites; a captura da divergência está em [visualEvidence](visualEvidence/public/landing/g1-lavanderia-selected-group1-390x844-2026-10-21.svg).
+
+O painel econômico passou nos estados e resoluções observados. Na landing, a seleção de Lavanderia a partir do grupo 2 mudou o painel de detalhe corretamente, mas fez a paginação voltar ao grupo 1 em 4 de 4 repetições a 390×844 CSS px (FIND-016). A inspeção do código aponta uma hipótese de condição de borda fracionária em `revealCard()`; a causa ainda não foi isolada e nenhuma alteração foi feita no produto. O issue #207 cobre a indicação de disponibilidade dos viewers, não esta divergência; o defeito foi registrado separadamente no [issue #224](https://github.com/EAKerber/MobiliPresenter2D/issues/224).
+
+O estado de `prefers-reduced-motion`, a onda de animação ativa e as falhas/rede lenta de imagem permanecem não verificados. Esta observação adiciona evidência funcional, sem decisão estética ou homologação nova.

@@ -119,6 +119,16 @@
           "state": "signed-out login form; menu closed",
           "deployedRevision": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
           "source": "Browser capture of the published production site in an isolated signed-out context"
+        },
+        {
+          "path": "visualEvidence/public/landing/g1-lavanderia-selected-group1-390x844-2026-10-21.svg",
+          "sourceRoute": "/",
+          "theme": "dark",
+          "viewport": "390x844 CSS px; crop 390x800",
+          "format": "SVG with embedded JPEG capture",
+          "state": "Lavanderia selected in detail panel while carousel group 1 is active",
+          "deployedRevision": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+          "source": "Browser capture of the published production site"
         }
       ],
       "currentPassDisplayed": [
@@ -145,10 +155,16 @@
           "viewport": "1036x582 CSS px",
           "theme": "light and dark",
           "state": "signed-out administrative login form; screenshot persisted under visualEvidence/private/admin-login"
+        },
+        {
+          "route": "/",
+          "viewport": "390x844 CSS px",
+          "theme": "dark",
+          "state": "Lavanderia selected; carousel returned to group 1"
         }
       ],
       "currentPassPersisted": true,
-      "currentPassNote": "Current signed-out login captures for the published product snapshot 483ef2e are persisted under visualEvidence/private/admin-login. Authenticated editor screenshots were omitted because they contain account/access data."
+      "currentPassNote": "G1 public runtime capture showing the selected Lavanderia detail while the carousel displays group 1 is persisted in visualEvidence/public/landing. Earlier public and private captures remain tied to their individual historical snapshots."
     },
     "authenticationCompletedByUser": true,
     "authenticatedScreenshotsPersisted": false,
@@ -503,6 +519,21 @@
       "relatedIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/214",
       "evidenceFile": "PRODUCT_RECONCILIATION_2026-10-19.md",
       "screenshotPersisted": false
+    },
+    {
+      "observedAt": "2026-10-21",
+      "route": "/",
+      "control": "mobile environment carousel and selection",
+      "status": "selected detail and active carousel page diverge; reproduced 4/4",
+      "theme": "dark",
+      "viewport": "390x844 CSS px",
+      "evidence": "After opening group 2 and selecting Lavanderia, aria-pressed remained true and the detail heading stayed Lavanderia, while aria-current changed to group 1 and the selected card was outside the visible group.",
+      "interpretation": "Published landing behavior confirms the mismatch. Fractional edge comparison in revealCard() is a code-based hypothesis, not a proven exclusive cause.",
+      "evidenceFile": "evidence/runtime/public-landing-g1-audit-2026-10-21.md",
+      "screenshotFile": "visualEvidence/public/landing/g1-lavanderia-selected-group1-390x844-2026-10-21.svg",
+      "relatedProductIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/224",
+      "relatedIssueScope": "Product issue #224 tracks this carousel pagination mismatch. Product issue #207 separately requests an availability message for environments without viewers and does not cover this defect.",
+      "productIssueCreated": true
     }
   ],
   "contrastScreening": {
@@ -853,7 +884,7 @@
     "source": "Static repository inventory from the previous stage",
     "note": "The reported runtime pairs were measured during this audit, not detected by product CI."
   },
-  "unverified": "Authenticated administration, access management, invitation flows and configurator,Full keyboard behavior: Escape, outside click, focus restoration and tab order,Runtime reduced-motion preference,Dynamic hover, pressed, focus, selection and loading state coverage,Contrast on images, gradients, pseudo-elements and transparent layers\\n- Authenticated screenshots from this pass were omitted because they contain account/access data; only the current public settled light-theme capture was persisted.\\n- Numeric non-text contrast for the raster light-theme logo remains unmeasured. The follow-up identified the 486 × 590 CSS viewport, asset source, opacity and filter; no stable visual defect was observed.",
+  "unverified": "Authenticated administration, access management, invitation flows and configurator,Full keyboard behavior: Escape, outside click, focus restoration and tab order,Runtime reduced-motion preference,Dynamic hover, pressed, focus, selection and loading state coverage,Contrast on images, gradients, pseudo-elements and transparent layers\\n- Authenticated screenshots from this pass were omitted because they contain account/access data; only the current public settled light-theme capture was persisted.\\n- Numeric non-text contrast for the raster light-theme logo remains unmeasured. The follow-up identified the 486 × 590 CSS viewport, asset source, opacity and filter; no stable visual defect was observed.\\nG1-R2 runtime reduced-motion preference, active wave hint, slow-network and image-failure states were not verified; FIND-016 correction has not been implemented or validated.",
   "authenticatedSessionObservations": [
     {
       "route": "/admin.html",
@@ -1317,5 +1348,72 @@
         "Contrast ratio is supported by the separately recorded computed DOM measurement."
       ]
     }
-  ]
+  ],
+  "g1PublicRuntimeAudit": {
+    "observedAt": "2026-10-21",
+    "productRepository": "EAKerber/MobiliPresenter2D",
+    "productCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+    "netlifyDeployId": "6ad6c3b51b6be05647167f94",
+    "readOnly": true,
+    "productCodeChanged": false,
+    "authenticatedDataRead": false,
+    "checks": {
+      "G1R1": {
+        "route": "/how-it-works/",
+        "status": "passed for exercised states",
+        "viewportsCssPx": [
+          "390x844",
+          "768x1024",
+          "1366x768"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "results": [
+          "Accordion state and content updated together",
+          "Enter opened an item",
+          "Activating the open item collapsed its detail panel",
+          "Detail panel followed the proper responsive grid row",
+          "No horizontal overflow observed in sampled viewports"
+        ],
+        "limitations": [
+          "Only sampled states and viewports were exercised"
+        ]
+      },
+      "G1R2": {
+        "route": "/",
+        "status": "partial; FIND-016 reproduced",
+        "viewportsCssPx": [
+          "390x844"
+        ],
+        "theme": "dark",
+        "results": [
+          "Settled intro splash was hidden and did not capture pointer input",
+          "Kitchen CTA navigated to /viewer/",
+          "All five environment selections updated the detail panel"
+        ],
+        "defect": {
+          "id": "FIND-016",
+          "reproductions": 4,
+          "selectedEnvironment": "Lavanderia",
+          "selectedEnvironmentRemainedSelected": true,
+          "carouselPageAfterSelection": 1,
+          "selectedCardVisible": false,
+          "evidenceFile": "evidence/runtime/public-landing-g1-audit-2026-10-21.md",
+          "screenshotFile": "visualEvidence/public/landing/g1-lavanderia-selected-group1-390x844-2026-10-21.svg",
+          "likelyCause": "Potential fractional edge overflow in revealCard(); code inspection shows a strict edge comparison and page choice by the left edge. Not isolated.",
+          "productIssueUrl": "https://github.com/EAKerber/MobiliPresenter2D/issues/224",
+          "productIssueCreated": true
+        },
+        "limitations": [
+          "prefers-reduced-motion not emulated",
+          "Active wave hint not captured",
+          "Slow network and image failure not simulated"
+        ]
+      }
+    }
+  },
+  "recordSetSemantics": "This file is a cumulative evidence record. The root-level observedAt/deployedRevision fields describe the original 2026-10-18 snapshot, not the latest audit. Later passes are append-only named sections (for example g1PublicRuntimeAudit); use each section's own date, product commit and deploy ID as the authority for that pass.",
+  "authenticationCompletedByUserScope": "Historical root-level flag: the user completed authentication during the 2026-10-19 private runtime audit. It does not mean that authentication was performed in the 2026-10-21 G1 public audit; that pass was anonymous and read no authenticated data."
 }
