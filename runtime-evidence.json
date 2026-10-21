@@ -531,9 +531,9 @@
       "interpretation": "Published landing behavior confirms the mismatch. Fractional edge comparison in revealCard() is a code-based hypothesis, not a proven exclusive cause.",
       "evidenceFile": "evidence/runtime/public-landing-g1-audit-2026-10-21.md",
       "screenshotFile": "visualEvidence/public/landing/g1-lavanderia-selected-group1-390x844-2026-10-21.svg",
-      "relatedProductIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/207",
-      "relatedIssueScope": "Issue #207 requests an availability message for environments without viewers; it does not cover the carousel page mismatch.",
-      "productIssueCreated": false
+      "relatedProductIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/224",
+      "relatedIssueScope": "Product issue #224 tracks this carousel pagination mismatch. Product issue #207 separately requests an availability message for environments without viewers and does not cover this defect.",
+      "productIssueCreated": true
     }
   ],
   "contrastScreening": {
