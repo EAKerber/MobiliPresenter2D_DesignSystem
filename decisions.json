@@ -67,7 +67,7 @@
       "wideLayoutPatternsApproved": {
         "publicPages": "Option A: retain the existing expanded/wide public-page pattern with the logo at left, public navigation exposed horizontally, and contact/theme controls in the established right-side area.",
         "privatePages": "Option B: logo and current page/area identifier at left; theme control and hamburger at right, with the hamburger at the far edge.",
-        "secondaryNavigationPages": "Use a viewer-like contextual header for pages intended to be reached from another page. Move the theme control inside the header. In the right-side cluster, place the theme control to the left of a hamburger/menu at the far edge; retain contextual return navigation.",
+        "secondaryNavigationPages": "Use a viewer-like contextual header for pages reached from another page. Brand remains at far left. In the right-side control cluster, place the contextual return link immediately BEFORE the theme control, followed by the hamburger/menu at the far edge. Keep the theme control inside the header. Approved alignment clarification 2026-10-21.",
         "scope": "Approved for expanded/wide layouts only. Breakpoint values and compact/mobile compositions are recorded separately in compactLayoutPatternsApproved."
       },
       "implementationAuthorized": false,
@@ -76,7 +76,7 @@
       "compactLayoutPatternsApproved": {
         "publicPages": "Option A: preserve a single-row header. Keep the brand at left; place the compact theme control immediately before the hamburger at the far right. Group public page navigation and the existing contact access in the hamburger menu.",
         "privatePages": "Option A: preserve a single row with the brand and current page/area identifier together at left; place the theme control immediately before the hamburger at the far right. At very narrow widths, apply compactNarrowFitRule.",
-        "secondaryNavigationPages": "Option A: preserve a single row with the brand and contextual return label together at left; place the theme control before the menu/hamburger at the far right.",
+        "secondaryNavigationPages": "Option A corrected 2026-10-21: preserve a single row with only the brand at left; align the contextual return link at right immediately before the theme control, then the hamburger/menu at the far edge. Order: BRAND [flexible space] RETURN THEME MENU.",
         "scope": "Estrutura aprovada mais a regra de encaixe estreito. A especificação técnica recomendada registra valores estreitos de logo e controles, limiar do container e fallback abaixo da largura mínima; esses valores vêm de medições aproximadas e exigem validação runtime. Ela não autoriza implementação no produto nem define padrões para outros componentes."
       },
       "compactNarrowFitRule": {
