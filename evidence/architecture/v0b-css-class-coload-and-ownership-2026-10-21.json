@@ -1,0 +1,991 @@
+{
+  "schema": "M2DV0BCSSOverlap/0.1",
+  "productCommit": "840a0cda361b3ce215fc934badc26df72dffc6e8",
+  "method": "Lexical .class selector occurrence across 8 stylesheet sources and HTML link load order per route. Does NOT parse CSS specificity/at-rules or prove computed style conflict. Class names in attribute strings/comments may be counted. Data-theme loading and JS-added classes may change runtime effects.",
+  "routes": {
+    "/": [
+      "app/public-theme.css",
+      "app/landing/landing.css",
+      "app/ui-theme.css"
+    ],
+    "/about/": [
+      "app/public-theme.css",
+      "app/landing/landing.css",
+      "app/about/about.css",
+      "app/ui-theme.css"
+    ],
+    "/how-it-works/": [
+      "app/public-theme.css",
+      "app/landing/landing.css",
+      "app/how-it-works/how-it-works.css",
+      "app/ui-theme.css"
+    ],
+    "/viewer/": [
+      "app/public-theme.css",
+      "app/viewer/viewer.css",
+      "app/ui-theme.css"
+    ],
+    "/config/": [
+      "app/styles.css",
+      "app/ui-theme.css"
+    ],
+    "/admin.html": [
+      "app/admin/admin.css",
+      "app/ui-theme.css"
+    ],
+    "/access/": [
+      "app/public-theme.css",
+      "app/ui-theme.css"
+    ],
+    "/access/manage.html": [
+      "app/public-theme.css",
+      "app/ui-theme.css"
+    ]
+  },
+  "sourceBlobSHAs": {
+    "app/public-theme.css": "e2add5053fbc1a897c035eb854b168c9711d2d18",
+    "app/ui-theme.css": "b0f04c566183ba1f9c015f5d2a827db9e91dea45",
+    "app/landing/landing.css": "91a7bc7cd912ac7f0a9e81c16fcee576dc50a4ea",
+    "app/about/about.css": "b58689554cccd9493810fb66a383be2cb30c595a",
+    "app/how-it-works/how-it-works.css": "52f36d212d286ef5157a20fc822cbfab25e09b2f",
+    "app/viewer/viewer.css": "90d23678630c17f63ac343bfd7e5e1ce3bbcb1b2",
+    "app/styles.css": "d43e6fb5e66133d2389b5c39b165b76b13cfa868",
+    "app/admin/admin.css": "1b3b41e166d44dbf70c1096db36255398aff8493"
+  },
+  "metrics": {
+    "distinctClassNames": 435,
+    "multiStylesheetNames": 84,
+    "coLoadedMultiSheetNames": 69
+  },
+  "overlap": [
+    {
+      "selectorClass": "eyebrow",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/landing/landing.css",
+        "app/about/about.css",
+        "app/how-it-works/how-it-works.css",
+        "app/viewer/viewer.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/",
+        "/about/",
+        "/how-it-works/",
+        "/viewer/",
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "button-copper",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/landing/landing.css"
+      ],
+      "coLoadedOn": [
+        "/",
+        "/about/",
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "button-dark",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/landing/landing.css"
+      ],
+      "coLoadedOn": [
+        "/",
+        "/about/",
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "button-primary",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/landing/landing.css"
+      ],
+      "coLoadedOn": [
+        "/",
+        "/about/",
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "header-actions",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/landing/landing.css"
+      ],
+      "coLoadedOn": [
+        "/",
+        "/about/",
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "header-cta",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/landing/landing.css"
+      ],
+      "coLoadedOn": [
+        "/",
+        "/about/",
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "hero",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/landing/landing.css"
+      ],
+      "coLoadedOn": [
+        "/",
+        "/about/",
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "menu-open",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/landing/landing.css"
+      ],
+      "coLoadedOn": [
+        "/",
+        "/about/",
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "site-header",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/landing/landing.css",
+        "app/how-it-works/how-it-works.css"
+      ],
+      "coLoadedOn": [
+        "/",
+        "/about/",
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "story-section",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/landing/landing.css"
+      ],
+      "coLoadedOn": [
+        "/",
+        "/about/",
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "button--primary",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/styles.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/config/",
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "button--secondary",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/styles.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/config/",
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "module-card",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/how-it-works/how-it-works.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": [
+        "/how-it-works/",
+        "/config/"
+      ]
+    },
+    {
+      "selectorClass": "module-detail__dimension-line",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": [
+        "/viewer/",
+        "/config/"
+      ]
+    },
+    {
+      "selectorClass": "module-detail__view-shape",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": [
+        "/viewer/",
+        "/config/"
+      ]
+    },
+    {
+      "selectorClass": "admin-field",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "admin-form",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "admin-topbar",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "admin-topbar__actions",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "comparison-marker-featured",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/how-it-works/how-it-works.css"
+      ],
+      "coLoadedOn": [
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "data-field",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "detail-row",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ],
+      "coLoadedOn": [
+        "/viewer/"
+      ]
+    },
+    {
+      "selectorClass": "dimension-pill",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ],
+      "coLoadedOn": [
+        "/viewer/"
+      ]
+    },
+    {
+      "selectorClass": "flow-actions",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": [
+        "/config/"
+      ]
+    },
+    {
+      "selectorClass": "flow-nav",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": [
+        "/config/"
+      ]
+    },
+    {
+      "selectorClass": "flow-step",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": [
+        "/config/"
+      ]
+    },
+    {
+      "selectorClass": "foundation-item",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/how-it-works/how-it-works.css"
+      ],
+      "coLoadedOn": [
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "foundation-number",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/how-it-works/how-it-works.css"
+      ],
+      "coLoadedOn": [
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "global-option",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": [
+        "/config/"
+      ]
+    },
+    {
+      "selectorClass": "handle-option",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": [
+        "/config/"
+      ]
+    },
+    {
+      "selectorClass": "hierarchy-choice-options",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "hierarchy-item",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "hierarchy-section",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "integration-callout",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/how-it-works/how-it-works.css"
+      ],
+      "coLoadedOn": [
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "material-availability-list",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "material-targets",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "module-card__inspect",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": [
+        "/config/"
+      ]
+    },
+    {
+      "selectorClass": "module-detail__price",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": [
+        "/config/"
+      ]
+    },
+    {
+      "selectorClass": "multi-picker",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "overview-highlights",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ],
+      "coLoadedOn": [
+        "/viewer/"
+      ]
+    },
+    {
+      "selectorClass": "panel",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": [
+        "/config/"
+      ]
+    },
+    {
+      "selectorClass": "price-state",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": [
+        "/config/"
+      ]
+    },
+    {
+      "selectorClass": "price-state__breakdown",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": [
+        "/config/"
+      ]
+    },
+    {
+      "selectorClass": "process-flow",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/how-it-works/how-it-works.css"
+      ],
+      "coLoadedOn": [
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "process-section",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/how-it-works/how-it-works.css"
+      ],
+      "coLoadedOn": [
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "production-intro",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/how-it-works/how-it-works.css"
+      ],
+      "coLoadedOn": [
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "production-panel",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/how-it-works/how-it-works.css"
+      ],
+      "coLoadedOn": [
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "quality-copy",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/how-it-works/how-it-works.css"
+      ],
+      "coLoadedOn": [
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "quality-lead",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/how-it-works/how-it-works.css"
+      ],
+      "coLoadedOn": [
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "site-footer",
+      "stylesheets": [
+        "app/landing/landing.css",
+        "app/how-it-works/how-it-works.css"
+      ],
+      "coLoadedOn": [
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "stage-name",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "stage-number",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/how-it-works/how-it-works.css"
+      ],
+      "coLoadedOn": [
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "stage-pool-item",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "stage-unassigned",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "study-art",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/how-it-works/how-it-works.css"
+      ],
+      "coLoadedOn": [
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "study-band",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/how-it-works/how-it-works.css"
+      ],
+      "coLoadedOn": [
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "study-copy",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/how-it-works/how-it-works.css"
+      ],
+      "coLoadedOn": [
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "study-topics",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/how-it-works/how-it-works.css"
+      ],
+      "coLoadedOn": [
+        "/how-it-works/"
+      ]
+    },
+    {
+      "selectorClass": "summary-list",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": [
+        "/config/"
+      ]
+    },
+    {
+      "selectorClass": "technical-view",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ],
+      "coLoadedOn": [
+        "/viewer/"
+      ]
+    },
+    {
+      "selectorClass": "technical-view--focus",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ],
+      "coLoadedOn": [
+        "/viewer/"
+      ]
+    },
+    {
+      "selectorClass": "text-button",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": [
+        "/admin.html"
+      ]
+    },
+    {
+      "selectorClass": "topbar",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": [
+        "/config/"
+      ]
+    },
+    {
+      "selectorClass": "topbar__inner",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": [
+        "/config/"
+      ]
+    },
+    {
+      "selectorClass": "ui-theme-toggle__label-long",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ],
+      "coLoadedOn": [
+        "/viewer/"
+      ]
+    },
+    {
+      "selectorClass": "ui-theme-toggle__label-short",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ],
+      "coLoadedOn": [
+        "/viewer/"
+      ]
+    },
+    {
+      "selectorClass": "ui-theme-toggle--header",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ],
+      "coLoadedOn": [
+        "/viewer/"
+      ]
+    },
+    {
+      "selectorClass": "viewer-brand__logo",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ],
+      "coLoadedOn": [
+        "/viewer/"
+      ]
+    },
+    {
+      "selectorClass": "viewer-header",
+      "stylesheets": [
+        "app/ui-theme.css",
+        "app/viewer/viewer.css"
+      ],
+      "coLoadedOn": [
+        "/viewer/"
+      ]
+    },
+    {
+      "selectorClass": "brand",
+      "stylesheets": [
+        "app/landing/landing.css",
+        "app/styles.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": []
+    },
+    {
+      "selectorClass": "brand__logo",
+      "stylesheets": [
+        "app/styles.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": []
+    },
+    {
+      "selectorClass": "button",
+      "stylesheets": [
+        "app/landing/landing.css",
+        "app/styles.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": []
+    },
+    {
+      "selectorClass": "finish-layer",
+      "stylesheets": [
+        "app/viewer/viewer.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": []
+    },
+    {
+      "selectorClass": "layer-group",
+      "stylesheets": [
+        "app/viewer/viewer.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": []
+    },
+    {
+      "selectorClass": "menu-toggle",
+      "stylesheets": [
+        "app/landing/landing.css",
+        "app/viewer/viewer.css"
+      ],
+      "coLoadedOn": []
+    },
+    {
+      "selectorClass": "scene-hotspot",
+      "stylesheets": [
+        "app/viewer/viewer.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": []
+    },
+    {
+      "selectorClass": "scene-hotspot__tag",
+      "stylesheets": [
+        "app/viewer/viewer.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": []
+    },
+    {
+      "selectorClass": "scene-hotspots",
+      "stylesheets": [
+        "app/viewer/viewer.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": []
+    },
+    {
+      "selectorClass": "scene-layer",
+      "stylesheets": [
+        "app/viewer/viewer.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": []
+    },
+    {
+      "selectorClass": "selection-frame",
+      "stylesheets": [
+        "app/viewer/viewer.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": []
+    },
+    {
+      "selectorClass": "structure-layer",
+      "stylesheets": [
+        "app/viewer/viewer.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": []
+    },
+    {
+      "selectorClass": "structure-layer--highlight",
+      "stylesheets": [
+        "app/viewer/viewer.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": []
+    },
+    {
+      "selectorClass": "structure-layer--shadow",
+      "stylesheets": [
+        "app/viewer/viewer.css",
+        "app/styles.css"
+      ],
+      "coLoadedOn": []
+    },
+    {
+      "selectorClass": "visually-hidden",
+      "stylesheets": [
+        "app/styles.css",
+        "app/admin/admin.css"
+      ],
+      "coLoadedOn": []
+    }
+  ],
+  "priorityContracts": [
+    {
+      "family": "public-header-and-menu",
+      "selectors": [
+        "site-header",
+        "menu-open",
+        "menu-toggle",
+        "header-actions",
+        "header-cta"
+      ],
+      "classification": "same public contract for primary; secondary has dedicated layout; scope contextual CSS; beware post-230 viewer NAV005",
+      "action": "behavior controller first, CSS/HTML fragment later"
+    },
+    {
+      "family": "viewer-header",
+      "selectors": [
+        "viewer-header",
+        "ui-theme-toggle"
+      ],
+      "classification": "shared theme override and dedicated viewer layout may co-load; preserve secondary NAV005",
+      "action": "compare computed CSS/geometry at 320/390/486/768/1366 light/dark"
+    },
+    {
+      "family": "button",
+      "selectors": [
+        "button",
+        "button--primary",
+        "button--secondary"
+      ],
+      "classification": "homonym/contextual; admin/config/public base declarations have different sizes and state semantics",
+      "action": "never bulk merge; group by semantic contract"
+    },
+    {
+      "family": "editorial-and-selection-card",
+      "selectors": [
+        "module-card"
+      ],
+      "classification": "same selector string used for unrelated editorial and configurator cards; ui-theme.css overrides may affect some routes",
+      "action": "risk check for styling bleed, do not generalize by name"
+    },
+    {
+      "family": "visually-hidden",
+      "selectors": [
+        "visually-hidden"
+      ],
+      "classification": "same declarations observed in Admin and Config local CSS; not co-loaded in current routes",
+      "action": "valid utility candidate but narrow maintenance saving; moving to shared CSS changes import ordering"
+    },
+    {
+      "family": "focus",
+      "selectors": [
+        "ui-theme-toggle"
+      ],
+      "classification": "ui-theme CSS declares --ui-theme-focus light #6e512e/dark #d8bc7c and 3px offset2 on toggle; DS VIS-002/EST-02 approved reference focus light #8B6A40 dark #D8BC7C, 4px offset3 (scoped); mismatch candidate, not generic refactor",
+      "action": "separate approved correction from architecture patch; verify in browser"
+    },
+    {
+      "family": "scene-hotspot",
+      "selectors": [
+        "scene-hotspot"
+      ],
+      "classification": "shared class between Viewer/Config but their respective scene CSS NOT co-loaded; geometry, selection/focus differ",
+      "action": "hold CSS extraction until scene tests"
+    },
+    {
+      "family": "eyebrow",
+      "selectors": [
+        "eyebrow"
+      ],
+      "classification": "same editorial term with context-dependent colors and typography across public/admin/editorial",
+      "action": "variant not global token until role/contrast validated"
+    }
+  ],
+  "limitations": [
+    "no DOM execution or authenticated browser checks in this audit",
+    "stylesheet order inferred from HTML sources, not CSSOM",
+    "no import/at-rule specificity equivalence for candidate extraction",
+    "no declaration equality proof for entire selector families",
+    "approved visual tokens need separate DS decision path"
+  ]
+}
