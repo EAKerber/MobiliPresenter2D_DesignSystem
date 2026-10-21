@@ -21,8 +21,8 @@ A classificação é por **semântica e navegação**, não pela aparência, nom
 **Público de primeiro nível, largo:** opção A, marca à esquerda, links principais apresentados horizontalmente e contato/tema no grupo de controles à direita.  
 **Público de primeiro nível, compacto:** opção A, uma linha com marca à esquerda; tema imediatamente antes do hambúrguer na extrema direita; navegação pública e contato dentro do menu.
 
-**Viewer/profundidade 2, largo:** `secondaryNavigationPages`, padrão **contextual semelhante ao Viewer**. Marca e retorno contextual presentes; tema **dentro do cabeçalho**, à esquerda do hambúrguer/menu situado no extremo direito.  
-**Viewer/profundidade 2, compacto:** opção A, **uma linha**; marca + rótulo de retorno/contexto à esquerda; tema antes do menu/hambúrguer à direita. Preservar papel contextual e opções públicas globais.  
+**Viewer/profundidade 2, largo (ajuste do usuário em 21/10/2026):** `secondaryNavigationPages`: **logo isolada à esquerda**; no extremo direito, nesta ordem, **← Ambientes → tema → hambúrguer**. O retorno contextual não pertence ao grupo da marca. Tema fica dentro do header.  
+**Viewer/profundidade 2, compacto (ajuste do usuário em 21/10/2026):** opção A, **uma linha** sempre que couber; **marca à esquerda**, com **retorno contextual + tema + hambúrguer à direita**. Respeitar min-width e regra de redução já aprovadas quando aplicáveis, sem inventar uma regra universal de breakpoints. Preservar menu global e retorno.  
 **Conteúdo do Viewer:** a identificação específica do ambiente fica separada do header; controles da cena ficam no conteúdo, não no cabeçalho. **Não marcar “Ambientes” falsamente como a página ativa** da subpágina.  
 **Não homologado:** o texto/traçado de breadcrumb “Ambientes › Cozinha” é apenas um exemplo. Nem todas as dimensões, tipografia/cores de variantes, breakpoints e labels excepcionalmente longos estão resolvidos. O contrato de um header secundário **não é** idêntico ao da primeira profundidade.
 
@@ -60,3 +60,10 @@ Antes de editar UI, criar issue, estimar CSS, formular um roadmap ou revisar um 
 `decisions.json` é autoridade **para decisões**; este índice ajuda a descobrir o caminho correto **sem duplicar homologações**; `DECISION_APPLICATION_MAP.md` liga contratos a rotas; issues/roadmaps do produto contêm a proposta de implementação; CI e capturas contêm evidência e não alteram aprovações. Alterações de NAV-005 devem atualizar essas ligações na mesma revisão, sem sobrescrever campos aprovados.
 
 O objetivo é impedir o erro antes de escrever, não depender de uma lembrança posterior do usuário para corrigi-lo.
+
+
+## Complemento 21/10/2026 — correção visual após preview do Viewer
+
+O usuário confirmou que o header da PR [#230](https://github.com/EAKerber/MobiliPresenter2D/pull/230) está aprovado com **uma única exceção de alinhamento**: manter a logo à esquerda e mover o link “← Ambientes” para o grupo da direita, imediatamente antes do seletor de tema, seguido pelo menu. **Ordem: `LOGO      [espaço flexível]      ← Ambientes   TEMA   MENU`.** Isto substitui a redação antiga de `NAV-005.compactLayoutPatternsApproved.secondaryNavigationPages` que colocava marca e retorno juntos à esquerda; `decisions.json` foi atualizado com a redação correta.
+
+*Não inferir desse ajuste uma mudança nos headers de primeiro nível, privados, cena ou controle administrativo. Verificação necessária: inspeção nas larguras de 320–1366 px, temas e foco/teclado.*
