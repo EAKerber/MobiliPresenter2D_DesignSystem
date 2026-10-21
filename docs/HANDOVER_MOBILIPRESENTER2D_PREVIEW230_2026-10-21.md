@@ -98,3 +98,18 @@ No head `24bbeadb`, `current-build`, `current-asset-gates` e `variants` passaram
 **Checklist curto para novo agente:** o Viewer esperado é **LOGO [flex] ← Ambientes | Tema | Menu**; código já ajustado em #230; preço **não existe ainda** e toggle deverá ficar em Admin → Preços; quatro incrementos automatizados passam, mas login real/CI alheia/screenshots WebKit não fecharam; PR draft sem merge; evitar novos previews. Em dúvida, consultar contratos canônicos antes de alterar.
 
 **Este documento é recuperação de contexto e não solicita ação de release.**
+
+
+## 7. Readback de persistência pós-interrupção (21/10/2026)
+
+Este checkpoint foi reconferido no GitHub depois da interrupção do chat, sem alterar o código do produto:
+
+- **Produto:** `main@1878ae1057ce7c6190e0c8cb08a1f3baadd49463` permanece inalterada. PR [#230](https://github.com/EAKerber/MobiliPresenter2D/pull/230) continua aberta em **draft**, `head@24bbeadba8ec231c8c9f603c4da5116ab8a5ce3e`, 17 commits à frente/0 atrás, `mergeable_state=unstable` devido a checks não verdes. Nenhum merge nem deploy foi solicitado nesta retomada.
+- **Confirmação do código existente:** `app/viewer/index.html` do próprio head já contém `viewer-header__context` (logo isolada) e `viewer-header__actions` (retorno `← Ambientes`, tema inserido por `ui-theme.js`, botão/menu); `viewer.css?v=viewer-nav005-p2` está versionado. Não criar nova alteração antes de conferir o preview do SHA correto.
+- **Contratos de design:** o `decisions.json` atual segue com a correção explícita em `NAV-005.wideLayoutPatternsApproved.secondaryNavigationPages` e `NAV-005.compactLayoutPatternsApproved.secondaryNavigationPages`. Não iniciar nova rodada de homologação apenas para relembrar a ordem.
+- **Persistência recíproca no produto:** a [issue-mestra #229](https://github.com/EAKerber/MobiliPresenter2D/issues/229) agora começa com **HANDOVER PRIORITÁRIO**, incluindo SHA, arquivos, testes, fluxos e bloqueios; a [issue #225](https://github.com/EAKerber/MobiliPresenter2D/issues/225) documenta o readback da posição já aplicada; o body da [PR #230](https://github.com/EAKerber/MobiliPresenter2D/pull/230) contém a mesma orientação e permanece **HOLD**.
+- **Produção:** site Netlify `mobilipresenter2d` / `https://casaemmodulos.casa`, último deploy publicado identificado `6ad6c3b51b6be05647167f94` (`ready`). **Esse ID refere-se à produção, não ao preview da PR**; a URL de preview específica continua sem readback independente neste checkpoint.
+- **Teste relevante mais recente do head:** [GitHub Actions #39627779877](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39627779877), integrado, PASS 11/11 auth unit, 8/8 accordion funcional (2 screenshots WebKit diferentes para revisão), 20/20 Viewer NAV-005, 32/32 Viewer editorial. CI geral do PR **não está toda verde**; classificar as outras falhas antes de merge.
+- **Produto #228:** preço base ainda **não implementado**, controle global OFF aprovado e esperado em **Admin → Preços**; publicação V5/projeção allowlisted, revogação e valor zero permanecem gate separado.
+
+**Estado do handover:** recuperação documental concluída em **ambos os repositórios, sem novo preview e sem commits de produto**. Novos agentes devem começar pela issue #229 e pelo presente documento, confirmar se os SHAs ainda são atuais e resolver gates de preview/autenticação/CI antes de pedir merge.
