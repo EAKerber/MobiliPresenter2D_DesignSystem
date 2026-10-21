@@ -1402,7 +1402,9 @@
           "selectedCardVisible": false,
           "evidenceFile": "evidence/runtime/public-landing-g1-audit-2026-10-21.md",
           "screenshotFile": "visualEvidence/public/landing/g1-lavanderia-selected-group1-390x844-2026-10-21.svg",
-          "likelyCause": "Potential fractional edge overflow in revealCard(); code inspection shows a strict edge comparison and page choice by the left edge. Not isolated."
+          "likelyCause": "Potential fractional edge overflow in revealCard(); code inspection shows a strict edge comparison and page choice by the left edge. Not isolated.",
+          "productIssueUrl": "https://github.com/EAKerber/MobiliPresenter2D/issues/224",
+          "productIssueCreated": true
         },
         "limitations": [
           "prefers-reduced-motion not emulated",
