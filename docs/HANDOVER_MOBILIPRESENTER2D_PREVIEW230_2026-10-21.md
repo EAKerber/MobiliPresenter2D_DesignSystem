@@ -140,3 +140,9 @@ Este checkpoint foi reconferido no GitHub depois da interrupção do chat, sem a
 **Leitura correta:** os checks vermelhos conhecidos são preexistentes e merecem dívida de manutenção própria, mas isso não homologa login real nem prova ausência total de regressão. Falhas dos browser checks de domínio envolvem pré-condições antigas de acesso a `/config/`, hoje privado; corrigir a **estratégia de teste** com sessão autorizada/fixtures locais explícitas, sem abrir a rota nem omitir a autenticação.
 
 **HOLD final da PR #230:** 1) inspeção visual real do preview SHA `24bbeadb` para NAV-005, telas estreitas e foco; 2) WebKit 390 claro/escuro em `how-it-works` (diferenças de pixels sem diferença funcional conhecida); 3) fluxo controlado de primeiro login/reauth/menu/logout, incluindo iPad quando possível; 4) `https://wa.me/` sem destinatário no Viewer: validar contato oficial antes de substituir; 5) aprovação explícita para merge. Não criar preview adicional, não alterar preços, não permitir GET privado.
+
+## 9. Feedback do usuário — login e menu iniciais no preview (21/10/2026)
+
+O usuário informou que, **no Deploy Preview #230**, conseguiu fazer login e o **menu apareceu correto logo de início**. Registrar como **PASS manual informado pelo usuário** para *login bem-sucedido* e *estado inicial do menu no recorte observado*. Não converter isso em comprovação independente de toda a jornada de autenticação, nem inferir browser/dispositivo, ausência de recarga, latência ou cenário de sessão nova sem informação adicional.
+
+**Ainda pendente:** logout/relogin, expiração e renovação de sessão, tratamento de 401 transitório/403 terminal, comportamento entre abas e em iPad/Chrome/Safari, testes de falha de bootstrap e inspeção visual final do Viewer do head atualizado. **PR #230 segue DRAFT/HOLD**; não realizar merge nem deploy adicional por este feedback.
