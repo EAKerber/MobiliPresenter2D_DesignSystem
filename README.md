@@ -3,6 +3,7 @@
 Registro de decisões de design, estado de homologação e evidências recuperadas dos chats do inventário.
 
 - [`index.html`](index.html): documento visual navegável, independente e sem dependências.
+- [`docs/ROADMAP_AND_CURRENT_STAGE_2026-10-21.md`](docs/ROADMAP_AND_CURRENT_STAGE_2026-10-21.md): plano geral, etapa atual, critérios de conformidade e continuidade.
 - [`decisions.json`](decisions.json): registro estruturado das decisões, pendências, limites e itens a recuperar.
 - [`DECISION_APPLICATION_MAP.md`](DECISION_APPLICATION_MAP.md): cruzamento de decisões com rotas, HTML, CSS carregado e evidência runtime.
 - [`RUNTIME_AUDIT.md`](RUNTIME_AUDIT.md) e [`runtime-evidence.json`](runtime-evidence.json): observações de navegação, estados de sessão, capturas e limites da auditoria no site publicado.
