@@ -1,5 +1,8 @@
 # MobiliPresenter2D Design System
 
+> **V0-B auditado (21/10):** [fontes JS, co-carregamento CSS, pontos cegos i18n e primeiro piloto](docs/V0B_SOURCE_COVERAGE_CSS_OWNERSHIP_AND_FIRST_PATCH_GATE_2026-10-21.md). 54 fontes JS contabilizadas (52 lidas, 2 dados grandes não inspecionados), 84 nomes CSS em múltiplas folhas (69 co-carregados em alguma rota, **não** 69 bugs). P-COMP-01/menu público está **especificado, não implementado**; teste runtime permanece pendente.
+
+
 > **V0-A realizado (21/10/2026):** [auditoria pós-PR #230, ownership, textos e build](docs/V0A_POST230_OWNERSHIP_LOCALIZATION_AND_BUILD_AUDIT_2026-10-21.md). Foram mapeados 14 contratos/famílias e indexadas 826 ocorrências *candidatas* de localização em 26 fontes; **não** são strings aprovadas nem cobertura integral. V0-B e gates runtime permanecem pendentes. Sem código de produto alterado.
 
 
