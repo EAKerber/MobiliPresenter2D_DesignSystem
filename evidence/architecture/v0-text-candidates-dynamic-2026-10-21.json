@@ -1,0 +1,2003 @@
+{
+  "schema": "M2DLocalizationCandidateIndex/0.1",
+  "partition": "dynamic/core/admin/viewer JavaScript",
+  "productHead": "840a0cda361b3ce215fc934badc26df72dffc6e8",
+  "method": "lexical heuristic of UI-context string literals only; incomplete multiline/templates, includes false positives; human classification required before migration; core catalog/V5 backend authoring deliberately outside scope",
+  "hashes": {
+    "app/viewer/scene-adapters.js": "838c623fce24289c7c387be370e25fd5bb634060",
+    "app/viewer/technical-views.js": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+    "app/core/ui-theme.js": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+    "app/core/private-navigation.js": "3d701cda54bb27a374e9788837e85c868fba2b94",
+    "app/core/keyboard-shortcuts.js": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+    "app/core/presentation-contract.js": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+    "app/core/scene-component.js": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+    "app/app.js": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+    "app/admin/admin.js": "79925345e43096df77bef54fe257e483f922edd8",
+    "app/access/access.js": "e2b99d775576fe24d6757c8f24cf52fb8b498ac4",
+    "app/access/manage.js": "a1013d476781cafa52cb63b0706ab3a4fd30041e"
+  },
+  "unreadable": [],
+  "candidates": [
+    {
+      "source": "app/viewer/scene-adapters.js",
+      "line": 15,
+      "kind": "js_contextual",
+      "value": "Módulo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/scene-adapters.js",
+      "line": 16,
+      "kind": "js_contextual",
+      "value": "string",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/scene-adapters.js",
+      "line": 69,
+      "kind": "js_contextual",
+      "value": "Cena da cozinha. Use as setas para percorrer os módulos ou as teclas de 1 a 7 para selecionar pelo número.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/scene-adapters.js",
+      "line": 72,
+      "kind": "js_contextual",
+      "value": "scene-hotspots",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/scene-adapters.js",
+      "line": 72,
+      "kind": "js_contextual",
+      "value": "Módulos selecionáveis na cena",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/technical-views.js",
+      "line": 22,
+      "kind": "js_contextual",
+      "value": "h3",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/technical-views.js",
+      "line": 23,
+      "kind": "js_contextual",
+      "value": "count-confirmed",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/technical-views.js",
+      "line": 23,
+      "kind": "js_contextual",
+      "value": "Número de frentes confirmado; proporções internas orientativas.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/technical-views.js",
+      "line": 23,
+      "kind": "js_contextual",
+      "value": "Desenho proporcional · cotas nominais.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/technical-views.js",
+      "line": 37,
+      "kind": "js_contextual",
+      "value": "h3",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/technical-views.js",
+      "line": 37,
+      "kind": "js_contextual",
+      "value": "Vista interna",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/technical-views.js",
+      "line": 38,
+      "kind": "js_contextual",
+      "value": "Vãos internos confirmados; medidas não representam o envelope externo.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/technical-views.js",
+      "line": 44,
+      "kind": "js_contextual",
+      "value": "h3",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/technical-views.js",
+      "line": 44,
+      "kind": "js_contextual",
+      "value": "Detalhe do módulo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/technical-views.js",
+      "line": 46,
+      "kind": "js_contextual",
+      "value": "Recorte do módulo indisponível.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/technical-views.js",
+      "line": 52,
+      "kind": "js_contextual",
+      "value": "Recorte isolado de ${module.title}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/viewer/technical-views.js",
+      "line": 56,
+      "kind": "js_contextual",
+      "value": "Recorte do módulo selecionado na cena.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/core/ui-theme.js",
+      "line": 32,
+      "kind": "js_contextual",
+      "value": "Tema atual:",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/core/private-navigation.js",
+      "line": 50,
+      "kind": "js_contextual",
+      "value": "Sair",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/core/private-navigation.js",
+      "line": 92,
+      "kind": "js_contextual",
+      "value": "Verificando acesso…",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/core/private-navigation.js",
+      "line": 99,
+      "kind": "js_contextual",
+      "value": "Esta conta não tem acesso às páginas de gestão.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/core/private-navigation.js",
+      "line": 109,
+      "kind": "js_contextual",
+      "value": "Fechar menu",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/core/private-navigation.js",
+      "line": 109,
+      "kind": "js_contextual",
+      "value": "Abrir menu",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/core/keyboard-shortcuts.js",
+      "line": 203,
+      "kind": "js_contextual",
+      "value": "interactive control in section ${modelSection.id} has no flow item owner",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/core/keyboard-shortcuts.js",
+      "line": 211,
+      "kind": "js_contextual",
+      "value": "rendered flow item ${itemId} is not owned by section ${modelSection.id}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/core/keyboard-shortcuts.js",
+      "line": 223,
+      "kind": "js_contextual",
+      "value": "modeled flow item ${itemId} is not represented in section ${modelSection.id}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/core/keyboard-shortcuts.js",
+      "line": 243,
+      "kind": "js_contextual",
+      "value": "missing-flow-model",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/core/keyboard-shortcuts.js",
+      "line": 243,
+      "kind": "js_contextual",
+      "value": "normalized flow model is not installed",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/core/keyboard-shortcuts.js",
+      "line": 249,
+      "kind": "js_contextual",
+      "value": "missing-flow-stage",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/core/keyboard-shortcuts.js",
+      "line": 249,
+      "kind": "js_contextual",
+      "value": "active stage is absent from normalized flow: ${stageId}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/core/presentation-contract.js",
+      "line": 32,
+      "kind": "js_contextual",
+      "value": "action-list",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/core/scene-component.js",
+      "line": 49,
+      "kind": "js_contextual",
+      "value": "Ver ficha de ${labels.reference}, ${labels.title}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/core/scene-component.js",
+      "line": 53,
+      "kind": "js_contextual",
+      "value": "scene-hotspot__tag",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 176,
+      "kind": "js_contextual",
+      "value": "missing renderer component: ${stageId}/${section?.id}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 187,
+      "kind": "js_contextual",
+      "value": "renderer component mismatch: ${stageId}/${section?.id} expected ${expected} but found ${bound}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 200,
+      "kind": "js_contextual",
+      "value": "missing-custom-stage-binding",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 200,
+      "kind": "js_contextual",
+      "value": "missing custom stage renderer: ${stage.id}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 306,
+      "kind": "js_contextual",
+      "value": "multiple neutral renderer group slots match ${stageId}/${group.id}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 326,
+      "kind": "js_contextual",
+      "value": "missing renderer group: ${stageId}/${group.id}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 375,
+      "kind": "js_contextual",
+      "value": "missing visual section class for ${stageId}/${section.id}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 437,
+      "kind": "js_contextual",
+      "value": "multiple renderer sections: ${stageId}/${group.id}/${section.id}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 523,
+      "kind": "js_contextual",
+      "value": "missing-module-view-layout",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 523,
+      "kind": "js_contextual",
+      "value": "modules view layout is missing",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 524,
+      "kind": "js_contextual",
+      "value": "modules",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 545,
+      "kind": "js_contextual",
+      "value": "missing-view-component-binding",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 545,
+      "kind": "js_contextual",
+      "value": "modules",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 545,
+      "kind": "js_contextual",
+      "value": "missing Modules view component: ${view.id}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 553,
+      "kind": "js_contextual",
+      "value": "Modules view component mismatch: ${view.id} expected ${view.component} but found ${boundComponent}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 566,
+      "kind": "js_contextual",
+      "value": "unexpected Modules view adapter: ${adapter.dataset.stageViewId}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 599,
+      "kind": "js_contextual",
+      "value": "missing core stage renderer: ${stage.id} (${kind})",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 618,
+      "kind": "js_contextual",
+      "value": "${panel.id}-heading",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 654,
+      "kind": "js_contextual",
+      "value": "Incluir ${product.title}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 678,
+      "kind": "js_contextual",
+      "value": "Ver detalhes de ${product.title}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 718,
+      "kind": "js_contextual",
+      "value": "Aplicar",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 718,
+      "kind": "js_contextual",
+      "value": "ao conjunto",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 726,
+      "kind": "js_contextual",
+      "value": "Selecionada:",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 734,
+      "kind": "js_contextual",
+      "value": "Escolha global; o total é distribuído pelas 14 frentes aplicáveis. A basculante não entra no rateio.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 744,
+      "kind": "js_contextual",
+      "value": "Selecionar puxador",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 784,
+      "kind": "js_contextual",
+      "value": "Selecionar pedra",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 795,
+      "kind": "js_contextual",
+      "value": "· sem adicional.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 964,
+      "kind": "js_contextual",
+      "value": "Vista interna",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1074,
+      "kind": "js_contextual",
+      "value": "Vista lateral",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1074,
+      "kind": "js_contextual",
+      "value": "Vista frontal",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1085,
+      "kind": "js_contextual",
+      "value": "Projeção isométrica",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1122,
+      "kind": "js_contextual",
+      "value": "Visualizações do módulo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1126,
+      "kind": "js_contextual",
+      "value": "Visualizações",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1134,
+      "kind": "js_contextual",
+      "value": "Navegue pelo foco do módulo e pelas vistas orientativas.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1140,
+      "kind": "js_contextual",
+      "value": "Páginas de visualização",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1143,
+      "kind": "js_contextual",
+      "value": "Foco no módulo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1143,
+      "kind": "js_contextual",
+      "value": "Visual isolado da peça selecionada na cena.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1143,
+      "kind": "js_contextual",
+      "value": "Foco",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1144,
+      "kind": "js_contextual",
+      "value": "Vista frontal",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1144,
+      "kind": "js_contextual",
+      "value": "front",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1144,
+      "kind": "js_contextual",
+      "value": "Frontal",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1145,
+      "kind": "js_contextual",
+      "value": "Vista lateral",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1145,
+      "kind": "js_contextual",
+      "value": "side",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1145,
+      "kind": "js_contextual",
+      "value": "Lateral",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1147,
+      "kind": "js_contextual",
+      "value": "Vista interna",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1147,
+      "kind": "js_contextual",
+      "value": "Vãos internos confirmados; não equivalem ao envelope externo do módulo.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1147,
+      "kind": "js_contextual",
+      "value": "Interna",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1149,
+      "kind": "js_contextual",
+      "value": "Projeção isométrica",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1149,
+      "kind": "js_contextual",
+      "value": "panel",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1149,
+      "kind": "js_contextual",
+      "value": "Painel estrutural em proporção; espessura ampliada somente para leitura.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1149,
+      "kind": "js_contextual",
+      "value": "Projeção isométrica orientativa das cotas nominais.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1149,
+      "kind": "js_contextual",
+      "value": "Isométrica",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1171,
+      "kind": "js_contextual",
+      "value": "Mostrar ${previousPage.label}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1173,
+      "kind": "js_contextual",
+      "value": "Mostrar ${nextPage.label}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1210,
+      "kind": "js_contextual",
+      "value": "Mostrar ${page.label}, página ${index + 1} de ${pages.length}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1270,
+      "kind": "js_contextual",
+      "value": "Expandir visualizações",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1270,
+      "kind": "js_contextual",
+      "value": "Recolher visualizações",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1271,
+      "kind": "js_contextual",
+      "value": "Mostrar",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1271,
+      "kind": "js_contextual",
+      "value": "Recolher",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1285,
+      "kind": "js_contextual",
+      "value": "Expandir visualizações",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1285,
+      "kind": "js_contextual",
+      "value": "Recolher visualizações",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1286,
+      "kind": "js_contextual",
+      "value": "Mostrar",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1286,
+      "kind": "js_contextual",
+      "value": "Recolher",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1313,
+      "kind": "js_contextual",
+      "value": "Abrir módulo ${directionLabel}: ${targetProduct.title}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1335,
+      "kind": "js_contextual",
+      "value": "${isVisible ? \"Desselecionar\" : \"Selecionar\"} ${entity.label}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1337,
+      "kind": "js_contextual",
+      "value": "Selecionado",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1337,
+      "kind": "js_contextual",
+      "value": "Selecionar",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1351,
+      "kind": "js_contextual",
+      "value": "Acabamento deste módulo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1364,
+      "kind": "js_contextual",
+      "value": "Aplicar ${finish.publicLabel} somente em ${product.title}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1385,
+      "kind": "js_contextual",
+      "value": "Selecione um módulo na cena para abrir sua ficha.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1392,
+      "kind": "js_contextual",
+      "value": "Ficha selecionada: ${product.title}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1403,
+      "kind": "js_contextual",
+      "value": "${product.referenceLabel.toUpperCase()} · ${product.category.toUpperCase()}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1419,
+      "kind": "js_contextual",
+      "value": "Fechar detalhes do módulo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1430,
+      "kind": "js_contextual",
+      "value": "Valor atual na simulação",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1435,
+      "kind": "js_contextual",
+      "value": "Estrutural",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1440,
+      "kind": "js_contextual",
+      "value": "Em configuração",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1441,
+      "kind": "js_contextual",
+      "value": "O valor aparece quando a tabela de trabalho estiver completa.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1456,
+      "kind": "js_contextual",
+      "value": "· ${product.configurationNote}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1461,
+      "kind": "js_contextual",
+      "value": "Medidas nominais",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1469,
+      "kind": "js_contextual",
+      "value": "${formatDimension(value)} mm",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1480,
+      "kind": "js_contextual",
+      "value": "Destaques",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1486,
+      "kind": "js_contextual",
+      "value": "Componentes inclusos",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1493,
+      "kind": "js_contextual",
+      "value": "Indisponível enquanto o módulo estrutural necessário estiver fora da composição.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1542,
+      "kind": "js_contextual",
+      "value": "Requer suporte incluído",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1542,
+      "kind": "js_contextual",
+      "value": "Incluído",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1542,
+      "kind": "js_contextual",
+      "value": "Não incluído",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1633,
+      "kind": "js_contextual",
+      "value": "Nenhum módulo incluído.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1639,
+      "kind": "js_contextual",
+      "value": "As cores podem ser globais ou escolhidas por módulo, conforme as opções publicadas. Pedra e serviços entram uma única vez no conjunto; cada ficha mostra somente o valor local do módulo.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1677,
+      "kind": "js_contextual",
+      "value": "h2",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1677,
+      "kind": "js_contextual",
+      "value": "${panel.id}-heading",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1678,
+      "kind": "js_contextual",
+      "value": "Escolha os itens desta etapa.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1694,
+      "kind": "js_contextual",
+      "value": "strong",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1694,
+      "kind": "js_contextual",
+      "value": "small",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1694,
+      "kind": "js_contextual",
+      "value": "Módulo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1694,
+      "kind": "js_contextual",
+      "value": "Item opcional",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1697,
+      "kind": "js_contextual",
+      "value": "admin-note",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1697,
+      "kind": "js_contextual",
+      "value": "Inclua itens na administração para preencher esta etapa.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1723,
+      "kind": "js_contextual",
+      "value": "cover",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1723,
+      "kind": "js_contextual",
+      "value": "published",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1723,
+      "kind": "js_contextual",
+      "value": "draft",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1725,
+      "kind": "js_contextual",
+      "value": "Definir depois",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1725,
+      "kind": "js_contextual",
+      "value": "Sem adicional na simulação.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1728,
+      "kind": "js_contextual",
+      "value": "Puxador selecionável.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1732,
+      "kind": "js_contextual",
+      "value": "Acabamento compartilhado entre bancada e rodapé.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1736,
+      "kind": "js_contextual",
+      "value": "masked-overlay",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1858,
+      "kind": "js_contextual",
+      "value": "summary",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1858,
+      "kind": "js_contextual",
+      "value": "Editar ${stages[0].label.toLocaleLowerCase(\"pt-BR\")}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 1858,
+      "kind": "js_contextual",
+      "value": "Continuar para ${next.label.toLocaleLowerCase(\"pt-BR\")} →",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 2051,
+      "kind": "js_contextual",
+      "value": "Liberar cena",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 2051,
+      "kind": "js_contextual",
+      "value": "Fixar cena",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/app.js",
+      "line": 2535,
+      "kind": "js_contextual",
+      "value": "Não foi possível validar a configuração publicada. O configurador está temporariamente indisponível.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 106,
+      "kind": "js_contextual",
+      "value": "Ocultar",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 106,
+      "kind": "js_contextual",
+      "value": "Mostrar",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 206,
+      "kind": "js_contextual",
+      "value": "${stage.label} · criar grupo/seção inicial",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 214,
+      "kind": "js_contextual",
+      "value": "${stage.label} › ${group.label} › ${section.label}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 241,
+      "kind": "js_contextual",
+      "value": "${item.label}: ativo inicialmente",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 251,
+      "kind": "js_contextual",
+      "value": "${item.label}: visível inicialmente no viewer",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 263,
+      "kind": "js_contextual",
+      "value": "${item.label}: ativo inicialmente",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 277,
+      "kind": "js_contextual",
+      "value": "Medidas nominais (mm)",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 281,
+      "kind": "js_contextual",
+      "value": "Atualiza as cotas e vistas técnicas; não altera a geometria da cena.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 296,
+      "kind": "js_contextual",
+      "value": "${label}: ${axisLabel} nominal em milímetros",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 380,
+      "kind": "js_contextual",
+      "value": "Opções do item · ${availableCount} disponível(is)",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 384,
+      "kind": "js_contextual",
+      "value": "Estas são opções do item, não itens hierárquicos independentes. Disponibilidade e dados comerciais continuam nas abas próprias.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 398,
+      "kind": "js_contextual",
+      "value": "Disponível",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 398,
+      "kind": "js_contextual",
+      "value": "Indisponível",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 452,
+      "kind": "js_contextual",
+      "value": "Nova seção",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 462,
+      "kind": "js_contextual",
+      "value": "Retirar",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 538,
+      "kind": "js_contextual",
+      "value": "Mover para novo grupo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 545,
+      "kind": "js_contextual",
+      "value": "Remover seção e unir",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 578,
+      "kind": "js_contextual",
+      "value": "2 colunas",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 578,
+      "kind": "js_contextual",
+      "value": "1 coluna",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 603,
+      "kind": "js_contextual",
+      "value": "Remover grupo e unir conteúdo",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 624,
+      "kind": "js_contextual",
+      "value": "Itens do catálogo sem seção",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 626,
+      "kind": "js_contextual",
+      "value": "Itens disponíveis",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 629,
+      "kind": "js_contextual",
+      "value": "Itens pertencem a seções explícitas. Escolha uma seção compatível ou crie a estrutura inicial de uma etapa vazia.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 649,
+      "kind": "js_contextual",
+      "value": "Adicionar",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 658,
+      "kind": "js_contextual",
+      "value": "Todos os itens compatíveis já pertencem a uma seção.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 683,
+      "kind": "js_contextual",
+      "value": "Nome da etapa ${stage.label}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 699,
+      "kind": "js_contextual",
+      "value": "Remover etapa",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 711,
+      "kind": "js_contextual",
+      "value": "Ativar etapa ${stage.label}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 723,
+      "kind": "js_contextual",
+      "value": "Etapa vazia. Adicione um item disponível para criar o primeiro grupo e seção.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 751,
+      "kind": "js_contextual",
+      "value": "${item.referenceLabel} · ${item.title}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 754,
+      "kind": "js_contextual",
+      "value": "Puxador · ${item.label}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 755,
+      "kind": "js_contextual",
+      "value": "Pedra · ${item.label}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 776,
+      "kind": "js_contextual",
+      "value": "option",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 791,
+      "kind": "js_contextual",
+      "value": "h2",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 801,
+      "kind": "js_contextual",
+      "value": "h3",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 801,
+      "kind": "js_contextual",
+      "value": "Materiais deste puxador",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 803,
+      "kind": "js_contextual",
+      "value": "Nenhum material associado. Configure a lista na aba Cores e acabamentos.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 815,
+      "kind": "js_contextual",
+      "value": "h2",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 815,
+      "kind": "js_contextual",
+      "value": "${label} · arquivos da cena",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 821,
+      "kind": "js_contextual",
+      "value": "option",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 821,
+      "kind": "js_contextual",
+      "value": "Usar o padrão / sem máscara",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 822,
+      "kind": "js_contextual",
+      "value": "option",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 828,
+      "kind": "js_contextual",
+      "value": "error",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 828,
+      "kind": "js_contextual",
+      "value": "Prévia indisponível",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 829,
+      "kind": "js_contextual",
+      "value": "Sem máscara · usar o recorte padrão",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 832,
+      "kind": "js_contextual",
+      "value": "admin-note",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 832,
+      "kind": "js_contextual",
+      "value": "A lista contém apenas arquivos já presentes na cena. O painel não carrega arquivos novos nem permite caminhos externos.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 832,
+      "kind": "js_contextual",
+      "value": "Este item não possui camada visual própria na cena. Configure cores e texturas na biblioteca de materiais.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 867,
+      "kind": "js_contextual",
+      "value": "option",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 877,
+      "kind": "js_contextual",
+      "value": "Módulos que aceitam ${source.label}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 898,
+      "kind": "js_contextual",
+      "value": "button button--secondary",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 898,
+      "kind": "js_contextual",
+      "value": "← Anterior",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 900,
+      "kind": "js_contextual",
+      "value": "${index + 1} / ${pages}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 900,
+      "kind": "js_contextual",
+      "value": "polite",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 901,
+      "kind": "js_contextual",
+      "value": "button button--secondary",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 901,
+      "kind": "js_contextual",
+      "value": "Próxima →",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 943,
+      "kind": "js_contextual",
+      "value": "option",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 955,
+      "kind": "js_contextual",
+      "value": "h2",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 964,
+      "kind": "js_contextual",
+      "value": "color",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 964,
+      "kind": "js_contextual",
+      "value": "Cor sólida",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 964,
+      "kind": "js_contextual",
+      "value": "texture",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 964,
+      "kind": "js_contextual",
+      "value": "Textura",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 964,
+      "kind": "js_contextual",
+      "value": "option",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 968,
+      "kind": "js_contextual",
+      "value": "option",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 968,
+      "kind": "js_contextual",
+      "value": "Somente cor",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 969,
+      "kind": "js_contextual",
+      "value": "option",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 973,
+      "kind": "js_contextual",
+      "value": "summary",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 973,
+      "kind": "js_contextual",
+      "value": "Válido para…",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 983,
+      "kind": "js_contextual",
+      "value": "button button--secondary rule-remove",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 983,
+      "kind": "js_contextual",
+      "value": "Remover material",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 999,
+      "kind": "js_contextual",
+      "value": "h2",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 999,
+      "kind": "js_contextual",
+      "value": "${title} · opções válidas",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1006,
+      "kind": "js_contextual",
+      "value": "admin-note",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1006,
+      "kind": "js_contextual",
+      "value": "Definir depois não é um puxador e não recebe materiais.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1019,
+      "kind": "js_contextual",
+      "value": "admin-note",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1019,
+      "kind": "js_contextual",
+      "value": "A disponibilidade do serviço de rodapé é controlada separadamente na etapa; pedra e rodapé compartilham o material escolhido.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1028,
+      "kind": "js_contextual",
+      "value": "h3",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1028,
+      "kind": "js_contextual",
+      "value": "${label} · ${selectedIds.length} disponível(is)",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1048,
+      "kind": "js_contextual",
+      "value": "summary",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1048,
+      "kind": "js_contextual",
+      "value": "${label} · ${selectedIds.length} selecionado(s)",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1085,
+      "kind": "js_contextual",
+      "value": "h2",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1085,
+      "kind": "js_contextual",
+      "value": "Item dependente",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1087,
+      "kind": "js_contextual",
+      "value": "button button--secondary rule-remove rule-wide",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1087,
+      "kind": "js_contextual",
+      "value": "Remover dependência",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1099,
+      "kind": "js_contextual",
+      "value": "h2",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1099,
+      "kind": "js_contextual",
+      "value": "Ajuste legado de profundidade",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1099,
+      "kind": "js_contextual",
+      "value": "Ativar ou desativar item",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1099,
+      "kind": "js_contextual",
+      "value": "Ajuste de dimensão",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1117,
+      "kind": "js_contextual",
+      "value": "button button--secondary rule-remove",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1117,
+      "kind": "js_contextual",
+      "value": "Remover evento",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1148,
+      "kind": "js_contextual",
+      "value": "Exibição pública no Viewer",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1167,
+      "kind": "js_contextual",
+      "value": "h2",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1185,
+      "kind": "js_contextual",
+      "value": "Tipo de preço: ${publicLabel}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1206,
+      "kind": "js_contextual",
+      "value": "Valor de ${publicLabel}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1210,
+      "kind": "js_contextual",
+      "value": "R$",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1216,
+      "kind": "js_contextual",
+      "value": "Base: ${rule.basis}",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1225,
+      "kind": "js_contextual",
+      "value": "Os valores publicados são estimativas para clientes. Custos, margens e dados de fornecedores não entram neste painel.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1289,
+      "kind": "js_contextual",
+      "value": "revisionLabel",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1289,
+      "kind": "js_contextual",
+      "value": "Versão",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1289,
+      "kind": "js_contextual",
+      "value": "· editor hierárquico",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1454,
+      "kind": "js_contextual",
+      "value": "color",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1454,
+      "kind": "js_contextual",
+      "value": "cover",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1454,
+      "kind": "js_contextual",
+      "value": "fronts-all",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1482,
+      "kind": "js_contextual",
+      "value": "event",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1482,
+      "kind": "js_contextual",
+      "value": "module-04",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1482,
+      "kind": "js_contextual",
+      "value": "disabled",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1482,
+      "kind": "js_contextual",
+      "value": "set-dimension",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1482,
+      "kind": "js_contextual",
+      "value": "module-07",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1482,
+      "kind": "js_contextual",
+      "value": "depth",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1550,
+      "kind": "js_contextual",
+      "value": "userLabel",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1550,
+      "kind": "js_contextual",
+      "value": "Administrador",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1565,
+      "kind": "js_contextual",
+      "value": "Tentar novamente",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1595,
+      "kind": "js_contextual",
+      "value": "passwordActionTitle",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1595,
+      "kind": "js_contextual",
+      "value": "invite",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1598,
+      "kind": "js_contextual",
+      "value": "passwordActionButton",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1598,
+      "kind": "js_contextual",
+      "value": "invite",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1598,
+      "kind": "js_contextual",
+      "value": "Aceitar convite",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1598,
+      "kind": "js_contextual",
+      "value": "Atualizar senha",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1932,
+      "kind": "js_contextual",
+      "value": "revisionLabel",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1932,
+      "kind": "js_contextual",
+      "value": "Versão ${model.revision} · editor hierárquico",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1996,
+      "kind": "js_contextual",
+      "value": "revisionLabel",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 1996,
+      "kind": "js_contextual",
+      "value": "Versão ${model.revision} · editor hierárquico",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 2052,
+      "kind": "js_contextual",
+      "value": "revisionLabel",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/admin/admin.js",
+      "line": 2052,
+      "kind": "js_contextual",
+      "value": "Versão ${model.revision} · editor hierárquico",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/access.js",
+      "line": 12,
+      "kind": "js_contextual",
+      "value": "Este link não contém um token válido. Solicite um novo acesso à equipe.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/access.js",
+      "line": 16,
+      "kind": "js_contextual",
+      "value": "Link encontrado. Confirme para resgatar o acesso.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/access.js",
+      "line": 20,
+      "kind": "js_contextual",
+      "value": "Validando o acesso…",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/access.js",
+      "line": 31,
+      "kind": "js_contextual",
+      "value": "Acesso confirmado. Abrindo o configurador…",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/access.js",
+      "line": 34,
+      "kind": "js_contextual",
+      "value": "Não foi possível validar este link. Solicite um novo acesso à equipe.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.js",
+      "line": 51,
+      "kind": "js_contextual",
+      "value": "Nenhum acesso registrado.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.js",
+      "line": 76,
+      "kind": "js_contextual",
+      "value": "Revogar",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.js",
+      "line": 86,
+      "kind": "js_contextual",
+      "value": "Não foi possível revogar agora. Tente novamente.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.js",
+      "line": 95,
+      "kind": "js_contextual",
+      "value": "Não foi possível carregar os acessos. Verifique a configuração do serviço.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.js",
+      "line": 101,
+      "kind": "js_contextual",
+      "value": "Entrando…",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.js",
+      "line": 106,
+      "kind": "js_contextual",
+      "value": "Não foi possível entrar. Confira seus dados e tente novamente.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.js",
+      "line": 114,
+      "kind": "js_contextual",
+      "value": "Enviando…",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.js",
+      "line": 121,
+      "kind": "js_contextual",
+      "value": "Link enviado. Ele expira em três horas e só pode ser resgatado uma vez.",
+      "status": "candidate-unreviewed"
+    },
+    {
+      "source": "app/access/manage.js",
+      "line": 124,
+      "kind": "js_contextual",
+      "value": "access_service_not_configured",
+      "status": "candidate-unreviewed"
+    }
+  ]
+}
