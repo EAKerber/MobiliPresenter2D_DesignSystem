@@ -33,4 +33,6 @@ Chats “Inventário De Design System” e “Continuar Inventário Design Syste
 
 ## Estado do produto
 
-O inventário estruturado [`visual-inventory.json`](visual-inventory.json) foi atualizado para a `main` do produto em **`1878ae1` (20/10/2026)**; [VISUAL_INVENTORY.md](VISUAL_INVENTORY.md), o mapa de aplicação e parte da evidência de runtime preservam snapshots **anteriores** (especialmente `483ef2e`). Essa distinção é intencional: não confundir refresh estático com revalidação visual, funcional ou autenticada. O delta e as verificações históricas estão em [INVENTORY_REFRESH_2026-10-19.md](INVENTORY_REFRESH_2026-10-19.md) e [PRODUCT_RECONCILIATION_2026-10-19.md](PRODUCT_RECONCILIATION_2026-10-19.md). Para o estado arquitetural recente, usar o [plano diretor](docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md).
+O [inventário estático](VISUAL_INVENTORY.md) e o mapa de aplicação apontam para o commit do produto `1878ae1`. A reconciliação do delta desde o snapshot anterior e as verificações runtime estão registradas em [INVENTORY_REFRESH_2026-10-20.md](INVENTORY_REFRESH_2026-10-20.md) e [PRODUCT_RECONCILIATION_2026-10-19.md](PRODUCT_RECONCILIATION_2026-10-19.md).
+
+> **Proveniência:** o inventário JSON de 20/10 mapeia o produto `1878ae1`, mas documentos narrativos e evidências de runtime anteriores mantêm intencionalmente snapshots anteriores; para gates recentes consultar o [plano diretor](docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md) e os respectivos relatórios datados.
