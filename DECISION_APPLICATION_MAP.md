@@ -4,7 +4,7 @@
 
 **Atualização (2026-10-19):** inventário estático e evidência runtime foram reconciliados com o deploy `483ef2e6f76a562a3096516ef68d8dfe072ec21f`. FIND-006/#209 e FIND-009/#214 foram resolvidos; ver [conciliação](PRODUCT_RECONCILIATION_2026-10-19.md). O delta anterior está em [INVENTORY_REFRESH_2026-10-19.md](INVENTORY_REFRESH_2026-10-19.md); a atualização estática atual está em [INVENTORY_REFRESH_2026-10-20.md](INVENTORY_REFRESH_2026-10-20.md).
 
-**Último deploy publicado:** `1878ae1057ce7c6190e0c8cb08a1f3baadd49463`, Netlify deploy `6ad6c3b51b6be05647167f94`, estado `ready`, publicado em 2026-10-20. A auditoria runtime ampla e histórica ainda cobre o deploy `483ef2e`; adicionalmente, a PR #42 registra cinco verificações DOM contextuais no deploy atual em 20/10 e rechecagem da legenda em 21/10. Isso não substitui a auditoria ampla. A validação autenticada pós-login segue pendente em FIND-007.  
+**Último deploy publicado:** `1878ae1057ce7c6190e0c8cb08a1f3baadd49463`, Netlify deploy `6ad6c3b51b6be05647167f94`, estado `ready`, publicado em 2026-10-20. A auditoria runtime ampla e histórica ainda cobre o deploy `483ef2e`; adicionalmente, a evidência runtime documenta cinco verificações DOM contextuais no deploy atual em 20/10 e rechecagem da legenda em 21/10. Isso não substitui a auditoria ampla. A validação autenticada pós-login segue pendente em FIND-007.  
 **Fonte canônica das decisões:** [decisions.json](decisions.json).  
 **Inventário estático:** [visual-inventory.json](visual-inventory.json).
 
@@ -16,7 +16,7 @@ As folhas foram lidas dos elementos `<link rel="stylesheet">` nas oito páginas 
 
 ## Informação de processo
 
-A decisão VIS-002 aprova a opção A como pares contextuais de texto: `#245D87` sobre `#F0EDE8` (6,01:1) no claro e `#A7D1F0` sobre `#211F1C` (10,19:1) no escuro. A aplicação registrada na Administração é `.message[aria-live="polite"][data-kind=""]` em `/admin.html`; a observação de 2026-10-19 ainda usava cores neutras e não foi repetida na revisão #42. A escolha não cria tokens globais e não cobre outras superfícies, fundos, bordas ou ícones.
+A decisão VIS-002 aprova a opção A como pares contextuais de texto: `#245D87` sobre `#F0EDE8` (6,01:1) no claro e `#A7D1F0` sobre `#211F1C` (10,19:1) no escuro. A aplicação registrada na Administração é `.message[aria-live="polite"][data-kind=""]` em `/admin.html`; a observação de 2026-10-19 ainda usava cores neutras e não foi repetida na revisão runtime de 21/10. A escolha não cria tokens globais e não cobre outras superfícies, fundos, bordas ou ícones.
 
 ## Rotas, fontes visuais e evidência
 
@@ -62,7 +62,7 @@ O estado de `/config/` e `/access/manage.html` foi redirecionado sem sessão. Is
 
 **NAV-005:** o padrão largo público A aplica-se às rotas públicas; o padrão privado B aplica-se a `/config/`, `/admin.html`, `/access/` e `/access/manage.html`; o padrão contextual tipo viewer aplica-se a `/viewer/`. Para larguras compactas, a opção A está aprovada estruturalmente: linha única, marca e identificador/contexto à esquerda, tema antes do menu na extremidade direita; páginas públicas agrupam navegação e contato no menu. Em cabeçalhos privados estreitos, manter o rótulo do tema enquanto a logo reduz até 30%; se mais redução for necessária, usar tema apenas por ícone, preservando identificador e ordem dos controles. Os critérios exatos estão em `decisions.json`. Breakpoints, interpolação, dimensões, espaçamento, tipografia, cores e glifo do ícone permanecem abertos.
 
-**VIS-002 — rechecagem contextual:** após a homologação da paleta A, `.hero-description` em `/`, `.how-hero-note` em `/how-it-works/` e `.about-scale p:not(.eyebrow)` em `/about/` computam `#705C4B` sobre `#F0EDE8` (5,41:1) no tema claro. `.study-band .eyebrow` computa `#70522F` sobre `#E8E3DC` (5,60:1). Os quatro pares foram verificados no DOM publicado em 20/10 conforme a PR #42. São contextos delimitados, não tokens globais; outros componentes, superfícies, temas e estados seguem pendentes.
+**VIS-002 — rechecagem contextual:** após a homologação da paleta A, `.hero-description` em `/`, `.how-hero-note` em `/how-it-works/` e `.about-scale p:not(.eyebrow)` em `/about/` computam `#705C4B` sobre `#F0EDE8` (5,41:1) no tema claro. `.study-band .eyebrow` computa `#70522F` sobre `#E8E3DC` (5,60:1). Os quatro pares foram verificados no DOM publicado em 20/10, conforme [a evidência runtime](evidence/runtime/contrast-approved-pairs-2026-10-20.md). São contextos delimitados, não tokens globais; outros componentes, superfícies, temas e estados seguem pendentes.
 
 **VIS-003 / FIND-004:** em `/how-it-works/`, `.study-art figcaption` no tema escuro está integrada à ilustração sobre faixa opaca `#20211F`, com texto `#F0EDE8` (13,85:1). O usuário selecionou A; o CSS está publicado e o par foi confirmado no DOM do deploy atual. É contextual, não token global. Uma nova captura contextual em 21/10, com viewport CSS 1280 × 720, está persistida em [visualEvidence](visualEvidence/public/how-it-works/vis003-caption-dark-2026-10-21.svg); tema claro, responsividade, dimensões, espaçamento e extensão a outros componentes permanecem sem verificação.
 
