@@ -1,5 +1,8 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+> **MARCO ARQUITETURAL ATUAL (ARC-01…ARC-16, 21/10/2026):** [contrato consolidado e execução V0–V6](ARCHITECTURE_DECISIONS_ARC01_ARC16_AND_EXECUTION_2026-10-21.md) é a autoridade de direção para planejamento técnico futuro; o texto histórico abaixo continua útil para o inventário visual e homologações, mas NÃO reabre composição universal, não adia localização indefinidamente e não exige experimentos com móveis fictícios. HTML/CSS/JS puros, componentes no produto, tokens aprovados do DS integrados por PR, fragmentos HTML build-time e localização com **extração abrangente e execução incremental** estão definidos. O caso iPad de versão antiga foi reclassificado como compatibilidade legada de baixa prioridade, sem afetar bugs gerais de autenticação. Critério de parada ARC-16 inclui auditoria de todas duplicações no escopo, resolução ou exceção/backlog explícito.
+
+
 > **Atualização de direção arquitetural — 21/10/2026:** a stack de interface é **HTML, CSS e JS puros**, sem framework/biblioteca de UI. Tokens semânticos e componentes nativos serão a fundação de **todas** as rotas, inclusive Landing. Data-driven permanece para domínios de móveis e ferramentas derivadas do Core do Configurador/Viewer, com seus schemas/projeções; manifesto universal de páginas não é meta obrigatória. A sequência original abaixo deve ser lida à luz do [plano atualizado e questões abertas](ARCHITECTURE_VANILLA_COMPONENTS_AND_DOMAIN_DATA_2026-10-21.md), que registra V0–V6, gates e ownership. O produto observado está em `main@840a0cd` após PR #230, logo evidências históricas em `1878ae1` precisam de reconciliação. Nenhuma implementação é autorizada por este adendo.
 
 
