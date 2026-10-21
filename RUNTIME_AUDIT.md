@@ -262,3 +262,28 @@ O texto literal “Não foi possível carregar os dados administrativos.” é d
 ## Acompanhamento de publicação do FIND-007 (2026-10-20)
 
 A correção de sincronização de sessão foi integrada ao produto pela [PR #223](https://github.com/EAKerber/MobiliPresenter2D/pull/223), commit [`1878ae1`](https://github.com/EAKerber/MobiliPresenter2D/commit/1878ae1057ce7c6190e0c8cb08a1f3baadd49463). O deploy de produção [`6ad6c3b51b6be05647167f94`](https://app.netlify.com/projects/mobilipresenter2d/deploys/6ad6c3b51b6be05647167f94) está `ready` e publicou esse SHA. A verificação do menu após login não foi feita: o contexto de navegador disponível estava anônimo. FIND-007/#213 fica como correção publicada, validação autenticada pendente; sem essa validação não é marcado como resolvido.
+
+
+## Cabeçalho e menu de confirmação de acesso (2026-10-20)
+
+Em produção, `/access/` foi observada em contexto isolado sem sessão, viewport 390 × 844 CSS px, nos temas claro e escuro. As capturas com o menu aberto estão em [tema claro](visualEvidence/private/access-confirmation/access-menu-light-2026-10-20.jpg) e [tema escuro](visualEvidence/private/access-confirmation/access-menu-dark-2026-10-20.jpg). A revisão está vinculada ao commit do produto `1878ae1057ce7c6190e0c8cb08a1f3baadd49463` e ao deploy `6ad6c3b51b6be05647167f94`.
+
+O menu abriu no primeiro clique; Escape o fechou e devolveu o foco ao controle. No estado anônimo, havia uma rota privada (“Entrar na administração”) e cinco destinos públicos. A largura permaneceu sem overflow. O link de acesso não continha token válido; a experiência autenticada e o consumo de link válido seguem pendentes. A chamada sem token a `POST /api/access/session` respondeu 404 e continua separada em FIND-014/#222.
+
+A superfície do cabeçalho e do menu claro computou `#FFFFFF`, enquanto a paleta homologada usa `#F0EDE8` para a superfície clara. No tema escuro, cabeçalho `#171816` e menu `#1B1C1A` também diferem dos neutros de referência `#171614` e `#211F1C`. O contraste de texto não foi reprovado; a pendência é de conformidade cromática por componente, registrada em FIND-015. Não houve alteração no produto.
+
+A evidência detalhada, geometria, cores computadas e limites estão em [auditoria runtime de /access/](evidence/runtime/access-confirmation-menu-2026-10-20.md).
+
+
+## Login administrativo anônimo em viewport móvel (2026-10-20)
+
+Em `/admin.html`, viewport 390 × 844 CSS px, temas claro e escuro, o cabeçalho manteve a marca e o identificador “Administração” à esquerda, tema e menu à direita. O formulário apareceu sem preencher credenciais. O menu abriu na primeira interação, listou uma página privada e cinco públicas; Escape fechou e restaurou foco. Capturas: [menu claro](visualEvidence/private/admin-login/admin-login-menu-light-2026-10-20.jpg) e [menu escuro](visualEvidence/private/admin-login/admin-login-menu-dark-2026-10-20.jpg).
+
+O cabeçalho claro computou `#F0EDE8`, conforme a superfície aprovada; o menu computou `#FFFFFF`. Em tema escuro, cabeçalho `#171816`, menu `#1B1C1A` e fundo `#111210`. O texto permaneceu legível na captura; nenhuma falha de contraste foi afirmada. O menu usa `z-index: 80` sobre o cabeçalho `z-index: 60`. Acesso autenticado, pós-login e saída continuam sem revalidação aqui. Evidência: [auditoria do login administrativo](evidence/runtime/admin-login-menu-2026-10-20.md).
+
+
+## Estado misto do menu entre abas privadas (2026-10-20)
+
+Na mesma visita de leitura, uma aba existente de `/config/` mostrou o menu autenticado com Configurador, Administração, Gerenciar acessos, destinos públicos e “Sair”. Abas já abertas de `/admin.html` e `/access/manage.html` mostraram “Entrar na administração” e destinos públicos, sem “Sair”; uma nova aba de `/admin.html` no contexto padrão também abriu no formulário anônimo. Não houve login/logout nesta visita e as abas antigas não foram recarregadas. A validade temporal da sessão e a causa da divergência não foram inferidas.
+
+A lista de rede da aba `/config/` continha um `POST /.netlify/identity/token` com status 400; corpo e cabeçalhos não foram inspecionados. Na nova aba anônima, `POST /api/access/session` retornou 404, já rastreado separadamente em FIND-014/#222. FIND-007/#213 permanece aberto: a correção está publicada, mas o pós-login no mesmo documento, a propagação entre abas e a saída ainda precisam de um teste controlado. Nenhum email, token, convite, configuração ou código foi registrado/alterado. Detalhes em [estado do menu entre abas](evidence/runtime/private-menu-cross-tab-state-2026-10-20.md).
