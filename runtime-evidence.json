@@ -1409,8 +1409,7 @@
         "limitations": [
           "prefers-reduced-motion not emulated",
           "Active wave hint not captured",
-          "Slow network and image failure not simulated",
-          "No product issue created"
+          "Slow network and image failure not simulated"
         ]
       }
     }
