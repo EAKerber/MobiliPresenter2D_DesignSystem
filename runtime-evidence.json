@@ -1414,5 +1414,6 @@
       }
     }
   },
-  "recordSetSemantics": "This file is a cumulative evidence record. The root-level observedAt/deployedRevision fields describe the original 2026-10-18 snapshot, not the latest audit. Later passes are append-only named sections (for example g1PublicRuntimeAudit); use each section's own date, product commit and deploy ID as the authority for that pass."
+  "recordSetSemantics": "This file is a cumulative evidence record. The root-level observedAt/deployedRevision fields describe the original 2026-10-18 snapshot, not the latest audit. Later passes are append-only named sections (for example g1PublicRuntimeAudit); use each section's own date, product commit and deploy ID as the authority for that pass.",
+  "authenticationCompletedByUserScope": "Historical root-level flag: the user completed authentication during the 2026-10-19 private runtime audit. It does not mean that authentication was performed in the 2026-10-21 G1 public audit; that pass was anonymous and read no authenticated data."
 }
