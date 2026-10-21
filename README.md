@@ -5,6 +5,7 @@ Registro de decisões de design, estado de homologação e evidências recuperad
 - [`index.html`](index.html): documento visual navegável, independente e sem dependências.
 - [`docs/ROADMAP_AND_CURRENT_STAGE_2026-10-21.md`](docs/ROADMAP_AND_CURRENT_STAGE_2026-10-21.md): plano geral, etapa atual, critérios de conformidade e continuidade.
 - [`decisions.json`](decisions.json): registro estruturado das decisões, pendências, limites e itens a recuperar.
+- [**Contratos de navegação por profundidade e preflight obrigatório**](docs/NAVIGATION_DEPTH_AUTHORITY_GATE_2026-10-21.md): índice NAV-004/NAV-005 por primeiro nível, Viewer (profundidade 2) e áreas privadas. **Consultar antes de abrir issue, planejar header ou modificar UI**; não usar memória de chat como fonte de homologação.
 - [`DECISION_APPLICATION_MAP.md`](DECISION_APPLICATION_MAP.md): cruzamento de decisões com rotas, HTML, CSS carregado e evidência runtime.
 - [`RUNTIME_AUDIT.md`](RUNTIME_AUDIT.md) e [`runtime-evidence.json`](runtime-evidence.json): observações de navegação, estados de sessão, capturas e limites da auditoria no site publicado.
 - [`FINDINGS_REGISTER.md`](FINDINGS_REGISTER.md): registro de defeitos observados, inconsistências, homologações, decisões incompletas e limites.
