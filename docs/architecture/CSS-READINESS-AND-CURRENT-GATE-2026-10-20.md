@@ -83,7 +83,7 @@ As dimensões são caracteres da string recuperada do GitHub, **não** bytes UTF
 
 ### Especificação mínima de teste G1-R1 (painel Como funciona)
 
-- Abrir ``button[data-economy="escala"]` e esperar `#economyDetail` visível, `aria-expanded=true`, título e texto do item correto.
+- Abrir `button[data-economy="escala"]` e esperar `#economyDetail` visível, `aria-expanded=true`, título e texto do item correto.
 - Selecionar outro item (`coletivas` ou `producao`), conferir que só um está expandido, que conteúdo mudou e painel foi movido ao final da linha correta segundo a grade; medir posição com `getBoundingClientRect`.
 - Clicar no ativo e conferir painel oculto, todos `aria-expanded=false`.
 - Abrir novamente, redimensionar, esperar `requestAnimationFrame(place)`, observar reposicionamento sem remover o nó, sem race/erro no console.
@@ -104,7 +104,7 @@ As dimensões são caracteres da string recuperada do GitHub, **não** bytes UTF
 | G2-2 — alto | Admin `.initial-state-option` contraste claro | `admin.css` / `ui-theme.css` | acesso seguro ao DOM admin (fixture/sessão permitida); valores VIS-002 | contraste por fundo composto e leitura visual sem afetar disable/read-only |
 | G2-3 — médio | FIND-002/003 e FIND-004 recheck | `landing.css`, `how-it-works.css`, `about.css`, tema | release SHA e seletor/contexto conhecido | issue fechado **somente** após readback computado e screenshot |
 | G2-4 — médio | DS04 restantes | Admin/Config/Viewer por issue #208 | matriz de telas/estado auth/JS montado, não só HTML | triagem por risco, ownership e prova |
-| G2-5 — condicional | extração utilitários, scene hotspot, button | `styles.css`, `viewer.css`, ``ui-theme.css`, admin | G2-1…4 e G3 concluídos ou isolados | PRs pequenos de CSS com equivalência antes/depois |
+| G2-5 — condicional | extração utilitários, scene hotspot, button | `styles.css`, `viewer.css`, `ui-theme.css`, admin | G2-1…4 e G3 concluídos ou isolados | PRs pequenos de CSS com equivalência antes/depois |
 
 **Regra:** G2-1 e G2-2 são correções funcionais/visuais independentes, não oportunidades para reorganizar import, renomear classes ou criar token universal. Reutilizar a matriz de testes, mas preservar decisões de autoria.
 
