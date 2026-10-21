@@ -1413,5 +1413,6 @@
         ]
       }
     }
-  }
+  },
+  "recordSetSemantics": "This file is a cumulative evidence record. The root-level observedAt/deployedRevision fields describe the original 2026-10-18 snapshot, not the latest audit. Later passes are append-only named sections (for example g1PublicRuntimeAudit); use each section's own date, product commit and deploy ID as the authority for that pass."
 }
