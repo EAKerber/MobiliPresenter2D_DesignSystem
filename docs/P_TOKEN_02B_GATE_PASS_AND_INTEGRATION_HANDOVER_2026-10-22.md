@@ -1,5 +1,8 @@
 # P-TOKEN-02B — gate diferencial final PASS e handover de integração
 
+> **Checkpoint posterior obrigatório (22/10):** [PR #231 aberta como DRAFT, com triagem comparativa da CI](P_TOKEN_02B_PR231_INTEGRATION_HOLD_BASELINE_CI_2026-10-22.md). Embora os 48 testes contextuais tenham PASS, múltiplas workflows gerais de Configurador e projection permanecem vermelhas também na main. **Sem merge/release**; esta seção é evidência do gate específico, não autorização de ignorar a CI global.
+
+
 **Data:** 2026-10-22. **Status:** **implementação em branch produto / validação diferencial PASS / NÃO INTEGRADO NA MAIN / NÃO PUBLICADO**.
 
 ## 1. Fonte de autoridade e estado reproduzível
