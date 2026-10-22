@@ -1,5 +1,8 @@
 # P-TOKEN-01B/02B — PR #231, triagem de CI e bloqueio de integração
 
+> **Diagnóstico posterior CI-BASELINE-01:** [root cause verificada para gates de browser e patch apenas de assertions públicas](CI_BASELINE_01_AUTH_READINESS_AND_PROJECTION_2026-10-22.md). Navegação anônima a `/config/` foi redirecionada para `/access/` na main e preview. Issues GitHub #232 e #233 registradas. Testes de allowlist agora PASS em branch técnica isolada; **sem merge na main**. Contrato privado não foi alterado.
+
+
 **Data:** 2026-10-22. **Estado:** **PR DE PRODUTO ABERTA EM DRAFT / HOLD PARA MERGE E PRODUÇÃO**. O patch contextual de tokens está **tecnicamente validado em sua própria matriz** e **não foi integrado à main**. O Netlify gerou **um único Deploy Preview automático**, nenhum preview foi solicitado manualmente.
 
 ## Autoridades e SHAs fixos
