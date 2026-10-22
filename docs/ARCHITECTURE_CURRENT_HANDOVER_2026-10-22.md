@@ -1,0 +1,68 @@
+# HANDOVER ATUAL — MobiliPresenter2D + Design System
+
+**Data da fotografia:** 22/10/2026 (America/Sao_Paulo). **Autoria:** checkpoint de consolidação baseado em leitura real de branches, PRs, issues e runs GitHub, e não só na memória do chat.
+
+**Este é o primeiro documento para retomar a consolidação arquitetural.** O ponto de entrada recíproco do produto está em [`MobiliPresenter2D/docs/handoffs/ARCHITECTURE-CURRENT-2026-10-22.md`](https://github.com/EAKerber/MobiliPresenter2D/blob/main/docs/handoffs/ARCHITECTURE-CURRENT-2026-10-22.md). É mais recente que as instruções operacionais de 08–12/10 existentes em `CURRENT_STATE.md` e antigos handovers; conservar esses textos como histórico, mas não restaurar planos superados.
+
+## Repositórios e baseline atual
+
+| Autoridade | HEAD observado em 22/10, antes de registrar estes arquivos | Responsabilidade |
+|---|---|---|
+| **Produto** `EAKerber/MobiliPresenter2D` | `main@303468b4ddbb07a761316abca28901ccaea219df` **antes da documentação deste handover**; o único conteúdo runtime desde o baseline `840a0cd` permanece igual. Um novo commit de documentação será adicionado e deve ser lido por HEAD live | Código HTML/CSS/JS Vanilla, `app/`, build/Netlify, Core V5/Viewer e testes |
+| **Design System** `EAKerber/MobiliPresenter2D_DesignSystem` | `main@5ba1137721ad056bee82da9615f3e24eda192699` **antes deste handover**; será atualizado por commits de documentação | `decisions.json` visual, contratos ARC, geração de tokens aprovados, inventários e checkpoints |
+
+**Autoridade arquitetural:** [ARC-01…16](ARCHITECTURE_DECISIONS_ARC01_ARC16_AND_EXECUTION_2026-10-21.md) — componentes vanilla com especialização por papel, DSL/data-driven só onde o domínio exige, headers via fragmentos **estáticos de build**, paleta DS aprovada com export determinístico e pinado, testes por risco e equivalência visual.
+**Autoridade visual:** `decisions.json`, especialmente NAV-004, NAV-005, VIS-002, VIS-003 e EST; contratos arquiteturais não são automaticamente uma homologação estética.
+
+## Resultado mais recente: ARC-03B passou, produção ainda não foi migrada
+
+A branch de produto [`architecture/arc03-primary-header-fragment-prototype-20261022`](https://github.com/EAKerber/MobiliPresenter2D/tree/architecture/arc03-primary-header-fragment-prototype-20261022) no commit **`e459b9bd85c4e9c8bb96813ae6758789de75dc13`** contém:
+- um fragmento HTML único para **headers públicos primários**;
+- mapa explícito das variantes/links/ARIA de Landing, About, Como funciona;
+- três arquivos de **autoria** separados em `architecture/pages`, com slot de header;
+- compilador determinístico `scripts/compile-primary-pages.mjs`, emitindo **somente** `artifacts/arc03b/pages` e manifesto de hashes;
+- gates Node + **60/60** comparações de DOM/CSS/posicionamento/screenshots em **Chromium/WebKit × 5 larguras (320/390/486/768/1366) × 2 temas × 3 páginas**;
+- comparação independente de Git provando ausência de alteração em `app/`, `netlify.toml`, `package.json`, `netlify/`; Viewer NAV-005 excluído.
+
+**Gate final [Actions #39867859774 — SUCCESS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39867859774)**, com **0 divergências de pixels**. O run anterior [#39867401114](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39867401114) teve 60/60 nos browsers mas falhou porque invocou `git diff` em container sem checkout Git disponível; corrigido com um job runner separado, **sem tocar no runtime**.
+
+[Documento analítico e instruções ARC-03B](ARC03B_AUTHORED_PAGES_STATIC_COMPILER_BROWSER_GATE_2026-10-22.md).
+
+**Não houve cutover de produção nem execução do compilador no `npm run build` efetivo.** A duplicação temporária de HTML de autoria entre `architecture/pages` e `app/` é **aceitável apenas durante POC**, não pode tornar-se permanente. O próximo incremento é **ARC-03C**: integração source→generated com autoridade unívoca no build Netlify `publish=app`, preservação de Admin/Viewer/Config/Acesso e gates browser idênticos. **Não confundir o build experimental `app/dist` com a pasta realmente publicada.**
+
+## Outras frentes: status e gates
+
+| Frente | Realizado | Limite / próxima ação |
+|---|---|---|
+| **Decisões ARC** | **16/16** homologadas quanto à arquitetura, com compromisso ARC-13 amplo e ARC-16 gates reais | Não converter em aprovação visual genérica |
+| **V0-A/V0-B** | Matriz de componentes, proprietários, 54 JS contabilizados, 84 classes CSS lexicais repetidas e lacunas de localização | Não alegar i18n completo, CSSOM/DOM universal ou 84 bugs |
+| **P-COMP-01** | Branch produto `architecture/p-comp-01-public-menu-20261021@4ba9384`, [Actions #39697470826 PASS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39697470826): 40 visuais, 16 funcionais, 20 Viewer NAV-005 | Sem merge; branch **1 commit atrás** da `main` após #233; integrar separadamente de ARC-03C |
+| **P-TOKEN-01A** | [DS PR #49 MERGED](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/49), fonte VIS-002 executável, manifestos gerados e pino de proveniência | Padrão de paleta é **referência**, não alias global automático |
+| **P-TOKEN-02B DS** | [DS PR #50 MERGED](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/50), apenas três textos `#705C4B` em contexto VIS-002 light | Não generalizar para backgrounds, estados ou Viewer |
+| **P-TOKEN-01B/02B produto** | [PR #231 DRAFT](https://github.com/EAKerber/MobiliPresenter2D/pull/231), branch `architecture/p-token-02b-contextual-copy-20261022@afb8096`; [48/48 PASS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39780241560), zero diffs | Não integrado; branch **1 commit atrás** da main; CI geral/auth ainda bloqueiam revisão para merge; preview #231 foi gerado uma única vez |
+| **CI-BASELINE-01 / #233** | [Issue #233 CLOSED](https://github.com/EAKerber/MobiliPresenter2D/issues/233), assertions públicas corrigidas em produto `main@303468b`, com testes de domínio em [#39848703737 PASS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39848703737) | Não reaplicar da branch antiga; código V5 de runtime não modificado |
+| **CI-BASELINE-01 / #232** | [Issue #232 OPEN](https://github.com/EAKerber/MobiliPresenter2D/issues/232); [#39849284220](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39849284220) confirmou que usuários anônimos em `/config/` são enviados a `/access/` (produção e preview) | **PENDÊNCIA EXPLÍCITA**: fixture autorizada de sessão limitada/segura para testes de /config. Não abrir rota ou desabilitar checks |
+| **ARC-13 i18n** | Inventário de candidatos e blind spots no DS | Scanner AST e migração gradual; UI versus dados comerciais/domínio separados |
+
+A PR #231 ficou em **DRAFT/HOLD**, pois seus testes restritos de tokens passaram, mas workflows gerais de mobile/keyboard/flow/summary/stone tentam exercer `/config/` sem sessão e falham. A correção de contrato público #233 já entrou na main, mas isso **não torna os testes autenticados verdes**. A política é **não mascarar falhas nem mergear sem gates adequados**.
+
+As issues #212/#213/#222 e pendências de publicação/Viewer da #228/#229 seguem abertas no tracker; não inferir que sua implementação necessariamente está ausente — conferir código atual e validação antes de resolver. PRs DS #39/#41 continuam draft e não devem ser fundidas em bloco. No produto há PRs CP-PUBLIC antigas em HOLD: só considerar mediante reconciliação explícita.
+
+## Próxima execução técnica (quando o usuário pedir prosseguimento)
+
+**Prioridade: ARC-03C independente da fixture de auth.**
+
+1. Checar novo HEAD do produto e do DS. Ler este handover, [ARC-03B](ARC03B_AUTHORED_PAGES_STATIC_COMPILER_BROWSER_GATE_2026-10-22.md), `architecture/pages` e `scripts/compile-primary-pages.mjs` na branch `architecture/arc03-primary-header-fragment-prototype-20261022`, e `package.json`/`netlify.toml` da main.
+2. Definir **uma fonte autoral**: build determinístico leva fontes `architecture/pages` ao output publicado em `app/` (sem sobrescrever código/manual silenciosamente); manifesto de entradas/saídas, verificação `--check` para drift e rollback. Não introduzir framework, SSR ou engine de página universal.
+3. Preservar os três headers exatamente e manter Viewer com seu header NAV-005 diferente. Não unir com P-COMP-01, P-TOKEN, mudanças de preço ou alterações auth.
+4. Revalidar no build real: 3 páginas × 5 larguras × 2 temas × Chromium/WebKit, menus fechado/aberto, foco teclado, navegação, CSSOM e screenshot. Inspecionar rotas não afetadas como controles negativos.
+5. Só abrir PR de produto se a mudança/validação exigir revisão de integração; evitar várias prévias Netlify. Não declarar produção concluída sem merge, CI requerido e readback do deploy.
+6. Continuar a registrar checkpoints aqui e no ponto de entrada do produto; issue #232 permanece bloco de testes privados separado.
+
+**Parada:** prova de compilador não substitui integração nem homologação de publicação. A solicitação "prossiga" habilita execução incremental governada por gates, não autoriza remover controles de acesso, modificar preços comerciais ou tomar decisões estéticas adicionais.
+
+## Estimativa de programa (com ressalvas)
+
+**~22% de trabalho ponderado concluído**, ante ~15% no relato anterior (**+7 pontos percentuais**), plausível **18–25%**. Ações executadas em branches e gates reduzem incerteza e esforço futuro, mas não representam a mesma porcentagem publicada em `main`. A infraestrutura e decisões estão à frente da adoção visual no produto.
+
+**Resumo de segurança:** nenhuma nova publicação de V5, schema, identidade, dados comerciais ou config privada foi feita por estes incrementos de arquitetura. A homologação visual continua dependente de `decisions.json`; `viewerPricePublication` somente sob controle explícito e inicialmente desligado.
