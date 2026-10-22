@@ -1,5 +1,8 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+> **P-TOKEN-02B — primeira integração contextual (22/10):** [contrato, PR DS #50, branch produto e gate de 48 cenários](P_TOKEN_02B_CONTEXTUAL_TEXT_INTEGRATION_2026-10-22.md). Somente 3 seletores pré-homologados no tema claro; no produto a alteração permanece candidata e **sem merge/release** até PASS diferencial. Sem aliases globais ou redesenho VIS-002.
+
+
 > **P-TOKEN-01B/02A — checkpoint 22/10:** [pin imutável no produto e 32 observações CSS computadas em Chromium/WebKit](P_TOKEN_01B_02A_PRODUCT_INTEGRATION_AND_COMPUTED_AUDIT_2026-10-22.md). Fonte DS mergeada na PR #49; branch produto `architecture/p-token-01b-reference-pin-20261022` tem artefatos **não carregados** fora de `app` e gates de integridade/P-TOKEN-02A PASS. CSS de produto permanece inalterado. P-TOKEN-02B = mapeamento real por componente e distinção same-value / mudança visual.
 
 
