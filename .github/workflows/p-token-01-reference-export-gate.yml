@@ -39,7 +39,7 @@ jobs:
           node --check tests/export-approved-palette.test.mjs
       - name: Compare versioned dist to canonical decisions
         run: node scripts/export-approved-palette.mjs --check
-      - name: Tests: provenance, scope, determinism and fail-closed
+      - name: "Tests: provenance, scope, determinism and fail-closed"
         run: node --test tests/export-approved-palette.test.mjs
       - name: Assert no runtime integration
         run: |
