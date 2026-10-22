@@ -1,5 +1,8 @@
 # CI-BASELINE-01 (pendência controlada) e ARC-03 — protótipo de fragmento público
 
+> **Evolução posterior ARC-03B (22/10):** [compilador de três páginas completas e gate visual 60/60 PASS](ARC03B_AUTHORED_PAGES_STATIC_COMPILER_BROWSER_GATE_2026-10-22.md). A branch isolada guarda arquivos-fonte de autoria e gera HTML somente em `artifacts/`; nenhum arquivo de `app/` ou build Netlify foi modificado. O estado ARC-03 descrito abaixo era apenas de fragmento/prova estática; **ARC-03C ainda necessário para cutover de produção**.
+
+
 **Data:** 2026-10-22. **Estado:** #233 **CORRIGIDA NA MAIN DO PRODUTO**; #232 **PENDENTE, CAUSA CONFIRMADA, NÃO CONTORNAR**; ARC-03 protótipo **PASS estático, ISOLADO SEM RUNTIME/DEPLOY**.
 
 ## 1. Pendência explicitamente preservada
