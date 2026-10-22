@@ -1,5 +1,8 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+> **Estado mais recente P-TOKEN-02B (22/10):** [PR #231 draft/HOLD e baseline CI](P_TOKEN_02B_PR231_INTEGRATION_HOLD_BASELINE_CI_2026-10-22.md). Revisão cruzada dos testes: token 48/48 PASS e build/asset/variant PASS, porém mobile/summary/keyboard/flow/stone e allowlist apresentam falhas com histórico na main. O produto **não foi mergeado**; próxima ação CI-BASELINE-01, não mais tokens por inferência.
+
+
 > **P-TOKEN-02B — GATE 48/48 PASS (22/10):** [resultado final, SHA, evidências e handover](P_TOKEN_02B_GATE_PASS_AND_INTEGRATION_HANDOVER_2026-10-22.md). Somente os 3 seletores pré-homologados VIS-002, Chromium/WebKit × 4 larguras × 2 temas, **pixelToleranceUsed=0**. A mudança continua em branch do produto sem PR/merge/release; nenhuma aplicação global da paleta.
 
 
