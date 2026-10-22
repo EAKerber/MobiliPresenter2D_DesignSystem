@@ -1,5 +1,8 @@
 # MobiliPresenter2D Design System
 
+> **P-TOKEN-01B/02A (22/10, execução comprovada):** [pin DS→produto e auditoria CSSOM 32/32](docs/P_TOKEN_01B_02A_PRODUCT_INTEGRATION_AND_COMPUTED_AUDIT_2026-10-22.md). Exportador DS em `main@70f0eab`; cópia versionada em branch independente do produto, **fora de `app/`**, sem CSS ativo, PR do produto, merge ou Deploy Preview. Prova lexical de 54 correspondências, sem autorizar mapeamento global ou mudança visual.
+
+
 > **P-TOKEN-01 — fonte executável de tokens de referência:** [exportador e contrato de ativação VIS-002](docs/P_TOKEN_01_EXECUTABLE_REFERENCE_PALETTE_2026-10-22.md). A geração é determinística e validada em CI; os tokens `--ds-reference-*` ainda **não** são aplicados no CSS do produto por falta de mapeamento de componentes homologado.
 
 
