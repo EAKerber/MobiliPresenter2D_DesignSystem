@@ -1,5 +1,8 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+> **Checkpoint mais recente (22/10) — CI e ARC-03:** [resolução #233 no produto main@303468b, pendência #232 e protótipo compilador de header primário (3/3 PASS)](CI_BASELINE_01_RESOLUTION_AND_ARC03_HEADER_PROBE_2026-10-22.md). POC sem alteração do runtime e sem Preview. Próximo incremento ARC-03B exige separar fonte/saída e validar browser. PR #231 permanece DRAFT/HOLD.
+
+
 > **CI-BASELINE-01 — 22/10 (causas identificadas):** [issue #232 (gates protegidos sem sessão), #233 (assertions públicas defasadas), diagnóstico e teste corrigido](CI_BASELINE_01_AUTH_READINESS_AND_PROJECTION_2026-10-22.md). Run anônimo confirmou `/config/→/access/` em produção e preview. Testes CP-PUBLIC-02a passaram isoladamente com fixture atualizada, mas main ainda não foi corrigida. Próximo passo: fixture autorizada de CI para `/config/`, respeitando controle de acesso; não liberar rota pública nem mascarar failures.
 
 
