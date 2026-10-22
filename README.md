@@ -1,5 +1,8 @@
 # MobiliPresenter2D Design System
 
+> **P-TOKEN-02B:** [primeira aplicação técnica de token contextual VIS-002](docs/P_TOKEN_02B_CONTEXTUAL_TEXT_INTEGRATION_2026-10-22.md). Exportação DS aprovada e fonte única para três textos claros existentes; patch correspondente apenas em branch isolada do produto, com gate diferencial. Não significa adoção global da paleta.
+
+
 > **P-TOKEN-01B/02A (22/10, execução comprovada):** [pin DS→produto e auditoria CSSOM 32/32](docs/P_TOKEN_01B_02A_PRODUCT_INTEGRATION_AND_COMPUTED_AUDIT_2026-10-22.md). Exportador DS em `main@70f0eab`; cópia versionada em branch independente do produto, **fora de `app/`**, sem CSS ativo, PR do produto, merge ou Deploy Preview. Prova lexical de 54 correspondências, sem autorizar mapeamento global ou mudança visual.
 
 
