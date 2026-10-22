@@ -1,5 +1,8 @@
 # MobiliPresenter2D Design System
 
+> **P-COMP-01 validado em branch (21/10):** [implementação Vanilla, 40 diferenciais + 16 funcionais + NAV-005 20/20 PASS](docs/P_COMP_01_PUBLIC_MENU_IMPLEMENTATION_GATE_2026-10-21.md). Branch de produto `architecture/p-comp-01-public-menu-20261021@4ba9384` permanece **sem merge, PR ou deploy**; próximo gate é revisão de integração, independente do P-TOKEN-01.
+
+
 > **V0-B auditado (21/10):** [fontes JS, co-carregamento CSS, pontos cegos i18n e primeiro piloto](docs/V0B_SOURCE_COVERAGE_CSS_OWNERSHIP_AND_FIRST_PATCH_GATE_2026-10-21.md). 54 fontes JS contabilizadas (52 lidas, 2 dados grandes não inspecionados), 84 nomes CSS em múltiplas folhas (69 co-carregados em alguma rota, **não** 69 bugs). P-COMP-01/menu público está **especificado, não implementado**; teste runtime permanece pendente.
 
 
