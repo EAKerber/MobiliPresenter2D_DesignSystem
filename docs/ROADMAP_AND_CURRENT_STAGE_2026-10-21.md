@@ -1,5 +1,8 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+> **P-TOKEN-01 — status de fonte de tokens (22/10):** [exportador Node e distribuição de paleta VIS-002](P_TOKEN_01_EXECUTABLE_REFERENCE_PALETTE_2026-10-22.md). A fonte executável é `decisions.json`, a saída de referência não é carregada no produto. A integração de CSS real permanece condicionada ao mapeamento e à prova visual; não confundir geração com implementação dos estados EST/VIS.
+
+
 > **P-COMP-01 (resultado posterior ao V0-B):** [checkpoint de implementação e gate PASS](P_COMP_01_PUBLIC_MENU_IMPLEMENTATION_GATE_2026-10-21.md), `MobiliPresenter2D/architecture/p-comp-01-public-menu-20261021@4ba9384`. Quatro consumidores de menu público, 40 diferenciais em Chromium, 16 cenários funcionais Chromium/WebKit e 20 de Viewer NAV-005 passaram em Actions [#39697470826](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39697470826). **Código somente em branch, sem merge/release**. Não reabrir ARC/NAV nem inferir que i18n/tokens/fragmentos HTML já foram implementados.
 
 
