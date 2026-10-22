@@ -1,5 +1,8 @@
 # MobiliPresenter2D Design System
 
+> **Integração P-TOKEN-02B (22/10):** [PR de produto #231 em DRAFT/HOLD após triagem de CI preexistente](docs/P_TOKEN_02B_PR231_INTEGRATION_HOLD_BASELINE_CI_2026-10-22.md). Gate contextual 48/48 PASS, mas checks globais de Configurador e allowlist permanecem vermelhos também na main. Um único Deploy Preview automático foi gerado; nenhum merge/publicação realizado.
+
+
 > **P-TOKEN-02B — gate 48/48 PASS (22/10):** [evidência e handover definitivo](docs/P_TOKEN_02B_GATE_PASS_AND_INTEGRATION_HANDOVER_2026-10-22.md). Três consumidores textuais VIS-002 no produto, propriedade contextual DS com CSS computado e screenshots idênticos à main (Chromium/WebKit). **Branch técnica validada, sem PR/merge/Deploy Preview de produto**; paleta global NÃO ativada.
 
 
