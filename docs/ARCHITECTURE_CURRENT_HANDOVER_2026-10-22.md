@@ -1,5 +1,19 @@
 # HANDOVER ATUAL — MobiliPresenter2D + Design System
 
+> **RETOMADA MAIS RECENTE — ARC-03C (22/10/2026):** no produto, a branch
+> [architecture/arc03c-static-page-build-20261022](https://github.com/EAKerber/MobiliPresenter2D/tree/architecture/arc03c-static-page-build-20261022)
+> implementou fonte autoral única das três páginas primárias, outputs estáticos rastreados em app/,
+> manifesto de hashes e checagem fail-closed antes do build Netlify real. O gate isolado
+> [Actions #39871907031 — SUCCESS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39871907031)
+> passou **60/60 Chromium/WebKit com zero diferenças de raster** contra o HTML imutável main@303468b,
+> além de testes de tampering, build e controle de escopo. O primeiro run #39871724976
+> falhou antes do browser por safe.directory no container; correção no commit 4318e81 e rerun verde.
+> [Checkpoint detalhado no produto (branch)](https://github.com/EAKerber/MobiliPresenter2D/blob/architecture/arc03c-static-page-build-20261022/docs/architecture/arc03c-source-authority-and-netlify-build-2026-10-22.md).
+> **Não foi aberta PR, não houve Netlify Preview, merge ou release.** A PR #231 continua HOLD e
+> a issue #232 ainda exige fixture autorizada para testes privados. Próximo gate: revisão de integração
+> do ARC-03C e CI aplicável, sem liberar /config/ nem presumir homologação de produção.
+
+
 **Data da fotografia:** 22/10/2026 (America/Sao_Paulo). **Autoria:** checkpoint de consolidação baseado em leitura real de branches, PRs, issues e runs GitHub, e não só na memória do chat.
 
 **Este é o primeiro documento para retomar a consolidação arquitetural.** O ponto de entrada recíproco do produto está em [`MobiliPresenter2D/docs/handoffs/ARCHITECTURE-CURRENT-2026-10-22.md`](https://github.com/EAKerber/MobiliPresenter2D/blob/main/docs/handoffs/ARCHITECTURE-CURRENT-2026-10-22.md). É mais recente que as instruções operacionais de 08–12/10 existentes em `CURRENT_STATE.md` e antigos handovers; conservar esses textos como histórico, mas não restaurar planos superados.
