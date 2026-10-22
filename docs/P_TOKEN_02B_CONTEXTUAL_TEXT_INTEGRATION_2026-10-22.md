@@ -1,6 +1,6 @@
 # P-TOKEN-02B — primeiro consumo real DS→produto, escopo VIS-002 contextual
 
-**Data:** 2026-10-22. **Estado:** gerador DS integrado, consumidor em **branch de produto isolada**, sujeito a validação diferencial. **Não publicar automaticamente.**
+**Data:** 2026-10-22. **Estado final posterior:** gerador DS integrado e consumidor isolado em branch, **GATE DIFERENCIAL 48/48 PASS (não integrado à main)**. Ver [checkpoint final e run Actions](P_TOKEN_02B_GATE_PASS_AND_INTEGRATION_HANDOVER_2026-10-22.md). **Não publicar automaticamente.**
 
 ## Autoridades
 
