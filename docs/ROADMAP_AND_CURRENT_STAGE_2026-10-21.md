@@ -1,5 +1,8 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+> **CI-BASELINE-01 — 22/10 (causas identificadas):** [issue #232 (gates protegidos sem sessão), #233 (assertions públicas defasadas), diagnóstico e teste corrigido](CI_BASELINE_01_AUTH_READINESS_AND_PROJECTION_2026-10-22.md). Run anônimo confirmou `/config/→/access/` em produção e preview. Testes CP-PUBLIC-02a passaram isoladamente com fixture atualizada, mas main ainda não foi corrigida. Próximo passo: fixture autorizada de CI para `/config/`, respeitando controle de acesso; não liberar rota pública nem mascarar failures.
+
+
 > **Estado mais recente P-TOKEN-02B (22/10):** [PR #231 draft/HOLD e baseline CI](P_TOKEN_02B_PR231_INTEGRATION_HOLD_BASELINE_CI_2026-10-22.md). Revisão cruzada dos testes: token 48/48 PASS e build/asset/variant PASS, porém mobile/summary/keyboard/flow/stone e allowlist apresentam falhas com histórico na main. O produto **não foi mergeado**; próxima ação CI-BASELINE-01, não mais tokens por inferência.
 
 
