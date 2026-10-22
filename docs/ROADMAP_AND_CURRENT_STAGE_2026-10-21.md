@@ -1,5 +1,8 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+> **P-COMP-01 (resultado posterior ao V0-B):** [checkpoint de implementação e gate PASS](P_COMP_01_PUBLIC_MENU_IMPLEMENTATION_GATE_2026-10-21.md), `MobiliPresenter2D/architecture/p-comp-01-public-menu-20261021@4ba9384`. Quatro consumidores de menu público, 40 diferenciais em Chromium, 16 cenários funcionais Chromium/WebKit e 20 de Viewer NAV-005 passaram em Actions [#39697470826](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39697470826). **Código somente em branch, sem merge/release**. Não reabrir ARC/NAV nem inferir que i18n/tokens/fragmentos HTML já foram implementados.
+
+
 > **V0-B — evidência estática expandida (21/10):** [fonte/cobertura, overlaps CSS e spec do piloto P-COMP-01](V0B_SOURCE_COVERAGE_CSS_OWNERSHIP_AND_FIRST_PATCH_GATE_2026-10-21.md). O índice V0-A de 826 candidatas **não** é cobertura completa; 54 scripts runtime contabilizados (52 fontes lidas, 2 dados grandes não lidos), 84 classes lexicais repetidas entre folhas (69 aparecem em folhas co-carregadas; não inferir erro). Primeiro patch escolhido: controlador público de menu (4 consumidores), **HOLD** para mudanças até gates de quatro rotas e NAV-005; versão experimental antiga divergiu em 26 commits e não deve ser mesclada. Nem tokens nem código do produto foram alterados.
 
 
