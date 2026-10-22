@@ -1,5 +1,8 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+> **P-TOKEN-01B/02A — checkpoint 22/10:** [pin imutável no produto e 32 observações CSS computadas em Chromium/WebKit](P_TOKEN_01B_02A_PRODUCT_INTEGRATION_AND_COMPUTED_AUDIT_2026-10-22.md). Fonte DS mergeada na PR #49; branch produto `architecture/p-token-01b-reference-pin-20261022` tem artefatos **não carregados** fora de `app` e gates de integridade/P-TOKEN-02A PASS. CSS de produto permanece inalterado. P-TOKEN-02B = mapeamento real por componente e distinção same-value / mudança visual.
+
+
 > **P-TOKEN-01 — status de fonte de tokens (22/10):** [exportador Node e distribuição de paleta VIS-002](P_TOKEN_01_EXECUTABLE_REFERENCE_PALETTE_2026-10-22.md). A fonte executável é `decisions.json`, a saída de referência não é carregada no produto. A integração de CSS real permanece condicionada ao mapeamento e à prova visual; não confundir geração com implementação dos estados EST/VIS.
 
 
