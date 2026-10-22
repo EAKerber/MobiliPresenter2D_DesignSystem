@@ -1,5 +1,8 @@
 # P-TOKEN-01 — Paleta executável de referência do Design System
 
+> **Marco posterior de execução:** a PR [#49](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/49) foi **MERGED** no Design System `main@70f0eab`. O consumidor pinado foi preparado em branch própria de produto e validado, sem carregar CSS; ver [P-TOKEN-01B/02A e observações CSSOM](P_TOKEN_01B_02A_PRODUCT_INTEGRATION_AND_COMPUTED_AUDIT_2026-10-22.md). O estado anterior descrito abaixo refere-se ao momento pré-merge.
+
+
 **Data:** 2026-10-22. **Estado:** infraestrutura de geração implementada e testada em branch; **sem aplicação no runtime do produto**.
 
 **Decisões:** `ARC-02` (Design System como origem executável), `ARC-14` (integração por versão e PR), `ARC-04` (preservação visual), `VIS-002.approvedPalette` (referência visual homologada), `EST-02` (foco).
