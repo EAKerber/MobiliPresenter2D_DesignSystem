@@ -1,5 +1,8 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+> **PONTO DE RETOMADA 22/10:** [handover canônico entre repositórios](ARCHITECTURE_CURRENT_HANDOVER_2026-10-22.md). Último gate concluído: ARC-03B **60/60 PASS**, imagens idênticas, zero alteração de `app/`, porém **sem cutover de `npm run build`**. Próximo: ARC-03C (fonte única de HTML de autoria e geração no build publicado), separado de P-COMP, P-TOKEN e auth. PR de tokens #231 permanece draft; #232 é pendência explícita e #233 já entrou na main.
+
+
 > **Marco ARC-03B — 22/10:** [HTML autoral, fragmento único e teste visual 60/60 PASS](ARC03B_AUTHORED_PAGES_STATIC_COMPILER_BROWSER_GATE_2026-10-22.md), branch de produto `architecture/arc03-primary-header-fragment-prototype-20261022@e459b9b`. `app/` e Netlify inalterados; não tratar POC como cutover. **ARC-03C** é a próxima adoção de fonte gerada no build, após gate e rollback. Progresso do programa ~22% (antes 15%).
 
 
