@@ -1,5 +1,8 @@
 # MobiliPresenter2D Design System
 
+> **ARC-03B (22/10):** [páginas de autoria separadas e compilador HTML com diferencial 60/60 PASS](docs/ARC03B_AUTHORED_PAGES_STATIC_COMPILER_BROWSER_GATE_2026-10-22.md). Três headers públicos testados em Chromium/WebKit, cinco larguras e dois temas, sem diferença visual nem mudança do build de produção. Próximo gate: ARC-03C — integração da geração ao build real; #232 auth pendente, #233 resolvida.
+
+
 > **22/10 — CI-BASELINE-01 e ARC-03:** [#233 concluída na main do produto; #232 (fixture autenticada) permanece aberta; protótipo de fragmento do header público 3/3 PASS sem runtime](docs/CI_BASELINE_01_RESOLUTION_AND_ARC03_HEADER_PROBE_2026-10-22.md). Não confundir protótipo de build-time com migração publicada. PR de tokens #231 continua DRAFT/HOLD.
 
 
