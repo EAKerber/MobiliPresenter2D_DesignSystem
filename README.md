@@ -1,5 +1,8 @@
 # MobiliPresenter2D Design System
 
+> **HANDOVER CANÔNICO ATUAL (22/10/2026):** [estado verificado de MobiliPresenter2D + Design System, HEADs, PRs, issues, branches, gates e próximo ARC-03C](docs/ARCHITECTURE_CURRENT_HANDOVER_2026-10-22.md). Prevalece para retomada sobre checkpoints anteriores; **ARC-03B 60/60 PASS somente em branch**, #232 auth test fixture aberta, #233 corrigida, PR produto #231 DRAFT/HOLD. Sempre conferir HEAD live antes de atuar.
+
+
 > **ARC-03B (22/10):** [páginas de autoria separadas e compilador HTML com diferencial 60/60 PASS](docs/ARC03B_AUTHORED_PAGES_STATIC_COMPILER_BROWSER_GATE_2026-10-22.md). Três headers públicos testados em Chromium/WebKit, cinco larguras e dois temas, sem diferença visual nem mudança do build de produção. Próximo gate: ARC-03C — integração da geração ao build real; #232 auth pendente, #233 resolvida.
 
 
