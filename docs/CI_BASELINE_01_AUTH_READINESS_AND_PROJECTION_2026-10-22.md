@@ -1,5 +1,8 @@
 # CI-BASELINE-01 — diagnóstico reprodutível e correção de testes do MobiliPresenter2D
 
+> **Atualização posterior importante (22/10):** [#233 já foi integrada à main do produto, issue fechada; #232 permanece aberta; ARC-03 POC compilador passou 3/3 sem runtime](CI_BASELINE_01_RESOLUTION_AND_ARC03_HEADER_PROBE_2026-10-22.md). O estado das correções descrito abaixo corresponde à etapa anterior à integração de #233. A pendência de auth NÃO foi resolvida.
+
+
 **Data:** 2026-10-22. **Estado:** causas identificadas, **duas issues rastreáveis**, um gate de projeção pública corrigido (**PASS em branch isolada**) e uma auditoria de proteção do Configurador (**PASS diagnóstico sem autenticação**). **CI global da main continua não homologada**; [PR #231](https://github.com/EAKerber/MobiliPresenter2D/pull/231) permanece **DRAFT/HOLD**. Sem merge ou deploy de correção, sem nova PR/preview.
 
 ## Ponto de entrada — issues com evidências e critérios de aceite
