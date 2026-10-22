@@ -1,5 +1,8 @@
 # V0-B — cobertura estática expandida, cascata CSS e primeiro patch de componentes
 
+> **Atualização após este plano — P-COMP-01 IMPLEMENTADO EM BRANCH, TESTADO:** consultar [checkpoint posterior e evidência Actions](P_COMP_01_PUBLIC_MENU_IMPLEMENTATION_GATE_2026-10-21.md). Este documento descreve o estado anterior **ESPECIFICADO/NÃO EXECUTADO**. Na sequência, a branch `architecture/p-comp-01-public-menu-20261021@4ba9384` passou em 40 diferenciais, 16 testes funcionais e 20 NAV-005; ainda sem merge/deploy.
+
+
 **Data:** 2026-10-21. **Status:** auditoria estática **PASS por fonte**; extração/tradução e promoção de componente **HOLD até gates executáveis/browser**. Não é homologação visual nem implementação. **Produto:** `EAKerber/MobiliPresenter2D@840a0cda361b3ce215fc934badc26df72dffc6e8`. **Design System:** `decisions.json` + [ARC-01..16](ARCHITECTURE_DECISIONS_ARC01_ARC16_AND_EXECUTION_2026-10-21.md).
 
 **Antecedente:** [V0-A](V0A_POST230_OWNERSHIP_LOCALIZATION_AND_BUILD_AUDIT_2026-10-21.md), com 14 famílias de componentes e índices heurísticos de 826 ocorrências candidatas. Este checkpoint corrige os limites da varredura, mapeia novas fontes, triangula a cascata por rota e especifica o **primeiro patch restrito**. Não executamos o app em browser nem alteramos o produto.
