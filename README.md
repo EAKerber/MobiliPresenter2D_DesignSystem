@@ -1,5 +1,8 @@
 # MobiliPresenter2D Design System
 
+> **22/10 — CI-BASELINE-01 e ARC-03:** [#233 concluída na main do produto; #232 (fixture autenticada) permanece aberta; protótipo de fragmento do header público 3/3 PASS sem runtime](docs/CI_BASELINE_01_RESOLUTION_AND_ARC03_HEADER_PROBE_2026-10-22.md). Não confundir protótipo de build-time com migração publicada. PR de tokens #231 continua DRAFT/HOLD.
+
+
 > **CI-BASELINE-01 (22/10):** [diagnóstico de redirecionamento protegido, correção de testes públicos e issues #232/#233](docs/CI_BASELINE_01_AUTH_READINESS_AND_PROJECTION_2026-10-22.md). Na produção e no preview #231, acessos anônimos a `/config/` vão para `/access/`, explicando gates de navegador que esperavam o Configurador sem sessão. Assertions CP-PUBLIC-02a corrigidas em branch/testes PASS; **nenhuma correção foi integrada ao produto e PR #231 segue DRAFT/HOLD**.
 
 
