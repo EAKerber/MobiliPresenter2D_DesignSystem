@@ -1,5 +1,8 @@
 # MobiliPresenter2D Design System
 
+> **P-TOKEN-01 — fonte executável de tokens de referência:** [exportador e contrato de ativação VIS-002](docs/P_TOKEN_01_EXECUTABLE_REFERENCE_PALETTE_2026-10-22.md). A geração é determinística e validada em CI; os tokens `--ds-reference-*` ainda **não** são aplicados no CSS do produto por falta de mapeamento de componentes homologado.
+
+
 > **P-COMP-01 validado em branch (21/10):** [implementação Vanilla, 40 diferenciais + 16 funcionais + NAV-005 20/20 PASS](docs/P_COMP_01_PUBLIC_MENU_IMPLEMENTATION_GATE_2026-10-21.md). Branch de produto `architecture/p-comp-01-public-menu-20261021@4ba9384` permanece **sem merge, PR ou deploy**; próximo gate é revisão de integração, independente do P-TOKEN-01.
 
 
