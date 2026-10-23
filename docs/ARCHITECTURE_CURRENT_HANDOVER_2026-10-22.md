@@ -1,5 +1,20 @@
 # HANDOVER ATUAL — MobiliPresenter2D + Design System
 
+> **VIS-002C × P-TOKEN-02B v0.2 — RECONCILIAÇÃO TÉCNICA PASS (23/10):**
+> [Actions #39894163198 SUCCESS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39894163198)
+> na branch isolada produto [`integration/vis002c-p-token-02b-v2-20261023@34a305c`](https://github.com/EAKerber/MobiliPresenter2D/tree/integration/vis002c-p-token-02b-v2-20261023).
+> **48/48** equivalências exatas entre v0.1/v0.2 para os três consumidores antigos;
+> **36/36** cenários de contraste e **72** verificações de pares; 424 medições
+> conformes, **0 abaixo**, 32 `UNVERIFIED`; **12/12** pares full-page,
+> **90.315 pixels alterados e nenhum fora dos cinco textos aprovados**.
+> O [mapeamento DS v0.2](VIS002C_CONTEXTUAL_MAPPING_V0_2_0.json) define oito
+> contextos sem duplicar a cor homologada em `VIS-002`; pin Git SHA, CSS
+> gerado v0.2 e versão v0.1 histórica preservados. **Sem uso global de token**.
+> PR #231 original continua DRAFT e não foi reescrita; a integração v0.2
+> é derivada dela. PR #234 DRAFT e issue #232 de CI autenticado continuam HOLD.
+> **Sem PR nova, Netlify Preview, merge ou publicação.**
+> [Gate, proveniência e próximos bloqueios](VIS002_PUBLIC_TEXT_CONTRAST_APPLICATION_RULE_2026-10-22.md).
+
 > **VIS-002C — gate visual full-page PASS, integração ainda HOLD (23/10/2026):**
 > [Actions #39891404267](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39891404267)
 > concluiu **12/12 pares full-page** (Landing/About/Como funciona × 390/1366
