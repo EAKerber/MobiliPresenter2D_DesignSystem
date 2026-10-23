@@ -1,5 +1,18 @@
 # HANDOVER ATUAL — MobiliPresenter2D + Design System
 
+> **Reconciliação cruzada — 23/10/2026 (prioridade sobre o estado anterior deste arquivo).** Produto `main@15e1cfb`, DS `main@ae1be56` na leitura desta reconciliação. Registro mantido na branch **`docs/handover-reconcile-20261023`**, sem deploy ou merge.
+>
+> **Produto ARC-03C:** [PR #234](https://github.com/EAKerber/MobiliPresenter2D/pull/234) em DRAFT/HOLD, branch `architecture/arc03c-static-page-build-20261022@8ab2317`. O compilador já alimenta o build real para três páginas com fonte única e detecção de drift; [60/60 Chromium/WebKit PASS, zero diferenças](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39871907031), mas não foi integrado à main. NAV-004 e NAV-005 permanecem autoridades distintas.
+>
+> **CI-BASELINE-01 #232:** preview experimental [PR #235](https://github.com/EAKerber/MobiliPresenter2D/pull/235) é somente prova de `getDeployStore` V5 no deploy, **não candidato a merge**. [Deploy READY](https://app.netlify.com/projects/mobilipresenter2d/deploys/6adb87a7fc8cd994e4a86c10) e [preflight sem credencial #39985006606](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39985006606) PASS com marcadores públicos; ainda **UNVERIFIED** resposta autenticada `/api/buyer-configuration=200` após fix. Dois convites temporários consumidos/revogados. [Run local #39987226959](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39987226959): **3/5 PASS** (Mobile, Summary, Stone), **2/5 HOLD** (Keyboard/Flow, foco e navegação), sob V5 sintético local, não equivalente ao Netlify. [Handover detalhado CI](https://github.com/EAKerber/MobiliPresenter2D/blob/ci/ci-baseline-01-auth235-only-20261023/docs/handoffs/CI_BASELINE_01_AUTH235_READY_2026-10-23.md). Investigação dedicada em `ci/ci-baseline-01-nav-sequence-probe-20261023`. Sem convite novo até diagnóstico das duas suítes.
+>
+> **VIS-002C:** [reconciliação v0.2 #39894163198 PASS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39894163198), em `integration/vis002c-p-token-02b-v2-20261023`: 48/48 equivalências v0.1, 36/36 cenários de contraste, cinco textos contextuais autorizados, 90.315 pixels alterados apenas no escopo homologado; 32 casos continuam UNVERIFIED. Sem integração da PR #231 e sem distribuição global de paleta.
+>
+> **Responsabilidade de autoridade:** DS mantém `decisions.json`, contratos ARC, exportação e homologação visual; produto mantém HTML Vanilla, V5, build e testes. Os ganhos em branches e previews **não são implementação publicada**. Não converter histórico de CI vermelho em waiver, não expor `/config/` nem migrar controles comerciais por conveniência.
+>
+---
+
+
 > **VIS-002C × P-TOKEN-02B v0.2 — RECONCILIAÇÃO TÉCNICA PASS (23/10):**
 > [Actions #39894163198 SUCCESS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39894163198)
 > na branch isolada produto [`integration/vis002c-p-token-02b-v2-20261023@34a305c`](https://github.com/EAKerber/MobiliPresenter2D/tree/integration/vis002c-p-token-02b-v2-20261023).
