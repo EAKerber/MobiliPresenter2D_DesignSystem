@@ -1,5 +1,16 @@
 # HANDOVER ATUAL — MobiliPresenter2D + Design System
 
+> **Auditoria de contraste público concluída (22/10):**
+> [Actions #39883740485 — SUCCESS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39883740485),
+> branch isolada `audit/public-text-contrast-coverage-20261022@35d9c22`,
+> **36/36 cenários; 456 medições**, 388 acima do limiar, 36 abaixo em **cinco contextos**
+> (`/ .story-section`, `/ .feature-copy`, `/about/ .about-closing`,
+> `/about/ .about-scale__stat`, `/how-it-works/ .finish-copy`) e 32
+> não verificadas. **36/36 checagens de pares já homologados PASS**.
+> Nenhum CSS/HTML alterado; nenhuma PR/preview/merge.
+> [Relatório com seletores, contraste e limites](PUBLIC_TEXT_CONTRAST_AUDIT_2026-10-22.md).
+> Não expandir VIS-002 automaticamente: próximo gate exige aprovação contextual dos novos pares.
+
 > **RETOMADA MAIS RECENTE — ARC-03C (22/10/2026):** no produto, a branch
 > [architecture/arc03c-static-page-build-20261022](https://github.com/EAKerber/MobiliPresenter2D/tree/architecture/arc03c-static-page-build-20261022)
 > implementou fonte autoral única das três páginas primárias, outputs estáticos rastreados em app/,
