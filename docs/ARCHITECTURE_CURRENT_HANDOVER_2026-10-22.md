@@ -1,5 +1,16 @@
 # HANDOVER ATUAL — MobiliPresenter2D + Design System
 
+> **AUDIT-PUBLIC-TEXT-02 — candidato de contraste em HOLD, não aplicado (22/10):**
+> os cinco contextos de texto com contraste insuficiente têm CSS experimental
+> [na branch de auditoria](https://github.com/EAKerber/MobiliPresenter2D/tree/audit/public-text-contrast-coverage-20261022),
+> restrito a `evidence/visual/` e injetado apenas em browser CI (nenhum `app/`/PR/Preview).
+> O par `#705C4B` é da paleta VIS-002, **mas seu uso nesses cinco novos seletores
+> ainda NÃO foi homologado**. A primeira auditoria de 456 medições segue PASS;
+> o gate diferencial da proposta teve falhas de instrumentação e cor computada,
+> com investigação em curso no [run #39886961612](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39886961612).
+> [Checkpoint de hipótese e falhas](PUBLIC_TEXT_CONTRAST_CANDIDATE_2026-10-22.md).
+> Só registrar PASS se um novo run terminar verde e houver inspeção visual separada.
+
 > **Auditoria de contraste público concluída (22/10):**
 > [Actions #39883740485 — SUCCESS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39883740485),
 > branch isolada `audit/public-text-contrast-coverage-20261022@35d9c22`,
