@@ -1,5 +1,19 @@
 # HANDOVER ATUAL — MobiliPresenter2D + Design System
 
+> **VIS-002C — DECISÃO CONTEXTUAL E IMPLEMENTAÇÃO ISOLADA (23/10):**
+> O usuário autorizou aplicar a cor secundária homologada `#705C4B` aos
+> cinco contextos de leitura que falhavam por reutilizar `--public-muted`.
+> [Contrato fail-closed e escopo homologado](VIS002_PUBLIC_TEXT_CONTRAST_APPLICATION_RULE_2026-10-22.md),
+> sem mudança de `decisions.json` ou quebra do hash de exportação P-TOKEN-01.
+> Produto [branch `fix/vis002c-public-text-contrast-20261022@b0eb52f`](https://github.com/EAKerber/MobiliPresenter2D/tree/fix/vis002c-public-text-contrast-20261022):
+> três arquivos CSS de páginas alterados, sem globals/auth/Viewer/V5, com
+> [CI #39890589800 SUCCESS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39890589800)
+> nos jobs CSS contract e navegador: **36/36 cenários**, **72 pares verificados**,
+> **456 medições (424 PASS, 0 abaixo do limiar, 32 não verificadas)**.
+> Workflow preparado para ser gate de PR/main após integração, sem congelar
+> alterações CSS independentes. **Ainda sem PR, preview, merge nem produção**;
+> não confundir o PASS técnico em branch com homologação global da interface.
+
 > **AUDIT-PUBLIC-TEXT-02 — gate diferencial PASS; homologação visual ainda HOLD (23/10/2026):**
 > [GitHub Actions #39888294326 SUCCESS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39888294326),
 > branch isolada `audit/public-text-contrast-coverage-20261022@ace8510`.
