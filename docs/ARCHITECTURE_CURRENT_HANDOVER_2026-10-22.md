@@ -1,5 +1,18 @@
 # HANDOVER ATUAL — MobiliPresenter2D + Design System
 
+> **VIS-002C — gate visual full-page PASS, integração ainda HOLD (23/10/2026):**
+> [Actions #39891404267](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39891404267)
+> concluiu **12/12 pares full-page** (Landing/About/Como funciona × 390/1366
+> × Chromium/WebKit, light), com **90.315 pixels alterados, zero fora dos textos
+> homologados**, sem mudança de geometria. Repassou **36/36 cenários** de
+> contraste, 72 checagens de pares e 0 violações entre 424 medições confirmadas;
+> 32 casos continuaram `UNVERIFIED`. Produto branch `fix/vis002c-public-text-contrast-20261022@007fc8e`.
+> A [PR #231](https://github.com/EAKerber/MobiliPresenter2D/pull/231) também
+> edita as três CSS e já possui token contextual DS gerado; conciliar as fontes
+> quando ela for integrada, sem duplicar autoridade. PR #234 e CI privado #232
+> seguem independentes em HOLD. [Evidências e roadmap](VIS002_PUBLIC_TEXT_CONTRAST_APPLICATION_RULE_2026-10-22.md).
+> **Sem PR nova, preview, merge ou release da VIS002C.**
+
 > **VIS-002C — DECISÃO CONTEXTUAL E IMPLEMENTAÇÃO ISOLADA (23/10):**
 > O usuário autorizou aplicar a cor secundária homologada `#705C4B` aos
 > cinco contextos de leitura que falhavam por reutilizar `--public-muted`.
