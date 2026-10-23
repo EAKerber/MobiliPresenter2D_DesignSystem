@@ -41,7 +41,22 @@ Primeiros testes do comparador falharam por artefatos de instrumentação:
 - Correção subsequente no [commit 612bac4](https://github.com/EAKerber/MobiliPresenter2D/commit/612bac407665f665d5c7e2818d45c8a2ecc24f22):
   aguarda a saída do splash antes de avaliar a página.
 - [run #39885540377](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39885540377):
-  **PENDENTE de resultado final** ao criar este documento; não chamar PASS sem CI verde.
+  **FAIL**: o tempo de splash não estabilizou a animação `public-reveal`; deslocamento visual
+  transitório de 14px num controle não editado.
+- [run #39886228368](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39886228368):
+  **FAIL**, após estabilização e comparação de controles: a regra candidata da história
+  não produziu a cor esperada no CSS computado.
+- [run #39886604774](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39886604774):
+  **FAIL investigativo**. DOM reportou tema `light`, seletor correspondendo,
+  CSS candidato encontrado na folha com declaração correta, porém a cor
+  computada permaneceu `#706C66`. Não houve hipótese de regressão do produto.
+- [run #39886961612](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39886961612):
+  **em execução na última leitura**. O script aguarda frames de pintura e coleta
+  todas as regras CSS correspondentes, prioridade e estado disabled da folha.
+
+**HOLD técnico do candidato enquanto o último run não encerrar verde**.
+A fonte CSS é deliberadamente um experimento isolado; ela não será copiada
+a `app/` por inferência nem haverá PR visual prematura.
 
 O [AUDIT-PUBLIC-TEXT-01 #39883740485](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39883740485)
 continua PASS independentemente: 456 medições, cinco contextos abaixo do limiar,
