@@ -1,5 +1,16 @@
 # AUDIT-PUBLIC-TEXT-02 — proposta de consistência de contraste
 
+> **GATE DIFERENCIAL CONCLUÍDO EM 23/10 — PASS TÉCNICO**:
+> [GitHub Actions #39888294326](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39888294326)
+> na branch produto `audit/public-text-contrast-coverage-20261022@ace8510`.
+> 36/36 cenários Chromium/WebKit, 36 alterações de cor válidas no light,
+> 36 controles equivalentes no dark, **84 controles negativos intactos**,
+> 10 pares de imagens antes/depois. Contrastes finais **4,9534:1** no canvas
+> `#E8E3DC` e **5,4146:1** na superfície `#F0EDE8`. O CSS candidato
+> é temporariamente injetado em browser; não integra `app/`, produção ou
+> `decisions.json`. **Os novos cinco contextos continuam SEM HOMOLOGAÇÃO VISUAL**.
+> [Artefato original de screenshots e JSON](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39888294326/artifacts/12473448802).
+
 **Data:** 22/10/2026. **Estado: experimento isolado, sem homologação de novos contextos.**
 Não altera `decisions.json`, não publica CSS e não constitui decisão do usuário.
 
@@ -16,11 +27,11 @@ parágrafos em `/about/ .about-closing`.
 | Landing / descrição | `.feature-copy > p:not(.eyebrow):not(.feature-availability)` | `#F0EDE8` | ~5,41:1 |
 | Quem somos / fechamento | `.about-closing > p:not(.eyebrow):not(.about-closing__signature)` | `#F0EDE8` | ~5,41:1 |
 | Quem somos / destaque 200+ | `.about-scale__stat > span` | `#F0EDE8` | ~5,41:1 |
-| Como funciona / encerramento | `.finish-copy > p:not(.eyebrow)` | `#F0EDE8` | ~5,41:1 |
+| Como funciona / encerramento | `.finish-copy > p:not(.eyebrow):not(.finish-signature)` | `#F0EDE8` | ~5,41:1 |
 
 A seleção para esses **novos consumidores** precisa de homologação explícita.
 Não trocar `--public-muted` globalmente. Em especial, textos de
-`.feature-availability` e outros estados funcionais foram excluídos.
+`.feature-availability`, a assinatura editorial `.finish-signature` com cor própria `!important`, e outros estados funcionais foram excluídos.
 
 ## Evidência experimental (não publicação)
 Produto: [branch audit/public-text-contrast-coverage-20261022](https://github.com/EAKerber/MobiliPresenter2D/tree/audit/public-text-contrast-coverage-20261022).
@@ -73,3 +84,13 @@ continua PASS independentemente: 456 medições, cinco contextos abaixo do limia
    geometria, tema, regressões e rollback; reconciliar PR #231 separadamente.
 5. Preservar Viewer, Config/Admin/Access, navegação, preços e política de CI #232.
 Nenhum Deploy Preview foi gerado para AUDIT-PUBLIC-TEXT-02.
+
+
+## Reconciliação final de falhas e escopo — 23/10/2026
+
+- O run diagnóstico [#39886961612](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39886961612) **não estava mais em execução**: terminou FAIL. Após aguardar dois frames, a aplicação da regra CSS foi comprovada ao passar por Landing e About; o teste parou no baseline de `.finish-signature`, que usa tom próprio `#6E512E` no tema claro. Não era regressão da proposta nem motivo para forçar um `!important`.
+- O commit candidato [`ace8510`](https://github.com/EAKerber/MobiliPresenter2D/commit/ace851004713f92b4425e5832c6c892825814f0a) restringiu o seletor `.finish-copy > p:not(.eyebrow):not(.finish-signature)`, protegeu a assinatura como controle negativo e substituiu a instalação repetitiva de browsers no runner por container Playwright versionado `v1.56.0-noble`. Nenhum arquivo publicado foi modificado.
+- [Run #39888294326 **SUCCESS**](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39888294326), 36/36 browser/theme/width/page; 36 alterações de cor computadas em elementos light, 36 casos dark sem qualquer alteração, 84 verificações de controles não alvos e zero alteração da propriedade global `--public-muted`. É um **PASS do experimento CSS-injetado**, não um gate de deploy/merge.
+- O artefato Actions [`public-text-contrast`](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39888294326/artifacts/12473448802), digest SHA-256 `41273f402f1450caf392a4edaa13716b1d1637b406baf516f4695b8f65487b9d`, contém relatórios JSON, 10 capturas antes e 10 depois para Chromium light em 390 e 1366 px. Os 10 pares mostram alterações de pixels de texto, com geometria computada inalterada; a comparação de dimensões PNG preservou o tamanho do recorte em 9/10, com diferença de arredondamento de 1 px de altura no recorte `390/finish`. Não inferir equivalência de página inteira desse conjunto de recortes nem conformidade universal.
+- É recomendável a revisão visual humana das cinco comparações dentro do layout completo, incluindo o mobile; as capturas de um único parágrafo não representam toda a hierarquia editorial.
+- **Decisão pendente:** homologar ou rejeitar o uso de `#705C4B` nos cinco novos seletores. Até lá, não introduzir CSS no produto nem abrir PR/preview visual; manter PRs #231 e #234 e a pendência de auth #232 independentes.
