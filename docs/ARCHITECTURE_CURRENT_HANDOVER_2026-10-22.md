@@ -9,7 +9,8 @@
 > além de testes de tampering, build e controle de escopo. O primeiro run #39871724976
 > falhou antes do browser por safe.directory no container; correção no commit 4318e81 e rerun verde.
 > [Checkpoint detalhado no produto (branch)](https://github.com/EAKerber/MobiliPresenter2D/blob/architecture/arc03c-static-page-build-20261022/docs/architecture/arc03c-source-authority-and-netlify-build-2026-10-22.md).
-> **Não foi aberta PR, não houve Netlify Preview, merge ou release.** A PR #231 continua HOLD e
+> **Integração atual (22/10): [PR #234 DRAFT/HOLD](https://github.com/EAKerber/MobiliPresenter2D/pull/234)** em `8ab231761e8e0e3d9fe4b6e6eabec2e565cc27e7`; preview Netlify [#234](https://deploy-preview-234--mobilipresenter2d.netlify.app/) **READY**, deploy `6adab05d4044efc65ed6660b`, único preview criado. Não houve merge nem release. Gates de build purity, assets, variantes e contrato público estático PASS, mas os gates de navegador protegido Mobile/Stone/Keyboard e smoke público com pressuposto de `/config/` público falharam reproduzindo as assinaturas da issue #232, já classificadas como falta de sessão; Flow/Summary ainda em execução na última consulta. **NÃO mascarar estas falhas; manter HOLD até fixture autenticada independente**.
+> A PR #231 continua HOLD e
 > a issue #232 ainda exige fixture autorizada para testes privados. Próximo gate: revisão de integração
 > do ARC-03C e CI aplicável, sem liberar /config/ nem presumir homologação de produção.
 
