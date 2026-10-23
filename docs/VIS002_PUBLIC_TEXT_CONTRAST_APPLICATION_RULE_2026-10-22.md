@@ -38,3 +38,11 @@ Aprovar a **extensão contextual** do uso do texto secundário já homologado `V
 ## Compatibilidade com o pipeline canônico
 
 `decisions.json` contém `VIS-002.approvedPalette` como origem dos **valores**, e o exportador P-TOKEN-01 fixa seu Git blob SHA para impedir alterações silenciosas. **Este contrato de mapeamento contextual não altera a paleta nem o blob de decisions.json**: é um adendo de consumidores homologados, versionado por documento, até integração explícita ao schema/pipeline de tokens com atualização de versão, hashes e testes. Evitar desarmar o gate pinado para registrar a nova regra.
+
+## Implementação em branch — 23/10/2026
+
+- Produto: [`fix/vis002c-public-text-contrast-20261022@b0eb52f`](https://github.com/EAKerber/MobiliPresenter2D/tree/fix/vis002c-public-text-contrast-20261022), partindo de `main@15e1cfb`; diffs em três arquivos CSS de páginas e quatro arquivos de testes/CI/documentação, sem alterar o token `--public-muted`.
+- [Gate inicial #39890281124 — SUCCESS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39890281124): CSS contract e browser checks PASS. 36 cenários Chromium/WebKit, 72 checagens de pares contextualizados, 456 medições (424 satisfatórias, zero abaixo, 32 não verificadas).
+- [Gate definitivo #39890589800 — SUCCESS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39890589800): mesma matriz PASS após tornar o gate reutilizável em futuras PRs para `main` e push `main` **quando o incremento for integrado**; o contrato deixa CSS adicionais legítimos serem escritos, desde que não se percam os pares/contextos aprovados e as regras vencedoras computadas continuem corretas.
+- **Gate conservado no produto:** `.github/workflows/vis002c-public-contrast.yml`, `tests/vis002c-css-contract.test.mjs` e `tests/vis002c-public-contrast.mjs`; nenhum algoritmo gera cores, nenhum requisito `!important`, nenhuma modificação global nem exceção silenciosa.
+- **Estado:** implementação verificada em branch; **sem PR, Deploy Preview, merge ou release**. Validar composição de página completa e CI global antes de integrar. Os 32 casos não verificados não são homologados por inferência.
