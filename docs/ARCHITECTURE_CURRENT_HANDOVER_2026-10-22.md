@@ -1,15 +1,17 @@
 # HANDOVER ATUAL — MobiliPresenter2D + Design System
 
-> **AUDIT-PUBLIC-TEXT-02 — candidato de contraste em HOLD, não aplicado (22/10):**
-> os cinco contextos de texto com contraste insuficiente têm CSS experimental
-> [na branch de auditoria](https://github.com/EAKerber/MobiliPresenter2D/tree/audit/public-text-contrast-coverage-20261022),
-> restrito a `evidence/visual/` e injetado apenas em browser CI (nenhum `app/`/PR/Preview).
-> O par `#705C4B` é da paleta VIS-002, **mas seu uso nesses cinco novos seletores
-> ainda NÃO foi homologado**. A primeira auditoria de 456 medições segue PASS;
-> o gate diferencial da proposta teve falhas de instrumentação e cor computada,
-> com investigação em curso no [run #39886961612](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39886961612).
-> [Checkpoint de hipótese e falhas](PUBLIC_TEXT_CONTRAST_CANDIDATE_2026-10-22.md).
-> Só registrar PASS se um novo run terminar verde e houver inspeção visual separada.
+> **AUDIT-PUBLIC-TEXT-02 — gate diferencial PASS; homologação visual ainda HOLD (23/10/2026):**
+> [GitHub Actions #39888294326 SUCCESS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39888294326),
+> branch isolada `audit/public-text-contrast-coverage-20261022@ace8510`.
+> Testes de CSS candidato injetado: **36/36 cenários**, 36 elementos light corrigidos,
+> 36 elementos dark sem alteração, **84 controles negativos inalterados**, 10 pares
+> de capturas antes/depois. Contrastes previstos/computados: 4,9534:1
+> em `#E8E3DC` e 5,4146:1 em `#F0EDE8`; `--public-muted` intacto.
+> Os primeiros fails eram instrumentação/animação e a inclusão incorreta
+> de `.finish-signature`, cujo tom próprio deve ser preservado.
+> O CSS experimental permanece fora de `app/`, sem PR, preview, merge ou release.
+> **VIS-002 não foi ampliado: cinco novos contextos continuam SEM HOMOLOGAÇÃO VISUAL**.
+> [Checkpoint, rollback e caveats de screenshot](PUBLIC_TEXT_CONTRAST_CANDIDATE_2026-10-22.md).
 
 > **Auditoria de contraste público concluída (22/10):**
 > [Actions #39883740485 — SUCCESS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39883740485),
