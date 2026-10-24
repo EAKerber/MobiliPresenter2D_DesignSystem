@@ -2,12 +2,13 @@
 
 ## Revalidação live do estágio — 24/10/2026
 
-- Produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf` já inclui o merge da PR #237: ARC-03C e reconciliação do controlador público P-COMP-01 estão presentes. Portanto, os avisos históricos abaixo que indicam ARC-03C como próximo incremento estão superados.
-- A PR produto #239 aplica VIS-002 somente ao skip link de About; seis checks passaram e a observação direta do Deploy Preview confirmou foco/estilo no claro, escuro e viewport móvel. A PR permanece DRAFT; isso não representa integração ou homologação global.
-- A PR produto #238 continua DRAFT e a issue #232 aberta. O gate autenticado isolado não substitui a integração dos workflows legados.
-- V0/V1 continua aberto. Os índices de localização são heurísticos e foram produzidos em `840a0cda`; dos 26 arquivos indexados, 7 hashes divergem no produto atual. A árvore atual contém 8 HTML e 77 JS sob `app/` (inclui dados e testes); ainda é necessária classificação por papel e extração integral de strings realmente localizáveis. A próxima etapa executável é atualizar esse mapa contra a main atual e completar a cobertura ARC-13, sem misturar dados V5/autoria ou mensagens técnicas.
-- ARC-13 já tem classificação manual documental de O índice HTML atual foi reconciliado em todas as oito entradas: 480 ocorrências / 392 valores distintos, 464 localizáveis, 4 identificadores excluídos e 12 itens comerciais deferidos; JS/inline e ownership dos itens deferidos permanecem abertos, além das 60 entradas em sete arquivos JS; nenhum bundle ou código de produto foi alterado. A cobertura estática das seis outras entradas HTML e o restante do runtime seguem pendentes.
-- A estimativa de ~22% permanece somente histórica/provisória; não foi recalculada sem pesos por entregável e inventário atualizados.
+- Produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf` inclui ARC-03C e P-COMP-01 via PR #237.
+- PR #238 de autenticação permanece DRAFT; o gate autenticado passou em `a9129e1`, e os commits posteriores até `a2835c6` alteraram apenas documentação. Gates anônimo/assets passaram no head atual. A issue #232 continua aberta até integrar os workflows legados.
+- PR #239 permanece DRAFT; os seis checks e a validação localizada do skip link About passaram. Não implica aprovação visual global.
+- PR do Design System #51 permanece DRAFT no branch de handover; as atualizações desta PR são documentais e não alteram o runtime.
+- ARC-13: todas as oito entradas HTML do produto atual estão ligadas a classificações documentais: 480 ocorrências/392 valores distintos, com 464 localizáveis, quatro identificadores excluídos e 12 itens comerciais deferidos. O inventário JS marca 2.176 candidatos heurísticos em 52 fontes e 60 entradas classificadas em sete arquivos; inline/runtime e cobertura JS restante seguem abertos. Bundle ou migração não começaram.
+- Os deploys Production atuais do Netlify principal e isolado estão READY em `main@5ccb2a8`, com nove Functions e uma Edge Function reportadas; a inspeção não executou a função.
+- A estimativa geral ~22% permanece histórica/provisória e não foi recalculada sem pesos por entregável.
 
 
 > **PONTO DE RETOMADA 22/10:** [handover canônico entre repositórios](ARCHITECTURE_CURRENT_HANDOVER_2026-10-22.md). Último gate concluído: ARC-03B **60/60 PASS**, imagens idênticas, zero alteração de `app/`, porém **sem cutover de `npm run build`**. Próximo: ARC-03C (fonte única de HTML de autoria e geração no build publicado), separado de P-COMP, P-TOKEN e auth. PR de tokens #231 permanece draft; #232 é pendência explícita e #233 já entrou na main.
@@ -96,6 +97,6 @@ Um item só fica conforme quando seu papel semântico e par de cores estão apro
 - Nenhuma PR ou preview deve ser tratado como decisão estética ou como autorização de publicar produção.
 
 
-### ARC-13 — avanço da cobertura bruta em 24/10/2026
+### ARC-13 — cobertura e pendências em 24/10/2026
 
-A varredura contra produto `main@5ccb2a8` agora inclui oito entradas HTML e 52 fontes JS runtime legíveis. Os índices separados registram 480 candidatos HTML e 2.176 ocorrências JS heurísticas; não são cobertura completa nem strings prontas para bundles. Permanecem sem triagem semântica e owner/chave, fora dos scripts inline, dados de máscaras/pedra deferidos, strings produzidas no DOM e dados comerciais V5. Próximo gate: classificação rastreável por arquivo/linha/consumidor/owner/status, leitura do conteúdo dinâmico e tratamento explícito das fontes ainda não verificadas. Não substituir strings em lote com base em regex.
+As oito entradas HTML do produto `main@5ccb2a8` foram reconciliadas com lotes por ocorrência: 480/480 registros, 392 valores distintos; 464 localizáveis, quatro identificadores excluídos e 12 trechos comerciais deferidos. O inventário JavaScript permanece heurístico: 2.176 candidatos em 52 fontes, dos quais 60 classificados em sete arquivos. Ainda faltam revisão completa por owner/consumer/chave, scripts inline, conteúdo gerado no DOM, fontes de dados de pedra/máscaras e reconciliação dos trechos comerciais. Este resultado não cria bundles nem conclui V0/V1. Próximo: classificar fontes JS por famílias/consumidor com hash/linha, começando pelas fontes de UI de menor escopo, e depois executar a extração abrangente em lotes reversíveis. Não substituir texto em lote por regex.
