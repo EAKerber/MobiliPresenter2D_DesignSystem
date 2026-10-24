@@ -10,7 +10,7 @@
 ## Observação runtime
 
 - No snapshot após estabilização da rota, `animation-name` não indicou animação CSS em nenhum elemento ou pseudo-elemento consultado.
-- A consulta `document.getAnimations` não estava disponível no escopo de avaliação (`typeof` retornou `undefined`). Portanto, a ausência de animações/transições ativas não foi provada de forma completa; o estado de transições segue desconhecido.
+- A leitura inicial usava um escopo sem `document.getAnimations`; a revalidação posterior com DevTools e emulação de mídia está registrada abaixo e conseguiu ler animações/transições nos estados observados.
 - A leitura não simulou rede lenta nem falha de imagem.
 
 ## Origem estática no commit servido
@@ -19,3 +19,14 @@
 - [`app/how-it-works/how-it-works.css`, linhas 251–252](https://github.com/EAKerber/MobiliPresenter2D/blob/5ccb2a8dde6dd16e136f03387dc833aab828c5cf/app/how-it-works/how-it-works.css#L251-L252) também declara redução de duração de animação e transição na rota.
 
 A presença estática dessas regras não valida o efeito no DOM com a preferência ativa. Movimento reduzido em runtime, transições em andamento e estados de carga/erro permanecem pendentes; nenhum código do produto foi alterado.
+
+
+## Revalidação com emulação de movimento — Production (24/10/2026)
+
+- Revalidei `https://casaemmodulos.casa/how-it-works/` no deploy READY `6adc221479c773577ed45e23`, `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, em contexto anônimo isolado do navegador e viewport CSS 1280 × 720.
+- Com `prefers-reduced-motion: no-preference`, `matchMedia('(prefers-reduced-motion: reduce)')` foi `false`. Após a rota estabilizar, `document.getAnimations({subtree:true})` retornou zero; cinco elementos declaravam transições CSS. Ao passar o ponteiro sobre “Veja como funciona”, o CTA computou `transition-property: transform, background`, `transition-duration: 0.18s, 0.18s` e deslocamento final de −2 px. A captura não mediu a duração ativa da transição; registra o estilo e estado de hover, não uma animação em curso.
+- Emulando `prefers-reduced-motion: reduce`, `matchMedia` passou a `true`; no mesmo hover, as durações computadas de transição e animação foram `1e-05s` (0,00001 s), e `document.getAnimations` retornou zero. O deslocamento final de −2 px ainda compõe o estado de hover, mas sua transição ficou praticamente instantânea.
+- Abri o primeiro disclosure nativo durante a emulação: `details.open` mudou para `true` e seu conteúdo apareceu; `details`, `summary` e conteúdo computaram `transition-duration: 1e-05s`, sem animação ativa. No modo sem redução, ao fechar esse mesmo disclosure, a duração computada foi `0s` e a lista de animações também ficou vazia.
+- A emulação foi removida, a aba de contexto isolado foi fechada e a aba Chrome previamente aberta voltou a ser a selecionada. Nenhum dado ou configuração permanente foi alterado.
+
+A revalidação confirma o efeito da preferência nos elementos observados e substitui a limitação anterior sobre indisponibilidade de `document.getAnimations`. O resultado cobre uma rota, um viewport, um CTA em hover e um disclosure; não certifica todas as transições/animações da página ou de iframes. Rede lenta e falha de imagem continuam sem simulação.
