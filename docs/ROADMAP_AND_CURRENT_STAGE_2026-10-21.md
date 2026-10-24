@@ -119,3 +119,8 @@ A auditoria anônima da Production confirmou que Enter em “Pular para o conte�
 ### CI-BASELINE-01 — configuração Netlify e GitHub Actions (24/10/2026)
 
 O deploy isolado `m2d-auth-ci-isolated` está READY em `main@5ccb2a8` e inclui `access-check`. A execução autenticada da PR produto #238 recebe o banco de `CI_STAGING_DATABASE_URL` no GitHub Environment `ci-auth-isolated`, separado do `DATABASE_URL` Netlify. O readback encontrou a conexão interna de teste no contexto Netlify `dev`, mas não em `production`/ `deploy-preview`, que ainda espelham o projeto principal. As Functions de grant/sessão leem o contexto Netlify; alinhar antes de considerar o host isolado pronto para o runtime autenticado. [Registro seguro de contextos](../evidence/runtime/netlify-ci-auth-environments-2026-10-24.md). Nenhum segredo, valor ou deploy foi alterado.
+
+
+### ARC-13 — convenção de chave semântica proposta, sem canonização
+
+Foi preparada uma convenção revisável para substituir sufixos numéricos por nomes semânticos estáveis, preservando namespaces atuais e contratos distintos de parâmetros. A proposta contém 13 exemplos, incluindo mensagens de Configuração, Hierarquia, Apresentação, Fluxo, Preços e reparo legado. Não modifica o índice nem o produto; faltam revisão/aprovação da convenção, 199 chaves numéricas restantes e 369 ocorrências sem chave proposta. [Proposta e perguntas de revisão](../evidence/architecture/arc13-semantic-key-convention-proposal-2026-10-24.json).
