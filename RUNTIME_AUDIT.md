@@ -378,3 +378,8 @@ Os valores do DOM atual diferem de alguns registros históricos para estes compo
 ## Cabeçalhos públicos em 320 px — Production (24/10/2026)
 
 Em 320×700, a sessão do browser tinha barra vertical de 15 px (`innerWidth=320`, `clientWidth=305`). About e Viewer mantiveram documento/body/header em 320 px e exibiram barra horizontal; Como funciona manteve `min-width:320px` em `html/body` e recortou a sobra com `overflow-x:clip`. Em 335×760, as três rotas não tiveram overflow. About também não teve em 360/390 px. About foi observado em claro/escuro e o menu abriu/fechou com Escape, restaurando foco; Viewer foi observado em claro/escuro quanto ao overflow. Não abri menu no Viewer/Como funciona. Uma sessão e amostras de viewport; o limiar 335 px não determina breakpoint. [Evidência detalhada](evidence/runtime/public-headers-320-production-2026-10-24.md).
+
+
+### Complemento — About e Viewer em 290 px (24/10/2026)
+
+Na mesma sessão Production, a 290×700 escuro, About e Viewer mantiveram `scrollWidth=320` contra `clientWidth=275`, com rolagem horizontal de 45 px. About cortou título e texto e deixou 11 px do botão de menu visíveis. No Viewer, o preço/conteúdo do cartão foi cortado e somente 13 px do menu ficaram na área útil. A 320 px, o menu ainda quase cabe, mas a rolagem de 15 px observada permanece; a 335 px as três rotas não tiveram overflow. [Matriz detalhada](evidence/runtime/public-headers-320-production-2026-10-24.md).
