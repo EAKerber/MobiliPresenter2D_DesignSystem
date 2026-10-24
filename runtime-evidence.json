@@ -1547,6 +1547,20 @@
       "network or image failure states not tested",
       "contrast not measured for all elements",
       "video playback not tested"
-    ]
+    ],
+    "menuKeyboard": {
+      "route": "/",
+      "viewport": "390x844",
+      "theme": "dark",
+      "openedBy": "menu toggle",
+      "ariaExpandedOnOpen": true,
+      "visibleNavigationLinks": 3,
+      "escapeAttempts": 2,
+      "ariaExpandedAfterEachEscape": true,
+      "navigationVisibleAfterEachEscape": true,
+      "focusAfterEscape": "menu toggle",
+      "outsideClick": "not verified",
+      "scope": "PR #234 preview only"
+    }
   }
 }
