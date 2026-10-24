@@ -273,3 +273,8 @@ O deploy atualmente publicado no projeto principal `mobilipresenter2d` está **R
 [arc13-classified-static-landing-batch-2026-10-24.json](../evidence/architecture/arc13-classified-static-landing-batch-2026-10-24.json) classifica **44 ocorrências / 38 valores** da página inicial, incluindo metadados, navegação, chamadas de ação, acessibilidade, benefícios e fallback do carrossel. A ordem das chaves foi conferida com os consumidores do HTML; conteúdo gerado pelo runtime segue pendente.
 
 **Cobertura de inventário HTML:** sete das oito entradas, **251 ocorrências / 191 valores distintos entre lotes**; 239 textos de interface classificados, quatro identificadores excluídos e oito itens comerciais aguardando ownership. A entrada `/how-it-works/` permanece pendente. Também faltam scripts inline, mensagens de runtime e revisão dos lotes JS restantes.
+
+
+### Índice HTML reconciliado — 24/10/2026
+
+O índice [arc13-static-html-candidates-main-2026-10-24.json](../evidence/architecture/arc13-static-html-candidates-main-2026-10-24.json) agora liga as 480 ocorrências às classificações documentadas por rota: **464 localizáveis, quatro identificadores excluídos e 12 itens comerciais deferidos**; os **392 valores distintos** do inventário foram preservados. O HTML estático das oito rotas foi coberto. A condição ARC-13 não está concluída: fontes JS e scripts inline ainda exigem classificação, e os 12 itens deferidos precisam de owner canônico antes de eventual extração.
