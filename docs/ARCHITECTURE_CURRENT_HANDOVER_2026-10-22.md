@@ -259,3 +259,10 @@ O deploy atualmente publicado no projeto principal `mobilipresenter2d` está **R
 [arc13-classified-static-admin-batch-2026-10-24.json](../evidence/architecture/arc13-classified-static-admin-batch-2026-10-24.json) revisa as **68 ocorrências** de `/admin.html`: 64 textos de interface foram classificados como localizáveis; quatro valores internos (`admin`, `custom`, `finishes`, `services`) foram excluídos como identificadores estáveis. A classificação não altera a interface nem traduz conteúdo comercial do catálogo. O lote permanece documental.
 
 **Cobertura ARC-13 estática registrada até aqui:** cinco rotas e **162 ocorrências / 129 valores distintos entre lotes**, com 158 textos de interface classificados e quatro identificadores excluídos. Restam quatro entradas HTML no índice, scripts inline, conteúdo de runtime e revisão de dados/autoria comercial antes da extração.
+
+
+### Classificação estática do Configurador — 24/10/2026
+
+[arc13-classified-static-config-batch-2026-10-24.json](../evidence/architecture/arc13-classified-static-config-batch-2026-10-24.json) revisa as **45 ocorrências** estáticas de `/config/`: 37 controles/instruções foram classificados como localizáveis; oito trechos sobre políticas e serviços comerciais foram mantidos em revisão de ownership até confirmação da fonte canônica V5/catálogo. Scripts inline e textos gerados pelo runtime continuam fora deste lote. Sem alteração no produto.
+
+**Cobertura estática classificada/documentada até aqui:** seis das oito entradas HTML; **207 ocorrências / 165 valores distintos entre lotes**, sendo 195 localizáveis, quatro identificadores não localizáveis e oito itens comerciais deferidos. Permanecem sem classificação estática a landing `/` e `/how-it-works/`; a extração integral ainda depende de completar essas rotas, inventário JavaScript/inline e exceções de dados.
