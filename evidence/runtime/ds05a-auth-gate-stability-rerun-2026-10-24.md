@@ -3,7 +3,7 @@
 Data: 2026-10-24  
 Repositório: `EAKerber/MobiliPresenter2D`  
 PR: [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238)  
-Head: `abc33d24d0ff34e770feb0e12221fa9ba98870fd)  
+Head: `abc33d24d0ff34e770feb0e12221fa9ba98870fd`  
 Execução Actions: [#40126678308](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40126678308), tentativa repetida do job isolado.
 
 ## Resultado
