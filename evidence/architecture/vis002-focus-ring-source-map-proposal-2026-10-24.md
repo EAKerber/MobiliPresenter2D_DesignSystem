@@ -30,3 +30,22 @@ VIS-002 aprova contorno de 4 px/offset 3 px e pares de foco claro `#8B6A40` e es
 4. Tratar a transferência do foco do link About como comportamento acessível separado da aparência visual.
 
 A decisão canônica VIS-002 continua com implementação global não autorizada. Esta proposta não altera `decisions.json`, tokens, CSS ou produto.
+
+
+## Mapa de consumo das folhas e exceções locais — leitura estática em 24/10/2026
+
+**Base conferida:** produto main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf. Os hashes abaixo são os blobs lidos nesta revisão. O mapa cobre as oito páginas de entrada citadas no plano; não afirma cobertura de todo elemento dinâmico, sombra, iframe ou estado autenticado.
+
+| Página | Folhas declaradas pela entrada | Regra que fornece anel / observação |
+|---|---|---|
+| / | app/index.html 9d025dc; public-theme.css; landing/landing.css; ui-theme.css | Regra pública 3 px/3 px; o seletor de tema substitui a cor por tema. A folha local de Landing não declara anel próprio. |
+| /how-it-works/ | app/how-it-works/index.html 02accfa; public-theme.css; landing/landing.css; how-it-works.css 52f36d2; ui-theme.css | A ação econômica declara 2 px/3 px. |
+| /about/ | app/about/index.html 0f830a9; public-theme.css; landing/landing.css; about.css b586895; ui-theme.css | A folha local só revela o skip link no foco; o anel vem das regras compartilhadas. |
+| /viewer/ | app/viewer/index.html cdb303e; public-theme.css; viewer.css 90d2367; ui-theme.css | Cabeçalho declara 3 px/3 px; .scene-hotspot:focus-visible remove o outline e muda borda/fundo e exibe o rótulo. Exige revisão do indicador visual completo. |
+| /config/ | app/config/index.html 97c284c; styles.css na raiz do site; ui-theme.css | <base href="/"> faz styles.css resolver para app/styles.css (d43e6fb). Botões/inputs declaram 2 px/2 px; pontos do carrossel 2 px/3 px; setas 2 px/2 px; controle PiP 2 px/2 px. .scene-hotspot remove outline, com borda/fundo/rótulo como pistas. A folha pública não é carregada nesta página. |
+| /admin.html | app/admin.html 60139eb; admin/admin.css 1b3b41e; ui-theme.css | Regra comum de links/botões/inputs: 2 px/3 px; chave de publicação: 3 px/3 px. |
+| /access/ e /access/manage.html | app/access/index.html e app/access/manage.html; public-theme.css; ui-theme.css | Regra pública 3 px/3 px com a cor substituída por tema; não há folha local de foco nessas entradas. |
+
+ui-theme.css (blob b0f04c5, linhas 32–38, 50 e 113–114) declara o foco do controle de tema e seletores de cor amplos: claro #6E512E, escuro #D8BC7C. Nas páginas que carregam essa folha, a cor pode prevalecer sobre regras locais de outline; a geometria é mantida pela regra local mais específica ou por public-theme.css conforme a página. O cadastro de componentes e a cascata efetiva ainda precisam de conferência em runtime nas páginas privadas.
+
+**Implicação para a revisão:** a diferença da referência VIS-002 não se limita à regra global 3/3. Existem exceções locais 2 px e offsets de 2 px, além de hotspots sem outline explícito. Não classificar os hotspots como falha sem avaliar em runtime as mudanças de borda, fundo, rótulo, recorte e contraste. Esta ampliação continua proposta, sem aprovação de novo token, alteração de decisions.json, CSS ou produto.
