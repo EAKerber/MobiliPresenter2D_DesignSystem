@@ -166,3 +166,8 @@ A folha global e a CSS da rota declaram regras para `prefers-reduced-motion: red
 ### VIS-002 — decisão de foco em superfície escura
 
 O FIND-017 foi confirmado nos seis cartões da economia. Uma proposta experimental compara `#D8BC7C` (8,52:1) e `#8B6A40` (3,16:1) sobre a superfície `#25231F`, mantendo a referência geométrica 4 px/offset 3 px. A opção A tem maior margem numérica, mas nenhuma escolha foi homologada. VIS-002 ainda declara mapeamento por componente pendente e `implementationAuthorized: false`; produto e decisões canônicas permanecem sem alteração. [Proposta A/B](../evidence/architecture/vis002-economy-dark-surface-focus-candidate-2026-10-24.md).
+
+
+### Viewer — hotspot 02 e foco em Production (24/10/2026)
+
+No Viewer público em Production, Tab focou o hotspot do módulo 02 nos temas Claro e Escuro sem ativá-lo. O `:focus-visible` usa `::after` com borda computada de 2 px na cor aproximada `#DDC48C`, preenchimento semitransparente e marcador numerado; o botão zera o `outline`. A mesma cor foi computada nos dois temas, sobre imagem fotográfica. O indicador apareceu na amostra, mas o contraste não foi calculado porque a API de inspeção não expôs a criação de canvas para amostrar pixels; não concluir conformidade. A referência geométrica de 4 px e a suficiência das pistas alternativas continuam por avaliar. [Evidência runtime](../evidence/runtime/viewer-hotspot-focus-contrast-production-2026-10-24.md). Nenhum CSS, token ou produto foi alterado.
