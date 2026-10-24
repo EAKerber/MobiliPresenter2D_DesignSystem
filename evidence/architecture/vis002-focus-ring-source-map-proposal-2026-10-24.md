@@ -53,3 +53,8 @@ ui-theme.css (blob b0f04c5, linhas 32–38, 50 e 113–114) declara o foco do co
 ## Evidência runtime associada
 
 - Runtime check em Production: foco por teclado no hotspot do módulo 02 mostrou borda e marcador visíveis em temas claro e escuro, sem ativar o módulo. Esta amostra não homologou contraste ou todos os estados: [registro](../runtime/viewer-scene-hotspot-keyboard-focus-production-2026-10-24.md).
+
+
+## Evidência runtime adicional — Como funciona
+
+- Runtime em Production: o botão “Compra em escala” recebeu foco por Tab e exibiu contorno em claro e escuro. A cor computada e o contraste sobre o painel escuro não foram medidos; a fonte declara 2 px/offset 3 px. [Evidência](../runtime/how-it-works-economy-action-focus-production-2026-10-24.md).
