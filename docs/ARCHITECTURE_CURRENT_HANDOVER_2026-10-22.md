@@ -307,3 +307,6 @@ Base do produto: `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`; Production Net
 - O arquivo original HTML v0.2 e o inventário original de 43 famílias ainda não estão importados neste repositório. A lacuna de recuperação permanece aberta; nenhuma fonte ausente foi reconstruída por inferência.
 - Nenhuma execução desta revalidação alterou código/runtime do produto, variáveis/secrets, sessão de conta ou produção. A estimativa geral aproximada de 22% continua histórica/provisória; sem pesos definidos, não foi recalculada.
 
+
+
+- **About / link de salto:** na Production `main@5ccb2a8`, Enter no link atualiza a âncora para `#main`, mas o foco termina no body. PR produto #239 corrige apenas o estilo visual (ver preview), não o foco do destino; [evidência da Production](../evidence/runtime/about-skip-link-production-focus-2026-10-24.md). Sem mudança de produto ou homologação de comportamento.
