@@ -1,5 +1,19 @@
 # HANDOVER ATUAL — MobiliPresenter2D + Design System
 
+## Revalidação live — 24/10/2026, 09:35 UTC
+
+Esta seção substitui os estados de produto conflitantes descritos no checkpoint histórico abaixo; ela não apaga a trilha de auditoria anterior.
+
+- Produto `main`: `5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, confirmado pelo endpoint live. Esse commit é o merge da PR [#237](https://github.com/EAKerber/MobiliPresenter2D/pull/237), cujo objetivo foi reconciliar P-COMP-01 com ARC-03C. A implementação de build estático e o controlador público compartilhado já estão no estado atual de `main`; não tratar a PR #234 ou #236 como integradas (ambas foram fechadas sem merge).
+- Produto PR [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238): continua aberta, **DRAFT**, head `a2835c6fe92abdd3649e169231d05090172518ee`, baseada em `main@5ccb2a8`. A issue [#232](https://github.com/EAKerber/MobiliPresenter2D/issues/232) segue aberta: o gate autenticado isolado documentado acima não significa que os workflows legados já foram migrados/integrados. Não fechar a issue nem integrar #238 com base apenas no gate separado.
+- Produto PR [#239](https://github.com/EAKerber/MobiliPresenter2D/pull/239): correção pequena e isolada do foco de teclado do skip link de About, ligada ao valor VIS-002 já homologado. Head `bf82272ba19007b65b1bd23856d182346d2fd634`; estado **DRAFT**, seis checks aplicáveis SUCCESS. O Deploy Preview #239 está READY. Leitura direta do DOM no preview, claro/escuro e viewport móvel 390×844, confirmou foco visível, contorno sólido de 4 px nas cores aprovadas `#8B6A40`/`#D8BC7C` e regra `outline-offset: 3px`. Não implica autorização para aplicar o valor globalmente nem para merge.
+- Deploy observado é exclusivamente um **Deploy Preview**; produção não foi alterada por esta revisão. Nenhuma PR foi integrada nesta etapa.
+
+### Próximo incremento do plano
+
+ARC-03C/P-COMP-01 deixam de ser o próximo bloqueio: ambos estão presentes no estado atual de produto `main`. Manter #232 como pendência de integração da CI de autenticação. Em paralelo, continuar V0/V1 com a atualização das autoridades/inventário contra o `main` atual e iniciar a cobertura completa de strings localizáveis exigida por ARC-13. O plano canônico pede começar essa matriz agora e fazer migração ao runtime em lotes; não ativar novos idiomas, não extrair dados comerciais de V5 como strings e não reabrir escolhas visuais sem aprovação.
+
+
 ## Checkpoint atualizado — 24/10/2026
 
 **Estimativa global:** permanece em aproximadamente **22%** conforme o plano canônico. A matriz V5 e o OIDC ganharam evidência técnica, mas as mudanças relacionadas continuam em PRs Draft/stacked; produto `main` ainda é `15e1cfb4866886649adbcd00fef9bef5e5843fda`. Não contar branches ou previews como integração publicada.
