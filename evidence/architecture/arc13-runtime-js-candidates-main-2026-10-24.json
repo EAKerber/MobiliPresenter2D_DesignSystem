@@ -21229,11 +21229,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "use strict",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21242,11 +21244,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Aéreo",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21255,11 +21259,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Aéreo da lavanderia",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21268,11 +21274,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "module-01",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21281,11 +21289,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Módulo 01",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21294,11 +21304,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "scene/traditional/module/upper-laundry",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21307,11 +21319,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "763,3 × 700 × 350 mm",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21320,11 +21334,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Caixaria interna clara",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21333,11 +21349,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Portas com fechamento amortecido",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21346,11 +21364,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Prateleira fixa para organização",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21359,11 +21379,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Dobradiças com amortecimento",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21372,11 +21394,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Fundo 6 mm duplamente melamínico",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21385,11 +21409,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "MDF 18 mm",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21398,11 +21424,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "front-count-confirmed",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21411,11 +21439,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Inferior",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21424,11 +21454,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Inferior do fogão",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21437,11 +21469,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "module-02",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21450,11 +21484,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Módulo 02",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21463,11 +21499,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "scene/traditional/module/lower-stove",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21476,11 +21514,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "790 × 760 × 530 mm",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21489,11 +21529,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Espaço para forno embutido",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21502,11 +21544,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Integra cooktop e acabamento da bancada",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21515,11 +21559,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Preparo elétrico previsto no módulo",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21528,11 +21574,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "2 tomadas de 20 A",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21541,11 +21589,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Cabo PP 4 mm",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21554,11 +21604,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Estrutura em MDF 18 mm",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21567,11 +21619,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Prever alimentação do fogão e do forno conforme especificação técnica.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21580,11 +21634,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "envelope-only",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21593,11 +21649,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Inferior",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21606,11 +21664,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Inferior da pia",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21619,11 +21679,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "module-03",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21632,11 +21694,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Módulo 03",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21645,11 +21709,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "scene/traditional/module/lower-sink",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21658,11 +21724,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "1.200 × 760 × 530 mm",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21671,11 +21739,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Duas portas com fechamento amortecido",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21684,11 +21754,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Frentes com fita de borda coordenada",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21697,11 +21769,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Quatro gavetas com corrediças reforçadas H45",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21710,11 +21784,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "4 corrediças telescópicas H45",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21723,11 +21799,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Dobradiças com amortecimento",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21736,11 +21814,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "MDF 18 mm",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21749,11 +21829,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "technical-sheet:module-03:user-provided-2026-08-10",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21762,11 +21844,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Gavetas",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21775,11 +21859,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Porta central",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21788,11 +21874,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Porta direita",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21801,11 +21889,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "technical-sheet:module-03:user-provided-2026-08-10",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21814,11 +21904,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Verificar os pontos hidráulicos e elétricos previstos para a pia.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21827,11 +21919,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "geometry-confirmed",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21840,11 +21934,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Estrutural",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21853,11 +21949,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Lateral da geladeira",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21866,11 +21964,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "module-04",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21879,11 +21979,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Módulo 04",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21892,11 +21994,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "scene/traditional/module/fridge-side",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21905,11 +22009,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "2.400 × 600 × 18 mm",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21918,11 +22024,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "A × P × E",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21931,11 +22039,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Acabamento lateral para a área da geladeira",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21944,11 +22054,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Alinha o conjunto pela frente",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21957,11 +22069,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Organiza a fiação da iluminação",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21970,11 +22084,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Fita de borda na cor da peça",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21983,11 +22099,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Painel MDF 18 mm",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -21996,11 +22114,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Ponto para interruptor de iluminação",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22009,11 +22129,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Ponto estrutural para a instalação da iluminação embutida.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22022,11 +22144,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "geometry-confirmed",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22035,11 +22159,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Aéreo",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22048,11 +22174,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Aéreo do fogão",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22061,11 +22189,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "module-05",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22074,11 +22204,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Módulo 05",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22087,11 +22219,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "scene/traditional/module/upper-stove",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22100,11 +22234,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "800 × 700 × 400 mm",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22113,11 +22249,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Caixaria interna clara",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22126,11 +22264,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Fechamento amortecido",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22139,11 +22279,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Organização acima da área de preparo",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22152,11 +22294,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Dobradiças com amortecimento",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22165,11 +22309,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "MDF 18 mm",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22178,11 +22324,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Prateleira fixa",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22191,11 +22339,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "front-count-confirmed",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22204,11 +22354,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Aéreo",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22217,11 +22369,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Aéreo da pia",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22230,11 +22384,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "module-06",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22243,11 +22399,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Módulo 06",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22256,11 +22414,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "scene/traditional/module/upper-sink-microwave",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22269,11 +22429,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "1.200 × 800 × 400 mm",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22282,11 +22444,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Iluminação embutida compatível",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22295,11 +22459,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Nicho integrado para micro-ondas",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22308,11 +22474,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Porta basculante com pistão",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22321,11 +22489,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Dobradiças amortecidas",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22334,11 +22504,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Espera para micro-ondas",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22347,11 +22519,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Pistão para porta basculante",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22360,11 +22534,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Prever tomada para o forno micro-ondas.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22373,11 +22549,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "front-count-confirmed",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22386,11 +22564,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Aéreo",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22399,11 +22579,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Aéreo da geladeira",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22412,11 +22594,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "module-07",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22425,11 +22609,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Módulo 07",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22438,11 +22624,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "scene/traditional/module/upper-fridge",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22451,11 +22639,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "800 × 484 × 350 mm",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22464,11 +22654,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Caixaria interna clara",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22477,11 +22669,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Completa o aproveitamento vertical",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22490,11 +22684,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Fechamento amortecido",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22503,11 +22699,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Dobradiças com amortecimento",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22516,11 +22714,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "MDF 18 mm",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22529,11 +22729,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Prateleira fixa",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22542,11 +22744,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "ProductCatalog2D 1.0",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22555,11 +22759,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "PromobDxfSourceProfile 0.1.0",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22568,11 +22774,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "#faf9f6",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22581,11 +22789,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "160px 160px",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22594,11 +22804,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "assets/materials/mdf-base.webp",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22607,11 +22819,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Base clara",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22620,11 +22834,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "base-light",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22633,11 +22849,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "published",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22646,11 +22864,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "#8d8178",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22659,11 +22879,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "160px 160px",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22672,11 +22894,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "assets/materials/mdf-warm.webp",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22685,11 +22909,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Avelã",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22698,11 +22924,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "cocoa",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22711,11 +22939,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "published",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22724,11 +22954,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "#d7d5cf",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22737,11 +22969,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "160px 160px",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22750,11 +22984,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "assets/materials/mdf-soft.webp",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22763,11 +22999,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "mist",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22776,11 +23014,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Névoa",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22789,11 +23029,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "published",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22802,11 +23044,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "160px 160px",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22815,11 +23059,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Aço",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22828,11 +23074,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "assets/materials/mdf-metal.webp",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22841,11 +23089,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "published",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22854,11 +23104,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "steel",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22867,11 +23119,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "#92775f",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22880,11 +23134,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "180px 180px",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22893,11 +23149,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "assets/materials/mdf-wood.webp",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22906,11 +23164,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Bosque",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22919,11 +23179,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "fiber",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22932,11 +23194,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "published",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22945,11 +23209,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "#30312f",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22958,11 +23224,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "160px 160px",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22971,11 +23239,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "assets/materials/mdf-dark.webp",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22984,11 +23254,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Carvão",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -22997,11 +23269,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "published",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23010,11 +23284,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "shadow",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23023,11 +23299,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "#b7b0a7",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23036,11 +23314,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Mantém a pedra atual do conjunto.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23049,11 +23329,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Padrão",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23062,11 +23344,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "stone-existing",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23075,11 +23359,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "#b7b0a7",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23088,11 +23374,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Mantém a pedra padrão e inclui cuba nova.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23101,11 +23389,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Padrão + cuba nova",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23114,11 +23404,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "stone-light-sink",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23127,11 +23419,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "#e3ddd2",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23140,11 +23434,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "#e4ded2",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23153,11 +23449,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "assets/materials/stone-light.webp",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23166,11 +23464,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Clara mineral",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23179,11 +23479,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Pedra clara de granulação fina.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23192,11 +23494,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "stone-cloud",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23205,11 +23509,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "#1e2a24",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23218,11 +23524,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "#1f2924",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23231,11 +23539,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "assets/materials/stone-green.webp",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23244,11 +23554,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Pedra verde-escura de granulação contrastante.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23257,11 +23569,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "stone-grove",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23270,11 +23584,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Verde profundo",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23283,11 +23599,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "#181a19",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23296,11 +23614,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "assets/materials/stone-dark.webp",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23309,11 +23629,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Pedra preta de granulação fina e reflexos discretos.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23322,11 +23644,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Preta mineral",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23335,11 +23659,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "stone-night",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23348,11 +23674,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Definir depois",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23361,11 +23689,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "none",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23374,11 +23704,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Portas na vertical · gavetas na horizontal",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23387,11 +23719,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Sem adicional na simulação.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23400,11 +23734,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Acabamento cromado.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23413,11 +23749,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Portas na vertical · gavetas na horizontal",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23426,11 +23764,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Tango / Íris",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23439,11 +23779,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "tango-chrome",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23452,11 +23794,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Família com variações de cor.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23465,11 +23809,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "ponto",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23478,11 +23824,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Ponto",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23491,11 +23839,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Portas na vertical · gavetas na horizontal",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23504,11 +23854,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Alça em cores",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23517,11 +23869,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "alca-colors",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23530,11 +23884,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Nome comercial em validação.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23543,11 +23899,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Portas na vertical · gavetas na horizontal",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23556,11 +23914,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "CM-08",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23569,11 +23929,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Iluminação embutida",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23582,11 +23944,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "lighting-08",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23595,11 +23959,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Luz sob os aéreos para a área de bancada.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23608,11 +23974,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Requer a lateral da geladeira e o aéreo da pia.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23621,11 +23989,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "move-stone",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23634,11 +24004,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Mover pedra",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23647,11 +24019,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Reposicionamento da pedra como serviço global.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23660,11 +24034,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Acabamento global de pedra para o rodapé da composição.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23673,11 +24049,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "custom",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23686,11 +24064,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "finishes",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23699,11 +24079,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Rodapé de pedra",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23712,11 +24094,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "services",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23725,11 +24109,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "stone-skirting",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23738,11 +24124,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Complemento global para a composição.",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23751,11 +24139,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "tempered-glass",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "ProductCatalog2D data contract",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
@@ -23764,11 +24154,13 @@
       "consumer": "unclassified",
       "semanticKey": null,
       "currentText": "Vidro temperado 8 mm",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "product/catalog content",
+      "status": "deferred-ownership-review",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "authored-domain-content",
+      "classificationBatch": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json"
     },
     {
       "route": "shared-or-unclassified",
