@@ -41,3 +41,13 @@ A revalidação confirma o efeito da preferência nos elementos observados e sub
 - Restaurei `src` para `assets/estudo-espaco.webp`, confirmei carregamento e `naturalWidth=1100`, fechei a aba isolada e mantive a aba anteriormente aberta selecionada. Preferência de rede e demais emulações foram redefinidas e a aba isolada foi fechada; a aba pré-existente permaneceu selecionada.
 
 Esta evidência confirma atraso perceptível sob Slow 3G e ausência de falhas na amostra observada. Não confirma o comportamento de erro, a experiência completa em rede lenta, nem todas as imagens/estados da rota.
+
+
+## Rechecagem de movimento reduzido em mobile e dois temas — Production (24/10/2026)
+
+- URL: `https://casaemmodulos.casa/how-it-works/`; deploy READY `6adc221479c773577ed45e23`, `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`. Sessão anônima em contexto isolado; viewport mobile 390 × 844 CSS px.
+- No tema claro e `prefers-reduced-motion: no-preference`, cinco elementos declararam transições: três spans a 0,2 s e dois CTAs a 0,18 s. Nenhuma animação estava em execução no snapshot inicial.
+- Com `prefers-reduced-motion: reduce`, não houve declaração computada acima de 0,001 s nos elementos examinados; as regras observadas reduziram as transições a `0.00001s`. Em tema escuro, o baseline sem redução também mostrou cinco declarações (0,18–0,2 s); sob redução, o disclosure pôde ser acionado por Space para abrir/fechar, manteve foco no `summary` e terminou com zero animações em execução. Em tema claro, Enter fez o mesmo.
+- Os seis disclosures foram abertos/fechados em avaliação DOM sob redução: zero animações em execução após cada mudança. A troca forçada de `data-theme` usada para amostrar o outro tema expôs handles de transição no snapshot imediato; após 600 ms estavam concluídos, e não houve animação em execução durante os toggles de disclosure.
+- Depois de percorrer a página inteira e aguardar carregamento lazy: 28/28 imagens carregadas, zero quebradas e zero pendentes; oito imagens tinham `alt=""`. Esta contagem não homologa se cada ilustração é decorativa.
+- A observação cobre esta rota, um viewport e disclosures nativos; não certifica todos os estados, iframes, interações de ponteiro ou animações em curso em todas as rotas. Nenhum dado ou código do produto foi alterado.
