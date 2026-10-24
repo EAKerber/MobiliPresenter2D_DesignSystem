@@ -13,3 +13,14 @@ Em `/`, a camada `#introSplash` já estava oculta (`opacity:0`, `pointer-events:
 Em `/about/`, o primeiro Tab focou “Pular para o conteúdo”. Enter alterou a URL para `/about/#main`, mas o foco terminou em `BODY`; `main#main` não recebeu foco, não tem atributo `tabindex` e `scrollY` permaneceu em 0. Esse comportamento permanece uma divergência observada; não fiz correção no produto.
 
 Nas três rotas, `prefers-reduced-motion: reduce` retornou `false`. Não há emulação de mídia disponível nesta sessão do browser; o teste não confirma o comportamento quando a preferência está ativa. A API de animações também não estava disponível no escopo de leitura, então a execução de animações não foi medida. Nenhuma falha de imagem ou rede lenta foi simulada. Uma leitura de cada rota/viewport; capturas não persistidas; sem alteração de código ou dados.
+
+
+## Rechecagem adicional em Production — 24/10/2026
+
+**Alvo:** Netlify deploy READY `6adc221479c773577ed45e23`, branch `main`, commit `5ccb2a8dde6dd16e136f03387dc833aab828c5cf`; rota `/how-it-works/`, contexto isolado do navegador, viewport de conteúdo 1280×669 CSS px (janela 1280×720), altura documental 9.543 px. Rolei a página em etapas para acionar o carregamento lazy e aguardei a estabilização.
+
+- 28/28 imagens ficaram completas com dimensões naturais válidas; 0 imagens quebradas e 0 ainda pendentes ao final.
+- As 28 têm atributo `alt`; oito usam `alt=""`. O ícone do WhatsApp está também marcado `aria-hidden="true"`; as demais ocorrências vazias são a ilustração e o logo redundante do cartão comparativo e cinco ilustrações de etapa, cada uma acompanhada de título e descrição. O sentido decorativo dessas imagens não foi homologado; fica como classificação a revisar, sem concluir ausência de texto alternativo.
+- A preferência `prefers-reduced-motion` estava desativada. Esta passagem não mede teclado, estados de foco nem comportamento com movimento reduzido ativo.
+
+Leitura somente de DOM; sem interação com formulários, alterações de dados, CSS ou código do produto. A evidência vale para esta rota, commit, viewport e sessão.
