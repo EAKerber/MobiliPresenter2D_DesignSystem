@@ -247,3 +247,8 @@ O run autenticado [#40075575871](https://github.com/EAKerber/MobiliPresenter2D/a
 ### Readback dos deploys Netlify após a ação do usuário — 24/10/2026
 
 O deploy atualmente publicado no projeto principal `mobilipresenter2d` está **READY**, contexto Production, branch `main`, commit `5ccb2a8`; o deploy isolado `m2d-auth-ci-isolated` também está **READY** em Production e no mesmo commit. O readback dos dois informa 9 Functions e 1 Edge Function implantadas, incluindo `access-check`. Isso confirma o estado do deploy e a presença do handler no pacote publicado; não foi feito teste de chamada da função nem validação dos valores de ambiente. As páginas principais seguem na main já integrada; a inspeção não publicou mudanças de código.
+
+
+### Classificação estática das páginas de acesso — 24/10/2026
+
+[arc13-classified-static-access-batch-2026-10-24.json](../evidence/architecture/arc13-classified-static-access-batch-2026-10-24.json) classifica **33 ocorrências / 27 valores** em `/access/` e `/access/manage.html`: títulos, navegação, acessibilidade, política de acesso, login e controles estáticos. Estados de grant, datas de expiração, papéis e mensagens do servidor ficam fora deste recorte. Somando os três lotes HTML documentados, são **94 ocorrências / 75 valores distintos entre lotes** nas páginas About, Viewer e Access. Ainda é inventário documental; sem alteração no produto ou criação de bundles.
