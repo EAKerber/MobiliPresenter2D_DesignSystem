@@ -28,7 +28,7 @@ assert.equal(mapping.status,"scoped-candidate-user-authorized-2026-10-24; canoni
 assert.equal(mapping.sourceDecisionGitBlob,"63b60f8d87327c6fd1e80c8cdf4ff832c4089bfa");
 assert.equal(mapping.roleRef,"VIS-002.approvedPalette.colors.textPrimary.light");
 assert.equal(mapping.value.toUpperCase(),"#292723");
-assert.equal(mapping.contexts.length,5);
+assert.equal(mapping.contexts.length,7);
 assert.equal(mapping.constraints.globalUsage,false);
 assert.equal(mapping.constraints.darkThemeMustStayUnchanged,true);
 assert.equal(mapping.constraints.onlyMeasuredContexts,true);
@@ -41,7 +41,9 @@ const expected=[
   {route:"/",selector:".feature-copy > p:not(.eyebrow):not(.feature-availability)",background:"#F0EDE8"},
   {route:"/about/",selector:".about-closing > p:not(.eyebrow):not(.about-closing__signature)",background:"#F0EDE8"},
   {route:"/about/",selector:".about-scale__stat > span",background:"#F0EDE8"},
-  {route:"/how-it-works/",selector:".finish-copy > p:not(.eyebrow):not(.finish-signature)",background:"#F0EDE8"}
+  {route:"/how-it-works/",selector:".finish-copy > p:not(.eyebrow):not(.finish-signature)",background:"#F0EDE8"},
+  {route:"/how-it-works/",selector:".commercial-clarity > p:not(.eyebrow)",background:"#F0EDE8"},
+  {route:"/how-it-works/",selector:".launch-card .launch-copy > p",background:"#F0EDE8"}
 ];
 assert.deepEqual(mapping.contexts.map(({route,selector,background})=>({route,selector,background})),expected);
 for(const c of mapping.contexts)assert.ok(contrast("#292723",c.background)>=4.5,"Contrast below threshold: "+c.selector);
@@ -53,7 +55,7 @@ assert.equal(manifest.roleRef,mapping.roleRef);
 assert.equal(manifest.constraints.allowsGlobalUsage,false);
 assert.equal(manifest.constraints.changesCanonicalDecision,false);
 assert.equal(manifest.constraints.changesExistingV0_2Contexts,false);
-assert.equal(manifest.contexts.length,5);
+assert.equal(manifest.contexts.length,7);
 assert.deepEqual(manifest.contexts.map(({route,selector,background})=>({route,selector,background})),expected);
 
 const selectors=expected.map(c=>'html[data-theme="light"] '+c.selector);
