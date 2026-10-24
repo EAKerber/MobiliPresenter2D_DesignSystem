@@ -134,3 +134,8 @@ A Production não apresenta link de salto ao conteúdo nessas duas rotas: o prim
 ### VIS-002 — anel de foco em componentes públicos
 
 A amostra Production na Landing mediu dez focos reais em dois temas. As regras fonte declaram 3 px/offset 3 px globalmente e 3 px/offset 2 px no controle de tema; as cores são `#6E512E`/`#D8BC7C`. VIS-002 referencia 4 px/offset 3 px e cores `#8B6A40`/`#D8BC7C`. A CSSOM computou 2.67 px para `outline:3px` na sessão auditada, até em elemento de teste; a causa é desconhecida. A evidência não homologa implementação geral nem mede todas as rotas/controles. [Registro runtime](../evidence/runtime/public-focus-ring-production-component-sample-2026-10-24.md).
+
+
+### VIS-002 — origem CSS e mapa de escopo proposto
+
+A fonte pública declara contorno 3 px/offset 3 px; `ui-theme.css` troca a cor clara por `#6E512E` e o controle de tema declara offset 2 px. O About da PR #239 propõe localmente 4 px/offset 3 px. Foi preparado um mapa não canônico por componente e rota, preservando o limite de implementação global atualmente não autorizada. [Mapa de origem e revisão](../evidence/architecture/vis002-focus-ring-source-map-proposal-2026-10-24.md).
