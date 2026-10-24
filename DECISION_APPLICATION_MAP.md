@@ -1,7 +1,7 @@
 # Mapa de aplicação das decisões
 
 **Produto mapeado:** [EAKerber/MobiliPresenter2D](https://github.com/EAKerber/MobiliPresenter2D) no commit `5ccb2a8dde6dd16e136f03387dc833aab828c5cf`.  
-**Atualização (2026-10-24):** o inventário estático foi regenerado a partir desse `main` e registra oito HTML e oito CSS. A comparação com o baseline anterior mostrou 47 commits de diferença; as rotas, regras, classes, cores e referências de assets do JSON agora refletem o snapshot atual. A cobertura de evidência por rota está em [matriz runtime](evidence/architecture/runtime-inventory-coverage-2026-10-24.md); a matriz classifica lacunas, não certifica conformidade global.  
+**Atualização (2026-10-24):** o inventário estático foi regenerado a partir desse `main` e registra oito HTML e oito CSS. A comparação com o baseline anterior mostrou 47 commits de diferença; as rotas, regras, classes, cores e referências de assets do JSON agora refletem o snapshot atual. A cobertura de evidência por rota está em [matriz runtime](evidence/architecture/runtime-inventory-coverage-2026-10-24.md); a associação por folha e família CSS está no [mapa de famílias runtime](evidence/architecture/visual-rule-family-runtime-map-2026-10-24.md). Ambos classificam evidência e lacunas; não certificam conformidade global.  
 **Deploy:** o handover verificou Production como READY em `main@5ccb2a8`; nenhum merge ou deploy foi feito por esta atualização.  
 **Fonte canônica das decisões:** [decisions.json](decisions.json).  
 **Inventário estático:** [visual-inventory.json](visual-inventory.json).
