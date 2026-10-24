@@ -8,7 +8,7 @@
 - Viewport observado: 1265 × 713. Inspecionei os temas escuro e claro alternando o controle da própria página.
 - A ordem de teclado chegou ao container da cena e, em seguida, aos controles dos módulos. O foco foi movido para o checkbox “Ver ficha de Módulo 02, Inferior do fogão”, sem ativar ou selecionar esse módulo.
 - Nos dois temas, a captura mostrou uma borda dourada contornando visualmente o módulo 02 e seu marcador “02” visível. O módulo 01 continuou selecionado; isso separa visualmente o estado de foco do estado selecionado nesta passagem.
-- A captura foi inspecionada durante a sessão, mas não foi persistida neste repositório. Nenhum dado ou estado do produto foi salvo.
+- A captura foi inspecionada durante a sessão, mas não foi persistida neste repositório. Restaurei o tema escuro que estava ativo no início e fechei a aba isolada; não alterei dados de conta ou negócio.
 
 ## Relação com a fonte
 
