@@ -2,9 +2,9 @@
 
 ## Escopo e autoridade
 
-O inventário estático canônico enumera oito rotas, oito folhas CSS e oito documentos HTML. Seu snapshot foi gerado em produto `1878ae1057ce7c6190e0c8cb08a1f3baadd49463`; o produto `main` observado agora é `5ccb2a8dde6dd16e136f03387dc833aab828c5cf), 47 commits à frente ([comparação de commits](https://github.com/EAKerber/MobiliPresenter2D/compare/1878ae1057ce7c6190e0c8cb08a1f3baadd49463...5ccb2a8dde6dd16e136f03387dc833aab828c5cf)). A comparação contém mudanças em HTML, CSS, JavaScript e testes. Portanto, o JSON atual continua útil como lista de cobertura histórica, mas **não prova que suas regras visuais correspondam ao produto atual**.
+O inventário estático canônico foi regenerado em 24/10 a partir do produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`; enumera oito rotas, oito folhas CSS e oito documentos HTML. A leitura estática foi atualizada, mas **não prova conformidade runtime nem certifica cada regra visual**.
 
-Esta matriz verifica se cada rota do inventário possui evidência runtime recente ou uma lacuna explícita. Ela não substitui a regeneração da captura estática nem certifica conformidade global.
+Esta matriz verifica se cada rota do inventário possui evidência runtime recente ou uma lacuna explícita. A referência de código está atualizada; a cobertura de runtime continua parcial e não certifica conformidade global.
 
 ## Matriz por rota
 
@@ -25,8 +25,8 @@ Esta matriz verifica se cada rota do inventário possui evidência runtime recen
 - **Teclado, foco e estados interativos:** cobertura pública parcial; foco de hotspots e alguns contornos ainda são alertas locais; configurador tem apenas progresso de CI/preview; áreas autenticadas permanecem não verificadas.
 - **Contraste:** textos corridos das três páginas públicas têm triagem atual e a implementação v0.3 está verificada em preview. Contraste de foco, estados, camadas transparentes e superfícies privadas requer revisão própria.
 - **Movimento, imagens e falhas:** páginas públicas têm amostras atuais; configurações privadas e toda a coleção de assets continuam incompletas.
-- **Classes, regras CSS e assets do inventário:** não certificados pelo snapshot de 20/10, pois a base do produto está 47 commits adiante.
+- **Classes, regras CSS e assets do inventário:** a cobertura estática agora corresponde ao `main` atual; auditoria runtime regra a regra, estados dinâmicos e uso de assets carregados por JavaScript continuam sem certificação.
 
 ## Resultado da revisão
 
-Nenhuma rota fica sem classificação: cada uma tem evidência apontada ou lacuna marcada como não verificada. **A etapa do plano ainda não fecha.** O próximo trabalho técnico é regenerar `visual-inventory.json` e reconciliar `DECISION_APPLICATION_MAP.md` a partir de produto `main@5ccb2a8), depois ligar cada família visual e estado dinâmico à evidência atual. As pendências externas continuam separadas: validar estados autenticados exige sessão autorizada; NAV-005, #224 e contrastes de foco continuam issues/achados abertos.
+Nenhuma rota fica sem classificação: cada uma tem evidência apontada ou lacuna marcada como não verificada. **A etapa do plano ainda não fecha.** `visual-inventory.json` foi regenerado e `DECISION_APPLICATION_MAP.md` reconciliado ao produto `main@5ccb2a8`. O próximo trabalho técnico é ligar cada família de regras visuais e estado dinâmico à evidência runtime específica ou a `NOT VERIFIED`. As pendências externas continuam separadas: validar estados autenticados exige sessão autorizada; NAV-005, #224 e contrastes de foco continuam issues/achados abertos.
