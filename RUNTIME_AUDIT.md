@@ -310,3 +310,8 @@ Há um candidato experimental já testado no produto: branch [`architecture/p-co
 - Leitura de estilo computado para tema claro e escuro: contorno sólido de 4 px; cores `rgb(139, 106, 64)` (`#8B6A40`) e `rgb(216, 188, 124)` (`#D8BC7C`). A regra vencedora em `about.css` declara `outline-offset: 3px`; estilo verificado em viewport móvel 390×844, com foco visível e link dentro da tela.
 - Uma captura do viewport desktop escuro confirmou visualmente o link e o contorno. O tema claro foi conferido pelo estilo computado, sem captura visual persistida. Não fizemos homologação de outros controles, rotas ou componentes.
 - A implementação é local ao skip link de About e usa valores VIS-002 já aprovados. Não é evidência para tokenização ou alteração global de foco. PR #239 segue DRAFT, sem merge.
+
+
+## Rechecagem de issue #224 no deploy atual (2026-10-24)
+
+O readback do Netlify confirmou Production `READY` em `EAKerber/MobiliPresenter2D@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, deploy `6adc221479c773577ed45e23`. Em contexto de navegador isolado, tema escuro e viewport 390×844, abri o grupo 2 do carrossel e selecionei Lavanderia. O detalhe mudou para Lavanderia e o cartão selecionado permaneceu visível no grupo 2; não observei retorno ao grupo 1 nesta passagem. A captura foi inspecionada, mas não persistida. Esta é uma única não reprodução na head atual; não encerra a issue #224 nem substitui a reprodução anterior 4/4 no deploy de 21/10. Repetições e outros estados ainda faltam; nenhum estado de produto foi salvo.
