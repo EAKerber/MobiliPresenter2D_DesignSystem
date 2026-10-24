@@ -1861,29 +1861,92 @@
     },
     "session": "anonymous",
     "prefersReducedMotion": false,
-    "observations": [
+    "disclosureControls": [
       {
+        "section": "foundations",
         "control": "Evoluir a forma de produzir",
-        "element": "summary inside details",
         "key": "Enter",
-        "initialState": "collapsed",
         "result": "expanded",
-        "contentInAccessibilityTree": true,
-        "focusRemainedOnControl": true
+        "contentInAccessibilityTree": true
       },
       {
+        "section": "foundations",
         "control": "Eficiência com liberdade",
-        "element": "summary inside details",
         "key": "Space",
-        "initialState": "collapsed",
         "result": "expanded",
-        "contentInAccessibilityTree": true,
-        "focusRemainedOnControl": true
+        "contentInAccessibilityTree": true
+      },
+      {
+        "section": "foundations",
+        "control": "Transparência faz parte do produto",
+        "key": "Enter",
+        "result": "expanded",
+        "contentInAccessibilityTree": true
+      },
+      {
+        "section": "study",
+        "control": "Plantas e dimensões",
+        "key": "Space",
+        "result": "expanded",
+        "contentInAccessibilityTree": true
+      },
+      {
+        "section": "study",
+        "control": "Circulação e ergonomia",
+        "key": "Enter",
+        "result": "expanded",
+        "contentInAccessibilityTree": true
+      },
+      {
+        "section": "study",
+        "control": "Necessidades de armazenamento",
+        "key": "Space",
+        "result": "expanded",
+        "contentInAccessibilityTree": true
       }
     ],
+    "economyCards": [
+      {
+        "control": "Compra em escala",
+        "key": "Enter",
+        "ariaExpanded": true,
+        "contentAvailable": true
+      },
+      {
+        "control": "Compras coletivas",
+        "key": "Space",
+        "ariaExpanded": true,
+        "contentAvailable": true
+      },
+      {
+        "control": "Produção planejada",
+        "key": "Enter",
+        "ariaExpanded": true,
+        "contentAvailable": true
+      },
+      {
+        "control": "Aproveitamento de material",
+        "key": "Space",
+        "ariaExpanded": true,
+        "contentAvailable": true
+      },
+      {
+        "control": "Engenharia já estudada",
+        "key": "Enter",
+        "ariaExpanded": true,
+        "contentAvailable": true
+      },
+      {
+        "control": "Menos retrabalho",
+        "key": "Space",
+        "ariaExpanded": true,
+        "contentAvailable": true
+      }
+    ],
+    "focus": "Final accessibility snapshot retained focus on the last disclosure activated.",
     "limits": [
-      "Two of six native disclosures sampled",
-      "Economy cards, assistive technologies, other browsers/themes/viewports, focus appearance and contrast not assessed"
+      "Single public route, browser, dark theme and 1280x720 viewport",
+      "No screen-reader, cross-browser, other theme/viewport, focus appearance/contrast, or reduced-motion-on assessment"
     ],
     "productCodeChanged": false,
     "evidence": "evidence/runtime/how-it-works-accordion-keyboard-production-2026-10-24.md"
