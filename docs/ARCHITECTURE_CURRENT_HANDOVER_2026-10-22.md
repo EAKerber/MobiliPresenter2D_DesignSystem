@@ -323,3 +323,4 @@ Base do produto: `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`; Production Net
 
 
 - **VIS-002 / mapa estático de foco ampliado:** oito entradas do produto mapeadas para as folhas consumidas. Há exceções de 2 px/2 px e 2 px/3 px em Configurador, Admin e Como funciona, além de hotspots sem outline explícito no Viewer/Configurador com pistas alternativas que ainda precisam de avaliação runtime. Escopo proposto, sem declarar falha nem alterar tokens/CSS: [mapa das folhas e componentes](../evidence/architecture/vis002-focus-ring-source-map-proposal-2026-10-24.md).
+- **VIS-002 / Viewer runtime:** em Production, o módulo 02 exibiu borda dourada e marcador ao receber foco por Tab em claro e escuro; o foco não ativou o módulo. Contraste e demais superfícies seguem sem medição. [Registro](../evidence/runtime/viewer-scene-hotspot-keyboard-focus-production-2026-10-24.md).
