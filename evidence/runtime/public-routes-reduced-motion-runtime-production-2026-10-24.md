@@ -39,3 +39,13 @@ For each route, I compared `prefers-reduced-motion: no-preference` with `reduce`
 This confirms the reduced-motion media query and sampled computed durations on the three routes in one browser, viewport and theme. It does not cover other browsers, themes, widths, every interactive state, embedded content, or screen-reader behavior. It does not constitute a full accessibility conformance assessment.
 
 The emulation was reset and the temporary isolated tab closed; the user's original browser tab remained selected. No product CSS, tokens, decisions, deployment, or persistent site state changed.
+
+
+## Rechecagem de movimento reduzido em tema escuro — Production (24/10/2026)
+
+- Rotas públicas: Landing `/`, About `/about/` e Viewer `/viewer/`; deploy READY `6adc221479c773577ed45e23`, `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`.
+- Sessões anônimas isoladas, viewport mobile 390 × 844 CSS px, emulação DevTools `prefers-reduced-motion: reduce` ativa. Para esta amostra escura, o valor de `data-theme` foi ajustado no DOM isolado; o controle visual de tema não foi exercitado. Em cada página, nenhuma duração computada de transição/animação ultrapassou 0,001 s no estado inicial; overflow horizontal foi 0.
+- Landing: menu aberto/fechado; ambiente mudou de Cozinha para Sala e voltou; carrossel avançou uma posição e retornou. About: menu aberto/fechado. Viewer: hotspot 01→02; menu aberto/fechado; ao terminar o teste, hotspot 01 foi restaurado. Os estados funcionais esperados ocorreram.
+- Após cada interação, as transições geradas computaram duração de 0,01 ms (0,00001 s) e deixaram de estar em execução após 100 ms. Exemplos: cinco transições no menu da Landing, seis na mudança de hotspot do Viewer e duas no menu do Viewer. Nenhuma animação permaneceu ativa após estabilização; overflow horizontal permaneceu 0.
+- As interações acima usaram `.click()` DOM no contexto anônimo isolado; não são uma validação de entrada física por toque/teclado. A evidência de teclado sob redução permanece somente nas rotas/ações explicitamente listadas nas demais seções. A captura não certifica todas as superfícies, iframes, larguras ou estados dinâmicos.
+- Nenhuma configuração persistente, conta, sessão ou dado remoto foi alterado.
