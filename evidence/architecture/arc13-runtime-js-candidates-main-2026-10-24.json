@@ -25,7 +25,8 @@
     "coreValidationAdminBatchDeferred": 2,
     "uiJsBatchExactOccurrencesLinked": 16,
     "viewerConfiguratorBatchExactOccurrencesLinked": 22,
-    "manualClassificationExactCandidateLinks": 217
+    "manualClassificationExactCandidateLinks": 224,
+    "accessRuntimeTechnicalBatchOccurrencesLinked": 7
   },
   "exclusions": {
     "testAndToolFiles": [
@@ -437,14 +438,16 @@
       "route": "/access/",
       "file": "app/access/access.js",
       "line": 8,
-      "consumer": "unclassified",
+      "consumer": "access redemption implementation detail or API control value",
       "semanticKey": null,
       "currentText": "${window.location.pathname}${window.location.search}",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "access confirmation runtime",
+      "status": "excluded-nonlocalizable",
       "literalKind": "template",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-access-runtime-technical-batch-2026-10-24.json"
     },
     {
       "route": "/access/",
@@ -480,14 +483,16 @@
       "route": "/access/",
       "file": "app/access/access.js",
       "line": 18,
-      "consumer": "unclassified",
+      "consumer": "access redemption implementation detail or API control value",
       "semanticKey": null,
       "currentText": "click",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "access confirmation runtime",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-access-runtime-technical-batch-2026-10-24.json"
     },
     {
       "route": "/access/",
@@ -508,53 +513,61 @@
       "route": "/access/",
       "file": "app/access/access.js",
       "line": 22,
-      "consumer": "unclassified",
+      "consumer": "access redemption implementation detail or API control value",
       "semanticKey": null,
       "currentText": "/api/access/redeem",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "access confirmation runtime",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-access-runtime-technical-batch-2026-10-24.json"
     },
     {
       "route": "/access/",
       "file": "app/access/access.js",
       "line": 23,
-      "consumer": "unclassified",
+      "consumer": "access redemption implementation detail or API control value",
       "semanticKey": null,
       "currentText": "POST",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "access confirmation runtime",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-access-runtime-technical-batch-2026-10-24.json"
     },
     {
       "route": "/access/",
       "file": "app/access/access.js",
       "line": 24,
-      "consumer": "unclassified",
+      "consumer": "access redemption implementation detail or API control value",
       "semanticKey": null,
       "currentText": "same-origin",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "access confirmation runtime",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-access-runtime-technical-batch-2026-10-24.json"
     },
     {
       "route": "/access/",
       "file": "app/access/access.js",
       "line": 30,
-      "consumer": "unclassified",
+      "consumer": "access redemption implementation detail or API control value",
       "semanticKey": null,
       "currentText": "invalid_or_expired_link",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "access confirmation runtime",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-access-runtime-technical-batch-2026-10-24.json"
     },
     {
       "route": "/access/",
@@ -575,14 +588,16 @@
       "route": "/access/",
       "file": "app/access/access.js",
       "line": 32,
-      "consumer": "unclassified",
+      "consumer": "access redemption implementation detail or API control value",
       "semanticKey": null,
       "currentText": "/config/",
-      "owner": null,
-      "status": "candidate-unreviewed",
+      "owner": "access confirmation runtime",
+      "status": "excluded-nonlocalizable",
       "literalKind": "string",
       "heuristic": "ui-context-or-whitespace",
-      "truncated": false
+      "truncated": false,
+      "classification": "non-localizable-code",
+      "classificationBatch": "evidence/architecture/arc13-classified-access-runtime-technical-batch-2026-10-24.json"
     },
     {
       "route": "/access/",
