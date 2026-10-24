@@ -142,3 +142,6 @@ A amostra Production na Landing mediu dez focos reais em dois temas. As regras f
 ### VIS-002 — origem CSS e mapa de escopo proposto
 
 A fonte pública declara contorno 3 px/offset 3 px; `ui-theme.css` troca a cor clara por `#6E512E` e o controle de tema declara offset 2 px. O About da PR #239 propõe localmente 4 px/offset 3 px. Foi preparado um mapa não canônico por componente e rota, preservando o limite de implementação global atualmente não autorizada. [Mapa de origem e revisão](../evidence/architecture/vis002-focus-ring-source-map-proposal-2026-10-24.md).
+
+
+- VIS-002 / risco de cascata: no card “Compra em escala”, a regra ampla do tema claro deve vencer a cor local e produzir #6E512E sobre #25231F (razão calculada 2,15:1). É inferência estática; falta confirmar cor CSSOM/contraste em runtime. [Detalhe](../evidence/runtime/how-it-works-economy-action-focus-production-2026-10-24.md).
