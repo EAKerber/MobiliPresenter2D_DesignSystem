@@ -24,4 +24,4 @@ Um lote de cinco rótulos administrativos de uma palavra recebeu sugestões cont
 
 ## Proposta de convenção para chaves ancoradas em linha
 
-Uma proposta não canônica define regras e 13 exemplos de substituição semântica para a amostra de chaves numéricas, preservando os namespaces existentes e mantendo separadas mensagens com contratos de parâmetros distintos: [proposta](arc13-semantic-key-convention-proposal-2026-10-24.json). A proposta não altera o índice. Restam 199 das 212 chaves numéricas sem exemplo de substituição; todas as 369 ocorrências sem chave continuam sem proposta além dos cinco sinks previamente listados.
+Uma proposta não canônica define regras e 13 exemplos de substituição semântica para a amostra de chaves numéricas, preservando os namespaces existentes e mantendo separadas mensagens com contratos de parâmetros distintos: [proposta](arc13-semantic-key-convention-proposal-2026-10-24.json). A proposta não altera o índice. Restam 199 das 212 chaves numéricas sem exemplo de substituição; Entre as 369 ocorrências sem chave no índice, cinco sinks têm propostas de chave em lote separado e 364 seguem sem proposta.
