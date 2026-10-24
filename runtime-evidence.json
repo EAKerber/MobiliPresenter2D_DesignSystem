@@ -32,7 +32,52 @@
           "route": "/viewer/",
           "viewport": "1440x900",
           "theme": "dark"
-        }
+        ,
+  "productionAudit20261024PublicRoutes": {
+    "observedAt": "2026-10-24",
+    "site": "https://casaemmodulos.casa/",
+    "deployedRevision": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+    "netlifyDeployId": "6adc221479c773577ed45e23",
+    "scope": "Public, read-only route pass; temporary viewport 390x844 CSS px, dark theme.",
+    "routeImages": {
+      "/": {
+        "complete": 18,
+        "failed": 0,
+        "withoutAlt": 0,
+        "horizontalOverflow": false
+      },
+      "/about/": {
+        "complete": 3,
+        "failed": 0,
+        "withoutAlt": 0,
+        "horizontalOverflow": false
+      },
+      "/viewer/": {
+        "complete": 22,
+        "failed": 0,
+        "withoutAlt": 0,
+        "horizontalOverflow": false
+      }
+    },
+    "keyboard": {
+      "landing": "introSplash was already hidden at first observation; click opened primaryNav; Escape closed it and restored focus to menuToggle. Active splash click not verified.",
+      "about": "Skip link changed URL to /about/#main, but focus ended at BODY; main#main did not receive focus and scrollY remained 0."
+    },
+    "reducedMotion": {
+      "mediaQueryResult": false,
+      "emulationAvailable": false,
+      "animationsApiAvailable": false,
+      "status": "response to reduced motion and active animations on these routes not verified"
+    },
+    "limitations": [
+      "No image failure or slow-network simulation.",
+      "Single observation per route and viewport.",
+      "No product code or data changed."
+    ],
+    "evidence": "evidence/runtime/public-routes-keyboard-images-production-2026-10-24.md"
+  }
+}
+
       ],
       "persistedInRepository": true,
       "assets": [
