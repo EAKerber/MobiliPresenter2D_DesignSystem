@@ -16,3 +16,13 @@ Esses valores do GitHub Actions são independentes das variáveis Netlify. As fu
 Antes de considerar o runtime de autenticação validado, rodar o gate autenticado da PR #238 contra o host isolado e registrar resultado. O gate CI e as funções Netlify usam conexões separadas. Não substituir a conexão do GitHub Environment por uma variável Netlify.
 
 Este registro verifica metadados do deploy e existência/escopo das chaves, sem copiar valores para o repositório. Não lê dados do banco, não exercita Functions, não valida conectividade e não altera configuração, produto ou deploy.
+
+
+## Rechecagem da projeção pública isolada — 24/10/2026, 22:00 UTC
+
+- Em `m2d-auth-ci-isolated`, o endpoint de Production `/api/public-modules` respondeu HTTP 503; o Deploy Preview #242 do mesmo site também respondeu 503. No host principal `casaemmodulos.casa`, o mesmo endpoint respondeu 200 com schema `PublicModulePresentation2D 0.1` e sete módulos.
+- A observabilidade do deploy isolado identificou invocação da Function `public-modules` e status 503, sem linhas de log da Function. A resposta pública não expõe a exceção interna.
+- Releitura de nomes de variáveis confirma `DATABASE_URL` e `ACCESS_GATE_SECRET` no site isolado, escopos `builds/functions/runtime`; nenhum valor foi lido ou validado.
+- A fonte de `netlify/functions/public-modules.mjs` não lê `DATABASE_URL`. Ela lê a chave `published` do Netlify Blobs store `configurator-settings`. No contexto Production, dado ausente/não armazenado ou inválido retorna 503; no Deploy Preview, a ausência local tenta buscar a projeção pública do domínio principal do próprio site, que também está retornando 503.
+
+O 503, portanto, não evidencia uma variável adicional de banco faltante. O estado específico do Blob e a exceção interna permanecem desconhecidos; sem logs da Function não foi possível distinguir snapshot ausente/inválido de falha de leitura. Nenhum valor de segredo, dado do banco ou conteúdo privado foi acessado; nenhuma configuração foi alterada.
