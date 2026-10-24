@@ -29,6 +29,11 @@ For each route, I compared `prefers-reduced-motion: no-preference` with `reduce`
 - Baseline layer-group opacity transitions were 0.18 s and hotspot-tag opacity transitions were 0.16 s. Under reduction, the visible layer groups and tags reported `1e-05s`.
 - Under reduction, Enter selected module 02 while `:focus-visible` remained true. After 50 ms, no animation was running and layer/tag transition durations remained `1e-05s`. I restored module 01 before closing the isolated page.
 
+### Landing — ambiente e carrossel com teclado
+
+- Com `reduce` ativo, usei Enter para mudar o ambiente de Cozinha para Sala; após 50 ms, o cartão de apresentação tinha `transition-duration: 1e-05s` e `getAnimations()` não tinha animações em execução. Em seguida, Enter no controle de próximo grupo ativou o grupo 2 e também terminou sem animações em execução. O viewport continuou sem overflow (390 px de scroll/client width).
+- Antes de fechar a aba, restaurei Cozinha e grupo 1. Redução ativa, ambiente e carrossel em seu estado inicial e zero animações em execução foram confirmados. Nenhum estado foi persistido.
+
 ## Limits
 
 This confirms the reduced-motion media query and sampled computed durations on the three routes in one browser, viewport and theme. It does not cover other browsers, themes, widths, every interactive state, embedded content, or screen-reader behavior. It does not constitute a full accessibility conformance assessment.
