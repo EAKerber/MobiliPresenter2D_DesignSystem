@@ -57,9 +57,9 @@ ui-theme.css (blob b0f04c5, linhas 32–38, 50 e 113–114) declara o foco do co
 
 ## Evidência runtime adicional — Como funciona
 
-- Runtime em Production: o botão “Compra em escala” recebeu foco por Tab e exibiu contorno. No tema claro, CSSOM confirmou outline `2px solid #6E512E`, offset computado `2.66667px` (a fonte declara 3 px) e superfície `#25231F`; o contraste calculado pelas cores computadas foi 2,15:1. O risco nesta combinação está observado. No tema escuro, o anel foi visto visualmente, sem readback CSSOM de cor/offset. [Evidência](../runtime/how-it-works-economy-action-focus-production-2026-10-24.md).
+- Runtime em Production: o botão “Compra em escala” recebeu foco por Tab e exibiu contorno. No tema claro, CSSOM confirmou outline `2px solid #6E512E`, leituras do offset retornaram `2.66667px` e, na confirmação, `3px` (a fonte declara 3 px); diferença sem causa isolada e superfície `#25231F`; o contraste calculado pelas cores computadas foi 2,15:1. O risco nesta combinação está observado. No tema escuro, o anel foi visto visualmente, sem readback CSSOM de cor/offset. [Evidência](../runtime/how-it-works-economy-action-focus-production-2026-10-24.md).
 
 
 ## Risco de cascata a confirmar
 
-- Em Como funciona, a regra clara ampla vence a cor local do card. A leitura CSSOM em Production confirmou `#6E512E` sobre `#25231F`, com contraste calculado de 2,15:1. O risco está observado para o botão “Compra em escala” nesta rota/viewport; não generalizar para outros componentes. O offset computado foi 2.66667 px, embora a fonte declare 3 px. [Evidência e limites](../runtime/how-it-works-economy-action-focus-production-2026-10-24.md).
+- Em Como funciona, a regra clara ampla vence a cor local do card. A leitura CSSOM em Production confirmou `#6E512E` sobre `#25231F`, com contraste calculado de 2,15:1. O risco está observado para o botão “Compra em escala” nesta rota/viewport; não generalizar para outros componentes. Uma leitura do offset retornou 2.66667 px e a confirmação retornou 3 px, como a fonte; a diferença não foi explicada. [Evidência e limites](../runtime/how-it-works-economy-action-focus-production-2026-10-24.md).
