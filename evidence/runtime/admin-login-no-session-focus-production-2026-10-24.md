@@ -1,22 +1,29 @@
 # Tela de login administrativa sem autenticação — Production (24/10/2026)
 
-**Alvo:** Production `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, deploy READY `6adc221479c773577ed45e23`. A navegação para `/access/manage.html` redirecionou para `/admin.html?returnTo=%2Faccess%2Fmanage.html`, que exibiu o formulário de acesso restrito. Nenhuma área administrativa autenticada foi aberta.
+**Alvo:** Production `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, deploy READY `6adc221479c773577ed45e23`. Navegar para `/access/manage.html` redirecionou a `/admin.html?returnTo=%2Faccess%2Fmanage.html`, que exibiu o formulário de acesso restrito. A rota direta `/admin.html` exibiu o mesmo formulário. Nenhuma área administrativa autenticada foi aberta.
 
-## Observação visual e de foco
+## Layout responsivo observado
 
-Viewport desktop de 1280 × 720 CSS px; largura do documento permaneceu em 1280 px, sem overflow horizontal. No formulário e cabeçalho, a amostra de tema claro/escuro teve os seguintes valores CSSOM:
+Ajustei o viewport de forma temporária, e o DOM estabilizado confirmou as dimensões CSS correspondentes. O documento não teve overflow horizontal nos três pontos observados:
 
-| Alvo focado | Tema | Contorno computado | Offset | Fundo do painel |
-|---|---|---|---|---|
-| Botão de tema | Escuro | `rgb(216, 188, 124)`, sólido, 2.66667 px | 2 px | — |
-| Botão de tema | Claro | `rgb(110, 81, 46)`, sólido, 2.66667 px | 2 px | — |
-| Campo de e-mail | Escuro | `rgb(216, 188, 124)`, sólido, 2 px | 2.66667 px | `rgb(27, 28, 26)` |
-| Campo de e-mail | Claro | `rgb(110, 81, 46)`, sólido, 2 px | 2.66667 px | `rgb(255, 255, 255)` |
+| Viewport | Largura do documento | Cartão de login |
+|---|---:|---|
+| 1280 × 720 | 1280 px | 480 px, centralizado |
+| 390 × 844 | 390 px | 366 px, margens laterais de 12 px |
+| 320 × 700 | 320 px | 296 px, margens laterais de 12 px |
 
-Os campos estavam previamente preenchidos pelo navegador. Não li nem registrei seus valores, não alterei os campos e não submeti o formulário. Por isso, esta evidência descreve o estado renderizado de login; não prova que a sessão ou o perfil do navegador estavam sem dados salvos.
+Em 320 px, o cabeçalho cresceu para 104,58 px e o cartão permaneceu inteiro no viewport. O layout permaneceu sem overflow no tema escuro e claro; no tema claro, o viewport de 320 × 700 foi conferido via DOM.
 
-Restaurei o tema escuro e fechei a aba temporária. A captura foi inspecionada, mas não persistida.
+## Foco por teclado e CSSOM
+
+- Em 1280 × 720, o botão de tema recebeu foco por Tab: no escuro, `rgb(216, 188, 124)` com largura computada 2.66667 px e offset 2 px; no claro, `rgb(110, 81, 46)` com largura 2.66667 px e offset 2 px.
+- No mesmo viewport, o campo de e-mail recebeu foco por Tab: escuro `rgb(216, 188, 124)`, 2 px/offset 2.66667 px; claro `rgb(110, 81, 46)`, 2 px/offset 2.66667 px.
+- Em 320 × 700, tema claro, o campo de e-mail computou outline sólido `2px #6E512E` e offset de 3 px.
+
+Os campos estavam previamente preenchidos pelo navegador. Não li nem registrei os valores, não alterei os campos e não submeti o formulário. Assim, esta evidência descreve o estado renderizado de login, mas não prova perfil limpo nem ausência de dados salvos. O fluxo autenticado não foi iniciado.
+
+Restaurei o tema escuro, removi a substituição temporária do viewport e fechei as abas de auditoria. A captura móvel foi inspecionada, mas não persistida; ela mostrava campos preenchidos e não é anexada a este registro.
 
 ## Limites
 
-Uma rota e um viewport desktop; não verifiquei mobile, leitores de tela, fluxo de recuperação, autenticação, navegação após login ou conteúdo privado. A medição do foco não homologa conformidade geral com VIS-002: a amostra do botão de tema computou 2.66667 px e offset 2 px; a do campo computou 2 px e offset 2.66667 px. A causa dos valores fracionários não foi isolada. Nenhum dado foi enviado, e nenhum CSS/token ou configuração do produto foi alterado.
+Uma rota de login, sem acesso autenticado. Não verifiquei leitores de tela, fluxo de recuperação, entrada em áreas privadas, navegação após login ou saída. As leituras CSSOM indicaram dimensões fracionárias em algumas regras; a causa não foi isolada. Não há homologação global de VIS-002. Nenhum valor de campo foi transmitido, nenhum dado de conta foi alterado e nenhum CSS/token ou configuração de produto foi modificado.
