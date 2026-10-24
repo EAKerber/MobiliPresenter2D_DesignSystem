@@ -58,3 +58,8 @@ ui-theme.css (blob b0f04c5, linhas 32–38, 50 e 113–114) declara o foco do co
 ## Evidência runtime adicional — Como funciona
 
 - Runtime em Production: o botão “Compra em escala” recebeu foco por Tab e exibiu contorno em claro e escuro. A cor computada e o contraste sobre o painel escuro não foram medidos; a fonte declara 2 px/offset 3 px. [Evidência](../runtime/how-it-works-economy-action-focus-production-2026-10-24.md).
+
+
+## Risco de cascata a confirmar
+
+- Em Como funciona, a especificidade e a ordem das folhas fazem a regra clara ampla superar a cor local do card. A cascata prevê #6E512E sobre o painel #25231F (razão calculada 2,15:1); ainda é inferência, sem leitura CSSOM. [Evidência e cálculo](../runtime/how-it-works-economy-action-focus-production-2026-10-24.md).
