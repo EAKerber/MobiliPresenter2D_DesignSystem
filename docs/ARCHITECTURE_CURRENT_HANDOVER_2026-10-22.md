@@ -320,3 +320,6 @@ Base do produto: `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`; Production Net
 - **VIS-002 / foco público:** a amostra da Landing mediu dez paradas de Tab em claro/escuro. As regras fonte declaram 3 px/offset 3 px globalmente e 3 px/offset 2 px no controle de tema, abaixo dos 4 px/offset 3 px aprovados. A CSSOM retornou 2.67 px para regra e teste inline de 3 px; a causa não foi identificada. [Evidência](../evidence/runtime/public-focus-ring-production-component-sample-2026-10-24.md). Não autoriza aplicação global.
 
 - **VIS-002 / origem do foco:** a folha pública declara 3 px/offset 3 px; `ui-theme.css` força a cor clara `#6E512E` e o botão de tema declara offset 2 px. O About da PR #239 propõe 4/3 px localmente. [Mapa de escopo proposto](../evidence/architecture/vis002-focus-ring-source-map-proposal-2026-10-24.md); sem mudança de CSS ou canonização.
+
+
+- **VIS-002 / mapa estático de foco ampliado:** oito entradas do produto mapeadas para as folhas consumidas. Há exceções de 2 px/2 px e 2 px/3 px em Configurador, Admin e Como funciona, além de hotspots sem outline explícito no Viewer/Configurador com pistas alternativas que ainda precisam de avaliação runtime. Escopo proposto, sem declarar falha nem alterar tokens/CSS: [mapa das folhas e componentes](../evidence/architecture/vis002-focus-ring-source-map-proposal-2026-10-24.md).
