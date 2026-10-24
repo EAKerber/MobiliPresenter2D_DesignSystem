@@ -172,3 +172,6 @@ As issues #212/#213/#222 e pendências de publicação/Viewer da #228/#229 segue
 ## Evidência runtime adicional — Preview #234, 24/10
 
 A auditoria somente de leitura no Deploy Preview #234, commit `fbd00a9`, confirmou as rotas públicas em contexto isolado, tema claro/escuro e preferência por movimento reduzido. Não houve overflow horizontal no recorte; 28/28 imagens de “Como funciona” carregaram após scroll. `/config/` redirecionou para `/access/` sem token. O foco de teclado medido diverge do registro do Design System em espessura e cor clara; os limites completos estão em [RUNTIME_AUDIT.md](../RUNTIME_AUDIT.md) e [runtime-evidence.json](../runtime-evidence.json). Isso não é auditoria de produção, homologação nem integração.
+
+
+A inspeção adicional do menu público em 390 × 844 escuro mostrou que Escape não o fechou em duas tentativas enquanto o foco permanecia no controle. O resultado foi registrado como observado somente no Preview #234; clique externo e produção continuam sem conclusão.
