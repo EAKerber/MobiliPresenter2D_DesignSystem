@@ -24,3 +24,17 @@ Nas três rotas, `prefers-reduced-motion: reduce` retornou `false`. Não há emu
 - A preferência `prefers-reduced-motion` estava desativada. Esta passagem não mede teclado, estados de foco nem comportamento com movimento reduzido ativo.
 
 Leitura somente de DOM; sem interação com formulários, alterações de dados, CSS ou código do produto. A evidência vale para esta rota, commit, viewport e sessão.
+
+
+## Inventário DOM de imagens com alt vazio em Como funciona — Production (24/10/2026)
+
+A leitura isolada da rota encontrou oito imagens com `alt=""` entre as 28 completas:
+
+| Elemento | Contexto DOM observado | Leitura preliminar |
+|---|---|---|
+| Ícone WhatsApp | `aria-hidden="true"`; o link tem nome acessível “Fale conosco pelo WhatsApp”. | Decorativo/redundante para tecnologia assistiva, apoiado pelo nome acessível do link. |
+| Ilustração de móveis prontos | Desenho de gabinete; ao lado, a tabela já apresenta em texto os critérios comparados. | Candidato decorativo; não contém dados textuais únicos na leitura DOM. |
+| Logo da Casa em Módulos no cartão comparativo | `alt=""`; o cartão tem título visível “Casa em Módulos” e os detalhes aparecem em texto. | Candidato redundante/decorativo; marca já tem rótulo textual no mesmo cartão. |
+| Cinco ilustrações das etapas (cozinha, lavanderia, sala, quarto, escritório) | Cada imagem fica numa lista com número, título do ambiente e descrição curta. | Candidatas decorativas por contexto textual, mas cada arquivo ainda precisa de inspeção visual para confirmar que não comunica detalhe essencial ausente do texto. |
+
+A comparação de móveis prontos foi aberta como imagem no navegador: é uma ilustração de gabinete sem rótulos visuais aparentes, enquanto as diferenças estão na tabela textual adjacente. As outras cinco ilustrações foram apenas relacionadas pelo DOM, nomes de arquivo e itens da lista; não foram todas inspecionadas visualmente nesta passagem. Portanto, a classificação das oito imagens segue **candidata**, sem homologação de design/acessibilidade e sem mudança de `alt`, conteúdo ou CSS.
