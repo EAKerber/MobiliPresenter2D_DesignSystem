@@ -1725,5 +1725,83 @@
     ],
     "evidence": "evidence/runtime/public-text-contrast-production-themes-2026-10-24.md",
     "productCodeChanged": false
+  },
+  "productionAudit20261024PublicHeaders320": {
+    "observedAt": "2026-10-24",
+    "deployedRevision": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+    "netlifyDeployId": "6adc221479c773577ed45e23",
+    "viewportCssPx": {
+      "narrow": "320x700",
+      "control": "335x760",
+      "aboutAdditional": [
+        "360x800",
+        "390x844"
+      ]
+    },
+    "routeResults": {
+      "/about/": {
+        "at320": {
+          "themes": [
+            "dark",
+            "light"
+          ],
+          "innerWidth": 320,
+          "documentClientWidth": 305,
+          "documentScrollWidth": 320,
+          "bodyWidth": 320,
+          "headerWidth": 320,
+          "horizontalScrollbarObserved": true
+        },
+        "at335": {
+          "documentClientWidth": 320,
+          "documentScrollWidth": 320,
+          "horizontalOverflow": false
+        },
+        "at360And390": {
+          "horizontalOverflow": false
+        },
+        "menu": "click opened; Escape closed and restored focus to toggle"
+      },
+      "/viewer/": {
+        "at320": {
+          "themes": [
+            "light",
+            "dark"
+          ],
+          "innerWidth": 320,
+          "documentClientWidth": 305,
+          "documentScrollWidth": 320,
+          "bodyWidth": 320,
+          "headerWidth": 320,
+          "horizontalScrollbarObserved": true
+        },
+        "at335": {
+          "documentClientWidth": 320,
+          "documentScrollWidth": 320,
+          "horizontalOverflow": false
+        }
+      },
+      "/how-it-works/": {
+        "at320": {
+          "theme": "dark",
+          "innerWidth": 320,
+          "documentClientWidth": 305,
+          "documentScrollWidth": 320,
+          "bodyWidth": 320,
+          "headerWidth": 320,
+          "htmlMinWidth": "320px",
+          "bodyMinWidth": "320px",
+          "pageOverflowX": "clip"
+        },
+        "at335": {
+          "documentClientWidth": 320,
+          "documentScrollWidth": 320,
+          "horizontalOverflow": false
+        }
+      }
+    },
+    "environmentNote": "The browser had a 15 CSS px vertical scrollbar, so innerWidth 320 corresponded to document clientWidth 305. The 335 px sample is an observation, not an inferred CSS breakpoint.",
+    "evidence": "evidence/runtime/public-headers-320-production-2026-10-24.md",
+    "productCodeChanged": false
   }
 }
