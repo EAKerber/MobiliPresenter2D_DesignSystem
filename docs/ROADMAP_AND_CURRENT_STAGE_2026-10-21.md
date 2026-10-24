@@ -160,3 +160,8 @@ Tab nos seis cartões de “Por que custa menos?” computou 2 px/offset 3 px no
 ### Como funciona — movimento reduzido e animações (24/10/2026)
 
 A folha global e a CSS da rota declaram regras para `prefers-reduced-motion: reduce` no commit Production. No snapshot, a preferência retornou `false`; nenhum nome de animação CSS apareceu nos elementos/pseudo-elementos. Como a API de animações não estava disponível neste escopo, transições e o comportamento com redução ativa seguem não verificados. [Evidência](../evidence/runtime/how-it-works-motion-css-runtime-snapshot-production-2026-10-24.md).
+
+
+### VIS-002 — decisão de foco em superfície escura
+
+O FIND-017 foi confirmado nos seis cartões da economia. Uma proposta experimental compara `#D8BC7C` (8,52:1) e `#8B6A40` (3,16:1) sobre a superfície `#25231F`, mantendo a referência geométrica 4 px/offset 3 px. A opção A tem maior margem numérica, mas nenhuma escolha foi homologada. VIS-002 ainda declara mapeamento por componente pendente e `implementationAuthorized: false`; produto e decisões canônicas permanecem sem alteração. [Proposta A/B](../evidence/architecture/vis002-economy-dark-surface-focus-candidate-2026-10-24.md).
