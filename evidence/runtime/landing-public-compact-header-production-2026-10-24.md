@@ -12,3 +12,8 @@
 A captura em 290 px no tema claro mostrou barra horizontal e conteúdo cortado: parte do botão de menu, texto do hero e CTA não cabiam no viewport. A medição do DOM confirmou `min-width: 320px` em `html` e `body`, além de header com 320 px. O problema ocorre nos dois temas observados em 290 px. Esta reprodução se relaciona à família já registrada em [issue #218 / NAV-005](https://github.com/EAKerber/MobiliPresenter2D/issues/218); amplia a evidência ao estado da Landing atual e também identifica overflow horizontal em 310 px. Não altera nem substitui a issue.
 
 Não abri o menu nem naveguei pelo conteúdo. Captura não persistida; a leitura foi feita sem login e sem enviar dados. Um viewport por largura; 320 px foi medido somente no tema claro. Nenhum CSS/token ou deploy do produto foi alterado. A simulação experimental NAV-005 permanece separada da implementação atual e não foi aplicada.
+
+
+## Rechecagem de Como funciona no breakpoint de 290 px (24/10/2026)
+
+A issue #218 cita `/how-it-works/`; fiz uma passagem direta nessa rota em Production, 290×700, tema escuro. `html/body` continuaram com `min-width:320px`, header e conteúdo mediram 320 px, enquanto o contêiner `.how-page` declara `overflow-x:clip`. A largura útil foi 275 px; o botão de menu ocupa x=264–306 e somente 11 px ficaram visíveis. A captura confirmou recorte à direita do título e dos textos, sem barra horizontal visível por causa do clipping. O menu não foi aberto. Isso reproduz o comportamento descrito na issue, no deploy atual; não é a simulação experimental do NAV-005.
