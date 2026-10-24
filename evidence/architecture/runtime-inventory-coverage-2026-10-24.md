@@ -4,7 +4,7 @@
 
 O inventário estático canônico foi regenerado em 24/10 a partir do produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`; enumera oito rotas, oito folhas CSS e oito documentos HTML. A leitura estática foi atualizada, mas **não prova conformidade runtime nem certifica cada regra visual**.
 
-Esta matriz verifica se cada rota do inventário possui evidência runtime recente ou uma lacuna explícita. A referência de código está atualizada; a cobertura de runtime continua parcial e não certifica conformidade global.
+Esta matriz verifica se cada rota do inventário possui evidência runtime recente ou uma lacuna explícita. A referência de código está atualizada; o [mapa por família CSS](visual-rule-family-runtime-map-2026-10-24.md) liga cada folha às evidências existentes e às lacunas, sem certificar conformidade global.
 
 ## Matriz por rota
 
@@ -25,8 +25,8 @@ Esta matriz verifica se cada rota do inventário possui evidência runtime recen
 - **Teclado, foco e estados interativos:** cobertura pública parcial; foco de hotspots e alguns contornos ainda são alertas locais; configurador tem apenas progresso de CI/preview; áreas autenticadas permanecem não verificadas.
 - **Contraste:** textos corridos das três páginas públicas têm triagem atual e a implementação v0.3 está verificada em preview. Contraste de foco, estados, camadas transparentes e superfícies privadas requer revisão própria.
 - **Movimento, imagens e falhas:** páginas públicas têm amostras atuais; configurações privadas e toda a coleção de assets continuam incompletas.
-- **Classes, regras CSS e assets do inventário:** a cobertura estática agora corresponde ao `main` atual; auditoria runtime regra a regra, estados dinâmicos e uso de assets carregados por JavaScript continuam sem certificação.
+- **Classes, regras CSS e assets do inventário:** a cobertura estática corresponde ao `main` atual. O [mapa por família CSS](visual-rule-family-runtime-map-2026-10-24.md) registra onde a evidência é parcial e onde segue não verificada; estados dinâmicos, seletores individuais e assets carregados por JavaScript não estão certificados.
 
 ## Resultado da revisão
 
-Nenhuma rota fica sem classificação: cada uma tem evidência apontada ou lacuna marcada como não verificada. **A etapa do plano ainda não fecha.** `visual-inventory.json` foi regenerado e `DECISION_APPLICATION_MAP.md` reconciliado ao produto `main@5ccb2a8`. O próximo trabalho técnico é ligar cada família de regras visuais e estado dinâmico à evidência runtime específica ou a `NOT VERIFIED`. As pendências externas continuam separadas: validar estados autenticados exige sessão autorizada; NAV-005, #224 e contrastes de foco continuam issues/achados abertos.
+Nenhuma rota fica sem classificação: cada uma tem evidência apontada ou lacuna marcada como não verificada. **A etapa do plano ainda não fecha.** `visual-inventory.json` foi regenerado e `DECISION_APPLICATION_MAP.md` reconciliado ao produto `main@5ccb2a8`. O mapa por família CSS agora liga cada folha a evidência pontual ou a `NOT VERIFIED`. O próximo passo é aprofundar observações de seletores e estados prioritários, sem extrapolar as amostras existentes. As pendências externas continuam separadas: validar estados autenticados exige sessão autorizada; NAV-005, #224 e contrastes de foco continuam issues/achados abertos.
