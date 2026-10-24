@@ -1,5 +1,7 @@
 # VIS-002 — contraste de texto medido no preview da PR #241 (24/10/2026)
 
+**Estado:** histórico de uma primeira leitura de preview na head `f0fd9465d17ec30ab80932ecc048bf1e0c7b7532`, preservado abaixo. Ela leu texto base `#22211F` em vez da distribuição candidata final. A revalidação da head atual `baef9acd71bc636db66709d93c0d5cf0ab5d0134`, com a distribuição `#292723`, está na última seção e é a evidência aplicável ao código atual da PR.
+
 ## Origem e escopo
 
 - Produto: `EAKerber/MobiliPresenter2D`, PR [#241](https://github.com/EAKerber/MobiliPresenter2D/pull/241), head `f0fd9465d17ec30ab80932ecc048bf1e0c7b7532`.
@@ -37,3 +39,28 @@
 ## Limites
 
 Essa evidência prova somente os contextos/rotas/temas/viewports medidos na PR #241. Não certifica contraste sobre imagens, gradientes, transparências, estados dinâmicos, rotas não listadas, requisitos de leitor de tela ou conformidade visual global. A PR permanece DRAFT e não foi mergeada nem publicada em produção.
+
+
+## Revalidação da head atual — DOM/CSSOM no preview (24/10/2026)
+
+**Produto:** PR [#241](https://github.com/EAKerber/MobiliPresenter2D/pull/241), head `baef9acd71bc636db66709d93c0d5cf0ab5d0134`, base `5ccb2a8dde6dd16e136f03387dc833aab828c5cf`. O commit e os checks foram relidos durante esta revalidação. Os oito workflows aplicáveis concluíram com sucesso; os status `netlify/mobilipresenter2d/deploy-preview` e `netlify/m2d-auth-ci-isolated/deploy-preview` também estão `success`. Os previews são [principal](https://deploy-preview-241--mobilipresenter2d.netlify.app/) e [isolado](https://deploy-preview-241--m2d-auth-ci-isolated.netlify.app/).
+
+### Procedimento e leitura
+
+- Usei páginas anônimas no contexto isolado `vis002-pr241-current-audit-2026-10-24`; nenhum dado de conta ou negócio foi lido ou alterado.
+- Viewport observado: 1279 × 663 CSS px, DPR 1,5. A amostra não foi repetida em outro viewport nesta revalidação.
+- Em cada rota, confirmei que o recurso importado `/design-system/vis002c-long-copy-light-v0.3.0.css?v=vis002c-0.3.0` foi carregado. Comparei os seletores do mapeamento v0.3 em `data-theme="light"` e `data-theme="dark"`, lendo cor e fundo computados no DOM/CSSOM. Depois restaurei o tema escuro que estava ativo nas abas isoladas e fechei as abas temporárias.
+- Os sete seletores do mapeamento corresponderam a nove elementos nesta renderização. No claro, todos computaram `#292723`: `#E8E3DC` deu 11,68:1 e `#F0EDE8` deu 12,77:1.
+- No escuro, os mesmos elementos computaram `#C4BCB2` sobre `#20211F` (8,61:1); o token claro não foi aplicado.
+
+### Cobertura por rota
+
+| Rota | Seletores medidos | Elementos encontrados | Par claro no DOM |
+|---|---|---:|---|
+| Landing `/` | `.story-section > p:not(.eyebrow)`; `.feature-copy > p:not(.eyebrow):not(.feature-availability)` | 2 | `#292723` / `#E8E3DC` (11,68:1) e `#292723` / `#F0EDE8` (12,77:1) |
+| About `/about/` | `.about-closing > p:not(.eyebrow):not(.about-closing__signature)`; `.about-scale__stat > span` | 3 | `#292723` / `#F0EDE8` (12,77:1) |
+| Como funciona `/how-it-works/` | `.finish-copy > p:not(.eyebrow):not(.finish-signature)`; `.commercial-clarity > p:not(.eyebrow)`; `.launch-card .launch-copy > p` | 4 | `#292723` / `#F0EDE8` (12,77:1) |
+
+### Limites
+
+Esta leitura confirma a cor, os fundos e a separação de tema nos seletores mapeados nesta head e preview. Não é inspeção de screenshot, auditoria de todas as larguras, validação de Production, certificação de outros componentes nem aprovação de tokens globais. Eyebrows e assinaturas permanecem fora do escopo. A PR está DRAFT e não foi mergeada.
