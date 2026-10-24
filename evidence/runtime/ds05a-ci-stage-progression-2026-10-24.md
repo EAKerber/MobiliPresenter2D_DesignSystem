@@ -12,3 +12,11 @@
 ## Limites
 
 Esta evidência cobre a progressão padrão pelas quatro etapas e dois toggles de módulos. Não exercita opções de Acabamentos ou Serviços, combinações de preço, envio de proposta, estados administrativos nem homologação visual abrangente. O grant e a conexão usam a fixture autorizada existente; o papel de fixture não recebeu permissões adicionais.
+
+
+## Revalidação e diagnóstico de navegação — 24/10/2026, 19:45 UTC
+
+- Head produto: `abc33d24d0ff34e770feb0e12221fa9ba98870fd`; gate autenticado [Actions #40126678308](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40126678308) — SUCCESS. Revalidou bootstrap, revogação, negação de Admin, readiness da superfície Config, dois toggles alterados/restaurados e estimativa visível nas três etapas: Acabamentos, Serviços e Resumo. O log confirmou todos os valores como flags booleanas.
+- A alteração deste head é somente diagnóstica no teste: em timeout de ativação/estado da navegação, o artefato agora pode registrar etapa ativa, estado seguro dos botões, elemento ativo e painéis visíveis; a classe de erro JS também é retida. Nenhum código de `app/`, `netlify/`, segredo ou permissão da fixture foi alterado.
+- Runs anteriores no head `0c320c0` falharam em pontos diferentes; o último foi `summary-navigation`. O gate passou uma vez no novo head, mas a causa das falhas antigas segue **desconhecida** e esta passagem única não prova estabilidade. O diagnóstico acrescido servirá para uma futura falha; não foi produzido no run verde.
+- Supabase Preview: SKIPPED por falta de associação da branch; isso não interfere no gate, que usa o banco interno de teste confirmado.
