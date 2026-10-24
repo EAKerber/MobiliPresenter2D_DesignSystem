@@ -57,3 +57,8 @@ A largura computada de 2 px também não foi homologada contra a referência geo
 - As razões acima comparam estado focado ao estado imediatamente anterior em cada mesmo ponto do screenshot; não são contraste de texto nem avaliação completa de conformidade. São alertas locais de baixa distinção percebida no par observado. Outros hotspots, estados de seleção, temas de conteúdo, fundos e dimensões continuam pendentes.
 
 Nenhuma decisão canônica ou código do produto foi alterado. A emulação foi removida e a aba isolada fechada.
+
+
+## Referência de critério — WCAG 2.2 SC 2.4.13 (24/10/2026)
+
+A W3C descreve o critério **2.4.13 Focus Appearance (AAA)** como exigindo uma área de indicador equivalente a um perímetro de 2 CSS px e mudança de contraste de ao menos 3:1 entre os mesmos pixels focados e sem foco ([W3C, Understanding SC 2.4.13](https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance)). No screenshot do hotspot 01 selecionado, toda a região `::after` amostrada ficou abaixo de 1,10:1; portanto nenhum pixel amostrado atingiu a mudança 3:1 do critério nesse estado. No hotspot 02, nenhum dos 200 pixels amostrados no trecho de borda de 2 px atingiu 3:1; a contribuição do preenchimento fora desse trecho e a área completa do indicador não foram auditadas. Isto é uma sinalização local contra o critério AAA, não avaliação formal de conformidade do site nem conclusão sobre WCAG AA. A decisão VIS-002 permanece com `implementationAuthorized: false`; nenhuma correção foi aplicada.
