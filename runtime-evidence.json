@@ -1560,7 +1560,48 @@
       "navigationVisibleAfterEachEscape": true,
       "focusAfterEscape": "menu toggle",
       "outsideClick": "not verified",
-      "scope": "PR #234 preview only"
+      "scope": "PR #234 preview only",
+      "sourceTrace": {
+        "runtimeHead": "fbd00a9628c81b4902a8c679abb7ac72e93ca549",
+        "loadedScripts": [
+          "/landing/landing.js?v=root-assets-r1"
+        ],
+        "notRequestedScripts": [
+          "/landing/header-menu.js"
+        ],
+        "activeHandler": {
+          "clickToggle": true,
+          "closeOnNavigationLink": true,
+          "escapeHandler": false,
+          "outsidePointerHandler": false
+        },
+        "capturedEscape": {
+          "eventReachedDocument": true,
+          "target": "BUTTON",
+          "defaultPrevented": false,
+          "ariaExpandedAfter": true,
+          "navVisibleAfter": true
+        },
+        "candidate": {
+          "branch": "architecture/p-comp-01-public-menu-20261021",
+          "commit": "4ba9384733a8cb46ad8a6c7c8ef3b9aebe25cd93",
+          "headerMenuLoadedByIndex": true,
+          "escapeHandler": true,
+          "outsidePointerHandler": true,
+          "focusManagement": true,
+          "workflowRun": 39697470826,
+          "workflowConclusion": "success"
+        },
+        "currentMainTreeComparison": {
+          "base": "15e1cfb4866886649adbcd00fef9bef5e5843fda",
+          "candidate": "4ba9384733a8cb46ad8a6c7c8ef3b9aebe25cd93",
+          "added": 2,
+          "deleted": 1,
+          "modified": 10,
+          "totalDifferentPaths": 13
+        },
+        "integrationStatus": "candidate not directly applicable; reconcile generated HTML with ARC-03C source authority and rerun pages:check"
+      }
     }
   }
 }
