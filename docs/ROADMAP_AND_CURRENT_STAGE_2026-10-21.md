@@ -121,7 +121,7 @@ A auditoria anônima da Production confirmou que Enter em “Pular para o conte�
 
 ### CI-BASELINE-01 — configuração Netlify e GitHub Actions (24/10/2026)
 
-O deploy isolado `m2d-auth-ci-isolated` está READY em `main@5ccb2a8` e inclui `access-check`. A execução autenticada da PR produto #238 recebe o banco de `CI_STAGING_DATABASE_URL` no GitHub Environment `ci-auth-isolated`, separado do `DATABASE_URL` Netlify. O readback encontrou a conexão interna de teste no contexto Netlify `dev`, mas não em `production`/ `deploy-preview`, que ainda espelham o projeto principal. As Functions de grant/sessão leem o contexto Netlify; alinhar antes de considerar o host isolado pronto para o runtime autenticado. [Registro seguro de contextos](../evidence/runtime/netlify-ci-auth-environments-2026-10-24.md). Nenhum segredo, valor ou deploy foi alterado.
+O deploy isolado `m2d-auth-ci-isolated` está READY em `main@5ccb2a8` e inclui `access-check` (publicado às 09:18 UTC). Readback de nomes/escopos confirmou `DATABASE_URL` e `ACCESS_GATE_SECRET` em `dev`, `branch-deploy`, `deploy-preview`, `production` e `dev-server`, com `builds/functions/runtime`. Os valores não foram copiados para o registro; sua correção e a conectividade não foram validadas. O gate autenticado da PR #238 usa conexão independente do GitHub Environment `ci-auth-isolated`; ainda falta nova execução autenticada depois do deploy atual. [Registro de contextos](../evidence/runtime/netlify-ci-auth-environments-2026-10-24.md). Nenhuma variável ou deploy foi alterado nesta auditoria.
 
 
 ### ARC-13 — convenção de chave semântica proposta, sem canonização
