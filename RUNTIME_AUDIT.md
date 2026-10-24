@@ -330,3 +330,8 @@ Na página pública `/about/` do deploy Production READY `6adc221479c773577ed45e
 ## Landing e Como funciona — link de salto em Production (24/10/2026)
 
 Em `/` e `/how-it-works/`, no deploy READY `6adc221479c773577ed45e23`, não havia `.skip-link` nem `a[href="#main"]`; o elemento `main` não tinha id e o primeiro Tab focou a marca. Em Como funciona, a CTA `#passos` é navegação interna de seção, não salto ao conteúdo. O foco da marca computou anel de 2.67 px/offset 2.67 px: claro `#6E512E`, escuro `#D8BC7C`. VIS-002 registra 4 px/offset 3 px, claro `#8B6A40`, escuro `#D8BC7C`. Evidência e escopo: [Landing e Como funciona](evidence/runtime/public-skip-navigation-focus-2026-10-24.md). Uma amostra por rota; nenhuma alteração de produto.
+
+
+## Anel de foco em componentes públicos — amostra Production (24/10/2026)
+
+Na rota `/`, deploy READY `6adc221479c773577ed45e23`, dez paradas reais de Tab em 390×844 foram medidas nos temas claro/escuro: marca, CTA do header, tema, menu, CTA principal e cinco botões de ambiente. Todos tinham anel sólido de 2.67 px. Claro usou `#6E512E`, escuro `#D8BC7C`; nove offsets foram 2.67 px e o controle de tema usou 2 px. VIS-002 registra 4 px/offset 3 px, claro `#8B6A40`, escuro `#D8BC7C`. [Amostra detalhada](evidence/runtime/public-focus-ring-production-component-sample-2026-10-24.md). Escopo limitado; sem mudança de produto ou token.
