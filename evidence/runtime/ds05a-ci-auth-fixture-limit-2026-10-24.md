@@ -24,3 +24,10 @@ Reutilizar o fixture de Config para inspecionar e registrar o DOM real dos dois 
 ## Alvos de DOM localizados no código-fonte
 
 A fonte estática atual do produto identifica `#visibleCount` e `#totalCount` em `app/config/index.html` (blob `97c284c9831de05607ede0d024e4d919a898b7fa`, linha 100) e o preço em `#configurationValue` (linha 212). Em `app/app.js` (blob `805494f5ff90bc6aa80bfc4279a240a70e84f8b6`), o contador é escrito em `textContent` nas linhas 2152–2153 e a apresentação de preço/estado é escrita em `innerHTML` nas linhas 1603 e 1607. Esses são seletores e caminhos de escrita estáticos; ainda precisam de observação no DOM carregado pela fixture autenticada, em estados representativos.
+
+
+## Verificação runtime inicial do Configurador — 24/10/2026
+
+O fixture foi ampliado em `EAKerber/MobiliPresenter2D` na PR #238, branch `ci/ci-baseline-01-isolated-auth-extraction-20261024`, commit `56d90e53b0f91851b3b34da7a6bc5c93c1431844`. O gate autenticado [Actions #40117539613](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40117539613) concluiu PASS contra o site isolado `m2d-auth-ci-isolated` e o banco interno já autorizado. Após resgate real e bootstrap, os indicadores sanitizados retornaram todos `true`: contador visível numérico; total numérico; visível dentro do total; barra de preço/status visível e preenchida; estimativa com moeda presente; botão de próxima etapa visível e habilitado. O log e o artefato guardaram somente booleanos, sem valor monetário, dados da configuração ou credenciais. O mesmo gate confirmou negação do endpoint Admin e revogação do grant temporário.
+
+Isso confirma somente a superfície inicial do Configurador no estado carregado. Ainda não testa mudanças dos contadores após adicionar/remover módulos, preços em outras etapas/combinações, nem a montagem das opções administrativas. O endpoint Admin continua sendo negado intencionalmente para este papel; o limite de sessão/fixture administrativa permanece aberto.
