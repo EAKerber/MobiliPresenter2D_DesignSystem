@@ -218,3 +218,9 @@ A rota publicada `/how-it-works/` atualmente mantém a altura dos cartões fecha
 
 A issue [#226](https://github.com/EAKerber/MobiliPresenter2D/issues/226) continua aberta: falta registrar a comparação visual antes/depois, inspecionar a captura WebKit com diferença de pixels do gate de 21/10 e concluir a verificação de zoom. Esta observação não alterou o produto nem encerra a issue.
 
+### PR #242 — revisão manual pontual do foco do Viewer (24/10/2026)
+
+No Deploy Preview de produto, Tab em 390×844 claro focou o hotspot 06 sem mudar a seleção do hotspot 01; o contorno foi visível e o CSSOM confirmou 4 px/offset 3 px/`#8B6A40`. No escuro, uma checagem pontual por CSSOM confirmou 4 px/offset 3 px/`#D8BC7C`, mantendo o hotspot 01 selecionado. Em 1280×800 escuro, a caixa do foco permaneceu dentro da cena. A validação automatizada da PR cobre a sequência dos sete alvos em dois temas e dois tamanhos. [Revisão runtime pontual](../evidence/runtime/pr242-viewer-hotspot-focus-preview-manual-review-2026-10-24.md).
+
+A PR [#242](https://github.com/EAKerber/MobiliPresenter2D/pull/242) continua DRAFT. A evidência não substitui a revisão visual do usuário nem avalia contraste de todas as fotografias; `decisions.json` permanece inalterado e não houve merge ou publicação.
+
