@@ -19,3 +19,8 @@ Este run prova que o fixture autenticado alcança e inicializa o Configurador no
 ## Próximo passo seguro
 
 Reutilizar o fixture de Config para inspecionar e registrar o DOM real dos dois alvos do Configurador, caso esse incremento seja aprovado no escopo do PR. Para as opções do Admin, é necessária uma sessão administrativa de teste controlada ou um fixture separado explicitamente autorizado; não ampliar o papel `access_ci_fixture` nem suas permissões por inferência.
+
+
+## Alvos de DOM localizados no código-fonte
+
+A fonte estática atual do produto identifica `#visibleCount` e `#totalCount` em `app/config/index.html` (blob `97c284c9831de05607ede0d024e4d919a898b7fa`, linha 100) e o preço em `#configurationValue` (linha 212). Em `app/app.js` (blob `805494f5ff90bc6aa80bfc4279a240a70e84f8b6`), o contador é escrito em `textContent` nas linhas 2152–2153 e a apresentação de preço/estado é escrita em `innerHTML` nas linhas 1603 e 1607. Esses são seletores e caminhos de escrita estáticos; ainda precisam de observação no DOM carregado pela fixture autenticada, em estados representativos.
