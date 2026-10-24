@@ -18,3 +18,12 @@
 ## Limite e próximo teste
 
 O Chrome DevTools browser bridge não respondeu durante esta passagem, então não medi `scrollLeft`, retângulos CSSOM ou sequência de eventos no preview/Production. Nenhuma alteração de produto foi feita. Para confirmar ou refutar a hipótese, registrar em 320/335/360/390 px e claro/escuro: `selectedId`, índice de paginação, `scrollLeft/maxScroll`, retângulos do quinto cartão/janela antes e após scroll-snap, e a mesma seleção antes/depois do fim do scroll suave. Manter issue aberta até reproduzir ou acumular repetições suficientes para contradizer o histórico 4/4.
+
+## Rechecagem runtime multiponto posterior — 24/10/2026
+
+- Produto observado: Production `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, em contexto de navegador isolado, sem sessão de conta.
+- Uma passagem por interação real no navegador a 390×844: clique em “Próximos ambientes”, aguardei o scroll do carrossel terminar e cliquei em “Lavanderia”. O cartão ficou selecionado, o painel mostrou Lavanderia e a paginação permaneceu no grupo 2 (`scrollLeft/maxScroll=380/380`). O retângulo do cartão chegou a 0,156 CSS px além da borda direita do recorte; a página não teve overflow horizontal.
+- Depois rodei oito sequências via `element.click()`, uma para cada combinação de 320, 335, 360 e 390 CSS px × tema claro/escuro. Em cada sequência voltei a Cozinha/grupo 1, avancei ao grupo 2, aguardei o scroll estabilizar e selecionei Lavanderia. As oito terminaram com `selectedId=lavanderia`, painel “Lavanderia”, página 2, `scrollLeft=maxScroll` e `documentElement.scrollWidth=innerWidth`.
+- Diferença entre a borda direita final do cartão e o recorte do carrossel: +0,31 px a 320; −0,20 px a 335; −0,11 px a 360; entre +0,05 e +0,11 px a 390. São leituras fracionárias, sem retorno da paginação ao grupo 1 nas sequências realizadas.
+
+Essa matriz amplia a evidência de não reprodução na main atual, mas não contradiz as 4/4 reproduções históricas no commit antigo. As sequências automatizadas aguardaram o scroll de página terminar antes da seleção; não medem a janela transitória do scroll/snap após o clique. Mantém-se a issue aberta até essa sequência temporal ser observada ou haver repetição suficiente que reavalie o histórico. Nenhuma alteração de produto foi feita.
