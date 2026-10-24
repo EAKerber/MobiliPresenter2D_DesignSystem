@@ -23,7 +23,7 @@
   "reviewScope": "Configurator technical-detail carousel and shared Viewer technical views/drawings, plus scene hotspot accessible name. The scanned helpers and direct DOM/ARIA bindings in this scope were manually reviewed.",
   "totals": {
     "classifiedEntries": 33,
-    "sourceLocations": 39
+    "sourceLocations": 41
   },
   "notes": [
     "Inventory only: product code remains unchanged.",
@@ -363,6 +363,11 @@
           "file": "app/app.js",
           "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
           "line": 1058
+        },
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1058
         }
       ],
       "consumer": "nominal dimension list",
@@ -379,6 +384,11 @@
           "file": "app/app.js",
           "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
           "line": 1059
+        },
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1052
         }
       ],
       "consumer": "nominal dimension list",
