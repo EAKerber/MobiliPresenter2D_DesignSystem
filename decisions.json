@@ -613,7 +613,52 @@
             }
           ],
           "implementation": "product PR #241",
-          "verificationStatus": "CI and Deploy Preview pending; approval permits the contextual PR, not merge or production release"
+          "verificationStatus": "Deploy Preview DOM/CSSOM verified at 1280x720 and 390x844 on Landing, About and How it works: measured light-context colors and contrast confirmed; dark-theme colors unchanged; no horizontal overflow at 390 px. CI has one unrelated browser smoke failure on GET /api/public-modules (404); other relevant build/browser/static/asset/variant checks passed and both Netlify Deploy Previews are READY. Supabase Preview skipped because per-PR branches remain disabled.",
+          "verification": {
+            "observedAt": "2026-10-24",
+            "previewHead": "f0fd9465d17ec30ab80932ecc048bf1e0c7b7532",
+            "previewUrl": "https://deploy-preview-241--mobilipresenter2d.netlify.app",
+            "viewportsCssPx": [
+              "1280x720",
+              "390x844"
+            ],
+            "themes": [
+              "light",
+              "dark"
+            ],
+            "lightThemeObservedPairs": [
+              {
+                "foreground": "#70522F",
+                "background": "#F0EDE8",
+                "contrast": "6.12:1"
+              },
+              {
+                "foreground": "#70522F",
+                "background": "#E8E3DC",
+                "contrast": "5.60:1"
+              },
+              {
+                "foreground": "#22211F",
+                "background": "#F0EDE8",
+                "contrast": "13.78:1"
+              },
+              {
+                "foreground": "#22211F",
+                "background": "#E8E3DC",
+                "contrast": "12.60:1"
+              }
+            ],
+            "darkTheme": "Sampled measured selectors retained the prior dark-theme computed colors.",
+            "mobileOverflow": "0 px at 390 CSS px on all three routes.",
+            "ciFailure": {
+              "check": "browser",
+              "workflowRun": 40128896710,
+              "jobId": 120976176720,
+              "failingStep": "Public projection and negative endpoint checks",
+              "observation": "GET /api/public-modules returned HTTP 404 before browser smoke steps ran.",
+              "attribution": "This PR changes only three CSS files; the 404 endpoint failure is unrelated to the contrast CSS, but its baseline status has not been independently established."
+            }
+          }
         }
       ]
     },
