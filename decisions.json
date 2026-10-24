@@ -613,7 +613,7 @@
             }
           ],
           "implementation": "product PR #241",
-          "verificationStatus": "Deploy Preview DOM/CSSOM verified at 1280x720 and 390x844 on Landing, About and How it works: measured light-context colors and contrast confirmed; dark-theme colors unchanged; no horizontal overflow at 390 px. CI has one unrelated browser smoke failure on GET /api/public-modules (404); other relevant build/browser/static/asset/variant checks passed and both Netlify Deploy Previews are READY. Supabase Preview skipped because per-PR branches remain disabled.",
+          "verificationStatus": "Deploy Preview DOM/CSSOM verified at 1280x720 and 390x844 on Landing, About and How it works: measured light-context colors and contrast confirmed; dark-theme colors unchanged; no horizontal overflow at 390 px. Both Netlify Deploy Previews are READY. Initial browser job had a transient /api/public-modules 404; a live reread now returns 200 on Preview and production, and the failed browser job is being rerun. Supabase Preview skipped because per-PR branches remain disabled.",
           "verification": {
             "observedAt": "2026-10-24",
             "previewHead": "f0fd9465d17ec30ab80932ecc048bf1e0c7b7532",
@@ -655,8 +655,8 @@
               "workflowRun": 40128896710,
               "jobId": 120976176720,
               "failingStep": "Public projection and negative endpoint checks",
-              "observation": "GET /api/public-modules returned HTTP 404 before browser smoke steps ran.",
-              "attribution": "This PR changes only three CSS files; the 404 endpoint failure is unrelated to the contrast CSS, but its baseline status has not been independently established."
+              "observation": "Initial GET /api/public-modules returned HTTP 404 during the first browser job. A live readback immediately afterward returned HTTP 200 with the expected PublicModulePresentation2D payload on both Deploy Preview and production.",
+              "attribution": "Likely transient deploy-cutover/readiness race; not attributable to the CSS-only diff. A targeted rerun of the failed browser job is in progress."
             }
           }
         }
