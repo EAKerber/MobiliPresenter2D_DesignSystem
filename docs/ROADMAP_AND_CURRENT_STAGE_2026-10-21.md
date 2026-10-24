@@ -150,3 +150,8 @@ A fonte pública declara contorno 3 px/offset 3 px; `ui-theme.css` troca a cor c
 ### Como funciona — controles expansíveis por teclado (24/10/2026)
 
 Em Production `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, viewport 1280×720 escuro, Enter e Espaço alternados expandiram 6/6 disclosures nativos e 6/6 cartões de economia. Os estados abriram e o conteúdo foi exposto à árvore de acessibilidade. É cobertura funcional pontual, sem avaliação com leitor de tela, em outros navegadores/temas/larguras ou aparência do foco; não fecha achados. [Evidência](../evidence/runtime/how-it-works-accordion-keyboard-production-2026-10-24.md).
+
+
+### VIS-002 — foco nos cartões de economia em Production (24/10/2026)
+
+Tab nos seis cartões de “Por que custa menos?” computou 2 px/offset 3 px nos temas claro e escuro. Em tema claro, `#6E512E` sobre `#25231F` mediu 2,15:1; em escuro, `#D8BC7C` sobre `#25231F` mediu 8,52:1. A amostra identifica falha de indicador de foco na superfície escura sob tema claro e diferença de largura frente à referência de 4 px. Sem decisão de correção ou implementação; restante das rotas/estados segue pendente. [Evidência](../evidence/runtime/how-it-works-economy-focus-six-cards-production-2026-10-24.md).
