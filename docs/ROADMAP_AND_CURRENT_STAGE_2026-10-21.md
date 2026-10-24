@@ -181,3 +181,8 @@ No viewport 390 × 844, o Módulo 02 recebeu foco por Tab em Claro e Escuro, man
 ### Viewer — foco nos sete hotspots e diferença para seleção (24/10/2026)
 
 No viewport móvel 390 × 844, Tab percorreu os sete hotspots sem ativá-los; todos mantiveram marcador visível, foco programático de teclado (`:focus-visible`) e limites dentro da cena, sem overflow horizontal na amostra. Nos módulos 02–07, a borda de 2 px aparece. Exceção: no módulo 01 já selecionado, em Claro e Escuro, a borda do hotspot fica transparente e só o preenchimento semitransparente muda; o quadro de seleção mantém a mesma geometria quando o foco sai. A distinção suficiente entre foco e seleção na foto não foi verificada e requer revisão; sem alegar falha numérica de contraste. [Evidência runtime](../evidence/runtime/viewer-hotspot-focus-contrast-production-2026-10-24.md). Nenhum código de produto ou token foi alterado.
+
+
+### Como funciona — emulação de movimento reduzido em Production (24/10/2026)
+
+No deploy `6adc221479c773577ed45e23` (`main@5ccb2a8`), em contexto anônimo isolado e viewport 1280 × 720, emulei `prefers-reduced-motion`. Sem redução, o CTA hover declara transição `transform, background` de 0,18 s e termina com deslocamento de −2 px; com redução, as durações computadas caem para 0,00001 s. O disclosure nativo abriu sob redução, mostrou conteúdo e não registrou animação ativa; sem redução, a transição computada do disclosure foi 0 s. A amostra confirma a media query para os elementos vistos, não todos os elementos/iframes da rota. Rede lenta e falha de imagem ainda não foram simuladas. [Evidência revalidada](../evidence/runtime/how-it-works-motion-css-runtime-snapshot-production-2026-10-24.md). Nenhum código do produto foi alterado.
