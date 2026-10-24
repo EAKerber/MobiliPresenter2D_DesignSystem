@@ -271,3 +271,20 @@ A auditoria G1 exercitou a landing pública e o painel econômico de “Como fun
 O painel econômico passou nos estados e resoluções observados. Na landing, a seleção de Lavanderia a partir do grupo 2 mudou o painel de detalhe corretamente, mas fez a paginação voltar ao grupo 1 em 4 de 4 repetições a 390×844 CSS px (FIND-016). A inspeção do código aponta uma hipótese de condição de borda fracionária em `revealCard()`; a causa ainda não foi isolada e nenhuma alteração foi feita no produto. O issue #207 cobre a indicação de disponibilidade dos viewers, não esta divergência; o defeito foi registrado separadamente no [issue #224](https://github.com/EAKerber/MobiliPresenter2D/issues/224).
 
 O estado de `prefers-reduced-motion`, a onda de animação ativa e as falhas/rede lenta de imagem permanecem não verificados. Esta observação adiciona evidência funcional, sem decisão estética ou homologação nova.
+
+
+## Auditoria runtime isolada do preview #234 (2026-10-24)
+
+O Netlify Deploy Preview #234 estava **READY** no deploy `6adc0c519cc524d721abd893`, associado ao commit do produto `fbd00a9628c81b4902a8c679abb7ac72e93ca549`. A observação foi feita em contexto de navegador isolado, sem autenticação ou token; o conteúdo não foi alterado. A tela de acesso foi alcançada somente depois de `/config/` redirecionar para `/access/`.
+
+| Rota | Estado observado | Resultado técnico |
+|---|---|---|
+| `/` | 390 × 844, tema claro, movimento reduzido | Sem overflow horizontal; 18/18 imagens enumeradas carregadas; conteúdo principal e navegação presentes. |
+| `/about/` | 390 × 844, tema claro | Sem overflow horizontal; 3/3 imagens carregadas; primeiro Tab revelou o link “Pular para o conteúdo”. |
+| `/how-it-works/` | 390 × 844 claro/escuro e 1366 × 900 escuro | Sem overflow horizontal; após percorrer a página, 28/28 imagens carregadas e nenhuma falha. |
+| `/config/` → `/access/` | 1366 × 900, tema escuro | Redirecionamento observado; a página informou token inválido. Não havia campos de entrada visíveis nem valor de acesso fornecido. |
+| `/access/` | 390 × 844 claro e 1366 × 900 escuro | Sem overflow horizontal; token inválido; nenhum campo de entrada; logo carregado. |
+
+**Foco de teclado:** no link “Pular para o conteúdo” de `/about/`, o contorno visível foi `3px solid #6E512E` no tema claro e `3px solid #D8BC7C` no escuro, ambos com offset de 3 px. O registro aprovado do Design System especifica `#8B6A40` / `#D8BC7C`, 4 px e offset de 3 px. O preview coincide com a cor escura, mas diverge na cor clara e na espessura nos dois temas. Registra-se como diferença para reconciliação por componente, sem propor nem aplicar novo valor visual.
+
+O browser confirmou `prefers-reduced-motion: reduce`; isso não prova por si só a interrupção de todas as animações. Não foram cobertos ordem completa de teclado, Escape/clique externo em todos os menus, falhas de imagem, rede lenta, contraste de todos os elementos, vídeo, estado autenticado ou produção. Capturas foram inspecionadas durante a sessão, mas não persistidas neste repositório. Este registro é evidência de **preview** e não atualiza a auditoria do deploy de produção nem homologa a implementação.
