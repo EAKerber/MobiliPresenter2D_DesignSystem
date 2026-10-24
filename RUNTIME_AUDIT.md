@@ -388,3 +388,8 @@ Na mesma sessão Production, a 290×700 escuro, About e Viewer mantiveram `scrol
 ## Como funciona — controles expansíveis por teclado em Production (24/10/2026)
 
 Na sessão anônima em Production `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf` / deploy READY `6adc221479c773577ed45e23`, viewport 1280×720 e tema escuro, Enter e Espaço alternados expandiram os seis disclosures nativos de fundações/estudo e os seis cartões da seção de economia. Os disclosures mudaram o atributo `open`, e os cartões passaram a `aria-expanded=true`; seus conteúdos ficaram disponíveis no DOM/árvore de acessibilidade. O snapshot final manteve o foco no último disclosure ativado. Movimento reduzido retornou `false`. Sem avaliação de leitor de tela, outros navegadores/temas/larguras ou aparência/contraste do foco. [Evidência detalhada](evidence/runtime/how-it-works-accordion-keyboard-production-2026-10-24.md).
+
+
+## Como funciona — foco nos seis cartões de economia em Production (24/10/2026)
+
+Na Production atual `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf` / deploy READY `6adc221479c773577ed45e23`, em 1280×720, Tab focou os seis cartões da seção “Por que custa menos?”. CSSOM confirmou contorno de 2 px/offset 3 px em todos. No escuro, `#D8BC7C` sobre a superfície `#25231F` mede 8,52:1; no claro, `#6E512E` sobre a mesma superfície mede 2,15:1, abaixo de 3:1 para o indicador não textual de foco. A largura computada também diverge da referência VIS-002 de 4 px. Achado limitado à família e superfície medidas; sem escolha de correção ou alteração do produto. [Evidência detalhada](evidence/runtime/how-it-works-economy-focus-six-cards-production-2026-10-24.md).
