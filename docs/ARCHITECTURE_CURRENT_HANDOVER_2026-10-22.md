@@ -294,3 +294,15 @@ O arquivo [`arc13-classified-inline-config-scripts-2026-10-24.json`](../evidence
 ### Revisão de dados grandes ARC-13 — 24/10/2026
 
 O arquivo [`arc13-classified-large-data-files-2026-10-24.json`](../evidence/architecture/arc13-classified-large-data-files-2026-10-24.json) registra a inspeção integral dos blobs de `app/data/stone-data.js` e `app/data/mask-data.js` no produto `main@5ccb2a8`. As 52 strings de `stone-data.js` são chaves de estrutura/visibilidade ou payloads de imagem; as 47 de `mask-data.js` são `use strict`, caminhos de máscara e payloads de imagem. Nenhuma é texto humano a extrair. A conclusão vale somente para os hashes registrados.
+
+
+## Consolidação revalidada — 24/10/2026
+
+Base do produto: `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`; Production Netlify `6adc221479c773577ed45e23` READY. Este resumo complementa a linha do tempo acima; não substitui os registros históricos de cada gate.
+
+- **ARC-13:** 480 ocorrências HTML/392 valores distintos: 464 localizáveis, 4 identificadores excluídos e 12 itens comerciais deferidos. As 2.176 ocorrências candidatas JS em 52 fontes estão classificadas: 723 textos de interface, 1.263 itens técnicos e 190 itens de conteúdo/domínio deferidos. Os três scripts inline de `app/config/index.html` foram revistos (2.343 bytes; zero texto localizável). `stone-data.js` e `mask-data.js` foram revisados nos hashes registrados (zero texto humano). A triagem lexical está fechada apenas para os universos indexados; strings DOM geradas, ownership/chaves dos itens deferidos, extração e migração permanecem pendentes.
+- **DS-05:** ainda não há resultado do DS-05A que prove detecção genérica no DOM real para contador, barra de preço/próxima etapa e opções do Admin. Em contexto anônimo, `/config/` redirecionou a `/access/` sem token válido e o Admin não montou as opções. Evidência e próximo requisito de sessão: [limite de acesso anônimo DS-05A](../evidence/runtime/ds05a-anonymous-access-gate-2026-10-24.md). DS-05B e DS-05C também seguem pendentes; a sequência canônica está em `decisions.json`.
+- **NAV-005 / issue produto #218:** a composição compacta foi simulada sem alteração de código e documentada em [evidência temporária](../evidence/runtime/nav005-public-compact-header-proposal-2026-10-24.md). A decision canônica continua com `implementationAuthorized: false`; implementação, homologação visual completa e fechamento da issue não foram feitos.
+- O arquivo original HTML v0.2 e o inventário original de 43 famílias ainda não estão importados neste repositório. A lacuna de recuperação permanece aberta; nenhuma fonte ausente foi reconstruída por inferência.
+- Nenhuma execução desta revalidação alterou código/runtime do produto, variáveis/secrets, sessão de conta ou produção. A estimativa geral aproximada de 22% continua histórica/provisória; sem pesos definidos, não foi recalculada.
+
