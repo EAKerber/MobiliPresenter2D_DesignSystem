@@ -28,8 +28,8 @@
   "totals": {
     "sourceFilesReviewed": 4,
     "candidateOccurrencesReviewed": 86,
-    "classifiedLocalizableOccurrences": 29,
-    "excludedNonlocalizableOccurrences": 55,
+    "classifiedLocalizableOccurrences": 22,
+    "excludedNonlocalizableOccurrences": 62,
     "deferredDomainOccurrences": 2,
     "distinctCandidateTexts": 79
   },
@@ -784,12 +784,11 @@
       "consumer": "legacy Puxadores repair failure shown in admin save feedback",
       "owner": "legacy Puxadores repair flow",
       "parameters": [],
-      "classification": "interface-localizable",
-      "status": "classified-inventory-only",
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
       "notes": [
         "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
-      ],
-      "semanticKey": "admin.legacyHandles.54"
+      ]
     },
     {
       "currentText": "duplicate_owner",
@@ -801,12 +800,11 @@
       "consumer": "legacy Puxadores repair failure shown in admin save feedback",
       "owner": "legacy Puxadores repair flow",
       "parameters": [],
-      "classification": "interface-localizable",
-      "status": "classified-inventory-only",
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
       "notes": [
         "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
-      ],
-      "semanticKey": "admin.legacyHandles.59"
+      ]
     },
     {
       "currentText": "Puxadores está atribuído a mais de uma etapa.",
@@ -869,12 +867,11 @@
       "consumer": "legacy Puxadores repair failure shown in admin save feedback",
       "owner": "legacy Puxadores repair flow",
       "parameters": [],
-      "classification": "interface-localizable",
-      "status": "classified-inventory-only",
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
       "notes": [
         "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
-      ],
-      "semanticKey": "admin.legacyHandles.65"
+      ]
     },
     {
       "currentText": "A etapa Acabamentos não existe ou não possui lista de itens v3.",
@@ -903,12 +900,11 @@
       "consumer": "legacy Puxadores repair failure shown in admin save feedback",
       "owner": "legacy Puxadores repair flow",
       "parameters": [],
-      "classification": "interface-localizable",
-      "status": "classified-inventory-only",
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
       "notes": [
         "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
-      ],
-      "semanticKey": "admin.legacyHandles.70"
+      ]
     },
     {
       "currentText": "Puxadores será adicionado à etapa Acabamentos no v3 publicado.",
@@ -1016,12 +1012,11 @@
       "consumer": "legacy Puxadores repair failure shown in admin save feedback",
       "owner": "legacy Puxadores repair flow",
       "parameters": [],
-      "classification": "interface-localizable",
-      "status": "classified-inventory-only",
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
       "notes": [
         "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
-      ],
-      "semanticKey": "admin.legacyHandles.99"
+      ]
     },
     {
       "currentText": "O candidato deve atribuir Puxadores apenas a Acabamentos.",
@@ -1067,12 +1062,11 @@
       "consumer": "legacy Puxadores repair failure shown in admin save feedback",
       "owner": "legacy Puxadores repair flow",
       "parameters": [],
-      "classification": "interface-localizable",
-      "status": "classified-inventory-only",
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
       "notes": [
         "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
-      ],
-      "semanticKey": "admin.legacyHandles.104"
+      ]
     },
     {
       "currentText": "A ordem proposta de Acabamentos não corresponde à inserção canônica de Puxadores.",
@@ -1101,12 +1095,11 @@
       "consumer": "legacy Puxadores repair failure shown in admin save feedback",
       "owner": "legacy Puxadores repair flow",
       "parameters": [],
-      "classification": "interface-localizable",
-      "status": "classified-inventory-only",
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
       "notes": [
         "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
-      ],
-      "semanticKey": "admin.legacyHandles.110"
+      ]
     },
     {
       "currentText": "use strict",
