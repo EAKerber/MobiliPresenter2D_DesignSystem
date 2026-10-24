@@ -15,8 +15,15 @@ Em `app/how-it-works/how-it-works.css` (blob `52f36d212d286ef5157a20fc822cbfab25
 
 Amostra limitada a um card, uma rota e um viewport nos dois temas. Não verifiquei leitores de tela, outros cards/fundos, recorte, mobile ou outros navegadores. O resultado confirma a presença de contorno na amostra; não declara conformidade com o padrão VIS-002 de 4 px/3 px.
 
-## Risco de contraste derivado da cascata — não medido no browser
+## Leitura CSSOM e contraste no tema claro — Production (24/10/2026)
 
-A entrada `app/how-it-works/index.html` carrega `how-it-works.css` e, depois, `ui-theme.css`. No tema claro, `html[data-theme="light"] :focus-visible` (ui-theme.css, linha 113; especificidade 0,2,1) supera `.economy-action:focus-visible` (how-it-works.css, linha 271; especificidade 0,2,0), que declara `--public-accent-highlight`. A fonte prevê, portanto, outline `#6E512E` no botão focado. O espaço ao redor dele é o fundo opaco `.economy-section { background: #25231f }` (how-it-works.css, linha 69), já que o outline tem offset 3 px.
+Em uma nova passagem anônima e isolada na mesma rota e deploy, “Compra em escala” recebeu foco real por Tab; `document.activeElement` confirmou o botão focado e `aria-expanded=false`. Sem ativar o card, a leitura de `getComputedStyle` no tema claro retornou:
 
-Com esses dois valores declarados, a razão de luminância relativa calculada é **2,15:1**. É uma inferência da cascata e da superfície declarada; não é um valor computado pelo browser, nem constitui uma decisão normativa sobre correção. A captura confirma que o anel aparece, mas sua cor efetiva e contraste ainda precisam de readback runtime antes de classificar conformidade. O tema escuro usa `#D8BC7C` e a razão calculada para o mesmo fundo é 8,52:1.
+- `outline: 2px solid rgb(110, 81, 46)` (`#6E512E`);
+- `outline-offset: 2.66667px` computados; a regra fonte declara 3 px;
+- fundo da seção: `rgb(37, 35, 31)` (`#25231F`);
+- tema: `light`.
+
+A razão de contraste calculada a partir das cores efetivamente computadas do outline e da superfície é **2,15:1** (2.15065:1 antes do arredondamento). Portanto a cascata prevista foi confirmada no runtime e o risco de contraste para o foco neste tema está observado, não apenas inferido. A captura mostrou o anel; o registro visual não substitui a leitura CSSOM.
+
+A leitura cobre somente este botão, nesta rota e neste viewport no tema claro. Não mede a cor CSSOM do tema escuro, outros cards/superfícies, estados adicionais, mobile, leitores de tela ou outros navegadores. A razão é uma comparação de cores computadas; a avaliação normativa e qualquer correção visual permanecem pendentes do processo canônico VIS-002. Nenhum CSS ou token do produto foi alterado.
