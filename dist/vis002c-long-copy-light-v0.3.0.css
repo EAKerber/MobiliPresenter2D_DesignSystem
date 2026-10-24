@@ -7,6 +7,8 @@ html[data-theme="light"] .story-section > p:not(.eyebrow),
 html[data-theme="light"] .feature-copy > p:not(.eyebrow):not(.feature-availability),
 html[data-theme="light"] .about-closing > p:not(.eyebrow):not(.about-closing__signature),
 html[data-theme="light"] .about-scale__stat > span,
-html[data-theme="light"] .finish-copy > p:not(.eyebrow):not(.finish-signature) {
+html[data-theme="light"] .finish-copy > p:not(.eyebrow):not(.finish-signature),
+html[data-theme="light"] .commercial-clarity > p:not(.eyebrow),
+html[data-theme="light"] .launch-card .launch-copy > p {
   --ds-vis002c-long-copy-light: #292723;
 }
