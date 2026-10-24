@@ -129,3 +129,8 @@ Foi preparada uma convenção revisável para substituir sufixos numéricos por 
 ### Foco e salto ao conteúdo — Landing e Como funciona (24/10/2026)
 
 A Production não apresenta link de salto ao conteúdo nessas duas rotas: o primeiro Tab foca a marca, e `main` não possui id. O anel da marca também diverge de VIS-002 em largura/offset nos dois temas e cor clara. A CTA interna `#passos` em Como funciona não é um skip link. Evidência: [auditoria em Production](../evidence/runtime/public-skip-navigation-focus-2026-10-24.md). Fica como achado runtime, sem inferir solução ou autorização de implementação.
+
+
+### VIS-002 — anel de foco em componentes públicos
+
+A amostra Production na Landing mediu dez focos reais em dois temas: o anel de 2.67 px aparece em controles de header, CTA e seleção de ambientes; o offset varia entre 2.67 e 2 px. VIS-002 referencia 4 px/3 px e cor clara distinta. A evidência não homologa implementação geral nem mede todas as rotas/controles. [Registro runtime](../evidence/runtime/public-focus-ring-production-component-sample-2026-10-24.md).
