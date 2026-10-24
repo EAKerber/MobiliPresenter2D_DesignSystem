@@ -114,3 +114,8 @@ As oito entradas HTML do produto `main@5ccb2a8` foram reconciliadas por ocorrên
 ### About / Production — destino do link de salto (24/10/2026)
 
 A auditoria anônima da Production confirmou que Enter em “Pular para o conteúdo” altera a URL para `#main`, mas deixa o foco em `body`; `main#main` não recebe foco nesta passagem. O estilo do link também diverge da referência VIS-002, e PR produto #239 cobre apenas o CSS, não o foco no destino. Evidência: [auditoria de foco em Production](../evidence/runtime/about-skip-link-production-focus-2026-10-24.md). Isso fica como diferença runtime descoberta; nenhuma implementação ou aprovação de comportamento foi inferida.
+
+
+### CI-BASELINE-01 — configuração Netlify e GitHub Actions (24/10/2026)
+
+O deploy isolado `m2d-auth-ci-isolated` está READY em `main@5ccb2a8` e inclui `access-check`. A execução autenticada da PR produto #238 recebe o banco de `CI_STAGING_DATABASE_URL` no GitHub Environment `ci-auth-isolated`, separado do `DATABASE_URL` Netlify. O readback encontrou a conexão interna de teste no contexto Netlify `dev`, mas não em `production`/ `deploy-preview`, que ainda espelham o projeto principal. As Functions de grant/sessão leem o contexto Netlify; alinhar antes de considerar o host isolado pronto para o runtime autenticado. [Registro seguro de contextos](../evidence/runtime/netlify-ci-auth-environments-2026-10-24.md). Nenhum segredo, valor ou deploy foi alterado.
