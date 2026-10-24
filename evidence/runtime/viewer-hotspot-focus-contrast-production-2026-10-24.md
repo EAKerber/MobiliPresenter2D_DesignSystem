@@ -31,3 +31,11 @@ A largura computada de 2 px também não foi homologada contra a referência geo
 - O alvo ficou em x=129, y=735, 56 × 57 px, dentro da cena (x=22, y=608, 331 × 221 px); o marcador ficou em x=144, y=701, 26 × 26 px. Ambos couberam na cena, sem recorte observado.
 - `documentElement.scrollWidth` e `clientWidth` foram ambos 375 px; sem overflow horizontal nesta amostra. O Módulo 01 permaneceu selecionado durante a passagem.
 - Ao final restaurei o tema Claro, removi o viewport override e fechei a aba. Capturas foram inspecionadas mas não persistidas. Esta observação não mede contraste da borda contra os pixels da fotografia e não prova comportamento em outros tamanhos/dispositivos.
+
+
+## Complemento móvel — sequência dos sete hotspots
+
+- Em 390 × 844, percorri por Tab os hotspots 01–07 sem ativá-los, no tema Claro. Nos sete, `:focus-visible` foi verdadeiro, o marcador do módulo ficou visível e o retângulo-alvo e marcador permaneceram dentro da cena; não houve overflow horizontal (`scrollWidth=clientWidth=375 px`).
+- Hotspots 02–07 computaram borda de foco de 2 px em `#DDC48C` e preenchimento `rgba(216, 188, 124, 0.19)`.
+- Exceção do hotspot 01, que já estava selecionado: nos temas Claro e Escuro, a borda do pseudo-elemento computou como transparente, apesar de `:focus-visible=true`; apenas o preenchimento semitransparente diferenciou o estado focado. O quadro de seleção permaneceu com a mesma geometria/estilo quando o foco foi movido ao hotspot 02. Não concluí que esse preenchimento seja imperceptível; a captura móvel mostra o alvo, porém contraste sobre a foto e distinção suficiente entre foco e seleção não foram medidos.
+- Tema Claro e viewport padrão foram restaurados; a aba temporária foi fechada. A amostra não cobre outros dispositivos, cenas ou navegadores.
