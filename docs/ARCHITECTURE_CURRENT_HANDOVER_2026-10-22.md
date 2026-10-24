@@ -175,3 +175,8 @@ A auditoria somente de leitura no Deploy Preview #234, commit `fbd00a9`, confirm
 
 
 A inspeção adicional do menu público em 390 × 844 escuro mostrou que Escape não o fechou em duas tentativas enquanto o foco permanecia no controle. O resultado foi registrado como observado somente no Preview #234; clique externo e produção continuam sem conclusão.
+
+
+### Diagnóstico do menu público — preview #234
+
+O evento Escape chega à página, mas a implementação ativa `landing.js` não o trata: o preview não carrega `header-menu.js`. O ramo experimental P-COMP-01 em `4ba9384` tem o handler e gate PASS; permanece fora de PR/merge. Como ele difere da base atual em 13 arquivos e altera saídas HTML, a adoção exige reconciliação com ARC-03C e novo `pages:check`; não reapliquei o ramo antigo.
