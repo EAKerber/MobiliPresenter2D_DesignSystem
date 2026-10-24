@@ -211,3 +211,10 @@ Em Production `main@5ccb2a8` e deploy READY `6adc221479c773577ed45e23`, uma pass
 ### Viewer — comparação desktop do hotspot 01 selecionado (24/10/2026)
 
 Em `/viewer/` Production, 1279 × 663 CSS px, DPR 1,5, comparei em claro e escuro o módulo 01 selecionado com/sem `:focus-visible`. A seleção já mostra moldura e marcador; o foco mantém a borda do pseudo-elemento transparente e acrescenta somente preenchimento `rgba(216, 188, 124, 0.19)`. As capturas pareadas mostram a tonalidade acrescentada apenas pelo preenchimento. A razão de luminância por pixel entre estado focado/sem foco foi medida depois em `/viewer/` móvel, para dois hotspots, usando screenshot renderizado; os valores não generalizam para o desktop nem para outros alvos. A distinção foco/seleção e a cobertura dos demais fundos continuam abertas. [Evidência](../evidence/runtime/viewer-hotspot-focus-contrast-production-2026-10-24.md).
+
+### Issue #226 — rechecagem do acordeão em Production (24/10/2026)
+
+A rota publicada `/how-it-works/` atualmente mantém a altura dos cartões fechados quando outros itens abrem, inclusive com dois itens abertos ao mesmo tempo. A regra local `align-items:start` está presente nas duas grades de três colunas; o arquivo no `main` e no branch candidato conhecido tem o mesmo blob SHA. A rechecagem observou 1366 px em claro/escuro e layouts de uma coluna em 768 px e 390 px; Enter abre e Espaço fecha o `summary` nativo mantendo o foco. Detalhes de alturas e medidas: [rechecagem runtime #226](../evidence/runtime/issue226-accordion-grid-current-production-recheck-2026-10-24.md).
+
+A issue [#226](https://github.com/EAKerber/MobiliPresenter2D/issues/226) continua aberta: falta registrar a comparação visual antes/depois, inspecionar a captura WebKit com diferença de pixels do gate de 21/10 e concluir a verificação de zoom. Esta observação não alterou o produto nem encerra a issue.
+
