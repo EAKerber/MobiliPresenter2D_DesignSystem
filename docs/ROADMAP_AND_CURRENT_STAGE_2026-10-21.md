@@ -176,3 +176,8 @@ No Viewer público em Production, Tab focou o hotspot do módulo 02 nos temas Cl
 ### Viewer — hotspot 02 em viewport móvel (24/10/2026)
 
 No viewport 390 × 844, o Módulo 02 recebeu foco por Tab em Claro e Escuro, mantendo o Módulo 01 selecionado. Alvo (56 × 57 px) e marcador circular (26 × 26 px) ficaram dentro da cena, sem recorte observado; `scrollWidth` e `clientWidth` foram 375 px. A borda continuou com 2 px e cor computada aproximada `#DDC48C`. Isto amplia a evidência apenas para esse hotspot e viewport; contraste sobre a fotografia e demais dimensões/dispositivos seguem sem medição. [Registro runtime](../evidence/runtime/viewer-hotspot-focus-contrast-production-2026-10-24.md). Tema inicial e viewport foram restaurados e a aba temporária fechada.
+
+
+### Viewer — foco nos sete hotspots e diferença para seleção (24/10/2026)
+
+No viewport móvel 390 × 844, Tab percorreu os sete hotspots sem ativá-los; todos mantiveram marcador visível, foco programático de teclado (`:focus-visible`) e limites dentro da cena, sem overflow horizontal na amostra. Nos módulos 02–07, a borda de 2 px aparece. Exceção: no módulo 01 já selecionado, em Claro e Escuro, a borda do hotspot fica transparente e só o preenchimento semitransparente muda; o quadro de seleção mantém a mesma geometria quando o foco sai. A distinção suficiente entre foco e seleção na foto não foi verificada e requer revisão; sem alegar falha numérica de contraste. [Evidência runtime](../evidence/runtime/viewer-hotspot-focus-contrast-production-2026-10-24.md). Nenhum código de produto ou token foi alterado.
