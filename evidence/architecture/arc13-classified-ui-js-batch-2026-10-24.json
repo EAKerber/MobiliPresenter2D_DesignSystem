@@ -19,7 +19,7 @@
   "reviewMethod": "Manual classification of complete current source files against direct DOM assignments and shared theme-control injection. Technical codes, DOM/event/API identifiers, role IDs, user email, and date values are excluded. No runtime strings were changed.",
   "totals": {
     "sourcesReviewed": 3,
-    "classifiedLocalizableEntries": 25
+    "classifiedLocalizableEntries": 27
   },
   "limitations": [
     "Inventory-only; no bundle/resource format instantiated and no product migration performed.",
@@ -27,156 +27,6 @@
     "Expiry placeholder remains data formatted by current pt-BR runtime; locale strategy still requires implementation tests."
   ],
   "entries": [
-    {
-      "semanticKey": "theme.mode.auto",
-      "currentText": "Automático",
-      "source": {
-        "file": "app/core/ui-theme.js",
-        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
-        "line": 6
-      },
-      "consumer": "shared theme toggle full label/title/accessible name",
-      "owner": "shared theme control",
-      "routes": [
-        "/",
-        "/about/",
-        "/how-it-works/",
-        "/viewer/",
-        "/config/",
-        "/admin.html",
-        "/access/",
-        "/access/manage.html"
-      ],
-      "parameters": [],
-      "classification": "interface-localizable",
-      "status": "classified-inventory-only"
-    },
-    {
-      "semanticKey": "theme.mode.light",
-      "currentText": "Claro",
-      "source": {
-        "file": "app/core/ui-theme.js",
-        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
-        "line": 6
-      },
-      "consumer": "shared theme toggle full label/title/accessible name",
-      "owner": "shared theme control",
-      "routes": [
-        "/",
-        "/about/",
-        "/how-it-works/",
-        "/viewer/",
-        "/config/",
-        "/admin.html",
-        "/access/",
-        "/access/manage.html"
-      ],
-      "parameters": [],
-      "classification": "interface-localizable",
-      "status": "classified-inventory-only"
-    },
-    {
-      "semanticKey": "theme.mode.dark",
-      "currentText": "Escuro",
-      "source": {
-        "file": "app/core/ui-theme.js",
-        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
-        "line": 6
-      },
-      "consumer": "shared theme toggle full label/title/accessible name",
-      "owner": "shared theme control",
-      "routes": [
-        "/",
-        "/about/",
-        "/how-it-works/",
-        "/viewer/",
-        "/config/",
-        "/admin.html",
-        "/access/",
-        "/access/manage.html"
-      ],
-      "parameters": [],
-      "classification": "interface-localizable",
-      "status": "classified-inventory-only"
-    },
-    {
-      "semanticKey": "theme.mode.auto.short",
-      "currentText": "Auto",
-      "source": {
-        "file": "app/core/ui-theme.js",
-        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
-        "line": 7
-      },
-      "consumer": "shared theme toggle compact visible label",
-      "owner": "shared theme control",
-      "routes": [
-        "/",
-        "/about/",
-        "/how-it-works/",
-        "/viewer/",
-        "/config/",
-        "/admin.html",
-        "/access/",
-        "/access/manage.html"
-      ],
-      "parameters": [],
-      "classification": "interface-localizable",
-      "status": "classified-inventory-only"
-    },
-    {
-      "semanticKey": "theme.control.accessibleName",
-      "currentText": "Tema atual: {current}. Ativar {next}.",
-      "source": {
-        "file": "app/core/ui-theme.js",
-        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
-        "line": 32
-      },
-      "consumer": "theme toggle aria-label",
-      "owner": "shared theme control",
-      "routes": [
-        "/",
-        "/about/",
-        "/how-it-works/",
-        "/viewer/",
-        "/config/",
-        "/admin.html",
-        "/access/",
-        "/access/manage.html"
-      ],
-      "parameters": [
-        "current: theme.mode.*",
-        "next: theme.mode.*"
-      ],
-      "classification": "interface-localizable",
-      "status": "classified-inventory-only"
-    },
-    {
-      "semanticKey": "theme.control.title",
-      "currentText": "Tema: {current} (próximo: {next})",
-      "source": {
-        "file": "app/core/ui-theme.js",
-        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
-        "line": 33
-      },
-      "consumer": "theme toggle title",
-      "owner": "shared theme control",
-      "routes": [
-        "/",
-        "/about/",
-        "/how-it-works/",
-        "/viewer/",
-        "/config/",
-        "/admin.html",
-        "/access/",
-        "/access/manage.html"
-      ],
-      "parameters": [
-        "current: theme.mode.*",
-        "next: theme.mode.*"
-      ],
-      "classification": "interface-localizable",
-      "status": "classified-inventory-only"
-    },
     {
       "semanticKey": "access.confirmation.invalidToken",
       "currentText": "Este link não contém um token válido. Solicite um novo acesso à equipe.",
@@ -273,7 +123,7 @@
       "consumer": "access grant list empty state",
       "owner": "access grant manager",
       "routes": [
-        "/access/"
+        "/access/manage.html"
       ],
       "parameters": [],
       "classification": "interface-localizable",
@@ -290,24 +140,7 @@
       "consumer": "grant status label",
       "owner": "access grant manager",
       "routes": [
-        "/access/"
-      ],
-      "parameters": [],
-      "classification": "interface-localizable",
-      "status": "classified-inventory-only"
-    },
-    {
-      "semanticKey": "access.grants.state.expired",
-      "currentText": "Expirado",
-      "source": {
-        "file": "app/access/manage.js",
-        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
-        "line": 152
-      },
-      "consumer": "grant status label",
-      "owner": "access grant manager",
-      "routes": [
-        "/access/"
+        "/access/manage.html"
       ],
       "parameters": [],
       "classification": "interface-localizable",
@@ -324,7 +157,7 @@
       "consumer": "grant status label",
       "owner": "access grant manager",
       "routes": [
-        "/access/"
+        "/access/manage.html"
       ],
       "parameters": [
         "expiry: localized date/time formatted for pt-BR by current runtime"
@@ -343,7 +176,7 @@
       "consumer": "grant status label",
       "owner": "access grant manager",
       "routes": [
-        "/access/"
+        "/access/manage.html"
       ],
       "parameters": [
         "expiry: localized date/time formatted for pt-BR by current runtime"
@@ -362,7 +195,7 @@
       "consumer": "grant revoke button",
       "owner": "access grant manager",
       "routes": [
-        "/access/"
+        "/access/manage.html"
       ],
       "parameters": [],
       "classification": "interface-localizable",
@@ -379,7 +212,7 @@
       "consumer": "manager status",
       "owner": "access grant manager",
       "routes": [
-        "/access/"
+        "/access/manage.html"
       ],
       "parameters": [],
       "classification": "interface-localizable",
@@ -396,7 +229,7 @@
       "consumer": "manager status",
       "owner": "access grant manager",
       "routes": [
-        "/access/"
+        "/access/manage.html"
       ],
       "parameters": [],
       "classification": "interface-localizable",
@@ -413,7 +246,7 @@
       "consumer": "login status",
       "owner": "access grant manager",
       "routes": [
-        "/access/"
+        "/access/manage.html"
       ],
       "parameters": [],
       "classification": "interface-localizable",
@@ -430,7 +263,7 @@
       "consumer": "login status",
       "owner": "access grant manager",
       "routes": [
-        "/access/"
+        "/access/manage.html"
       ],
       "parameters": [],
       "classification": "interface-localizable",
@@ -447,7 +280,7 @@
       "consumer": "manager status",
       "owner": "access grant manager",
       "routes": [
-        "/access/"
+        "/access/manage.html"
       ],
       "parameters": [],
       "classification": "interface-localizable",
@@ -464,7 +297,7 @@
       "consumer": "manager status",
       "owner": "access grant manager",
       "routes": [
-        "/access/"
+        "/access/manage.html"
       ],
       "parameters": [],
       "classification": "interface-localizable",
@@ -481,7 +314,7 @@
       "consumer": "manager status",
       "owner": "access grant manager",
       "routes": [
-        "/access/"
+        "/access/manage.html"
       ],
       "parameters": [],
       "classification": "interface-localizable",
@@ -498,9 +331,224 @@
       "consumer": "manager status",
       "owner": "access grant manager",
       "routes": [
-        "/access/"
+        "/access/manage.html"
       ],
       "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.grants.state.expired",
+      "currentText": "Expirado",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 152
+      },
+      "consumer": "grant status label",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "theme.mode.auto",
+      "currentText": "Automático",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 6
+      },
+      "consumer": "shared theme toggle full label/title/accessible name",
+      "owner": "shared theme control",
+      "routes": [
+        "/",
+        "/about/",
+        "/how-it-works/",
+        "/viewer/",
+        "/config/",
+        "/admin.html",
+        "/access/",
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "theme.mode.dark",
+      "currentText": "Escuro",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 6
+      },
+      "consumer": "shared theme toggle full label/title/accessible name",
+      "owner": "shared theme control",
+      "routes": [
+        "/",
+        "/about/",
+        "/how-it-works/",
+        "/viewer/",
+        "/config/",
+        "/admin.html",
+        "/access/",
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "theme.mode.dark.short",
+      "currentText": "Escuro",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 6
+      },
+      "consumer": "shared theme toggle compact visible label",
+      "owner": "shared theme control",
+      "routes": [
+        "/",
+        "/about/",
+        "/how-it-works/",
+        "/viewer/",
+        "/config/",
+        "/admin.html",
+        "/access/",
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "theme.mode.light",
+      "currentText": "Claro",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 6
+      },
+      "consumer": "shared theme toggle full label/title/accessible name",
+      "owner": "shared theme control",
+      "routes": [
+        "/",
+        "/about/",
+        "/how-it-works/",
+        "/viewer/",
+        "/config/",
+        "/admin.html",
+        "/access/",
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "theme.mode.light.short",
+      "currentText": "Claro",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 6
+      },
+      "consumer": "shared theme toggle compact visible label",
+      "owner": "shared theme control",
+      "routes": [
+        "/",
+        "/about/",
+        "/how-it-works/",
+        "/viewer/",
+        "/config/",
+        "/admin.html",
+        "/access/",
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "theme.mode.auto.short",
+      "currentText": "Auto",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 7
+      },
+      "consumer": "shared theme toggle compact visible label",
+      "owner": "shared theme control",
+      "routes": [
+        "/",
+        "/about/",
+        "/how-it-works/",
+        "/viewer/",
+        "/config/",
+        "/admin.html",
+        "/access/",
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "theme.control.accessibleName",
+      "currentText": "Tema atual: {current}. Ativar {next}.",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 32
+      },
+      "consumer": "theme toggle aria-label",
+      "owner": "shared theme control",
+      "routes": [
+        "/",
+        "/about/",
+        "/how-it-works/",
+        "/viewer/",
+        "/config/",
+        "/admin.html",
+        "/access/",
+        "/access/manage.html"
+      ],
+      "parameters": [
+        "current: theme.mode.*",
+        "next: theme.mode.*"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "theme.control.title",
+      "currentText": "Tema: {current} (próximo: {next})",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 33
+      },
+      "consumer": "theme toggle title",
+      "owner": "shared theme control",
+      "routes": [
+        "/",
+        "/about/",
+        "/how-it-works/",
+        "/viewer/",
+        "/config/",
+        "/admin.html",
+        "/access/",
+        "/access/manage.html"
+      ],
+      "parameters": [
+        "current: theme.mode.*",
+        "next: theme.mode.*"
+      ],
       "classification": "interface-localizable",
       "status": "classified-inventory-only"
     }
