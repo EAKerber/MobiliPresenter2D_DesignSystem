@@ -12,8 +12,8 @@ Nas rotas `/` e `/how-it-works/`:
 
 - Não havia link `.skip-link` nem `a[href="#main"]`. O elemento `main` não tinha id.
 - O primeiro Tab focou o link da marca (“Casa em Módulos, início”). Em Como funciona existe uma CTA interna “VEJA COMO FUNCIONA” para `#passos`; ela não é um link de salto para o conteúdo.
-- No link da marca, o anel computado tinha largura e offset de 2.67 px. Em claro, cor `#6E512E`; em escuro, `#D8BC7C`.
-- VIS-002 registra referência de foco com 4 px, offset de 3 px, claro `#8B6A40` e escuro `#D8BC7C`. A amostra diverge em largura/offset nos dois temas e na cor clara.
+- No link da marca, a CSSOM retornou largura/offset computados de 2.67 px. A regra global carregada de `app/public-theme.css` (blob `e2add5053fbc1a897c035eb854b168c9711d2d18`, linha 23) declara 3 px/offset 3 px; `app/ui-theme.css` (blob `b0f04c566183ba1f9c015f5d2a827db9e91dea45`, linhas 113–114) fornece claro `#6E512E` e escuro `#D8BC7C`. Um elemento de teste com `outline:3px` também retornou 2.67 px na CSSOM; a causa permanece desconhecida, então a medição computada não é tratada como valor declarado.
+- VIS-002 registra 4 px/offset 3 px, claro `#8B6A40` e escuro `#D8BC7C`. A regra fonte diverge em largura (3 px) e na cor clara; o offset global declarado coincide. A CSSOM computada conserva a anomalia de 2.67 px descrita acima.
 
 A página About tem um caso distinto: possui link `#main`, mas Enter termina com foco no body. Consulte a [evidência de About](about-skip-link-production-focus-2026-10-24.md).
 
