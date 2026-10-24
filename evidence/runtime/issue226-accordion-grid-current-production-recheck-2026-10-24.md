@@ -16,4 +16,12 @@ A interação nativa de teclado já foi observada nesta rota: Enter abre e Espa�
 
 ## Limites e decisão
 
-A issue #226 permanece aberta. Esta rechecagem confirma o comportamento em Production, mas não cumpre todos os gates originais: não foi persistida uma comparação visual antes/depois, não houve teste de zoom, e continua pendente inspecionar a diferença de pixels em uma captura WebKit registrada no run de 21/10. As medições acima são observações do browser nesta sessão; não encerram o achado nem autorizam mudança de produto. Nenhum código foi alterado.
+A issue #226 permanece aberta. A rechecagem em Production confirma o comportamento nas larguras e interações observadas, mas não conclui todos os gates originais: falta uma comparação visual antes/depois confiável e ainda não houve verificação de zoom. A diferença de pixels do WebKit foi revisada no artefato mais recente e agora está delimitada abaixo, mas a captura não permite certificar paridade. Nenhum código do produto foi alterado.
+
+## Revalidação do gate isolado — 24/10/2026
+
+A branch candidata `fix/how-it-works-accordion-grid-20261021` avançou para `4a4ede275ee9f4af1096649d08c841643998eba3`. O workflow [#39611912828](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39611912828) concluiu com 8/8 combinações funcionais, zero erros de página, teclado e abertura independente aprovados. Chromium teve paridade de pixels nas quatro combinações; WebKit teve paridade em 1366 px nos dois temas e divergência em 390 px em claro e escuro, ambas no seletor `.study-topics`. A head atual agora contabiliza essas duas divergências como revisão pendente, sem falso PASS.
+
+As quatro capturas WebKit do estudo em 390 px foram inspecionadas no artefato do run: as imagens `webkit-390-light-closed-main-1.png` e `webkit-390-dark-closed-main-1.png` mostram conteúdo ilustrado; as capturas candidatas `webkit-390-light-closed-candidate-1.png` e `webkit-390-dark-closed-candidate-1.png` mostram os cartões de tópicos. Apesar disso, o gate registrou DOM fechado idêntico e igualdade de estilo computado/geometria para o seletor e seus três `details`. A única regra de produto alterada é `align-items:start` dentro de `@media (min-width:901px)`, inativa a 390 px. Assim, a comparação visual gravada não representa de forma confiável o mesmo conteúdo/região; o artefato não prova regressão visual nem paridade. A causa exata da captura incongruente continua sem confirmação.
+
+Para encerrar #226, ainda é necessário estabilizar/normalizar alvo e estado de captura, obter comparação WebKit reproduzível, salvar a comparação visual antes/depois e concluir zoom. A issue continua aberta, sem alteração ou deploy do produto.
