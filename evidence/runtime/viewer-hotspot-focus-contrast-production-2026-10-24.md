@@ -1,0 +1,25 @@
+# Viewer Production — foco de teclado no hotspot 02
+
+**Estado:** observação runtime pontual; não é homologação global. **Produto:** `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`. **Deploy:** `6adc221479c773577ed45e23`, READY, publicado em 2026-10-24 03:12:38 UTC.
+
+## Execução observada
+
+- Rota pública `/viewer/`, sem login, em aba temporária e isolada do navegador; viewport observado de 1265 × 713.
+- Foquei por Tab o botão “Ver ficha de Módulo 02, Inferior do fogão”, sem clicar nem ativá-lo. A ficha do Módulo 01 continuou selecionada.
+- Em Claro e Escuro, o elemento estava em `:focus-visible` e a captura mostrou o contorno ao redor do hotspot e o marcador “02”.
+- Após a amostra, restaurei o tema Claro, que era o estado inicial desta aba, e fechei a aba temporária. Nenhum dado de conta ou negócio foi alterado.
+
+## Estilo computado e fonte
+
+No hotspot focado, os dois temas computaram:
+
+- O botão não tem contorno CSS: `outline: 0`.
+- O pseudo-elemento `::after` desenha uma borda de 2 px na cor `color(srgb 0.865412 0.768784 0.547922)` (aprox. `#DDC48C`) e um preenchimento `rgba(216, 188, 124, 0.19)`.
+- A cor da borda e do preenchimento foi a mesma nos dois temas; o marcador separado permaneceu escuro com texto claro.
+- Fonte: `app/viewer/viewer.css`, blob `90d23678630c17f63ac343bfd7e5e1ce3bbcb1b2` no commit de Production. A regra `.scene-hotspot:focus-visible` zera o outline; `::after` fornece a borda/preenchimento e `.scene-hotspot__tag` mostra o número.
+
+## Limites e leitura
+
+O indicador estava presente visualmente na amostra, mas a borda atravessa uma fotografia com luminância variável. A API de inspeção usada não expôs `document.createElement`, impedindo amostragem de pixels da imagem para calcular contraste; por isso não registro uma razão numérica nem afirmo conformidade. As capturas foram inspecionadas durante a sessão e não foram persistidas.
+
+A largura computada de 2 px também não foi homologada contra a referência geométrica VIS-002 de 4 px; ainda falta decidir se as pistas alternativas do hotspot (borda, preenchimento e marcador) satisfazem o critério em fundos claros e escuros. Isso amplia a evidência do módulo 02 em dois temas, sem alterar CSS, tokens, produto ou decisão canônica.
