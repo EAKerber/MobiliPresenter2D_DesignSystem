@@ -13,11 +13,48 @@
   "value": "#292723",
   "roleRef": "VIS-002.approvedPalette.colors.textPrimary.light",
   "contexts": [
-    { "route": "/", "selector": ".story-section > p:not(.eyebrow)", "background": "#E8E3DC", "contrast": "11.68:1" },
-    { "route": "/", "selector": ".feature-copy > p:not(.eyebrow):not(.feature-availability)", "background": "#F0EDE8", "contrast": "12.77:1" },
-    { "route": "/about/", "selector": ".about-closing > p:not(.eyebrow):not(.about-closing__signature)", "background": "#F0EDE8", "contrast": "12.77:1" },
-    { "route": "/about/", "selector": ".about-scale__stat > span", "background": "#F0EDE8", "contrast": "12.77:1" },
-    { "route": "/how-it-works/", "selector": ".finish-copy > p:not(.eyebrow):not(.finish-signature)", "background": "#F0EDE8", "contrast": "12.77:1" }
+    {
+      "route": "/",
+      "selector": ".story-section > p:not(.eyebrow)",
+      "background": "#E8E3DC",
+      "contrast": "11.68:1"
+    },
+    {
+      "route": "/",
+      "selector": ".feature-copy > p:not(.eyebrow):not(.feature-availability)",
+      "background": "#F0EDE8",
+      "contrast": "12.77:1"
+    },
+    {
+      "route": "/about/",
+      "selector": ".about-closing > p:not(.eyebrow):not(.about-closing__signature)",
+      "background": "#F0EDE8",
+      "contrast": "12.77:1"
+    },
+    {
+      "route": "/about/",
+      "selector": ".about-scale__stat > span",
+      "background": "#F0EDE8",
+      "contrast": "12.77:1"
+    },
+    {
+      "route": "/how-it-works/",
+      "selector": ".finish-copy > p:not(.eyebrow):not(.finish-signature)",
+      "background": "#F0EDE8",
+      "contrast": "12.77:1"
+    },
+    {
+      "route": "/how-it-works/",
+      "selector": ".commercial-clarity > p:not(.eyebrow)",
+      "background": "#F0EDE8",
+      "contrast": "12.77:1"
+    },
+    {
+      "route": "/how-it-works/",
+      "selector": ".launch-card .launch-copy > p",
+      "background": "#F0EDE8",
+      "contrast": "12.77:1"
+    }
   ],
   "constraints": {
     "allowsGlobalUsage": false,
