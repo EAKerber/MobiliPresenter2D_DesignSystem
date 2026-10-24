@@ -7,7 +7,7 @@
 ### Estado revalidado
 
 - Design System `main`: `ae1be563d298ae4a6d384936cbb2d9d05ee449ae`. Os resultados VIS-002C × P-TOKEN-02B v0.2 abaixo continuam sendo o checkpoint técnico; a reconciliação não autoriza uso global de tokens.
-- Produto PR [#231](https://github.com/EAKerber/MobiliPresenter2D/pull/231): P-TOKEN-01B/02B, aberta **DRAFT/HOLD**, head `afb80965336083209eac93e2729de77170524ee5`.
+- Produto PR [#231](https://github.com/EAKerber/MobiliPresenter2D/pull/231): P-TOKEN-01B/02B, aberta **DRAFT/HOLD**, head `afb80965336083209eac93e2729de77170524ee5`; está divergente da `main` atual (`15e1cfb`, 24 commits à frente e 4 atrás) e seus cinco checks browser seguem falhando nesse head antigo. A recuperação desses fluxos está em #234/#236, sem alterar #231.
 - Produto PR [#234](https://github.com/EAKerber/MobiliPresenter2D/pull/234): ARC-03C, aberta **DRAFT/HOLD**, base `main@15e1cfb`, head `fbd00a9628c81b4902a8c679abb7ac72e93ca549`; fonte autoral/build e `pages:check` presentes, 11 checks documentados PASS.
 - Produto PR [#236](https://github.com/EAKerber/MobiliPresenter2D/pull/236): cinco ajustes de testes browser, **DRAFT/HOLD**, empilhada sobre #234 em `b5e06ff030e268fd934835fde1a6b99244908efc`. Diff de cinco arquivos; os cinco fluxos de browser V5 local e o gate de assets passaram (6/6 checks). `pages:check` permanece executável pela base #234.
 - Produto PR [#235](https://github.com/EAKerber/MobiliPresenter2D/pull/235): fixture experimental do Deploy Store, fechada **sem merge** após readback/hash V5 e negação anônima.
