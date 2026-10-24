@@ -155,3 +155,8 @@ Em Production `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, viewport 1280×72
 ### VIS-002 — foco nos cartões de economia em Production (24/10/2026)
 
 Tab nos seis cartões de “Por que custa menos?” computou 2 px/offset 3 px nos temas claro e escuro. Em tema claro, `#6E512E` sobre `#25231F` mediu 2,15:1; em escuro, `#D8BC7C` sobre `#25231F` mediu 8,52:1. A amostra identifica falha de indicador de foco na superfície escura sob tema claro e diferença de largura frente à referência de 4 px. Sem decisão de correção ou implementação; restante das rotas/estados segue pendente. [Evidência](../evidence/runtime/how-it-works-economy-focus-six-cards-production-2026-10-24.md).
+
+
+### Como funciona — movimento reduzido e animações (24/10/2026)
+
+A folha global e a CSS da rota declaram regras para `prefers-reduced-motion: reduce` no commit Production. No snapshot, a preferência retornou `false`; nenhum nome de animação CSS apareceu nos elementos/pseudo-elementos. Como a API de animações não estava disponível neste escopo, transições e o comportamento com redução ativa seguem não verificados. [Evidência](../evidence/runtime/how-it-works-motion-css-runtime-snapshot-production-2026-10-24.md).
