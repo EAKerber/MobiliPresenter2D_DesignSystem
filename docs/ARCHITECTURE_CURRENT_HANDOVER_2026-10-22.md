@@ -1,5 +1,25 @@
 # HANDOVER ATUAL — MobiliPresenter2D + Design System
 
+## Checkpoint atualizado — 24/10/2026
+
+**Estimativa global:** permanece em aproximadamente **22%** conforme o plano canônico. A matriz V5 e o OIDC ganharam evidência técnica, mas as mudanças relacionadas continuam em PRs Draft/stacked; produto `main` ainda é `15e1cfb4866886649adbcd00fef9bef5e5843fda`. Não contar branches ou previews como integração publicada.
+
+### Estado revalidado
+
+- Design System `main`: `ae1be563d298ae4a6d384936cbb2d9d05ee449ae`. Os resultados VIS-002C × P-TOKEN-02B v0.2 abaixo continuam sendo o checkpoint técnico; a reconciliação não autoriza uso global de tokens.
+- Produto PR [#231](https://github.com/EAKerber/MobiliPresenter2D/pull/231): P-TOKEN-01B/02B, aberta **DRAFT/HOLD**, head `afb80965336083209eac93e2729de77170524ee5`.
+- Produto PR [#234](https://github.com/EAKerber/MobiliPresenter2D/pull/234): ARC-03C, aberta **DRAFT/HOLD**, base `main@15e1cfb`, head `fbd00a9628c81b4902a8c679abb7ac72e93ca549`; fonte autoral/build e `pages:check` presentes, 11 checks documentados PASS.
+- Produto PR [#236](https://github.com/EAKerber/MobiliPresenter2D/pull/236): cinco ajustes de testes browser, **DRAFT/HOLD**, empilhada sobre #234 em `b5e06ff030e268fd934835fde1a6b99244908efc`. Diff de cinco arquivos; os cinco fluxos de browser V5 local e o gate de assets passaram (6/6 checks). `pages:check` permanece executável pela base #234.
+- Produto PR [#235](https://github.com/EAKerber/MobiliPresenter2D/pull/235): fixture experimental do Deploy Store, fechada **sem merge** após readback/hash V5 e negação anônima.
+- A issue [#232](https://github.com/EAKerber/MobiliPresenter2D/issues/232) permanece **aberta**. OIDC autenticado separado passou duas execuções integrais ([#40039686284](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40039686284) e [#40039882104](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40039882104)): Mobile/PiP, Keyboard, Flow, Summary/Preços e Stone 5/5; Admin negado, logout e replay negado. Os workflows antigos ainda precisam chegar à `main` com a separação entre fixture local positiva e teste anônimo negativo.
+
+### Próximo passo e limites
+
+Revisar a dependência #234 → #236 e a CI do head atual. Manter #231, #234 e #236 em DRAFT/HOLD; não integrar ou publicar sem decisão explícita. Não abrir outro preview para reproduzir os gates já aprovados, não reusar convites antigos e não declarar #232 resolvida enquanto a cobertura migrada não estiver integrada e lida de volta na `main`.
+
+---
+
+
 > **VIS-002C × P-TOKEN-02B v0.2 — RECONCILIAÇÃO TÉCNICA PASS (23/10):**
 > [Actions #39894163198 SUCCESS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39894163198)
 > na branch isolada produto [`integration/vis002c-p-token-02b-v2-20261023@34a305c`](https://github.com/EAKerber/MobiliPresenter2D/tree/integration/vis002c-p-token-02b-v2-20261023).
