@@ -1,0 +1,21 @@
+# Limite de cobertura DS-05A no fixture autenticado — 24/10/2026
+
+## Fonte
+
+- Repositório do produto: [PR #238](https://github.com/EAKerber/MobiliPresenter2D/pull/238), ainda DRAFT.
+- Workflow autenticado reportado como SUCCESS: [run #40075575871](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40075575871), attempt 4.
+- Arquivo de teste observado no head da PR: `tests/ci/config-auth-isolated-browser.mjs`, blob `6eec281f658ba81125ad6131194bf759805c508e`.
+
+## O que o teste comprova
+
+O fixture valida o host e o papel PostgreSQL limitado, cria um grant temporário de cinco minutos, resgata a sessão pelo endpoint real, usa o cookie HttpOnly para abrir `/config/`, aguarda o bootstrap e confirma `.workspace` e o perfil de layout. Ao final, revoga o grant e confirma que a sessão revogada volta a `/access/`.
+
+Os pontos relevantes estão nas linhas 75–77 (workspace/bootstrap) e 78–82 (negação de Admin).
+
+## Limite para DS-05A
+
+Este run prova que o fixture autenticado alcança e inicializa o Configurador no host de staging. O teste não verifica os nós do contador de módulos nem da barra de preço/próxima etapa, e não mede o detector genérico. Ele consulta `/api/admin-bootstrap` esperando 401/403; portanto, não abre nem monta as opções do Admin. O resultado AUTHENTICATED_FIXTURE_PASS da PR não equivale a DS-05A concluído.
+
+## Próximo passo seguro
+
+Reutilizar o fixture de Config para inspecionar e registrar o DOM real dos dois alvos do Configurador, caso esse incremento seja aprovado no escopo do PR. Para as opções do Admin, é necessária uma sessão administrativa de teste controlada ou um fixture separado explicitamente autorizado; não ampliar o papel `access_ci_fixture` nem suas permissões por inferência.
