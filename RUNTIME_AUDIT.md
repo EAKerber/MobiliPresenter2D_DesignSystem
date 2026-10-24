@@ -325,3 +325,8 @@ Na Landing pública de Production `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf
 ## Link “Pular para o conteúdo” em About — foco no destino em Production (24/10/2026)
 
 Na página pública `/about/` do deploy Production READY `6adc221479c773577ed45e23`, produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, o primeiro Tab revelou e focou o link “Pular para o conteúdo”. Ao pressionar Enter, a URL mudou para `/about/#main`, mas o elemento ativo terminou no `body`; `main#main` existe, mas não recebeu foco. Na leitura DOM, `main.tabIndex` retornou -1 sem atributo `tabindex` explícito e `scrollY` ficou em 0. A observação foi feita anonimamente, em viewport móvel 390×844, tema escuro e movimento reduzido. A aparência do anel já observada em Production continua fora da referência VIS-002; o CSS da PR #239 trata essa aparência, não a transferência de foco. Evidência e limites: [About skip link em Production](evidence/runtime/about-skip-link-production-focus-2026-10-24.md). É uma passagem sem teste de leitor de tela, outros navegadores, temas ou larguras. Nenhum código ou deploy foi alterado.
+
+
+## Landing e Como funciona — link de salto em Production (24/10/2026)
+
+Em `/` e `/how-it-works/`, no deploy READY `6adc221479c773577ed45e23`, não havia `.skip-link` nem `a[href="#main"]`; o elemento `main` não tinha id e o primeiro Tab focou a marca. Em Como funciona, a CTA `#passos` é navegação interna de seção, não salto ao conteúdo. O foco da marca computou anel de 2.67 px/offset 2.67 px: claro `#6E512E`, escuro `#D8BC7C`. VIS-002 registra 4 px/offset 3 px, claro `#8B6A40`, escuro `#D8BC7C`. Evidência e escopo: [Landing e Como funciona](evidence/runtime/public-skip-navigation-focus-2026-10-24.md). Uma amostra por rota; nenhuma alteração de produto.
