@@ -1,0 +1,820 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/config/index.html",
+      "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa"
+    }
+  ],
+  "reviewScope": "Manual classification of the static configurator entrypoint. Separates UI/control copy from commercial and authored policy/product copy that needs canonical ownership review; inline scripts and runtime strings are not included.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 45,
+    "classifiedLocalizableOccurrences": 37,
+    "deferredCommercialContentOccurrences": 8,
+    "distinctValues": 41
+  },
+  "limitations": [
+    "Inventory only: product HTML/runtime were not changed and no translation bundle was created.",
+    "Eight policy/product-facing strings are deferred until canonical V5/catalog ownership is confirmed; they are not presumed to be UI copy.",
+    "The count label is split across HTML text nodes; future extraction must support locale-specific number grammar and ordering.",
+    "Inline scripts, generated DOM messages, runtime module content, V5 values, and server responses remain outside this batch."
+  ],
+  "entries": [
+    {
+      "semanticKey": "config.meta.description",
+      "currentText": "Visualizador interativo dos módulos da cozinha Casa em Módulos.",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 20
+      },
+      "consumer": "configurator metadata description",
+      "owner": "configurator metadata",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "config.document.title",
+      "currentText": "Casa em Módulos — Configurador",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 24
+      },
+      "consumer": "browser document title",
+      "owner": "configurator metadata",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "brand.config.logo.alt",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 47
+      },
+      "consumer": "brand logo alternative text",
+      "owner": "brand identity image",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "brand.config.header.name",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 49
+      },
+      "consumer": "brand name in configurator header",
+      "owner": "brand identity",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "config.header.title",
+      "currentText": "Monte sua cozinha por módulos",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 50
+      },
+      "consumer": "configurator header heading",
+      "owner": "configurator header",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.reset.accessible",
+      "currentText": "Restaurar",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 55
+      },
+      "consumer": "reset action accessible name",
+      "owner": "configurator header controls",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.reset.label",
+      "currentText": "Recomeçar",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 57
+      },
+      "consumer": "reset action label",
+      "owner": "configurator header controls",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.menu.open",
+      "currentText": "Abrir menu",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 59
+      },
+      "consumer": "menu toggle accessible name",
+      "owner": "shared public navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.primary.label",
+      "currentText": "Menu do site",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 60
+      },
+      "consumer": "primary navigation accessible name",
+      "owner": "shared public navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.scene.accessible",
+      "currentText": "Visualização da cozinha",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 73
+      },
+      "consumer": "kitchen scene accessible name",
+      "owner": "configurator scene",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.scene.controls.accessible",
+      "currentText": "Controles da mini-cena",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 74
+      },
+      "consumer": "mini scene controls accessible name",
+      "owner": "configurator scene controls",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.scene.release.accessible",
+      "currentText": "Liberar cena",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 75
+      },
+      "consumer": "release scene control accessible name",
+      "owner": "configurator scene controls",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.scene.release.title",
+      "currentText": "Liberar cena",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 75
+      },
+      "consumer": "release scene tooltip",
+      "owner": "configurator scene controls",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.scene.transparency.accessible",
+      "currentText": "Alternar transparência",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 76
+      },
+      "consumer": "transparency toggle accessible name",
+      "owner": "configurator scene controls",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.scene.transparency.title",
+      "currentText": "Alternar transparência",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 76
+      },
+      "consumer": "transparency toggle tooltip",
+      "owner": "configurator scene controls",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.scene.resize.accessible",
+      "currentText": "Alterar tamanho da mini-cena",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 77
+      },
+      "consumer": "mini scene resize accessible name",
+      "owner": "configurator scene controls",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.scene.resize.title",
+      "currentText": "Alterar tamanho",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 77
+      },
+      "consumer": "mini scene resize tooltip",
+      "owner": "configurator scene controls",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.scene.empty.alt",
+      "currentText": "Cenário da cozinha sem os módulos",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 81
+      },
+      "consumer": "scene empty-state illustration alternative text",
+      "owner": "configurator scene",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.scene.modules.accessible",
+      "currentText": "Módulos selecionáveis na cena",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 92
+      },
+      "consumer": "selectable scene modules accessible name",
+      "owner": "configurator scene",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.scene.count.separator",
+      "currentText": "de",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 100
+      },
+      "consumer": "visible module count separator fragment",
+      "owner": "configurator scene summary",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.scene.count.label",
+      "currentText": "módulos visíveis",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 100
+      },
+      "consumer": "visible module count label",
+      "owner": "configurator scene summary",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.scene.selection.instruction",
+      "currentText": "Selecione um módulo na cena para abrir sua ficha.",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 102
+      },
+      "consumer": "scene module selection instruction",
+      "owner": "configurator scene",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.steps.navigation.accessible",
+      "currentText": "Etapas da configuração",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 109
+      },
+      "consumer": "configuration steps navigation accessible name",
+      "owner": "configurator navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.scene.pin.accessible",
+      "currentText": "Fixar cena durante a configuração",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 110
+      },
+      "consumer": "pin scene toggle accessible name",
+      "owner": "configurator scene controls",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.scene.pin.label",
+      "currentText": "⌖ Fixar cena",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 110
+      },
+      "consumer": "pin scene visible label",
+      "owner": "configurator scene controls",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.modules.title",
+      "currentText": "Módulos",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 116
+      },
+      "consumer": "module selection heading",
+      "owner": "configurator module step",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.modules.instruction",
+      "currentText": "Inclua apenas o que faz sentido para o seu ambiente.",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 117
+      },
+      "consumer": "module selection instruction",
+      "owner": "configurator module step",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.details.selected.accessible",
+      "currentText": "Detalhes do módulo selecionado",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 122
+      },
+      "consumer": "selected module details accessible name",
+      "owner": "configurator module details",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.details.title",
+      "currentText": "Detalhes do módulo",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 124
+      },
+      "consumer": "module details heading",
+      "owner": "configurator module details",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.details.empty",
+      "currentText": "Selecione um módulo na cena ou na lista para consultar medidas, componentes e acabamentos.",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 125
+      },
+      "consumer": "module details empty-state instruction",
+      "owner": "configurator module details",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.details.panel.accessible",
+      "currentText": "Detalhes do módulo",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 127
+      },
+      "consumer": "module detail panel accessible name",
+      "owner": "configurator module details",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.modules.list.accessible",
+      "currentText": "Lista de módulos",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 129
+      },
+      "consumer": "module list accessible name",
+      "owner": "configurator module selection",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.finishes.group.accessible",
+      "currentText": "Acabamentos",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 135
+      },
+      "consumer": "finish options accessible name",
+      "owner": "configurator finish step",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "currentText": "Uma cor e um puxador para a composição. A caixaria permanece clara.",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 142
+      },
+      "consumer": "finish policy copy",
+      "owner": "commercial/authored configurator content",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-commercial-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Do not extract into an interface locale bundle until canonical V5/catalog ownership and policy semantics are confirmed."
+      ]
+    },
+    {
+      "currentText": "Escolha global; o valor é rateado somente nas frentes aplicáveis de cada módulo.",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 156
+      },
+      "consumer": "global finish pricing policy copy",
+      "owner": "commercial pricing content",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-commercial-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Do not extract into an interface locale bundle until canonical V5/catalog ownership and policy semantics are confirmed."
+      ]
+    },
+    {
+      "currentText": "Uma escolha global, aplicada uma vez à composição.",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 163
+      },
+      "consumer": "global stone choice policy copy",
+      "owner": "commercial configurator content",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-commercial-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Do not extract into an interface locale bundle until canonical V5/catalog ownership and policy semantics are confirmed."
+      ]
+    },
+    {
+      "currentText": "Acabamento global para a composição.",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 174
+      },
+      "consumer": "global finish policy label",
+      "owner": "commercial configurator content",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-commercial-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Do not extract into an interface locale bundle until canonical V5/catalog ownership and policy semantics are confirmed."
+      ]
+    },
+    {
+      "currentText": "Rodapé de pedra",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 174
+      },
+      "consumer": "stone service name",
+      "owner": "catalog or service data",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-commercial-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Do not extract into an interface locale bundle until canonical V5/catalog ownership and policy semantics are confirmed."
+      ]
+    },
+    {
+      "semanticKey": "config.services.title",
+      "currentText": "Serviços",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 186
+      },
+      "consumer": "services step heading",
+      "owner": "configurator services step",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "currentText": "Serviços globais que impactam uma vez o conjunto.",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 186
+      },
+      "consumer": "global services pricing policy copy",
+      "owner": "commercial pricing content",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-commercial-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Do not extract into an interface locale bundle until canonical V5/catalog ownership and policy semantics are confirmed."
+      ]
+    },
+    {
+      "currentText": "Iluminação embutida",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 192
+      },
+      "consumer": "lighting service name",
+      "owner": "catalog or service data",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-commercial-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Do not extract into an interface locale bundle until canonical V5/catalog ownership and policy semantics are confirmed."
+      ]
+    },
+    {
+      "currentText": "Serviço global que realça a bancada e requer a lateral da geladeira e o aéreo da pia.",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 192
+      },
+      "consumer": "lighting service description",
+      "owner": "catalog or service data",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-commercial-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Do not extract into an interface locale bundle until canonical V5/catalog ownership and policy semantics are confirmed."
+      ]
+    },
+    {
+      "semanticKey": "config.summary.instruction",
+      "currentText": "Revise antes de solicitar a proposta.",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 202
+      },
+      "consumer": "summary step instruction",
+      "owner": "configurator summary step",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.summary.title",
+      "currentText": "Sua composição",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 202
+      },
+      "consumer": "configuration summary heading",
+      "owner": "configurator summary step",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "config.navigation.continue.finishes",
+      "currentText": "Continuar para acabamentos →",
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "line": 213
+      },
+      "consumer": "continue to finishes action",
+      "owner": "configurator navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    }
+  ]
+}
