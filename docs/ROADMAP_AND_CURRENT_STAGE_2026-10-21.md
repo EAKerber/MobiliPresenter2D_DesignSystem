@@ -1,5 +1,17 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+## Revalidação CI-BASELINE-01 — 24/10/2026, 23:43 UTC
+
+- Produto PR [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238) avançou para o head `ec4f64b2d1fff63d028f631a979d4eeda2ef847b`. Os Deploy Previews principal e isolado estão SUCCESS; o contrato da fixture V5 e o gate anônimo passaram no run [#40143867157](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40143867157).
+- O gate autenticado [#40143867153](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40143867153) falhou em `ds05a-finishes-estimate-readiness`. O diagnóstico sanitizado mostra o painel de Acabamentos e a estimativa no DOM, mas sem área renderizada, porque `.workspace` está oculto. As suítes funcionais foram ignoradas após a falha.
+- A diferença de contexto agora está identificada no código: o gate de Config usa `CI_STAGING_ORIGIN`, ainda apontado ao host estável, enquanto a fixture V5 é semeada no Deploy Preview via `getDeployStore()`. A função de leitura usa `getStore()` em Production e `getDeployStore()` em Deploy Preview. Portanto, o gate está lendo outro store; o log não registrou o status HTTP exato do endpoint, então a falha específica da resposta ainda não é afirmada.
+- Próximo ajuste de CI, sem alterar `app/` ou o runtime: usar o host exato do Deploy Preview #238 também no gate autenticado; validar o marcador e o branch antes de criar grant; permitir no validador somente esse preview específico e adicionar casos que continuem negando outros previews. Reexecutar o gate e as cinco suítes nesse mesmo contexto.
+- Issue #232 permanece aberta. Esta execução não validou os cinco fluxos funcionais no staging. O registro positivo anterior em `abc33d2` permanece histórico e não substitui a falha observada no head atual.
+
+---
+
+
+
 ## Revalidação de execução — 24/10/2026
 
 - O inventário visual foi regenerado em `visual-inventory.json` a partir de todos os oito HTML e oito CSS do produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`; a atualização mantém o escopo estático e não certifica o DOM/runtime.
