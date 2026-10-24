@@ -23,3 +23,11 @@ No hotspot focado, os dois temas computaram:
 O indicador estava presente visualmente na amostra, mas a borda atravessa uma fotografia com luminância variável. A API de inspeção usada não expôs `document.createElement`, impedindo amostragem de pixels da imagem para calcular contraste; por isso não registro uma razão numérica nem afirmo conformidade. As capturas foram inspecionadas durante a sessão e não foram persistidas.
 
 A largura computada de 2 px também não foi homologada contra a referência geométrica VIS-002 de 4 px; ainda falta decidir se as pistas alternativas do hotspot (borda, preenchimento e marcador) satisfazem o critério em fundos claros e escuros. Isso amplia a evidência do módulo 02 em dois temas, sem alterar CSS, tokens, produto ou decisão canônica.
+
+## Complemento móvel — 390 × 844
+
+- Repeti em `/viewer/` no viewport 390 × 844 (DPR 1), temas Claro e Escuro, sem login.
+- Tab levou ao hotspot 02 com `:focus-visible` verdadeiro nos dois temas. A borda permaneceu em 2 px e a mesma cor computada aproximada `#DDC48C`; o marcador “02” permaneceu visível.
+- O alvo ficou em x=129, y=735, 56 × 57 px, dentro da cena (x=22, y=608, 331 × 221 px); o marcador ficou em x=144, y=701, 26 × 26 px. Ambos couberam na cena, sem recorte observado.
+- `documentElement.scrollWidth` e `clientWidth` foram ambos 375 px; sem overflow horizontal nesta amostra. O Módulo 01 permaneceu selecionado durante a passagem.
+- Ao final restaurei o tema Claro, removi o viewport override e fechei a aba. Capturas foram inspecionadas mas não persistidas. Esta observação não mede contraste da borda contra os pixels da fotografia e não prova comportamento em outros tamanhos/dispositivos.
