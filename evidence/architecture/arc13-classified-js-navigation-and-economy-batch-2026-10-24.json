@@ -1,0 +1,536 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/landing/header-menu.js",
+      "blobSha": "ff6afb51007e659bffd573fa2d6a83fd5df8db51",
+      "candidateOccurrences": 13
+    },
+    {
+      "file": "app/how-it-works/how-it-works.js",
+      "blobSha": "7f4cde0eae64f2b79c49d891e35aa94d6017f694",
+      "candidateOccurrences": 15
+    }
+  ],
+  "reviewScope": "Manual classification of all lexical candidates in the public header-menu runtime and public how-it-works dynamic economy card definitions. Visible accessible labels and editorial explanation copy are localizable; DOM/ARIA/event/selector ids remain code.",
+  "totals": {
+    "sourceFilesReviewed": 2,
+    "candidateOccurrencesReviewed": 28,
+    "classifiedLocalizableOccurrences": 14,
+    "excludedNonlocalizableOccurrences": 14,
+    "distinctCandidateTexts": 25
+  },
+  "limitations": [
+    "Inventory only; no product runtime or bundle was changed.",
+    "The six explanation card titles/bodies are editorial UI content, not V5 catalog data.",
+    "Technical DOM/event/ARIA names are excluded even when the lexical scanner flags them."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/landing/header-menu.js",
+        "blobSha": "ff6afb51007e659bffd573fa2d6a83fd5df8db51",
+        "line": 2
+      },
+      "consumer": "strict-mode directive",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive"
+      ]
+    },
+    {
+      "currentText": "menu-open",
+      "source": {
+        "file": "app/landing/header-menu.js",
+        "blobSha": "ff6afb51007e659bffd573fa2d6a83fd5df8db51",
+        "line": 7
+      },
+      "consumer": "menu state id",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "menu-open CSS state identifier"
+      ]
+    },
+    {
+      "currentText": "aria-expanded",
+      "source": {
+        "file": "app/landing/header-menu.js",
+        "blobSha": "ff6afb51007e659bffd573fa2d6a83fd5df8db51",
+        "line": 8
+      },
+      "consumer": "ARIA attribute id",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "aria-expanded attribute id"
+      ]
+    },
+    {
+      "semanticKey": "navigation.menu.open",
+      "currentText": "Abrir menu",
+      "source": {
+        "file": "app/landing/header-menu.js",
+        "blobSha": "ff6afb51007e659bffd573fa2d6a83fd5df8db51",
+        "line": 9
+      },
+      "consumer": "menu toggle accessible label",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "currentText": "aria-label",
+      "source": {
+        "file": "app/landing/header-menu.js",
+        "blobSha": "ff6afb51007e659bffd573fa2d6a83fd5df8db51",
+        "line": 9
+      },
+      "consumer": "ARIA attribute id",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "aria-label attribute id"
+      ]
+    },
+    {
+      "semanticKey": "navigation.menu.close",
+      "currentText": "Fechar menu",
+      "source": {
+        "file": "app/landing/header-menu.js",
+        "blobSha": "ff6afb51007e659bffd573fa2d6a83fd5df8db51",
+        "line": 9
+      },
+      "consumer": "menu toggle accessible label",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "currentText": "click",
+      "source": {
+        "file": "app/landing/header-menu.js",
+        "blobSha": "ff6afb51007e659bffd573fa2d6a83fd5df8db51",
+        "line": 12
+      },
+      "consumer": "DOM event id",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "click event id"
+      ]
+    },
+    {
+      "currentText": "aria-expanded",
+      "source": {
+        "file": "app/landing/header-menu.js",
+        "blobSha": "ff6afb51007e659bffd573fa2d6a83fd5df8db51",
+        "line": 13
+      },
+      "consumer": "ARIA attribute id",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "aria-expanded attribute id"
+      ]
+    },
+    {
+      "currentText": "true",
+      "source": {
+        "file": "app/landing/header-menu.js",
+        "blobSha": "ff6afb51007e659bffd573fa2d6a83fd5df8db51",
+        "line": 13
+      },
+      "consumer": "boolean attribute value",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "true state value"
+      ]
+    },
+    {
+      "currentText": "a[href]",
+      "source": {
+        "file": "app/landing/header-menu.js",
+        "blobSha": "ff6afb51007e659bffd573fa2d6a83fd5df8db51",
+        "line": 15
+      },
+      "consumer": "DOM selector",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "anchor selector"
+      ]
+    },
+    {
+      "currentText": "keydown",
+      "source": {
+        "file": "app/landing/header-menu.js",
+        "blobSha": "ff6afb51007e659bffd573fa2d6a83fd5df8db51",
+        "line": 18
+      },
+      "consumer": "DOM event id",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "keydown event id"
+      ]
+    },
+    {
+      "currentText": "Escape",
+      "source": {
+        "file": "app/landing/header-menu.js",
+        "blobSha": "ff6afb51007e659bffd573fa2d6a83fd5df8db51",
+        "line": 19
+      },
+      "consumer": "keyboard key id",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Escape key id"
+      ]
+    },
+    {
+      "currentText": "true",
+      "source": {
+        "file": "app/landing/header-menu.js",
+        "blobSha": "ff6afb51007e659bffd573fa2d6a83fd5df8db51",
+        "line": 19
+      },
+      "consumer": "boolean attribute value",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "true state value"
+      ]
+    },
+    {
+      "semanticKey": "howItWorks.economy.scale.title",
+      "currentText": "Compra em escala",
+      "source": {
+        "file": "app/how-it-works/how-it-works.js",
+        "blobSha": "7f4cde0eae64f2b79c49d891e35aa94d6017f694",
+        "line": 4
+      },
+      "consumer": "economy explanation card title",
+      "owner": "public how-it-works economy explanations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.scale.body",
+      "currentText": "Concentrar a compra de chapas, ferragens e outros insumos em mais pedidos ajuda a negociar com fornecedores e programar as aquisições.",
+      "source": {
+        "file": "app/how-it-works/how-it-works.js",
+        "blobSha": "7f4cde0eae64f2b79c49d891e35aa94d6017f694",
+        "line": 4
+      },
+      "consumer": "economy explanation card body",
+      "owner": "public how-it-works economy explanations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.collective.title",
+      "currentText": "Compras coletivas",
+      "source": {
+        "file": "app/how-it-works/how-it-works.js",
+        "blobSha": "7f4cde0eae64f2b79c49d891e35aa94d6017f694",
+        "line": 5
+      },
+      "consumer": "economy explanation card title",
+      "owner": "public how-it-works economy explanations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.collective.body",
+      "currentText": "Diferentes apartamentos compartilham uma plataforma técnica, sem exigir que todos escolham a mesma composição. Materiais e processos comuns podem ser planejados juntos.",
+      "source": {
+        "file": "app/how-it-works/how-it-works.js",
+        "blobSha": "7f4cde0eae64f2b79c49d891e35aa94d6017f694",
+        "line": 5
+      },
+      "consumer": "economy explanation card body",
+      "owner": "public how-it-works economy explanations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.plannedProduction.title",
+      "currentText": "Produção planejada",
+      "source": {
+        "file": "app/how-it-works/how-it-works.js",
+        "blobSha": "7f4cde0eae64f2b79c49d891e35aa94d6017f694",
+        "line": 6
+      },
+      "consumer": "economy explanation card title",
+      "owner": "public how-it-works economy explanations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.plannedProduction.body",
+      "currentText": "Projetos individuais exigem programação de máquinas, detalhamento e planos de corte próprios. Os módulos previamente desenvolvidos permitem organizar etapas repetíveis.",
+      "source": {
+        "file": "app/how-it-works/how-it-works.js",
+        "blobSha": "7f4cde0eae64f2b79c49d891e35aa94d6017f694",
+        "line": 6
+      },
+      "consumer": "economy explanation card body",
+      "owner": "public how-it-works economy explanations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.materialUse.title",
+      "currentText": "Aproveitamento de material",
+      "source": {
+        "file": "app/how-it-works/how-it-works.js",
+        "blobSha": "7f4cde0eae64f2b79c49d891e35aa94d6017f694",
+        "line": 7
+      },
+      "consumer": "economy explanation card title",
+      "owner": "public how-it-works economy explanations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.materialUse.body",
+      "currentText": "Planos de corte organizados ajudam a distribuir melhor as peças nas chapas e reduzir sobras, sem diminuir a qualidade dos materiais.",
+      "source": {
+        "file": "app/how-it-works/how-it-works.js",
+        "blobSha": "7f4cde0eae64f2b79c49d891e35aa94d6017f694",
+        "line": 7
+      },
+      "consumer": "economy explanation card body",
+      "owner": "public how-it-works economy explanations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.prestudiedEngineering.title",
+      "currentText": "Engenharia já estudada",
+      "source": {
+        "file": "app/how-it-works/how-it-works.js",
+        "blobSha": "7f4cde0eae64f2b79c49d891e35aa94d6017f694",
+        "line": 8
+      },
+      "consumer": "economy explanation card title",
+      "owner": "public how-it-works economy explanations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.prestudiedEngineering.body",
+      "currentText": "Na marcenaria individual, cada projeto demanda uma parcela maior de trabalho técnico desde o início. Aqui, as soluções-base são estudadas para o empreendimento e reaproveitadas em diferentes apartamentos.",
+      "source": {
+        "file": "app/how-it-works/how-it-works.js",
+        "blobSha": "7f4cde0eae64f2b79c49d891e35aa94d6017f694",
+        "line": 8
+      },
+      "consumer": "economy explanation card body",
+      "owner": "public how-it-works economy explanations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.rework.title",
+      "currentText": "Menos retrabalho",
+      "source": {
+        "file": "app/how-it-works/how-it-works.js",
+        "blobSha": "7f4cde0eae64f2b79c49d891e35aa94d6017f694",
+        "line": 9
+      },
+      "consumer": "economy explanation card title",
+      "owner": "public how-it-works economy explanations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.rework.body",
+      "currentText": "Padrões, furações e conferências previamente definidos permitem repetir soluções verificadas e reduzir ajustes durante a fabricação.",
+      "source": {
+        "file": "app/how-it-works/how-it-works.js",
+        "blobSha": "7f4cde0eae64f2b79c49d891e35aa94d6017f694",
+        "line": 9
+      },
+      "consumer": "economy explanation card body",
+      "owner": "public how-it-works economy explanations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "currentText": "aria-expanded",
+      "source": {
+        "file": "app/how-it-works/how-it-works.js",
+        "blobSha": "7f4cde0eae64f2b79c49d891e35aa94d6017f694",
+        "line": 14
+      },
+      "consumer": "ARIA attribute id",
+      "owner": "public how-it-works economy details",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "aria-expanded attribute id"
+      ]
+    },
+    {
+      "currentText": "h3",
+      "source": {
+        "file": "app/how-it-works/how-it-works.js",
+        "blobSha": "7f4cde0eae64f2b79c49d891e35aa94d6017f694",
+        "line": 14
+      },
+      "consumer": "DOM selector",
+      "owner": "public how-it-works economy details",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "h3 element selector"
+      ]
+    },
+    {
+      "currentText": "resize",
+      "source": {
+        "file": "app/how-it-works/how-it-works.js",
+        "blobSha": "7f4cde0eae64f2b79c49d891e35aa94d6017f694",
+        "line": 15
+      },
+      "consumer": "DOM control id",
+      "owner": "public how-it-works economy details",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "resize control id"
+      ]
+    }
+  ]
+}

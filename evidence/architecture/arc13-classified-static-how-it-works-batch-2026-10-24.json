@@ -1,0 +1,3955 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/how-it-works/index.html",
+      "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c"
+    }
+  ],
+  "reviewScope": "Manual route-level classification of all static HTML lexical candidates on /how-it-works/, segmented by page section and consumer. UI/editorial copy and accessibility labels are classified for localization; product specifications and time-bounded launch offer content are deferred as commercial data.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 229,
+    "classifiedLocalizableOccurrences": 225,
+    "deferredCommercialContentOccurrences": 4,
+    "distinctValues": 214
+  },
+  "limitations": [
+    "Inventory only: product HTML/runtime were not changed and no translation bundle was created.",
+    "Semantic keys are proposed inventory identifiers derived from page section and source copy; steward review is required before resource extraction or runtime use.",
+    "Product specification lines (MDF thickness and finish) and launch-duration/pricing campaign copy remain deferred pending canonical content ownership.",
+    "The batch covers static HTML only; runtime/inline strings and V5-backed content remain outside scope."
+  ],
+  "entries": [
+    {
+      "semanticKey": "howItWorks.metadata.entenda-como-os-modulos-sao-planejados-combinado",
+      "currentText": "Entenda como os módulos são planejados, combinados, produzidos e entregues para o seu espaço.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 13
+      },
+      "consumer": "metadata accessible name",
+      "owner": "public how-it-works metadata",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.metadata.como-funciona-casa-em-modulos",
+      "currentText": "Como funciona | Casa em Módulos",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 14
+      },
+      "consumer": "metadata static page copy",
+      "owner": "public how-it-works metadata",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "howItWorks.hero.casa-em-modulos",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 22
+      },
+      "consumer": "hero image alternative text",
+      "owner": "public how-it-works hero",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "howItWorks.hero.abrir-menu",
+      "currentText": "Abrir menu",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 22
+      },
+      "consumer": "hero accessible name",
+      "owner": "public how-it-works hero",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.hero.casa-em-modulos-inicio",
+      "currentText": "Casa em Módulos, início",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 22
+      },
+      "consumer": "hero accessible name",
+      "owner": "public how-it-works hero",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "howItWorks.hero.fale-conosco-pelo-whatsapp",
+      "currentText": "Fale conosco pelo WhatsApp",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 22
+      },
+      "consumer": "hero accessible name",
+      "owner": "public how-it-works hero",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.hero.navegacao-principal",
+      "currentText": "Navegação principal",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 22
+      },
+      "consumer": "hero accessible name",
+      "owner": "public how-it-works hero",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.hero.ambientes",
+      "currentText": "Ambientes",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 22
+      },
+      "consumer": "hero static page copy",
+      "owner": "public how-it-works hero",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.hero.como-funciona",
+      "currentText": "Como funciona",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 22
+      },
+      "consumer": "hero static page copy",
+      "owner": "public how-it-works hero",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.hero.fale-conosco",
+      "currentText": "Fale conosco",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 22
+      },
+      "consumer": "hero static page copy",
+      "owner": "public how-it-works hero",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.hero.quem-somos",
+      "currentText": "Quem somos",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 22
+      },
+      "consumer": "hero static page copy",
+      "owner": "public how-it-works hero",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.hero.como-funciona.2",
+      "currentText": "Como funciona",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 27
+      },
+      "consumer": "hero static page copy",
+      "owner": "public how-it-works hero",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.hero.a-evolucao-do-movel",
+      "currentText": "A evolução do móvel",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 28
+      },
+      "consumer": "hero static page copy",
+      "owner": "public how-it-works hero",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.hero.sob-medida",
+      "currentText": "sob medida.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 28
+      },
+      "consumer": "hero static page copy",
+      "owner": "public how-it-works hero",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.hero.qualidade-inteligencia-e-valores-acessiveis-para",
+      "currentText": "Qualidade, inteligência e valores acessíveis para você montar a casa do seu jeito.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 29
+      },
+      "consumer": "hero static page copy",
+      "owner": "public how-it-works hero",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.hero.para-quem-pesquisa-compara-e-quer-aproveitar",
+      "currentText": "Para quem pesquisa, compara e quer aproveitar melhor o espaço e o investimento.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 30
+      },
+      "consumer": "hero static page copy",
+      "owner": "public how-it-works hero",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.hero.veja-como-funciona",
+      "currentText": "Veja como funciona",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 31
+      },
+      "consumer": "hero static page copy",
+      "owner": "public how-it-works hero",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.hero.render-ilustrativo-de-sala-integrada-a-cozinha",
+      "currentText": "Render ilustrativo de sala integrada à cozinha, em tons de madeira e luz acolhedora",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 34
+      },
+      "consumer": "hero image alternative text",
+      "owner": "public how-it-works hero",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.video.assistir-no-youtube",
+      "currentText": "Assistir no YouTube ↗",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 39
+      },
+      "consumer": "video static page copy",
+      "owner": "public how-it-works video",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.video.conheca-a-proposta",
+      "currentText": "Conheça a proposta",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 39
+      },
+      "consumer": "video static page copy",
+      "owner": "public how-it-works video",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.video.qualidade-de-marcenaria-inteligencia-de-industri",
+      "currentText": "Qualidade de marcenaria, inteligência de indústria e liberdade para escolher no seu tempo.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 39
+      },
+      "consumer": "video static page copy",
+      "owner": "public how-it-works video",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.video.uma-nova-forma-de-pensar-sua-casa",
+      "currentText": "Uma nova forma de pensar sua casa.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 39
+      },
+      "consumer": "video static page copy",
+      "owner": "public how-it-works video",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.video.casa-em-modulos-apresentacao-institucional",
+      "currentText": "Casa em Módulos — apresentação institucional",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 40
+      },
+      "consumer": "video element title",
+      "owner": "public how-it-works video",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "howItWorks.origin.nossa-origem",
+      "currentText": "Nossa origem",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 43
+      },
+      "consumer": "origin static page copy",
+      "owner": "public how-it-works origin",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.origin.uma-nova-forma-de-pensar-o-mobiliario",
+      "currentText": "Uma nova forma de pensar o mobiliário.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 43
+      },
+      "consumer": "origin static page copy",
+      "owner": "public how-it-works origin",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.origin.como-ter-um-movel-bonito-bem-feito",
+      "currentText": "Como ter um móvel bonito, bem feito, resistente e pensado para o meu espaço… sem transformar isso em um investimento muito maior do que eu gostaria?",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 44
+      },
+      "consumer": "origin static page copy",
+      "owner": "public how-it-works origin",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.origin.foi-tentando-responder-a-essa-pergunta-que",
+      "currentText": "Foi tentando responder a essa pergunta que nasceu a Casa em Módulos.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 44
+      },
+      "consumer": "origin static page copy",
+      "owner": "public how-it-works origin",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "howItWorks.origin.mas-para-propor-uma-nova-maneira-de",
+      "currentText": "Mas para propor uma nova maneira de pensar, escolher, produzir e comprar mobiliário.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 44
+      },
+      "consumer": "origin static page copy",
+      "owner": "public how-it-works origin",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.origin.nao-para-criar-simplesmente-mais-uma-linha",
+      "currentText": "Não para criar simplesmente mais uma linha de móveis.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 44
+      },
+      "consumer": "origin static page copy",
+      "owner": "public how-it-works origin",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.origin.qualidade-de-marcenaria-inteligencia-de-industri",
+      "currentText": "Qualidade de marcenaria. Inteligência de indústria. Economia para a sua vida.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 44
+      },
+      "consumer": "origin static page copy",
+      "owner": "public how-it-works origin",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.origin.quando-chega-o-momento-de-mobiliar-um",
+      "currentText": "Quando chega o momento de mobiliar um apartamento, existe uma pergunta que quase todo mundo acaba fazendo:",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 44
+      },
+      "consumer": "origin static page copy",
+      "owner": "public how-it-works origin",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.origin.uma-maneira-que-reune-aquilo-que-existe",
+      "currentText": "Uma maneira que reúne aquilo que existe de melhor na marcenaria com aquilo que a indústria sabe fazer de melhor.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 44
+      },
+      "consumer": "origin static page copy",
+      "owner": "public how-it-works origin",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.foundations.as-fundacoes-da-casa-em-modulos",
+      "currentText": "As fundações da Casa em Módulos",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 46
+      },
+      "consumer": "foundations static page copy",
+      "owner": "public how-it-works foundations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "howItWorks.foundations.o-que-sustenta-essa-nova-forma-de",
+      "currentText": "O que sustenta essa nova forma de fazer móveis.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 46
+      },
+      "consumer": "foundations static page copy",
+      "owner": "public how-it-works foundations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.foundations.a-casa-em-modulos-nasce-dessa-ideia",
+      "currentText": "A Casa em Módulos nasce dessa ideia.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 48
+      },
+      "consumer": "foundations static page copy",
+      "owner": "public how-it-works foundations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "howItWorks.foundations.a-construcao-civil-evoluiu-os-processos-industri",
+      "currentText": "A construção civil evoluiu. Os processos industriais evoluíram. A tecnologia evoluiu. A maneira como compramos evoluiu. E acreditamos que a forma de produzir móveis também pode evoluir.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 48
+      },
+      "consumer": "foundations static page copy",
+      "owner": "public how-it-works foundations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.foundations.evoluir-a-forma-de-produzir",
+      "currentText": "Evoluir a forma de produzir",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 48
+      },
+      "consumer": "foundations static page copy",
+      "owner": "public how-it-works foundations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.foundations.uma-industria-mais-inteligente-para-tornar-a",
+      "currentText": "Uma indústria mais inteligente para tornar a qualidade acessível.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 48
+      },
+      "consumer": "foundations static page copy",
+      "owner": "public how-it-works foundations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.foundations.dar-liberdade-para-o-cliente-comprar-no",
+      "currentText": "Dar liberdade para o cliente comprar no seu tempo.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 49
+      },
+      "consumer": "foundations static page copy",
+      "owner": "public how-it-works foundations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.foundations.eficiencia-com-liberdade",
+      "currentText": "Eficiência com liberdade",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 49
+      },
+      "consumer": "foundations static page copy",
+      "owner": "public how-it-works foundations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.foundations.padronizar-processos-sem-padronizar-pessoas",
+      "currentText": "Padronizar processos sem padronizar pessoas.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 49
+      },
+      "consumer": "foundations static page copy",
+      "owner": "public how-it-works foundations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.foundations.produzir-melhor-para-custar-menos-comprar-em",
+      "currentText": "Produzir melhor para custar menos. Comprar em escala sem obrigar todos a escolherem a mesma coisa. Reduzir desperdício sem reduzir qualidade. Simplificar a compra sem simplificar o produto.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 49
+      },
+      "consumer": "foundations static page copy",
+      "owner": "public how-it-works foundations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.foundations.faz-parte-do-produto",
+      "currentText": "Faz parte do produto.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 50
+      },
+      "consumer": "foundations static page copy",
+      "owner": "public how-it-works foundations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.foundations.porque-transparencia-para-nos-nao-e-apenas",
+      "currentText": "Porque transparência, para nós, não é apenas uma forma de vender.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 50
+      },
+      "consumer": "foundations static page copy",
+      "owner": "public how-it-works foundations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.foundations.sem-letras-pequenas-sem-pegadinhas",
+      "currentText": "Sem letras pequenas. Sem pegadinhas.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 50
+      },
+      "consumer": "foundations static page copy",
+      "owner": "public how-it-works foundations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.foundations.sem-letras-pequenas-sem-pegadinhas-sem-promessas",
+      "currentText": "Sem letras pequenas. Sem pegadinhas. Sem promessas difíceis de entender.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 50
+      },
+      "consumer": "foundations static page copy",
+      "owner": "public how-it-works foundations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.foundations.transparencia-faz-parte-do-produto",
+      "currentText": "Transparência faz parte do produto",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 50
+      },
+      "consumer": "foundations static page copy",
+      "owner": "public how-it-works foundations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.foundations.voce-entende-o-que-esta-comprando-entende",
+      "currentText": "Você entende o que está comprando. Entende como foi produzido. Entende de onde vem a economia. E sabe exatamente o que vai receber.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 50
+      },
+      "consumer": "foundations static page copy",
+      "owner": "public how-it-works foundations",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.tres-formas-de-atender-necessidades-diferentes",
+      "currentText": "Três formas de atender necessidades diferentes",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 56
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.o-que-muda-em-cada-modelo",
+      "currentText": "O que muda em cada modelo?",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 57
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.as-caracteristicas-variam-conforme-produto-proje",
+      "currentText": "As características variam conforme produto, projeto e fornecedor. Veja como cada formato costuma organizar a escolha e a produção.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 58
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.moveis-prontos",
+      "currentText": "Móveis prontos",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 63
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.adaptacao",
+      "currentText": "Adaptação",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 65
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.dimensoes-e-configuracoes-da-linha",
+      "currentText": "Dimensões e configurações da linha.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 65
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.qualidade",
+      "currentText": "Qualidade",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 66
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.varia-conforme-o-produto-e-o-fabricante",
+      "currentText": "Varia conforme o produto e o fabricante.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 66
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.opcoes-oferecidas-pela-linha",
+      "currentText": "Opções oferecidas pela linha.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 67
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.personalizacao",
+      "currentText": "Personalização",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 67
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.custo",
+      "currentText": "Custo",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 68
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.varia-conforme-produto-e-configuracao",
+      "currentText": "Varia conforme produto e configuração.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 68
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.compra-por-etapas",
+      "currentText": "Compra por etapas",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 69
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.depende-da-linha-e-da-disponibilidade",
+      "currentText": "Depende da linha e da disponibilidade.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 69
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.producao",
+      "currentText": "Produção",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 70
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.producao-da-linha-do-fabricante",
+      "currentText": "Produção da linha do fabricante.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 70
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.ilustracao-conceitual-de-modulo-inferior-para-pi",
+      "currentText": "Ilustração conceitual de módulo inferior para pia e módulo aéreo, com cotas sem medidas numéricas",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 74
+      },
+      "consumer": "comparison image alternative text",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.planejados-tradicionais",
+      "currentText": "Planejados tradicionais",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 75
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.adaptacao.2",
+      "currentText": "Adaptação",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 77
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.projeto-definido-para-o-ambiente",
+      "currentText": "Projeto definido para o ambiente.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 77
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.definida-por-materiais-projeto-e-execucao",
+      "currentText": "Definida por materiais, projeto e execução.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 78
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.qualidade.2",
+      "currentText": "Qualidade",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 78
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.definida-durante-o-projeto",
+      "currentText": "Definida durante o projeto.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 79
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.personalizacao.2",
+      "currentText": "Personalização",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 79
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.custo.2",
+      "currentText": "Custo",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 80
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.varia-conforme-projeto-materiais-e-servico",
+      "currentText": "Varia conforme projeto, materiais e serviço.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 80
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.compra-por-etapas.2",
+      "currentText": "Compra por etapas",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 81
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.definida-com-o-prestador",
+      "currentText": "Definida com o prestador.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 81
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.producao.2",
+      "currentText": "Produção",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 82
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.producao-conforme-o-projeto",
+      "currentText": "Produção conforme o projeto.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 82
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.casa-em-modulos",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 87
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "howItWorks.comparison.adaptacao.3",
+      "currentText": "Adaptação",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 89
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.combinacao-de-modulos-estudados-para-o-empreendi",
+      "currentText": "Combinação de módulos estudados para o empreendimento.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 89
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.padrao-de-marcenaria-conforme-especificacoes-do",
+      "currentText": "Padrão de marcenaria conforme especificações do projeto.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 90
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.qualidade.3",
+      "currentText": "Qualidade",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 90
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.combinacoes-de-modulos-acabamentos-e-acessorios",
+      "currentText": "Combinações de módulos, acabamentos e acessórios disponíveis.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 91
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.personalizacao.3",
+      "currentText": "Personalização",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 91
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.busca-valores-acessiveis-por-eficiencia-e-escala",
+      "currentText": "Busca valores acessíveis por eficiência e escala.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 92
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.custo.3",
+      "currentText": "Custo",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 92
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.compra-por-etapas.3",
+      "currentText": "Compra por etapas",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 93
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.possibilidade-prevista-no-modelo-conforme-regras",
+      "currentText": "Possibilidade prevista no modelo, conforme regras comerciais.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 93
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.organizada-a-partir-de-uma-plataforma-modular",
+      "currentText": "Organizada a partir de uma plataforma modular por empreendimento.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 94
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.comparison.producao.3",
+      "currentText": "Produção",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 94
+      },
+      "consumer": "comparison static page copy",
+      "owner": "public how-it-works comparison",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.case-study.a-partir-desse-estudo-desenvolvemos-uma-bibliote",
+      "currentText": "A partir desse estudo, desenvolvemos uma biblioteca de módulos pensada especificamente para aquele empreendimento. As medidas e proporções já foram estudadas, e os módulos foram planejados para funcionar individualmente ou em conjunto. Parte importante da engenharia já chega pronta para você.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 101
+      },
+      "consumer": "case-study static page copy",
+      "owner": "public how-it-works case-study",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.case-study.antes-de-vender-qualquer-movel-estudamos-o",
+      "currentText": "Antes de vender qualquer móvel, estudamos o empreendimento. Analisamos as plantas dos apartamentos, as medidas, os espaços disponíveis, a circulação, os pontos importantes de cada ambiente e as necessidades mais comuns de quem vai morar ali.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 101
+      },
+      "consumer": "case-study static page copy",
+      "owner": "public how-it-works case-study",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.case-study.estudo-primeiro-solucoes-certas-desde-o-inicio",
+      "currentText": "Estudo primeiro, soluções certas desde o início.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 101
+      },
+      "consumer": "case-study static page copy",
+      "owner": "public how-it-works case-study",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.case-study.tudo-comeca-pelo-empreendimento",
+      "currentText": "Tudo começa pelo empreendimento",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 101
+      },
+      "consumer": "case-study static page copy",
+      "owner": "public how-it-works case-study",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.case-study.ilustracao-conceitual-de-uma-planta-com-medidas",
+      "currentText": "Ilustração conceitual de uma planta com medidas e circulação analisadas",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 102
+      },
+      "consumer": "case-study image alternative text",
+      "owner": "public how-it-works case-study",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.case-study.esquema-conceitual-de-estudo-do-espaco",
+      "currentText": "Esquema conceitual de estudo do espaço",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 102
+      },
+      "consumer": "case-study static page copy",
+      "owner": "public how-it-works case-study",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.case-study.aspectos-analisados-no-estudo",
+      "currentText": "Aspectos analisados no estudo",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 103
+      },
+      "consumer": "case-study accessible name",
+      "owner": "public how-it-works case-study",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.case-study.analisamos-as-medidas-proporcoes-e-restricoes-de",
+      "currentText": "Analisamos as medidas, proporções e restrições de cada ambiente antes de definir as composições possíveis.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 104
+      },
+      "consumer": "case-study static page copy",
+      "owner": "public how-it-works case-study",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.case-study.plantas-e-dimensoes",
+      "currentText": "Plantas e dimensões",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 104
+      },
+      "consumer": "case-study static page copy",
+      "owner": "public how-it-works case-study",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.case-study.circulacao-e-ergonomia",
+      "currentText": "Circulação e ergonomia",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 105
+      },
+      "consumer": "case-study static page copy",
+      "owner": "public how-it-works case-study",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.case-study.observamos-passagens-aberturas-e-a-maneira-como",
+      "currentText": "Observamos passagens, aberturas e a maneira como os espaços são usados no dia a dia.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 105
+      },
+      "consumer": "case-study static page copy",
+      "owner": "public how-it-works case-study",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.case-study.desenvolvemos-solucoes-para-as-necessidades-comu",
+      "currentText": "Desenvolvemos soluções para as necessidades comuns de cada ambiente, com módulos que podem funcionar individualmente ou em conjunto.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 106
+      },
+      "consumer": "case-study static page copy",
+      "owner": "public how-it-works case-study",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.case-study.necessidades-de-armazenamento",
+      "currentText": "Necessidades de armazenamento",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 106
+      },
+      "consumer": "case-study static page copy",
+      "owner": "public how-it-works case-study",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.modules.solucoes-que-se-combinam",
+      "currentText": "Soluções que se combinam",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 112
+      },
+      "consumer": "modules static page copy",
+      "owner": "public how-it-works modules",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.modules.uma-base-modular-muitas-composicoes",
+      "currentText": "Uma base modular. Muitas composições.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 113
+      },
+      "consumer": "modules static page copy",
+      "owner": "public how-it-works modules",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.modules.o-repertorio-interno-reune-solucoes-estudadas-pa",
+      "currentText": "O repertório interno reúne soluções estudadas para cada empreendimento. As peças podem funcionar individualmente e se integrar em composições para diferentes ambientes.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 114
+      },
+      "consumer": "modules static page copy",
+      "owner": "public how-it-works modules",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.modules.entre-os-exemplos-estao-modulos-inferiores-e",
+      "currentText": "Entre os exemplos estão módulos inferiores e aéreos, torres, gaveteiros, armários, nichos, painéis e bancadas. A seleção varia por empreendimento.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 115
+      },
+      "consumer": "modules static page copy",
+      "owner": "public how-it-works modules",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.modules.render-ilustrativo-de-modulo-aereo-cinza-com",
+      "currentText": "Render ilustrativo de módulo aéreo cinza com portas e nicho aberto",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 118
+      },
+      "consumer": "modules image alternative text",
+      "owner": "public how-it-works modules",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.modules.modulo-aereo",
+      "currentText": "Módulo aéreo",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 118
+      },
+      "consumer": "modules static page copy",
+      "owner": "public how-it-works modules",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.modules.render-ilustrativo-de-uma-torre-modular-cinza",
+      "currentText": "Render ilustrativo de uma torre modular cinza alta",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 119
+      },
+      "consumer": "modules image alternative text",
+      "owner": "public how-it-works modules",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.modules.torre",
+      "currentText": "Torre",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 119
+      },
+      "consumer": "modules static page copy",
+      "owner": "public how-it-works modules",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.modules.render-ilustrativo-de-modulo-inferior-cinza-com",
+      "currentText": "Render ilustrativo de módulo inferior cinza com gavetas, portas, bancada e pia",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 120
+      },
+      "consumer": "modules image alternative text",
+      "owner": "public how-it-works modules",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.modules.modulo-inferior",
+      "currentText": "Módulo inferior",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 120
+      },
+      "consumer": "modules static page copy",
+      "owner": "public how-it-works modules",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.modules.render-ilustrativo-de-um-armario-modular-cinza",
+      "currentText": "Render ilustrativo de um armário modular cinza de duas portas",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 121
+      },
+      "consumer": "modules image alternative text",
+      "owner": "public how-it-works modules",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.modules.armario",
+      "currentText": "Armário",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 121
+      },
+      "consumer": "modules static page copy",
+      "owner": "public how-it-works modules",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.modules.ilustracao-de-um-modulo-individual-conectado-a",
+      "currentText": "Ilustração de um módulo individual conectado a uma composição com outros módulos",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 124
+      },
+      "consumer": "modules image alternative text",
+      "owner": "public how-it-works modules",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.modules.estudados-em-conjunto-sem-deixar-os-ambientes",
+      "currentText": "Estudados em conjunto, sem deixar os ambientes iguais.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 125
+      },
+      "consumer": "modules static page copy",
+      "owner": "public how-it-works modules",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.modules.voce-escolhe-combinacoes-e-acabamentos-entre-as",
+      "currentText": "Você escolhe combinações e acabamentos entre as opções previstas para o seu projeto.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 125
+      },
+      "consumer": "modules static page copy",
+      "owner": "public how-it-works modules",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.economia-no-processo",
+      "currentText": "Economia no processo",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 131
+      },
+      "consumer": "economy static page copy",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.por-que-custa-menos",
+      "currentText": "Por que custa menos?",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 132
+      },
+      "consumer": "economy static page copy",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.na-marcenaria-individual-cada-projeto-exige-uma",
+      "currentText": "Na marcenaria individual, cada projeto exige uma parte maior do trabalho técnico. Aqui, a engenharia desenvolvida para o empreendimento é aproveitada em diferentes apartamentos. A economia vem do processo, sem retirar qualidade.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 133
+      },
+      "consumer": "economy static page copy",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.ilustracao-de-chapas-concentradas-em-uma-composi",
+      "currentText": "Ilustração de chapas concentradas em uma composição",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 136
+      },
+      "consumer": "economy image alternative text",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.compra-em-escala",
+      "currentText": "Compra em escala",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 136
+      },
+      "consumer": "economy static page copy",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.mais-volume-concentrado-amplia-o-poder-de",
+      "currentText": "Mais volume concentrado amplia o poder de negociação de insumos.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 136
+      },
+      "consumer": "economy static page copy",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.ilustracao-de-diferentes-composicoes-conectadas",
+      "currentText": "Ilustração de diferentes composições conectadas a uma plataforma comum",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 137
+      },
+      "consumer": "economy image alternative text",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.compras-coletivas",
+      "currentText": "Compras coletivas",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 137
+      },
+      "consumer": "economy static page copy",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.uma-base-comum-atende-diferentes-composicoes-do",
+      "currentText": "Uma base comum atende diferentes composições do empreendimento.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 137
+      },
+      "consumer": "economy static page copy",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.ilustracao-de-modulos-repetidos-em-uma-sequencia",
+      "currentText": "Ilustração de módulos repetidos em uma sequência organizada",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 138
+      },
+      "consumer": "economy image alternative text",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.processos-repetiveis-ajudam-a-organizar-a-produc",
+      "currentText": "Processos repetíveis ajudam a organizar a produção.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 138
+      },
+      "consumer": "economy static page copy",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.producao-planejada",
+      "currentText": "Produção planejada",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 138
+      },
+      "consumer": "economy static page copy",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.ilustracao-de-pecas-organizadas-sobre-uma-chapa",
+      "currentText": "Ilustração de peças organizadas sobre uma chapa, com sobra visível",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 139
+      },
+      "consumer": "economy image alternative text",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.aproveitamento-de-material",
+      "currentText": "Aproveitamento de material",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 139
+      },
+      "consumer": "economy static page copy",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.planos-de-corte-organizados-ajudam-a-aproveitar",
+      "currentText": "Planos de corte organizados ajudam a aproveitar melhor as chapas.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 139
+      },
+      "consumer": "economy static page copy",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.ilustracao-de-um-espaco-estudado-antes-de",
+      "currentText": "Ilustração de um espaço estudado antes de definir os módulos",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 140
+      },
+      "consumer": "economy image alternative text",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.engenharia-ja-estudada",
+      "currentText": "Engenharia já estudada",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 140
+      },
+      "consumer": "economy static page copy",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.solucoes-base-nao-precisam-ser-redesenhadas-do",
+      "currentText": "Soluções-base não precisam ser redesenhadas do zero a cada escolha.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 140
+      },
+      "consumer": "economy static page copy",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.ilustracao-de-modulos-acompanhados-por-uma-lista",
+      "currentText": "Ilustração de módulos acompanhados por uma lista de conferência",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 141
+      },
+      "consumer": "economy image alternative text",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.menos-retrabalho",
+      "currentText": "Menos retrabalho",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 141
+      },
+      "consumer": "economy static page copy",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.padroes-e-conferencias-contribuem-para-reduzir-r",
+      "currentText": "Padrões e conferências contribuem para reduzir repetição de trabalho.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 141
+      },
+      "consumer": "economy static page copy",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.economy.a-economia-esta-na-forma-de-planejar",
+      "currentText": "A economia está na forma de planejar e produzir.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 144
+      },
+      "consumer": "economy static page copy",
+      "owner": "public how-it-works economy",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.staged-process.escolha-no-seu-ritmo",
+      "currentText": "Escolha no seu ritmo",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 149
+      },
+      "consumer": "staged-process static page copy",
+      "owner": "public how-it-works staged-process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.staged-process.comece-pelo-que-voce-precisa-agora",
+      "currentText": "Comece pelo que você precisa agora.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 150
+      },
+      "consumer": "staged-process static page copy",
+      "owner": "public how-it-works staged-process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.staged-process.a-chegada-a-um-novo-apartamento-concentra",
+      "currentText": "A chegada a um novo apartamento concentra despesas. Você pode priorizar os ambientes essenciais e ampliar a composição depois, conforme sua necessidade e disponibilidade financeira.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 151
+      },
+      "consumer": "staged-process static page copy",
+      "owner": "public how-it-works staged-process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.staged-process.comece-pelo-ambiente-prioritario",
+      "currentText": "Comece pelo ambiente prioritário.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 154
+      },
+      "consumer": "staged-process static page copy",
+      "owner": "public how-it-works staged-process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.staged-process.cozinha",
+      "currentText": "Cozinha",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 154
+      },
+      "consumer": "staged-process static page copy",
+      "owner": "public how-it-works staged-process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.staged-process.acrescente-o-que-fizer-sentido",
+      "currentText": "Acrescente o que fizer sentido.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 155
+      },
+      "consumer": "staged-process static page copy",
+      "owner": "public how-it-works staged-process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.staged-process.lavanderia",
+      "currentText": "Lavanderia",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 155
+      },
+      "consumer": "staged-process static page copy",
+      "owner": "public how-it-works staged-process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.staged-process.inclua-outros-ambientes-no-seu-ritmo",
+      "currentText": "Inclua outros ambientes no seu ritmo.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 156
+      },
+      "consumer": "staged-process static page copy",
+      "owner": "public how-it-works staged-process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.staged-process.sala",
+      "currentText": "Sala",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 156
+      },
+      "consumer": "staged-process static page copy",
+      "owner": "public how-it-works staged-process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.staged-process.complete-em-outro-momento",
+      "currentText": "Complete em outro momento.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 157
+      },
+      "consumer": "staged-process static page copy",
+      "owner": "public how-it-works staged-process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.staged-process.quarto",
+      "currentText": "Quarto",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 157
+      },
+      "consumer": "staged-process static page copy",
+      "owner": "public how-it-works staged-process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.staged-process.continue-quando-quiser",
+      "currentText": "Continue quando quiser.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 158
+      },
+      "consumer": "staged-process static page copy",
+      "owner": "public how-it-works staged-process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.staged-process.escritorio",
+      "currentText": "Escritório",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 158
+      },
+      "consumer": "staged-process static page copy",
+      "owner": "public how-it-works staged-process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.finishes.escolhas-que-dao-personalidade",
+      "currentText": "Escolhas que dão personalidade",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 164
+      },
+      "consumer": "finishes static page copy",
+      "owner": "public how-it-works finishes",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.finishes.acabamentos-e-detalhes-do-seu-jeito",
+      "currentText": "Acabamentos e detalhes do seu jeito.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 165
+      },
+      "consumer": "finishes static page copy",
+      "owner": "public how-it-works finishes",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.finishes.combine-modulos-cores-padroes-e-acessorios-entre",
+      "currentText": "Combine módulos, cores, padrões e acessórios entre as opções disponíveis para o seu projeto. A base é modular; a composição continua pessoal.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 166
+      },
+      "consumer": "finishes static page copy",
+      "owner": "public how-it-works finishes",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.finishes.padronizado-por-dentro-seu-por-fora",
+      "currentText": "Padronizado por dentro. Seu por fora.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 167
+      },
+      "consumer": "finishes static page copy",
+      "owner": "public how-it-works finishes",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.finishes.render-conceitual-de-quatro-amostras-de-acabamen",
+      "currentText": "Render conceitual de quatro amostras de acabamento em tons claros e madeirados",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 170
+      },
+      "consumer": "finishes image alternative text",
+      "owner": "public how-it-works finishes",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.finishes.cores-e-acabamentos",
+      "currentText": "Cores e acabamentos",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 170
+      },
+      "consumer": "finishes static page copy",
+      "owner": "public how-it-works finishes",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.finishes.puxadores-lineares-em-diferentes-acabamentos-pre",
+      "currentText": "Puxadores lineares em diferentes acabamentos: preto, dourado e cromado",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 171
+      },
+      "consumer": "finishes image alternative text",
+      "owner": "public how-it-works finishes",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.finishes.puxadores-lineares",
+      "currentText": "Puxadores lineares",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 171
+      },
+      "consumer": "finishes static page copy",
+      "owner": "public how-it-works finishes",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.finishes.render-conceitual-de-puxadores-tipo-botao-em",
+      "currentText": "Render conceitual de puxadores tipo botão em preto, cromado, dourado e cobre",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 172
+      },
+      "consumer": "finishes image alternative text",
+      "owner": "public how-it-works finishes",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.finishes.puxadores-tipo-botao",
+      "currentText": "Puxadores tipo botão",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 172
+      },
+      "consumer": "finishes static page copy",
+      "owner": "public how-it-works finishes",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.eficiencia-no-processo",
+      "currentText": "Eficiência no processo",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 179
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.a-economia-vem-da-organizacao-da-producao",
+      "currentText": "A economia vem da organização da produção.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 180
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.equipamentos-especializados-producao-em-serie-e",
+      "currentText": "Equipamentos especializados, produção em série e equipe experiente tornam cada etapa mais previsível — sem depender de reduzir as especificações de materiais e componentes.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 181
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.corte",
+      "currentText": "Corte",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 184
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.planos-de-corte-organizam-as-chapas-para",
+      "currentText": "Planos de corte organizam as chapas para seguir as medidas previstas no projeto.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 184
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.equipamentos-especializados-repetem-encaixes-e-p",
+      "currentText": "Equipamentos especializados repetem encaixes e pontos de montagem com consistência.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 185
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.usinagem-e-furacao",
+      "currentText": "Usinagem e furação",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 185
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.a-sequencia-de-producao-prepara-cada-peca",
+      "currentText": "A sequência de produção prepara cada peça antes da montagem.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 186
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.acabamento",
+      "currentText": "Acabamento",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 186
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.montagem-e-controle",
+      "currentText": "Montagem e controle",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 187
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.uma-equipe-experiente-confere-componentes-encaix",
+      "currentText": "Uma equipe experiente confere componentes, encaixes e especificações.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 187
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.materiais-e-componentes",
+      "currentText": "Materiais e componentes",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 191
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.qualidade-definida-em-cada-detalhe",
+      "currentText": "Qualidade definida em cada detalhe.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 192
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.caixaria-em-mdf-fundos-revestidos-dobradicas-com",
+      "currentText": "Caixaria em MDF, fundos revestidos, dobradiças com amortecimento e corrediças telescópicas reforçadas: cada componente segue a especificação definida para o projeto.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 193
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.caixaria-e-portas",
+      "currentText": "Caixaria e portas",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 195
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "currentText": "MDF de 18 mm para uma estrutura firme e frentes consistentes.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 195
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "authored-commercial-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Contains product specification or time-limited commercial offer data; retain outside the interface locale bundle until canonical owner/value strategy is confirmed."
+      ]
+    },
+    {
+      "semanticKey": "howItWorks.quality.fundos",
+      "currentText": "Fundos",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 196
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "currentText": "MDF de 6 mm com revestimento melamínico nas duas faces.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 196
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "authored-commercial-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Contains product specification or time-limited commercial offer data; retain outside the interface locale bundle until canonical owner/value strategy is confirmed."
+      ]
+    },
+    {
+      "semanticKey": "howItWorks.quality.amortecimento-para-um-fechamento-mais-suave",
+      "currentText": "Amortecimento para um fechamento mais suave.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 197
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.dobradicas",
+      "currentText": "Dobradiças",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 197
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.corredicas",
+      "currentText": "Corrediças",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 198
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.telescopicas-reforcadas-especificadas-para-uso-f",
+      "currentText": "Telescópicas reforçadas, especificadas para uso frequente.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 198
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.quality.a-configuracao-de-cada-modulo-e-as",
+      "currentText": "A configuração de cada módulo e as condições da garantia constam no respectivo projeto e contrato.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 201
+      },
+      "consumer": "quality static page copy",
+      "owner": "public how-it-works quality",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.como-funciona-na-pratica",
+      "currentText": "Como funciona na prática",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 206
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.da-escolha-do-ambiente-a-forma-de",
+      "currentText": "Da escolha do ambiente à forma de receber seus módulos.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 207
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.um-caminho-claro-para-definir-o-que",
+      "currentText": "Um caminho claro para definir o que entra no projeto e como os módulos chegam até você.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 208
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.cozinha-sala-quarto-escritorio-ou-lavanderia",
+      "currentText": "Cozinha, sala, quarto, escritório ou lavanderia.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 211
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.escolha-o-ambiente",
+      "currentText": "Escolha o ambiente",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 211
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.escolha-os-modulos",
+      "currentText": "Escolha os módulos",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 212
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.veja-as-solucoes-previstas-para-o-empreendimento",
+      "currentText": "Veja as soluções previstas para o empreendimento.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 212
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.combine-as-pecas-para-o-espaco-e",
+      "currentText": "Combine as peças para o espaço e a rotina.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 213
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.monte-a-composicao",
+      "currentText": "Monte a composição",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 213
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.defina-acabamentos",
+      "currentText": "Defina acabamentos",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 214
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.escolha-entre-as-opcoes-disponiveis-no-projeto",
+      "currentText": "Escolha entre as opções disponíveis no projeto.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 214
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.faca-a-conferencia-tecnica",
+      "currentText": "Faça a conferência técnica",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 215
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.revise-medidas-e-condicoes-antes-da-producao",
+      "currentText": "Revise medidas e condições antes da produção.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 215
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.as-pecas-seguem-para-fabricacao-e-controle",
+      "currentText": "As peças seguem para fabricação e controle.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 216
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.producao-dos-modulos",
+      "currentText": "Produção dos módulos",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 216
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.antes-da-decisao-cada-proposta-deve-esclarecer",
+      "currentText": "Antes da decisão, cada proposta deve esclarecer materiais e componentes, itens incluídos e opcionais, modalidades de recebimento, prazos, instalação, garantia e valor final.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 218
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.as-condicoes-aplicaveis-constam-na-proposta-e",
+      "currentText": "As condições aplicáveis constam na proposta e no contrato de cada projeto.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 218
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.transparencia-em-todas-as-etapas",
+      "currentText": "Transparência em todas as etapas",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 218
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.tudo-claro-antes-da-contratacao",
+      "currentText": "Tudo claro antes da contratação.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 218
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.duas-formas-de-receber-os-modulos",
+      "currentText": "Duas formas de receber os módulos",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 219
+      },
+      "consumer": "process accessible name",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.instalacao-pela-equipe",
+      "currentText": "Instalação pela equipe",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 222
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.opcao-1",
+      "currentText": "Opção 1",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 222
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.uma-equipe-tecnica-especializada-faz-a-montagem",
+      "currentText": "Uma equipe técnica especializada faz a montagem com segurança e precisão, conforme o projeto, e entrega o ambiente pronto para uso.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 222
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.opcao-2",
+      "currentText": "Opção 2",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 226
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.os-modulos-sao-conferidos-e-embalados-com",
+      "currentText": "Os módulos são conferidos e embalados com segurança. Você pode retirar no ponto definido e instalar no seu ritmo ou com profissional de confiança, seguindo as orientações do projeto.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 226
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.process.retirada-no-ponto-definido",
+      "currentText": "Retirada no ponto definido",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 226
+      },
+      "consumer": "process static page copy",
+      "owner": "public how-it-works process",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.closing.render-ilustrativo-de-sala-integrada-a-cozinha",
+      "currentText": "Render ilustrativo de sala integrada à cozinha, com iluminação quente",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 232
+      },
+      "consumer": "closing image alternative text",
+      "owner": "public how-it-works closing",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.closing.conheca-os-ambientes",
+      "currentText": "Conheça os ambientes",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 234
+      },
+      "consumer": "closing static page copy",
+      "owner": "public how-it-works closing",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.closing.economia-para-a-sua-vida",
+      "currentText": "Economia para a sua vida.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 234
+      },
+      "consumer": "closing static page copy",
+      "owner": "public how-it-works closing",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.closing.qualidade-de-marcenaria-inteligencia-de-industri",
+      "currentText": "Qualidade de marcenaria. Inteligência de indústria.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 234
+      },
+      "consumer": "closing static page copy",
+      "owner": "public how-it-works closing",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.closing.seu-espaco-do-seu-jeito",
+      "currentText": "Seu espaço. Do seu jeito.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 234
+      },
+      "consumer": "closing static page copy",
+      "owner": "public how-it-works closing",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.closing.um-projeto-pensado-para-o-seu-espaco",
+      "currentText": "Um projeto pensado para o seu espaço, para o seu orçamento e para o seu jeito de morar.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 234
+      },
+      "consumer": "closing static page copy",
+      "owner": "public how-it-works closing",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.launch-notes.condicao-de-lancamento-e-aviso-sobre-imagens",
+      "currentText": "Condição de lançamento e aviso sobre imagens",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 236
+      },
+      "consumer": "launch-notes accessible name",
+      "owner": "public how-it-works launch-notes",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.launch-notes.condicao-especial-por-tres-meses",
+      "currentText": "Condição especial por três meses",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 238
+      },
+      "consumer": "launch-notes accessible name",
+      "owner": "public how-it-works launch-notes",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "currentText": "3 meses",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 240
+      },
+      "consumer": "launch-notes static page copy",
+      "owner": "public how-it-works launch-notes",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "authored-commercial-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Contains product specification or time-limited commercial offer data; retain outside the interface locale bundle until canonical owner/value strategy is confirmed."
+      ]
+    },
+    {
+      "semanticKey": "howItWorks.launch-notes.condicao-especial",
+      "currentText": "Condição especial",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 240
+      },
+      "consumer": "launch-notes static page copy",
+      "owner": "public how-it-works launch-notes",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.launch-notes.lancamento-deste-empreendimento",
+      "currentText": "Lançamento deste empreendimento",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 243
+      },
+      "consumer": "launch-notes static page copy",
+      "owner": "public how-it-works launch-notes",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "currentText": "A concentração de pedidos durante o lançamento ajuda a organizar compras e produção em maior escala. Os valores desta campanha valem por 3 meses; depois, a tabela pode ser atualizada e os valores podem mudar. Mesmo após o lançamento, a proposta continuará muito competitiva frente à marcenaria tradicional de qualidade equivalente, pois a biblioteca de módulos, a engenharia do produto e a estrutura de desenvolvimento já estarão prontas. A condição é temporária; a eficiência do sistema permanece.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 244
+      },
+      "consumer": "launch-notes static page copy",
+      "owner": "public how-it-works launch-notes",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "authored-commercial-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Contains product specification or time-limited commercial offer data; retain outside the interface locale bundle until canonical owner/value strategy is confirmed."
+      ]
+    },
+    {
+      "semanticKey": "howItWorks.launch-notes.as-imagens-desta-pagina-sao-ilustrativas-produto",
+      "currentText": "As imagens desta página são ilustrativas; produtos e opções disponíveis podem variar conforme o projeto.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 247
+      },
+      "consumer": "launch-notes static page copy",
+      "owner": "public how-it-works launch-notes",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.footer.casa-em-modulos",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 251
+      },
+      "consumer": "footer image alternative text",
+      "owner": "public how-it-works footer",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "howItWorks.footer.moveis-modulares-pensados-para-a-vida-real",
+      "currentText": "Móveis modulares pensados para a vida real.",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 251
+      },
+      "consumer": "footer static page copy",
+      "owner": "public how-it-works footer",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "howItWorks.footer.voltar-ao-inicio",
+      "currentText": "Voltar ao início ↑",
+      "source": {
+        "file": "app/how-it-works/index.html",
+        "blobSha": "02accfae392a89e51803eb02ad84ede073d4d54c",
+        "line": 251
+      },
+      "consumer": "footer static page copy",
+      "owner": "public how-it-works footer",
+      "routes": [
+        "/how-it-works/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    }
+  ]
+}

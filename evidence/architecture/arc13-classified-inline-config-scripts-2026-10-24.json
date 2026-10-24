@@ -1,0 +1,64 @@
+{
+  "schema": "M2DLocalizationInlineReview/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFile": {
+    "file": "app/config/index.html",
+    "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+    "inlineScriptCount": 3,
+    "inlineCodeBytes": 2343
+  },
+  "reviewMethod": "Manual review of every inline script block and its DOM/event effects. Counted literal visible strings separately from selectors, event names, and technical route/layout values.",
+  "totals": {
+    "inlineScriptsReviewed": 3,
+    "localizableLiterals": 0,
+    "excludedTechnicalBlocks": 3,
+    "deferredDomainContent": 0
+  },
+  "entries": [
+    {
+      "scriptIndex": 1,
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "startLine": 15,
+        "endLine": 19
+      },
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "review": "No user-facing copy or localizable literal found.",
+      "purpose": "auth-token hash redirect from configurator to admin"
+    },
+    {
+      "scriptIndex": 2,
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "startLine": 26,
+        "endLine": 29
+      },
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "review": "No user-facing copy or localizable literal found.",
+      "purpose": "initial layout-profile selection"
+    },
+    {
+      "scriptIndex": 3,
+      "source": {
+        "file": "app/config/index.html",
+        "blobSha": "97c284c9831de05607ede0d024e4d919a898b7fa",
+        "startLine": 250,
+        "endLine": 302
+      },
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "review": "No user-facing copy or localizable literal found.",
+      "purpose": "pointer-session handling for mobile scene resize"
+    }
+  ],
+  "limitations": [
+    "This closes the three inline script blocks only for their current product head; future edits require re-review.",
+    "Generated DOM text and the two deferred large data files app/data/stone-data.js and app/data/mask-data.js remain separate ARC-13 scopes.",
+    "No product source or localization bundle was changed."
+  ]
+}

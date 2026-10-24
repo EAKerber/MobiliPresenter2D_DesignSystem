@@ -1,0 +1,142 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "supplementalDomSinkOccurrences": 5
+    }
+  ],
+  "reviewScope": "Supplement to the heuristic candidate index. All 52 indexed runtime source blobs were read from product main and matched the recorded blob hashes. A targeted direct-DOM-text sink scan found these five one-word interface labels outside the heuristic inventory. This supplements source inventory only; it does not claim a complete AST or runtime DOM audit.",
+  "scan": {
+    "indexedRuntimeSourceFiles": 52,
+    "blobHashMismatches": 0,
+    "directDomTextSinkOccurrencesReviewed": 12,
+    "alreadyIndexedOccurrences": 7,
+    "newSupplementalOccurrences": 5,
+    "sinkKinds": [
+      "textContent/innerText/innerHTML/outerHTML/property assignments",
+      "document.createTextNode",
+      "setAttribute aria-label/title/placeholder/alt",
+      "insertAdjacentText"
+    ]
+  },
+  "totals": {
+    "sourceFilesReviewed": 52,
+    "supplementalOccurrencesReviewed": 5,
+    "classifiedLocalizableOccurrences": 5,
+    "excludedNonlocalizableOccurrences": 0,
+    "deferredOwnershipReviewOccurrences": 0,
+    "deferredDomainReviewOccurrences": 0,
+    "semanticKeysAssigned": 0
+  },
+  "limitations": [
+    "Targeted source-level sink scan only; not an AST-complete inventory of all DOM construction paths.",
+    "No authenticated runtime DOM was available for Configurator/Admin; rendered usage was inferred from the source call sites.",
+    "Semantic keys and extraction remain pending; no product runtime or localization resource was changed."
+  ],
+  "entries": [
+    {
+      "currentText": "Seção",
+      "source": {
+        "file": "app/admin/admin.js",
+        "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+        "line": 478
+      },
+      "consumer": "hierarchy section label and editable section name",
+      "owner": "admin interface",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "semanticKey": null,
+      "notes": [
+        "Single-word label inserted using document.createTextNode; omitted by the lexical candidate heuristic. Proposed owner is the Admin interface."
+      ]
+    },
+    {
+      "currentText": "Componente",
+      "source": {
+        "file": "app/admin/admin.js",
+        "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+        "line": 488
+      },
+      "consumer": "component selector for a hierarchy section",
+      "owner": "admin interface",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "semanticKey": null,
+      "notes": [
+        "Single-word label inserted using document.createTextNode; omitted by the lexical candidate heuristic."
+      ]
+    },
+    {
+      "currentText": "Grupo",
+      "source": {
+        "file": "app/admin/admin.js",
+        "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+        "line": 562
+      },
+      "consumer": "hierarchy group label and editable group name",
+      "owner": "admin interface",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "semanticKey": null,
+      "notes": [
+        "Single-word label inserted using document.createTextNode; omitted by the lexical candidate heuristic."
+      ]
+    },
+    {
+      "currentText": "Largura",
+      "source": {
+        "file": "app/admin/admin.js",
+        "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+        "line": 572
+      },
+      "consumer": "column-span selector for a hierarchy group",
+      "owner": "admin interface",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "semanticKey": null,
+      "notes": [
+        "Single-word field label inserted using document.createTextNode; omitted by the lexical candidate heuristic."
+      ]
+    },
+    {
+      "currentText": "Aplicação",
+      "source": {
+        "file": "app/admin/admin.js",
+        "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+        "line": 863
+      },
+      "consumer": "scope selector for a finish option",
+      "owner": "admin interface",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "semanticKey": null,
+      "notes": [
+        "Single-word field label inserted using document.createTextNode; omitted by the lexical candidate heuristic."
+      ]
+    }
+  ]
+}

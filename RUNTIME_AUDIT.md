@@ -271,3 +271,130 @@ A auditoria G1 exercitou a landing pública e o painel econômico de “Como fun
 O painel econômico passou nos estados e resoluções observados. Na landing, a seleção de Lavanderia a partir do grupo 2 mudou o painel de detalhe corretamente, mas fez a paginação voltar ao grupo 1 em 4 de 4 repetições a 390×844 CSS px (FIND-016). A inspeção do código aponta uma hipótese de condição de borda fracionária em `revealCard()`; a causa ainda não foi isolada e nenhuma alteração foi feita no produto. O issue #207 cobre a indicação de disponibilidade dos viewers, não esta divergência; o defeito foi registrado separadamente no [issue #224](https://github.com/EAKerber/MobiliPresenter2D/issues/224).
 
 O estado de `prefers-reduced-motion`, a onda de animação ativa e as falhas/rede lenta de imagem permanecem não verificados. Esta observação adiciona evidência funcional, sem decisão estética ou homologação nova.
+
+
+## Auditoria runtime isolada do preview #234 (2026-10-24)
+
+O Netlify Deploy Preview #234 estava **READY** no deploy `6adc0c519cc524d721abd893`, associado ao commit do produto `fbd00a9628c81b4902a8c679abb7ac72e93ca549`. A observação foi feita em contexto de navegador isolado, sem autenticação ou token; o conteúdo não foi alterado. A tela de acesso foi alcançada somente depois de `/config/` redirecionar para `/access/`.
+
+| Rota | Estado observado | Resultado técnico |
+|---|---|---|
+| `/` | 390 × 844, tema claro, movimento reduzido | Sem overflow horizontal; 18/18 imagens enumeradas carregadas; conteúdo principal e navegação presentes. |
+| `/about/` | 390 × 844, tema claro | Sem overflow horizontal; 3/3 imagens carregadas; primeiro Tab revelou o link “Pular para o conteúdo”. |
+| `/how-it-works/` | 390 × 844 claro/escuro e 1366 × 900 escuro | Sem overflow horizontal; após percorrer a página, 28/28 imagens carregadas e nenhuma falha. |
+| `/config/` → `/access/` | 1366 × 900, tema escuro | Redirecionamento observado; a página informou token inválido. Não havia campos de entrada visíveis nem valor de acesso fornecido. |
+| `/access/` | 390 × 844 claro e 1366 × 900 escuro | Sem overflow horizontal; token inválido; nenhum campo de entrada; logo carregado. |
+
+**Foco de teclado:** no link “Pular para o conteúdo” de `/about/`, o contorno visível foi `3px solid #6E512E` no tema claro e `3px solid #D8BC7C` no escuro, ambos com offset de 3 px. O registro aprovado do Design System especifica `#8B6A40` / `#D8BC7C`, 4 px e offset de 3 px. O preview coincide com a cor escura, mas diverge na cor clara e na espessura nos dois temas. Registra-se como diferença para reconciliação por componente, sem propor nem aplicar novo valor visual.
+
+O browser confirmou `prefers-reduced-motion: reduce`; isso não prova por si só a interrupção de todas as animações. Não foram cobertos ordem completa de teclado, Escape/clique externo em todos os menus, falhas de imagem, rede lenta, contraste de todos os elementos, vídeo, estado autenticado ou produção. Capturas foram inspecionadas durante a sessão, mas não persistidas neste repositório. Este registro é evidência de **preview** e não atualiza a auditoria do deploy de produção nem homologa a implementação.
+
+
+### Menu e teclado — observação adicional do preview (24/10/2026)
+
+Em `/`, no viewport móvel 390 × 844 em tema escuro, o botão abriu a navegação principal (`aria-expanded=true`) e manteve foco no próprio controle. Com esse foco, Escape foi pressionado duas vezes; após cada tentativa, `aria-expanded` continuou `true` e a navegação permaneceu visível. Portanto, Escape não fechou o menu nestas duas tentativas neste preview. O fechamento por clique externo não foi concluído e permanece sem classificação. Não se infere comportamento em produção nem causa no código.
+
+
+### Rastreamento da implementação do menu no preview #234 (24/10/2026)
+
+A leitura do código da mesma head confirma o comportamento observado. O `app/index.html` do commit `fbd00a9` carrega `/landing/landing.js`, mas não solicita `/landing/header-menu.js`; o log de rede contém o primeiro arquivo e não o segundo. Em `landing.js`, o menu alterna ao clicar e fecha ao selecionar um link, mas não há listener Escape nem fechamento por `pointerdown` externo. A captura de teclado no contexto isolado confirmou que o evento `Escape` chegou ao documento, com o botão do menu como alvo, enquanto `aria-expanded` permaneceu `true`. A causa no preview fica localizada no caminho de código ativo, sem extrapolar para produção.
+
+Há um candidato experimental já testado no produto: branch [`architecture/p-comp-01-public-menu-20261021@4ba9384`](https://github.com/EAKerber/MobiliPresenter2D/tree/architecture/p-comp-01-public-menu-20261021) inclui e carrega `header-menu.js`, que fecha com Escape e clique externo e retorna foco ao controle quando pertinente. O gate [#39697470826](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39697470826) concluiu SUCCESS na head `4ba9384`. A árvore desse candidato difere de `main@15e1cfb` em 13 caminhos (2 adicionados, 1 removido e 10 modificados), incluindo `app/index.html` e outras saídas/páginas. Portanto o candidato é uma referência de comportamento, não um patch integrável diretamente: deve ser reconciliado com as fontes ARC-03C e revalidado por `pages:check`. Continua sem PR/merge/release.
+
+
+## Revalidação de foco no Deploy Preview #239 — 24/10/2026
+
+**Alvo observado:** Deploy Preview #239 de `EAKerber/MobiliPresenter2D@bf82272ba19007b65b1bd23856d182346d2fd634`, deploy Netlify `6adc7acd4f2ed8cfc213cd6f`, READY; página pública `/about/`. Este registro é de preview e não atualiza a observação de produção de 18/10 acima.
+
+- O link “Pular para o conteúdo” recebeu foco por script no DOM e ficou visível na posição superior da página. O snapshot de acessibilidade o identificou como link focável e focado.
+- Leitura de estilo computado para tema claro e escuro: contorno sólido de 4 px; cores `rgb(139, 106, 64)` (`#8B6A40`) e `rgb(216, 188, 124)` (`#D8BC7C`). A regra vencedora em `about.css` declara `outline-offset: 3px`; estilo verificado em viewport móvel 390×844, com foco visível e link dentro da tela.
+- Uma captura do viewport desktop escuro confirmou visualmente o link e o contorno. O tema claro foi conferido pelo estilo computado, sem captura visual persistida. Não fizemos homologação de outros controles, rotas ou componentes.
+- A implementação é local ao skip link de About e usa valores VIS-002 já aprovados. Não é evidência para tokenização ou alteração global de foco. PR #239 segue DRAFT, sem merge.
+
+
+## Rechecagem de issue #224 no deploy atual (2026-10-24)
+
+O readback do Netlify confirmou Production `READY` em `EAKerber/MobiliPresenter2D@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, deploy `6adc221479c773577ed45e23`. Em contexto de navegador isolado, tema escuro e viewport 390×844, abri o grupo 2 do carrossel e selecionei Lavanderia. O detalhe mudou para Lavanderia e o cartão selecionado permaneceu visível no grupo 2; não observei retorno ao grupo 1 nesta passagem. A captura foi inspecionada, mas não persistida. Esta é uma única não reprodução na head atual; não encerra a issue #224 nem substitui a reprodução anterior 4/4 no deploy de 21/10. Repetições e outros estados ainda faltam; nenhum estado de produto foi salvo.
+
+
+## Menu público em Production — teclado, clique externo e movimento reduzido (24/10/2026)
+
+Na Landing pública de Production `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, deploy READY `6adc221479c773577ed45e23`, em contexto anônimo isolado e viewport móvel 390×844, o caminho Tab → botão do menu → Enter abriu a navegação e focou “Ambientes”; dois Tabs chegaram a “Quem somos”. Escape fechou a navegação, atualizou `aria-expanded=false` e devolveu foco ao botão. Em outra abertura, um clique no conteúdo fora do menu fechou a navegação. Com `prefers-reduced-motion: reduce`, os estilos de menu/botão tinham `animation-name:none`, transição computada `1e-05s` e nenhuma animação Web estava em execução. Documento sem overflow horizontal; 17/17 imagens observadas carregadas. O clique externo atingiu uma imagem não focável e deixou o foco no body. Escopo limitado a uma rota, tema e largura; não cobre todo o percurso de teclado, todos os elementos animados, breakpoints ou temas. Evidência: [menu público em Production](evidence/runtime/public-menu-production-escape-2026-10-24.md). A observação atual não apaga o resultado distinto do preview #234.
+
+
+## Link “Pular para o conteúdo” em About — foco no destino em Production (24/10/2026)
+
+Na página pública `/about/` do deploy Production READY `6adc221479c773577ed45e23`, produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, o primeiro Tab revelou e focou o link “Pular para o conteúdo”. Ao pressionar Enter, a URL mudou para `/about/#main`, mas o elemento ativo terminou no `body`; `main#main` existe, mas não recebeu foco. Na leitura DOM, `main.tabIndex` retornou -1 sem atributo `tabindex` explícito e `scrollY` ficou em 0. A observação foi feita anonimamente, em viewport móvel 390×844, tema escuro e movimento reduzido. A aparência do anel já observada em Production continua fora da referência VIS-002; o CSS da PR #239 trata essa aparência, não a transferência de foco. Evidência e limites: [About skip link em Production](evidence/runtime/about-skip-link-production-focus-2026-10-24.md). É uma passagem sem teste de leitor de tela, outros navegadores, temas ou larguras. Nenhum código ou deploy foi alterado.
+
+
+## Landing e Como funciona — link de salto em Production (24/10/2026)
+
+Em `/` e `/how-it-works/`, no deploy READY `6adc221479c773577ed45e23`, não havia `.skip-link` nem `a[href="#main"]`; o elemento `main` não tinha id e o primeiro Tab focou a marca. Em Como funciona, a CTA `#passos` é navegação interna de seção, não salto ao conteúdo. A CSSOM da marca retornou anel computado de 2.67 px/offset 2.67 px: claro `#6E512E`, escuro `#D8BC7C`. A regra fonte `app/public-theme.css` declara 3 px/offset 3 px; `app/ui-theme.css` aplica as cores por tema. VIS-002 registra 4 px/offset 3 px, claro `#8B6A40`, escuro `#D8BC7C`. Um elemento neutro com `outline:3px` também computou 2.67 px nesta sessão; causa desconhecida. Assim, a diferença de offset não está na regra global declarada. Evidência e escopo: [Landing e Como funciona](evidence/runtime/public-skip-navigation-focus-2026-10-24.md). Uma amostra por rota; nenhuma alteração de produto.
+
+
+## Anel de foco em componentes públicos — amostra Production (24/10/2026)
+
+Na rota `/`, deploy READY `6adc221479c773577ed45e23`, dez paradas reais de Tab em 390×844 foram medidas nos temas claro/escuro: marca, CTA do header, tema, menu, CTA principal e cinco botões de ambiente. A CSSOM retornou anel de 2.67 px para os dez focos; claro `#6E512E`, escuro `#D8BC7C`; offsets computados de 2.67 px em nove focos e 2 px no tema. As regras fonte declaram 3 px global/offset 3 px e 3 px/offset 2 px no controle de tema (`app/public-theme.css` blob `e2add5053fbc1a897c035eb854b168c9711d2d18`, linha 23; `app/ui-theme.css` blob `b0f04c566183ba1f9c015f5d2a827db9e91dea45`, linhas 50 e 113–114). VIS-002 registra 4 px/offset 3 px, claro `#8B6A40`, escuro `#D8BC7C`. Um elemento neutro com `outline:3px` também computou 2.67 px; causa não identificada. Comparação normativa feita pelas declarações CSS, não pela conversão computada. [Amostra detalhada](evidence/runtime/public-focus-ring-production-component-sample-2026-10-24.md). Escopo limitado; sem mudança de produto ou token.
+
+
+## VIS-002 — CSSOM do foco em Como funciona, Production (24/10/2026)
+
+Na rota pública `/how-it-works/`, deploy Production READY `6adc221479c773577ed45e23`, produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, o botão “Compra em escala” recebeu foco real por Tab em navegador isolado e sem login. O DOM confirmou o botão como elemento ativo e `aria-expanded=false`; não foi ativado. Em tema claro, a CSSOM retornou `outline: 2px solid rgb(110, 81, 46)` (`#6E512E`). Uma leitura retornou offset `2.66667px`; uma passagem de confirmação retornou `3px`, igual à fonte, e a diferença ficou sem causa identificada. O botão tem preenchimento `rgba(255,255,255,.05)`, mas a grade pai é transparente; com o offset positivo, o traço fica sobre o fundo opaco da seção `rgb(37, 35, 31)` (`#25231F`). A razão calculada entre o outline e a superfície efetivamente atrás do traço foi **2,15:1**. O risco de contraste está observado nesta combinação e não deve ser extrapolado a outros componentes. O contorno foi visualmente observado; captura não persistida. No tema escuro, o contorno foi visto, mas cor/offset CSSOM não foram medidos nesta passagem. Uma rota, um botão, um viewport; sem teste de leitor de tela ou outros navegadores. Nenhum CSS/token do produto foi alterado. [Registro detalhado](evidence/runtime/how-it-works-economy-action-focus-production-2026-10-24.md).
+
+
+## Login administrativa — Production, sem autenticação (24/10/2026)
+
+Navegar para `/access/manage.html` redirecionou a `/admin.html?returnTo=%2Faccess%2Fmanage.html`; a rota direta `/admin.html` exibiu o mesmo formulário de login. Em 1280×720, 390×844 e 320×700 CSS px, o documento ficou sem overflow horizontal e o cartão permaneceu dentro das margens observadas. No tema claro e escuro, CSSOM registrou foco no botão de tema/campo de e-mail; em 320×700 claro, o campo computou outline `2px #6E512E`/offset 3 px. Em 1280×720, as leituras incluíram larguras fracionárias de anel; a causa não foi isolada. A captura não foi persistida.
+
+O navegador havia preenchido os campos; valores não foram lidos/registrados, os campos não foram modificados e o formulário não foi enviado. Isso documenta o estado visual de login, não comprova perfil limpo nem ausência de dados salvos. Não foi aberta área autenticada; recuperação e leitores de tela continuam sem cobertura. [Evidência detalhada](evidence/runtime/admin-login-no-session-focus-production-2026-10-24.md).
+
+
+## /how-it-works/ — imagens e movimento em Production (24/10/2026)
+
+No deploy Production READY `6adc221479c773577ed45e23`, produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, percorri a rota pública `/how-it-works/` até o fim em viewport desktop 1280×720. Após a área lazy-loaded ser trazida ao viewport, as 28 imagens do documento ficaram completas, com largura natural positiva e `alt` presente; não houve falha de imagem nesta passagem (28 carregadas, 0 quebradas, 0 sem `alt`). Isso não cobre imagens CSS nem os recursos internos do iframe do YouTube.
+
+A consulta `prefers-reduced-motion: reduce` retornou `false` nesta sessão, portanto não valida a resposta do site ao movimento reduzido. A API de animações não estava disponível no escopo de leitura desta página; animações efetivamente em execução permanecem não verificadas aqui. A evidência anterior do menu com redução ativa cobre somente aquele componente. Um viewport e uma rota; nenhuma simulação de falha/rede lenta, alteração do produto ou envio de dados. [Registro detalhado](evidence/runtime/how-it-works-images-motion-production-2026-10-24.md); [plano](docs/ROADMAP_AND_CURRENT_STAGE_2026-10-21.md).
+
+
+## Landing — cabeçalho compacto em Production, reprodução NAV-005 (24/10/2026)
+
+Na Landing de Production `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, deploy READY `6adc221479c773577ed45e23`, medi o cabeçalho em 390, 320, 310 e 290 px de largura. Em 390×844, nos temas escuro/claro, não houve overflow. Em 310 e 290 px, CSSOM confirmou `min-width:320px` em `html/body`; documento e header permaneceram em 320 px. Em 290×700, nos dois temas, o menu ocupou x=264–306 e somente 11 px da largura útil de 275 px ficaram visíveis; a captura clara também mostrou corte do conteúdo e barra horizontal. Em 320×700, tema claro, o documento coube no viewport. A issue [#218 / NAV-005](https://github.com/EAKerber/MobiliPresenter2D/issues/218) já cobre a família do problema e permanece aberta. Na rota `/how-it-works/`, em 290×700 escuro, o conteúdo também ficou com 320 px, mas `.how-page` aplicou `overflow-x:clip`; título e texto foram cortados e apenas 11 px do botão do menu ficaram visíveis na área útil de 275 px. As reproduções são do estado atual e não aplicam a proposta simulada. Um menu não foi aberto; nenhum código do produto foi alterado. [Evidência detalhada](evidence/runtime/landing-public-compact-header-production-2026-10-24.md).
+
+
+## Rotas públicas — teclado e imagens em Production (24/10/2026)
+
+No deploy Production READY `6adc221479c773577ed45e23`, produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, uma passagem em 390×844 CSS px e tema escuro encontrou 18/18 imagens completas na Landing, 3/3 em About e 22/22 no Viewer; zero falhas e zero imagens sem `alt` nas três rotas. Não houve overflow horizontal. Na Landing, `#introSplash` já estava oculto na primeira leitura; depois disso, clicar abriu o menu e Escape o fechou, devolvendo foco ao botão. Isso não testa clique durante a abertura do splash.
+
+Em About, o primeiro Tab focou “Pular para o conteúdo”; Enter mudou a URL para `/about/#main`, mas o foco terminou em `BODY`, sem transferi-lo a `main#main`, e `scrollY` permaneceu em 0. É uma divergência observada, sem correção aplicada. Nas três rotas, `prefers-reduced-motion: reduce` retornou `false`; a emulação de mídia e a API de animações não estavam disponíveis no escopo de leitura. A resposta com movimento reduzido e as animações ativas seguem não verificadas; não foram simuladas falhas de imagem ou rede lenta. [Evidência detalhada](evidence/runtime/public-routes-keyboard-images-production-2026-10-24.md).
+
+
+## Contraste de texto público — Production, dois temas (24/10/2026)
+
+No mesmo deploy `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, viewport 1280×720, a triagem CSSOM mediu Landing `.hero-description` a 5,41:1 claro e 8,61:1 escuro; Como funciona `.how-hero-note` a 5,41:1 e 8,61:1; `.study-band .eyebrow` a 5,60:1 e 8,78:1; legenda `.study-art figcaption` a 4,95:1 no claro e 13,85:1 no escuro, neste último com faixa opaca aprovada `#20211F`; `.launch-badge` a 5,69:1 nos dois temas. Em About, a amostra do lead/primeiros parágrafos mediu 4,79:1 no claro e 10,00:1 no escuro; a seção de escala, 5,41:1 e 8,61:1. Os rótulos de seção amostrados ficaram entre 6,25:1 e 11,63:1.
+
+Os valores do DOM atual diferem de alguns registros históricos para estes componentes; valem somente para a amostra atual. Os pares medidos passaram 4,5:1, mas a triagem não fecha issue #216 nem cobre todo o texto, temas/estados em todos os componentes, superfícies transparentes, gradientes, imagens, foco/seleção ou contraste não textual. [Evidência detalhada](evidence/runtime/public-text-contrast-production-themes-2026-10-24.md).
+
+
+## Cabeçalhos públicos em 320 px — Production (24/10/2026)
+
+Em 320×700, a sessão do browser tinha barra vertical de 15 px (`innerWidth=320`, `clientWidth=305`). About e Viewer mantiveram documento/body/header em 320 px e exibiram barra horizontal; Como funciona manteve `min-width:320px` em `html/body` e recortou a sobra com `overflow-x:clip`. Em 335×760, as três rotas não tiveram overflow. About também não teve em 360/390 px. About foi observado em claro/escuro e o menu abriu/fechou com Escape, restaurando foco; Viewer foi observado em claro/escuro quanto ao overflow. Não abri menu no Viewer/Como funciona. Uma sessão e amostras de viewport; o limiar 335 px não determina breakpoint. [Evidência detalhada](evidence/runtime/public-headers-320-production-2026-10-24.md).
+
+
+### Complemento — About e Viewer em 290 px (24/10/2026)
+
+Na mesma sessão Production, a 290×700 escuro, About e Viewer mantiveram `scrollWidth=320` contra `clientWidth=275`, com rolagem horizontal de 45 px. About cortou título e texto e deixou 11 px do botão de menu visíveis. No Viewer, o preço/conteúdo do cartão foi cortado e somente 13 px do menu ficaram na área útil. A 320 px, o menu ainda quase cabe, mas a rolagem de 15 px observada permanece; a 335 px as três rotas não tiveram overflow. [Matriz detalhada](evidence/runtime/public-headers-320-production-2026-10-24.md).
+
+
+## Como funciona — controles expansíveis por teclado em Production (24/10/2026)
+
+Na sessão anônima em Production `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf` / deploy READY `6adc221479c773577ed45e23`, viewport 1280×720 e tema escuro, Enter e Espaço alternados expandiram os seis disclosures nativos de fundações/estudo e os seis cartões da seção de economia. Os disclosures mudaram o atributo `open`, e os cartões passaram a `aria-expanded=true`; seus conteúdos ficaram disponíveis no DOM/árvore de acessibilidade. O snapshot final manteve o foco no último disclosure ativado. Movimento reduzido retornou `false`. Sem avaliação de leitor de tela, outros navegadores/temas/larguras ou aparência/contraste do foco. [Evidência detalhada](evidence/runtime/how-it-works-accordion-keyboard-production-2026-10-24.md).
+
+
+## Como funciona — foco nos seis cartões de economia em Production (24/10/2026)
+
+Na Production atual `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf` / deploy READY `6adc221479c773577ed45e23`, em 1280×720, Tab focou os seis cartões da seção “Por que custa menos?”. CSSOM confirmou contorno de 2 px/offset 3 px em todos. No escuro, `#D8BC7C` sobre a superfície `#25231F` mede 8,52:1; no claro, `#6E512E` sobre a mesma superfície mede 2,15:1, abaixo de 3:1 para o indicador não textual de foco. A largura computada também diverge da referência VIS-002 de 4 px. Achado limitado à família e superfície medidas; sem escolha de correção ou alteração do produto. [Evidência detalhada](evidence/runtime/how-it-works-economy-focus-six-cards-production-2026-10-24.md).
+
+
+## Como funciona — movimento no snapshot de Production (24/10/2026)
+
+No snapshot anônimo de Production `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, 1280×720 escuro, `prefers-reduced-motion: reduce` retornou `false`; nenhum `animation-name` apareceu nos elementos/pseudo-elementos consultados. `document.getAnimations` não estava disponível no escopo de avaliação; transições ativas não foram descartadas. As folhas publicadas têm regras `prefers-reduced-motion` global e local, mas o comportamento runtime com a preferência ativada segue sem verificação. Rede lenta/falhas de imagem não simuladas. [Evidência detalhada](evidence/runtime/how-it-works-motion-css-runtime-snapshot-production-2026-10-24.md).

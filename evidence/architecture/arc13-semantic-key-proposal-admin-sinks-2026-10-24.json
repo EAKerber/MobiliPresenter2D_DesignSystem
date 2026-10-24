@@ -1,0 +1,70 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "status": "proposal-only-not-canonical",
+  "sourceBatch": "evidence/architecture/arc13-classified-admin-single-word-dom-sink-batch-2026-10-24.json",
+  "rationale": "Propostas para cinco rótulos administrativos de uma palavra omitidos pelo heurístico. Os nomes preservam a função do controle e seguem namespaces pontilhados usados em lotes anteriores. Não aprovam estratégia global, não atualizam o índice canônico e não alteram o produto.",
+  "entries": [
+    {
+      "currentText": "Seção",
+      "source": {
+        "file": "app/admin/admin.js",
+        "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+        "line": 478
+      },
+      "usage": "label do campo editável com section.label",
+      "proposedSemanticKey": "admin.hierarchy.section.nameLabel",
+      "parameters": []
+    },
+    {
+      "currentText": "Componente",
+      "source": {
+        "file": "app/admin/admin.js",
+        "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+        "line": 488
+      },
+      "usage": "label do seletor de componente da seção",
+      "proposedSemanticKey": "admin.hierarchy.section.componentLabel",
+      "parameters": []
+    },
+    {
+      "currentText": "Grupo",
+      "source": {
+        "file": "app/admin/admin.js",
+        "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+        "line": 562
+      },
+      "usage": "label do campo editável com group.label",
+      "proposedSemanticKey": "admin.hierarchy.group.nameLabel",
+      "parameters": []
+    },
+    {
+      "currentText": "Largura",
+      "source": {
+        "file": "app/admin/admin.js",
+        "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+        "line": 572
+      },
+      "usage": "label do seletor data-group-span, que controla columnSpan",
+      "proposedSemanticKey": "admin.hierarchy.group.columnSpanLabel",
+      "parameters": []
+    },
+    {
+      "currentText": "Aplicação",
+      "source": {
+        "file": "app/admin/admin.js",
+        "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+        "line": 863
+      },
+      "usage": "label do seletor de escopo global/local do acabamento",
+      "proposedSemanticKey": "admin.finish.applicationScopeLabel",
+      "parameters": []
+    }
+  ],
+  "reviewNotes": [
+    "Confirmar se `component` e `columnSpan` são termos internos adequados para a chave de recurso.",
+    "Revisar coerência do namespace `admin.finish` com outras superfícies antes de adotar.",
+    "Manter todos os cinco como pendentes até a convenção geral ser escolhida."
+  ]
+}

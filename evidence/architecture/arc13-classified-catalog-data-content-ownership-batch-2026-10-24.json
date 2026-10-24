@@ -1,0 +1,3683 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/data/catalog-data.js",
+      "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+      "candidateOccurrences": 196
+    }
+  ],
+  "reviewScope": "Complete lexical candidate review of ProductCatalog2D catalog data. Human-readable module, finish, option, benefit, component, requirement, accessory and service content is authored product content; IDs, schema, asset/style values, evidence references and structural measurements are technical.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 196,
+    "classifiedLocalizableOccurrences": 0,
+    "excludedNonlocalizableOccurrences": 88,
+    "deferredOwnershipReviewOccurrences": 108,
+    "distinctCandidateTexts": 165
+  },
+  "limitations": [
+    "Inventory only; catalog data and localization resources remain unchanged.",
+    "Product/catalog ownership must decide whether authored labels/specifications/descriptions are localized in catalog records or mapped to UI resources, preserving identifiers and commercial meaning."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 2
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Aéreo",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 14
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Aéreo da lavanderia",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 14
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "module-01",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 14
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Módulo 01",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 14
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "scene/traditional/module/upper-laundry",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 15
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "763,3 × 700 × 350 mm",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 17
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Caixaria interna clara",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 24
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Portas com fechamento amortecido",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 24
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Prateleira fixa para organização",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 24
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Dobradiças com amortecimento",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 25
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Fundo 6 mm duplamente melamínico",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 25
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "MDF 18 mm",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 25
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "front-count-confirmed",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 29
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Inferior",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 32
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Inferior do fogão",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 32
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "module-02",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 32
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Módulo 02",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 32
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "scene/traditional/module/lower-stove",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 33
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "790 × 760 × 530 mm",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 35
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Espaço para forno embutido",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 42
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Integra cooktop e acabamento da bancada",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 42
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Preparo elétrico previsto no módulo",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 42
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "2 tomadas de 20 A",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 43
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Cabo PP 4 mm",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 43
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Estrutura em MDF 18 mm",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 43
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Prever alimentação do fogão e do forno conforme especificação técnica.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 44
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "envelope-only",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 46
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Inferior",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 49
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Inferior da pia",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 49
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "module-03",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 49
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Módulo 03",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 49
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "scene/traditional/module/lower-sink",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 50
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "1.200 × 760 × 530 mm",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 52
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Duas portas com fechamento amortecido",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 59
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Frentes com fita de borda coordenada",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 59
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Quatro gavetas com corrediças reforçadas H45",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 59
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "4 corrediças telescópicas H45",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 60
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Dobradiças com amortecimento",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 60
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "MDF 18 mm",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 60
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "technical-sheet:module-03:user-provided-2026-08-10",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 63
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Gavetas",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 65
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Porta central",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 66
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Porta direita",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 67
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "technical-sheet:module-03:user-provided-2026-08-10",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 72
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Verificar os pontos hidráulicos e elétricos previstos para a pia.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 79
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "geometry-confirmed",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 81
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Estrutural",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 84
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Lateral da geladeira",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 84
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "module-04",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 84
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Módulo 04",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 84
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "scene/traditional/module/fridge-side",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 85
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "2.400 × 600 × 18 mm",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 87
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "A × P × E",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 87
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Acabamento lateral para a área da geladeira",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 98
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Alinha o conjunto pela frente",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 98
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Organiza a fiação da iluminação",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 98
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Fita de borda na cor da peça",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 99
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Painel MDF 18 mm",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 99
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Ponto para interruptor de iluminação",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 99
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Ponto estrutural para a instalação da iluminação embutida.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 100
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "geometry-confirmed",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 102
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Aéreo",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 105
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Aéreo do fogão",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 105
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "module-05",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 105
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Módulo 05",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 105
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "scene/traditional/module/upper-stove",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 106
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "800 × 700 × 400 mm",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 108
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Caixaria interna clara",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 115
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Fechamento amortecido",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 115
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Organização acima da área de preparo",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 115
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Dobradiças com amortecimento",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 116
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "MDF 18 mm",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 116
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Prateleira fixa",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 116
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "front-count-confirmed",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 120
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Aéreo",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 123
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Aéreo da pia",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 123
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "module-06",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 123
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Módulo 06",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 123
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "scene/traditional/module/upper-sink-microwave",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 124
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "1.200 × 800 × 400 mm",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 126
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Iluminação embutida compatível",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 134
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Nicho integrado para micro-ondas",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 134
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Porta basculante com pistão",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 134
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Dobradiças amortecidas",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 135
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Espera para micro-ondas",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 135
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Pistão para porta basculante",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 135
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Prever tomada para o forno micro-ondas.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 137
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "front-count-confirmed",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 139
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Aéreo",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 142
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Aéreo da geladeira",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 142
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "module-07",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 142
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Módulo 07",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 142
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "scene/traditional/module/upper-fridge",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 143
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "800 × 484 × 350 mm",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 145
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Caixaria interna clara",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 153
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Completa o aproveitamento vertical",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 153
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Fechamento amortecido",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 153
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Dobradiças com amortecimento",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 154
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "MDF 18 mm",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 154
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Prateleira fixa",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 154
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "ProductCatalog2D 1.0",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 163
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "PromobDxfSourceProfile 0.1.0",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 167
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "#faf9f6",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 174
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "160px 160px",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 174
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/materials/mdf-base.webp",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 174
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Base clara",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 174
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "base-light",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 174
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "published",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 174
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "#8d8178",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 175
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "160px 160px",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 175
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/materials/mdf-warm.webp",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 175
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Avelã",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 175
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "cocoa",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 175
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "published",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 175
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "#d7d5cf",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 176
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "160px 160px",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 176
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/materials/mdf-soft.webp",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 176
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "mist",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 176
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Névoa",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 176
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "published",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 176
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "160px 160px",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 177
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Aço",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 177
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "assets/materials/mdf-metal.webp",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 177
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "published",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 177
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "steel",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 177
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "#92775f",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 178
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "180px 180px",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 178
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/materials/mdf-wood.webp",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 178
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Bosque",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 178
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "fiber",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 178
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "published",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 178
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "#30312f",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 179
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "160px 160px",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 179
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/materials/mdf-dark.webp",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 179
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Carvão",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 179
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "published",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 179
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "shadow",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 179
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "#b7b0a7",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 182
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Mantém a pedra atual do conjunto.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 182
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Padrão",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 182
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "stone-existing",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 182
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "#b7b0a7",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 183
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Mantém a pedra padrão e inclui cuba nova.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 183
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Padrão + cuba nova",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 183
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "stone-light-sink",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 183
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "#e3ddd2",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 184
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "#e4ded2",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 184
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/materials/stone-light.webp",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 184
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Clara mineral",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 184
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Pedra clara de granulação fina.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 184
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "stone-cloud",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 184
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "#1e2a24",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 185
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "#1f2924",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 185
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/materials/stone-green.webp",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 185
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Pedra verde-escura de granulação contrastante.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 185
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "stone-grove",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 185
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Verde profundo",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 185
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "#181a19",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 186
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/materials/stone-dark.webp",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 186
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Pedra preta de granulação fina e reflexos discretos.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 186
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Preta mineral",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 186
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "stone-night",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 186
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Definir depois",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 189
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "none",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 189
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Portas na vertical · gavetas na horizontal",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 189
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Sem adicional na simulação.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 189
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Acabamento cromado.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 190
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Portas na vertical · gavetas na horizontal",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 190
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Tango / Íris",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 190
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "tango-chrome",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 190
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Família com variações de cor.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 191
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "ponto",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 191
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Ponto",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 191
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Portas na vertical · gavetas na horizontal",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 191
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Alça em cores",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 192
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "alca-colors",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 192
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Nome comercial em validação.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 192
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Portas na vertical · gavetas na horizontal",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 192
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "CM-08",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 197
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Iluminação embutida",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 197
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "lighting-08",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 197
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Luz sob os aéreos para a área de bancada.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 198
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Requer a lateral da geladeira e o aéreo da pia.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 199
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "move-stone",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 203
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Mover pedra",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 203
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Reposicionamento da pedra como serviço global.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 203
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Acabamento global de pedra para o rodapé da composição.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 204
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "custom",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 204
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "finishes",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 204
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Rodapé de pedra",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 204
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "services",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 204
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "stone-skirting",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 204
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Complemento global para a composição.",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 205
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "tempered-glass",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 205
+      },
+      "consumer": "schema, identifier, asset, style token, measurement or structural value",
+      "owner": "ProductCatalog2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, schema, style, asset, dimension or structural value; it is not an interface translation resource."
+      ]
+    },
+    {
+      "currentText": "Vidro temperado 8 mm",
+      "source": {
+        "file": "app/data/catalog-data.js",
+        "blobSha": "b457ec513a7e838e52bbf69b7d7ae10b55d7948e",
+        "line": 205
+      },
+      "consumer": "catalog module, option, accessory or service authored content",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered as authored product/catalog terminology, specifications, benefit, requirement or commercial description; decide localized content ownership and persistence before extraction."
+      ]
+    }
+  ]
+}

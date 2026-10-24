@@ -1,5 +1,40 @@
 # HANDOVER ATUAL — MobiliPresenter2D + Design System
 
+## Revalidação live — 24/10/2026
+
+Esta seção é o estado atual verificado; os snapshots antigos abaixo permanecem apenas como histórico.
+
+- Produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf` inclui ARC-03C/P-COMP-01 via #237.
+- PR #238 está DRAFT no head `b1e4d5e`. Após o deploy isolado READY `6adc77b6603e52a336fe045d` em `main@5ccb2a8`, o gate autenticado pós-deploy [#40103594199 SUCCESS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40103594199) passou em preflight, resgate, bootstrap do Config, negação do Admin, revogação e guardas de escopo. Previews #238 também estão SUCCESS no head atual. #232 continua aberta até revisão e reconciliação dos workflows legados.
+- PR #239 está DRAFT; seis checks passaram. No preview, anel claro/escuro computa 4 px com cores VIS-002; CSSOM leu offset 2,66667 px para regra declarada 3 px. Enter muda URL para `#main`, mas o foco permanece em `body`; o diff atual só muda estilo. [Evidência](../evidence/runtime/pr239-about-skip-link-preview-focus-2026-10-24.md). Sem homologação global.
+- Issue #224 continua aberta. Uma passagem em 390×844 no Production `main@5ccb2a8` manteve Lavanderia visível após selecionar grupo 2; não reproduziu a falha uma vez e não fecha a reprodução anterior 4/4.
+- PR #51 do Design System permanece aberta e DRAFT; consulte a head live na própria PR. A branch de handover contém inventário ARC-13 atualizado.
+- ARC-13: 480 ocorrências/392 valores distintos nas oito entradas HTML, com 464 localizáveis, quatro identificadores excluídos e 12 itens comerciais deferidos. Em JS, o heurístico inicial ligou 2.176 candidatas em 52 fontes; uma busca direcionada por sinks DOM acrescentou cinco rótulos de uma palavra. O índice atual liga e classifica **2.181 referências**: 728 localizáveis, 1.263 técnicas/não localizáveis e 190 itens deferidos (17 de apresentação, 173 autorais/configuráveis/comerciais). Não restam referências indexadas sem classificação, mas a busca direcionada não prova cobertura completa da geração DOM. Os três scripts inline de `app/config/index.html` foram revisados sem literais localizáveis e os dois arquivos de dados grandes sem texto humano. As decisões dos 190 itens, a convenção de chaves, 369 chaves ausentes no índice e 212 sufixos baseados em linha continuam em revisão: cinco chaves ausentes e 13 substituições numéricas têm propostas não canônicas; 364 ausentes e 199 numéricas seguem sem proposta. Não houve extração, migração ou alteração do produto. [Lotes DOM](../evidence/architecture/arc13-classified-admin-single-word-dom-sink-batch-2026-10-24.json) · [cobertura](../evidence/architecture/arc13-semantic-key-coverage-2026-10-24.md) · [convenção proposta](../evidence/architecture/arc13-semantic-key-convention-proposal-2026-10-24.json).
+- Os projetos Netlify principal e isolado reportam deploy Production READY em `main@5ccb2a8`, com nove Functions e uma Edge Function `access-check` presentes. A leitura não exercitou a chamada da função nem validou valores de ambiente.
+- O percentual ~22% é histórico/provisório, sem recálculo por pesos.
+
+### Snapshot histórico — 24/10/2026, 09:35 UTC
+
+O checkpoint a seguir descreve o estado observado naquela hora. Seus SHAs e estados de PR são históricos e foram substituídos pela revalidação acima.
+
+**Estimativa global:** permanece em aproximadamente **22%** conforme o plano canônico. A matriz V5 e o OIDC ganharam evidência técnica, mas as mudanças relacionadas continuam em PRs Draft/stacked; produto `main` ainda é `15e1cfb4866886649adbcd00fef9bef5e5843fda`. Não contar branches ou previews como integração publicada.
+
+### Estado revalidado
+
+- Design System `main`: `ae1be563d298ae4a6d384936cbb2d9d05ee449ae`. Os resultados VIS-002C × P-TOKEN-02B v0.2 abaixo continuam sendo o checkpoint técnico; a reconciliação não autoriza uso global de tokens.
+- Produto PR [#231](https://github.com/EAKerber/MobiliPresenter2D/pull/231): P-TOKEN-01B/02B, aberta **DRAFT/HOLD**, head `afb80965336083209eac93e2729de77170524ee5`; está divergente da `main` atual (`15e1cfb`, 24 commits à frente e 4 atrás) e seus cinco checks browser seguem falhando nesse head antigo. A recuperação desses fluxos está em #234/#236, sem alterar #231.
+- Produto PR [#234](https://github.com/EAKerber/MobiliPresenter2D/pull/234): ARC-03C, aberta **DRAFT/HOLD**, base `main@15e1cfb`, head `fbd00a9628c81b4902a8c679abb7ac72e93ca549`; fonte autoral/build e `pages:check` presentes, 11 checks documentados PASS.
+- Produto PR [#236](https://github.com/EAKerber/MobiliPresenter2D/pull/236): cinco ajustes de testes browser, **DRAFT/HOLD**, empilhada sobre #234 em `b5e06ff030e268fd934835fde1a6b99244908efc`. Diff de cinco arquivos; os cinco fluxos de browser V5 local e o gate de assets passaram (6/6 checks). `pages:check` permanece executável pela base #234.
+- Produto PR [#235](https://github.com/EAKerber/MobiliPresenter2D/pull/235): fixture experimental do Deploy Store, fechada **sem merge** após readback/hash V5 e negação anônima.
+- A issue [#232](https://github.com/EAKerber/MobiliPresenter2D/issues/232) permanece **aberta**. OIDC autenticado separado passou duas execuções integrais ([#40039686284](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40039686284) e [#40039882104](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40039882104)): Mobile/PiP, Keyboard, Flow, Summary/Preços e Stone 5/5; Admin negado, logout e replay negado. Os workflows antigos ainda precisam chegar à `main` com a separação entre fixture local positiva e teste anônimo negativo.
+
+### Próximo passo e limites
+
+Revisar a dependência #234 → #236 e a CI do head atual. Manter #231, #234 e #236 em DRAFT/HOLD; não integrar ou publicar sem decisão explícita. Não abrir outro preview para reproduzir os gates já aprovados, não reusar convites antigos e não declarar #232 resolvida enquanto a cobertura migrada não estiver integrada e lida de volta na `main`.
+
+---
+
+
 > **VIS-002C × P-TOKEN-02B v0.2 — RECONCILIAÇÃO TÉCNICA PASS (23/10):**
 > [Actions #39894163198 SUCCESS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39894163198)
 > na branch isolada produto [`integration/vis002c-p-token-02b-v2-20261023@34a305c`](https://github.com/EAKerber/MobiliPresenter2D/tree/integration/vis002c-p-token-02b-v2-20261023).
@@ -147,3 +182,171 @@ As issues #212/#213/#222 e pendências de publicação/Viewer da #228/#229 segue
 **~22% de trabalho ponderado concluído**, ante ~15% no relato anterior (**+7 pontos percentuais**), plausível **18–25%**. Ações executadas em branches e gates reduzem incerteza e esforço futuro, mas não representam a mesma porcentagem publicada em `main`. A infraestrutura e decisões estão à frente da adoção visual no produto.
 
 **Resumo de segurança:** nenhuma nova publicação de V5, schema, identidade, dados comerciais ou config privada foi feita por estes incrementos de arquitetura. A homologação visual continua dependente de `decisions.json`; `viewerPricePublication` somente sob controle explícito e inicialmente desligado.
+
+
+## Evidência runtime adicional — Preview #234, 24/10
+
+A auditoria somente de leitura no Deploy Preview #234, commit `fbd00a9`, confirmou as rotas públicas em contexto isolado, tema claro/escuro e preferência por movimento reduzido. Não houve overflow horizontal no recorte; 28/28 imagens de “Como funciona” carregaram após scroll. `/config/` redirecionou para `/access/` sem token. O foco de teclado medido diverge do registro do Design System em espessura e cor clara; os limites completos estão em [RUNTIME_AUDIT.md](../RUNTIME_AUDIT.md) e [runtime-evidence.json](../runtime-evidence.json). Isso não é auditoria de produção, homologação nem integração.
+
+
+A inspeção adicional do menu público em 390 × 844 escuro mostrou que Escape não o fechou em duas tentativas enquanto o foco permanecia no controle. O resultado foi registrado como observado somente no Preview #234; clique externo e produção continuam sem conclusão.
+
+
+### Diagnóstico do menu público — preview #234
+
+O evento Escape chega à página, mas a implementação ativa `landing.js` não o trata: o preview não carrega `header-menu.js`. O ramo experimental P-COMP-01 em `4ba9384` tem o handler e gate PASS; permanece fora de PR/merge. Como ele difere da base atual em 13 arquivos e altera saídas HTML, a adoção exige reconciliação com ARC-03C e novo `pages:check`; não reapliquei o ramo antigo.
+
+
+### Evidência de atualização do inventário de localização — 24/10/2026
+
+Os índices heurísticos V0-A existentes foram gerados contra produto `840a0cda`: somam 826 ocorrências candidatas em 26 fontes, com ressalvas explícitas de falsos positivos e cobertura incompleta. Comparei os hashes das 26 fontes com produto `main@5ccb2a8`: 19 ainda coincidem e 7 divergem (quatro HTML e três JS). A árvore atual tem 744 arquivos rastreados, incluindo 8 entradas HTML e 77 arquivos JS sob `app/` (entre eles testes e módulos de dados). Esses números definem o universo a classificar; **não** são contagem de strings localizáveis nem prova de cobertura. O próximo gate ARC-13 é revarrer fontes atuais, separar código de UI, testes, conteúdo comercial/autoria V5 e identificadores, e registrar linha/consumidor/chave/status antes de qualquer extração para bundles.
+
+
+### Primeiro lote de extração estática ARC-13 — 24/10/2026
+
+Foi produzido [arc13-static-html-candidates-main-2026-10-24.json](../evidence/architecture/arc13-static-html-candidates-main-2026-10-24.json) sobre as oito entradas HTML do produto `main@5ccb2a8`: **480 ocorrências / 392 valores distintos**, todas marcadas `candidate-unreviewed`, com arquivo, linha e rota. Isto é um índice lexical de candidatos, não cobertura final nem autorização para trocar textos. Os três blocos JavaScript embutidos em `app/config/index.html` (2.343 bytes no total), módulos JavaScript externos, mensagens geradas no DOM, dados comerciais/autoria V5 e textos CSS continuam fora deste lote. A classificação de dono e chave semântica permanece pendente. Próximo recorte: rastrear strings nos módulos de UI/runtime e nos scripts inline, mantendo catálogo/modelos V5 e identificadores fora do bundle localizável.
+
+
+### Varredura lexical das fontes JavaScript — 24/10/2026
+
+O segundo recorte ARC-13 está em [arc13-runtime-js-candidates-main-2026-10-24.json](../evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json), pinado em `MobiliPresenter2D@5ccb2a8`. Foram lidas **52 fontes JS de runtime**, excluindo 23 testes/ferramentas e deixando para exame separado `app/data/mask-data.js` e `app/data/stone-data.js`. A heurística encontrou 4.752 literais e marcou 2.176 ocorrências (1.466 valores distintos) para triagem. O arquivo contém hashes por fonte, linha, texto candidato, consumidor/owner ainda não atribuídos e status não revisado; um literal longo está truncado e marcado. Não é contagem final de strings localizáveis: comentários são ignorados, mas regex literals, templates interpolados, escapes JS, dados carregados e conteúdo DOM exigem revisão adicional. Os três scripts inline de `app/config/index.html` também seguem fora do lote.
+
+**Estado ARC-13:** cobertura bruta já começou em HTML e JS, mas a condição de saída permanece distante: classificar cada texto por owner/consumer e semântica, excluir identificadores/mensagens técnicas e dados comerciais/autoria V5, atribuir chaves, cobrir fontes inline/runtime que faltam e fechar exceções explícitas antes de qualquer migração de bundle.
+
+
+### Primeira classificação manual ARC-13 — 24/10/2026
+
+[arc13-classified-ui-js-batch-2026-10-24.json](../evidence/architecture/arc13-classified-ui-js-batch-2026-10-24.json) registra **27 entradas localizáveis** em três fontes atuais: controlador compartilhado de tema, confirmação de acesso e gerenciador de convites/acessos. Cada entrada tem chave semântica proposta, texto pt-BR atual, linha/blob de origem, consumer/owner e, quando aplicável, parâmetros dinâmicos. IDs de papel, email inserido pelo usuário, endpoints, códigos de erro internos e datas como dado ficaram fora. A classificação vale só para esses três arquivos, ainda é inventário documental e não introduziu bundle nem alterou o produto. Próximo: revisar as famílias de strings do Configurador/Admin e Viewer, mantendo conteúdo comercial V5 e textos autorados separados.
+
+
+### Classificação de strings do Viewer e detalhes técnicos — 24/10/2026
+
+[arc13-classified-viewer-configurator-batch-2026-10-24.json](../evidence/architecture/arc13-classified-viewer-configurator-batch-2026-10-24.json) classifica **33 entradas** com **41 referências de origem** em `app/viewer/technical-views.js`, `app/core/technical-drawings.js`, `app/core/scene-component.js` e no carrossel de detalhes de `app/app.js`. Inclui captions e notas de desenhos, dimensões, descrições acessíveis e navegação do carrossel. Campos de título/referência/segmentos e medidas continuam como parâmetros de domínio; o texto e a acessibilidade recebem as chaves candidatas. Os símbolos L/A/P e `mm` ficam marcados como rótulos/formato de domínio para revisão, em vez de serem traduzidos por inferência. A classificação é documental e focada neste subconjunto; nenhum código do produto foi alterado.
+
+
+### Readback da fixture auth CI e previews — 24/10/2026
+
+- PR produto #238 tem Deploy Previews READY, head `a2835c6`: [mobilipresenter2d](https://deploy-preview-238--mobilipresenter2d.netlify.app/) e [m2d-auth-ci-isolated](https://deploy-preview-238--m2d-auth-ci-isolated.netlify.app/). O segundo é o host dedicado previsto no workflow; o deploy Production em `main@5ccb2a8` é separado e não substitui esses previews.
+- Leitura de nomes/escopos, sem registrar valores: no projeto Netlify `m2d-auth-ci-isolated`, `DATABASE_URL` e `ACCESS_GATE_SECRET` estão presentes em Deploy Preview e Production (também nos demais contextos listados). As funções de acesso atuais leem essas duas chaves; `ACCESS_PUBLIC_ORIGIN` não aparece como requisito nesse caminho. A leitura não valida conectividade DB nem se os segredos dos diferentes contextos são iguais/diferentes.
+- No head atual de #238, o workflow autenticado executou após o deploy isolado: [#40103594199 SUCCESS](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40103594199). A execução bem-sucedida comprova que `CI_STAGING_SUPABASE_REF` e `CI_STAGING_DATABASE_URL` estavam disponíveis e passaram no preflight; os valores não foram lidos nem registrados. O workflow mantém o host `m2d-auth-ci-isolated.netlify.app`, o papel restrito `access_ci_fixture` e o banco interno confirmado.
+- Próxima etapa de CI-BASELINE-01: manter #232 aberta até revisão e integração dos workflows legados; não tratar os cinco fluxos V5 locais como testes autenticados em staging. Não inserir valores secretos no repositório, logs ou conversa.
+
+
+### Classificação estática de “Quem somos” — 24/10/2026
+
+[arc13-classified-static-about-batch-2026-10-24.json](../evidence/architecture/arc13-classified-static-about-batch-2026-10-24.json) classifica manualmente as **44 ocorrências** do inventário lexical de `/about/` (**42 valores distintos**), com chave semântica, arquivo/hash/linha, consumidor e owner. Inclui título e descrição da página, navegação, nomes acessíveis, texto editorial e rodapé. O nome de marca foi preservado como conteúdo de marca. Segmentos de texto separados por nós HTML continuam separados no inventário; a extração futura precisa permitir recomposição e ordem de frase por idioma. É evidência documental, sem alteração no produto nem bundle de tradução. As outras sete páginas e as demais fontes ARC-13 continuam em aberto.
+
+### Atualização de CI de autenticação — 24/10/2026
+
+O gate autenticado anterior [#40075575871](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40075575871) passou na revisão `a9129e1`. Após o deploy isolado READY `6adc77b6603e52a336fe045d`, a nova execução [#40103594199](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40103594199) também terminou **SUCCESS** no head `b1e4d5e5da798d82152e2fdeac6b8547e26d059a`. Preflight, resgate, bootstrap do Config, negação do Admin, revogação e guardas passaram; o artefato não contém URI/segredo/cookie/token. Gates Netlify dos previews #238 estão SUCCESS no head atual. Issue #232 permanece aberta até revisão e integração dos workflows legados; #238 segue DRAFT.
+
+
+### Classificação estática do Viewer — 24/10/2026
+
+[arc13-classified-static-viewer-batch-2026-10-24.json](../evidence/architecture/arc13-classified-static-viewer-batch-2026-10-24.json) classifica **17 ocorrências / 16 valores distintos** da entrada HTML de `/viewer/`, cobrindo metadados, navegação, rótulos da cena, instrução e acessibilidade. O conteúdo dinâmico de módulos, modelos e dados técnicos permanece separado como dado/domínio. É inventário documental; nenhum texto ou runtime do produto mudou.
+
+### Readback dos deploys Netlify após a ação do usuário — 24/10/2026
+
+O deploy atualmente publicado no projeto principal `mobilipresenter2d` está **READY**, contexto Production, branch `main`, commit `5ccb2a8`; o deploy isolado `m2d-auth-ci-isolated` também está **READY** em Production e no mesmo commit. O readback dos dois informa 9 Functions e 1 Edge Function implantadas, incluindo `access-check`. Isso confirma o estado do deploy e a presença do handler no pacote publicado; não foi feito teste de chamada da função nem validação dos valores de ambiente. As páginas principais seguem na main já integrada; a inspeção não publicou mudanças de código.
+
+
+### Classificação estática das páginas de acesso — 24/10/2026
+
+[arc13-classified-static-access-batch-2026-10-24.json](../evidence/architecture/arc13-classified-static-access-batch-2026-10-24.json) classifica **33 ocorrências / 27 valores** em `/access/` e `/access/manage.html`: títulos, navegação, acessibilidade, política de acesso, login e controles estáticos. Estados de grant, datas de expiração, papéis e mensagens do servidor ficam fora deste recorte. Somando os três lotes HTML documentados, são **94 ocorrências / 75 valores distintos entre lotes** nas páginas About, Viewer e Access. Ainda é inventário documental; sem alteração no produto ou criação de bundles.
+
+
+### Classificação estática da página Admin — 24/10/2026
+
+[arc13-classified-static-admin-batch-2026-10-24.json](../evidence/architecture/arc13-classified-static-admin-batch-2026-10-24.json) revisa as **68 ocorrências** de `/admin.html`: 64 textos de interface foram classificados como localizáveis; quatro valores internos (`admin`, `custom`, `finishes`, `services`) foram excluídos como identificadores estáveis. A classificação não altera a interface nem traduz conteúdo comercial do catálogo. O lote permanece documental.
+
+**Cobertura ARC-13 estática registrada até aqui:** cinco rotas e **162 ocorrências / 129 valores distintos entre lotes**, com 158 textos de interface classificados e quatro identificadores excluídos. Restam quatro entradas HTML no índice, scripts inline, conteúdo de runtime e revisão de dados/autoria comercial antes da extração.
+
+
+### Classificação estática do Configurador — 24/10/2026
+
+[arc13-classified-static-config-batch-2026-10-24.json](../evidence/architecture/arc13-classified-static-config-batch-2026-10-24.json) revisa as **45 ocorrências** estáticas de `/config/`: 37 controles/instruções foram classificados como localizáveis; oito trechos sobre políticas e serviços comerciais foram mantidos em revisão de ownership até confirmação da fonte canônica V5/catálogo. Scripts inline e textos gerados pelo runtime continuam fora deste lote. Sem alteração no produto.
+
+**Cobertura estática classificada/documentada até aqui:** seis das oito entradas HTML; **207 ocorrências / 165 valores distintos entre lotes**, sendo 195 localizáveis, quatro identificadores não localizáveis e oito itens comerciais deferidos. Permanecem sem classificação estática a landing `/` e `/how-it-works/`; a extração integral ainda depende de completar essas rotas, inventário JavaScript/inline e exceções de dados.
+
+
+### Classificação estática da landing — 24/10/2026
+
+[arc13-classified-static-landing-batch-2026-10-24.json](../evidence/architecture/arc13-classified-static-landing-batch-2026-10-24.json) classifica **44 ocorrências / 38 valores** da página inicial, incluindo metadados, navegação, chamadas de ação, acessibilidade, benefícios e fallback do carrossel. A ordem das chaves foi conferida com os consumidores do HTML; conteúdo gerado pelo runtime segue pendente.
+
+**Cobertura de inventário HTML:** sete das oito entradas, **251 ocorrências / 191 valores distintos entre lotes**; 239 textos de interface classificados, quatro identificadores excluídos e oito itens comerciais aguardando ownership. A entrada `/how-it-works/` permanece pendente. Também faltam scripts inline, mensagens de runtime e revisão dos lotes JS restantes.
+
+
+### Índice HTML reconciliado — 24/10/2026
+
+O índice [arc13-static-html-candidates-main-2026-10-24.json](../evidence/architecture/arc13-static-html-candidates-main-2026-10-24.json) agora liga as 480 ocorrências às classificações documentadas por rota: **464 localizáveis, quatro identificadores excluídos e 12 itens comerciais deferidos**; os **392 valores distintos** do inventário foram preservados. O HTML estático das oito rotas foi coberto. A condição ARC-13 não está concluída: fontes JS e scripts inline ainda exigem classificação, e os 12 itens deferidos precisam de owner canônico antes de eventual extração.
+
+
+### Classificação JS de baixo volume — 24/10/2026
+
+[arc13-classified-js-low-volume-batch-2026-10-24.json](../evidence/architecture/arc13-classified-js-low-volume-batch-2026-10-24.json) revisa **65 ocorrências candidatas em 22 fontes**: nove mensagens/rótulos da interface receberam chaves; 54 literais de código, schema, CSS/geométricos ou diagnóstico interno foram excluídos; dois valores de preço/aviso comercial permanecem deferidos. O lote cobre arquivos com até oito candidatos, fixados por blob e linha; não representa a revisão dos 52 arquivos nem a completude do scanner.
+
+
+### Revisão dos scripts inline do Configurador — 24/10/2026
+
+O arquivo [`arc13-classified-inline-config-scripts-2026-10-24.json`](../evidence/architecture/arc13-classified-inline-config-scripts-2026-10-24.json) registra os três blocos inline de `app/config/index.html` no produto `main@5ccb2a8`, hash `97c284c9831de05607ede0d024e4d919a898b7fa`, totalizando 2.343 bytes. Os blocos tratam de redirecionamento de hash de autenticação, escolha inicial do perfil de layout e controle de ponteiro para redimensionar a cena mobile; não há literais de interface a extrair. Este recorte está fechado para esse hash. Conteúdo gerado no DOM e strings de dados seguem fora dessa revisão.
+
+
+### Revisão de dados grandes ARC-13 — 24/10/2026
+
+O arquivo [`arc13-classified-large-data-files-2026-10-24.json`](../evidence/architecture/arc13-classified-large-data-files-2026-10-24.json) registra a inspeção integral dos blobs de `app/data/stone-data.js` e `app/data/mask-data.js` no produto `main@5ccb2a8`. As 52 strings de `stone-data.js` são chaves de estrutura/visibilidade ou payloads de imagem; as 47 de `mask-data.js` são `use strict`, caminhos de máscara e payloads de imagem. Nenhuma é texto humano a extrair. A conclusão vale somente para os hashes registrados.
+
+
+## Consolidação revalidada — 24/10/2026
+
+Base do produto: `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`; Production Netlify `6adc221479c773577ed45e23` READY. Este resumo complementa a linha do tempo acima; não substitui os registros históricos de cada gate.
+
+- **ARC-13:** 480 ocorrências HTML/392 valores distintos: 464 localizáveis, 4 identificadores excluídos e 12 itens comerciais deferidos. O índice JS começou com 2.176 candidatos heurísticos em 52 fontes; a varredura direcionada de sinks textuais nos mesmos 52 blobs (todos com hash correspondente) encontrou cinco rótulos de uma palavra fora da heurística. O índice passou a ligar e classificar 2.181 referências: 728 textos de interface, 1.263 itens técnicos e 190 itens de conteúdo/domínio deferidos. O lote suplementar [`arc13-classified-admin-single-word-dom-sink-batch-2026-10-24.json`](../evidence/architecture/arc13-classified-admin-single-word-dom-sink-batch-2026-10-24.json) descreve os cinco rótulos e os limites da busca direcionada; ela não certifica cobertura completa de toda construção DOM. Os três scripts inline de `app/config/index.html` foram revistos (2.343 bytes; zero texto localizável). `stone-data.js` e `mask-data.js` foram revisados nos hashes registrados (zero texto humano). A checagem de chave semântica encontrou 369/728 ocorrências localizáveis sem chave e outras 212 com identificadores terminados no número da linha, ainda não considerados estáveis. Cinco rótulos administrativos receberam propostas contextuais separadas, não canônicas, e o índice permanece sem alteração. Permanecem a descoberta de outros caminhos de texto gerado no DOM, ownership dos itens deferidos, convenção de chaves estáveis, extração e migração. Registros: [cobertura](../evidence/architecture/arc13-semantic-key-coverage-2026-10-24.md) e [propostas](../evidence/architecture/arc13-semantic-key-proposal-admin-sinks-2026-10-24.json).
+- **DS-05:** DS-05A continua incompleto. O workflow autenticado da PR produto #238 passou e a fixture abre `/config/`, confirma o workspace e revoga a sessão, mas não verifica DOM do contador nem da barra de preço/próxima etapa. A mesma fixture exige 401/403 de `/api/admin-bootstrap`, portanto não valida opções do Admin. Registro: [limite da fixture autenticada](../evidence/runtime/ds05a-ci-auth-fixture-limit-2026-10-24.md). Os dois alvos do Config podem ser acrescentados à observação da fixture existente; as opções do Admin ainda exigem sessão administrativa de teste ou fixture separado explicitamente autorizado. DS-05B/DS-05C também seguem pendentes. Não ampliar permissões do papel `access_ci_fixture` por inferência.
+- **NAV-004/menu público:** em Production `main@5ccb2a8`, um percurso móvel 390×844 validou Tab/Enter para abrir, foco no primeiro link, navegação por Tab, fechamento por Escape com retorno de foco e fechamento por clique externo. O menu e o botão não tinham animação em execução com movimento reduzido. Esta amostra não cobre todos os estados/temas. [Evidência](../evidence/runtime/public-menu-production-escape-2026-10-24.md).
+- **NAV-005 / issue produto #218:** a composição compacta foi simulada sem alteração de código e documentada em [evidência temporária](../evidence/runtime/nav005-public-compact-header-proposal-2026-10-24.md). A decision canônica continua com `implementationAuthorized: false`; implementação, homologação visual completa e fechamento da issue não foram feitos.
+- O arquivo original HTML v0.2 e o inventário original de 43 famílias ainda não estão importados neste repositório. A lacuna de recuperação permanece aberta; nenhuma fonte ausente foi reconstruída por inferência.
+- Nenhuma execução desta revalidação alterou código/runtime do produto, variáveis/secrets, sessão de conta ou produção. A estimativa geral aproximada de 22% continua histórica/provisória; sem pesos definidos, não foi recalculada.
+
+
+
+- **About / link de salto:** na Production `main@5ccb2a8`, Enter no link atualiza a âncora para `#main`, mas o foco termina em `body`. O preview da PR #239 confirma o mesmo comportamento depois da proposta de estilo; o diff continua sem transferência de foco ao destino. [Production](../evidence/runtime/about-skip-link-production-focus-2026-10-24.md) · [Preview #239](../evidence/runtime/pr239-about-skip-link-preview-focus-2026-10-24.md). Sem mudança de produto ou homologação de comportamento.
+
+- **CI-BASELINE-01 / Netlify:** deploy isolado `6adc77b6603e52a336fe045d` READY, publicado em `main@5ccb2a8`, com `access-check`. Readback de nomes/escopos confirma `DATABASE_URL` e `ACCESS_GATE_SECRET` nos contextos registrados; seus valores não foram lidos. A conexão CI usa credenciais separadas do GitHub Environment `ci-auth-isolated`; o gate autenticado pós-deploy #40103594199 terminou SUCCESS, validando a conectividade e a fixture limitada naquele momento. [Contextos e limites](../evidence/runtime/netlify-ci-auth-environments-2026-10-24.md).
+
+- **ARC-13 / convenção de chaves:** há uma proposta não canônica de convenção semântica com 13 mapeamentos de exemplo para sufixos numéricos. Mantém namespaces e parâmetros como contratos de revisão, sem alterar índice ou produto. Faltam revisão/aprovação, outros 199 casos numéricos sem exemplo e 364 ocorrências sem proposta de chave (cinco sinks já têm lote separado); [proposta](../evidence/architecture/arc13-semantic-key-convention-proposal-2026-10-24.json).
+
+- **Landing / Como funciona:** Production não tem link de salto ao conteúdo nas duas rotas; primeiro Tab foca a marca e `main` não tem id. O anel de foco dessa marca também difere de VIS-002. [Evidência](../evidence/runtime/public-skip-navigation-focus-2026-10-24.md). Achado observado; sem implementação ou decisão inferida.
+
+- **VIS-002 / foco público:** a amostra da Landing mediu dez paradas de Tab em claro/escuro. As regras fonte declaram 3 px/offset 3 px globalmente e 3 px/offset 2 px no controle de tema, abaixo dos 4 px/offset 3 px aprovados. A CSSOM retornou 2.67 px para regra e teste inline de 3 px; a causa não foi identificada. [Evidência](../evidence/runtime/public-focus-ring-production-component-sample-2026-10-24.md). Não autoriza aplicação global.
+
+- **VIS-002 / origem do foco:** a folha pública declara 3 px/offset 3 px; `ui-theme.css` força a cor clara `#6E512E` e o botão de tema declara offset 2 px. O About da PR #239 propõe 4/3 px localmente. [Mapa de escopo proposto](../evidence/architecture/vis002-focus-ring-source-map-proposal-2026-10-24.md); sem mudança de CSS ou canonização.
+
+
+- **VIS-002 / mapa estático de foco ampliado:** oito entradas do produto mapeadas para as folhas consumidas. Há exceções de 2 px/2 px e 2 px/3 px em Configurador, Admin e Como funciona, além de hotspots sem outline explícito no Viewer/Configurador com pistas alternativas que ainda precisam de avaliação runtime. Escopo proposto, sem declarar falha nem alterar tokens/CSS: [mapa das folhas e componentes](../evidence/architecture/vis002-focus-ring-source-map-proposal-2026-10-24.md).
+- **VIS-002 / Viewer runtime:** em Production, o módulo 02 exibiu borda dourada e marcador ao receber foco por Tab em claro e escuro; o foco não ativou o módulo. Contraste e demais superfícies seguem sem medição. [Registro](../evidence/runtime/viewer-scene-hotspot-keyboard-focus-production-2026-10-24.md).
+- **VIS-002 / Como funciona runtime:** o botão “Compra em escala” recebeu foco por Tab; no tema claro, CSSOM confirmou `#6E512E` sobre a superfície opaca `#25231F`, razão calculada 2,15:1. Leituras de offset foram 2.66667 px e, na confirmação, 3 px como na fonte; diferença sem causa isolada. O risco está observado nesta combinação. Tema escuro foi visto sem readback CSSOM; outras superfícies permanecem sem cobertura. [Registro](../evidence/runtime/how-it-works-economy-action-focus-production-2026-10-24.md).
+- **VIS-002 / contraste em Como funciona:** CSSOM confirmou `#6E512E` no outline sobre o fundo opaco `#25231F` em tema claro; o contraste calculado é 2,15:1. Risco observado só para este botão/rota/viewport; não generalizar. O pai imediato do botão é transparente e o offset positivo mantém o traço fora do preenchimento translúcido do próprio cartão. [Registro](../evidence/runtime/how-it-works-economy-action-focus-production-2026-10-24.md).
+
+
+- **Login administrativo / responsivo em Production:** `/access/manage.html` redirecionou para o formulário de login em `/admin.html`; 1280×720, 390×844 e 320×700 CSS px sem overflow horizontal nos estados observados. Os campos estavam preenchidos pelo navegador; nenhum valor foi lido, alterado ou enviado, e não se concluiu que o perfil estivesse limpo. O fluxo autenticado não foi aberto. [Evidência](../evidence/runtime/admin-login-no-session-focus-production-2026-10-24.md).
+- **Como funciona / imagens e movimento:** em 1280×720, após percorrer a rota Production, 28/28 imagens carregaram; 0 falhas e 0 imagens sem `alt`. Movimento reduzido retornou `false` e a API de animações não estava disponível; estado de animação e resposta a movimento reduzido nesta rota continuam não verificados. [Auditoria](../evidence/runtime/how-it-works-images-motion-production-2026-10-24.md).
+
+
+- **NAV-005 / cabeçalho compacto atual em Production:** na Landing, em 310 e 290 px, `html/body` computaram `min-width:320px`; em 290 px houve corte nos dois temas. Em `/how-it-works/`, a 290 px escuro, `overflow-x:clip` cortou título/texto e deixou 11 px do botão de menu visíveis na largura útil. Issue #218 segue aberta; a proposta compacta continua simulação documental, sem correção aplicada. [Evidência](../evidence/runtime/landing-public-compact-header-production-2026-10-24.md).
+
+- **Rotas públicas / teclado e imagens em Production:** na passagem 390×844 escura, Landing/About/Viewer tiveram 18/18, 3/3 e 22/22 imagens completas, sem falha, sem `alt` ausente e sem overflow. Na Landing, Escape fechou o menu e restaurou foco ao botão depois de o splash já estar oculto. Em About, o link “Pular para o conteúdo” moveu a URL para `#main`, mas deixou foco em `body`; problema observado, sem correção de produto. Movimento reduzido retornou `false`; sem emulação de mídia ou leitura de animações nesta sessão, estados com redução e animações ativas seguem desconhecidos. Falhas/rede lenta não simuladas. [Evidência](../evidence/runtime/public-routes-keyboard-images-production-2026-10-24.md).
+
+- **VIS-002 / contraste público atual em Production:** amostra 1280×720 em Landing, About e Como funciona nos dois temas mediu 4,79:1–13,85:1 nos pares opacos selecionados. A legenda da ilustração em Como funciona agora tem faixa escura opaca e mede 13,85:1 no tema escuro. Esses valores atuais divergem de alguns registros históricos; amostra não encerra issue #216 nem homologa cobertura global. Superfícies transparentes/imagens e cobertura ampla permanecem pendentes. [Evidência](../evidence/runtime/public-text-contrast-production-themes-2026-10-24.md).
+
+- **NAV-005 / cabeçalhos públicos em 320 px:** em About e Viewer, `innerWidth=320` e `clientWidth=305` por scrollbar vertical de 15 px; o documento/header segue em 320 px e há rolagem horizontal. Como funciona recorta a mesma diferença com `overflow-x:clip`. Em 335 px as três rotas não tiveram overflow; About também ficou sem overflow em 360/390 px. Observação pontual, sem inferir breakpoint nem aplicar proposta; issue #218 continua aberta. [Evidência](../evidence/runtime/public-headers-320-production-2026-10-24.md).
+
+- **NAV-005 / comparação pública até 290 px:** a 290×700 escuro, About e Viewer mantêm 320 px contra 275 px úteis (overflow 45 px). About corta título/texto e deixa 11 px do menu; Viewer corta conteúdo/preço e deixa 13 px do menu. A 320 px, overflow de 15 px; em 335 px as três rotas amostradas não transbordam. Nenhum breakpoint inferido ou CSS alterado; issue #218 segue aberta. [Evidência](../evidence/runtime/public-headers-320-production-2026-10-24.md).
+
+
+- **Como funciona / controles expansíveis por teclado em Production:** em 1280×720 escuro, Enter e Espaço expandiram os 6/6 disclosures nativos e os 6/6 cartões de economia; estados e conteúdos apareceram no DOM/árvore de acessibilidade. Leitores de tela, outros navegadores/temas/larguras e aparência/contraste do foco não foram avaliados. Nenhum código de produto alterado nem achado encerrado. [Evidência](../evidence/runtime/how-it-works-accordion-keyboard-production-2026-10-24.md).
+
+- **VIS-002 / foco nos seis cartões de economia em Production:** contorno computado em 2 px/offset 3 px. Tema claro: `#6E512E` sobre a seção opaca `#25231F`, 2,15:1; tema escuro: `#D8BC7C` sobre `#25231F`, 8,52:1. Falha de contraste no tema claro e diferença de largura frente à referência de 4 px. Escopo restrito aos seis cartões. Sem escolha de correção nem alteração do produto. [Evidência](../evidence/runtime/how-it-works-economy-focus-six-cards-production-2026-10-24.md).
+
+- **Como funciona / movimento em Production:** o snapshot 1280×720 escuro não encontrou `animation-name` em elementos/pseudo-elementos; `prefers-reduced-motion` estava desligado. As folhas fonte publicadas incluem regra de redução global/local. O escopo não disponibilizou `document.getAnimations`, então atividade de transições e comportamento reduzido em runtime seguem desconhecidos. [Evidência](../evidence/runtime/how-it-works-motion-css-runtime-snapshot-production-2026-10-24.md).
+
+- **FIND-017 / proposta VIS-002:** para os seis cartões sobre `#25231F`, a proposta A (anel `#D8BC7C`) calcula 8,52:1; a B (`#8B6A40`) calcula 3,16:1. Ambas usam 4 px/offset 3 px da referência. Proposta experimental; nenhuma escolha aprovada, `decisions.json` intacto, implementação não autorizada. [Comparação](../evidence/architecture/vis002-economy-dark-surface-focus-candidate-2026-10-24.md).

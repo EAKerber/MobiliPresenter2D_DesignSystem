@@ -534,6 +534,21 @@
       "relatedProductIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/224",
       "relatedIssueScope": "Product issue #224 tracks this carousel pagination mismatch. Product issue #207 separately requests an availability message for environments without viewers and does not cover this defect.",
       "productIssueCreated": true
+    },
+    {
+      "observedAt": "2026-10-24",
+      "route": "/",
+      "control": "mobile environment carousel and selection",
+      "status": "prior pagination mismatch not reproduced in one current-production observation; issue remains open",
+      "theme": "dark",
+      "viewport": "390x844 CSS px",
+      "productCommit": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+      "netlifyDeployId": "6adc221479c773577ed45e23",
+      "evidence": "In one isolated browser pass, opened carousel group 2 and selected Lavanderia; the detail heading updated and the selected card remained visible in group 2. No page reset was observed. Screenshot was inspected in session but not persisted.",
+      "interpretation": "This single non-reproduction does not supersede the earlier 4/4 reproduction on the previous production commit and is insufficient to close issue #224 or infer a code fix.",
+      "relatedProductIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/224",
+      "screenshotPersisted": false,
+      "productDataChanged": false
     }
   ],
   "contrastScreening": {
@@ -1216,15 +1231,15 @@
     }
   },
   "latestRuntimeRelease": {
-    "observedAt": "2026-10-20",
+    "observedAt": "2026-10-24",
     "repository": "EAKerber/MobiliPresenter2D",
     "branch": "main",
-    "productCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
-    "netlifyDeployId": "6ad6c3b51b6be05647167f94",
+    "productCommit": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+    "netlifyDeployId": "6adc221479c773577ed45e23",
     "deployStatus": "ready",
-    "staticInventoryCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
-    "note": "Deploy de produção confirmado no commit indicado. O inventário estático cobre as mudanças HTML/CSS/assets desde 483ef2e; a validação autenticada pós-login segue pendente em FIND-007.",
-    "publishedAt": "2026-10-20T01:28:40.575Z"
+    "staticInventoryCommit": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+    "publishedAt": "2026-10-24T03:12:38.561Z",
+    "note": "Deploy de produção confirmado por readback Netlify; a observação atual de 390x844 não reproduziu #224 em uma única passagem. Issue permanece aberta; validação repetida e estados adicionais ainda faltam."
   },
   "productFindingResolutionStatus": {
     "FIND-006": {
@@ -1415,5 +1430,614 @@
     }
   },
   "recordSetSemantics": "This file is a cumulative evidence record. The root-level observedAt/deployedRevision fields describe the original 2026-10-18 snapshot, not the latest audit. Later passes are append-only named sections (for example g1PublicRuntimeAudit); use each section's own date, product commit and deploy ID as the authority for that pass.",
-  "authenticationCompletedByUserScope": "Historical root-level flag: the user completed authentication during the 2026-10-19 private runtime audit. It does not mean that authentication was performed in the 2026-10-21 G1 public audit; that pass was anonymous and read no authenticated data."
+  "authenticationCompletedByUserScope": "Historical root-level flag: the user completed authentication during the 2026-10-19 private runtime audit. It does not mean that authentication was performed in the 2026-10-21 G1 public audit; that pass was anonymous and read no authenticated data.",
+  "previewAudit20261024": {
+    "observedAt": "2026-10-24T02:35:35Z",
+    "productRepository": "EAKerber/MobiliPresenter2D",
+    "pullRequest": 234,
+    "productCommit": "fbd00a9628c81b4902a8c679abb7ac72e93ca549",
+    "netlifyDeploy": {
+      "id": "6adc0c519cc524d721abd893",
+      "state": "ready",
+      "context": "deploy-preview",
+      "reviewId": 234
+    },
+    "method": {
+      "readOnly": true,
+      "isolatedBrowserContext": true,
+      "loginSubmitted": false,
+      "tokenProvided": false,
+      "screenshotsPersisted": false
+    },
+    "environment": {
+      "viewports": [
+        {
+          "width": 390,
+          "height": 844,
+          "role": "mobile"
+        },
+        {
+          "width": 1366,
+          "height": 900,
+          "role": "desktop"
+        }
+      ],
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "prefersReducedMotion": "reduce"
+    },
+    "routeObservations": [
+      {
+        "route": "/",
+        "viewport": "390x844",
+        "theme": "light",
+        "noHorizontalOverflow": true,
+        "images": {
+          "loaded": 18,
+          "total": 18
+        }
+      },
+      {
+        "route": "/about/",
+        "viewport": "390x844",
+        "theme": "light",
+        "noHorizontalOverflow": true,
+        "images": {
+          "loaded": 3,
+          "total": 3
+        },
+        "keyboard": {
+          "firstTabTarget": "skip link",
+          "focusVisible": true,
+          "outline": "3px solid #6E512E",
+          "offset": "3px"
+        }
+      },
+      {
+        "route": "/about/",
+        "viewport": "1366x900",
+        "theme": "dark",
+        "keyboard": {
+          "firstTabTarget": "skip link",
+          "focusVisible": true,
+          "outline": "3px solid #D8BC7C",
+          "offset": "3px"
+        }
+      },
+      {
+        "route": "/how-it-works/",
+        "viewports": [
+          "390x844",
+          "1366x900"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "noHorizontalOverflow": true,
+        "images": {
+          "loaded": 28,
+          "total": 28,
+          "lazyLoadedAfterScroll": 24,
+          "failed": 0
+        }
+      },
+      {
+        "route": "/config/",
+        "finalRoute": "/access/",
+        "viewport": "1366x900",
+        "theme": "dark",
+        "result": "redirected; access page reported invalid or missing token",
+        "inputs": 0
+      },
+      {
+        "route": "/access/",
+        "viewports": [
+          "390x844",
+          "1366x900"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "noHorizontalOverflow": true,
+        "inputs": 0,
+        "logoLoaded": true,
+        "invalidTokenState": true
+      }
+    ],
+    "focusReference": {
+      "light": "#8B6A40",
+      "dark": "#D8BC7C",
+      "width": "4px",
+      "offset": "3px",
+      "status": "approved design-system record; preview differs in light color and both widths"
+    },
+    "limitations": [
+      "not production evidence",
+      "no authenticated user/session tested",
+      "full keyboard sequences not covered",
+      "network or image failure states not tested",
+      "contrast not measured for all elements",
+      "video playback not tested"
+    ],
+    "menuKeyboard": {
+      "route": "/",
+      "viewport": "390x844",
+      "theme": "dark",
+      "openedBy": "menu toggle",
+      "ariaExpandedOnOpen": true,
+      "visibleNavigationLinks": 3,
+      "escapeAttempts": 2,
+      "ariaExpandedAfterEachEscape": true,
+      "navigationVisibleAfterEachEscape": true,
+      "focusAfterEscape": "menu toggle",
+      "outsideClick": "not verified",
+      "scope": "PR #234 preview only",
+      "sourceTrace": {
+        "runtimeHead": "fbd00a9628c81b4902a8c679abb7ac72e93ca549",
+        "loadedScripts": [
+          "/landing/landing.js?v=root-assets-r1"
+        ],
+        "notRequestedScripts": [
+          "/landing/header-menu.js"
+        ],
+        "activeHandler": {
+          "clickToggle": true,
+          "closeOnNavigationLink": true,
+          "escapeHandler": false,
+          "outsidePointerHandler": false
+        },
+        "capturedEscape": {
+          "eventReachedDocument": true,
+          "target": "BUTTON",
+          "defaultPrevented": false,
+          "ariaExpandedAfter": true,
+          "navVisibleAfter": true
+        },
+        "candidate": {
+          "branch": "architecture/p-comp-01-public-menu-20261021",
+          "commit": "4ba9384733a8cb46ad8a6c7c8ef3b9aebe25cd93",
+          "headerMenuLoadedByIndex": true,
+          "escapeHandler": true,
+          "outsidePointerHandler": true,
+          "focusManagement": true,
+          "workflowRun": 39697470826,
+          "workflowConclusion": "success"
+        },
+        "currentMainTreeComparison": {
+          "base": "15e1cfb4866886649adbcd00fef9bef5e5843fda",
+          "candidate": "4ba9384733a8cb46ad8a6c7c8ef3b9aebe25cd93",
+          "added": 2,
+          "deleted": 1,
+          "modified": 10,
+          "totalDifferentPaths": 13
+        },
+        "integrationStatus": "candidate not directly applicable; reconcile generated HTML with ARC-03C source authority and rerun pages:check"
+      }
+    }
+  },
+  "productionAudit20261024PublicRoutes": {
+    "observedAt": "2026-10-24",
+    "site": "https://casaemmodulos.casa/",
+    "deployedRevision": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+    "netlifyDeployId": "6adc221479c773577ed45e23",
+    "scope": "Public, read-only route pass; temporary viewport 390x844 CSS px, dark theme.",
+    "routeImages": {
+      "/": {
+        "complete": 18,
+        "failed": 0,
+        "withoutAlt": 0,
+        "horizontalOverflow": false
+      },
+      "/about/": {
+        "complete": 3,
+        "failed": 0,
+        "withoutAlt": 0,
+        "horizontalOverflow": false
+      },
+      "/viewer/": {
+        "complete": 22,
+        "failed": 0,
+        "withoutAlt": 0,
+        "horizontalOverflow": false
+      }
+    },
+    "keyboard": {
+      "landing": "introSplash was already hidden at first observation; click opened primaryNav; Escape closed it and restored focus to menuToggle. Active splash click not verified.",
+      "about": "Skip link changed URL to /about/#main, but focus ended at BODY; main#main did not receive focus and scrollY remained 0."
+    },
+    "reducedMotion": {
+      "mediaQueryResult": false,
+      "emulationAvailable": false,
+      "animationsApiAvailable": false,
+      "status": "response to reduced motion and active animations on these routes not verified"
+    },
+    "limitations": [
+      "No image failure or slow-network simulation.",
+      "Single observation per route and viewport.",
+      "No product code or data changed."
+    ],
+    "evidence": "evidence/runtime/public-routes-keyboard-images-production-2026-10-24.md"
+  },
+  "productionAudit20261024PublicTextContrast": {
+    "observedAt": "2026-10-24",
+    "routeSet": [
+      "/",
+      "/about/",
+      "/how-it-works/"
+    ],
+    "viewportCssPx": "1280x720",
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "deployedRevision": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+    "netlifyDeployId": "6adc221479c773577ed45e23",
+    "contrastRatios": {
+      "landingHeroDescription": {
+        "light": 5.41,
+        "dark": 8.61
+      },
+      "howHeroNote": {
+        "light": 5.41,
+        "dark": 8.61
+      },
+      "howStudyBandEyebrow": {
+        "light": 5.6,
+        "dark": 8.78
+      },
+      "howStudyArtCaption": {
+        "light": 4.95,
+        "dark": 13.85
+      },
+      "howLaunchBadge": {
+        "light": 5.69,
+        "dark": 5.69
+      },
+      "aboutLeadAndOpeningParagraphs": {
+        "light": 4.79,
+        "dark": 10
+      },
+      "aboutScaleParagraphs": {
+        "light": 5.41,
+        "dark": 8.61
+      },
+      "aboutSectionEyebrows": {
+        "lightRange": [
+          6.25,
+          6.7
+        ],
+        "darkRange": [
+          10.01,
+          11.63
+        ]
+      }
+    },
+    "method": "Computed DOM foreground and nearest opaque CSS surface; relative-luminance ratio.",
+    "limits": [
+      "One pass per route and theme.",
+      "About reading samples lead/opening paragraphs, scale section, and section labels, not every text.",
+      "No global conformance, transparent/image surfaces beyond the explicit dark figcaption stripe, non-text contrast, or all interaction states certified.",
+      "Historical measurements may differ from this deployed snapshot."
+    ],
+    "evidence": "evidence/runtime/public-text-contrast-production-themes-2026-10-24.md",
+    "productCodeChanged": false
+  },
+  "productionAudit20261024PublicHeaders320": {
+    "observedAt": "2026-10-24",
+    "deployedRevision": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+    "netlifyDeployId": "6adc221479c773577ed45e23",
+    "viewportCssPx": {
+      "narrow": "290x700",
+      "control": "335x760",
+      "aboutAdditional": [
+        "360x800",
+        "390x844"
+      ]
+    },
+    "routeResults": {
+      "/about/": {
+        "at320": {
+          "themes": [
+            "dark",
+            "light"
+          ],
+          "innerWidth": 320,
+          "documentClientWidth": 305,
+          "documentScrollWidth": 320,
+          "bodyWidth": 320,
+          "headerWidth": 320,
+          "horizontalScrollbarObserved": true
+        },
+        "at335": {
+          "documentClientWidth": 320,
+          "documentScrollWidth": 320,
+          "horizontalOverflow": false
+        },
+        "at360And390": {
+          "horizontalOverflow": false
+        },
+        "menu": "click opened; Escape closed and restored focus to toggle",
+        "at290": {
+          "theme": "dark",
+          "innerWidth": 290,
+          "documentClientWidth": 275,
+          "documentScrollWidth": 320,
+          "bodyWidth": 320,
+          "headerWidth": 320,
+          "menu": {
+            "x": 264,
+            "right": 306,
+            "visibleWithinLayout": 11
+          },
+          "horizontalScrollbarObserved": true,
+          "visibleClipping": "heading and body text"
+        }
+      },
+      "/viewer/": {
+        "at320": {
+          "themes": [
+            "light",
+            "dark"
+          ],
+          "innerWidth": 320,
+          "documentClientWidth": 305,
+          "documentScrollWidth": 320,
+          "bodyWidth": 320,
+          "headerWidth": 320,
+          "horizontalScrollbarObserved": true
+        },
+        "at335": {
+          "documentClientWidth": 320,
+          "documentScrollWidth": 320,
+          "horizontalOverflow": false
+        },
+        "at290": {
+          "theme": "dark",
+          "innerWidth": 290,
+          "documentClientWidth": 275,
+          "documentScrollWidth": 320,
+          "bodyWidth": 320,
+          "headerWidth": 320,
+          "menu": {
+            "x": 262,
+            "right": 306,
+            "visibleWithinLayout": 13
+          },
+          "horizontalScrollbarObserved": true,
+          "visibleClipping": "card content and price"
+        }
+      },
+      "/how-it-works/": {
+        "at320": {
+          "theme": "dark",
+          "innerWidth": 320,
+          "documentClientWidth": 305,
+          "documentScrollWidth": 320,
+          "bodyWidth": 320,
+          "headerWidth": 320,
+          "htmlMinWidth": "320px",
+          "bodyMinWidth": "320px",
+          "pageOverflowX": "clip"
+        },
+        "at335": {
+          "documentClientWidth": 320,
+          "documentScrollWidth": 320,
+          "horizontalOverflow": false
+        },
+        "at290": {
+          "theme": "dark",
+          "innerWidth": 290,
+          "documentClientWidth": 275,
+          "documentScrollWidth": 320,
+          "bodyWidth": 320,
+          "headerWidth": 320,
+          "menu": {
+            "x": 264,
+            "right": 306,
+            "visibleWithinLayout": 11
+          },
+          "pageOverflowX": "clip"
+        }
+      }
+    },
+    "environmentNote": "The browser had a 15 CSS px vertical scrollbar, so innerWidth 320 corresponded to document clientWidth 305. The 335 px sample is an observation, not an inferred CSS breakpoint.",
+    "evidence": "evidence/runtime/public-headers-320-production-2026-10-24.md",
+    "productCodeChanged": false
+  },
+  "productionAudit20261024HowItWorksAccordionKeyboard": {
+    "observedAt": "2026-10-24",
+    "site": "https://casaemmodulos.casa/",
+    "deployedRevision": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+    "netlifyDeploymentId": "6adc221479c773577ed45e23",
+    "route": "/how-it-works/",
+    "viewport": {
+      "width": 1280,
+      "height": 720,
+      "theme": "dark"
+    },
+    "session": "anonymous",
+    "prefersReducedMotion": false,
+    "disclosureControls": [
+      {
+        "section": "foundations",
+        "control": "Evoluir a forma de produzir",
+        "key": "Enter",
+        "result": "expanded",
+        "contentInAccessibilityTree": true
+      },
+      {
+        "section": "foundations",
+        "control": "Eficiência com liberdade",
+        "key": "Space",
+        "result": "expanded",
+        "contentInAccessibilityTree": true
+      },
+      {
+        "section": "foundations",
+        "control": "Transparência faz parte do produto",
+        "key": "Enter",
+        "result": "expanded",
+        "contentInAccessibilityTree": true
+      },
+      {
+        "section": "study",
+        "control": "Plantas e dimensões",
+        "key": "Space",
+        "result": "expanded",
+        "contentInAccessibilityTree": true
+      },
+      {
+        "section": "study",
+        "control": "Circulação e ergonomia",
+        "key": "Enter",
+        "result": "expanded",
+        "contentInAccessibilityTree": true
+      },
+      {
+        "section": "study",
+        "control": "Necessidades de armazenamento",
+        "key": "Space",
+        "result": "expanded",
+        "contentInAccessibilityTree": true
+      }
+    ],
+    "economyCards": [
+      {
+        "control": "Compra em escala",
+        "key": "Enter",
+        "ariaExpanded": true,
+        "contentAvailable": true
+      },
+      {
+        "control": "Compras coletivas",
+        "key": "Space",
+        "ariaExpanded": true,
+        "contentAvailable": true
+      },
+      {
+        "control": "Produção planejada",
+        "key": "Enter",
+        "ariaExpanded": true,
+        "contentAvailable": true
+      },
+      {
+        "control": "Aproveitamento de material",
+        "key": "Space",
+        "ariaExpanded": true,
+        "contentAvailable": true
+      },
+      {
+        "control": "Engenharia já estudada",
+        "key": "Enter",
+        "ariaExpanded": true,
+        "contentAvailable": true
+      },
+      {
+        "control": "Menos retrabalho",
+        "key": "Space",
+        "ariaExpanded": true,
+        "contentAvailable": true
+      }
+    ],
+    "focus": "Final accessibility snapshot retained focus on the last disclosure activated.",
+    "limits": [
+      "Single public route, browser, dark theme and 1280x720 viewport",
+      "No screen-reader, cross-browser, other theme/viewport, focus appearance/contrast, or reduced-motion-on assessment"
+    ],
+    "productCodeChanged": false,
+    "evidence": "evidence/runtime/how-it-works-accordion-keyboard-production-2026-10-24.md"
+  },
+  "productionAudit20261024HowItWorksEconomyFocusSixCards": {
+    "observedAt": "2026-10-24",
+    "site": "https://casaemmodulos.casa/",
+    "deployedRevision": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+    "netlifyDeploymentId": "6adc221479c773577ed45e23",
+    "publishedAt": "2026-10-24T03:12:38.561Z",
+    "route": "/how-it-works/",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "session": "anonymous",
+    "cards": [
+      "Compra em escala",
+      "Compras coletivas",
+      "Produção planejada",
+      "Aproveitamento de material",
+      "Engenharia já estudada",
+      "Menos retrabalho"
+    ],
+    "focusMethod": "Sequential Tab navigation; cards not activated",
+    "computed": {
+      "bothThemes": {
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineOffset": "3px",
+        "cardBackground": "rgba(255, 255, 255, 0.05)",
+        "surfaceBackground": "#25231F"
+      },
+      "light": {
+        "outlineColor": "#6E512E",
+        "contrastRatio": 2.15,
+        "meets3to1": false
+      },
+      "dark": {
+        "outlineColor": "#D8BC7C",
+        "contrastRatio": 8.52,
+        "meets3to1": true
+      }
+    },
+    "reference": {
+      "VIS002OutlineWidth": "4px",
+      "outlineOffset": "3px"
+    },
+    "limits": [
+      "One route, one browser, 1280x720",
+      "Other routes, surfaces and focus states unmeasured",
+      "No reduced-motion-on or screen-reader assessment",
+      "No corrective decision or product code change"
+    ],
+    "productCodeChanged": false,
+    "evidence": "evidence/runtime/how-it-works-economy-focus-six-cards-production-2026-10-24.md"
+  },
+  "productionAudit20261024HowItWorksMotionSnapshot": {
+    "observedAt": "2026-10-24",
+    "site": "https://casaemmodulos.casa/",
+    "deployedRevision": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+    "netlifyDeploymentId": "6adc221479c773577ed45e23",
+    "route": "/how-it-works/",
+    "viewport": {
+      "width": 1280,
+      "height": 720,
+      "theme": "dark"
+    },
+    "session": "anonymous",
+    "prefersReducedMotion": false,
+    "cssAnimationNamesAtSnapshot": [],
+    "animationApiAvailable": false,
+    "activeTransitions": "unknown",
+    "reducedMotionRulesInSource": [
+      {
+        "path": "app/public-theme.css",
+        "lines": "24-25",
+        "ref": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf"
+      },
+      {
+        "path": "app/how-it-works/how-it-works.css",
+        "lines": "251-252",
+        "ref": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf"
+      }
+    ],
+    "limits": [
+      "Reduced-motion preference not emulated",
+      "document.getAnimations unavailable in evaluation scope",
+      "Slow network and image failure not simulated"
+    ],
+    "productCodeChanged": false,
+    "evidence": "evidence/runtime/how-it-works-motion-css-runtime-snapshot-production-2026-10-24.md"
+  }
 }

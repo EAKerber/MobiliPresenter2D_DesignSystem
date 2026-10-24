@@ -1,0 +1,591 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/core/private-navigation.js",
+      "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+      "candidateOccurrences": 29
+    }
+  ],
+  "reviewScope": "Complete lexical candidate review of the shared private-navigation runtime. Visible link labels, headings, accessible toggle labels and authentication feedback are localizable; DOM attributes, routes, event/control values and CSS selectors remain technical.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 29,
+    "classifiedLocalizableOccurrences": 13,
+    "excludedNonlocalizableOccurrences": 16,
+    "deferredDomainOccurrences": 0,
+    "distinctCandidateTexts": 26
+  },
+  "limitations": [
+    "Inventory only; navigation code and locale resources remain unchanged.",
+    "The lexical heuristic does not capture every single-word public link label (for example, `Ambientes` and `Cozinha`); route-level HTML inventory is separately classified."
+  ],
+  "entries": [
+    {
+      "currentText": "aria-current",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 22
+      },
+      "consumer": "DOM, route, ARIA attribute, event, or CSS implementation detail",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation identifier or route value rather than interface prose."
+      ]
+    },
+    {
+      "currentText": "page",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 22
+      },
+      "consumer": "DOM, route, ARIA attribute, event, or CSS implementation detail",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation identifier or route value rather than interface prose."
+      ]
+    },
+    {
+      "currentText": "section",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 26
+      },
+      "consumer": "DOM, route, ARIA attribute, event, or CSS implementation detail",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation identifier or route value rather than interface prose."
+      ]
+    },
+    {
+      "currentText": "private-menu__group",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 27
+      },
+      "consumer": "DOM, route, ARIA attribute, event, or CSS implementation detail",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation identifier or route value rather than interface prose."
+      ]
+    },
+    {
+      "currentText": "h2",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 28
+      },
+      "consumer": "DOM, route, ARIA attribute, event, or CSS implementation detail",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation identifier or route value rather than interface prose."
+      ]
+    },
+    {
+      "currentText": "div",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 31
+      },
+      "consumer": "DOM, route, ARIA attribute, event, or CSS implementation detail",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation identifier or route value rather than interface prose."
+      ]
+    },
+    {
+      "currentText": "Como funciona",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 40
+      },
+      "consumer": "private/public navigation label or status",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Displayed link, heading, accessible menu label, or authentication status in the shared navigation."
+      ],
+      "semanticKey": "navigation.public.howItWorks"
+    },
+    {
+      "currentText": "Quem somos",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 41
+      },
+      "consumer": "private/public navigation label or status",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Displayed link, heading, accessible menu label, or authentication status in the shared navigation."
+      ],
+      "semanticKey": "navigation.public.about"
+    },
+    {
+      "currentText": "Fale conosco",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 42
+      },
+      "consumer": "private/public navigation label or status",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Displayed link, heading, accessible menu label, or authentication status in the shared navigation."
+      ],
+      "semanticKey": "navigation.public.contact"
+    },
+    {
+      "currentText": "button button--secondary private-menu__logout",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 49
+      },
+      "consumer": "DOM, route, ARIA attribute, event, or CSS implementation detail",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation identifier or route value rather than interface prose."
+      ]
+    },
+    {
+      "currentText": "Sair",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 50
+      },
+      "consumer": "private/public navigation label or status",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Displayed link, heading, accessible menu label, or authentication status in the shared navigation."
+      ],
+      "semanticKey": "navigation.logout"
+    },
+    {
+      "currentText": "data-private-logout",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 51
+      },
+      "consumer": "DOM, route, ARIA attribute, event, or CSS implementation detail",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation identifier or route value rather than interface prose."
+      ]
+    },
+    {
+      "currentText": "data-private-logout",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 54
+      },
+      "consumer": "DOM, route, ARIA attribute, event, or CSS implementation detail",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation identifier or route value rather than interface prose."
+      ]
+    },
+    {
+      "currentText": "Páginas privadas",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 78
+      },
+      "consumer": "private/public navigation label or status",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Displayed link, heading, accessible menu label, or authentication status in the shared navigation."
+      ],
+      "semanticKey": "navigation.private.heading"
+    },
+    {
+      "currentText": "private-menu__links",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 78
+      },
+      "consumer": "DOM, route, ARIA attribute, event, or CSS implementation detail",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation identifier or route value rather than interface prose."
+      ]
+    },
+    {
+      "currentText": "Gerenciar acessos",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 83
+      },
+      "consumer": "private/public navigation label or status",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Displayed link, heading, accessible menu label, or authentication status in the shared navigation."
+      ],
+      "semanticKey": "navigation.accessManagement"
+    },
+    {
+      "currentText": "Gerenciar acessos",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 86
+      },
+      "consumer": "private/public navigation label or status",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Displayed link, heading, accessible menu label, or authentication status in the shared navigation."
+      ],
+      "semanticKey": "navigation.accessManagement"
+    },
+    {
+      "currentText": "private-menu__note",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 91
+      },
+      "consumer": "DOM, route, ARIA attribute, event, or CSS implementation detail",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation identifier or route value rather than interface prose."
+      ]
+    },
+    {
+      "currentText": "Verificando acesso…",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 92
+      },
+      "consumer": "private/public navigation label or status",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Displayed link, heading, accessible menu label, or authentication status in the shared navigation."
+      ],
+      "semanticKey": "navigation.accessLoading"
+    },
+    {
+      "currentText": "/admin.html",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 95
+      },
+      "consumer": "DOM, route, ARIA attribute, event, or CSS implementation detail",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation identifier or route value rather than interface prose."
+      ]
+    },
+    {
+      "currentText": "Entrar na administração",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 95
+      },
+      "consumer": "private/public navigation label or status",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Displayed link, heading, accessible menu label, or authentication status in the shared navigation."
+      ],
+      "semanticKey": "navigation.adminLogin"
+    },
+    {
+      "currentText": "private-menu__note",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 98
+      },
+      "consumer": "DOM, route, ARIA attribute, event, or CSS implementation detail",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation identifier or route value rather than interface prose."
+      ]
+    },
+    {
+      "currentText": "Esta conta não tem acesso às páginas de gestão.",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 99
+      },
+      "consumer": "private/public navigation label or status",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Displayed link, heading, accessible menu label, or authentication status in the shared navigation."
+      ],
+      "semanticKey": "navigation.accessDenied"
+    },
+    {
+      "currentText": "Páginas públicas",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 102
+      },
+      "consumer": "private/public navigation label or status",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Displayed link, heading, accessible menu label, or authentication status in the shared navigation."
+      ],
+      "semanticKey": "navigation.public.heading"
+    },
+    {
+      "currentText": "aria-expanded",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 108
+      },
+      "consumer": "DOM, route, ARIA attribute, event, or CSS implementation detail",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation identifier or route value rather than interface prose."
+      ]
+    },
+    {
+      "currentText": "Abrir menu",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 109
+      },
+      "consumer": "private/public navigation label or status",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Displayed link, heading, accessible menu label, or authentication status in the shared navigation."
+      ],
+      "semanticKey": "navigation.menu.open"
+    },
+    {
+      "currentText": "aria-label",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 109
+      },
+      "consumer": "DOM, route, ARIA attribute, event, or CSS implementation detail",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation identifier or route value rather than interface prose."
+      ]
+    },
+    {
+      "currentText": "Fechar menu",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 109
+      },
+      "consumer": "private/public navigation label or status",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Displayed link, heading, accessible menu label, or authentication status in the shared navigation."
+      ],
+      "semanticKey": "navigation.menu.close"
+    },
+    {
+      "currentText": "a, button",
+      "source": {
+        "file": "app/core/private-navigation.js",
+        "blobSha": "3d701cda54bb27a374e9788837e85c868fba2b94",
+        "line": 110
+      },
+      "consumer": "DOM, route, ARIA attribute, event, or CSS implementation detail",
+      "owner": "shared private navigation",
+      "routes": [
+        "shared application navigation"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation identifier or route value rather than interface prose."
+      ]
+    }
+  ]
+}

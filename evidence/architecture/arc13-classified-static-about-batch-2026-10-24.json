@@ -1,0 +1,797 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/about/index.html",
+      "blobSha": "0f830a962485a67c2d9f264056a637693491fc01"
+    }
+  ],
+  "reviewScope": "Manual review of every static HTML candidate indexed for /about/, mapped to source location, page consumer, semantic key, and owner. Covers metadata, navigation, accessibility names, editorial page copy, brand alternatives, and footer.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "classifiedOccurrences": 44,
+    "distinctValues": 42
+  },
+  "limitations": [
+    "Inventory only: product HTML and runtime were not changed; no translation bundle was created.",
+    "Text split across adjacent HTML nodes remains separate to preserve source locations; future extraction must consider locale-specific sentence ordering and composition.",
+    "Brand name Casa em Módulos is retained as brand content within otherwise localizable labels or copy.",
+    "This batch covers only /about/; other route entrypoints, inline scripts, runtime-generated strings, CSS content, and V5 authored/commercial data remain outside scope."
+  ],
+  "entries": [
+    {
+      "semanticKey": "about.document.title",
+      "currentText": "Quem somos | Casa em Módulos",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 9
+      },
+      "consumer": "browser document title",
+      "owner": "public page metadata",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "about.meta.description",
+      "currentText": "Conheça a trajetória de Volmir e a experiência em produção moveleira que deu origem à Casa em Módulos.",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 9
+      },
+      "consumer": "metadata description",
+      "owner": "public editorial metadata",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "navigation.skipLink",
+      "currentText": "Pular para o conteúdo",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 12
+      },
+      "consumer": "skip link",
+      "owner": "public accessibility navigation",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "brand.logo.alt",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 13
+      },
+      "consumer": "brand logo alternative text",
+      "owner": "brand identity image",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "contact.whatsapp.accessible",
+      "currentText": "Fale conosco pelo WhatsApp",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 13
+      },
+      "consumer": "contact link accessible name",
+      "owner": "shared public navigation",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "contact.whatsapp.label",
+      "currentText": "Fale conosco",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 13
+      },
+      "consumer": "contact link visible label",
+      "owner": "shared public navigation",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.about",
+      "currentText": "Quem somos",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 13
+      },
+      "consumer": "current primary navigation link",
+      "owner": "shared public navigation",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.environments",
+      "currentText": "Ambientes",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 13
+      },
+      "consumer": "primary navigation link",
+      "owner": "shared public navigation",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.home.accessible",
+      "currentText": "Casa em Módulos, início",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 13
+      },
+      "consumer": "brand home link accessible name",
+      "owner": "shared public navigation",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "navigation.howItWorks",
+      "currentText": "Como funciona",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 13
+      },
+      "consumer": "primary navigation link",
+      "owner": "shared public navigation",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.menu.open",
+      "currentText": "Abrir menu",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 13
+      },
+      "consumer": "menu toggle accessible name",
+      "owner": "shared public navigation",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.primary.label",
+      "currentText": "Navegação principal",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 13
+      },
+      "consumer": "primary navigation accessible name",
+      "owner": "shared public navigation",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.hero.eyebrow",
+      "currentText": "Quem somos",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 16
+      },
+      "consumer": "hero section eyebrow",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.hero.lead",
+      "currentText": "A Casa em Módulos nasceu de uma ideia inovadora, mas foi construída sobre uma base sólida: décadas de conhecimento, experiência e resultados reais na indústria moveleira.",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 16
+      },
+      "consumer": "hero editorial paragraph",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "about.hero.title",
+      "currentText": "Uma vida inteira de marcenaria. Uma experiência que deu origem a uma nova forma de produzir móveis.",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 16
+      },
+      "consumer": "hero heading",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.hero.note.accessible",
+      "currentText": "Experiência de produção",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 17
+      },
+      "consumer": "hero note accessible name",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.hero.note.experience",
+      "currentText": "Experiência que atravessa gerações",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 17
+      },
+      "consumer": "experience statement",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.hero.note.process",
+      "currentText": "Conhecimento aplicado em cada etapa.",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 17
+      },
+      "consumer": "process statement",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.hero.note.production.end",
+      "currentText": "à produção em escala.",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 17
+      },
+      "consumer": "production scale statement continuation",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.hero.note.production.start",
+      "currentText": "Do primeiro móvel",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 17
+      },
+      "consumer": "production scale statement opening",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.origins.history.beginning",
+      "currentText": "Essa história começa com Volmir, que, aos 13 anos, deu seus primeiros passos na marcenaria ao lado do pai. Em uma época em que os móveis eram produzidos artesanalmente, utilizando madeira natural, aprendeu o ofício desde a sua essência: o cuidado com a matéria-prima, os detalhes do acabamento e cada etapa do processo produtivo.",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 20
+      },
+      "consumer": "origin chapter beginning paragraph",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.origins.history.projects",
+      "currentText": "Com o passar dos anos, a experiência se transformou em conhecimento, e o conhecimento abriu caminho para desafios cada vez maiores. Dos primeiros móveis residenciais aos projetos completos de interiores, vieram também empreendimentos comerciais, revestimentos técnicos para teatros e grandes projetos hoteleiros.",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 20
+      },
+      "consumer": "origin chapter history paragraph",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.origins.indexTitle",
+      "currentText": "As raízes",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 20
+      },
+      "consumer": "origin chapter index title",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.origins.title",
+      "currentText": "Um ofício aprendido desde a essência",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 20
+      },
+      "consumer": "origin chapter heading",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.scale.eyebrow",
+      "currentText": "Produção em larga escala",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 22
+      },
+      "consumer": "scale chapter eyebrow",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.scale.history",
+      "currentText": "Ao longo de sua carreira, Volmir desenvolveu a capacidade de transformar projetos complexos em processos produtivos organizados, eficientes e reproduzíveis, chegando a executar empreendimentos com mais de 200 apartamentos mobiliados em uma única operação.",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 22
+      },
+      "consumer": "scale chapter history paragraph",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.scale.intro",
+      "currentText": "Mas foi na produção em larga escala que essa trajetória alcançou um de seus maiores diferenciais.",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 22
+      },
+      "consumer": "scale chapter introduction",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.scale.quality",
+      "currentText": "O verdadeiro sucesso dessas realizações não esteve apenas na quantidade de móveis produzidos, mas na capacidade de manter um elevado padrão de qualidade, precisão e acabamento em cada unidade, cumprindo prazos e otimizando recursos.",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 22
+      },
+      "consumer": "scale chapter quality paragraph",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.scale.stat.label.firstLine",
+      "currentText": "apartamentos mobiliados",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 22
+      },
+      "consumer": "scale statistic label line one",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.scale.stat.label.secondLine",
+      "currentText": "em uma única operação",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 22
+      },
+      "consumer": "scale statistic label line two",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.scale.title",
+      "currentText": "Precisão que se repete. Qualidade em cada unidade.",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 22
+      },
+      "consumer": "scale chapter heading",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.principle.body",
+      "currentText": "Afinal, produzir um móvel com excelência exige conhecimento. Produzir centenas deles, mantendo a mesma excelência, exige algo ainda maior: domínio técnico, planejamento, inteligência produtiva e uma profunda compreensão de cada etapa da fabricação.",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 23
+      },
+      "consumer": "principle chapter paragraph",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.principle.indexTitle",
+      "currentText": "O que aprendemos",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 23
+      },
+      "consumer": "principle chapter index title",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.principle.title",
+      "currentText": "Excelência também é saber produzir",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 23
+      },
+      "consumer": "principle chapter heading",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.closing.belief",
+      "currentText": "Porque acreditamos que a inovação não está apenas em criar algo novo, mas também em descobrir maneiras mais inteligentes de fazer aquilo que já sabemos fazer muito bem.",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 24
+      },
+      "consumer": "closing section belief paragraph",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.closing.eyebrow",
+      "currentText": "Da experiência à inovação",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 24
+      },
+      "consumer": "closing section eyebrow",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.closing.origin",
+      "currentText": "E é justamente dessa experiência comprovada que nasce a Casa em Módulos.",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 24
+      },
+      "consumer": "closing section origin paragraph",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "about.closing.productivity",
+      "currentText": "Trouxemos para o mobiliário residencial a inteligência dos grandes processos produtivos, combinando padronização, qualidade e eficiência para tornar móveis bem planejados mais acessíveis.",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 24
+      },
+      "consumer": "closing section productivity paragraph",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "about.closing.signature",
+      "currentText": "Casa em Módulos. A experiência de quem sabe produzir em grande escala, com o cuidado de quem aprendeu a fazer cada móvel como se fosse único.",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 24
+      },
+      "consumer": "closing brand signature",
+      "owner": "about page editorial content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "navigation.environments.cta",
+      "currentText": "Conheça nossos ambientes",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 24
+      },
+      "consumer": "environments call to action",
+      "owner": "about page navigation",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.howItWorks.cta",
+      "currentText": "Veja como funciona",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 24
+      },
+      "consumer": "how-it-works call to action",
+      "owner": "about page navigation",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "brand.footer.logo.alt",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 26
+      },
+      "consumer": "footer brand logo alternative text",
+      "owner": "brand identity image",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "brand.footer.tagline",
+      "currentText": "Móveis modulares pensados para a vida real.",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 26
+      },
+      "consumer": "footer tagline",
+      "owner": "public footer content",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.home.return",
+      "currentText": "Voltar ao início ↑",
+      "source": {
+        "file": "app/about/index.html",
+        "blobSha": "0f830a962485a67c2d9f264056a637693491fc01",
+        "line": 26
+      },
+      "consumer": "footer return-home link",
+      "owner": "public footer navigation",
+      "routes": [
+        "/about/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    }
+  ]
+}

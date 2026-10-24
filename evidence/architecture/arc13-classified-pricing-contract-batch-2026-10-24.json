@@ -1,0 +1,599 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/core/pricing-contract.js",
+      "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+      "candidateOccurrences": 27
+    }
+  ],
+  "reviewScope": "Complete lexical candidate review of pricing-contract validation. `pricingContract.normalize()` runs during the administration bootstrap and its thrown `error.message` is rendered in the admin service-error panel; validation messages are therefore localizable while dynamic paths, keys and roles remain parameters.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 27,
+    "classifiedLocalizableOccurrences": 25,
+    "excludedNonlocalizableOccurrences": 2,
+    "deferredDomainOccurrences": 0,
+    "distinctCandidateTexts": 27
+  },
+  "limitations": [
+    "Inventory only; no pricing logic or locale resources were changed.",
+    "Dynamic schema field paths and identifiers must be retained as parameters or mapped to friendly field labels in a later implementation pass."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 2
+      },
+      "consumer": "schema identifier or strict-mode directive",
+      "owner": "pricing contract implementation",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal schema/implementation marker, not interface copy."
+      ]
+    },
+    {
+      "currentText": "CommercialPricingRules 1.0",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 4
+      },
+      "consumer": "schema identifier or strict-mode directive",
+      "owner": "pricing contract implementation",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal schema/implementation marker, not interface copy."
+      ]
+    },
+    {
+      "currentText": "invalid pricing rule: ${path}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 56
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "path"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.56"
+    },
+    {
+      "currentText": "unsupported pricing rule type: ${path}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 62
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "path"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.62"
+    },
+    {
+      "currentText": "unexpected amount fields: ${path}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 67
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "path"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.67"
+    },
+    {
+      "currentText": "invalid amount cents: ${path}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 68
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "path"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.68"
+    },
+    {
+      "currentText": "unexpected percentage fields: ${path}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 72
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "path"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.72"
+    },
+    {
+      "currentText": "invalid percentage bps: ${path}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 73
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "path"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.73"
+    },
+    {
+      "currentText": "unsupported percentage basis: ${path}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 74
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "path"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.74"
+    },
+    {
+      "currentText": "pricing contract is required",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 79
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.79"
+    },
+    {
+      "currentText": "unsupported pricing schema",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 80
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.80"
+    },
+    {
+      "currentText": "unknown pricing field: ${key}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 82
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "key"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.82"
+    },
+    {
+      "currentText": "pricing roles are required",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 85
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.85"
+    },
+    {
+      "currentText": "unknown pricing role: ${role}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 88
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "role"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.88"
+    },
+    {
+      "currentText": "pricing role is required: ${role}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 92
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "role"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.92"
+    },
+    {
+      "currentText": "invalid pricing id: ${role}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 97
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "role"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.97"
+    },
+    {
+      "currentText": "pricing allocation is required",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 106
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.106"
+    },
+    {
+      "currentText": "unknown pricing allocation: ${key}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 109
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "key"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.109"
+    },
+    {
+      "currentText": "invalid handle front total",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 111
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.111"
+    },
+    {
+      "currentText": "legacy pricing is required",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 139
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.139"
+    },
+    {
+      "currentText": "unknown legacy pricing field: ${key}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 141
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "key"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.141"
+    },
+    {
+      "currentText": "legacy pricing section is required: ${section}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 145
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "section"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.145"
+    },
+    {
+      "currentText": "invalid legacy pricing id: ${section}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 150
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "section"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.150"
+    },
+    {
+      "currentText": "invalid legacy percentage: ${section}.${id}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 154
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "section",
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.154"
+    },
+    {
+      "currentText": "invalid legacy amount: ${section}.${id}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 156
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "section",
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.156"
+    },
+    {
+      "currentText": "invalid legacy handle front total",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 162
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.162"
+    },
+    {
+      "currentText": "legacy pricing cannot represent front finish amount rules: ${nonRepresentable.join(\", \")}",
+      "source": {
+        "file": "app/core/pricing-contract.js",
+        "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+        "line": 199
+      },
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "owner": "administration pricing validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "nonRepresentable.join(\", \")"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The administration bootstrap normalizes pricing and displays this error.message in the admin service-error panel; translate the message while preserving dynamic field/path values."
+      ],
+      "semanticKey": "admin.pricing.validation.199"
+    }
+  ]
+}
