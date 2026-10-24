@@ -93,3 +93,8 @@ Um item só fica conforme quando seu papel semântico e par de cores estão apro
 - PR #39 permanece draft e não deve ser integrada em bloco: está divergente, tem 25 arquivos e combina atualizações documentais com experimentos/workflows. Se partes forem aproveitadas, criar mudanças focadas sobre a `main` atual e reconciliar seus estados com este checkpoint.
 - O checkout local do produto está sujo. Qualquer implementação futura deverá usar um checkout isolado e preservar as alterações locais existentes.
 - Nenhuma PR ou preview deve ser tratado como decisão estética ou como autorização de publicar produção.
+
+
+### ARC-13 — avanço da cobertura bruta em 24/10/2026
+
+A varredura contra produto `main@5ccb2a8` agora inclui oito entradas HTML e 52 fontes JS runtime legíveis. Os índices separados registram 480 candidatos HTML e 2.176 ocorrências JS heurísticas; não são cobertura completa nem strings prontas para bundles. Permanecem sem triagem semântica e owner/chave, fora dos scripts inline, dados de máscaras/pedra deferidos, strings produzidas no DOM e dados comerciais V5. Próximo gate: classificação rastreável por arquivo/linha/consumidor/owner/status, leitura do conteúdo dinâmico e tratamento explícito das fontes ainda não verificadas. Não substituir strings em lote com base em regex.
