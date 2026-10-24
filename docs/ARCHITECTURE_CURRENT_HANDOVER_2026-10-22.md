@@ -330,3 +330,6 @@ Base do produto: `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`; Production Net
 
 - **Login administrativo / responsivo em Production:** `/access/manage.html` redirecionou para o formulário de login em `/admin.html`; 1280×720, 390×844 e 320×700 CSS px sem overflow horizontal nos estados observados. Os campos estavam preenchidos pelo navegador; nenhum valor foi lido, alterado ou enviado, e não se concluiu que o perfil estivesse limpo. O fluxo autenticado não foi aberto. [Evidência](../evidence/runtime/admin-login-no-session-focus-production-2026-10-24.md).
 - **Como funciona / imagens e movimento:** em 1280×720, após percorrer a rota Production, 28/28 imagens carregaram; 0 falhas e 0 imagens sem `alt`. Movimento reduzido retornou `false` e a API de animações não estava disponível; estado de animação e resposta a movimento reduzido nesta rota continuam não verificados. [Auditoria](../evidence/runtime/how-it-works-images-motion-production-2026-10-24.md).
+
+
+- ****Landing / NAV-005 / overflow atual em Production**:** em 310 e 290 px, `html/body` computaram `min-width:320px`; em 290 px o menu e o conteúdo ficaram cortados nos dois temas. A issue #218 / NAV-005 segue aberta; a proposta compacta é uma simulação documental, não uma correção aplicada. [Evidência Production](../evidence/runtime/landing-public-compact-header-production-2026-10-24.md).
