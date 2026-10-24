@@ -171,3 +171,8 @@ O FIND-017 foi confirmado nos seis cartões da economia. Uma proposta experiment
 ### Viewer — hotspot 02 e foco em Production (24/10/2026)
 
 No Viewer público em Production, Tab focou o hotspot do módulo 02 nos temas Claro e Escuro sem ativá-lo. O `:focus-visible` usa `::after` com borda computada de 2 px na cor aproximada `#DDC48C`, preenchimento semitransparente e marcador numerado; o botão zera o `outline`. A mesma cor foi computada nos dois temas, sobre imagem fotográfica. O indicador apareceu na amostra, mas o contraste não foi calculado porque a API de inspeção não expôs a criação de canvas para amostrar pixels; não concluir conformidade. A referência geométrica de 4 px e a suficiência das pistas alternativas continuam por avaliar. [Evidência runtime](../evidence/runtime/viewer-hotspot-focus-contrast-production-2026-10-24.md). Nenhum CSS, token ou produto foi alterado.
+
+
+### Viewer — hotspot 02 em viewport móvel (24/10/2026)
+
+No viewport 390 × 844, o Módulo 02 recebeu foco por Tab em Claro e Escuro, mantendo o Módulo 01 selecionado. Alvo (56 × 57 px) e marcador circular (26 × 26 px) ficaram dentro da cena, sem recorte observado; `scrollWidth` e `clientWidth` foram 375 px. A borda continuou com 2 px e cor computada aproximada `#DDC48C`. Isto amplia a evidência apenas para esse hotspot e viewport; contraste sobre a fotografia e demais dimensões/dispositivos seguem sem medição. [Registro runtime](../evidence/runtime/viewer-hotspot-focus-contrast-production-2026-10-24.md). Tema inicial e viewport foram restaurados e a aba temporária fechada.
