@@ -7,16 +7,14 @@ Esta seção é o estado atual verificado; os snapshots antigos abaixo permanece
 - Produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf` inclui ARC-03C/P-COMP-01 via #237.
 - PR #238 está DRAFT em `a2835c6`. Gate autenticado passou em `a9129e1`; depois dele mudaram somente dois commits de documentação. Gates anônimo/assets passaram no head atual. #232 permanece aberta até revisão e integração dos workflows legados.
 - PR #239 está DRAFT; seis checks passaram e o foco do skip link About foi conferido no preview, sem homologação global.
-- PR #51 do Design System está DRAFT em `251b281`, com inventário ARC-13 e handover documentados.
-- ARC-13: 480 ocorrências/392 valores distintos nas oito entradas HTML, ligadas por rota a lotes manuais: 464 localizáveis, quatro identificadores excluídos e 12 itens comerciais deferidos. JS: 2.176 candidatos heurísticos em 52 fontes; 60 entradas classificadas em sete arquivos. Revisão JS/inline e ownership dos itens deferidos seguem abertos; nenhuma migração ou bundle foi criado.
+- PR #51 do Design System permanece aberta e DRAFT; consulte a head live na própria PR. A branch de handover contém inventário ARC-13 atualizado.
+- ARC-13: 480 ocorrências/392 valores distintos nas oito entradas HTML, ligadas por rota a lotes manuais: 464 localizáveis, quatro identificadores excluídos e 12 itens comerciais deferidos. JS: 2.176 candidatos heurísticos em 52 fontes; 133 referências revisadas em 29 arquivos (77 localizáveis, 54 trechos de código/identificadores excluídos e duas ocorrências comerciais deferidas). Revisão JS/inline e ownership dos itens deferidos seguem abertos; nenhuma migração ou bundle foi criado.
 - Os projetos Netlify principal e isolado reportam deploy Production READY em `main@5ccb2a8`, com nove Functions e uma Edge Function `access-check` presentes. A leitura não exercitou a chamada da função nem validou valores de ambiente.
 - O percentual ~22% é histórico/provisório, sem recálculo por pesos.
 
 ### Snapshot histórico — 24/10/2026, 09:35 UTC
 
 O checkpoint a seguir descreve o estado observado naquela hora. Seus SHAs e estados de PR são históricos e foram substituídos pela revalidação acima.
-
-### Snapshot histórico — 24/10/2026, 09:35 UTC
 
 **Estimativa global:** permanece em aproximadamente **22%** conforme o plano canônico. A matriz V5 e o OIDC ganharam evidência técnica, mas as mudanças relacionadas continuam em PRs Draft/stacked; produto `main` ainda é `15e1cfb4866886649adbcd00fef9bef5e5843fda`. Não contar branches ou previews como integração publicada.
 
@@ -280,3 +278,8 @@ O deploy atualmente publicado no projeto principal `mobilipresenter2d` está **R
 ### Índice HTML reconciliado — 24/10/2026
 
 O índice [arc13-static-html-candidates-main-2026-10-24.json](../evidence/architecture/arc13-static-html-candidates-main-2026-10-24.json) agora liga as 480 ocorrências às classificações documentadas por rota: **464 localizáveis, quatro identificadores excluídos e 12 itens comerciais deferidos**; os **392 valores distintos** do inventário foram preservados. O HTML estático das oito rotas foi coberto. A condição ARC-13 não está concluída: fontes JS e scripts inline ainda exigem classificação, e os 12 itens deferidos precisam de owner canônico antes de eventual extração.
+
+
+### Classificação JS de baixo volume — 24/10/2026
+
+[arc13-classified-js-low-volume-batch-2026-10-24.json](../evidence/architecture/arc13-classified-js-low-volume-batch-2026-10-24.json) revisa **65 ocorrências candidatas em 22 fontes**: nove mensagens/rótulos da interface receberam chaves; 54 literais de código, schema, CSS/geométricos ou diagnóstico interno foram excluídos; dois valores de preço/aviso comercial permanecem deferidos. O lote cobre arquivos com até oito candidatos, fixados por blob e linha; não representa a revisão dos 52 arquivos nem a completude do scanner.
