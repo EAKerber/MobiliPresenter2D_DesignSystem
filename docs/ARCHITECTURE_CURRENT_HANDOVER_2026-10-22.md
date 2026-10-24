@@ -358,3 +358,12 @@ Base do produto: `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`; Production Net
 - **Como funciona / movimento em Production:** o snapshot 1280×720 escuro não encontrou `animation-name` em elementos/pseudo-elementos; `prefers-reduced-motion` estava desligado. As folhas fonte publicadas incluem regra de redução global/local. O escopo não disponibilizou `document.getAnimations`, então atividade de transições e comportamento reduzido em runtime seguem desconhecidos. [Evidência](../evidence/runtime/how-it-works-motion-css-runtime-snapshot-production-2026-10-24.md).
 
 - **FIND-017 / proposta VIS-002:** para os seis cartões sobre `#25231F`, a proposta A (anel `#D8BC7C`) calcula 8,52:1; a B (`#8B6A40`) calcula 3,16:1. Ambas usam 4 px/offset 3 px da referência. Proposta experimental; nenhuma escolha aprovada, `decisions.json` intacto, implementação não autorizada. [Comparação](../evidence/architecture/vis002-economy-dark-surface-focus-candidate-2026-10-24.md).
+
+
+### VIS-002C long-copy role split v0.3 — 2026-10-24
+
+- Product PR #240 remains open/DRAFT on v0.2, with its eight exact contexts mapped to `#705C4B`; product PR #241 remains open/DRAFT with measured light-copy corrections and near-black long copy. They overlap in five paragraphs, so the product changes still need one reconciled cascade before integration.
+- New Design System PR [#52](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/52), branch `feat/vis002-role-split-v03-20261024`, records a scoped candidate v0.3 for those five long-copy contexts using the existing `textPrimary.light` role `#292723`. The three v0.2 consumers stay at `#705C4B`; `decisions.json` remains unchanged. It is not merged and does not create a product preview.
+- The PR adds a source/context/contrast/CSS projection gate. Its first run failed because the verifier expected CSS without the final selector group's opening brace. The verifier was corrected in commit `46eddf1`; no check run for that updated head was visible at the time of this note. Do not treat the initial failure as a product regression or the correction as a passing gate.
+- Next: confirm a successful gate against the updated head, then reconcile product PR #240/#241 and obtain the product Deploy Preview. No merge or production release is authorized.
+- User direction recorded for this change: long running text should use colors close to black or white depending on context, scoped only to measured contexts.
