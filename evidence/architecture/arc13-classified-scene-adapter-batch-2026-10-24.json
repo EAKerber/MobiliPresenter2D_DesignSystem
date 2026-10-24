@@ -1,0 +1,643 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/viewer/scene-adapters.js",
+      "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+      "candidateOccurrences": 32
+    }
+  ],
+  "reviewScope": "Complete lexical candidate review of the public scene adapter. Three accessible names are localizable, fallback dimension/category presentation is deferred to domain ownership, and contract/validation/DOM/runtime values remain technical. Public viewer catches adapter failures and shows its generic unavailable message.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 32,
+    "classifiedLocalizableOccurrences": 3,
+    "excludedNonlocalizableOccurrences": 27,
+    "deferredDomainOccurrences": 2,
+    "distinctCandidateTexts": 30
+  },
+  "limitations": [
+    "Inventory only; adapter code and locale resources remain unchanged.",
+    "Measurement units and catalog category fallback require a domain owner before resource design.",
+    "The existing generic public-viewer error intentionally suppresses internal adapter diagnostics."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 2
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, attribute, contract version, or implementation value."
+      ]
+    },
+    {
+      "currentText": " mm",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 12
+      },
+      "consumer": "fallback module dimension/category display data",
+      "owner": "public viewer catalog defaults",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [
+        "dimensions"
+      ],
+      "classification": "domain-presentation-format",
+      "status": "deferred-domain-review",
+      "notes": [
+        "Measurement unit formatting requires locale/domain policy."
+      ]
+    },
+    {
+      "currentText": "isometric",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 13
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, attribute, contract version, or implementation value."
+      ]
+    },
+    {
+      "currentText": "Módulo",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 15
+      },
+      "consumer": "fallback module dimension/category display data",
+      "owner": "public viewer catalog defaults",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [
+        "module category"
+      ],
+      "classification": "domain-presentation-format",
+      "status": "deferred-domain-review",
+      "notes": [
+        "Fallback catalog category is product/domain terminology; decide content ownership before localization."
+      ]
+    },
+    {
+      "currentText": "string",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 16
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, attribute, contract version, or implementation value."
+      ]
+    },
+    {
+      "currentText": "true",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 68
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, attribute, contract version, or implementation value."
+      ]
+    },
+    {
+      "currentText": "aria-label",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 69
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, attribute, contract version, or implementation value."
+      ]
+    },
+    {
+      "currentText": "Cena da cozinha. Use as setas para percorrer os módulos ou as teclas de 1 a 7 para selecionar pelo número.",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 69
+      },
+      "consumer": "public scene accessible name or base image alternative text",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Accessible scene label/alternative text is exposed to assistive technology; preserve product brand and dynamic navigation meaning."
+      ],
+      "semanticKey": "viewer.scene.accessibleName"
+    },
+    {
+      "currentText": "Composição da cozinha Casa em Módulos",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 70
+      },
+      "consumer": "public scene accessible name or base image alternative text",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Accessible scene label/alternative text is exposed to assistive technology; preserve product brand and dynamic navigation meaning."
+      ],
+      "semanticKey": "viewer.scene.baseImageAlt"
+    },
+    {
+      "currentText": "aria-label",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 72
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, attribute, contract version, or implementation value."
+      ]
+    },
+    {
+      "currentText": "div",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 72
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, attribute, contract version, or implementation value."
+      ]
+    },
+    {
+      "currentText": "Módulos selecionáveis na cena",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 72
+      },
+      "consumer": "public scene accessible name or base image alternative text",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Accessible scene label/alternative text is exposed to assistive technology; preserve product brand and dynamic navigation meaning."
+      ],
+      "semanticKey": "viewer.scene.hotspots.accessibleName"
+    },
+    {
+      "currentText": "scene-hotspots",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 72
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, attribute, contract version, or implementation value."
+      ]
+    },
+    {
+      "currentText": "Acabamento inicial ausente do catálogo: ",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 77
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Thrown adapter diagnostics are caught by viewer.js and replaced with generic public-unavailable feedback; raw details are not shown."
+      ]
+    },
+    {
+      "currentText": "aria-hidden",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 86
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, attribute, contract version, or implementation value."
+      ]
+    },
+    {
+      "currentText": "is-hidden",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 86
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, attribute, contract version, or implementation value."
+      ]
+    },
+    {
+      "currentText": "PublicSceneAdapter 0.5",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 118
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, attribute, contract version, or implementation value."
+      ]
+    },
+    {
+      "currentText": "Viewer scene already mounted on another element",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 120
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, attribute, contract version, or implementation value."
+      ]
+    },
+    {
+      "currentText": "${options.assetPrefix || \"\"}${asset || \"\"}",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 137
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, attribute, contract version, or implementation value."
+      ]
+    },
+    {
+      "currentText": "Contratos Scene2D/ProductCatalog2D incompletos para a integração pública.",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 158
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Thrown adapter diagnostics are caught by viewer.js and replaced with generic public-unavailable feedback; raw details are not shown."
+      ]
+    },
+    {
+      "currentText": "Componente compartilhado da cena incompatível com o viewer.",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 164
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Thrown adapter diagnostics are caught by viewer.js and replaced with generic public-unavailable feedback; raw details are not shown."
+      ]
+    },
+    {
+      "currentText": "Contrato de acabamentos incompatível com as máscaras da cena.",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 167
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Thrown adapter diagnostics are caught by viewer.js and replaced with generic public-unavailable feedback; raw details are not shown."
+      ]
+    },
+    {
+      "currentText": "Unknown or invalid published module: ",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 177
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Thrown adapter diagnostics are caught by viewer.js and replaced with generic public-unavailable feedback; raw details are not shown."
+      ]
+    },
+    {
+      "currentText": "Duplicate published module",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 193
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Thrown adapter diagnostics are caught by viewer.js and replaced with generic public-unavailable feedback; raw details are not shown."
+      ]
+    },
+    {
+      "currentText": "O catálogo não contém módulos associados à cena.",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 195
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Thrown adapter diagnostics are caught by viewer.js and replaced with generic public-unavailable feedback; raw details are not shown."
+      ]
+    },
+    {
+      "currentText": "Invalid public module visibility: ",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 213
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Thrown adapter diagnostics are caught by viewer.js and replaced with generic public-unavailable feedback; raw details are not shown."
+      ]
+    },
+    {
+      "currentText": "Invalid public module selection",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 219
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Thrown adapter diagnostics are caught by viewer.js and replaced with generic public-unavailable feedback; raw details are not shown."
+      ]
+    },
+    {
+      "currentText": "Unknown public finish: ",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 225
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Thrown adapter diagnostics are caught by viewer.js and replaced with generic public-unavailable feedback; raw details are not shown."
+      ]
+    },
+    {
+      "currentText": "Invalid public finish options",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 234
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Thrown adapter diagnostics are caught by viewer.js and replaced with generic public-unavailable feedback; raw details are not shown."
+      ]
+    },
+    {
+      "currentText": "Invalid published finish",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 245
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Thrown adapter diagnostics are caught by viewer.js and replaced with generic public-unavailable feedback; raw details are not shown."
+      ]
+    },
+    {
+      "currentText": "Invalid public finish availability or selected finish",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 256
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Thrown adapter diagnostics are caught by viewer.js and replaced with generic public-unavailable feedback; raw details are not shown."
+      ]
+    },
+    {
+      "currentText": "PublicSceneAdapter 0.5",
+      "source": {
+        "file": "app/viewer/scene-adapters.js",
+        "blobSha": "838c623fce24289c7c387be370e25fd5bb634060",
+        "line": 267
+      },
+      "consumer": "adapter contract, validation diagnostic, DOM/ARIA control, route, asset, or state value",
+      "owner": "public scene adapter",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier, attribute, contract version, or implementation value."
+      ]
+    }
+  ]
+}
