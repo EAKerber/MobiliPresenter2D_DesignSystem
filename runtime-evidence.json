@@ -2003,5 +2003,41 @@
     ],
     "productCodeChanged": false,
     "evidence": "evidence/runtime/how-it-works-economy-focus-six-cards-production-2026-10-24.md"
+  },
+  "productionAudit20261024HowItWorksMotionSnapshot": {
+    "observedAt": "2026-10-24",
+    "site": "https://casaemmodulos.casa/",
+    "deployedRevision": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+    "netlifyDeploymentId": "6adc221479c773577ed45e23",
+    "route": "/how-it-works/",
+    "viewport": {
+      "width": 1280,
+      "height": 720,
+      "theme": "dark"
+    },
+    "session": "anonymous",
+    "prefersReducedMotion": false,
+    "cssAnimationNamesAtSnapshot": [],
+    "animationApiAvailable": false,
+    "activeTransitions": "unknown",
+    "reducedMotionRulesInSource": [
+      {
+        "path": "app/public-theme.css",
+        "lines": "24-25",
+        "ref": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf"
+      },
+      {
+        "path": "app/how-it-works/how-it-works.css",
+        "lines": "251-252",
+        "ref": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf"
+      }
+    ],
+    "limits": [
+      "Reduced-motion preference not emulated",
+      "document.getAnimations unavailable in evaluation scope",
+      "Slow network and image failure not simulated"
+    ],
+    "productCodeChanged": false,
+    "evidence": "evidence/runtime/how-it-works-motion-css-runtime-snapshot-production-2026-10-24.md"
   }
 }
