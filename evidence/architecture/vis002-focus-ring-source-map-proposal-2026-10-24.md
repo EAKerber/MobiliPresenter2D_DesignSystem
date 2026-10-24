@@ -57,9 +57,9 @@ ui-theme.css (blob b0f04c5, linhas 32–38, 50 e 113–114) declara o foco do co
 
 ## Evidência runtime adicional — Como funciona
 
-- Runtime em Production: o botão “Compra em escala” recebeu foco por Tab e exibiu contorno em claro e escuro. A cor computada e o contraste sobre o painel escuro não foram medidos; a fonte declara 2 px/offset 3 px. [Evidência](../runtime/how-it-works-economy-action-focus-production-2026-10-24.md).
+- Runtime em Production: o botão “Compra em escala” recebeu foco por Tab e exibiu contorno. No tema claro, CSSOM confirmou outline `2px solid #6E512E`, offset computado `2.66667px` (a fonte declara 3 px) e superfície `#25231F`; o contraste calculado pelas cores computadas foi 2,15:1. O risco nesta combinação está observado. No tema escuro, o anel foi visto visualmente, sem readback CSSOM de cor/offset. [Evidência](../runtime/how-it-works-economy-action-focus-production-2026-10-24.md).
 
 
 ## Risco de cascata a confirmar
 
-- Em Como funciona, a especificidade e a ordem das folhas fazem a regra clara ampla superar a cor local do card. A cascata prevê #6E512E sobre o painel #25231F (razão calculada 2,15:1); ainda é inferência, sem leitura CSSOM. [Evidência e cálculo](../runtime/how-it-works-economy-action-focus-production-2026-10-24.md).
+- Em Como funciona, a regra clara ampla vence a cor local do card. A leitura CSSOM em Production confirmou `#6E512E` sobre `#25231F`, com contraste calculado de 2,15:1. O risco está observado para o botão “Compra em escala” nesta rota/viewport; não generalizar para outros componentes. O offset computado foi 2.66667 px, embora a fonte declare 3 px. [Evidência e limites](../runtime/how-it-works-economy-action-focus-production-2026-10-24.md).
