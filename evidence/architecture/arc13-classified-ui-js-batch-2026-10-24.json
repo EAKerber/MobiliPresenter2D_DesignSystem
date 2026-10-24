@@ -1,0 +1,508 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/core/ui-theme.js",
+      "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64"
+    },
+    {
+      "file": "app/access/access.js",
+      "blobSha": "e2b99d775576fe24d6757c8f24cf52fb8b498ac4"
+    },
+    {
+      "file": "app/access/manage.js",
+      "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e"
+    }
+  ],
+  "reviewMethod": "Manual classification of complete current source files against direct DOM assignments and shared theme-control injection. Technical codes, DOM/event/API identifiers, role IDs, user email, and date values are excluded. No runtime strings were changed.",
+  "totals": {
+    "sourcesReviewed": 3,
+    "classifiedLocalizableEntries": 25
+  },
+  "limitations": [
+    "Inventory-only; no bundle/resource format instantiated and no product migration performed.",
+    "Theme-control route consumers inferred from the current shared runtime and its inclusion in all eight HTML entries; applicability remains dependent on runtime header insertion.",
+    "Expiry placeholder remains data formatted by current pt-BR runtime; locale strategy still requires implementation tests."
+  ],
+  "entries": [
+    {
+      "semanticKey": "theme.mode.auto",
+      "currentText": "Automático",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 6
+      },
+      "consumer": "shared theme toggle full label/title/accessible name",
+      "owner": "shared theme control",
+      "routes": [
+        "/",
+        "/about/",
+        "/how-it-works/",
+        "/viewer/",
+        "/config/",
+        "/admin.html",
+        "/access/",
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "theme.mode.light",
+      "currentText": "Claro",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 6
+      },
+      "consumer": "shared theme toggle full label/title/accessible name",
+      "owner": "shared theme control",
+      "routes": [
+        "/",
+        "/about/",
+        "/how-it-works/",
+        "/viewer/",
+        "/config/",
+        "/admin.html",
+        "/access/",
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "theme.mode.dark",
+      "currentText": "Escuro",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 6
+      },
+      "consumer": "shared theme toggle full label/title/accessible name",
+      "owner": "shared theme control",
+      "routes": [
+        "/",
+        "/about/",
+        "/how-it-works/",
+        "/viewer/",
+        "/config/",
+        "/admin.html",
+        "/access/",
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "theme.mode.auto.short",
+      "currentText": "Auto",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 7
+      },
+      "consumer": "shared theme toggle compact visible label",
+      "owner": "shared theme control",
+      "routes": [
+        "/",
+        "/about/",
+        "/how-it-works/",
+        "/viewer/",
+        "/config/",
+        "/admin.html",
+        "/access/",
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "theme.control.accessibleName",
+      "currentText": "Tema atual: {current}. Ativar {next}.",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 32
+      },
+      "consumer": "theme toggle aria-label",
+      "owner": "shared theme control",
+      "routes": [
+        "/",
+        "/about/",
+        "/how-it-works/",
+        "/viewer/",
+        "/config/",
+        "/admin.html",
+        "/access/",
+        "/access/manage.html"
+      ],
+      "parameters": [
+        "current: theme.mode.*",
+        "next: theme.mode.*"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "theme.control.title",
+      "currentText": "Tema: {current} (próximo: {next})",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 33
+      },
+      "consumer": "theme toggle title",
+      "owner": "shared theme control",
+      "routes": [
+        "/",
+        "/about/",
+        "/how-it-works/",
+        "/viewer/",
+        "/config/",
+        "/admin.html",
+        "/access/",
+        "/access/manage.html"
+      ],
+      "parameters": [
+        "current: theme.mode.*",
+        "next: theme.mode.*"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.confirmation.invalidToken",
+      "currentText": "Este link não contém um token válido. Solicite um novo acesso à equipe.",
+      "source": {
+        "file": "app/access/access.js",
+        "blobSha": "e2b99d775576fe24d6757c8f24cf52fb8b498ac4",
+        "line": 12
+      },
+      "consumer": "access confirmation status",
+      "owner": "access confirmation",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.confirmation.linkFound",
+      "currentText": "Link encontrado. Confirme para resgatar o acesso.",
+      "source": {
+        "file": "app/access/access.js",
+        "blobSha": "e2b99d775576fe24d6757c8f24cf52fb8b498ac4",
+        "line": 16
+      },
+      "consumer": "access confirmation status",
+      "owner": "access confirmation",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.confirmation.validating",
+      "currentText": "Validando o acesso…",
+      "source": {
+        "file": "app/access/access.js",
+        "blobSha": "e2b99d775576fe24d6757c8f24cf52fb8b498ac4",
+        "line": 20
+      },
+      "consumer": "access confirmation status",
+      "owner": "access confirmation",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.confirmation.success",
+      "currentText": "Acesso confirmado. Abrindo o configurador…",
+      "source": {
+        "file": "app/access/access.js",
+        "blobSha": "e2b99d775576fe24d6757c8f24cf52fb8b498ac4",
+        "line": 31
+      },
+      "consumer": "access confirmation status",
+      "owner": "access confirmation",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.confirmation.failure",
+      "currentText": "Não foi possível validar este link. Solicite um novo acesso à equipe.",
+      "source": {
+        "file": "app/access/access.js",
+        "blobSha": "e2b99d775576fe24d6757c8f24cf52fb8b498ac4",
+        "line": 34
+      },
+      "consumer": "access confirmation status",
+      "owner": "access confirmation",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.grants.empty",
+      "currentText": "Nenhum acesso registrado.",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 51
+      },
+      "consumer": "access grant list empty state",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.grants.state.revoked",
+      "currentText": "Revogado",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 64
+      },
+      "consumer": "grant status label",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.grants.state.expired",
+      "currentText": "Expirado",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 152
+      },
+      "consumer": "grant status label",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.grants.state.redeemed",
+      "currentText": "Resgatado · expira {expiry}",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 68
+      },
+      "consumer": "grant status label",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [
+        "expiry: localized date/time formatted for pt-BR by current runtime"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.grants.state.pending",
+      "currentText": "Pendente · expira {expiry}",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 69
+      },
+      "consumer": "grant status label",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [
+        "expiry: localized date/time formatted for pt-BR by current runtime"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.grants.action.revoke",
+      "currentText": "Revogar",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 76
+      },
+      "consumer": "grant revoke button",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.grants.error.revoke",
+      "currentText": "Não foi possível revogar agora. Tente novamente.",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 86
+      },
+      "consumer": "manager status",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.grants.error.load",
+      "currentText": "Não foi possível carregar os acessos. Verifique a configuração do serviço.",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 95
+      },
+      "consumer": "manager status",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.login.pending",
+      "currentText": "Entrando…",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 101
+      },
+      "consumer": "login status",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.login.failure",
+      "currentText": "Não foi possível entrar. Confira seus dados e tente novamente.",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 106
+      },
+      "consumer": "login status",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.grant.pending",
+      "currentText": "Enviando…",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 114
+      },
+      "consumer": "manager status",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.grant.success",
+      "currentText": "Link enviado. Ele expira em três horas e só pode ser resgatado uma vez.",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 121
+      },
+      "consumer": "manager status",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.grant.error.unconfigured",
+      "currentText": "O envio ainda não está configurado neste ambiente.",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 125
+      },
+      "consumer": "manager status",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.grant.error.failure",
+      "currentText": "Não foi possível enviar o link. Verifique o email e tente novamente.",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 126
+      },
+      "consumer": "manager status",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    }
+  ]
+}
