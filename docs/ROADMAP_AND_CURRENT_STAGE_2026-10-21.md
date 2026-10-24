@@ -128,9 +128,9 @@ Foi preparada uma convenção revisável para substituir sufixos numéricos por 
 
 ### Foco e salto ao conteúdo — Landing e Como funciona (24/10/2026)
 
-A Production não apresenta link de salto ao conteúdo nessas duas rotas: o primeiro Tab foca a marca, e `main` não possui id. O anel da marca também diverge de VIS-002 em largura/offset nos dois temas e cor clara. A CTA interna `#passos` em Como funciona não é um skip link. Evidência: [auditoria em Production](../evidence/runtime/public-skip-navigation-focus-2026-10-24.md). Fica como achado runtime, sem inferir solução ou autorização de implementação.
+A Production não apresenta link de salto ao conteúdo nessas duas rotas: o primeiro Tab foca a marca, e `main` não possui id. A regra fonte declara 3 px/offset 3 px e cores claro `#6E512E`/escuro `#D8BC7C`; a referência é 4 px/offset 3 px e `#8B6A40`/`#D8BC7C`, portanto a divergência declarada é largura e cor clara, não o offset global. A CSSOM retornou 2.67 px nessa sessão para uma regra de 3 px, inclusive em elemento de teste; causa desconhecida. A CTA interna `#passos` em Como funciona não é um skip link. Evidência: [auditoria em Production](../evidence/runtime/public-skip-navigation-focus-2026-10-24.md). Fica como achado runtime, sem inferir solução ou autorização de implementação.
 
 
 ### VIS-002 — anel de foco em componentes públicos
 
-A amostra Production na Landing mediu dez focos reais em dois temas: o anel de 2.67 px aparece em controles de header, CTA e seleção de ambientes; o offset varia entre 2.67 e 2 px. VIS-002 referencia 4 px/3 px e cor clara distinta. A evidência não homologa implementação geral nem mede todas as rotas/controles. [Registro runtime](../evidence/runtime/public-focus-ring-production-component-sample-2026-10-24.md).
+A amostra Production na Landing mediu dez focos reais em dois temas. As regras fonte declaram 3 px/offset 3 px globalmente e 3 px/offset 2 px no controle de tema; as cores são `#6E512E`/`#D8BC7C`. VIS-002 referencia 4 px/offset 3 px e cores `#8B6A40`/`#D8BC7C`. A CSSOM computou 2.67 px para `outline:3px` na sessão auditada, até em elemento de teste; a causa é desconhecida. A evidência não homologa implementação geral nem mede todas as rotas/controles. [Registro runtime](../evidence/runtime/public-focus-ring-production-component-sample-2026-10-24.md).
