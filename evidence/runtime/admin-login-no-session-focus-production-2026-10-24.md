@@ -37,3 +37,10 @@ Tab percorreu a marca, controle de tema, menu, e-mail, senha, mostrar senha, Ent
 A cor clara observada (`#6E512E`) e as larguras de 2–2,66667 px divergem da referência VIS-002 (`#8B6A40`, 4 px/offset 3 px). No escuro, a cor coincide com a referência, mas a geometria observada permanece menor. Isso é uma divergência desta tela/estado, sem avaliação de contraste ou homologação global. Nenhuma alteração de CSS, token ou configuração foi feita.
 
 Os valores dos campos não foram lidos ou copiados; o formulário não foi preenchido, enviado nem usado para recuperação. A árvore de acessibilidade ocultou valores após a troca de tema, e nenhum dado foi registrado. O tema foi restaurado para Claro, que era o estado inicial desta passagem, e a aba isolada foi fechada.
+
+
+## Contraste do foco no campo de e-mail — 24/10/2026
+
+No mesmo deploy e viewport 1280 × 720, medi o campo de e-mail com foco por teclado. A cor do outline computado dividida pela cor do ancestral opaco mais próximo (`.admin-card.auth-card`) resultou em 7,29:1 no tema claro (`#6E512E` sobre `#FFFFFF`) e 9,29:1 no escuro (`#D8BC7C` sobre `rgb(27, 28, 26)`). Em ambos, o campo tinha `:focus-visible`, outline sólido de 2 px e offset computado de 2,66667 px.
+
+São razões calculadas das cores CSS computadas, sem amostragem de pixels da captura. A leitura indica contraste de cor acima de 3:1 para este campo e superfície nos dois temas; não compensa a divergência geométrica de 2 px/offset ~2,67 px frente à referência VIS-002 de 4 px/3 px, nem se generaliza para outros controles, fundos ou telas autenticadas. Nenhum campo foi lido ou alterado e nada foi enviado.
