@@ -315,3 +315,8 @@ Há um candidato experimental já testado no produto: branch [`architecture/p-co
 ## Rechecagem de issue #224 no deploy atual (2026-10-24)
 
 O readback do Netlify confirmou Production `READY` em `EAKerber/MobiliPresenter2D@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, deploy `6adc221479c773577ed45e23`. Em contexto de navegador isolado, tema escuro e viewport 390×844, abri o grupo 2 do carrossel e selecionei Lavanderia. O detalhe mudou para Lavanderia e o cartão selecionado permaneceu visível no grupo 2; não observei retorno ao grupo 1 nesta passagem. A captura foi inspecionada, mas não persistida. Esta é uma única não reprodução na head atual; não encerra a issue #224 nem substitui a reprodução anterior 4/4 no deploy de 21/10. Repetições e outros estados ainda faltam; nenhum estado de produto foi salvo.
+
+
+## Menu público em Production: Escape — 24/10/2026
+
+Na Landing pública de Production `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, deploy READY `6adc221479c773577ed45e23`, em contexto anônimo isolado e viewport móvel 390×844, o botão abriu a navegação com `aria-expanded=true`, mantendo foco no controle. Pressionar Escape fechou a navegação (`aria-expanded=false`, `display:none`) e preservou o foco no botão. `prefers-reduced-motion: reduce` estava ativo; isso não prova que todas as animações foram suprimidas. O documento não tinha overflow horizontal e as 17 imagens observadas carregaram. O clique externo e o percurso completo de teclado continuam sem verificação nesta passagem. Evidência detalhada: [menu público em Production](evidence/runtime/public-menu-production-escape-2026-10-24.md). Esta observação atual não apaga o resultado diferente do preview #234; são deploys e momentos distintos.
