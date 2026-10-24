@@ -534,6 +534,21 @@
       "relatedProductIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/224",
       "relatedIssueScope": "Product issue #224 tracks this carousel pagination mismatch. Product issue #207 separately requests an availability message for environments without viewers and does not cover this defect.",
       "productIssueCreated": true
+    },
+    {
+      "observedAt": "2026-10-24",
+      "route": "/",
+      "control": "mobile environment carousel and selection",
+      "status": "prior pagination mismatch not reproduced in one current-production observation; issue remains open",
+      "theme": "dark",
+      "viewport": "390x844 CSS px",
+      "productCommit": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+      "netlifyDeployId": "6adc221479c773577ed45e23",
+      "evidence": "In one isolated browser pass, opened carousel group 2 and selected Lavanderia; the detail heading updated and the selected card remained visible in group 2. No page reset was observed. Screenshot was inspected in session but not persisted.",
+      "interpretation": "This single non-reproduction does not supersede the earlier 4/4 reproduction on the previous production commit and is insufficient to close issue #224 or infer a code fix.",
+      "relatedProductIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/224",
+      "screenshotPersisted": false,
+      "productDataChanged": false
     }
   ],
   "contrastScreening": {
@@ -1216,15 +1231,15 @@
     }
   },
   "latestRuntimeRelease": {
-    "observedAt": "2026-10-20",
+    "observedAt": "2026-10-24",
     "repository": "EAKerber/MobiliPresenter2D",
     "branch": "main",
-    "productCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
-    "netlifyDeployId": "6ad6c3b51b6be05647167f94",
+    "productCommit": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+    "netlifyDeployId": "6adc221479c773577ed45e23",
     "deployStatus": "ready",
-    "staticInventoryCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
-    "note": "Deploy de produção confirmado no commit indicado. O inventário estático cobre as mudanças HTML/CSS/assets desde 483ef2e; a validação autenticada pós-login segue pendente em FIND-007.",
-    "publishedAt": "2026-10-20T01:28:40.575Z"
+    "staticInventoryCommit": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+    "publishedAt": "2026-10-24T03:12:38.561Z",
+    "note": "Deploy de produção confirmado por readback Netlify; a observação atual de 390x844 não reproduziu #224 em uma única passagem. Issue permanece aberta; validação repetida e estados adicionais ainda faltam."
   },
   "productFindingResolutionStatus": {
     "FIND-006": {
