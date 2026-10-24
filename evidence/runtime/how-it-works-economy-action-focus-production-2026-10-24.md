@@ -20,10 +20,10 @@ Amostra limitada a um card, uma rota e um viewport nos dois temas. Não verifiqu
 Em uma nova passagem anônima e isolada na mesma rota e deploy, “Compra em escala” recebeu foco real por Tab; `document.activeElement` confirmou o botão focado e `aria-expanded=false`. Sem ativar o card, a leitura de `getComputedStyle` no tema claro retornou:
 
 - `outline: 2px solid rgb(110, 81, 46)` (`#6E512E`);
-- `outline-offset: 2.66667px` computados; a regra fonte declara 3 px;
-- fundo da seção: `rgb(37, 35, 31)` (`#25231F`);
+- `outline-offset`: uma leitura CSSOM nesta sessão retornou `2.66667px`; uma segunda passagem, no mesmo controle em viewport desktop 1280×720, retornou `3px`, igual à regra fonte. A discrepância entre leituras não foi explicada;
+- o botão computa preenchimento `rgba(255, 255, 255, 0.05)`, mas seu contêiner `.economy-grid` é transparente e a seção atrás é opaca `rgb(37, 35, 31)` (`#25231F`). Com o offset positivo de 3 px na leitura mais recente, o traço do outline fica fora do preenchimento do botão, sobre a superfície da seção;
 - tema: `light`.
 
-A razão de contraste calculada a partir das cores efetivamente computadas do outline e da superfície é **2,15:1** (2.15065:1 antes do arredondamento). Portanto a cascata prevista foi confirmada no runtime e o risco de contraste para o foco neste tema está observado, não apenas inferido. A captura mostrou o anel; o registro visual não substitui a leitura CSSOM.
+A razão de contraste calculada entre as cores CSSOM do outline e da superfície opaca realmente atrás do traço é **2,15:1** (2.15065:1 antes do arredondamento). Portanto a cor prevista pela cascata foi confirmada no runtime e o risco de contraste para o foco neste tema está observado, não apenas inferido. Uma captura mostrou o anel; o registro visual não substitui a leitura CSSOM.
 
-A leitura cobre somente este botão, nesta rota e neste viewport no tema claro. Não mede a cor CSSOM do tema escuro, outros cards/superfícies, estados adicionais, mobile, leitores de tela ou outros navegadores. A razão é uma comparação de cores computadas; a avaliação normativa e qualquer correção visual permanecem pendentes do processo canônico VIS-002. Nenhum CSS ou token do produto foi alterado.
+A amostra cobre somente este botão, nesta rota e em viewport desktop no tema claro. Não mede a cor CSSOM do tema escuro, outros cards/superfícies, estados adicionais, mobile, leitores de tela ou outros navegadores. A razão é uma comparação de cores computadas; a avaliação normativa e qualquer correção visual permanecem pendentes do processo canônico VIS-002. Nenhum CSS ou token do produto foi alterado.
