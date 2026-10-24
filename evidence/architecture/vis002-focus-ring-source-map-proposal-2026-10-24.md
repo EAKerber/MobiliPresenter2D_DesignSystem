@@ -63,3 +63,8 @@ ui-theme.css (blob b0f04c5, linhas 32–38, 50 e 113–114) declara o foco do co
 ## Risco de cascata a confirmar
 
 - Em Como funciona, a regra clara ampla vence a cor local do card. A leitura CSSOM em Production confirmou `#6E512E` sobre `#25231F`, com contraste calculado de 2,15:1. O risco está observado para o botão “Compra em escala” nesta rota/viewport; não generalizar para outros componentes. Uma leitura do offset retornou 2.66667 px e a confirmação retornou 3 px, como a fonte; a diferença não foi explicada. [Evidência e limites](../runtime/how-it-works-economy-action-focus-production-2026-10-24.md).
+
+
+## Runtime evidence — /access/ invalid-link state (24/10/2026)
+
+- Anonymous Production in 390 × 844 showed the invalid-link message, with no valid token or authenticated state; the confirmation action was hidden. Tab reached the brand, theme toggle, menu toggle and back link. In both themes these computed an outline width of 2.66667 px; all offsets were 2.66667 px except the theme toggle at 2 px. Colors were #6E512E in light and #D8BC7C in dark. This covers only the public invalid-link state, not a valid access link or private Configurator/Admin content. [Runtime record](../runtime/access-public-invalid-link-focus-production-2026-10-24.md). The proposal and implementation authorization are unchanged.
