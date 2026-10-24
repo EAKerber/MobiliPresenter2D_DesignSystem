@@ -6,7 +6,7 @@
 - A PR produto #239 aplica VIS-002 somente ao skip link de About; seis checks passaram e a observação direta do Deploy Preview confirmou foco/estilo no claro, escuro e viewport móvel. A PR permanece DRAFT; isso não representa integração ou homologação global.
 - A PR produto #238 continua DRAFT e a issue #232 aberta. O gate autenticado isolado não substitui a integração dos workflows legados.
 - V0/V1 continua aberto. Os índices de localização são heurísticos e foram produzidos em `840a0cda`; dos 26 arquivos indexados, 7 hashes divergem no produto atual. A árvore atual contém 8 HTML e 77 JS sob `app/` (inclui dados e testes); ainda é necessária classificação por papel e extração integral de strings realmente localizáveis. A próxima etapa executável é atualizar esse mapa contra a main atual e completar a cobertura ARC-13, sem misturar dados V5/autoria ou mensagens técnicas.
-- ARC-13 já tem classificação manual documental de 94 ocorrências / 75 valores distintos entre lotes nas entradas `/about/`, `/viewer/`, `/access/` e `/access/manage.html`, além das 60 entradas em sete arquivos JS; nenhum bundle ou código de produto foi alterado. A cobertura estática das seis outras entradas HTML e o restante do runtime seguem pendentes.
+- ARC-13 já tem classificação manual documental de 162 ocorrências / 129 valores distintos entre lotes em quatro entradas HTML: `/about/`, `/viewer/`, `/access/`, `/access/manage.html` e `/admin.html`, além das 60 entradas em sete arquivos JS; nenhum bundle ou código de produto foi alterado. A cobertura estática das seis outras entradas HTML e o restante do runtime seguem pendentes.
 - A estimativa de ~22% permanece somente histórica/provisória; não foi recalculada sem pesos por entregável e inventário atualizados.
 
 
