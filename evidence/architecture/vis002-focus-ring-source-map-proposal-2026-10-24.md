@@ -49,3 +49,7 @@ A decisão canônica VIS-002 continua com implementação global não autorizada
 ui-theme.css (blob b0f04c5, linhas 32–38, 50 e 113–114) declara o foco do controle de tema e seletores de cor amplos: claro #6E512E, escuro #D8BC7C. Nas páginas que carregam essa folha, a cor pode prevalecer sobre regras locais de outline; a geometria é mantida pela regra local mais específica ou por public-theme.css conforme a página. O cadastro de componentes e a cascata efetiva ainda precisam de conferência em runtime nas páginas privadas.
 
 **Implicação para a revisão:** a diferença da referência VIS-002 não se limita à regra global 3/3. Existem exceções locais 2 px e offsets de 2 px, além de hotspots sem outline explícito. Não classificar os hotspots como falha sem avaliar em runtime as mudanças de borda, fundo, rótulo, recorte e contraste. Esta ampliação continua proposta, sem aprovação de novo token, alteração de decisions.json, CSS ou produto.
+
+## Evidência runtime associada
+
+- Runtime check em Production: foco por teclado no hotspot do módulo 02 mostrou borda e marcador visíveis em temas claro e escuro, sem ativar o módulo. Esta amostra não homologou contraste ou todos os estados: [registro](../runtime/viewer-scene-hotspot-keyboard-focus-production-2026-10-24.md).
