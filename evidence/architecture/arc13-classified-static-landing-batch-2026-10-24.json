@@ -1,0 +1,799 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/index.html",
+      "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7"
+    }
+  ],
+  "reviewScope": "Manual classification of all static lexical candidates in the public landing HTML entrypoint, including metadata, brand labels, navigation, benefit copy, carousel accessibility, fallback and process sections.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "classifiedOccurrences": 44,
+    "distinctValues": 38
+  },
+  "limitations": [
+    "Inventory only: product HTML/runtime were not changed and no translation bundle was created.",
+    "This batch covers static HTML only; runtime-generated card content, inline styles/scripts, and data-backed content need separate review.",
+    "Brand name Casa em Módulos is preserved as supplied brand content."
+  ],
+  "entries": [
+    {
+      "semanticKey": "landing.meta.description",
+      "currentText": "Móveis modulares pensados para a vida real.",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 13
+      },
+      "consumer": "landing metadata description",
+      "owner": "public landing metadata",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.document.title",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 14
+      },
+      "consumer": "browser document title",
+      "owner": "public landing metadata",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "brand.landing.hero.logo.alt",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 21
+      },
+      "consumer": "hero brand image alternative text",
+      "owner": "brand identity image",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "brand.landing.hero.accessible",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 21
+      },
+      "consumer": "hero brand accessible name",
+      "owner": "brand identity",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "landing.hero.value.accessible",
+      "currentText": "Moderno, inteligente, inovador e econômico",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 21
+      },
+      "consumer": "hero value proposition accessible name",
+      "owner": "public landing hero",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.hero.value.economical",
+      "currentText": "econômico",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 21
+      },
+      "consumer": "economical value word",
+      "owner": "public landing hero",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.hero.value.innovative",
+      "currentText": "inovador",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 21
+      },
+      "consumer": "innovative value word",
+      "owner": "public landing hero",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.hero.value.intelligent",
+      "currentText": "inteligente",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 21
+      },
+      "consumer": "intelligent value word",
+      "owner": "public landing hero",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.hero.value.modern",
+      "currentText": "moderno",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 21
+      },
+      "consumer": "modern value word",
+      "owner": "public landing hero",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "brand.landing.header.logo.alt",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 22
+      },
+      "consumer": "header brand image alternative text",
+      "owner": "brand identity image",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "navigation.menu.open",
+      "currentText": "Abrir menu",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 22
+      },
+      "consumer": "menu toggle accessible name",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.home.accessible",
+      "currentText": "Casa em Módulos, início",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 22
+      },
+      "consumer": "brand home link accessible name",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "contact.whatsapp.accessible",
+      "currentText": "Fale conosco pelo WhatsApp",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 22
+      },
+      "consumer": "contact link accessible name",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.primary.label",
+      "currentText": "Navegação principal",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 22
+      },
+      "consumer": "primary navigation accessible name",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.environments",
+      "currentText": "Ambientes",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 22
+      },
+      "consumer": "primary navigation link",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.howItWorks",
+      "currentText": "Como funciona",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 22
+      },
+      "consumer": "primary navigation link",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "contact.whatsapp.label",
+      "currentText": "Fale conosco",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 22
+      },
+      "consumer": "contact link visible label",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.about",
+      "currentText": "Quem somos",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 22
+      },
+      "consumer": "primary navigation link",
+      "owner": "shared public navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.hero.brand.name",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 27
+      },
+      "consumer": "brand name in hero content",
+      "owner": "brand identity",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "landing.hero.action.enjoy",
+      "currentText": "Aproveite.",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 28
+      },
+      "consumer": "hero action word",
+      "owner": "public landing hero",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.hero.action.choose",
+      "currentText": "Escolha.",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 28
+      },
+      "consumer": "hero action word",
+      "owner": "public landing hero",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.hero.action.build",
+      "currentText": "Monte.",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 28
+      },
+      "consumer": "hero action word",
+      "owner": "public landing hero",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.hero.title",
+      "currentText": "Móveis inteligentes, pensados para o seu espaço e para o seu orçamento.",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 29
+      },
+      "consumer": "hero heading",
+      "owner": "public landing hero",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.hero.description",
+      "currentText": "Um novo conceito em mobiliário que une projeto, fabricação e instalação em uma solução simples, prática e acessível.",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 30
+      },
+      "consumer": "hero supporting paragraph",
+      "owner": "public landing hero",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.benefits.label",
+      "currentText": "Vantagens",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 31
+      },
+      "consumer": "benefits section accessible name",
+      "owner": "public landing benefits",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.environments.cta",
+      "currentText": "Conheça nossos ambientes",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 32
+      },
+      "consumer": "environments call to action",
+      "owner": "public landing navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.environment.image.alt",
+      "currentText": "Ambiente planejado com a interface Casa em Módulos",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 34
+      },
+      "consumer": "environment preview image alternative text",
+      "owner": "public environment preview",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "landing.benefits.heading.accessible",
+      "currentText": "Vantagens Casa em Módulos",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 37
+      },
+      "consumer": "benefits section accessible name",
+      "owner": "public landing benefits",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "landing.benefit.statement",
+      "currentText": "A gente já sabe como fazer.",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 40
+      },
+      "consumer": "benefit statement",
+      "owner": "public landing benefits",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.benefit.customerChoice",
+      "currentText": "Você escolhe o que precisa",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 40
+      },
+      "consumer": "customer choice benefit heading",
+      "owner": "public landing benefits",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.carousel.previous.accessible",
+      "currentText": "Ambientes anteriores",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 44
+      },
+      "consumer": "previous environment control accessible name",
+      "owner": "public environment carousel",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.carousel.pagination.accessible",
+      "currentText": "Página do carrossel",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 44
+      },
+      "consumer": "environment carousel pagination accessible name",
+      "owner": "public environment carousel",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.carousel.next.accessible",
+      "currentText": "Próximos ambientes",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 44
+      },
+      "consumer": "next environment control accessible name",
+      "owner": "public environment carousel",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.environment.imageUnavailable",
+      "currentText": "Imagem temporariamente indisponível.",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 48
+      },
+      "consumer": "environment image fallback status",
+      "owner": "public environment preview",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.environment.explore",
+      "currentText": "Explorar a cozinha",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 49
+      },
+      "consumer": "environment exploration action",
+      "owner": "public environment preview",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.environment.tagline",
+      "currentText": "Seu ambiente, do seu jeito",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 49
+      },
+      "consumer": "environment teaser heading",
+      "owner": "public environment preview",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.environment.previewSoon",
+      "currentText": "Visualização em breve",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 49
+      },
+      "consumer": "future preview status",
+      "owner": "public environment preview",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.process.heading",
+      "currentText": "Do seu espaço ao ambiente pronto.",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 53
+      },
+      "consumer": "process section heading",
+      "owner": "public landing process",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.process.title",
+      "currentText": "Encontre seu ambiente",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 53
+      },
+      "consumer": "environment selection heading",
+      "owner": "public landing process",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.process.description",
+      "currentText": "Escolha o ambiente, conheça os módulos e encontre uma solução que acompanha sua rotina.",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 53
+      },
+      "consumer": "environment selection explanation",
+      "owner": "public landing process",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.process.benefit",
+      "currentText": "Simples do início ao fim",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 53
+      },
+      "consumer": "process benefit heading",
+      "owner": "public landing process",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "brand.landing.footer.logo.alt",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 55
+      },
+      "consumer": "footer brand image alternative text",
+      "owner": "brand identity image",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "brand.landing.footer.tagline",
+      "currentText": "Móveis modulares pensados para a vida real.",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 55
+      },
+      "consumer": "footer brand tagline",
+      "owner": "public landing footer",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "landing.environments.return",
+      "currentText": "Voltar aos ambientes ↑",
+      "source": {
+        "file": "app/index.html",
+        "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
+        "line": 55
+      },
+      "consumer": "return-to-environments link",
+      "owner": "public landing navigation",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    }
+  ]
+}
