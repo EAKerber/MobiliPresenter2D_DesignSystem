@@ -266,3 +266,10 @@ O deploy atualmente publicado no projeto principal `mobilipresenter2d` está **R
 [arc13-classified-static-config-batch-2026-10-24.json](../evidence/architecture/arc13-classified-static-config-batch-2026-10-24.json) revisa as **45 ocorrências** estáticas de `/config/`: 37 controles/instruções foram classificados como localizáveis; oito trechos sobre políticas e serviços comerciais foram mantidos em revisão de ownership até confirmação da fonte canônica V5/catálogo. Scripts inline e textos gerados pelo runtime continuam fora deste lote. Sem alteração no produto.
 
 **Cobertura estática classificada/documentada até aqui:** seis das oito entradas HTML; **207 ocorrências / 165 valores distintos entre lotes**, sendo 195 localizáveis, quatro identificadores não localizáveis e oito itens comerciais deferidos. Permanecem sem classificação estática a landing `/` e `/how-it-works/`; a extração integral ainda depende de completar essas rotas, inventário JavaScript/inline e exceções de dados.
+
+
+### Classificação estática da landing — 24/10/2026
+
+[arc13-classified-static-landing-batch-2026-10-24.json](../evidence/architecture/arc13-classified-static-landing-batch-2026-10-24.json) classifica **44 ocorrências / 38 valores** da página inicial, incluindo metadados, navegação, chamadas de ação, acessibilidade, benefícios e fallback do carrossel. A ordem das chaves foi conferida com os consumidores do HTML; conteúdo gerado pelo runtime segue pendente.
+
+**Cobertura de inventário HTML:** sete das oito entradas, **251 ocorrências / 191 valores distintos entre lotes**; 239 textos de interface classificados, quatro identificadores excluídos e oito itens comerciais aguardando ownership. A entrada `/how-it-works/` permanece pendente. Também faltam scripts inline, mensagens de runtime e revisão dos lotes JS restantes.
