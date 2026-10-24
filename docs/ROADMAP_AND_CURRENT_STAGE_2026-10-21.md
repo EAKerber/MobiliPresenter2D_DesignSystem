@@ -12,6 +12,7 @@
 - Os deploys Production atuais do Netlify principal e isolado estão READY em `main@5ccb2a8`, com nove Functions e uma Edge Function reportadas; a inspeção não executou a função.
 - A estimativa geral ~22% permanece histórica/provisória e não foi recalculada sem pesos por entregável.
 - VIS-002 ganhou uma leitura estática das folhas em oito entradas (Landing, Como funciona, About, Viewer, Configurador, Admin e duas rotas de acesso): exceções 2 px/2 px e 2 px/3 px aparecem em controles de Configurador/Admin/Como funciona; Viewer e Configurador têm hotspots que removem outline e exibem outras pistas visuais. São candidatos para revisão runtime, não falhas homologadas; mapa [proposto](../evidence/architecture/vis002-focus-ring-source-map-proposal-2026-10-24.md), sem CSS ou decisão canônica alterados.
+- VIS-002 runtime: em Production, o Viewer mostrou borda dourada e marcador do hotspot focado por Tab nos temas claro/escuro; a amostra não mediu contraste nem cobre outros componentes. [Evidência](../evidence/runtime/viewer-scene-hotspot-keyboard-focus-production-2026-10-24.md).
 
 
 > **PONTO DE RETOMADA 22/10:** [handover canônico entre repositórios](ARCHITECTURE_CURRENT_HANDOVER_2026-10-22.md). Último gate concluído: ARC-03B **60/60 PASS**, imagens idênticas, zero alteração de `app/`, porém **sem cutover de `npm run build`**. Próximo: ARC-03C (fonte única de HTML de autoria e geração no build publicado), separado de P-COMP, P-TOKEN e auth. PR de tokens #231 permanece draft; #232 é pendência explícita e #233 já entrou na main.
