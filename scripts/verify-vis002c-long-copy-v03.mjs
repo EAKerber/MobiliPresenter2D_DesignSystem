@@ -74,4 +74,4 @@ assert.equal(css,expectedCss,"Generated CSS differs from the exact scoped projec
 assert.doesNotMatch(css,/\bcolor\s*:/i,"Artifact may not set text color directly");
 assert.doesNotMatch(css,/:root\s*\{/,"Global token scope is not authorized");
 
-console.log("VIS002C_LONG_COPY_V03_PASS contexts=5 dark=unchanged global=false");
+console.log(`VIS002C_LONG_COPY_V03_PASS contexts=${mapping.contexts.length} dark=unchanged global=false`);
