@@ -73,7 +73,7 @@ O registro de foco foi alinhado à paleta já aprovada pela [PR #47](https://git
 
 ### Próximos trabalhos desta etapa
 
-1. Atualizar evidências visuais de cabeçalhos cujo material persistido pertence a versões anteriores; cobrir rotas públicas e a tela de login sem sessão em temas e larguras representativas, sem persistir dados de conta.
+1. Atualizar evidências visuais de cabeçalhos cujo material persistido pertence a versões anteriores; cobrir rotas públicas e a tela de login sem sessão em temas e larguras representativas, sem persistir dados de conta. **Parcial em 24/10:** a tela de login em Production foi observada em 1280×720, 390×844 e 320×700, nos temas claro/escuro; o formulário não foi enviado. Os campos estavam previamente preenchidos pelo navegador, então não se concluiu que o perfil estivesse limpo. Ainda falta completar as rotas/cabeçalhos e cobrir as larguras pendentes. [Evidência da tela de login](../evidence/runtime/admin-login-no-session-focus-production-2026-10-24.md).
 2. Completar verificações públicas de teclado, movimento reduzido, animações e estados de carregamento/erro em imagens; separar limitações de ferramenta de falhas do produto.
 3. Revalidar no DOM temas, superfícies e estados dinâmicos dos achados visuais. Medir contrastes efetivos com transparência/ancestrais e registrar cada caso como aprovado, falha, exceção ou não verificado.
 4. Fazer uma sequência autenticada controlada para FIND-007 / issue #213 somente quando o usuário estiver conectado na sessão de produção: menu após login sem recarga, navegação privada, nova aba e saída. Não registrar email, credenciais, tokens ou dados de convite.
