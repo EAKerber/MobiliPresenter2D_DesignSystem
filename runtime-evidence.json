@@ -1415,5 +1415,138 @@
     }
   },
   "recordSetSemantics": "This file is a cumulative evidence record. The root-level observedAt/deployedRevision fields describe the original 2026-10-18 snapshot, not the latest audit. Later passes are append-only named sections (for example g1PublicRuntimeAudit); use each section's own date, product commit and deploy ID as the authority for that pass.",
-  "authenticationCompletedByUserScope": "Historical root-level flag: the user completed authentication during the 2026-10-19 private runtime audit. It does not mean that authentication was performed in the 2026-10-21 G1 public audit; that pass was anonymous and read no authenticated data."
+  "authenticationCompletedByUserScope": "Historical root-level flag: the user completed authentication during the 2026-10-19 private runtime audit. It does not mean that authentication was performed in the 2026-10-21 G1 public audit; that pass was anonymous and read no authenticated data.",
+  "previewAudit20261024": {
+    "observedAt": "2026-10-24T02:35:35Z",
+    "productRepository": "EAKerber/MobiliPresenter2D",
+    "pullRequest": 234,
+    "productCommit": "fbd00a9628c81b4902a8c679abb7ac72e93ca549",
+    "netlifyDeploy": {
+      "id": "6adc0c519cc524d721abd893",
+      "state": "ready",
+      "context": "deploy-preview",
+      "reviewId": 234
+    },
+    "method": {
+      "readOnly": true,
+      "isolatedBrowserContext": true,
+      "loginSubmitted": false,
+      "tokenProvided": false,
+      "screenshotsPersisted": false
+    },
+    "environment": {
+      "viewports": [
+        {
+          "width": 390,
+          "height": 844,
+          "role": "mobile"
+        },
+        {
+          "width": 1366,
+          "height": 900,
+          "role": "desktop"
+        }
+      ],
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "prefersReducedMotion": "reduce"
+    },
+    "routeObservations": [
+      {
+        "route": "/",
+        "viewport": "390x844",
+        "theme": "light",
+        "noHorizontalOverflow": true,
+        "images": {
+          "loaded": 18,
+          "total": 18
+        }
+      },
+      {
+        "route": "/about/",
+        "viewport": "390x844",
+        "theme": "light",
+        "noHorizontalOverflow": true,
+        "images": {
+          "loaded": 3,
+          "total": 3
+        },
+        "keyboard": {
+          "firstTabTarget": "skip link",
+          "focusVisible": true,
+          "outline": "3px solid #6E512E",
+          "offset": "3px"
+        }
+      },
+      {
+        "route": "/about/",
+        "viewport": "1366x900",
+        "theme": "dark",
+        "keyboard": {
+          "firstTabTarget": "skip link",
+          "focusVisible": true,
+          "outline": "3px solid #D8BC7C",
+          "offset": "3px"
+        }
+      },
+      {
+        "route": "/how-it-works/",
+        "viewports": [
+          "390x844",
+          "1366x900"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "noHorizontalOverflow": true,
+        "images": {
+          "loaded": 28,
+          "total": 28,
+          "lazyLoadedAfterScroll": 24,
+          "failed": 0
+        }
+      },
+      {
+        "route": "/config/",
+        "finalRoute": "/access/",
+        "viewport": "1366x900",
+        "theme": "dark",
+        "result": "redirected; access page reported invalid or missing token",
+        "inputs": 0
+      },
+      {
+        "route": "/access/",
+        "viewports": [
+          "390x844",
+          "1366x900"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "noHorizontalOverflow": true,
+        "inputs": 0,
+        "logoLoaded": true,
+        "invalidTokenState": true
+      }
+    ],
+    "focusReference": {
+      "light": "#8B6A40",
+      "dark": "#D8BC7C",
+      "width": "4px",
+      "offset": "3px",
+      "status": "approved design-system record; preview differs in light color and both widths"
+    },
+    "limitations": [
+      "not production evidence",
+      "no authenticated user/session tested",
+      "full keyboard sequences not covered",
+      "network or image failure states not tested",
+      "contrast not measured for all elements",
+      "video playback not tested"
+    ]
+  }
 }
