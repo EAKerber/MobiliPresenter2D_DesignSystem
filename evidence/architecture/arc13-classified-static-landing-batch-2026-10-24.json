@@ -521,15 +521,15 @@
       ]
     },
     {
-      "semanticKey": "landing.benefit.statement",
+      "semanticKey": "landing.environments.heading",
       "currentText": "A gente já sabe como fazer.",
       "source": {
         "file": "app/index.html",
         "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
         "line": 40
       },
-      "consumer": "benefit statement",
-      "owner": "public landing benefits",
+      "consumer": "environment section heading",
+      "owner": "public landing environments",
       "routes": [
         "/"
       ],
@@ -538,15 +538,15 @@
       "status": "classified-inventory-only"
     },
     {
-      "semanticKey": "landing.benefit.customerChoice",
+      "semanticKey": "landing.environments.eyebrow",
       "currentText": "Você escolhe o que precisa",
       "source": {
         "file": "app/index.html",
         "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
         "line": 40
       },
-      "consumer": "customer choice benefit heading",
-      "owner": "public landing benefits",
+      "consumer": "environment section eyebrow",
+      "owner": "public landing environments",
       "routes": [
         "/"
       ],
@@ -674,7 +674,7 @@
       "status": "classified-inventory-only"
     },
     {
-      "semanticKey": "landing.process.heading",
+      "semanticKey": "landing.process.title",
       "currentText": "Do seu espaço ao ambiente pronto.",
       "source": {
         "file": "app/index.html",
@@ -725,14 +725,14 @@
       "status": "classified-inventory-only"
     },
     {
-      "semanticKey": "landing.process.benefit",
+      "semanticKey": "landing.process.eyebrow",
       "currentText": "Simples do início ao fim",
       "source": {
         "file": "app/index.html",
         "blobSha": "9d025dc17d16b8eeaec6c77fa10295900f005ed7",
         "line": 53
       },
-      "consumer": "process benefit heading",
+      "consumer": "process section eyebrow",
       "owner": "public landing process",
       "routes": [
         "/"
