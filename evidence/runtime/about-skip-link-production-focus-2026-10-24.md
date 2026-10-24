@@ -12,7 +12,7 @@
 
 O primeiro Tab focaliza e revela “Pular para o conteúdo” (`.about-skip`, href `#main`). Pressionar Enter navega para `/about/#main`, mas o foco ativo termina em `BODY`; o elemento `main#main` não recebe foco. No readback, o alvo existe, `main.tabIndex` reporta -1 e não há atributo `tabindex` explícito. `scrollY` permaneceu 0 nessa passagem.
 
-A aparência do anel no foco do link havia sido medida antes nesta mesma auditoria de Production: 2.67 px, offset de 2.67 px, claro `#6E512E` e escuro `#D8BC7C`. VIS-002 registra referência aprovada de 4 px, offset 3 px, claro `#8B6A40` e escuro `#D8BC7C`. A PR de produto [#239](https://github.com/EAKerber/MobiliPresenter2D/pull/239) trata somente da aparência CSS; ela não implementa a transferência do foco ao destino. A correção de estilo foi observada no preview #239, não nesta Production.
+Na leitura CSSOM desta auditoria, o contorno computado foi 2.67 px/offset 2.67 px. A regra global carregada de `app/public-theme.css` (blob `e2add5053fbc1a897c035eb854b168c9711d2d18`, linha 23) declara 3 px/offset 3 px; `app/ui-theme.css` (blob `b0f04c566183ba1f9c015f5d2a827db9e91dea45`, linhas 113–114) fornece as cores claro `#6E512E` e escuro `#D8BC7C`. `app/about/about.css` não substitui essa regra de foco. Na mesma sessão, até um elemento de teste com `outline:3px` computou 2.67 px; a causa dessa diferença entre declarado e computado não foi identificada. Portanto, a divergência comprovada pela fonte é largura declarada de 3 px contra a referência VIS-002 de 4 px, mais a cor clara; o offset declarado 3 px coincide. PR produto [#239](https://github.com/EAKerber/MobiliPresenter2D/pull/239) ajusta o CSS do About no preview, mas não implementa a transferência do foco ao destino.
 
 ## Limites
 
