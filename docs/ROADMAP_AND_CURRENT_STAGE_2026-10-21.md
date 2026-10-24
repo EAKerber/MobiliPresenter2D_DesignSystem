@@ -242,3 +242,8 @@ No Deploy Preview, Tab focou primeiro “Pular para o conteúdo” e Enter atual
 
 A PR [#239](https://github.com/EAKerber/MobiliPresenter2D/pull/239) segue DRAFT. A passagem confirma transferência de foco em About; não substitui revisão visual em outros temas/tamanhos ou homologação global, nem altera Production.
 
+
+
+### Issue #226 — complemento runtime Production — 24/10/2026
+
+Nova rechecagem em Chromium de `/how-it-works/` cobriu 1366×768, 768×1024 e 390×844 nos temas claro/escuro. Em três colunas (1366 px), abrir uma fundação ou tópico cresceu apenas o próprio cartão; irmãos fechados da linha variaram 0 px. Em uma coluna (768/390 px), teclado nativo Enter/Espaço abriu/fechou os disclosures com foco mantido no `summary`. Tema foi emulado transitoriamente via DOM. Sem novas capturas, sem WebKit/zoom e sem alteração do produto. Isso complementa a matriz, mas não resolve a divergência de conteúdo das capturas WebKit no run #39611912828; comparação visual reproduzível e zoom continuam pendentes, então #226 fica aberta. [Evidência](../evidence/runtime/issue226-accordion-grid-current-production-recheck-2026-10-24.md).

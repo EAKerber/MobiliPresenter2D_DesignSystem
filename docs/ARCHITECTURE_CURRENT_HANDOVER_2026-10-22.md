@@ -382,3 +382,8 @@ Base do produto: `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`; Production Net
 - DOM/CSSOM readback on the preview confirmed all seven long-copy selectors compute to `#292723`: 11.68:1 on `#E8E3DC`, 12.77:1 on `#F0EDE8`. In dark mode, the same selectors remained `#C4BCB2` on `#20211F` (8.61:1), with no light token applied. Eyebrows remain separate at `#70522F`; signatures are excluded.
 - Next: review the product preview, integrate the Design System source before the product pin, and reconcile or keep PR #240 on hold. No merge or production release has occurred.
 - User direction: for long running text, prefer colors close to black/white according to context, limited to measured contexts.
+
+
+### Issue #226 — complemento runtime Production — 24/10/2026
+
+Nova rechecagem em Chromium de `/how-it-works/` cobriu 1366×768, 768×1024 e 390×844 nos temas claro/escuro. Em três colunas (1366 px), abrir uma fundação ou tópico cresceu apenas o próprio cartão; irmãos fechados da linha variaram 0 px. Em uma coluna (768/390 px), teclado nativo Enter/Espaço abriu/fechou os disclosures com foco mantido no `summary`. Tema foi emulado transitoriamente via DOM. Sem novas capturas, sem WebKit/zoom e sem alteração do produto. Isso complementa a matriz, mas não resolve a divergência de conteúdo das capturas WebKit no run #39611912828; comparação visual reproduzível e zoom continuam pendentes, então #226 fica aberta. [Evidência](../evidence/runtime/issue226-accordion-grid-current-production-recheck-2026-10-24.md).
