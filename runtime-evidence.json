@@ -1847,5 +1847,45 @@
     "environmentNote": "The browser had a 15 CSS px vertical scrollbar, so innerWidth 320 corresponded to document clientWidth 305. The 335 px sample is an observation, not an inferred CSS breakpoint.",
     "evidence": "evidence/runtime/public-headers-320-production-2026-10-24.md",
     "productCodeChanged": false
+  },
+  "productionAudit20261024HowItWorksAccordionKeyboard": {
+    "observedAt": "2026-10-24",
+    "site": "https://casaemmodulos.casa/",
+    "deployedRevision": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+    "netlifyDeploymentId": "6adc221479c773577ed45e23",
+    "route": "/how-it-works/",
+    "viewport": {
+      "width": 1280,
+      "height": 720,
+      "theme": "dark"
+    },
+    "session": "anonymous",
+    "prefersReducedMotion": false,
+    "observations": [
+      {
+        "control": "Evoluir a forma de produzir",
+        "element": "summary inside details",
+        "key": "Enter",
+        "initialState": "collapsed",
+        "result": "expanded",
+        "contentInAccessibilityTree": true,
+        "focusRemainedOnControl": true
+      },
+      {
+        "control": "Eficiência com liberdade",
+        "element": "summary inside details",
+        "key": "Space",
+        "initialState": "collapsed",
+        "result": "expanded",
+        "contentInAccessibilityTree": true,
+        "focusRemainedOnControl": true
+      }
+    ],
+    "limits": [
+      "Two of six native disclosures sampled",
+      "Economy cards, assistive technologies, other browsers/themes/viewports, focus appearance and contrast not assessed"
+    ],
+    "productCodeChanged": false,
+    "evidence": "evidence/runtime/how-it-works-accordion-keyboard-production-2026-10-24.md"
   }
 }
