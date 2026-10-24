@@ -393,3 +393,8 @@ Na sessão anônima em Production `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf
 ## Como funciona — foco nos seis cartões de economia em Production (24/10/2026)
 
 Na Production atual `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf` / deploy READY `6adc221479c773577ed45e23`, em 1280×720, Tab focou os seis cartões da seção “Por que custa menos?”. CSSOM confirmou contorno de 2 px/offset 3 px em todos. No escuro, `#D8BC7C` sobre a superfície `#25231F` mede 8,52:1; no claro, `#6E512E` sobre a mesma superfície mede 2,15:1, abaixo de 3:1 para o indicador não textual de foco. A largura computada também diverge da referência VIS-002 de 4 px. Achado limitado à família e superfície medidas; sem escolha de correção ou alteração do produto. [Evidência detalhada](evidence/runtime/how-it-works-economy-focus-six-cards-production-2026-10-24.md).
+
+
+## Como funciona — movimento no snapshot de Production (24/10/2026)
+
+No snapshot anônimo de Production `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, 1280×720 escuro, `prefers-reduced-motion: reduce` retornou `false`; nenhum `animation-name` apareceu nos elementos/pseudo-elementos consultados. `document.getAnimations` não estava disponível no escopo de avaliação; transições ativas não foram descartadas. As folhas publicadas têm regras `prefers-reduced-motion` global e local, mas o comportamento runtime com a preferência ativada segue sem verificação. Rede lenta/falhas de imagem não simuladas. [Evidência detalhada](evidence/runtime/how-it-works-motion-css-runtime-snapshot-production-2026-10-24.md).
