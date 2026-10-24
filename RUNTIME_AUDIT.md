@@ -288,3 +288,8 @@ O Netlify Deploy Preview #234 estava **READY** no deploy `6adc0c519cc524d721abd8
 **Foco de teclado:** no link “Pular para o conteúdo” de `/about/`, o contorno visível foi `3px solid #6E512E` no tema claro e `3px solid #D8BC7C` no escuro, ambos com offset de 3 px. O registro aprovado do Design System especifica `#8B6A40` / `#D8BC7C`, 4 px e offset de 3 px. O preview coincide com a cor escura, mas diverge na cor clara e na espessura nos dois temas. Registra-se como diferença para reconciliação por componente, sem propor nem aplicar novo valor visual.
 
 O browser confirmou `prefers-reduced-motion: reduce`; isso não prova por si só a interrupção de todas as animações. Não foram cobertos ordem completa de teclado, Escape/clique externo em todos os menus, falhas de imagem, rede lenta, contraste de todos os elementos, vídeo, estado autenticado ou produção. Capturas foram inspecionadas durante a sessão, mas não persistidas neste repositório. Este registro é evidência de **preview** e não atualiza a auditoria do deploy de produção nem homologa a implementação.
+
+
+### Menu e teclado — observação adicional do preview (24/10/2026)
+
+Em `/`, no viewport móvel 390 × 844 em tema escuro, o botão abriu a navegação principal (`aria-expanded=true`) e manteve foco no próprio controle. Com esse foco, Escape foi pressionado duas vezes; após cada tentativa, `aria-expanded` continuou `true` e a navegação permaneceu visível. Portanto, Escape não fechou o menu nestas duas tentativas neste preview. O fechamento por clique externo não foi concluído e permanece sem classificação. Não se infere comportamento em produção nem causa no código.
