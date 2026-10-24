@@ -23,9 +23,18 @@
     "roleRef": "VIS-002.approvedPalette.colors.textSecondary.light",
     "value": "#705C4B",
     "contexts": [
-      { "route": "/", "selector": ".hero-description" },
-      { "route": "/how-it-works/", "selector": ".how-hero-note" },
-      { "route": "/about/", "selector": ".about-scale p:not(.eyebrow)" }
+      {
+        "route": "/",
+        "selector": ".hero-description"
+      },
+      {
+        "route": "/how-it-works/",
+        "selector": ".how-hero-note"
+      },
+      {
+        "route": "/about/",
+        "selector": ".about-scale p:not(.eyebrow)"
+      }
     ]
   },
   "contexts": [
@@ -68,6 +77,22 @@
       "foreground": "#292723",
       "contrast": "12.77:1",
       "authorization": "VIS-002C measured context; user direction 2026-10-24"
+    },
+    {
+      "route": "/how-it-works/",
+      "selector": ".commercial-clarity > p:not(.eyebrow)",
+      "background": "#F0EDE8",
+      "foreground": "#292723",
+      "contrast": "12.77:1",
+      "authorization": "VIS-002 measured in PR #241 preview; user direction 2026-10-24"
+    },
+    {
+      "route": "/how-it-works/",
+      "selector": ".launch-card .launch-copy > p",
+      "background": "#F0EDE8",
+      "foreground": "#292723",
+      "contrast": "12.77:1",
+      "authorization": "VIS-002 measured in PR #241 preview; user direction 2026-10-24"
     }
   ]
 }
