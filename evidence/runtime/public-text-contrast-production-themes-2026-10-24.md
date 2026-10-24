@@ -25,3 +25,22 @@ No recorte de About, também foram lidos rótulos de seção: claro `#70512E` so
 Os pares acima passaram o limiar técnico de 4,5:1 para texto comum nos elementos, temas e superfícies lidas. Eles diferem de algumas medições e valores registrados em auditorias históricas; para estes alvos, o DOM atual é a leitura válida do deploy atual. A faixa opaca da legenda de `.study-art` no tema escuro corresponde à composição aprovada em VIS-003; mediu 13,85:1 nesta leitura.
 
 A amostra não fecha issue #216 nem certifica conformidade global. Não cobre todos os textos, rotas, viewports, estados de foco/seleção, imagens sem fundo opaco, gradientes, pseudoelementos, contraste não textual ou leitores de tela. Em About, foram lidos o lead, os primeiros parágrafos, a seção de escala e rótulos de seção, não o texto inteiro. Uma visita por rota; sem alteração de produto, decisão de token ou deploy.
+
+
+## Triagem ampliada em Como funciona — Production, 24/10/2026
+
+**Alvo:** deploy READY `6adc221479c773577ed45e23`, `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, rota `/how-it-works/`. Leitura DOM/CSSOM isolada em claro e escuro, em 1280×720 e em emulação mobile 390×844. O viewport desktop teve `clientWidth=1265` por scrollbar vertical; a amostra mobile teve `clientWidth=390` sem overflow horizontal.
+
+Um screening percorreu nós com texto direto, converteu as cores computadas pelo canvas do browser para sRGB, compôs fundos sólidos dos ancestrais transparentes e calculou luminância relativa. Foram medidos 217 nós em 1280 px e 212 em 390 px; 33 sob `aria-hidden` foram excluídos. Uma ocorrência estava oculta no desktop e seis na amostra responsiva. Não houve texto medido sobre background-image nem com opacidade de ancestral abaixo de 1. Os resultados são agrupados por par, não por pixel nem por linha visual.
+
+No tema claro, os mesmos três grupos ficaram abaixo de 4,5:1 nas duas larguras:
+
+| Texto / elemento | Par medido | Ocorrências | Razão mínima |
+|---|---|---:|---:|
+| Eyebrows “Eficiência no processo” e “Materiais e componentes” | `#8B6A40` / `#E8E3DC` | 2 | 3,89:1 |
+| Eyebrows “Como funciona”, “Escolhas que dão personalidade” e “Transparência em todas as etapas” | `#8B6A40` / `#F0EDE8` | 3 | 4,25:1 |
+| Parágrafos da área de acabamentos/clareza comercial | `#706C66` / `#F0EDE8` | 4 | 4,47:1 |
+
+No tema escuro, não houve par abaixo do limiar entre os nós medidos. Rechecagens CSSOM dos três grupos claros confirmaram tamanhos de texto comum, opacidade 1, sem sombra de texto, sem filtro e fundos sólidos nos ancestrais consultados. A composição de pseudoelementos não foi auditada globalmente; superfícies sobre imagem, outros estados/rotas e pixels anti-alias também não foram cobertos.
+
+Isto amplia a triagem de issue #216 em uma rota, dois temas e duas larguras; não fecha a issue nem homologa o site. O registro VIS-002 não foi alterado, e nenhum CSS/token ou produção foi modificado.
