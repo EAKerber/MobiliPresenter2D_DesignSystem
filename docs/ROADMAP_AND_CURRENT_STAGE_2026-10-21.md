@@ -6,7 +6,8 @@
 - As oito rotas do inventário agora têm matriz de evidência runtime ou lacuna explícita em [cobertura de inventário](../evidence/architecture/runtime-inventory-coverage-2026-10-24.md). Isso classifica cobertura; não fecha a auditoria de todas as regras/famílias.
 - Permanecem parciais os estados dinâmicos do Configurador e as rotas autenticadas. A sessão de produção só pode ser validada quando autorizada/disponível; NAV-005, #224 e foco/contraste local continuam pendentes.
 - `DECISION_APPLICATION_MAP.md` foi reconciliado ao mesmo commit: as oito rotas apontam às folhas CSS efetivamente carregadas e a evidência runtime atual ou às lacunas explícitas.
-- **Próximo trabalho desta etapa:** mapear cada família de regras visuais do inventário para evidência runtime específica ou `NOT VERIFIED`; não inferir cobertura por semelhança de seletor.
+- O [mapa de famílias CSS/runtime](../evidence/architecture/visual-rule-family-runtime-map-2026-10-24.md) classifica as oito folhas por layout, texto/cor, interação/foco e movimento/assets, com evidência parcial ou `NOT VERIFIED`.
+- **Próximo trabalho desta etapa:** priorizar famílias e estados de maior risco para observação por seletor/estado, começando por problemas já abertos (NAV-005, foco/contraste, Configurador e #224). Não inferir cobertura por semelhança de seletor.
 - VIS-002C v0.3 e produto #241 têm gates/preview passados, mas seguem em DRAFT. Produto #240 permanece HOLD devido aos cinco seletores compartilhados com cores divergentes.
 
 ---
