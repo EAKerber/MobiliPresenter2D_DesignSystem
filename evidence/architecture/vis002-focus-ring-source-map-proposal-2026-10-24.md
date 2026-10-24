@@ -68,3 +68,10 @@ ui-theme.css (blob b0f04c5, linhas 32–38, 50 e 113–114) declara o foco do co
 ## Runtime evidence — /access/ invalid-link state (24/10/2026)
 
 - Anonymous Production in 390 × 844 showed the invalid-link message, with no valid token or authenticated state; the confirmation action was hidden. Tab reached the brand, theme toggle, menu toggle and back link. In both themes these computed an outline width of 2.66667 px; all offsets were 2.66667 px except the theme toggle at 2 px. Colors were #6E512E in light and #D8BC7C in dark. This covers only the public invalid-link state, not a valid access link or private Configurator/Admin content. [Runtime record](../runtime/access-public-invalid-link-focus-production-2026-10-24.md). The proposal and implementation authorization are unchanged.
+
+
+## Evidência runtime adicional — login administrativo anônimo (24/10/2026)
+
+Em Production, a rota `/access/manage.html` redirecionou para o formulário anônimo de `/admin.html`. Em viewport 1280 × 720, Tab percorreu marca, tema, menu, e-mail, senha, mostrar senha, Entrar e recuperação. Os alvos observados receberam `:focus-visible`. No tema claro, marca/menu/campos/botões computaram 2 px/offset 2,66667 px em `#6E512E`, enquanto o botão de tema computou 2,66667 px/offset 2 px. No tema escuro, menu/campos/botões computaram 2 px/offset 2,66667 px em `#D8BC7C`, e o botão de tema 2,66667 px/offset 2 px. A marca escura não foi isolada.
+
+Isso localiza no Admin uma divergência geométrica da referência VIS-002 (4 px/offset 3 px) e, no claro, também de cor (`#8B6A40`). Não foi medida a razão de contraste. Sessão autenticada, fluxo de recuperação e demais estados privados não foram exercitados; nada foi submetido e nenhum CSS/tokens foi alterado. [Evidência completa](../runtime/admin-login-no-session-focus-production-2026-10-24.md).
