@@ -2,10 +2,11 @@
 
 ## Revalidação de execução — 24/10/2026
 
-- Produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf` está 47 commits à frente do baseline usado pelo inventário visual (`1878ae1057ce7c6190e0c8cb08a1f3baadd49463`). A comparação inclui mudanças de HTML/CSS e não permite tratar a captura de 20/10 como atual.
+- O inventário visual foi regenerado em `visual-inventory.json` a partir de todos os oito HTML e oito CSS do produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`; a atualização mantém o escopo estático e não certifica o DOM/runtime.
 - As oito rotas do inventário agora têm matriz de evidência runtime ou lacuna explícita em [cobertura de inventário](../evidence/architecture/runtime-inventory-coverage-2026-10-24.md). Isso classifica cobertura; não fecha a auditoria de todas as regras/famílias.
 - Permanecem parciais os estados dinâmicos do Configurador e as rotas autenticadas. A sessão de produção só pode ser validada quando autorizada/disponível; NAV-005, #224 e foco/contraste local continuam pendentes.
-- **Próximo trabalho desta etapa:** regenerar `visual-inventory.json` e reconciliar `DECISION_APPLICATION_MAP.md` contra o produto main atual; depois mapear cada regra/família para evidência runtime ou `NOT VERIFIED`.
+- `DECISION_APPLICATION_MAP.md` foi reconciliado ao mesmo commit: as oito rotas apontam às folhas CSS efetivamente carregadas e a evidência runtime atual ou às lacunas explícitas.
+- **Próximo trabalho desta etapa:** mapear cada família de regras visuais do inventário para evidência runtime específica ou `NOT VERIFIED`; não inferir cobertura por semelhança de seletor.
 - VIS-002C v0.3 e produto #241 têm gates/preview passados, mas seguem em DRAFT. Produto #240 permanece HOLD devido aos cinco seletores compartilhados com cores divergentes.
 
 ---
