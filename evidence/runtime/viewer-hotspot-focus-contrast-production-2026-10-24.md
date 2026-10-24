@@ -39,3 +39,11 @@ A largura computada de 2 px também não foi homologada contra a referência geo
 - Hotspots 02–07 computaram borda de foco de 2 px em `#DDC48C` e preenchimento `rgba(216, 188, 124, 0.19)`.
 - Exceção do hotspot 01, que já estava selecionado: nos temas Claro e Escuro, a borda do pseudo-elemento computou como transparente, apesar de `:focus-visible=true`; apenas o preenchimento semitransparente diferenciou o estado focado. O quadro de seleção permaneceu com a mesma geometria/estilo quando o foco foi movido ao hotspot 02. Não concluí que esse preenchimento seja imperceptível; a captura móvel mostra o alvo, porém contraste sobre a foto e distinção suficiente entre foco e seleção não foram medidos.
 - Tema Claro e viewport padrão foram restaurados; a aba temporária foi fechada. A amostra não cobre outros dispositivos, cenas ou navegadores.
+
+
+## Recheck comparativo — hotspot 01 selecionado e focado (24/10/2026)
+
+- Netlify confirmou o deploy Production atual `6adc221479c773577ed45e23` READY em `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`. Na rota `/viewer/`, comparei o módulo 01 selecionado sem foco e com o estado `:focus-visible` em temas claro e escuro, no viewport CSS 1279 × 663 (DPR 1,5). Não cliquei nem alterei a seleção.
+- Nos dois temas, sem foco o quadro de seleção e o marcador “01” já estavam visíveis. Com `:focus-visible=true`, o botão manteve `outline: 0`; `::after` computou `border-color: transparent` e `background: rgba(216, 188, 124, 0.19)`. Portanto, a pista adicionada pelo foco é apenas um preenchimento semitransparente sobre o alvo já selecionado; não aparece uma borda adicional.
+- A comparação pareada de capturas em tela mostrou mudança de tonalidade no módulo, mas não estabelece que a diferença seja suficientemente distinguível em todo o fundo fotográfico. Não registro razão de contraste: uma tentativa de recomposição apenas das imagens do DOM foi descartada como incompleta, pois a cena também contém máscaras de acabamento e overlays de sombra/highlight.
+- A correspondência entre foco e seleção permanece uma questão aberta, sem declarar falha normativa ou aprovar correção. A emulação foi removida, a aba isolada fechada e a aba inicial restaurada. Capturas não foram persistidas; nenhum produto, CSS ou token foi alterado.
