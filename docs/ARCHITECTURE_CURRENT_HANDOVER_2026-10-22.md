@@ -310,3 +310,5 @@ Base do produto: `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`; Production Net
 
 
 - **About / link de salto:** na Production `main@5ccb2a8`, Enter no link atualiza a âncora para `#main`, mas o foco termina no body. PR produto #239 corrige apenas o estilo visual (ver preview), não o foco do destino; [evidência da Production](../evidence/runtime/about-skip-link-production-focus-2026-10-24.md). Sem mudança de produto ou homologação de comportamento.
+
+- **CI-BASELINE-01 / Netlify:** o deploy isolado atual está READY e inclui `access-check`, mas o `DATABASE_URL` do Netlify só foi confirmado para o projeto de teste em `dev`; `production`/ `deploy-preview` ainda coincidem com o site principal. A fixture CI lê outra conexão, do GitHub Environment `ci-auth-isolated`. Alinhar os contextos Netlify usados pelo host e então refazer o gate autenticado; [evidência](../evidence/runtime/netlify-ci-auth-environments-2026-10-24.md). Nenhum valor secreto foi registrado.
