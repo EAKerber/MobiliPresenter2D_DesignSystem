@@ -224,3 +224,9 @@ No Deploy Preview de produto, Tab em 390×844 claro focou o hotspot 06 sem mudar
 
 A PR [#242](https://github.com/EAKerber/MobiliPresenter2D/pull/242) continua DRAFT. A evidência não substitui a revisão visual do usuário nem avalia contraste de todas as fotografias; `decisions.json` permanece inalterado e não houve merge ou publicação.
 
+### PR #239 — rechecagem manual do skip link de About (24/10/2026)
+
+No Deploy Preview, Tab focou primeiro “Pular para o conteúdo” e Enter atualizou a URL para `#main`; o foco terminou em `main#main` (`tabindex="-1"`). A observação foi feita com largura de janela 1280 px e sem overflow horizontal. [Readback manual](../evidence/runtime/pr239-about-skip-link-preview-manual-recheck-2026-10-24.md).
+
+A PR [#239](https://github.com/EAKerber/MobiliPresenter2D/pull/239) segue DRAFT. A passagem confirma transferência de foco em About; não substitui revisão visual em outros temas/tamanhos ou homologação global, nem altera Production.
+
