@@ -44,3 +44,32 @@ No tema claro, os mesmos três grupos ficaram abaixo de 4,5:1 nas duas larguras:
 No tema escuro, não houve par abaixo do limiar entre os nós medidos. Rechecagens CSSOM dos três grupos claros confirmaram tamanhos de texto comum, opacidade 1, sem sombra de texto, sem filtro e fundos sólidos nos ancestrais consultados. A composição de pseudoelementos não foi auditada globalmente; superfícies sobre imagem, outros estados/rotas e pixels anti-alias também não foram cobertos.
 
 Isto amplia a triagem de issue #216 em uma rota, dois temas e duas larguras; não fecha a issue nem homologa o site. O registro VIS-002 não foi alterado, e nenhum CSS/token ou produção foi modificado.
+
+
+## Screening ampliado das quatro rotas públicas — Production, 24/10/2026
+
+**Alvo:** Netlify deploy READY `6adc221479c773577ed45e23`, `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`. Rotas `/`, `/about/`, `/how-it-works/` e `/viewer/`; temas claro/escuro; viewport solicitado 1280×720 e emulação mobile 390×844. O viewport desktop de conteúdo ficou em 1265 px por scrollbar vertical; em 390 px as quatro rotas tiveram `clientWidth=scrollWidth=390`.
+
+| Rota | Nós de texto direto medidos — desktop/mobile | Grupos abaixo de 4,5:1 — claro | Grupos abaixo de 4,5:1 — escuro |
+|---|---:|---:|---:|
+| Landing `/` | 40/31 | 4 | 0 |
+| Quem somos `/about/` | 38/33 | 1 | 0 |
+| Como funciona `/how-it-works/` | 217/212 | 3 | 0 |
+| Viewer `/viewer/` | 44/44 | 0 | 0 |
+
+O screening encontra quatro pares de risco recorrentes ou pontuais no tema claro: `#8B6A40/#E8E3DC` (3,89:1), `#706C66/#E8E3DC` (4,09:1), `#8B6A40/#F0EDE8` (4,25:1) e `#706C66/#F0EDE8` (4,47:1). Os textos medidos tinham tamanho comum. A leitura converteu cores computadas para sRGB pelo canvas do navegador, compôs fundos sólidos dos ancestrais transparentes e aplicou luminância relativa. Os exemplos de menor razão foram rechecados no CSSOM; fundos eram sólidos, com opacidade 1 e sem sombra/filtro nos elementos.
+
+Amostras de texto e contagem por rota são triagem DOM, não cálculo de pixels renderizados. O screening excluiu texto sob `aria-hidden`, conteúdo invisível e qualquer cadeia com opacidade/background-image; em Landing mobile um estado com opacidade reduzida ficou fora da medição. Pseudoelementos não foram auditados globalmente, nem texto sobre imagem, gradientes, contraste não textual, estados completos de foco/seleção ou leitores de tela. Nada aqui fecha #216 ou certifica conformidade geral.
+
+## Opções contextuais para revisão — não aprovadas para estes seletores
+
+As cores abaixo já existem em pares aprovados em outros contextos de VIS-002/#216; a extensão a estes seletores novos ainda requer aprovação. Nenhum token global ou autorização nova foi gravado.
+
+| Papel/ superfície observada | Par candidato | Razão calculada | Limite de aprovação atual |
+|---|---|---:|---|
+| Eyebrow em `#E8E3DC` | `#70522F` / `#E8E3DC` | 5,60:1 | aprovado para `.study-band .eyebrow`; demais eyebrows não listados |
+| Eyebrow em `#F0EDE8` | `#70522F` / `#F0EDE8` | 6,12:1 | extensão contextual proposta |
+| Texto informativo em `#F0EDE8` | `#675F55` / `#F0EDE8` | 5,38:1 | aprovado somente para seletores/contextos listados em #216 |
+| Texto informativo em `#E8E3DC` | `#675F55` / `#E8E3DC` | 4,92:1 | extensão contextual proposta |
+
+O issue #216 instrui a aplicar pares apenas aos seletores/superfícies listados, sem transformá-los em tokens globais. O canônico `decisions.json` mantém `VIS-002.implementationAuthorized=false`. Próximo passo para patch de produto: aprovar/ajustar as extensões acima; então abrir PR estritamente contextual, validar em Preview e manter cópia de evidência pós-deploy. Até lá, os achados ficam documentados e o produto inalterado.
