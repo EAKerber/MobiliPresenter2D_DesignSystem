@@ -10,11 +10,11 @@
 
 Os dez focos foram: link da marca, CTA WhatsApp do header, controle de tema, botão do menu, CTA “Conheça nossos ambientes” e cinco botões de ambiente (Cozinha, Sala, Quarto, Escritório e Lavanderia).
 
-- Claro: contorno sólido de 2.67 px em `#6E512E`; offset 2.67 px em nove focos, e 2 px no controle de tema.
-- Escuro: contorno sólido de 2.67 px em `#D8BC7C`; offsets iguais aos observados no tema claro.
-- VIS-002 registra a referência aprovada de 4 px e offset de 3 px, com claro `#8B6A40` e escuro `#D8BC7C`.
+- Claro: a CSSOM retornou contorno de 2.67 px em `#6E512E`; offset computado 2.67 px em nove focos e 2 px no controle de tema. A fonte declara 3 px/offset 3 px na regra global e 3 px/offset 2 px no tema.
+- Escuro: a CSSOM retornou contorno de 2.67 px em `#D8BC7C`; offsets computados iguais aos do tema claro. A fonte declara 3 px/offset 3 px globalmente e 3 px/offset 2 px no controle de tema.
+- VIS-002 registra 4 px/offset 3 px, claro `#8B6A40` e escuro `#D8BC7C`. Comparando declarações CSS, a regra global tem 3 px/offset 3 px e a exceção do controle de tema 3 px/offset 2 px. A CSSOM também retornou 2.67 px para um elemento de teste com `outline:3px`; causa não identificada.
 
-A divergência de largura aparece em todos os dez focos amostrados; a cor clara diverge em todos, e o offset varia no controle de tema. Isto amplia a evidência do link de About e da marca, mas não prova que todos os controles ou rotas compartilham a mesma regra.
+Nas declarações CSS, a largura global é 3 px em todos os dez focos, abaixo dos 4 px aprovados; a cor clara também diverge. Nove focos herdam offset 3 px, e o controle de tema declara 2 px. A CSSOM retornou 2.67 px inclusive para um elemento de teste com `outline:3px`; a causa dessa diferença não foi identificada. A amostra não prova que todos os controles ou rotas compartilham a regra.
 
 ## Limites
 
