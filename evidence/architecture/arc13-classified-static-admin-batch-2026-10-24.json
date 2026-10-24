@@ -1,0 +1,1195 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/admin.html",
+      "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08"
+    }
+  ],
+  "reviewScope": "Manual classification of every static HTML candidate on /admin.html, distinguishing localizable admin UI from stable role and step identifiers.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "classifiedOccurrences": 64,
+    "excludedNonlocalizableOccurrences": 4,
+    "candidateOccurrencesReviewed": 68,
+    "distinctValues": 62
+  },
+  "limitations": [
+    "Inventory only: no product HTML/runtime changed and no translation bundle was created.",
+    "The internal role id admin and step option values custom, finishes, and services are identifiers and must remain stable; visible UI labels remain localizable.",
+    "Dynamic catalog values, server messages, runtime-generated strings, and external identity provider copy are outside this static HTML batch.",
+    "Brand name Casa em Módulos is preserved as supplied brand content."
+  ],
+  "entries": [
+    {
+      "semanticKey": "admin.document.title",
+      "currentText": "Administração — Casa em Módulos",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 13
+      },
+      "consumer": "browser document title",
+      "owner": "admin page metadata",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "brand.admin.logo.alt",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 19
+      },
+      "consumer": "brand logo alternative text",
+      "owner": "brand identity image",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "brand.admin.home.accessible",
+      "currentText": "Casa em Módulos, início",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 19
+      },
+      "consumer": "brand home link accessible name",
+      "owner": "admin header",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "admin.header.title",
+      "currentText": "Administração",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 19
+      },
+      "consumer": "admin page heading",
+      "owner": "admin header",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "brand.admin.header.name",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 19
+      },
+      "consumer": "brand name in admin header",
+      "owner": "brand identity",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "navigation.menu.open",
+      "currentText": "Abrir menu",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 21
+      },
+      "consumer": "menu toggle accessible name",
+      "owner": "shared public navigation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.primary.label",
+      "currentText": "Menu do site",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 22
+      },
+      "consumer": "primary navigation accessible name",
+      "owner": "shared public navigation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.session.logout",
+      "currentText": "Sair",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 26
+      },
+      "consumer": "logout control",
+      "owner": "admin session controls",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.access.restricted",
+      "currentText": "Acesso restrito",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 34
+      },
+      "consumer": "restricted access heading",
+      "owner": "admin authentication state",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.panel.title",
+      "currentText": "Painel administrativo",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 35
+      },
+      "consumer": "admin panel heading",
+      "owner": "admin authentication panel",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.panel.description",
+      "currentText": "Entre com uma conta administrativa convidada para editar as etapas e os itens disponíveis no configurador.",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 36
+      },
+      "consumer": "admin sign-in description",
+      "owner": "admin authentication panel",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.login.email.label",
+      "currentText": "E-mail",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 38
+      },
+      "consumer": "login email label",
+      "owner": "admin sign-in form",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.login.password.label",
+      "currentText": "Senha",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 40
+      },
+      "consumer": "login password label",
+      "owner": "admin sign-in form",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.login.password.show.accessible",
+      "currentText": "Mostrar senha",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 43
+      },
+      "consumer": "show password accessible name",
+      "owner": "admin sign-in form",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.login.password.show.title",
+      "currentText": "Mostrar senha",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 43
+      },
+      "consumer": "show password tooltip",
+      "owner": "admin sign-in form",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.login.password.show.label",
+      "currentText": "Mostrar",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 43
+      },
+      "consumer": "show password control label",
+      "owner": "admin sign-in form",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.login.submit",
+      "currentText": "Entrar",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 46
+      },
+      "consumer": "login submit control",
+      "owner": "admin sign-in form",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.login.password.reset",
+      "currentText": "Esqueci minha senha",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 46
+      },
+      "consumer": "password reset control",
+      "owner": "admin sign-in form",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.reset.password.label",
+      "currentText": "Nova senha",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 51
+      },
+      "consumer": "new password label",
+      "owner": "admin password reset form",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.reset.password.show.accessible",
+      "currentText": "Mostrar senha",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 54
+      },
+      "consumer": "show password accessible name",
+      "owner": "admin password reset form",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.reset.password.show.title",
+      "currentText": "Mostrar senha",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 54
+      },
+      "consumer": "show password tooltip",
+      "owner": "admin password reset form",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.reset.password.show.label",
+      "currentText": "Mostrar",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 54
+      },
+      "consumer": "show password control label",
+      "owner": "admin password reset form",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.reset.password.submit",
+      "currentText": "Salvar senha",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 57
+      },
+      "consumer": "save password control",
+      "owner": "admin password reset form",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.access.denied.title",
+      "currentText": "Acesso restrito",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 63
+      },
+      "consumer": "access denied heading",
+      "owner": "admin authorization state",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.access.denied.body",
+      "currentText": "Esta conta não é administradora",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 63
+      },
+      "consumer": "access denied message",
+      "owner": "admin authorization state",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.access.denied.accountDestination",
+      "currentText": "à sua conta no Netlify Identity.",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 64
+      },
+      "consumer": "account destination phrase",
+      "owner": "admin authorization state",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": null,
+      "currentText": "admin",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 64
+      },
+      "consumer": "role identifier",
+      "owner": "authorization role id",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-identifier",
+      "status": "excluded-nonlocalizable"
+    },
+    {
+      "semanticKey": "admin.access.denied.roleInstruction",
+      "currentText": "Peça a um responsável para adicionar o papel",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 64
+      },
+      "consumer": "role assignment instruction",
+      "owner": "admin authorization state",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.catalog.title",
+      "currentText": "Administração do catálogo",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 70
+      },
+      "consumer": "catalog administration heading",
+      "owner": "admin workspace",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.catalog.publicConfigurator.tab",
+      "currentText": "Configurador público",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 70
+      },
+      "consumer": "public configurator tab",
+      "owner": "admin workspace navigation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.catalog.description",
+      "currentText": "Configure etapas, conteúdo dos objetos, acabamentos e valores publicados.",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 70
+      },
+      "consumer": "catalog publishing description",
+      "owner": "admin workspace",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.catalog.version.prefix",
+      "currentText": "Versão —",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 71
+      },
+      "consumer": "configuration version label",
+      "owner": "admin workspace",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.workspace.navigation.label",
+      "currentText": "Áreas de administração",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 73
+      },
+      "consumer": "admin sections accessible name",
+      "owner": "admin workspace navigation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.catalog.steps.tab",
+      "currentText": "Etapas",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 74
+      },
+      "consumer": "steps tab",
+      "owner": "admin workspace navigation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.catalog.objects.tab",
+      "currentText": "Dados dos objetos",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 75
+      },
+      "consumer": "objects tab",
+      "owner": "admin workspace navigation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.catalog.finishes.tab",
+      "currentText": "Cores e acabamentos",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 76
+      },
+      "consumer": "finishes tab",
+      "owner": "admin workspace navigation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.catalog.dependencies.tab",
+      "currentText": "Dependências e eventos",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 77
+      },
+      "consumer": "dependencies and events tab",
+      "owner": "admin workspace navigation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.catalog.pricing.tab",
+      "currentText": "Preços",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 78
+      },
+      "consumer": "pricing tab",
+      "owner": "admin workspace navigation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.steps.type.accessible",
+      "currentText": "Tipo da nova etapa",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 80
+      },
+      "consumer": "new step type accessible name",
+      "owner": "admin steps editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": null,
+      "currentText": "custom",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 80
+      },
+      "consumer": "step type identifier",
+      "owner": "admin step type values",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-identifier",
+      "status": "excluded-nonlocalizable"
+    },
+    {
+      "semanticKey": null,
+      "currentText": "finishes",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 80
+      },
+      "consumer": "step type identifier",
+      "owner": "admin step type values",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-identifier",
+      "status": "excluded-nonlocalizable"
+    },
+    {
+      "semanticKey": null,
+      "currentText": "services",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 80
+      },
+      "consumer": "step type identifier",
+      "owner": "admin step type values",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-identifier",
+      "status": "excluded-nonlocalizable"
+    },
+    {
+      "semanticKey": "admin.steps.type.finishes",
+      "currentText": "Acabamentos",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 80
+      },
+      "consumer": "finish step option label",
+      "owner": "admin steps editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.steps.add",
+      "currentText": "Adicionar etapa",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 80
+      },
+      "consumer": "add step control",
+      "owner": "admin steps editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.steps.instructions",
+      "currentText": "Arraste os itens entre etapas. Itens sem etapa aparecem na lista de disponíveis. Etapas de módulos e resumo são essenciais.",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 80
+      },
+      "consumer": "step ordering and required step instructions",
+      "owner": "admin steps editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.steps.type.custom",
+      "currentText": "Personalizada",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 80
+      },
+      "consumer": "custom step option label",
+      "owner": "admin steps editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.steps.type.services",
+      "currentText": "Serviços",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 80
+      },
+      "consumer": "services step option label",
+      "owner": "admin steps editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.objects.previous",
+      "currentText": "← Anterior",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 82
+      },
+      "consumer": "previous object control",
+      "owner": "admin object editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.objects.section.title",
+      "currentText": "Objeto",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 82
+      },
+      "consumer": "object section label",
+      "owner": "admin object editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.objects.next",
+      "currentText": "Próximo →",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 82
+      },
+      "consumer": "next object control",
+      "owner": "admin object editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.objects.editor.accessible",
+      "currentText": "Dados do objeto",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 83
+      },
+      "consumer": "object data editor accessible name",
+      "owner": "admin object editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.objects.content.tab",
+      "currentText": "Conteúdo",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 83
+      },
+      "consumer": "object content tab",
+      "owner": "admin object editor navigation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.objects.assets.tab",
+      "currentText": "Imagens e máscaras",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 83
+      },
+      "consumer": "images and masks tab",
+      "owner": "admin object editor navigation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.library.sharedUsage",
+      "currentText": "A mesma biblioteca pode abastecer frentes, pedras e modelos de puxador.",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 88
+      },
+      "consumer": "shared library usage explanation",
+      "owner": "admin finishes editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.library.material.add",
+      "currentText": "Adicionar material",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 88
+      },
+      "consumer": "add material control",
+      "owner": "admin finishes editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.library.title",
+      "currentText": "Biblioteca de cores e texturas",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 88
+      },
+      "consumer": "color and texture library heading",
+      "owner": "admin finishes editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.finishes.scope.description",
+      "currentText": "Configure separadamente pedras e materiais de cada puxador. Pedra e rodapé compartilham a escolha; a disponibilidade do serviço de rodapé continua independente.",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 89
+      },
+      "consumer": "finish availability and shared choice explanation",
+      "owner": "admin finishes editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.finishes.options.title",
+      "currentText": "Opções e disponibilidade por acabamento",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 89
+      },
+      "consumer": "finish options and availability heading",
+      "owner": "admin finishes editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.finishes.mdf.description",
+      "currentText": "Ative as cores para clientes e escolha se cada uma vale para o conjunto todo ou para módulos específicos.",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 90
+      },
+      "consumer": "MDF color availability explanation",
+      "owner": "admin finishes editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.finishes.mdf.title",
+      "currentText": "Disponibilidade das cores de MDF",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 90
+      },
+      "consumer": "MDF color availability heading",
+      "owner": "admin finishes editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.dependencies.add",
+      "currentText": "Adicionar dependência",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 92
+      },
+      "consumer": "add dependency control",
+      "owner": "admin rules editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.events.add",
+      "currentText": "Adicionar evento",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 92
+      },
+      "consumer": "add event control",
+      "owner": "admin rules editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.rules.edit.description",
+      "currentText": "Altere dimensões ou ative/desative um módulo ou serviço quando outro item for ligado ou desligado.",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 92
+      },
+      "consumer": "rule editing explanation",
+      "owner": "admin rules editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.events.title",
+      "currentText": "Eventos de configuração",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 92
+      },
+      "consumer": "configuration events heading",
+      "owner": "admin rules editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.dependencies.title",
+      "currentText": "Regras de dependência",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 92
+      },
+      "consumer": "dependency rules heading",
+      "owner": "admin rules editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.dependencies.description",
+      "currentText": "Um objeto pode exigir outros módulos ou itens visíveis para ser habilitado.",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 92
+      },
+      "consumer": "dependency rule explanation",
+      "owner": "admin rules editor",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.persistence.pullHandles",
+      "currentText": "Persistir Puxadores no v3",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 94
+      },
+      "consumer": "pull handles V3 persistence control",
+      "owner": "admin catalog publishing controls",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.configuration.publish",
+      "currentText": "Publicar configuração",
+      "source": {
+        "file": "app/admin.html",
+        "blobSha": "60139eb4f63680ce2fee394cf7988b728b218d08",
+        "line": 94
+      },
+      "consumer": "publish configuration control",
+      "owner": "admin catalog publishing controls",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    }
+  ]
+}
