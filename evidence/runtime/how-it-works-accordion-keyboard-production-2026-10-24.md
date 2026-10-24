@@ -1,4 +1,4 @@
-# Como funciona — teclado nos disclosures em Production (24/10/2026)
+# Como funciona — controles expansíveis por teclado em Production (24/10/2026)
 
 ## Alvo e contexto
 
@@ -7,13 +7,25 @@
 - Viewport: 1280×720 CSS px; tema escuro; `prefers-reduced-motion: reduce` retornou `false`.
 - Data: 24/10/2026, sessão anônima, sem autenticação.
 
-## Interação
+## Disclosures de fundações e estudo
 
-- O snapshot de acessibilidade expôs os três itens de “As fundações da Casa em Módulos” e os três itens de “Aspectos analisados no estudo” como disclosures com estado recolhido.
-- No primeiro item (“Evoluir a forma de produzir”), pressionei Enter. O disclosure passou a expandido, o conteúdo explicativo apareceu no snapshot e o foco permaneceu no controle.
-- No segundo item (“Eficiência com liberdade”), pressionei Espaço. O disclosure passou a expandido, o conteúdo explicativo apareceu no snapshot e o foco permaneceu no controle.
-- A inspeção DOM confirmou que esses controles são elementos nativos `summary` dentro de `details`; o atributo `open` apareceu após cada ativação.
+Os seis disclosures nativos foram ativados por teclado; alternaram entre Enter e Espaço:
+
+| Seção | Controle | Tecla | Resultado |
+|---|---|---|---|
+| Fundações | Evoluir a forma de produzir | Enter | expandido |
+| Fundações | Eficiência com liberdade | Espaço | expandido |
+| Fundações | Transparência faz parte do produto | Enter | expandido |
+| Estudo | Plantas e dimensões | Espaço | expandido |
+| Estudo | Circulação e ergonomia | Enter | expandido |
+| Estudo | Necessidades de armazenamento | Espaço | expandido |
+
+O DOM confirmou controles `summary` dentro de `details`; o estado `open` mudou e os textos de conteúdo apareceram no DOM e na árvore de acessibilidade. O snapshot final manteve foco no último controle ativado.
+
+## Cartões da seção de economia
+
+Os seis botões expansíveis da seção “Por que custa menos?” também responderam às teclas Enter e Espaço alternadamente: Compra em escala, Compras coletivas, Produção planejada, Aproveitamento de material, Engenharia já estudada e Menos retrabalho. Em cada ativação, `aria-expanded` mudou para `true` e o texto do controle ficou disponível. O snapshot de acessibilidade confirmou o painel de “Menos retrabalho” expandido e com seu conteúdo.
 
 ## Limites
 
-A amostra verifica Enter e Espaço em dois dos seis disclosures nativos dessa página. Não cobre os outros quatro disclosures, o grupo separado de cartões da economia, leitores de tela, outros navegadores, temas ou larguras. Não avalia aparência do foco, contraste nem mudança no produto. É uma observação pontual e não encerra achados de acessibilidade.
+A passagem cobre uma rota, um navegador, tema escuro e viewport 1280×720. Não cobre leitores de tela, outros navegadores, temas/larguras, aparência/contraste do foco, movimento reduzido ativo ou todos os estados de recolhimento. É uma observação runtime; nenhum código do produto foi alterado e nenhum achado foi encerrado.
