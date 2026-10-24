@@ -1,0 +1,521 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/core/ui-theme.js",
+      "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+      "candidateOccurrences": 26
+    }
+  ],
+  "reviewScope": "Supplementary classification of the 26 technical lexical candidates in the shared UI theme runtime. The four literal fragments contributing to the aria-label and title templates were mapped to existing semantic entries in arc13-classified-ui-js-batch-2026-10-24.json; the mode names (Automático/Claro/Escuro/Auto) are also captured there but omitted from the whitespace-based heuristic inventory.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 26,
+    "classifiedLocalizableOccurrences": 0,
+    "excludedNonlocalizableOccurrences": 26,
+    "deferredDomainOccurrences": 0,
+    "distinctCandidateTexts": 25
+  },
+  "limitations": [
+    "Inventory only; runtime and locale resources remain unchanged.",
+    "The source has user-facing literals not captured by the heuristic because they are single-word values. Existing semantic UI entries are the source for those strings."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 3
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "(prefers-color-scheme: dark)",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 8
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "src",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 26
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "src",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 26
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "[data-ui-theme-toggle]",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 30
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "data-mode",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 31
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "aria-label",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 32
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "title",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 33
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": ".ui-theme-toggle__label-long",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 34
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": ".ui-theme-toggle__label-short",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 35
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "data-theme-mode",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 42
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "data-theme",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 43
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "meta[name=\"theme-color\"]",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 47
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "#f7f5f2",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 48
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "content",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 48
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "dark",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 48
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": ".site-header .header-actions, .viewer-header .header-actions",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 63
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": ".private-header__actions, .topbar__actions, .admin-topbar__actions",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 64
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": ".viewer-heading > .eyebrow",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 65
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": ".viewer-header, .access-page > header, body > header",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 67
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "button",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 70
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "ui-theme-toggle",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 71
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "data-ui-theme-toggle",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 72
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "<span class=\"ui-theme-toggle__glyph\" aria-hidden=\"true\"></span>",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 73
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "<span class=\"ui-theme-toggle__label-long\"></span>",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 74
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    },
+    {
+      "currentText": "<span class=\"ui-theme-toggle__label-short\"></span>",
+      "source": {
+        "file": "app/core/ui-theme.js",
+        "blobSha": "bb12be03221e3fefa45dd2918df049bc5ccd5c64",
+        "line": 75
+      },
+      "consumer": "theme DOM implementation, selector, CSS, preference enum or color metadata",
+      "owner": "shared theme control",
+      "routes": [
+        "all theme-enabled routes"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical selector, attribute, enum, style value or DOM markup; user-facing mode names and accessible/title templates are classified in the shared UI theme batch."
+      ]
+    }
+  ]
+}
