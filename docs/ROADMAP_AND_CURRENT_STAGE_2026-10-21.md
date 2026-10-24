@@ -145,3 +145,8 @@ A fonte pública declara contorno 3 px/offset 3 px; `ui-theme.css` troca a cor c
 
 
 - VIS-002 / foco em Como funciona: CSSOM em Production confirmou, para “Compra em escala” no tema claro, `#6E512E` sobre a superfície opaca `#25231F`, contraste calculado de 2,15:1. Uma leitura retornou offset 2.66667 px; a passagem de confirmação retornou 3 px, como na fonte; diferença sem causa isolada. Risco observado nesta combinação; tema escuro, outros cards e superfícies seguem sem readback CSSOM. [Detalhe](../evidence/runtime/how-it-works-economy-action-focus-production-2026-10-24.md).
+
+
+### Como funciona — disclosures por teclado (24/10/2026)
+
+Na Production `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, viewport 1280×720 e tema escuro, Enter e Espaço expandiram corretamente dois disclosures nativos; conteúdo foi exposto e foco permaneceu em cada controle. Uma amostra de dois itens; não encerra achados nem cobre os demais disclosures, cartões de economia ou leitores de tela. [Evidência](../evidence/runtime/how-it-works-accordion-keyboard-production-2026-10-24.md).
