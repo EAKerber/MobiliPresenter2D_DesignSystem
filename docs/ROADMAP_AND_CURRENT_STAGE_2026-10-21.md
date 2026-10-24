@@ -124,3 +124,8 @@ O deploy isolado `m2d-auth-ci-isolated` está READY em `main@5ccb2a8` e inclui `
 ### ARC-13 — convenção de chave semântica proposta, sem canonização
 
 Foi preparada uma convenção revisável para substituir sufixos numéricos por nomes semânticos estáveis, preservando namespaces atuais e contratos distintos de parâmetros. A proposta contém 13 exemplos, incluindo mensagens de Configuração, Hierarquia, Apresentação, Fluxo, Preços e reparo legado. Não modifica o índice nem o produto; faltam revisão/aprovação da convenção, 199 chaves numéricas restantes sem exemplo e 364 ocorrências sem proposta de chave (cinco sinks já têm lote separado). [Proposta e perguntas de revisão](../evidence/architecture/arc13-semantic-key-convention-proposal-2026-10-24.json).
+
+
+### Foco e salto ao conteúdo — Landing e Como funciona (24/10/2026)
+
+A Production não apresenta link de salto ao conteúdo nessas duas rotas: o primeiro Tab foca a marca, e `main` não possui id. O anel da marca também diverge de VIS-002 em largura/offset nos dois temas e cor clara. A CTA interna `#passos` em Como funciona não é um skip link. Evidência: [auditoria em Production](../evidence/runtime/public-skip-navigation-focus-2026-10-24.md). Fica como achado runtime, sem inferir solução ou autorização de implementação.
