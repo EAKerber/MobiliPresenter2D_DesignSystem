@@ -10,6 +10,8 @@ A proposta reutiliza o papel existente `VIS-002.approvedPalette.colors.textPrima
 
 ## Contextos medidos e contraste
 
+**Evidência de medição:** [DOM/CSSOM no preview da PR #241](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/current-handover-20261024/evidence/runtime/pr241-vis002-measured-copy-contrast-preview-2026-10-24.md), cobrindo os grupos de texto nas superfícies `#E8E3DC` e `#F0EDE8` em 1280×720 e 390×844.
+
 | Rota | Seletor | Fundo | Texto | Contraste |
 | --- | --- | --- | --- | ---: |
 | / | `.story-section > p:not(.eyebrow)` | `#E8E3DC` | `#292723` | 11,68:1 |
