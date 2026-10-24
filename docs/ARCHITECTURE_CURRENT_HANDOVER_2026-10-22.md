@@ -167,3 +167,8 @@ As issues #212/#213/#222 e pendências de publicação/Viewer da #228/#229 segue
 **~22% de trabalho ponderado concluído**, ante ~15% no relato anterior (**+7 pontos percentuais**), plausível **18–25%**. Ações executadas em branches e gates reduzem incerteza e esforço futuro, mas não representam a mesma porcentagem publicada em `main`. A infraestrutura e decisões estão à frente da adoção visual no produto.
 
 **Resumo de segurança:** nenhuma nova publicação de V5, schema, identidade, dados comerciais ou config privada foi feita por estes incrementos de arquitetura. A homologação visual continua dependente de `decisions.json`; `viewerPricePublication` somente sob controle explícito e inicialmente desligado.
+
+
+## Evidência runtime adicional — Preview #234, 24/10
+
+A auditoria somente de leitura no Deploy Preview #234, commit `fbd00a9`, confirmou as rotas públicas em contexto isolado, tema claro/escuro e preferência por movimento reduzido. Não houve overflow horizontal no recorte; 28/28 imagens de “Como funciona” carregaram após scroll. `/config/` redirecionou para `/access/` sem token. O foco de teclado medido diverge do registro do Design System em espessura e cor clara; os limites completos estão em [RUNTIME_AUDIT.md](../RUNTIME_AUDIT.md) e [runtime-evidence.json](../runtime-evidence.json). Isso não é auditoria de produção, homologação nem integração.
