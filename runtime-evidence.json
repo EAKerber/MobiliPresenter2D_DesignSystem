@@ -1950,5 +1950,58 @@
     ],
     "productCodeChanged": false,
     "evidence": "evidence/runtime/how-it-works-accordion-keyboard-production-2026-10-24.md"
+  },
+  "productionAudit20261024HowItWorksEconomyFocusSixCards": {
+    "observedAt": "2026-10-24",
+    "site": "https://casaemmodulos.casa/",
+    "deployedRevision": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+    "netlifyDeploymentId": "6adc221479c773577ed45e23",
+    "publishedAt": "2026-10-24T03:12:38.561Z",
+    "route": "/how-it-works/",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "session": "anonymous",
+    "cards": [
+      "Compra em escala",
+      "Compras coletivas",
+      "Produção planejada",
+      "Aproveitamento de material",
+      "Engenharia já estudada",
+      "Menos retrabalho"
+    ],
+    "focusMethod": "Sequential Tab navigation; cards not activated",
+    "computed": {
+      "bothThemes": {
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineOffset": "3px",
+        "cardBackground": "rgba(255, 255, 255, 0.05)",
+        "surfaceBackground": "#25231F"
+      },
+      "light": {
+        "outlineColor": "#6E512E",
+        "contrastRatio": 2.15,
+        "meets3to1": false
+      },
+      "dark": {
+        "outlineColor": "#D8BC7C",
+        "contrastRatio": 8.52,
+        "meets3to1": true
+      }
+    },
+    "reference": {
+      "VIS002OutlineWidth": "4px",
+      "outlineOffset": "3px"
+    },
+    "limits": [
+      "One route, one browser, 1280x720",
+      "Other routes, surfaces and focus states unmeasured",
+      "No reduced-motion-on or screen-reader assessment",
+      "No corrective decision or product code change"
+    ],
+    "productCodeChanged": false,
+    "evidence": "evidence/runtime/how-it-works-economy-focus-six-cards-production-2026-10-24.md"
   }
 }
