@@ -238,3 +238,12 @@ O segundo recorte ARC-13 está em [arc13-runtime-js-candidates-main-2026-10-24.j
 ### Atualização de CI de autenticação — 24/10/2026
 
 O run autenticado [#40075575871](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40075575871) terminou **SUCCESS** na revisão `a9129e11afeae6e92fa8a9dda88f44e01c385c8a`. A head atual de #238 é `a2835c6fe92abdd3649e169231d05090172518ee`; a comparação entre as duas revisões mostra somente dois commits e um arquivo de documentação de handoff alterado, sem mudanças de código/workflow depois do gate. Portanto o resultado cobre o código funcional atual da PR. Os gates anônimo e assets também passaram em `a2835c6` (#40081895237 e #40081898326). A issue #232 ainda depende de revisão/integracão do PR; #238 segue DRAFT. O sucesso comprova que o GitHub Environment tinha os valores necessários durante aquela execução, sem expor nem validar o valor de segredo em si.
+
+
+### Classificação estática do Viewer — 24/10/2026
+
+[arc13-classified-static-viewer-batch-2026-10-24.json](../evidence/architecture/arc13-classified-static-viewer-batch-2026-10-24.json) classifica **17 ocorrências / 16 valores distintos** da entrada HTML de `/viewer/`, cobrindo metadados, navegação, rótulos da cena, instrução e acessibilidade. O conteúdo dinâmico de módulos, modelos e dados técnicos permanece separado como dado/domínio. É inventário documental; nenhum texto ou runtime do produto mudou.
+
+### Readback dos deploys Netlify após a ação do usuário — 24/10/2026
+
+O deploy atualmente publicado no projeto principal `mobilipresenter2d` está **READY**, contexto Production, branch `main`, commit `5ccb2a8`; o deploy isolado `m2d-auth-ci-isolated` também está **READY** em Production e no mesmo commit. O readback dos dois informa 9 Functions e 1 Edge Function implantadas, incluindo `access-check`. Isso confirma o estado do deploy e a presença do handler no pacote publicado; não foi feito teste de chamada da função nem validação dos valores de ambiente. As páginas principais seguem na main já integrada; a inspeção não publicou mudanças de código.
