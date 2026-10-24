@@ -1,5 +1,14 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+## Revalidação live do estágio — 24/10/2026
+
+- Produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf` já inclui o merge da PR #237: ARC-03C e reconciliação do controlador público P-COMP-01 estão presentes. Portanto, os avisos históricos abaixo que indicam ARC-03C como próximo incremento estão superados.
+- A PR produto #239 aplica VIS-002 somente ao skip link de About; seis checks passaram e a observação direta do Deploy Preview confirmou foco/estilo no claro, escuro e viewport móvel. A PR permanece DRAFT; isso não representa integração ou homologação global.
+- A PR produto #238 continua DRAFT e a issue #232 aberta. O gate autenticado isolado não substitui a integração dos workflows legados.
+- V0/V1 continua aberto. Os índices de localização são heurísticos e foram produzidos em `840a0cda`; dos 26 arquivos indexados, 7 hashes divergem no produto atual. A árvore atual contém 8 HTML e 77 JS sob `app/` (inclui dados e testes); ainda é necessária classificação por papel e extração integral de strings realmente localizáveis. A próxima etapa executável é atualizar esse mapa contra a main atual e completar a cobertura ARC-13, sem misturar dados V5/autoria ou mensagens técnicas.
+- A estimativa de ~22% permanece somente histórica/provisória; não foi recalculada sem pesos por entregável e inventário atualizados.
+
+
 > **PONTO DE RETOMADA 22/10:** [handover canônico entre repositórios](ARCHITECTURE_CURRENT_HANDOVER_2026-10-22.md). Último gate concluído: ARC-03B **60/60 PASS**, imagens idênticas, zero alteração de `app/`, porém **sem cutover de `npm run build`**. Próximo: ARC-03C (fonte única de HTML de autoria e geração no build publicado), separado de P-COMP, P-TOKEN e auth. PR de tokens #231 permanece draft; #232 é pendência explícita e #233 já entrou na main.
 
 
