@@ -63,7 +63,7 @@ const expectedCss=[
   " * Decision source blob: 63b60f8d87327c6fd1e80c8cdf4ff832c4089bfa",
   " * Does not change v0.2, global roles, text color declarations, or dark theme.",
   " */",
-  selectors.join(",\n"),
+  selectors.join(",\n")+" {",
   "  --ds-vis002c-long-copy-light: #292723;",
   "}",
   ""
