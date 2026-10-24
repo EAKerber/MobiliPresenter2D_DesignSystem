@@ -1,5 +1,15 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+## Revalidação de execução — 24/10/2026
+
+- Produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf` está 47 commits à frente do baseline usado pelo inventário visual (`1878ae1057ce7c6190e0c8cb08a1f3baadd49463`). A comparação inclui mudanças de HTML/CSS e não permite tratar a captura de 20/10 como atual.
+- As oito rotas do inventário agora têm matriz de evidência runtime ou lacuna explícita em [cobertura de inventário](../evidence/architecture/runtime-inventory-coverage-2026-10-24.md). Isso classifica cobertura; não fecha a auditoria de todas as regras/famílias.
+- Permanecem parciais os estados dinâmicos do Configurador e as rotas autenticadas. A sessão de produção só pode ser validada quando autorizada/disponível; NAV-005, #224 e foco/contraste local continuam pendentes.
+- **Próximo trabalho desta etapa:** regenerar `visual-inventory.json` e reconciliar `DECISION_APPLICATION_MAP.md` contra o produto main atual; depois mapear cada regra/família para evidência runtime ou `NOT VERIFIED`.
+- VIS-002C v0.3 e produto #241 têm gates/preview passados, mas seguem em DRAFT. Produto #240 permanece HOLD devido aos cinco seletores compartilhados com cores divergentes.
+
+---
+
 ## Revalidação live do estágio — 24/10/2026
 
 - Produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf` inclui ARC-03C e P-COMP-01 via PR #237.
