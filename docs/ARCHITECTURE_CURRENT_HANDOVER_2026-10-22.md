@@ -252,3 +252,10 @@ O deploy atualmente publicado no projeto principal `mobilipresenter2d` está **R
 ### Classificação estática das páginas de acesso — 24/10/2026
 
 [arc13-classified-static-access-batch-2026-10-24.json](../evidence/architecture/arc13-classified-static-access-batch-2026-10-24.json) classifica **33 ocorrências / 27 valores** em `/access/` e `/access/manage.html`: títulos, navegação, acessibilidade, política de acesso, login e controles estáticos. Estados de grant, datas de expiração, papéis e mensagens do servidor ficam fora deste recorte. Somando os três lotes HTML documentados, são **94 ocorrências / 75 valores distintos entre lotes** nas páginas About, Viewer e Access. Ainda é inventário documental; sem alteração no produto ou criação de bundles.
+
+
+### Classificação estática da página Admin — 24/10/2026
+
+[arc13-classified-static-admin-batch-2026-10-24.json](../evidence/architecture/arc13-classified-static-admin-batch-2026-10-24.json) revisa as **68 ocorrências** de `/admin.html`: 64 textos de interface foram classificados como localizáveis; quatro valores internos (`admin`, `custom`, `finishes`, `services`) foram excluídos como identificadores estáveis. A classificação não altera a interface nem traduz conteúdo comercial do catálogo. O lote permanece documental.
+
+**Cobertura ARC-13 estática registrada até aqui:** quatro rotas e **162 ocorrências / 129 valores distintos entre lotes**, com 158 textos de interface classificados e quatro identificadores excluídos. Restam quatro entradas HTML no índice, scripts inline, conteúdo de runtime e revisão de dados/autoria comercial antes da extração.
