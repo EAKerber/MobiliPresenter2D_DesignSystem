@@ -29,4 +29,14 @@ A presença estática dessas regras não valida o efeito no DOM com a preferênc
 - Abri o primeiro disclosure nativo durante a emulação: `details.open` mudou para `true` e seu conteúdo apareceu; `details`, `summary` e conteúdo computaram `transition-duration: 1e-05s`, sem animação ativa. No modo sem redução, ao fechar esse mesmo disclosure, a duração computada foi `0s` e a lista de animações também ficou vazia.
 - A emulação foi removida, a aba de contexto isolado foi fechada e a aba Chrome previamente aberta voltou a ser a selecionada. Nenhum dado ou configuração permanente foi alterado.
 
-A revalidação confirma o efeito da preferência nos elementos observados e substitui a limitação anterior sobre indisponibilidade de `document.getAnimations`. O resultado cobre uma rota, um viewport, um CTA em hover e um disclosure; não certifica todas as transições/animações da página ou de iframes. Rede lenta e falha de imagem continuam sem simulação.
+A revalidação confirma o efeito da preferência nos elementos observados e substitui a limitação anterior sobre indisponibilidade de `document.getAnimations`. O resultado cobre uma rota, um viewport, um CTA em hover e um disclosure; não certifica todas as transições/animações da página ou de iframes. A falha de imagem continua sem simulação. A observação parcial de rede lenta está registrada abaixo.
+
+
+## Rede lenta — observação parcial em Production (24/10/2026)
+
+- Em contexto anônimo isolado, com Slow 3G e cache ignorado, a rota concluiu o carregamento. A navegação inicial levou mais que o limite de espera do comando, mas o documento chegou a `readyState=complete` durante a inspeção.
+- O recurso `hero-abertura.webp` registrou duração de aproximadamente 10.230 ms (`transferSize` 159.562 bytes; `decodedBodySize` 159.262 bytes). É uma medição desta sessão sob emulação, não um SLA ou comparação de rede real.
+- Durante a passagem pela página, houve 28 imagens: 12 carregadas, 16 ainda pendentes por carregamento preguiçoso e zero falhas. Em um instante, duas imagens lazy no limite inferior da viewport estavam pendentes; em snapshots posteriores, as imagens que entraram na área visível apareceram carregadas. O estado é temporal e não indica falha por si só.
+- Nenhuma falha de imagem foi induzida; portanto, fallback visual para erro continua sem validação. Preferência de rede e demais emulações foram redefinidas e a aba isolada foi fechada; a aba pré-existente permaneceu selecionada.
+
+Esta evidência confirma atraso perceptível sob Slow 3G e ausência de falhas na amostra observada. Não confirma o comportamento de erro, a experiência completa em rede lenta, nem todas as imagens/estados da rota.
