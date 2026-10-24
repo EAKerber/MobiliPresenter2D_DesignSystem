@@ -1731,7 +1731,7 @@
     "deployedRevision": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
     "netlifyDeployId": "6adc221479c773577ed45e23",
     "viewportCssPx": {
-      "narrow": "320x700",
+      "narrow": "290x700",
       "control": "335x760",
       "aboutAdditional": [
         "360x800",
@@ -1760,7 +1760,22 @@
         "at360And390": {
           "horizontalOverflow": false
         },
-        "menu": "click opened; Escape closed and restored focus to toggle"
+        "menu": "click opened; Escape closed and restored focus to toggle",
+        "at290": {
+          "theme": "dark",
+          "innerWidth": 290,
+          "documentClientWidth": 275,
+          "documentScrollWidth": 320,
+          "bodyWidth": 320,
+          "headerWidth": 320,
+          "menu": {
+            "x": 264,
+            "right": 306,
+            "visibleWithinLayout": 11
+          },
+          "horizontalScrollbarObserved": true,
+          "visibleClipping": "heading and body text"
+        }
       },
       "/viewer/": {
         "at320": {
@@ -1779,6 +1794,21 @@
           "documentClientWidth": 320,
           "documentScrollWidth": 320,
           "horizontalOverflow": false
+        },
+        "at290": {
+          "theme": "dark",
+          "innerWidth": 290,
+          "documentClientWidth": 275,
+          "documentScrollWidth": 320,
+          "bodyWidth": 320,
+          "headerWidth": 320,
+          "menu": {
+            "x": 262,
+            "right": 306,
+            "visibleWithinLayout": 13
+          },
+          "horizontalScrollbarObserved": true,
+          "visibleClipping": "card content and price"
         }
       },
       "/how-it-works/": {
@@ -1797,6 +1827,20 @@
           "documentClientWidth": 320,
           "documentScrollWidth": 320,
           "horizontalOverflow": false
+        },
+        "at290": {
+          "theme": "dark",
+          "innerWidth": 290,
+          "documentClientWidth": 275,
+          "documentScrollWidth": 320,
+          "bodyWidth": 320,
+          "headerWidth": 320,
+          "menu": {
+            "x": 264,
+            "right": 306,
+            "visibleWithinLayout": 11
+          },
+          "pageOverflowX": "clip"
         }
       }
     },
