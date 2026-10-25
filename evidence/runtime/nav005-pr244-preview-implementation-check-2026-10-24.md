@@ -37,3 +37,14 @@ A rota autenticada do Configurador e a sessão autenticada de gerenciamento não
 ## Escopo e status
 
 A autorização nesta conversa permitiu implementar e validar esta proposta somente em preview. `decisions.json` continua inalterado; sua autorização canônica permanece falsa. A PR #244 segue DRAFT, sem merge ou deploy de produção.
+
+
+## Revalidação do preview #244 após ajuste dos harnesses — 25/10/2026
+
+Head atual do produto: [`063796224c55924a8b3a909c9631c6b5f5590972`](https://github.com/EAKerber/MobiliPresenter2D/commit/063796224c55924a8b3a909c9631c6b5f5590972). A PR [#244](https://github.com/EAKerber/MobiliPresenter2D/pull/244) continua aberta/DRAFT; os Deploy Previews principal e isolado estão READY e os oito workflows da head passaram, incluindo Admin hierarchy [#40147009586](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40147009586).
+
+O workflow Admin executou com sucesso as suítes de hierarquia, persistência isolada de Puxadores e Save/readback nativo v5. O trabalho de manutenção ficou restrito aos harnesses de teste: entrada do bundle atual sem cache key fixa, fixture de `/api/admin-bootstrap`, mapeamento do bundle de navegação gerado para o módulo fonte no servidor local e MIME JavaScript para `.mjs`. Nenhum runtime do produto foi alterado por esses ajustes.
+
+A verificação manual do preview permanece limitada a `/admin.html` e `/access/`: em 291 px, os cabeçalhos ficam em uma linha, sem overflow, com identificadores completos e controles 44×44; em 288 px, as ações passam à segunda linha; o rótulo do tema some em 320 px e aparece em 321 px. A rota autenticada do Configurador e a gestão de acesso autenticada continuam sem leitura runtime nesta sessão.
+
+Escopo autorizado: somente preview. `decisions.json` segue byte-preservado, com a autorização canônica falsa. Sem merge, sem deploy Production e sem homologação global.
