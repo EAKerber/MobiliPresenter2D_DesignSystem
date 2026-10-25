@@ -1,0 +1,261 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/admin/admin.js: remaining hierarchy labels, selectors, guardrails, revision label and access initialization",
+    "sourceLiteralOccurrences": 18,
+    "proposedKeys": 14,
+    "deferredCountMessages": 3,
+    "deferredPricingBasisTemplate": 1
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "The batch maps direct labels and messages with explicit consumer and sink. The revisionLabel fragments across loader and write handlers share one key and revision parameter because the DOM sink and presentation contract coincide.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "Count messages using disponível(is) or selecionado(s) are deferred until a pluralization contract is selected.",
+    "The pricing basis fallback remains deferred because it may expose a raw enum.",
+    "Revision label source fragments are one visual message; the revision remains numeric dynamic data."
+  ],
+  "entries": [
+    {
+      "proposedKey": "admin.hierarchy.emptyGroupFallback",
+      "text": "Grupo",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 189
+        }
+      ],
+      "owner": "Admin hierarchy placement",
+      "consumer": "function defaultEmptyPlacement",
+      "sink": "default group label",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchy.destinations.createInitialGroup",
+      "text": "${stage.label} · criar grupo/seção inicial",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 206
+        }
+      ],
+      "owner": "Admin hierarchy placement",
+      "consumer": "function compatibleDestinationOptions",
+      "sink": "destination option label",
+      "parameterContract": [
+        "stage.label"
+      ]
+    },
+    {
+      "proposedKey": "admin.hierarchy.order.moveUp",
+      "text": "Mover ${label} para cima",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 309
+        }
+      ],
+      "owner": "Admin hierarchy order controls",
+      "consumer": "function makeOrderButtons",
+      "sink": "button title and aria-label",
+      "parameterContract": [
+        "label"
+      ]
+    },
+    {
+      "proposedKey": "admin.hierarchy.order.moveDown",
+      "text": "Mover ${label} para baixo",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 316
+        }
+      ],
+      "owner": "Admin hierarchy order controls",
+      "consumer": "function makeOrderButtons",
+      "sink": "button title and aria-label",
+      "parameterContract": [
+        "label"
+      ]
+    },
+    {
+      "proposedKey": "admin.catalogObjects.handleLabel",
+      "text": "Puxador · ${item.label}",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 754
+        }
+      ],
+      "owner": "Admin object selector",
+      "consumer": "function catalogObjects",
+      "sink": "option text",
+      "parameterContract": [
+        "item.label"
+      ]
+    },
+    {
+      "proposedKey": "admin.catalogObjects.stoneLabel",
+      "text": "Pedra · ${item.label}",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 755
+        }
+      ],
+      "owner": "Admin object selector",
+      "consumer": "function catalogObjects",
+      "sink": "option text",
+      "parameterContract": [
+        "item.label"
+      ]
+    },
+    {
+      "proposedKey": "admin.materialTargets.stoneAndSkirting",
+      "text": "Pedra e rodapé",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 907
+        }
+      ],
+      "owner": "Admin material target selector",
+      "consumer": "function materialTargetOptions",
+      "sink": "option label",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.materialTargets.handleLabel",
+      "text": "Puxador · ${item.label}",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 908
+        }
+      ],
+      "owner": "Admin material target selector",
+      "consumer": "function materialTargetOptions",
+      "sink": "option label",
+      "parameterContract": [
+        "item.label"
+      ]
+    },
+    {
+      "proposedKey": "admin.materialTargets.minimumOneMaterial",
+      "text": "Mantenha pelo menos um material nesta opção.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 920
+        }
+      ],
+      "owner": "Admin material group editor",
+      "consumer": "function setMaterialTarget",
+      "sink": "saveMessage error",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.eventTriggers.stoneSkirting",
+      "text": "Rodapé de pedra",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1077
+        }
+      ],
+      "owner": "Admin event trigger selector",
+      "consumer": "function eventTriggerOptions",
+      "sink": "option label",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.materialGroups.minimumOneHandle",
+      "text": "Mantenha pelo menos um puxador disponível.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1399
+        }
+      ],
+      "owner": "Admin handle availability editor",
+      "consumer": "event change on materialGroupsList",
+      "sink": "saveMessage error",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchy.nominalDimensionInvalid",
+      "text": "Informe uma medida nominal entre 1 e 5.000 mm, com até uma casa decimal.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1727
+        }
+      ],
+      "owner": "Admin nominal dimensions editor",
+      "consumer": "event change on stagesList",
+      "sink": "saveMessage error",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.auth.initializationFailed",
+      "text": "Não foi possível concluir o acesso.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 2092
+        }
+      ],
+      "owner": "Admin access initialization",
+      "consumer": "function initializeAdminAccess",
+      "sink": "access service error fallback",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationLoad.revisionLabel",
+      "text": "Versão {revision} · editor hierárquico",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1289
+        },
+        {
+          "file": "app/admin/admin.js",
+          "line": 1289
+        },
+        {
+          "file": "app/admin/admin.js",
+          "line": 1932
+        },
+        {
+          "file": "app/admin/admin.js",
+          "line": 1996
+        },
+        {
+          "file": "app/admin/admin.js",
+          "line": 2052
+        }
+      ],
+      "sourceLines": [
+        1289,
+        1932,
+        1996,
+        2052
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "revisionLabel shared DOM sink",
+      "sink": "revisionLabel textContent",
+      "parameterContract": [
+        "revision"
+      ]
+    }
+  ]
+}
