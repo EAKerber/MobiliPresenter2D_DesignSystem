@@ -150,10 +150,10 @@ O cruzamento considera também `sourceLines` dos templates montados em runtime; 
 - A PR #51 está aberta em DRAFT, com zero checks e status de commit sem statuses. Código do produto, índice canônico e `decisions.json` permanecem inalterados.
 
 
-## Medição documental atualizada — 25/10/2026, após os lotes de controles e mensagens do Configurador
+## Medição documental atualizada — 25/10/2026, após a proposta de feedback dimensional
 
 - O mapa congelado contém 337 linhas brutas e 332 identidades distintas por arquivo + linha + texto literal; cinco linhas repetem exatamente uma identidade.
-- 314 de 332 identidades distintas (94,6%) aparecem em propostas contextuais; 18 identidades seguem sem proposta. Esta atualização inclui controles do puxador (6 referências fonte/5 chaves), pedra/serviço/dimensão (3/3) e feedback de dimensão e acabamento local (4/4). É cobertura documental, não implementação.
-- As quatro chaves novas foram comparadas às 2.181 referências do índice ARC-13 fixado: nenhuma colisão prévia ou duplicata interna.
+- 313 de 332 identidades distintas (94,3%) aparecem em propostas contextuais; 19 identidades seguem sem proposta. A proposta dimensional e de acabamento local registra quatro chaves, mas a mensagem de anúncio de ajuste dimensional já estava coberta por um lote anterior; portanto, o ganho líquido nesta medição é de três identidades.
+- As quatro chaves desta proposta foram comparadas às 2.181 referências do índice ARC-13 fixado: nenhuma colisão prévia ou duplicata interna.
 - A convenção aprovada define nomes, não promove exemplos a chaves canônicas. Código, índice e decisions.json permanecem inalterados. Pluralização, ownership de conteúdo/catálogo e mensagens HTML montadas continuam pendentes de contrato.
-- As medições anteriores permanecem snapshots históricos; 94,6% significa preparação para revisão, não conclusão do ARC-13.
+- As medições anteriores permanecem snapshots históricos; 94,3% significa preparação para revisão, não conclusão do ARC-13.
