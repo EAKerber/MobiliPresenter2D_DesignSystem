@@ -59,3 +59,6 @@ Para separar regra do produto de comportamento de leitura, criei e removi imedia
 Também comparei, apenas no DOM da sessão isolada, uma redistribuição de `box-shadow` de raios `2/3` para `1/3` (faixas preta/branca de 2 px/1 px para 1 px/2 px), sem ampliar o limite exterior de 3 px. As capturas de um hotspot sobre a fotografia em claro/escuro pareceram semelhantes; não repeti amostragem de pixels com a variante. A alternativa não foi adotada nem considerada aprovada.
 
 **Consequência:** manter a declaração aprovada 4/3 px; não ajustar a regra para forçar um valor CSSOM específico. A validação de contraste da keyline sobre as sete áreas fotográficas segue inconclusiva e requer revisão/evidência visual adicional. Nenhum arquivo do produto foi alterado nesta leitura.
+
+
+No seguimento, repeti o mesmo elemento de diagnóstico com viewport constante e `deviceScaleFactor` emulado em 1, 1,25, 1,5 e 2. O padrão CSSOM permaneceu idêntico em todos os quatro valores (1→0,66667; 2→2; 3→2,66667; 4→4; 5→4,66667; 6→6; 7→6,66667; 8→8), enquanto `devicePixelRatio` reportou cada valor solicitado e `visualViewport.scale` permaneceu 1. Isso afasta DPR emulado como causa isolada; não identifica se a origem restante está no Chrome, na medição DevTools ou em outra escala/renderização. Não emulei zoom pelo menu do navegador nem mudei valores do produto.
