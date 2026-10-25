@@ -30,7 +30,7 @@ Isso confirma melhora em uma área clara, mas não comprova contraste de 3:1 em 
 
 ## Estado do preview isolado
 
-A rota equivalente em `https://deploy-preview-242--m2d-auth-ci-isolated.netlify.app/viewer/` respondeu sem os dados do Viewer, exibiu “Informações temporariamente indisponíveis” e registrou HTTP 503 para um recurso. O Deploy Preview principal acima renderizou a cena e permitiu a medição. A causa do 503 no site isolado não foi determinada; isso não alterou os checks verdes do commit.
+No endereço `https://deploy-preview-242--m2d-auth-ci-isolated.netlify.app/viewer/`, a página carrega, mas `GET /api/public-modules` retorna HTTP 503 com `{"error":"public_modules_unavailable"}`; o Viewer mostra “Informações temporariamente indisponíveis” e não renderiza hotspots. Os logs de borda apontam a função `public-modules`, sem linhas de log de aplicação. No Deploy Preview principal, o mesmo endpoint retorna HTTP 200 e a cena renderiza. A causa interna do 503 isolado permanece indeterminada; não atribuí-lo a uma variável específica sem evidência. Os checks verdes do commit não cobrem esse runtime do Viewer isolado.
 
 ## Limites e estado
 
