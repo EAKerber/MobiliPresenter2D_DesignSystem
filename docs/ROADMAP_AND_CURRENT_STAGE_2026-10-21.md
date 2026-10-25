@@ -69,12 +69,12 @@ Os pesos abaixo são uma ferramenta de planejamento, não metas ou decisões can
 
 | Frente | Peso | Conclusão estimada | Contribuição | O que falta para fechar |
 |---|---:|---:|---:|---|
-| Inventário e evidência runtime | 30% | 35% | 10,5 p.p. | Cobrir famílias/estados com evidência atual; o zoom real da #226 foi confirmado manualmente e encerrado; o gate WebKit tem paridade 4/4 por navegador; capturas de desktop claro/escuro estão arquivadas; manter áreas autenticadas como não verificadas até sessão autorizada. |
+| Inventário e evidência runtime | 30% | 38% | 11,4 p.p. | A #226 foi encerrada após confirmação manual de zoom real; falta ampliar cobertura por famílias/estados, mantendo áreas autenticadas não verificadas além do escopo autorizado. O gate WebKit tem paridade 4/4 por navegador e capturas desktop claro/escuro arquivadas. |
 | Decisões e homologação visual | 20% | 22% | 4,4 p.p. | Fallback escopado aprovado e validado; ainda revisar foco sobre imagens/superfícies e decisões pendentes. |
 | Implementação por componente e integração | 25% | 20% | 5 p.p. | Revisar e integrar previews aprovados, revalidar em Production e resolver conflitos/branches sobrepostos. O código atual integrado segue estimado em 18% (faixa 15–20%). |
 | ARC-13: ownership e chaves semânticas | 15% | 30% | 4,5 p.p. | Classificar os 190 itens de conteúdo deferidos, resolver 369 textos sem chave e 212 chaves baseadas em linha; aplicar a convenção aprovada, revisar owners e migrar em lotes revisáveis. |
 | Etapas futuras: schema de UI, textos/localização e inventário JS | 10% | 0% | 0 p.p. | Começam depois da fundação visual/etapa atual; preservar Português do Brasil e separar dados de interface dos dados do configurador. |
-| **Total ponderado** | **100%** |  | **24,4 p.p.** | **Estimativa geral arredondada: ~24% (faixa 22–26%).** |
+| **Total ponderado** | **100%** |  | **25,3 p.p.** | **Estimativa geral arredondada: ~25% (faixa 23–27%).** |
 
 ### Ordem de trabalho recomendada
 
