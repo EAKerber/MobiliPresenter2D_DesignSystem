@@ -690,3 +690,9 @@ The approved naming convention remains stable. The frozen consumer map has 336 r
 - No Deploy Preview da PR #244, ampliei a leitura DOM/CSSOM de `/access/` para 280, 290, 291, 320, 321, 390, 486 e 900 px, em claro e escuro; 1280 px foi lido em claro. Sem overflow em nenhum cenário medido; alvos de tema/menu continuam 44×44 px e o identificador permanece completo.
 - A 290 px o header usa duas linhas; a 291 px volta a uma faixa, com nome quebrado dentro do espaço disponível. O logo mede 83,7 px no limite de 291 px, redução de 20,3% ante a referência de 105 px. A etiqueta do tema some em 320 px e reaparece em 321 px. Capturas visuais dos limites confirmaram a composição.
 - Essa ampliação reduz a lacuna de largura/tema no estado público, mas não cobre Configurador/Admin autenticados nem gestão autenticada. A PR #244 segue DRAFT; sem alteração de código, merge ou Production. [Evidência ampliada](../evidence/runtime/nav005-pr244-preview-implementation-check-2026-10-24.md).
+
+
+### VIS-002 — diagnóstico de escala CSSOM no foco do Viewer — 25/10/2026
+
+- No preview #242, a quantização de 1/3 px reapareceu em elementos de diagnóstico sem CSS de produto: valores 1–8 px produziram 0,6667; 2; 2,6667; 4; 4,6667; 6; 6,6667; 8 px, tanto para outline como offset. O ambiente reportava `devicePixelRatio≈1`, `visualViewport.scale=1`, zoom CSS 1 e sem transforms; portanto não atribuí a causa a zoom ou ao seletor do hotspot.
+- Uma redistribuição temporária de keylines dentro do mesmo raio máximo não teve nova amostragem de pixels e não foi adotada. Mantém-se a declaração VIS-002 4/3 px; contraste composto em todas as fotografias segue sem prova. [Readback e limites](../evidence/runtime/pr242-viewer-hotspot-focus-keylines-preview-2026-10-25.md).
