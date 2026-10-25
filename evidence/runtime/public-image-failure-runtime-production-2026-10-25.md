@@ -32,3 +32,16 @@ Em contexto isolado de Production, 341 × 768 CSS px, 28/28 imagens carregaram a
 **Leitura:** 19/20 elementos descritivos mantiveram as dimensões observadas; um único contexto colapsou. O mesmo arquivo `estudo-espaco.webp` manteve a caixa no cartão compacto, então a falha depende da composição/wrapper do contexto, não apenas do arquivo. `alt` permaneceu presente durante todos os ensaios.
 
 **Limites:** falha simulada com data URL inválida no DOM isolado, não resposta 404 ou falha de rede natural. Não arquivei screenshot durante a falha. A amostra não define o fallback visual, semântica de substituição nem comportamento de background CSS. Nenhum arquivo ou dado de Production foi alterado.
+## Complemento — Landing e Viewer (25/10/2026)
+
+Em contexto Production isolado, 341 × 768 CSS px, forcei lazy images a eager apenas na aba de teste. Landing carregou 18/18; Viewer carregou 22/22. Induzi falha local nos cinco elementos Landing e dois elementos Viewer com `alt` não vazio, um por vez, restaurando cada `src`; todas as imagens-alvo voltaram a `naturalWidth > 0`.
+
+| Rota/contexto | Elemento | Caixa antes | Caixa durante falha | Resultado |
+|---|---|---:|---:|---|
+| Landing | Hero lifestyle | 326 × 350 px | 326 × 350 px | Preservada |
+| Landing | Card de cozinha modular | 268 × 219,8 px | 268 × 219,8 px | Preservada |
+| Landing | Splash/header/footer logos (3 instâncias) | 211,6 × 75,6; 122,9 × 44; 166 × 59,4 px | Iguais | Preservadas |
+| Viewer — cena Cozinha | Imagem-base da composição | 282 × 188 px | 282 × 188 px | Preservada |
+| Viewer | Logo do header | 114 × 40,8 px | 114 × 40,8 px | Preservada |
+
+Em todos os sete alvos, o `alt` permaneceu inalterado. Não testei as imagens com `alt=""` nesta varredura nem outras cenas do Viewer. O resultado continua sendo falha sintética no DOM, não erro natural de rede; uma caixa preservada não representa fallback visual. Nenhum dado ou arquivo de Production foi alterado.
