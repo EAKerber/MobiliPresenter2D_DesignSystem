@@ -13,7 +13,7 @@
 | Prioridade | Peso do plano | Trabalho ainda necessário | Bloqueio ou critério de saída |
 |---|---:|---|---|
 | Alta | Dentro de implementação (25%) | Revisão humana da PR consolidada #238 e integração aprovada; depois revalidar o gate em main e fechar #232. | #238 está DRAFT; sem merge nem Production nesta etapa. |
-| Alta | Dentro de evidência (30%) | Concluir zoom real e a divergência histórica WebKit da issue #226. | Automação não conseguiu confirmar/operar a janela correta do navegador; largura CSS emulada não substitui zoom real. |
+| Alta | Dentro de evidência (30%) | Concluir zoom real do navegador na issue #226; a discrepância de captura WebKit foi resolvida no gate reproduzível. | Automação Windows não conseguiu confirmar a URL da janela Chrome; largura CSS emulada não substitui zoom real. |
 | Alta | Dentro de decisões (20%) | Revisar contraste do foco sobre fotografia/superfícies variadas e decisões restantes. O fallback da ilustração principal de Como funciona foi escolhido e validado no preview da #241. | Foco sobre fotografia ainda depende de medições e revisão por componente; fallback limitado à ilustração principal, sem homologação global. |
 | Média | Dentro de evidência (30%) | Ampliar mapa por componente de foco, seleção, carregamento/erro, movimento e tema, incluindo estados e rotas que permanecem não verificados. | Rotas privadas exigem sessão autorizada; não extrapolar medições pontuais. |
 | Média | ARC-13 (15%) | Classificar 190 itens de conteúdo deferidos; resolver 369 textos sem chave e 212 chaves baseadas em linha; aprovar convenção e migrar em lotes. | Convenção e ownership precisam de revisão antes de mudanças em lote. |
@@ -40,7 +40,7 @@
 
 A rechecagem após reload confirmou, nas duas grades `.foundation-list` e `.study-topics`, que um item aberto cresce sem esticar irmãos fechados nos viewports 1366 × 768, 768 × 1024 e 390 × 844, em tema claro/escuro. Enter e Espaço preservam o toggle nativo; duas aberturas sequenciais são independentes; o fechamento restaura a geometria sem overflow. A regra `align-items:start` está ativa nas duas grades em Production. [Matriz e limites](../evidence/runtime/issue226-current-production-matrix-2026-10-25.md).
 
-A issue permanece aberta: zoom real não foi efetivamente testado e a divergência visual WebKit histórica segue inconclusiva. Capturas fechado/aberto das duas grades agora estão arquivadas em 1366×768, temas claro e escuro. Esta rechecagem no Chromium é evidência atual limitada, não homologação visual cross-browser.
+A issue #226 permanece aberta somente para zoom real do navegador. O gate isolado passou 8/8 combinações funcionais e teve paridade pixel a pixel em Chromium/WebKit, em 390/1366 px e temas claro/escuro; a antiga divergência era da captura e foi resolvida com recorte explícito baseado nas coordenadas do elemento. A evidência cruzada está vinculada na matriz atualizada. A automação ainda não conseguiu validar a URL da janela Chrome para operar zoom real; emulação de viewport continua insuficiente.
 
 ## Plano ponderado de conclusão — avaliação provisória (25/10/2026)
 
@@ -48,7 +48,7 @@ Os pesos abaixo são uma ferramenta de planejamento, não metas ou decisões can
 
 | Frente | Peso | Conclusão estimada | Contribuição | O que falta para fechar |
 |---|---:|---:|---:|---|
-| Inventário e evidência runtime | 30% | 35% | 10,5 p.p. | Cobrir famílias/estados com evidência atual; fechar zoom real e divergência WebKit da #226; capturas de desktop claro/escuro já foram arquivadas.; manter áreas autenticadas como não verificadas até sessão autorizada. |
+| Inventário e evidência runtime | 30% | 35% | 10,5 p.p. | Cobrir famílias/estados com evidência atual; fechar zoom real da #226; o gate WebKit agora tem paridade 4/4 por navegador; capturas de desktop claro/escuro estão arquivadas; manter áreas autenticadas como não verificadas até sessão autorizada. |
 | Decisões e homologação visual | 20% | 22% | 4,4 p.p. | Fallback escopado aprovado e validado; ainda revisar foco sobre imagens/superfícies e decisões pendentes. |
 | Implementação por componente e integração | 25% | 20% | 5 p.p. | Revisar e integrar previews aprovados, revalidar em Production e resolver conflitos/branches sobrepostos. O código atual integrado segue estimado em 18% (faixa 15–20%). |
 | ARC-13: ownership e chaves semânticas | 15% | 30% | 4,5 p.p. | Classificar os 190 itens de conteúdo deferidos, resolver 369 textos sem chave e 212 chaves baseadas em linha; aprovar convenção, extrair e migrar em lotes revisáveis. |
