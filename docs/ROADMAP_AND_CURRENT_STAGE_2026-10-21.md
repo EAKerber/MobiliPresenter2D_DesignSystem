@@ -49,7 +49,7 @@ A amostra de 13 substituições numéricas e cinco rótulos administrativos segu
 
 O mapa corrigido encontrou 364 candidatos originais sem chave. Exclui 24 valores técnicos de DOM/CSS/enum e quatro diagnósticos somente de console, restando **336 ocorrências para revisão de consumer/owner/contrato**: 207 em `app/admin/admin.js` e 129 em `app/app.js`. O mapa cobre 75 buckets lexicais e 21 grupos de texto duplicado; esses grupos são pistas, não prova de consumer ou equivalência.
 
-Vinte e um buckets do Admin foram rastreados:
+Vinte e dois buckets do Admin foram rastreados:
 - `module/top-level`: títulos de pricing, label de tipo/base, limite de etapas, defaults de prompt e recuperação de conta. Separados copy de interface e valores de prompt que podem virar dados persistidos. [Evidência](../evidence/architecture/arc13-admin-top-level-consumer-trace-2026-10-25.md).
 - `event click on saveButton`: progressos, autorização/conflito, confirmação de integridade/readback, guardrails de publicação e fallbacks substituíveis por mensagens dinâmicas do serviço. `model.revision` preservado como parâmetro. [Evidência](../evidence/architecture/arc13-admin-savebutton-consumer-trace-2026-10-25.md).
 - `event click on persistHandlesButton`: reparo isolado do schema v3, confirmação contra draft local, readback, no-op idempotente, validação do delta e sucesso condicionado. Separados fallbacks estáticos de valores dinâmicos do plano, validação, payload e erro. [Evidência](../evidence/architecture/arc13-admin-handles-persistence-consumer-trace-2026-10-25.md).
@@ -71,10 +71,11 @@ Vinte e um buckets do Admin foram rastreados:
 - `function renderItem` (3 ocorrências): movimentar, criar seção e retirar foram distinguidos; “Retirar” não exclui do catálogo. O select “Mover para” ficou como ponto candidato para leitura acessível em runtime. [Evidência](../evidence/architecture/arc13-admin-renderItem-consumer-trace-2026-10-25.md).
 - `function renderSection` (3 ocorrências): mover, dividir e unir foram diferenciados; as ações preservam a seção ou itens conforme o caso, em vez de apagar conteúdo. [Evidência](../evidence/architecture/arc13-admin-renderSection-consumer-trace-2026-10-25.md).
 - `function renderGroup` (3 ocorrências): spans de coluna são enum; a união transfere seções e remove apenas o grupo fonte, preservando conteúdo. [Evidência](../evidence/architecture/arc13-admin-renderGroup-consumer-trace-2026-10-25.md).
+- `function renderPager` (3 ocorrências): ações mantêm limites de página e o status dinâmico 1-based é anunciado em região viva. [Evidência](../evidence/architecture/arc13-admin-renderPager-consumer-trace-2026-10-25.md).
 
 O bucket do Configurador `startConfigurator > createDetailCarousel` (18 ocorrências diretas) foi rastreado até heading, descrição, dots e labels acessíveis. Rótulos longos, curtos, avisos técnicos, disponibilidade condicional e parâmetros da paginação foram separados. Oito strings em closures de navegação/colapso seguem buckets filhos; notas frontal/lateral podem incorporar medidas de produto e seguem seus próprios consumers. [Evidência](../evidence/architecture/arc13-config-detail-carousel-consumer-trace-2026-10-25.md).
 
-Nenhuma chave foi proposta ou migrada. Próximo bucket Admin por ocorrência: `renderPager` (3 candidatas); rastrear rótulos de navegação e contagem dinâmica da página. O [mapa corrigido de escopos](../evidence/architecture/arc13-unkeyed-consumer-scope-map-2026-10-25.json) permanece lexical e não prova renderização; sem migração do índice ou produto.
+Nenhuma chave foi proposta ou migrada. Próximo bucket Admin de três ocorrências: `showUser`; seguir autenticação, autorização, dados administrativos e falhas até o estado visual apresentado. O [mapa corrigido de escopos](../evidence/architecture/arc13-unkeyed-consumer-scope-map-2026-10-25.json) permanece lexical e não prova renderização; sem migração do índice ou produto.
 ## Atualização pós-consolidação CI-BASELINE-01 — 25/10/2026
 
 - As alterações estáveis que estavam distribuídas entre as PRs de produto #238 e #245 foram consolidadas na PR [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238), head `1fccf635078aee68aa735caf0df02fdb62402c93`. A PR #245 foi encerrada sem merge como supersedida; seu trabalho está preservado no commit de merge da #238.
