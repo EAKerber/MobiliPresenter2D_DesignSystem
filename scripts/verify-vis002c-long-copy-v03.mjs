@@ -4,7 +4,7 @@ import {createHash} from "node:crypto";
 import {readFile} from "node:fs/promises";
 
 const read=path=>readFile(new URL("../"+path,import.meta.url),"utf8");
-const blob=text=>createHash("sha1").update("blob "+Buffer.byteLength(text,"utf8")+"\\0").update(text,"utf8").digest("hex");
+const blob=text=>createHash("sha1").update("blob "+Buffer.byteLength(text,"utf8")+"\0").update(text,"utf8").digest("hex");
 const luminance=hex=>{
   const rgb=hex.slice(1).match(/.{2}/g).map(x=>parseInt(x,16)/255);
   const f=x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4;
@@ -71,13 +71,13 @@ const expectedCss=[
   " * Decision source blob: 63b60f8d87327c6fd1e80c8cdf4ff832c4089bfa",
   " * Replaces v0.2 color only on the three mapped legacy consumers; no global role or dark-theme change.",
   " */",
-  selectors.join(",\\n")+" {",
+  selectors.join(",\n")+" {",
   "  --ds-vis002c-long-copy-light: #292723;",
   "}",
   ""
-].join("\\n");
+].join("\n");
 assert.equal(css,expectedCss,"Generated CSS differs from the exact scoped projection");
-assert.doesNotMatch(css,/\\bcolor\\s*:/i,"Artifact may not set text color directly");
-assert.doesNotMatch(css,/:root\\s*\\{/, "Global token scope is not authorized");
+assert.doesNotMatch(css,/\bcolor\s*:/i,"Artifact may not set text color directly");
+assert.doesNotMatch(css,/:root\s*\{/,"Global token scope is not authorized");
 
-console.log(`VIS002C_LONG_COPY_V03_PASS contexts=${mapping.contexts.length} dark=unchanged global=false`);
+console.log("VIS002C_LONG_COPY_V03_PASS contexts="+mapping.contexts.length+" dark=unchanged global=false");
