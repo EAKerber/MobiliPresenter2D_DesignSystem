@@ -78,7 +78,9 @@ Vinte e cinco buckets do Admin foram rastreados:
 
 O bucket do Configurador `startConfigurator > createDetailCarousel` (18 ocorrências diretas) foi rastreado até heading, descrição, dots e labels acessíveis. Rótulos longos, curtos, avisos técnicos, disponibilidade condicional e parâmetros da paginação foram separados. Oito strings em closures de navegação/colapso seguem buckets filhos; notas frontal/lateral podem incorporar medidas de produto e seguem seus próprios consumers. [Evidência](../evidence/architecture/arc13-config-detail-carousel-consumer-trace-2026-10-25.md).
 
-Nenhuma chave foi proposta ou migrada. Próximo bucket de três ocorrências do Configurador: `renderModuleControlsFromData`; seguir labels, opções de catálogo, estados de seleção e feedback visual. O [mapa corrigido de escopos](../evidence/architecture/arc13-unkeyed-consumer-scope-map-2026-10-25.json) permanece lexical e não prova renderização; sem migração do índice ou produto.
+- `renderModuleControlsFromData` (3 ocorrências): rótulos acessíveis mantêm título do catálogo como parâmetro; tooltip aparece somente quando regra ativa desabilita o controle. Abrir detalhes e selecionar módulo são consumers distintos. [Evidência](../evidence/architecture/arc13-config-renderModuleControlsFromData-consumer-trace-2026-10-25.md).
+
+Nenhuma chave foi proposta ou migrada. Próximo bucket de três ocorrências do Configurador: `renderFinishControlsFromData`; seguir nomes dinâmicos, controle acessível e comportamento de seleção local/global. O [mapa corrigido de escopos](../evidence/architecture/arc13-unkeyed-consumer-scope-map-2026-10-25.json) permanece lexical e não prova renderização; sem migração do índice ou produto.
 ## Atualização pós-consolidação CI-BASELINE-01 — 25/10/2026
 
 - As alterações estáveis que estavam distribuídas entre as PRs de produto #238 e #245 foram consolidadas na PR [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238), head `1fccf635078aee68aa735caf0df02fdb62402c93`. A PR #245 foi encerrada sem merge como supersedida; seu trabalho está preservado no commit de merge da #238.
