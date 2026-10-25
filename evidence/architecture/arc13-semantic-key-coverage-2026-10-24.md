@@ -66,3 +66,10 @@ Este lote reduz de 199 para 135 as referências numéricas ainda sem sugestão. 
 Os dois lotes subsequentes à aprovação da convenção agora cobrem as 199 ocorrências que não tinham proposta: 64 em configuration.js e 135 nos seis módulos centrais. O arquivo de configuration registra 63 chaves sugeridas (duas linhas idênticas agrupadas); o lote central registra 133 chaves sugeridas (três ocorrências idênticas agrupadas). Os 13 exemplos iniciais mais essas 199 propostas cobrem as 212 referências numéricas inventariadas. Isso é cobertura de proposta, não aprovação semântica final, ownership confirmado ou extração. Zero chaves propostas colidiram com o índice atual. A fila seguinte permanece 364 textos sem chave, com consumer não resolvido, e 190 itens de conteúdo deferidos em trilha separada.
 
 [Lote de configuration.js](arc13-semantic-key-proposal-configuration-batch-2026-10-25.json) · [Lote dos seis módulos](arc13-semantic-key-proposal-core-modules-2026-10-25.json).
+
+
+## Contexto da fila sem chave — 25/10/2026
+
+As 364 ocorrências ainda sem chave foram mapeadas contra os arquivos-fonte no commit de produto registrado pelo índice. A análise lexical as agrupou em 72 funções candidatas; encontrou 22 grupos de texto repetido e seis valores com aparência de código/markup que exigem reclassificação. O agrupamento não confirma consumers nem autoriza compartilhamento. O próximo passo é revisar uso DOM/ARIA e ownership antes de propor as chaves.
+
+[Mapa com proveniência e linhas](arc13-unkeyed-consumer-context-map-2026-10-25.json).
