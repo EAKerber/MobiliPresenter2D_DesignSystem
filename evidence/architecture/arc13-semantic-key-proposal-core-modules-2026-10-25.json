@@ -1,0 +1,1906 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespaces; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer, and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "occurrences": 135,
+    "modules": {
+      "app/core/hierarchy-administration.js": 32,
+      "app/core/flow-model.js": 30,
+      "app/core/presentation-contract.js": 29,
+      "app/core/pricing-contract.js": 24,
+      "app/core/administration-v5.js": 13,
+      "app/core/legacy-stage-repair.js": 7
+    },
+    "uniqueProposedKeys": 133,
+    "previouslyAuditedExamples": [
+      "admin.hierarchyValidation.143",
+      "admin.flowValidation.76",
+      "admin.presentationValidation.55",
+      "admin.pricing.validation.56",
+      "admin.validation.164",
+      "admin.legacyHandles.54"
+    ]
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 1,
+    "duplicateKeyDetails": [
+      {
+        "key": "admin.presentationValidation.unsupportedLayoutProfile",
+        "occurrences": [
+          {
+            "file": "app/core/presentation-contract.js",
+            "line": 136,
+            "parameterContract": [
+              "profile"
+            ]
+          },
+          {
+            "file": "app/core/presentation-contract.js",
+            "line": 186,
+            "parameterContract": [
+              "profile"
+            ]
+          },
+          {
+            "file": "app/core/presentation-contract.js",
+            "line": 191,
+            "parameterContract": [
+              "profile"
+            ]
+          }
+        ],
+        "reason": "Same validation message, owner/consumer and profile parameter contract; one semantic key is a candidate for review."
+      }
+    ]
+  },
+  "rationale": "Suggestions derive from current messages and are linked to exact source lines and hashes. Similar-looking messages with different parameter contracts remain separate (including section-component errors with and without path). This proposal does not update the index or product.",
+  "entries": [
+    {
+      "currentKey": "admin.hierarchyValidation.68",
+      "proposedKey": "admin.hierarchyValidation.configurationIsRequired",
+      "text": "configuration is required",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 68,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [],
+      "codeContext": "if (!value) throw new TypeError(\"configuration is required\");",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.144",
+      "proposedKey": "admin.hierarchyValidation.stageCountMustBeBetweenAnd",
+      "text": "stage count must be between 2 and 12",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 144,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [],
+      "codeContext": "if (value.stages.length < 2 || value.stages.length > 12) errors.push(\"stage count must be between 2 and 12\");",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.154",
+      "proposedKey": "admin.hierarchyValidation.stage",
+      "text": "stage ${stage?.id || \"?\"}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 154,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage?.id || \"?\""
+      ],
+      "codeContext": "const path = `stage ${stage?.id || \"?\"}`;",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.155",
+      "proposedKey": "admin.hierarchyValidation.invalidStageId",
+      "text": "invalid stage id: ${stage?.id || \"?\"}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 155,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage?.id || \"?\""
+      ],
+      "codeContext": "if (!stage || typeof stage.id !== \"string\" || !ID_PATTERN.test(stage.id)) { errors.push(`invalid stage id: ${stage?.id || \"?\"}`); return; }",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.156",
+      "proposedKey": "admin.hierarchyValidation.duplicateStage",
+      "text": "duplicate stage: ${stage.id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 156,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id"
+      ],
+      "codeContext": "if (stageIds.has(stage.id)) errors.push(`duplicate stage: ${stage.id}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.159",
+      "proposedKey": "admin.hierarchyValidation.invalidStageType",
+      "text": "invalid stage type: ${stage.id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 159,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id"
+      ],
+      "codeContext": "if (!itemCapabilities.STAGE_KINDS.includes(kind)) errors.push(`invalid stage type: ${stage.id}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.161",
+      "proposedKey": "admin.hierarchyValidation.duplicateStageType",
+      "text": "duplicate stage type: ${kind}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 161,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "kind"
+      ],
+      "codeContext": "if (coreKinds.has(kind)) errors.push(`duplicate stage type: ${kind}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.164",
+      "proposedKey": "admin.hierarchyValidation.invalidLabel",
+      "text": "invalid label: ${stage.id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 164,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id"
+      ],
+      "codeContext": "if (typeof stage.label !== \"string\" || !stage.label.trim() || stage.label.trim().length > 40) errors.push(`invalid label: ${stage.id}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.165",
+      "proposedKey": "admin.hierarchyValidation.invalidEnabledState",
+      "text": "invalid enabled state: ${stage.id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 165,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id"
+      ],
+      "codeContext": "if (typeof stage.enabled !== \"boolean\") errors.push(`invalid enabled state: ${stage.id}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.166",
+      "proposedKey": "admin.hierarchyValidation.stageMustRemainEnabled",
+      "text": "${kind} stage must remain enabled",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 166,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "kind"
+      ],
+      "codeContext": "if ([\"modules\", \"summary\"].includes(kind) && stage.enabled !== true) errors.push(`${kind} stage must remain enabled`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.167",
+      "proposedKey": "admin.hierarchyValidation.invalidGroupList",
+      "text": "invalid group list: ${stage.id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 167,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id"
+      ],
+      "codeContext": "if (!Array.isArray(stage.groups) || stage.groups.length > 12) { errors.push(`invalid group list: ${stage.id}`); return; }",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.168",
+      "proposedKey": "admin.hierarchyValidation.enabledStageMustContainAGroup",
+      "text": "enabled stage must contain a group: ${stage.id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 168,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id"
+      ],
+      "codeContext": "if (stage.enabled && !stage.groups.length) errors.push(`enabled stage must contain a group: ${stage.id}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.174",
+      "proposedKey": "admin.hierarchyValidation.invalidGroupId",
+      "text": "invalid group id: ${stage.id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 174,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id"
+      ],
+      "codeContext": "if (!group || typeof group.id !== \"string\" || !ID_PATTERN.test(group.id)) { errors.push(`invalid group id: ${stage.id}`); return; }",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.175",
+      "proposedKey": "admin.hierarchyValidation.duplicateGroup",
+      "text": "duplicate group: ${stage.id}.${group.id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 175,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id",
+        "group.id"
+      ],
+      "codeContext": "if (groupIds.has(group.id)) errors.push(`duplicate group: ${stage.id}.${group.id}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.177",
+      "proposedKey": "admin.hierarchyValidation.invalidGroupLabel",
+      "text": "invalid group label: ${stage.id}.${group.id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 177,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id",
+        "group.id"
+      ],
+      "codeContext": "if (typeof group.label !== \"string\" || !group.label.trim() || group.label.trim().length > 40) errors.push(`invalid group label: ${stage.id}.${group.id}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.178",
+      "proposedKey": "admin.hierarchyValidation.invalidGroupColumnSpan",
+      "text": "invalid group column span: ${stage.id}.${group.id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 178,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id",
+        "group.id"
+      ],
+      "codeContext": "if (!COLUMN_SPANS.has(group.columnSpan)) errors.push(`invalid group column span: ${stage.id}.${group.id}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.179",
+      "proposedKey": "admin.hierarchyValidation.invalidSectionList",
+      "text": "invalid section list: ${stage.id}.${group.id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 179,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id",
+        "group.id"
+      ],
+      "codeContext": "if (!Array.isArray(group.sections) || !group.sections.length || group.sections.length > 24) { errors.push(`invalid section list: ${stage.id}.${group.id}`); return; }",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.183",
+      "proposedKey": "admin.hierarchyValidation.invalidSectionId",
+      "text": "invalid section id: ${stage.id}.${group.id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 183,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id",
+        "group.id"
+      ],
+      "codeContext": "if (!section || typeof section.id !== \"string\" || !ID_PATTERN.test(section.id)) { errors.push(`invalid section id: ${stage.id}.${group.id}`); return; }",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.184",
+      "proposedKey": "admin.hierarchyValidation.duplicateSection",
+      "text": "duplicate section: ${stage.id}.${section.id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 184,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id",
+        "section.id"
+      ],
+      "codeContext": "if (sectionIds.has(section.id)) errors.push(`duplicate section: ${stage.id}.${section.id}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.186",
+      "proposedKey": "admin.hierarchyValidation.invalidSectionLabel",
+      "text": "invalid section label: ${stage.id}.${section.id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 186,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id",
+        "section.id"
+      ],
+      "codeContext": "if (typeof section.label !== \"string\" || !section.label.trim() || section.label.trim().length > 40) errors.push(`invalid section label: ${stage.id}.${section.id}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.187",
+      "proposedKey": "admin.hierarchyValidation.invalidSectionPresentation",
+      "text": "invalid section presentation: ${stage.id}.${section.id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 187,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id",
+        "section.id"
+      ],
+      "codeContext": "if (!PRESENTATIONS.has(section.presentation)) errors.push(`invalid section presentation: ${stage.id}.${section.id}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.188",
+      "proposedKey": "admin.hierarchyValidation.invalidItemList",
+      "text": "invalid item list: ${stage.id}.${section.id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 188,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id",
+        "section.id"
+      ],
+      "codeContext": "if (!Array.isArray(section.itemIds) || !section.itemIds.length || section.itemIds.length > 80) { errors.push(`invalid item list: ${stage.id}.${section.id}`); return; }",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.193",
+      "proposedKey": "admin.hierarchyValidation.unknownHierarchyItem",
+      "text": "unknown hierarchy item: ${stage.id}.${section.id}.${id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 193,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id",
+        "section.id",
+        "id"
+      ],
+      "codeContext": "if (!kindForItem) errors.push(`unknown hierarchy item: ${stage.id}.${section.id}.${id}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.197",
+      "proposedKey": "admin.hierarchyValidation.invalidItem",
+      "text": "invalid ${kind} item: ${id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 197,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "kind",
+        "id"
+      ],
+      "codeContext": "if (!itemCapabilities.stageAllowsItem(kind, id, kindForItem, catalog)) errors.push(`invalid ${kind} item: ${id}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.199",
+      "proposedKey": "admin.hierarchyValidation.itemAssignedMoreThanOnce",
+      "text": "item assigned more than once: ${id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 199,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "id"
+      ],
+      "codeContext": "if (ownedItems.has(id)) errors.push(`item assigned more than once: ${id}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.202",
+      "proposedKey": "admin.hierarchyValidation.mixedInteractionBehavior",
+      "text": "mixed interaction behavior: ${stage.id}.${section.id}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 202,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stage.id",
+        "section.id"
+      ],
+      "codeContext": "if (behaviors.size > 1) errors.push(`mixed interaction behavior: ${stage.id}.${section.id}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.207",
+      "proposedKey": "admin.hierarchyValidation.tooManyHierarchyGroups",
+      "text": "too many hierarchy groups",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 207,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [],
+      "codeContext": "if (totalGroups > 80) errors.push(\"too many hierarchy groups\");",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.208",
+      "proposedKey": "admin.hierarchyValidation.tooManyHierarchySections",
+      "text": "too many hierarchy sections",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 208,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [],
+      "codeContext": "if (totalSections > 160) errors.push(\"too many hierarchy sections\");",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.209",
+      "proposedKey": "admin.hierarchyValidation.modulesStageMustRemain",
+      "text": "modules stage must remain",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 209,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [],
+      "codeContext": "if (!coreKinds.has(\"modules\")) errors.push(\"modules stage must remain\");",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.210",
+      "proposedKey": "admin.hierarchyValidation.summaryStageMustRemain",
+      "text": "summary stage must remain",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 210,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [],
+      "codeContext": "if (!coreKinds.has(\"summary\")) errors.push(\"summary stage must remain\");",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.214",
+      "proposedKey": "admin.hierarchyValidation.legacyCompatibleValidation",
+      "text": "legacy-compatible validation: ${error}",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 214,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "error"
+      ],
+      "codeContext": "legacyErrors.forEach((error) => errors.push(`legacy-compatible validation: ${error}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.255",
+      "proposedKey": "admin.hierarchyValidation.aHierarquiaFoiAlteradaENOPodeSerReduzidaAoSchemaPublicadoSemPerda",
+      "text": "A hierarquia foi alterada e não pode ser reduzida ao schema publicado sem perda.",
+      "file": "app/core/hierarchy-administration.js",
+      "line": 255,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [],
+      "codeContext": "errors: [\"A hierarquia foi alterada e não pode ser reduzida ao schema publicado sem perda.\"]",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.93",
+      "proposedKey": "admin.flowValidation.customStageMixesIncompatibleInteractionBehaviors",
+      "text": "custom stage mixes incompatible interaction behaviors: ${stage.id}",
+      "file": "app/core/flow-model.js",
+      "line": 93,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "stage.id"
+      ],
+      "codeContext": "`custom stage mixes incompatible interaction behaviors: ${stage.id}`",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.127",
+      "proposedKey": "admin.flowValidation.legacyHierarchyTemplateIsMissingForStage",
+      "text": "legacy hierarchy template is missing for stage: ${stage.id}",
+      "file": "app/core/flow-model.js",
+      "line": 127,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "stage.id"
+      ],
+      "codeContext": "`legacy hierarchy template is missing for stage: ${stage.id}`",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.153",
+      "proposedKey": "admin.flowValidation.legacyHierarchyTemplateMixesIncompatibleInteractionBehaviors",
+      "text": "legacy hierarchy template mixes incompatible interaction behaviors: ${stage.id}/${sectionSpec.id}",
+      "file": "app/core/flow-model.js",
+      "line": 153,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "stage.id",
+        "sectionSpec.id"
+      ],
+      "codeContext": "`legacy hierarchy template mixes incompatible interaction behaviors: ${stage.id}/${sectionSpec.id}`",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.166",
+      "proposedKey": "admin.flowValidation.legacyHierarchyTemplateDoesNotAssignSourceItem",
+      "text": "legacy hierarchy template does not assign source item: ${stage.id}/${id}",
+      "file": "app/core/flow-model.js",
+      "line": 166,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "stage.id",
+        "id"
+      ],
+      "codeContext": "`legacy hierarchy template does not assign source item: ${stage.id}/${id}`",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.204",
+      "proposedKey": "admin.flowValidation.hierarchySectionMixesIncompatibleInteractionBehaviors",
+      "text": "hierarchy section mixes incompatible interaction behaviors: ${stage.id}/${sectionEntry.id}",
+      "file": "app/core/flow-model.js",
+      "line": 204,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "stage.id",
+        "sectionEntry.id"
+      ],
+      "codeContext": "`hierarchy section mixes incompatible interaction behaviors: ${stage.id}/${sectionEntry.id}`",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.234",
+      "proposedKey": "admin.flowValidation.invalidNormalizedFlow",
+      "text": "invalid normalized flow",
+      "file": "app/core/flow-model.js",
+      "line": 234,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [],
+      "codeContext": "return [validationError(\"invalid-flow\", \"flow\", \"invalid normalized flow\")];",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.242",
+      "proposedKey": "admin.flowValidation.duplicateOrMissingStageId",
+      "text": "duplicate or missing stage id: ${stage.id || stageIndex}",
+      "file": "app/core/flow-model.js",
+      "line": 242,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "stage.id || stageIndex"
+      ],
+      "codeContext": "if (!stage.id || stageIds.has(stage.id)) errors.push(validationError(\"duplicate-stage\", stagePath, `duplicate or missing stage id: ${stage.id || stageIndex}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.244",
+      "proposedKey": "admin.flowValidation.nonDeterministicStageOrder",
+      "text": "non-deterministic stage order: ${stage.id}",
+      "file": "app/core/flow-model.js",
+      "line": 244,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "stage.id"
+      ],
+      "codeContext": "if (!Number.isInteger(stage.order) || stage.order !== stageIndex) errors.push(validationError(\"invalid-order\", stagePath, `non-deterministic stage order: ${stage.id}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.245",
+      "proposedKey": "admin.flowValidation.stageGroupsMustBeAnArray",
+      "text": "stage groups must be an array: ${stage.id}",
+      "file": "app/core/flow-model.js",
+      "line": 245,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "stage.id"
+      ],
+      "codeContext": "if (!Array.isArray(stage.groups)) errors.push(validationError(\"invalid-groups\", stagePath, `stage groups must be an array: ${stage.id}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.251",
+      "proposedKey": "admin.flowValidation.duplicateOrMissingGroupId",
+      "text": "duplicate or missing group id: ${groupEntry.id || groupIndex}",
+      "file": "app/core/flow-model.js",
+      "line": 251,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "groupEntry.id || groupIndex"
+      ],
+      "codeContext": "if (!groupEntry.id || groupIds.has(groupEntry.id)) errors.push(validationError(\"duplicate-group\", groupPath, `duplicate or missing group id: ${groupEntry.id || groupIndex}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.253",
+      "proposedKey": "admin.flowValidation.nonDeterministicGroupOrder",
+      "text": "non-deterministic group order: ${groupEntry.id}",
+      "file": "app/core/flow-model.js",
+      "line": 253,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "groupEntry.id"
+      ],
+      "codeContext": "if (!Number.isInteger(groupEntry.order) || groupEntry.order !== groupIndex) errors.push(validationError(\"invalid-order\", groupPath, `non-deterministic group order: ${groupEntry.id}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.254",
+      "proposedKey": "admin.flowValidation.groupSectionsMustBeAnArray",
+      "text": "group sections must be an array: ${groupEntry.id}",
+      "file": "app/core/flow-model.js",
+      "line": 254,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "groupEntry.id"
+      ],
+      "codeContext": "if (!Array.isArray(groupEntry.sections)) errors.push(validationError(\"invalid-sections\", groupPath, `group sections must be an array: ${groupEntry.id}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.258",
+      "proposedKey": "admin.flowValidation.duplicateOrMissingSectionIdInStage",
+      "text": "duplicate or missing section id in stage ${stage.id}: ${sectionEntry.id || sectionIndex}",
+      "file": "app/core/flow-model.js",
+      "line": 258,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "stage.id",
+        "sectionEntry.id || sectionIndex"
+      ],
+      "codeContext": "if (!sectionEntry.id || sectionIds.has(sectionEntry.id)) errors.push(validationError(\"duplicate-section\", sectionPath, `duplicate or missing section id in stage ${stage.id}: ${sectionEntry.id || sectionIndex}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.260",
+      "proposedKey": "admin.flowValidation.nonDeterministicSectionOrder",
+      "text": "non-deterministic section order: ${sectionEntry.id}",
+      "file": "app/core/flow-model.js",
+      "line": 260,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "sectionEntry.id"
+      ],
+      "codeContext": "if (!Number.isInteger(sectionEntry.order) || sectionEntry.order !== sectionIndex) errors.push(validationError(\"invalid-order\", sectionPath, `non-deterministic section order: ${sectionEntry.id}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.261",
+      "proposedKey": "admin.flowValidation.invalidSectionBehavior",
+      "text": "invalid section behavior: ${sectionEntry.behavior}",
+      "file": "app/core/flow-model.js",
+      "line": 261,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "sectionEntry.behavior"
+      ],
+      "codeContext": "if (!BEHAVIORS.has(sectionEntry.behavior)) errors.push(validationError(\"invalid-behavior\", sectionPath, `invalid section behavior: ${sectionEntry.behavior}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.262",
+      "proposedKey": "admin.flowValidation.sectionKeyboardStateMustBeBoolean",
+      "text": "section keyboard state must be boolean: ${sectionEntry.id}",
+      "file": "app/core/flow-model.js",
+      "line": 262,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "sectionEntry.id"
+      ],
+      "codeContext": "if (typeof sectionEntry.keyboard !== \"boolean\") errors.push(validationError(\"invalid-keyboard-state\", sectionPath, `section keyboard state must be boolean: ${sectionEntry.id}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.264",
+      "proposedKey": "admin.flowValidation.sectionMustOwnAtLeastOneItem",
+      "text": "section must own at least one item: ${sectionEntry.id}",
+      "file": "app/core/flow-model.js",
+      "line": 264,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "sectionEntry.id"
+      ],
+      "codeContext": "errors.push(validationError(\"empty-section\", sectionPath, `section must own at least one item: ${sectionEntry.id}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.270",
+      "proposedKey": "admin.flowValidation.unknownFlowItem",
+      "text": "unknown flow item: ${itemId}",
+      "file": "app/core/flow-model.js",
+      "line": 270,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "itemId"
+      ],
+      "codeContext": "if (!registry.has(itemId)) errors.push(validationError(\"unknown-item\", `${sectionPath}.itemIds.${itemId}`, `unknown flow item: ${itemId}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.271",
+      "proposedKey": "admin.flowValidation.itemRepeatedInSection",
+      "text": "item repeated in section: ${itemId}",
+      "file": "app/core/flow-model.js",
+      "line": 271,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "itemId"
+      ],
+      "codeContext": "if (localItems.has(itemId)) errors.push(validationError(\"duplicate-item\", sectionPath, `item repeated in section: ${itemId}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.273",
+      "proposedKey": "admin.flowValidation.itemOwnedByMultipleFlowSections",
+      "text": "item owned by multiple flow sections: ${itemId}",
+      "file": "app/core/flow-model.js",
+      "line": 273,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "itemId"
+      ],
+      "codeContext": "if (globalItemOwners.has(itemId)) errors.push(validationError(\"duplicate-item-owner\", sectionPath, `item owned by multiple flow sections: ${itemId}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.289",
+      "proposedKey": "admin.flowValidation.sourceStageMissingFromNormalizedFlow",
+      "text": "source stage missing from normalized flow: ${sourceStage.id}",
+      "file": "app/core/flow-model.js",
+      "line": 289,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "sourceStage.id"
+      ],
+      "codeContext": "errors.push(validationError(\"missing-stage\", `stages.${sourceStage.id}`, `source stage missing from normalized flow: ${sourceStage.id}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.297",
+      "proposedKey": "admin.flowValidation.sourceItemMissingFromNormalizedFlow",
+      "text": "source item missing from normalized flow: ${id}",
+      "file": "app/core/flow-model.js",
+      "line": 297,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "id"
+      ],
+      "codeContext": "if (!actualSet.has(id)) errors.push(validationError(\"missing-source-item\", `stages.${sourceStage.id}.items.${id}`, `source item missing from normalized flow: ${id}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.300",
+      "proposedKey": "admin.flowValidation.normalizedFlowInventedAnItem",
+      "text": "normalized flow invented an item: ${id}",
+      "file": "app/core/flow-model.js",
+      "line": 300,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "id"
+      ],
+      "codeContext": "if (!expectedSet.has(id)) errors.push(validationError(\"unexpected-flow-item\", `stages.${sourceStage.id}.items.${id}`, `normalized flow invented an item: ${id}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.328",
+      "proposedKey": "admin.flowValidation.settingsWithStagesAreRequired",
+      "text": "settings with stages are required",
+      "file": "app/core/flow-model.js",
+      "line": 328,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [],
+      "codeContext": "if (!settings || !Array.isArray(settings.stages)) throwValidation([validationError(\"invalid-settings\", \"settings\", \"settings with stages are required\")]);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.332",
+      "proposedKey": "admin.flowValidation.flowSourceCannotMixFlatItemsWithHierarchyGroups",
+      "text": "flow source cannot mix flat items with hierarchy groups",
+      "file": "app/core/flow-model.js",
+      "line": 332,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [],
+      "codeContext": "throwValidation([validationError(\"mixed-source-shape\", \"settings.stages\", \"flow source cannot mix flat items with hierarchy groups\")]);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.340",
+      "proposedKey": "admin.flowValidation.invalidSourceStageAtIndex",
+      "text": "invalid source stage at index ${index}",
+      "file": "app/core/flow-model.js",
+      "line": 340,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "index"
+      ],
+      "codeContext": "errors.push(validationError(\"invalid-source-stage\", `stages.${index}`, `invalid source stage at index ${index}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.343",
+      "proposedKey": "admin.flowValidation.duplicateSourceStage",
+      "text": "duplicate source stage: ${stage.id}",
+      "file": "app/core/flow-model.js",
+      "line": 343,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "stage.id"
+      ],
+      "codeContext": "if (sourceStageIds.has(stage.id)) errors.push(validationError(\"duplicate-source-stage\", `stages.${stage.id}`, `duplicate source stage: ${stage.id}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.346",
+      "proposedKey": "admin.flowValidation.unknownSourceItem",
+      "text": "unknown source item: ${id}",
+      "file": "app/core/flow-model.js",
+      "line": 346,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "id"
+      ],
+      "codeContext": "if (!registry.has(id)) errors.push(validationError(\"unknown-source-item\", `stages.${stage.id}.items.${id}`, `unknown source item: ${id}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.347",
+      "proposedKey": "admin.flowValidation.sourceItemAssignedMoreThanOnce",
+      "text": "source item assigned more than once: ${id}",
+      "file": "app/core/flow-model.js",
+      "line": 347,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "id"
+      ],
+      "codeContext": "if (sourceItems.has(id)) errors.push(validationError(\"duplicate-source-item\", `stages.${stage.id}.items.${id}`, `source item assigned more than once: ${id}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.flowValidation.357",
+      "proposedKey": "admin.flowValidation.flatLegacySettingsRequireExplicitHierarchyDefaults",
+      "text": "flat legacy settings require explicit hierarchy defaults",
+      "file": "app/core/flow-model.js",
+      "line": 357,
+      "owner": "administration flow validation",
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [],
+      "codeContext": "\"flat legacy settings require explicit hierarchy defaults\"",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.62",
+      "proposedKey": "admin.presentationValidation.unsupportedPresentationBehavior",
+      "text": "unsupported presentation behavior: ${behavior || \"(empty)\"}",
+      "file": "app/core/presentation-contract.js",
+      "line": 62,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "behavior || \"(empty)\""
+      ],
+      "codeContext": "if (!component) throw new TypeError(`unsupported presentation behavior: ${behavior || \"(empty)\"}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.81",
+      "proposedKey": "admin.presentationValidation.sectionPresentationIsRequired",
+      "text": "section presentation is required",
+      "file": "app/core/presentation-contract.js",
+      "line": 81,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [],
+      "codeContext": "if (!section || typeof section !== \"object\") throw new TypeError(\"section presentation is required\");",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.86",
+      "proposedKey": "admin.presentationValidation.unsupportedLegacyPresentation",
+      "text": "unsupported legacy presentation: ${legacy}",
+      "file": "app/core/presentation-contract.js",
+      "line": 86,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "legacy"
+      ],
+      "codeContext": "if (!LEGACY_SET.has(legacy)) throw new TypeError(`unsupported legacy presentation: ${legacy}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.109",
+      "proposedKey": "admin.presentationValidation.invalidPresentationPolicySchema",
+      "text": "invalid presentation policy schema",
+      "file": "app/core/presentation-contract.js",
+      "line": 109,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [],
+      "codeContext": "return [policyError(\"invalid-presentation-policy\", \"presentation\", \"invalid presentation policy schema\")];",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.116",
+      "proposedKey": "admin.presentationValidation.stageViewsAreRequired",
+      "text": "stage views are required: ${stageId}",
+      "file": "app/core/presentation-contract.js",
+      "line": 116,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stageId"
+      ],
+      "codeContext": "errors.push(policyError(\"empty-stage-views\", `stageViews.${stageId}`, `stage views are required: ${stageId}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.122",
+      "proposedKey": "admin.presentationValidation.stageviewsViews",
+      "text": "stageViews.${stageId}.views.${view?.id || index}",
+      "file": "app/core/presentation-contract.js",
+      "line": 122,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stageId",
+        "view?.id || index"
+      ],
+      "codeContext": "const path = `stageViews.${stageId}.views.${view?.id || index}`;",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.124",
+      "proposedKey": "admin.presentationValidation.duplicateOrMissingViewId",
+      "text": "duplicate or missing view id: ${view?.id || index}",
+      "file": "app/core/presentation-contract.js",
+      "line": 124,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "view?.id || index"
+      ],
+      "codeContext": "errors.push(policyError(\"invalid-view-id\", path, `duplicate or missing view id: ${view?.id || index}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.130",
+      "proposedKey": "admin.presentationValidation.viewSourceSectionIsRequired",
+      "text": "view source section is required: ${view.id}",
+      "file": "app/core/presentation-contract.js",
+      "line": 130,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "view.id"
+      ],
+      "codeContext": "errors.push(policyError(\"missing-view-source\", path, `view source section is required: ${view.id}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.133",
+      "proposedKey": "admin.presentationValidation.unsupportedViewComponent",
+      "text": "unsupported view component: ${view.component || \"(empty)\"}",
+      "file": "app/core/presentation-contract.js",
+      "line": 133,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "view.component || \"(empty)\""
+      ],
+      "codeContext": "errors.push(policyError(\"invalid-view-component\", path, `unsupported view component: ${view.component || \"(empty)\"}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.136",
+      "proposedKey": "admin.presentationValidation.unsupportedLayoutProfile",
+      "text": "unsupported layout profile: ${profile}",
+      "file": "app/core/presentation-contract.js",
+      "line": 136,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "profile"
+      ],
+      "codeContext": "if (!profileSet.has(profile)) errors.push(policyError(\"invalid-layout-profile\", `${path}.projectionByProfile.${profile}`, `unsupported layout profile: ${profile}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.137",
+      "proposedKey": "admin.presentationValidation.unsupportedViewProjection",
+      "text": "unsupported view projection: ${projection}",
+      "file": "app/core/presentation-contract.js",
+      "line": 137,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "projection"
+      ],
+      "codeContext": "if (!PROJECTIONS.includes(projection)) errors.push(policyError(\"invalid-view-projection\", `${path}.projectionByProfile.${profile}`, `unsupported view projection: ${projection}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.144",
+      "proposedKey": "admin.presentationValidation.unsupportedViewRelation",
+      "text": "unsupported view relation: ${view.relation.kind}",
+      "file": "app/core/presentation-contract.js",
+      "line": 144,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "view.relation.kind"
+      ],
+      "codeContext": "if (!RELATIONS.includes(view.relation.kind)) errors.push(policyError(\"invalid-view-relation\", path, `unsupported view relation: ${view.relation.kind}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.145",
+      "proposedKey": "admin.presentationValidation.viewRelationTargetIsMissing",
+      "text": "view relation target is missing: ${view.relation.of || \"(empty)\"}",
+      "file": "app/core/presentation-contract.js",
+      "line": 145,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "view.relation.of || \"(empty)\""
+      ],
+      "codeContext": "if (!view.relation.of || !byId.has(view.relation.of)) errors.push(policyError(\"broken-view-relation\", path, `view relation target is missing: ${view.relation.of || \"(empty)\"}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.146",
+      "proposedKey": "admin.presentationValidation.viewCannotRelateToItself",
+      "text": "view cannot relate to itself: ${view.id}",
+      "file": "app/core/presentation-contract.js",
+      "line": 146,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "view.id"
+      ],
+      "codeContext": "if (view.relation.of === view.id) errors.push(policyError(\"cyclic-view-relation\", path, `view cannot relate to itself: ${view.id}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.162",
+      "proposedKey": "admin.presentationValidation.viewRelationsContainACycle",
+      "text": "view relations contain a cycle: ${stageId}",
+      "file": "app/core/presentation-contract.js",
+      "line": 162,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stageId"
+      ],
+      "codeContext": "errors.push(policyError(\"cyclic-view-relation\", `stageViews.${stageId}`, `view relations contain a cycle: ${stageId}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.168",
+      "proposedKey": "admin.presentationValidation.presentationStageIsMissingFromFlow",
+      "text": "presentation stage is missing from flow: ${stageId}",
+      "file": "app/core/presentation-contract.js",
+      "line": 168,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stageId"
+      ],
+      "codeContext": "errors.push(policyError(\"unknown-view-stage\", `stageViews.${stageId}`, `presentation stage is missing from flow: ${stageId}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.173",
+      "proposedKey": "admin.presentationValidation.presentationSourceSectionIsMissing",
+      "text": "presentation source section is missing: ${stageId}/${view.sourceSectionId}",
+      "file": "app/core/presentation-contract.js",
+      "line": 173,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "stageId",
+        "view.sourceSectionId"
+      ],
+      "codeContext": "errors.push(policyError(\"unknown-view-source\", `stageViews.${stageId}.views.${view.id}`, `presentation source section is missing: ${stageId}/${view.sourceSectionId}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.182",
+      "proposedKey": "admin.presentationValidation.scenePiPPolicyIsRequired",
+      "text": "scene PiP policy is required",
+      "file": "app/core/presentation-contract.js",
+      "line": 182,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [],
+      "codeContext": "errors.push(policyError(\"invalid-pip-policy\", \"scene.pip\", \"scene PiP policy is required\"));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.186",
+      "proposedKey": "admin.presentationValidation.unsupportedLayoutProfile",
+      "text": "unsupported layout profile: ${profile}",
+      "file": "app/core/presentation-contract.js",
+      "line": 186,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "profile"
+      ],
+      "codeContext": "if (!profileSet.has(profile)) errors.push(policyError(\"invalid-layout-profile\", `scene.pip.availableProfiles.${profile}`, `unsupported layout profile: ${profile}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.187",
+      "proposedKey": "admin.presentationValidation.duplicatePiPProfile",
+      "text": "duplicate PiP profile: ${profile}",
+      "file": "app/core/presentation-contract.js",
+      "line": 187,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "profile"
+      ],
+      "codeContext": "if (available.has(profile)) errors.push(policyError(\"duplicate-pip-profile\", \"scene.pip.availableProfiles\", `duplicate PiP profile: ${profile}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.191",
+      "proposedKey": "admin.presentationValidation.unsupportedLayoutProfile",
+      "text": "unsupported layout profile: ${profile}",
+      "file": "app/core/presentation-contract.js",
+      "line": 191,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "profile"
+      ],
+      "codeContext": "if (!profileSet.has(profile)) errors.push(policyError(\"invalid-layout-profile\", `scene.pip.activationByProfile.${profile}`, `unsupported layout profile: ${profile}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.192",
+      "proposedKey": "admin.presentationValidation.pipActivationReferencesUnavailableProfile",
+      "text": "PiP activation references unavailable profile: ${profile}",
+      "file": "app/core/presentation-contract.js",
+      "line": 192,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "profile"
+      ],
+      "codeContext": "if (!available.has(profile)) errors.push(policyError(\"inactive-pip-profile\", `scene.pip.activationByProfile.${profile}`, `PiP activation references unavailable profile: ${profile}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.193",
+      "proposedKey": "admin.presentationValidation.unsupportedPiPActivation",
+      "text": "unsupported PiP activation: ${activation}",
+      "file": "app/core/presentation-contract.js",
+      "line": 193,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "activation"
+      ],
+      "codeContext": "if (!PIP_ACTIVATIONS.includes(activation)) errors.push(policyError(\"invalid-pip-activation\", `scene.pip.activationByProfile.${profile}`, `unsupported PiP activation: ${activation}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.197",
+      "proposedKey": "admin.presentationValidation.pipActivationIsRequiredForProfile",
+      "text": "PiP activation is required for profile: ${profile}",
+      "file": "app/core/presentation-contract.js",
+      "line": 197,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "profile"
+      ],
+      "codeContext": "errors.push(policyError(\"missing-pip-activation\", `scene.pip.activationByProfile.${profile}`, `PiP activation is required for profile: ${profile}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.204",
+      "proposedKey": "admin.presentationValidation.bottomDockPolicyIsRequired",
+      "text": "bottom dock policy is required",
+      "file": "app/core/presentation-contract.js",
+      "line": 204,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [],
+      "codeContext": "errors.push(policyError(\"invalid-bottom-dock\", \"shell.bottomDock\", \"bottom dock policy is required\"));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.208",
+      "proposedKey": "admin.presentationValidation.unsupportedShellSlot",
+      "text": "unsupported shell slot: ${slot}",
+      "file": "app/core/presentation-contract.js",
+      "line": 208,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "slot"
+      ],
+      "codeContext": "if (!SHELL_SLOTS.includes(slot)) errors.push(policyError(\"invalid-shell-slot\", `shell.bottomDock.slots.${slot}`, `unsupported shell slot: ${slot}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.209",
+      "proposedKey": "admin.presentationValidation.duplicateShellSlot",
+      "text": "duplicate shell slot: ${slot}",
+      "file": "app/core/presentation-contract.js",
+      "line": 209,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "slot"
+      ],
+      "codeContext": "if (slots.has(slot)) errors.push(policyError(\"duplicate-shell-slot\", \"shell.bottomDock.slots\", `duplicate shell slot: ${slot}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.212",
+      "proposedKey": "admin.presentationValidation.enabledBottomDockRequiresAtLeastOneSlot",
+      "text": "enabled bottom dock requires at least one slot",
+      "file": "app/core/presentation-contract.js",
+      "line": 212,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [],
+      "codeContext": "if (dock.enabled && !dock.slots.length) errors.push(policyError(\"empty-bottom-dock\", \"shell.bottomDock.slots\", \"enabled bottom dock requires at least one slot\"));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.presentationValidation.221",
+      "proposedKey": "admin.presentationValidation.",
+      "text": "${entry.path}: ${entry.message}",
+      "file": "app/core/presentation-contract.js",
+      "line": 221,
+      "owner": "administration hierarchy/presentation validation",
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "entry.path",
+        "entry.message"
+      ],
+      "codeContext": "const error = new TypeError(errors.map((entry) => `${entry.path}: ${entry.message}`).join(\"; \"));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.62",
+      "proposedKey": "admin.pricing.validation.unsupportedPricingRuleType",
+      "text": "unsupported pricing rule type: ${path}",
+      "file": "app/core/pricing-contract.js",
+      "line": 62,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "path"
+      ],
+      "codeContext": "errors.push(`unsupported pricing rule type: ${path}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.67",
+      "proposedKey": "admin.pricing.validation.unexpectedAmountFields",
+      "text": "unexpected amount fields: ${path}",
+      "file": "app/core/pricing-contract.js",
+      "line": 67,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "path"
+      ],
+      "codeContext": "if (unexpectedKeys(rule, [\"type\", \"cents\"]).length) errors.push(`unexpected amount fields: ${path}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.68",
+      "proposedKey": "admin.pricing.validation.invalidAmountCents",
+      "text": "invalid amount cents: ${path}",
+      "file": "app/core/pricing-contract.js",
+      "line": 68,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "path"
+      ],
+      "codeContext": "if (!validAmount(rule.cents)) errors.push(`invalid amount cents: ${path}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.72",
+      "proposedKey": "admin.pricing.validation.unexpectedPercentageFields",
+      "text": "unexpected percentage fields: ${path}",
+      "file": "app/core/pricing-contract.js",
+      "line": 72,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "path"
+      ],
+      "codeContext": "if (unexpectedKeys(rule, [\"type\", \"bps\", \"basis\"]).length) errors.push(`unexpected percentage fields: ${path}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.73",
+      "proposedKey": "admin.pricing.validation.invalidPercentageBps",
+      "text": "invalid percentage bps: ${path}",
+      "file": "app/core/pricing-contract.js",
+      "line": 73,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "path"
+      ],
+      "codeContext": "if (!validBps(rule.bps)) errors.push(`invalid percentage bps: ${path}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.74",
+      "proposedKey": "admin.pricing.validation.unsupportedPercentageBasis",
+      "text": "unsupported percentage basis: ${path}",
+      "file": "app/core/pricing-contract.js",
+      "line": 74,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "path"
+      ],
+      "codeContext": "if (!capabilities.percentageBases?.includes(rule.basis)) errors.push(`unsupported percentage basis: ${path}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.79",
+      "proposedKey": "admin.pricing.validation.pricingContractIsRequired",
+      "text": "pricing contract is required",
+      "file": "app/core/pricing-contract.js",
+      "line": 79,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [],
+      "codeContext": "if (!isRecord(value)) return [\"pricing contract is required\"];",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.80",
+      "proposedKey": "admin.pricing.validation.unsupportedPricingSchema",
+      "text": "unsupported pricing schema",
+      "file": "app/core/pricing-contract.js",
+      "line": 80,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [],
+      "codeContext": "if (value.schemaVersion !== SCHEMA) errors.push(\"unsupported pricing schema\");",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.82",
+      "proposedKey": "admin.pricing.validation.unknownPricingField",
+      "text": "unknown pricing field: ${key}",
+      "file": "app/core/pricing-contract.js",
+      "line": 82,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "key"
+      ],
+      "codeContext": ".forEach((key) => errors.push(`unknown pricing field: ${key}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.85",
+      "proposedKey": "admin.pricing.validation.pricingRolesAreRequired",
+      "text": "pricing roles are required",
+      "file": "app/core/pricing-contract.js",
+      "line": 85,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [],
+      "codeContext": "errors.push(\"pricing roles are required\");",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.88",
+      "proposedKey": "admin.pricing.validation.unknownPricingRole",
+      "text": "unknown pricing role: ${role}",
+      "file": "app/core/pricing-contract.js",
+      "line": 88,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "role"
+      ],
+      "codeContext": ".forEach((role) => errors.push(`unknown pricing role: ${role}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.92",
+      "proposedKey": "admin.pricing.validation.pricingRoleIsRequired",
+      "text": "pricing role is required: ${role}",
+      "file": "app/core/pricing-contract.js",
+      "line": 92,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "role"
+      ],
+      "codeContext": "errors.push(`pricing role is required: ${role}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.97",
+      "proposedKey": "admin.pricing.validation.invalidPricingId",
+      "text": "invalid pricing id: ${role}",
+      "file": "app/core/pricing-contract.js",
+      "line": 97,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "role"
+      ],
+      "codeContext": "errors.push(`invalid pricing id: ${role}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.106",
+      "proposedKey": "admin.pricing.validation.pricingAllocationIsRequired",
+      "text": "pricing allocation is required",
+      "file": "app/core/pricing-contract.js",
+      "line": 106,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [],
+      "codeContext": "errors.push(\"pricing allocation is required\");",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.109",
+      "proposedKey": "admin.pricing.validation.unknownPricingAllocation",
+      "text": "unknown pricing allocation: ${key}",
+      "file": "app/core/pricing-contract.js",
+      "line": 109,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "key"
+      ],
+      "codeContext": ".forEach((key) => errors.push(`unknown pricing allocation: ${key}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.111",
+      "proposedKey": "admin.pricing.validation.invalidHandleFrontTotal",
+      "text": "invalid handle front total",
+      "file": "app/core/pricing-contract.js",
+      "line": 111,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [],
+      "codeContext": "errors.push(\"invalid handle front total\");",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.139",
+      "proposedKey": "admin.pricing.validation.legacyPricingIsRequired",
+      "text": "legacy pricing is required",
+      "file": "app/core/pricing-contract.js",
+      "line": 139,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [],
+      "codeContext": "if (!isRecord(value)) return [\"legacy pricing is required\"];",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.141",
+      "proposedKey": "admin.pricing.validation.unknownLegacyPricingField",
+      "text": "unknown legacy pricing field: ${key}",
+      "file": "app/core/pricing-contract.js",
+      "line": 141,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "key"
+      ],
+      "codeContext": ".forEach((key) => errors.push(`unknown legacy pricing field: ${key}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.145",
+      "proposedKey": "admin.pricing.validation.legacyPricingSectionIsRequired",
+      "text": "legacy pricing section is required: ${section}",
+      "file": "app/core/pricing-contract.js",
+      "line": 145,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "section"
+      ],
+      "codeContext": "errors.push(`legacy pricing section is required: ${section}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.150",
+      "proposedKey": "admin.pricing.validation.invalidLegacyPricingId",
+      "text": "invalid legacy pricing id: ${section}",
+      "file": "app/core/pricing-contract.js",
+      "line": 150,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "section"
+      ],
+      "codeContext": "errors.push(`invalid legacy pricing id: ${section}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.154",
+      "proposedKey": "admin.pricing.validation.invalidLegacyPercentage",
+      "text": "invalid legacy percentage: ${section}.${id}",
+      "file": "app/core/pricing-contract.js",
+      "line": 154,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "section",
+        "id"
+      ],
+      "codeContext": "if (!validBps(amount)) errors.push(`invalid legacy percentage: ${section}.${id}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.156",
+      "proposedKey": "admin.pricing.validation.invalidLegacyAmount",
+      "text": "invalid legacy amount: ${section}.${id}",
+      "file": "app/core/pricing-contract.js",
+      "line": 156,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "section",
+        "id"
+      ],
+      "codeContext": "errors.push(`invalid legacy amount: ${section}.${id}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.162",
+      "proposedKey": "admin.pricing.validation.invalidLegacyHandleFrontTotal",
+      "text": "invalid legacy handle front total",
+      "file": "app/core/pricing-contract.js",
+      "line": 162,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [],
+      "codeContext": "errors.push(\"invalid legacy handle front total\");",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.pricing.validation.199",
+      "proposedKey": "admin.pricing.validation.legacyPricingCannotRepresentFrontFinishAmountRules",
+      "text": "legacy pricing cannot represent front finish amount rules: ${nonRepresentable.join(\", \")}",
+      "file": "app/core/pricing-contract.js",
+      "line": 199,
+      "owner": "administration pricing validation",
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "nonRepresentable.join(\", \")"
+      ],
+      "codeContext": "errors: [`legacy pricing cannot represent front finish amount rules: ${nonRepresentable.join(\", \")}`]",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.validation.237",
+      "proposedKey": "admin.validation.unsupportedCurrentAdministrationSchema",
+      "text": "unsupported current administration schema",
+      "file": "app/core/administration-v5.js",
+      "line": 237,
+      "owner": "administration panel",
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "parameters": [],
+      "codeContext": "return [\"unsupported current administration schema\"];",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.validation.239",
+      "proposedKey": "admin.validation.presentationPolicyIsRequired",
+      "text": "presentation policy is required",
+      "file": "app/core/administration-v5.js",
+      "line": 239,
+      "owner": "administration panel",
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "parameters": [],
+      "codeContext": "if (!value.presentationPolicy) errors.push(\"presentation policy is required\");",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.validation.244",
+      "proposedKey": "admin.validation.invalidViewerPricePublicationPermission",
+      "text": "invalid viewer price publication permission",
+      "file": "app/core/administration-v5.js",
+      "line": 244,
+      "owner": "administration panel",
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "parameters": [],
+      "codeContext": ")) errors.push(\"invalid viewer price publication permission\");",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.validation.246",
+      "proposedKey": "admin.validation.pricing",
+      "text": "pricing: ${error}",
+      "file": "app/core/administration-v5.js",
+      "line": 246,
+      "owner": "administration panel",
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "parameters": [
+        "error"
+      ],
+      "codeContext": "pricingErrors.forEach((error) => errors.push(`pricing: ${error}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.validation.253",
+      "proposedKey": "admin.validation.legacySectionPresentationIsNotAllowed",
+      "text": "legacy section presentation is not allowed: ${path}",
+      "file": "app/core/administration-v5.js",
+      "line": 253,
+      "owner": "administration panel",
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "parameters": [
+        "path"
+      ],
+      "codeContext": "if (Object.hasOwn(section, \"presentation\")) errors.push(`legacy section presentation is not allowed: ${path}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.validation.255",
+      "proposedKey": "admin.validation.invalidSectionBehavior",
+      "text": "invalid section behavior: ${path}",
+      "file": "app/core/administration-v5.js",
+      "line": 255,
+      "owner": "administration panel",
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "parameters": [
+        "path"
+      ],
+      "codeContext": "errors.push(`invalid section behavior: ${path}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.validation.260",
+      "proposedKey": "admin.validation.invalidSectionComponentAtPath",
+      "text": "invalid section component: ${path}",
+      "file": "app/core/administration-v5.js",
+      "line": 260,
+      "owner": "administration panel",
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "parameters": [
+        "path"
+      ],
+      "codeContext": "errors.push(`invalid section component: ${path}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.validation.265",
+      "proposedKey": "admin.validation.componentBehaviorMismatch",
+      "text": "component behavior mismatch: ${path}",
+      "file": "app/core/administration-v5.js",
+      "line": 265,
+      "owner": "administration panel",
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "parameters": [
+        "path"
+      ],
+      "codeContext": "errors.push(`component behavior mismatch: ${path}`);",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.validation.273",
+      "proposedKey": "admin.validation.presentationPolicy",
+      "text": "presentation policy: ${error.path}: ${error.message}",
+      "file": "app/core/administration-v5.js",
+      "line": 273,
+      "owner": "administration panel",
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "parameters": [
+        "error.path",
+        "error.message"
+      ],
+      "codeContext": ".forEach((error) => errors.push(`presentation policy: ${error.path}: ${error.message}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.validation.276",
+      "proposedKey": "admin.validation.invalidSectionComponent",
+      "text": "invalid section component:",
+      "file": "app/core/administration-v5.js",
+      "line": 276,
+      "owner": "administration panel",
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "parameters": [],
+      "codeContext": "if (!pricingErrors.length && !errors.some((error) => error.startsWith(\"invalid section component:\"))) {",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.validation.280",
+      "proposedKey": "admin.validation.vCompatibleValidation",
+      "text": "v4-compatible validation: ${error}",
+      "file": "app/core/administration-v5.js",
+      "line": 280,
+      "owner": "administration panel",
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "parameters": [
+        "error"
+      ],
+      "codeContext": ".forEach((error) => errors.push(`v4-compatible validation: ${error}`));",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.validation.305",
+      "proposedKey": "admin.validation.configurationIsRequired",
+      "text": "configuration is required",
+      "file": "app/core/administration-v5.js",
+      "line": 305,
+      "owner": "administration panel",
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "parameters": [],
+      "codeContext": "if (!value) throw new TypeError(\"configuration is required\");",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.validation.349",
+      "proposedKey": "admin.validation.aHierarquiaOuApresentaOFoiAlteradaENOPodeSerReduzidaAoSchemaPublicadoSemPerda",
+      "text": "A hierarquia ou apresentação foi alterada e não pode ser reduzida ao schema publicado sem perda.",
+      "file": "app/core/administration-v5.js",
+      "line": 349,
+      "owner": "administration panel",
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "parameters": [],
+      "codeContext": "errors: [\"A hierarquia ou apresentação foi alterada e não pode ser reduzida ao schema publicado sem perda.\"]",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.legacyHandles.59",
+      "proposedKey": "admin.legacyHandles.puxadoresEstAtribuDoAMaisDeUmaEtapa",
+      "text": "Puxadores está atribuído a mais de uma etapa.",
+      "file": "app/core/legacy-stage-repair.js",
+      "line": 59,
+      "owner": "legacy Puxadores repair flow",
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "parameters": [],
+      "codeContext": "return { ok: false, code: \"duplicate_owner\", message: \"Puxadores está atribuído a mais de uma etapa.\" };",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.legacyHandles.63",
+      "proposedKey": "admin.legacyHandles.puxadoresJEstPersistidoEmAcabamentos",
+      "text": "Puxadores já está persistido em Acabamentos.",
+      "file": "app/core/legacy-stage-repair.js",
+      "line": 63,
+      "owner": "legacy Puxadores repair flow",
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "parameters": [],
+      "codeContext": "return { ok: true, needed: false, candidate: clone(source), message: \"Puxadores já está persistido em Acabamentos.\" };",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.legacyHandles.65",
+      "proposedKey": "admin.legacyHandles.puxadoresJEstAtribuDoAOutraEtapaNOSeguroMovLoAutomaticamente",
+      "text": "Puxadores já está atribuído a outra etapa; não é seguro movê-lo automaticamente.",
+      "file": "app/core/legacy-stage-repair.js",
+      "line": 65,
+      "owner": "legacy Puxadores repair flow",
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "parameters": [],
+      "codeContext": "return { ok: false, code: \"wrong_owner\", message: \"Puxadores já está atribuído a outra etapa; não é seguro movê-lo automaticamente.\" };",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.legacyHandles.70",
+      "proposedKey": "admin.legacyHandles.aEtapaAcabamentosNOExisteOuNOPossuiListaDeItensV",
+      "text": "A etapa Acabamentos não existe ou não possui lista de itens v3.",
+      "file": "app/core/legacy-stage-repair.js",
+      "line": 70,
+      "owner": "legacy Puxadores repair flow",
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "parameters": [],
+      "codeContext": "return { ok: false, code: \"missing_finishes\", message: \"A etapa Acabamentos não existe ou não possui lista de itens v3.\" };",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.legacyHandles.99",
+      "proposedKey": "admin.legacyHandles.oCandidatoDeveAtribuirPuxadoresApenasAAcabamentos",
+      "text": "O candidato deve atribuir Puxadores apenas a Acabamentos.",
+      "file": "app/core/legacy-stage-repair.js",
+      "line": 99,
+      "owner": "legacy Puxadores repair flow",
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "parameters": [],
+      "codeContext": "return { ok: false, code: \"invalid_candidate_owner\", message: \"O candidato deve atribuir Puxadores apenas a Acabamentos.\" };",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.legacyHandles.104",
+      "proposedKey": "admin.legacyHandles.aGravaOPropostaAlteraCamposAlMDaAtribuiODePuxadores",
+      "text": "A gravação proposta altera campos além da atribuição de Puxadores.",
+      "file": "app/core/legacy-stage-repair.js",
+      "line": 104,
+      "owner": "legacy Puxadores repair flow",
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "parameters": [],
+      "codeContext": "return { ok: false, code: \"unexpected_delta\", message: \"A gravação proposta altera campos além da atribuição de Puxadores.\" };",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.legacyHandles.110",
+      "proposedKey": "admin.legacyHandles.aOrdemPropostaDeAcabamentosNOCorrespondeInserOCanNicaDePuxadores",
+      "text": "A ordem proposta de Acabamentos não corresponde à inserção canônica de Puxadores.",
+      "file": "app/core/legacy-stage-repair.js",
+      "line": 110,
+      "owner": "legacy Puxadores repair flow",
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "parameters": [],
+      "codeContext": "return { ok: false, code: \"unexpected_item_order\", message: \"A ordem proposta de Acabamentos não corresponde à inserção canônica de Puxadores.\" };",
+      "review": "Candidato gerado da mensagem com contexto fonte verificado. Revisar owner/consumer, sentido da chave e contrato dos parâmetros antes de usar no índice."
+    }
+  ]
+}
