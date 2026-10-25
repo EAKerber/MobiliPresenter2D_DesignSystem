@@ -357,3 +357,10 @@ Nova rechecagem em Chromium de `/how-it-works/` cobriu 1366×768, 768×1024 e 39
 ### NAV-005 — implementação privada em preview, revalidada em 25/10/2026
 
 Produto PR [#244](https://github.com/EAKerber/MobiliPresenter2D/pull/244), head `063796224c55924a8b3a909c9631c6b5f5590972`, continua DRAFT. Previews principal/isolado READY; oito workflows passaram, inclusive Admin hierarchy [#40147009586](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40147009586), que executou com sucesso as três suítes locais de hierarquia, persistência isolada e Save/readback v5 depois de corrigidos harnesses duplicados. Manualmente, `/admin.html` e `/access/` foram medidos no preview a 291 px e seguem o escopo aprovado; a sessão autenticada de Config e gestão de acesso permanece sem verificação. `decisions.json` permanece inalterado/autorização falsa; sem merge ou Production. [Evidência](../evidence/runtime/nav005-pr244-preview-implementation-check-2026-10-24.md).
+
+
+## ARC-13 — lote de configuração preparado para revisão (25/10/2026)
+
+Foi preparado um arquivo de candidatos para as 64 ocorrências restantes de validação em app/core/configuration.js. São 63 chaves propostas; as duas ocorrências idênticas de conflicting event target compartilham uma chave candidata porque mantêm a mesma mensagem, owner/consumer e parâmetro rule.id. O lote contém 33 templates com os parâmetros preservados, teve zero colisões com as chaves do índice auditado e mantém proveniência por linha e hash do arquivo. As sugestões ainda exigem revisão contextual; não alteram o índice nem o produto.
+
+A fila de chaves numéricas sem proposta passa de 199 para 135. Próximos módulos dimensionados: hierarchy-administration.js (32), flow-model.js (30), presentation-contract.js (29), pricing-contract.js (24), administration-v5.js (13) e legacy-stage-repair.js (7). Também seguem 364 ocorrências sem chave e 190 itens de conteúdo deferidos.
