@@ -150,9 +150,8 @@ O cruzamento considera também `sourceLines` dos templates montados em runtime; 
 - A PR #51 está aberta em DRAFT, com zero checks e status de commit sem statuses. Código do produto, índice canônico e `decisions.json` permanecem inalterados.
 
 
-## Medição documental atualizada — 25/10/2026, após o ramo de pedra sem adicional
+## Medição documental atualizada — 25/10/2026, após a triagem residual
 
-- O mapa contém 336 linhas candidatas brutas e 331 identidades distintas; cinco linhas repetem uma identidade. Um seletor CSS foi reclassificado como técnico, fora da fila de UI.
-- 315 de 331 identidades distintas (95,2%) aparecem em propostas contextuais; 16 seguem sem proposta. A última proposta cobre o ramo sem adicional da pedra em uma chave, com stone.description como parâmetro; a variante com preço continua separada para revisão do formato monetário.
-- A chave foi comparada às 2.181 referências do índice ARC-13 fixado, sem colisão prévia nem duplicata. Código, índice e decisions.json permanecem inalterados.
-- Os snapshots anteriores são históricos. 95,2% mede preparação documental, não implementação ou conclusão ARC-13. Pluralização, ownership de conteúdo/catalogo e strings misturadas com HTML continuam pendentes.
+- O mapa tem 336 linhas candidatas e 331 identidades distintas; cinco linhas repetem identidade. Um seletor CSS está excluído como técnico.
+- 315 de 331 identidades distintas (95,2%) aparecem em propostas; 16 seguem sem proposta. A [triagem residual](arc13-semantic-key-residual-review-2026-10-25.md) agrupa as 16 por pluralização/listas (8), strings em HTML (3) e ownership catálogo/editorial (5), e registra o risco restante do fallback de enum.
+- Propostas continuam não canônicas. Código, índice ARC-13 e decisions.json não mudaram. O próximo gate é o contrato de pluralização e a definição de owners; isso é preparação para revisão, não conclusão ou implementação.

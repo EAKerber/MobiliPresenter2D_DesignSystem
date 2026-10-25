@@ -1,0 +1,21 @@
+# ARC-13 — gate de revisão das ocorrências sem proposta (25/10/2026)
+
+## Fonte e contagem
+
+Mapa ARC-13 congelado para o produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, fonte `app/admin/admin.js` e `app/app.js`, com hashes registrados no mapa. Após excluir um seletor CSS e propor lotes contextuais, restam **16 identidades únicas** sem proposta entre 331 identidades distintas (336 linhas candidatas brutas; cinco linhas duplicadas não desambiguáveis). As propostas existentes são documentais e não canônicas; o produto e o índice ARC-13 permanecem intactos.
+
+## Decisões que bloqueiam as próximas chaves
+
+| Grupo | Ocorrências | O que falta decidir |
+|---|---|---|
+| Plural e listas — 8 | Admin: `admin.js:380`, `1028`, `1048`; Configurador: `app.js:950` (dois fragmentos), `1650`, `2273` (inclusão e remoção). | Definir a forma de pluralização e a composição de contagens/listas sem manter `disponível(is)`/ `selecionado(s)` ou flexões incorretas. A fundação de schema/localização ainda não escolheu formato de mensagem. |
+| Strings com HTML — 3 | `app.js:1603` (`Estimativa` em markup), `1607` (estado sem preço em markup), `1661` (estado equivalente em outro consumer). | Definir a fronteira da chave e a montagem segura do DOM. Recomenda-se localizar texto por nó e manter o HTML/estrutura no código; os dois consumers de estado continuam separados pela convenção aprovada. |
+| Ownership de catálogo/editorial — 5 | `app.js:1064` (eixos de dimensão), `1639` (explicação longa do resumo), `1653` (declaração sobre Módulo 02), `1725` (rótulo e descrição padrão do puxador ausente). | Atribuir quem responde pelo conteúdo e se cada valor pertence a dados do catálogo/produto ou à interface. O contrato de localização dos dados do catálogo ainda não foi definido. |
+
+## Risco relacionado, já fora da fila de 16
+
+A chave candidata `admin.pricing.basisFallback` localiza somente o prefixo fixo. O fallback ainda exibe `rule.basis` literalmente quando o mapa de rótulos não contém o enum; é preciso definir uma tabela de rótulos humanos ou uma política de fallback seguro antes da migração.
+
+## Estado
+
+A convenção ARC-13 foi aprovada; exemplos individuais continuam candidatos. Não há autorização para alterar `decisions.json`, o índice canônico ou o runtime por este registro. Próximo gate: decidir o contrato de pluralização e nomear owner dos cinco itens de conteúdo; em paralelo, confirmar a abordagem de nós de texto para as três strings misturadas com HTML.
