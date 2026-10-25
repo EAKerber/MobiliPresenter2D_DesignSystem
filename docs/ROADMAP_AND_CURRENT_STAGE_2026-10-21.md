@@ -459,3 +459,9 @@ Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. 
 
 - Propostas de `renderPricing` e `renderObjects`: 7 e 7 textos com sinks e contratos de parâmetros registrados, sem colisões observadas no índice-base.
 - O template da base de preço ficou deferido porque mistura rótulo com enum e fallback bruto; labels dinâmicos do catálogo permanecem parâmetros. [Pricing](../evidence/architecture/arc13-semantic-key-proposal-admin-pricing-2026-10-25.json) · [Objects](../evidence/architecture/arc13-semantic-key-proposal-admin-objects-2026-10-25.json). Sem alterações no produto, `decisions.json` ou índice canônico.
+
+
+### ARC-13 — Admin hierarchy, password reveal e finishes (25/10/2026)
+
+- Proposta reúne 20 ocorrências em `syncPasswordReveal`, `appendInitialStateControl`, `appendNominalDimensionControls` e `renderFinishes`, com 18 chaves e zero colisões no índice-base.
+- Templates de nomes de item, eixo e acabamento mantêm seus valores como parâmetros. Não altera código, índice canônico ou decisões. [Proposta](../evidence/architecture/arc13-semantic-key-proposal-admin-hierarchy-auth-finishes-2026-10-25.json).
