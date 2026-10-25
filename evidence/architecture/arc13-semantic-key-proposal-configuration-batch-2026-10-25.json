@@ -1,0 +1,943 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve the existing domain namespace; use a stable semantic camelCase suffix; keep dynamic values as parameters; share only when owner, consumer, and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "sourceFile": "app/core/configuration.js",
+  "sourceFileBlobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+  "scope": {
+    "occurrences": 64,
+    "uniqueProposedKeys": 63,
+    "previouslyAuditedExamplesExcluded": [
+      23,
+      282,
+      284,
+      298,
+      301,
+      305,
+      309
+    ]
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 1,
+    "duplicateKeyDetails": [
+      {
+        "key": "admin.configuration.validation.conflictingEventTarget",
+        "lines": [
+          455,
+          459
+        ],
+        "reason": "Same literal, same owner/consumer and same ${rule.id} parameter contract in two validation branches; retain as one key candidate, subject to contextual review."
+      }
+    ]
+  },
+  "rationale": "Suggestions are derived from the current validation message and source branch. This file does not update the candidate index or product code; semantic wording and parameter contracts remain reviewable candidates.",
+  "entries": [
+    {
+      "currentKey": "admin.configuration.validation.296",
+      "proposedKey": "admin.configuration.validation.requiredModulesStage",
+      "text": "modules stage must remain",
+      "file": "app/core/configuration.js",
+      "line": 296,
+      "source": "modules stage must remain",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!value.stages.some((stage) => stage?.kind === \"modules\" || stage?.id === \"modules\")) errors.push(\"modules stage must remain\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.297",
+      "proposedKey": "admin.configuration.validation.requiredSummaryStage",
+      "text": "summary stage must remain",
+      "file": "app/core/configuration.js",
+      "line": 297,
+      "source": "summary stage must remain",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!value.stages.some((stage) => stage?.kind === \"summary\" || stage?.id === \"summary\")) errors.push(\"summary stage must remain\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.300",
+      "proposedKey": "admin.configuration.validation.invalidStageId",
+      "text": "invalid stage id",
+      "file": "app/core/configuration.js",
+      "line": 300,
+      "source": "invalid stage id",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!stage || typeof stage.id !== \"string\" || !/^[a-z][a-z0-9-]{1,39}$/.test(stage.id)) { errors.push(\"invalid stage id\"); continue; }",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.304",
+      "proposedKey": "admin.configuration.validation.invalidStageType",
+      "text": "invalid stage type: ${stage.id}",
+      "file": "app/core/configuration.js",
+      "line": 304,
+      "source": "invalid stage type: ${stage.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "stage.id"
+      ],
+      "codeContext": "if (!STAGE_KINDS.has(kind)) errors.push(`invalid stage type: ${stage.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.307",
+      "proposedKey": "admin.configuration.validation.invalidLabel",
+      "text": "invalid label: ${stage.id}",
+      "file": "app/core/configuration.js",
+      "line": 307,
+      "source": "invalid label: ${stage.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "stage.id"
+      ],
+      "codeContext": "if (typeof stage.label !== \"string\" || !stage.label.trim() || stage.label.trim().length > 40) errors.push(`invalid label: ${stage.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.308",
+      "proposedKey": "admin.configuration.validation.invalidEnabledState",
+      "text": "invalid enabled state: ${stage.id}",
+      "file": "app/core/configuration.js",
+      "line": 308,
+      "source": "invalid enabled state: ${stage.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "stage.id"
+      ],
+      "codeContext": "if (typeof stage.enabled !== \"boolean\") errors.push(`invalid enabled state: ${stage.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.310",
+      "proposedKey": "admin.configuration.validation.summaryStageMustRemainEnabled",
+      "text": "summary stage must remain enabled",
+      "file": "app/core/configuration.js",
+      "line": 310,
+      "source": "summary stage must remain enabled",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (kind === \"summary\" && stage.enabled !== true) errors.push(\"summary stage must remain enabled\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.311",
+      "proposedKey": "admin.configuration.validation.invalidItemList",
+      "text": "invalid item list: ${stage.id}",
+      "file": "app/core/configuration.js",
+      "line": 311,
+      "source": "invalid item list: ${stage.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "stage.id"
+      ],
+      "codeContext": "if (!Array.isArray(stage.items) || stage.items.length > 80) { errors.push(`invalid item list: ${stage.id}`); continue; }",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.314",
+      "proposedKey": "admin.configuration.validation.unknownStageItem",
+      "text": "unknown stage item: ${id}",
+      "file": "app/core/configuration.js",
+      "line": 314,
+      "source": "unknown stage item: ${id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "id"
+      ],
+      "codeContext": "if (!itemKind) errors.push(`unknown stage item: ${id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.315",
+      "proposedKey": "admin.configuration.validation.invalidStageItemForKind",
+      "text": "invalid ${kind} item: ${id}",
+      "file": "app/core/configuration.js",
+      "line": 315,
+      "source": "invalid ${kind} item: ${id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "kind",
+        "id"
+      ],
+      "codeContext": "else if (!itemCapabilities.stageAllowsItem(kind, id, itemKind, catalog)) errors.push(`invalid ${kind} item: ${id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.316",
+      "proposedKey": "admin.configuration.validation.itemAssignedMoreThanOnce",
+      "text": "item assigned more than once: ${id}",
+      "file": "app/core/configuration.js",
+      "line": 316,
+      "source": "item assigned more than once: ${id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "id"
+      ],
+      "codeContext": "if (assignedItems.has(id)) errors.push(`item assigned more than once: ${id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.319",
+      "proposedKey": "admin.configuration.validation.enabledStageMustContainAnItem",
+      "text": "enabled stage must contain an item: ${stage.id}",
+      "file": "app/core/configuration.js",
+      "line": 319,
+      "source": "enabled stage must contain an item: ${stage.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "stage.id"
+      ],
+      "codeContext": "if (stage.enabled && stage.items.length === 0) errors.push(`enabled stage must contain an item: ${stage.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.322",
+      "proposedKey": "admin.configuration.validation.modulesStageMustContainAModule",
+      "text": "modules stage must contain a module",
+      "file": "app/core/configuration.js",
+      "line": 322,
+      "source": "modules stage must contain a module",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (moduleStage && !moduleStage.items.some((id) => moduleIds.has(id))) errors.push(\"modules stage must contain a module\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.324",
+      "proposedKey": "admin.configuration.validation.stoneSkirtingRequiresTheStoneItem",
+      "text": "stone skirting requires the stone item",
+      "file": "app/core/configuration.js",
+      "line": 324,
+      "source": "stone skirting requires the stone item",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (activeItems.has(\"stone-skirting\") && !activeItems.has(\"stone-all\")) errors.push(\"stone skirting requires the stone item\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.327",
+      "proposedKey": "admin.configuration.validation.initialStateIsRequired",
+      "text": "initial state is required",
+      "file": "app/core/configuration.js",
+      "line": 327,
+      "source": "initial state is required",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!defaults || typeof defaults !== \"object\") errors.push(\"initial state is required\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.329",
+      "proposedKey": "admin.configuration.validation.invalidInitialEntityState",
+      "text": "invalid initial entity state",
+      "file": "app/core/configuration.js",
+      "line": 329,
+      "source": "invalid initial entity state",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!defaults.entities || Object.keys(defaults.entities).some((id) => !entityIds.has(id)) || Object.values(defaults.entities).some((enabled) => typeof enabled !== \"boolean\")) errors.push(\"invalid initial entity state\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.330",
+      "proposedKey": "admin.configuration.validation.invalidInitialViewerEntityState",
+      "text": "invalid initial viewer entity state",
+      "file": "app/core/configuration.js",
+      "line": 330,
+      "source": "invalid initial viewer entity state",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (defaults.viewerEntities != null && (Object.keys(defaults.viewerEntities).some((id) => !moduleIds.has(id)) || Object.values(defaults.viewerEntities).some((enabled) => typeof enabled !== \"boolean\"))) errors.push(\"invalid initial viewer entity state\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.334",
+      "proposedKey": "admin.configuration.validation.invalidInitialServices",
+      "text": "invalid initial services",
+      "file": "app/core/configuration.js",
+      "line": 334,
+      "source": "invalid initial services",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!Array.isArray(defaults.services) || defaults.services.some((id) => !allowedServices.has(id)) || new Set(defaults.services).size !== defaults.services.length) errors.push(\"invalid initial services\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.339",
+      "proposedKey": "admin.configuration.validation.invalidModuleNominalDimensions",
+      "text": "invalid module nominal dimensions",
+      "file": "app/core/configuration.js",
+      "line": 339,
+      "source": "invalid module nominal dimensions",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "|| Object.keys(value.moduleDimensions).some((id) => !moduleIds.has(id))) errors.push(\"invalid module nominal dimensions\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.343",
+      "proposedKey": "admin.configuration.validation.invalidItemNominalDimensions",
+      "text": "invalid nominal dimensions: ${item.entityId}",
+      "file": "app/core/configuration.js",
+      "line": 343,
+      "source": "invalid nominal dimensions: ${item.entityId}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "item.entityId"
+      ],
+      "codeContext": "errors.push(`invalid nominal dimensions: ${item.entityId}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.350",
+      "proposedKey": "admin.configuration.validation.objectDataIsRequired",
+      "text": "object data is required",
+      "file": "app/core/configuration.js",
+      "line": 350,
+      "source": "object data is required",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!value.objects || typeof value.objects !== \"object\" || Array.isArray(value.objects)) errors.push(\"object data is required\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.354",
+      "proposedKey": "admin.configuration.validation.missingObjectData",
+      "text": "missing object data: ${id}",
+      "file": "app/core/configuration.js",
+      "line": 354,
+      "source": "missing object data: ${id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "id"
+      ],
+      "codeContext": "if (!item || typeof item !== \"object\") { errors.push(`missing object data: ${id}`); continue; }",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.355",
+      "proposedKey": "admin.configuration.validation.invalidTitle",
+      "text": "invalid title: ${id}",
+      "file": "app/core/configuration.js",
+      "line": 355,
+      "source": "invalid title: ${id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "id"
+      ],
+      "codeContext": "if (typeof item.title !== \"string\" || !item.title.trim() || item.title.length > 100) errors.push(`invalid title: ${id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.356",
+      "proposedKey": "admin.configuration.validation.invalidDescription",
+      "text": "invalid description: ${id}",
+      "file": "app/core/configuration.js",
+      "line": 356,
+      "source": "invalid description: ${id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "id"
+      ],
+      "codeContext": "if (typeof item.description !== \"string\" || item.description.length > 240) errors.push(`invalid description: ${id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.357",
+      "proposedKey": "admin.configuration.validation.invalidObjectDataField",
+      "text": "invalid ${field}: ${id}",
+      "file": "app/core/configuration.js",
+      "line": 357,
+      "source": "invalid ${field}: ${id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "field",
+        "id"
+      ],
+      "codeContext": "for (const field of [\"benefits\", \"components\", \"requirements\"]) if (!Array.isArray(item[field]) || item[field].length > 12 || item[field].some((entry) => typeof entry !== \"string\" || entry.length > 180)) errors.push(`invalid ${field}: ${id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.359",
+      "proposedKey": "admin.configuration.validation.unknownObjectData",
+      "text": "unknown object data",
+      "file": "app/core/configuration.js",
+      "line": 359,
+      "source": "unknown object data",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (Object.keys(value.objects).some((id) => !objectIds.has(id))) errors.push(\"unknown object data\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.361",
+      "proposedKey": "admin.configuration.validation.objectAssetsAreRequired",
+      "text": "object assets are required",
+      "file": "app/core/configuration.js",
+      "line": 361,
+      "source": "object assets are required",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!value.objectAssets || typeof value.objectAssets !== \"object\") errors.push(\"object assets are required\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.363",
+      "proposedKey": "admin.configuration.validation.invalidObjectAssets",
+      "text": "invalid object assets: ${id}",
+      "file": "app/core/configuration.js",
+      "line": 363,
+      "source": "invalid object assets: ${id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "id"
+      ],
+      "codeContext": "if (!objectIds.has(id) || !assets || typeof assets !== \"object\") { errors.push(`invalid object assets: ${id}`); return; }",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.364",
+      "proposedKey": "admin.configuration.validation.invalidObjectAssetPath",
+      "text": "invalid asset path: ${id}.${field}",
+      "file": "app/core/configuration.js",
+      "line": 364,
+      "source": "invalid asset path: ${id}.${field}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "id",
+        "field"
+      ],
+      "codeContext": "for (const field of [\"imageAsset\", \"detailImageAsset\", \"maskAsset\"]) if (typeof assets[field] !== \"string\" || (assets[field] && !validAssetPath(assets[field]))) errors.push(`invalid asset path: ${id}.${field}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.369",
+      "proposedKey": "admin.configuration.validation.handleProductsMustMatchTheCatalog",
+      "text": "handle products must match the catalog",
+      "file": "app/core/configuration.js",
+      "line": 369,
+      "source": "handle products must match the catalog",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!Array.isArray(value.handleProducts) || value.handleProducts.length !== catalog.options.handles.filter((item) => item.id !== \"none\" && !item.isAbsence).length) errors.push(\"handle products must match the catalog\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.373",
+      "proposedKey": "admin.configuration.validation.invalidOrDuplicateHandleProduct",
+      "text": "invalid or duplicate handle product",
+      "file": "app/core/configuration.js",
+      "line": 373,
+      "source": "invalid or duplicate handle product",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!product || !/^[a-z][a-z0-9-]{1,39}$/.test(product.id) || ids.has(product.id) || !/^[a-z][a-z0-9-]{1,39}$/.test(product.priceEntryId) || priceIds.has(product.priceEntryId)) { errors.push(\"invalid or duplicate handle product\"); return; }",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.375",
+      "proposedKey": "admin.configuration.validation.invalidHandleProductData",
+      "text": "invalid handle product data: ${product.id}",
+      "file": "app/core/configuration.js",
+      "line": 375,
+      "source": "invalid handle product data: ${product.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "product.id"
+      ],
+      "codeContext": "if (!catalog.options.handles.some((item) => item.id === product.priceEntryId && !item.isAbsence && item.id !== \"none\") || typeof product.label !== \"string\" || !product.label.trim() || product.label.length > 60 || typeof product.description !== \"string\" || product.description.length > 180) errors.push(`invalid handle product data: ${product.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.376",
+      "proposedKey": "admin.configuration.validation.invalidHandleMaterials",
+      "text": "invalid handle materials: ${product.id}",
+      "file": "app/core/configuration.js",
+      "line": 376,
+      "source": "invalid handle materials: ${product.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "product.id"
+      ],
+      "codeContext": "if (!Array.isArray(product.materialIds) || product.materialIds.length > 100 || product.materialIds.some((id) => !materialIds.has(id)) || new Set(product.materialIds).size !== product.materialIds.length) errors.push(`invalid handle materials: ${product.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.380",
+      "proposedKey": "admin.configuration.validation.materialLibraryEntryCountOutOfRange",
+      "text": "material library must contain 1 to 100 entries",
+      "file": "app/core/configuration.js",
+      "line": 380,
+      "source": "material library must contain 1 to 100 entries",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!Array.isArray(value.materials) || value.materials.length < 1 || value.materials.length > 100) errors.push(\"material library must contain 1 to 100 entries\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.384",
+      "proposedKey": "admin.configuration.validation.invalidOrDuplicateMaterialId",
+      "text": "invalid or duplicate material id",
+      "file": "app/core/configuration.js",
+      "line": 384,
+      "source": "invalid or duplicate material id",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!material || !/^[a-z][a-z0-9-]{1,39}$/.test(material.id) || ids.has(material.id)) { errors.push(\"invalid or duplicate material id\"); return; }",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.386",
+      "proposedKey": "admin.configuration.validation.invalidMaterialLabel",
+      "text": "invalid material label: ${material.id}",
+      "file": "app/core/configuration.js",
+      "line": 386,
+      "source": "invalid material label: ${material.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "material.id"
+      ],
+      "codeContext": "if (typeof material.label !== \"string\" || !material.label.trim() || material.label.length > 60) errors.push(`invalid material label: ${material.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.387",
+      "proposedKey": "admin.configuration.validation.invalidMaterialType",
+      "text": "invalid material type: ${material.id}",
+      "file": "app/core/configuration.js",
+      "line": 387,
+      "source": "invalid material type: ${material.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "material.id"
+      ],
+      "codeContext": "if (![\"color\", \"texture\"].includes(material.kind)) errors.push(`invalid material type: ${material.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.390",
+      "proposedKey": "admin.configuration.validation.invalidMaterialColor",
+      "text": "invalid material color: ${material.id}",
+      "file": "app/core/configuration.js",
+      "line": 390,
+      "source": "invalid material color: ${material.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "material.id"
+      ],
+      "codeContext": "if (!hasAuthoredColor || !validAuthoredColor || (material.kind === \"color\" && material.color === null)) errors.push(`invalid material color: ${material.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.391",
+      "proposedKey": "admin.configuration.validation.invalidMaterialTexture",
+      "text": "invalid material texture: ${material.id}",
+      "file": "app/core/configuration.js",
+      "line": 391,
+      "source": "invalid material texture: ${material.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "material.id"
+      ],
+      "codeContext": "if (typeof material.textureAsset !== \"string\" || (material.textureAsset && !validAssetPath(material.textureAsset))) errors.push(`invalid material texture: ${material.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.392",
+      "proposedKey": "admin.configuration.validation.invalidMaterialTextureSize",
+      "text": "invalid material texture size: ${material.id}",
+      "file": "app/core/configuration.js",
+      "line": 392,
+      "source": "invalid material texture size: ${material.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "material.id"
+      ],
+      "codeContext": "if (typeof material.textureSize !== \"string\" || ![\"cover\", \"contain\"].includes(material.textureSize) && !/^\\d{2,3}px \\d{2,3}px$/.test(material.textureSize)) errors.push(`invalid material texture size: ${material.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.393",
+      "proposedKey": "admin.configuration.validation.invalidMaterialGroups",
+      "text": "invalid material groups: ${material.id}",
+      "file": "app/core/configuration.js",
+      "line": 393,
+      "source": "invalid material groups: ${material.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "material.id"
+      ],
+      "codeContext": "if (!Array.isArray(material.groupIds) || material.groupIds.some((group) => ![\"fronts-all\", \"stone-all\"].includes(group))) errors.push(`invalid material groups: ${material.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.397",
+      "proposedKey": "admin.configuration.validation.materialGroupCountMismatch",
+      "text": "three material groups are required",
+      "file": "app/core/configuration.js",
+      "line": 397,
+      "source": "three material groups are required",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!Array.isArray(value.materialGroups) || value.materialGroups.length !== 3) errors.push(\"three material groups are required\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.399",
+      "proposedKey": "admin.configuration.validation.invalidMaterialGroup",
+      "text": "invalid material group",
+      "file": "app/core/configuration.js",
+      "line": 399,
+      "source": "invalid material group",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!group || ![\"fronts-all\", \"handles-all\", \"stone-all\"].includes(group.id) || groups.has(group.id)) { errors.push(\"invalid material group\"); return; }",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.401",
+      "proposedKey": "admin.configuration.validation.invalidMaterialGroupLabel",
+      "text": "invalid material group label: ${group.id}",
+      "file": "app/core/configuration.js",
+      "line": 401,
+      "source": "invalid material group label: ${group.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "group.id"
+      ],
+      "codeContext": "if (typeof group.label !== \"string\" || !group.label.trim() || group.label.length > 60) errors.push(`invalid material group label: ${group.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.403",
+      "proposedKey": "admin.configuration.validation.invalidGroupMaterials",
+      "text": "invalid group materials: ${group.id}",
+      "file": "app/core/configuration.js",
+      "line": 403,
+      "source": "invalid group materials: ${group.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "group.id"
+      ],
+      "codeContext": "if (!Array.isArray(group.materialIds) || group.materialIds.length < 1 || group.materialIds.length > 100 || group.materialIds.some((id) => !validIds.has(id)) || new Set(group.materialIds).size !== group.materialIds.length) errors.push(`invalid group materials: ${group.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.404",
+      "proposedKey": "admin.configuration.validation.invalidFrontFinishScope",
+      "text": "invalid front finish scope",
+      "file": "app/core/configuration.js",
+      "line": 404,
+      "source": "invalid front finish scope",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (group.id === \"fronts-all\" && (! [\"global\", \"local\"].includes(group.scope) || !Array.isArray(group.moduleIds) || group.moduleIds.some((id) => !moduleIds.has(id)))) errors.push(\"invalid front finish scope\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.408",
+      "proposedKey": "admin.configuration.validation.materialAndGroupDoNotMatch",
+      "text": "material and group do not match: ${material.id}",
+      "file": "app/core/configuration.js",
+      "line": 408,
+      "source": "material and group do not match: ${material.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "material.id"
+      ],
+      "codeContext": "if (!groupById.get(groupId)?.materialIds?.includes(material.id)) errors.push(`material and group do not match: ${material.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.412",
+      "proposedKey": "admin.configuration.validation.invalidFinishAvailability",
+      "text": "invalid finish availability",
+      "file": "app/core/configuration.js",
+      "line": 412,
+      "source": "invalid finish availability",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!Array.isArray(value.finishes) || value.finishes.some((item) => !frontsGroup?.materialIds.includes(item.id) || typeof item.enabled !== \"boolean\" || ![\"global\", \"local\"].includes(item.scope) || !Array.isArray(item.moduleIds) || item.moduleIds.some((id) => !moduleIds.has(id))) || new Set((value.finishes || []).map((item) => item.id)).size !== (value.finishes || []).length || frontsGroup?.materialIds.some((id) => !value.finishes.some((item) => item.id === id))) errors.push(\"invalid finish availability\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.413",
+      "proposedKey": "admin.configuration.validation.atLeastOneGlobalFrontFinishMustRemainAvailable",
+      "text": "at least one global front finish must remain available",
+      "file": "app/core/configuration.js",
+      "line": 413,
+      "source": "at least one global front finish must remain available",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "else if (!value.finishes.some((item) => item.enabled && item.scope === \"global\" && frontsGroup?.materialIds.includes(item.id))) errors.push(\"at least one global front finish must remain available\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.414",
+      "proposedKey": "admin.configuration.validation.invalidInitialMaterialSelection",
+      "text": "invalid initial material selection",
+      "file": "app/core/configuration.js",
+      "line": 414,
+      "source": "invalid initial material selection",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (defaults && (!value.finishes?.some((item) => item.id === defaults.finishId && item.enabled && item.scope === \"global\") || !value.handleProducts?.some((item) => item.priceEntryId === defaults.handleId && groupById.get(\"handles-all\")?.materialIds.includes(item.id)) && defaults.handleId !== \"none\" || !groupById.get(\"stone-all\")?.materialIds.includes(defaults.stonePackageId))) errors.push(\"invalid initial material selection\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.417",
+      "proposedKey": "admin.configuration.validation.invalidDependencyList",
+      "text": "invalid dependency list",
+      "file": "app/core/configuration.js",
+      "line": 417,
+      "source": "invalid dependency list",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!Array.isArray(value.dependencies) || value.dependencies.length > 80) errors.push(\"invalid dependency list\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.419",
+      "proposedKey": "admin.configuration.validation.invalidDependencyId",
+      "text": "invalid dependency id",
+      "file": "app/core/configuration.js",
+      "line": 419,
+      "source": "invalid dependency id",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!rule || !/^[a-z][a-z0-9-]{1,39}$/.test(rule.id) || dependencyIds.has(rule.id)) { errors.push(\"invalid dependency id\"); return; }",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.421",
+      "proposedKey": "admin.configuration.validation.invalidDependency",
+      "text": "invalid dependency: ${rule.id}",
+      "file": "app/core/configuration.js",
+      "line": 421,
+      "source": "invalid dependency: ${rule.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "rule.id"
+      ],
+      "codeContext": "if (!entityIds.has(rule.dependentId) || !Array.isArray(rule.requires) || rule.requires.length < 1 || rule.requires.length > 8 || rule.requires.some((id) => !entityIds.has(id) || id === rule.dependentId) || new Set(rule.requires).size !== rule.requires.length) errors.push(`invalid dependency: ${rule.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.434",
+      "proposedKey": "admin.configuration.validation.dependencyCycleIsNotAllowed",
+      "text": "dependency cycle is not allowed",
+      "file": "app/core/configuration.js",
+      "line": 434,
+      "source": "dependency cycle is not allowed",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if ([...graph.keys()].some(hasCycle)) errors.push(\"dependency cycle is not allowed\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.439",
+      "proposedKey": "admin.configuration.validation.invalidEventList",
+      "text": "invalid event list",
+      "file": "app/core/configuration.js",
+      "line": 439,
+      "source": "invalid event list",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!Array.isArray(value.events) || value.events.length > 40) errors.push(\"invalid event list\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.441",
+      "proposedKey": "admin.configuration.validation.invalidEventId",
+      "text": "invalid event id",
+      "file": "app/core/configuration.js",
+      "line": 441,
+      "source": "invalid event id",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!rule || !/^[a-z][a-z0-9-]{1,39}$/.test(rule.id) || eventIds.has(rule.id)) { errors.push(\"invalid event id\"); return; }",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.452",
+      "proposedKey": "admin.configuration.validation.invalidEvent",
+      "text": "invalid event: ${rule.id}",
+      "file": "app/core/configuration.js",
+      "line": 452,
+      "source": "invalid event: ${rule.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "rule.id"
+      ],
+      "codeContext": "if (!validTrigger || !(legacyDepth || dimension || stateChange)) errors.push(`invalid event: ${rule.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.455",
+      "proposedKey": "admin.configuration.validation.conflictingEventTarget",
+      "text": "conflicting event target: ${rule.id}",
+      "file": "app/core/configuration.js",
+      "line": 455,
+      "source": "conflicting event target: ${rule.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "rule.id"
+      ],
+      "codeContext": "if (eventStateTargets.has(rule.targetId)) errors.push(`conflicting event target: ${rule.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.459",
+      "proposedKey": "admin.configuration.validation.conflictingEventTarget",
+      "text": "conflicting event target: ${rule.id}",
+      "file": "app/core/configuration.js",
+      "line": 459,
+      "source": "conflicting event target: ${rule.id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "rule.id"
+      ],
+      "codeContext": "if (eventDimensionTargets.has(key)) errors.push(`conflicting event target: ${rule.id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.466",
+      "proposedKey": "admin.configuration.validation.pricingIsRequired",
+      "text": "pricing is required",
+      "file": "app/core/configuration.js",
+      "line": 466,
+      "source": "pricing is required",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (!value.pricing || typeof value.pricing !== \"object\") errors.push(\"pricing is required\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.470",
+      "proposedKey": "admin.configuration.validation.invalidPricingSection",
+      "text": "invalid pricing section: ${section}",
+      "file": "app/core/configuration.js",
+      "line": 470,
+      "source": "invalid pricing section: ${section}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "section"
+      ],
+      "codeContext": "if (!submitted || typeof submitted !== \"object\" || Array.isArray(submitted)) { errors.push(`invalid pricing section: ${section}`); return; }",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.473",
+      "proposedKey": "admin.configuration.validation.pricingIdentifiersMustMatch",
+      "text": "pricing identifiers must match: ${section}",
+      "file": "app/core/configuration.js",
+      "line": 473,
+      "source": "pricing identifiers must match: ${section}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "section"
+      ],
+      "codeContext": "if (Object.keys(submitted).some((id) => !allowedIds.includes(id) && !dynamicIds.includes(id)) || allowedIds.some((id) => !Object.hasOwn(submitted, id))) errors.push(`pricing identifiers must match: ${section}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.476",
+      "proposedKey": "admin.configuration.validation.invalidPriceValue",
+      "text": "invalid price value: ${section}.${id}",
+      "file": "app/core/configuration.js",
+      "line": 476,
+      "source": "invalid price value: ${section}.${id}",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [
+        "section",
+        "id"
+      ],
+      "codeContext": "if (!Number.isSafeInteger(amount) || amount < 0 || amount > maximum) errors.push(`invalid price value: ${section}.${id}`);",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    },
+    {
+      "currentKey": "admin.configuration.validation.479",
+      "proposedKey": "admin.configuration.validation.handleFrontTotalCannotBeOverridden",
+      "text": "handle front total is fixed",
+      "file": "app/core/configuration.js",
+      "line": 479,
+      "source": "handle front total is fixed",
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "parameters": [],
+      "codeContext": "if (value.pricing?.handleFrontTotal !== legacyPriceBook.handleFrontTotal) errors.push(\"handle front total is fixed\");",
+      "review": "Candidato para revisão contextual. Confirmar significado, consumidor real, interpolação segura e compartilhamento antes de usar no índice."
+    }
+  ]
+}
