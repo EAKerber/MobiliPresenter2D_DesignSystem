@@ -21,7 +21,7 @@ Data: 25/10/2026
 
 - Desktop emulado: 1280 × 720 CSS px. `documentElement.clientWidth` e `scrollWidth` foram ambos 1265 px, diferença causada pela scrollbar vertical clássica; não houve overflow horizontal.
 - Mobile emulado: 390 × 844 CSS px. Em cada rota, `clientWidth` e `scrollWidth` foram 390 px; overflow horizontal zero.
-- Os dez seletores foram verificados no claro e no escuro em desktop; todos os dez foram verificados no claro em mobile. O escuro em mobile não foi repetido nesta passagem.
+- Os dez seletores foram verificados no claro e no escuro em desktop; os dez foram verificados em mobile claro na passagem original e em mobile escuro no complemento de 25/10 descrito abaixo.
 
 ## Integração e limites
 
@@ -29,3 +29,7 @@ Data: 25/10/2026
 - Os status de Deploy Preview principal e isolado estão SUCCESS/READY. O gate de produto confirma os hashes do pacote v0.3 do Design System.
 - Esta é uma verificação manual restrita de uma head e das três rotas públicas, apoiada por DOM/CSSOM e uma captura visual. Não é uma homologação global de acessibilidade nem substitui a revisão humana final.
 - PRs #241 e #52 continuam DRAFT. PR #240 segue em v0.2 e requer reconciliação antes de qualquer integração conjunta. Sem merge ou deploy de Production.
+
+## Complemento DOM/CSSOM — tema escuro em mobile (25/10/2026)
+
+No Deploy Preview principal, Chromium isolado, 390 × 844 CSS px, tema escuro. Revalidei os dez seletores nas três rotas: Landing encontrou 3 nós, About 6 e Como funciona 5; todos computaram `rgb(196, 188, 178)` (#C4BCB2) com `data-theme=dark`. Em cada rota, `clientWidth=scrollWidth=390`; overflow horizontal zero. A checagem não alterou código nem estado do usuário. DOM/CSSOM confirma aplicação de cor, não contraste pixel a pixel ou homologação visual global.
