@@ -35,4 +35,10 @@ A PR [#51](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51), 
 4. Continuar ARC-13 em propostas contextuais não controversas. Manter os oito casos plurais adiados e os cinco textos de conteúdo pendentes do owner; não alterar catálogo ou índice por inferência.
 5. Só avançar G8 após revisão humana, integração autorizada, validação sobre a base integrada e readback do release.
 
+## Auditoria de consolidação de branches — 2026-10-25
+
+Na última leitura, as cinco PRs de produto ativas (#238, #241, #242, #243 e #244) estavam DRAFT, com `mergeable=true`, baseadas no mesmo `main@5ccb2a8` e com todos os workflows associados aos respectivos heads em SUCCESS. A comparação de arquivos modificados encontrou **zero caminhos compartilhados entre qualquer par** dessas cinco PRs. Portanto, manter as cinco unidades de revisão separadas evita combinar issues e gates independentes; não há conflito de arquivos a resolver entre elas.
+
+As consolidações possíveis já foram feitas: #245 → #238, #239 → #241; a PR #240 foi fechada sem merge porque a distribuição v0.2 foi substituída pela v0.3 em #241. O trabalho segue preservado nos heads consolidados; nenhuma PR está integrada a `main` por esse motivo.
+
 **Estado geral:** trabalho substancial está preparado em branches e evidências, mas a implementação integrada e a aceitação final continuam atrás do avanço documental. Este documento é um crosswalk operacional de 25/10, não uma autorização para merge ou publicação.
