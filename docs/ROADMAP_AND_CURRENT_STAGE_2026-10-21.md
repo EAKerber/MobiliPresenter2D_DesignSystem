@@ -532,3 +532,11 @@ The approved naming convention remains stable. The frozen consumer map has 336 r
 - Proposta documental para as três identidades em `app/app.js:1603, 1607 e 1661`: cinco chaves textuais em nós separados, preservando o markup e mantendo distintos os consumers `renderCurrentValue` e `renderSummary`. Colisões no índice e nos lotes de proposta: zero. [Proposta](../evidence/architecture/arc13-semantic-key-proposal-configurator-html-text-nodes-2026-10-25.json).
 - Readback do mapa ARC-13: **318/331 (96,1%)** identidades distintas com proposta; 13 sem proposta (oito adiadas para localização, cinco esperando owner). Risco de fallback bruto de enum segue separado. A porcentagem mede preparação documental, não implementação nem conclusão.
 - PR #51 continua DRAFT; sem mudança de runtime, índice canônico, `decisions.json`, merge ou Production.
+
+
+### Consolidação de preview About/VIS-002 — PR #239 absorvida pela #241 (25/10/2026)
+
+- A PR #239 foi incorporada à branch da #241 como commit de dois pais `45e532b444967bdd901ac2f49fc8d0548daa881a`; o conflito lógico de `about.css` e do manifesto gerado foi composto, e os hashes fonte/HTML da página About conferem. A #239 foi encerrada como supersedida, sem apagar a branch. [Evidência](../evidence/runtime/pr241-pr239-about-skip-link-consolidation-preview-2026-10-25.md).
+- A head combinada passou 9/9 workflows e os dois Deploy Previews ficaram SUCCESS. A checagem manual confirmou Tab → foco visível no skip link → Enter → `#main` com foco em `main#main`.
+- O CSS declara offset de 3 px, mas o CSSOM retornou 2,66667 px tanto no skip link como num controle. A divergência já se reproduziu fora do seletor; sua causa permanece desconhecida e não alterei o valor aprovado.
+- A PR #241 continua DRAFT e sem merge/Production; todas as oito PRs de implementação/revisão consultadas ainda não têm reviews humanos. A consolidação reduziu uma branch redundante, mantendo PRs com escopos independentes separados.
