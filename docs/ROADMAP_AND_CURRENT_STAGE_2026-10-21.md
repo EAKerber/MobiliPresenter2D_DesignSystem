@@ -1,12 +1,13 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
-## VIS-002C v0.3 — reconciliação dos dez contextos medidos (25/10/2026)
+## VIS-002C v0.3 — revisão dos dez contextos concluída (25/10/2026)
 
-- PR Design System [#52](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/52) agora inclui dez contextos de texto longo sob tema claro. A preferência do usuário por quase preto também atualiza os três consumidores antes preservados em v0.2; eles já estavam mapeados como pares runtime aprovados. `decisions.json`, tema escuro, eyebrows, assinaturas e seletores globais não mudaram.
-- O contraste calculado para esses três fundos `#F0EDE8` sobe de 5,41:1 (`#705C4B`) para 12,77:1 (`#292723`). Os outros sete contextos continuam nos fundos medidos `#E8E3DC`/`#F0EDE8`.
-- O gate de artefato passou no head Design System `2f11ecf8948c779706a0ce0795e088d29633fb7e`, Actions [#40203905477](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40203905477). Produto PR [#241](https://github.com/EAKerber/MobiliPresenter2D/pull/241) foi atualizado para dez seletores no head `f102c3037e2f64ebb904643bbc076064322f1672); gates/Deploy Previews dessa head ainda estão em validação.
-- A revisão visual anterior da #241 cobria sete contextos na head antiga e não valida os três novos consumidores. Revisão DOM/CSSOM atualizada segue pendente. PR de produto #240 continua em v0.2; não integre junto com #241 sem reconciliar os pins/branches. Nenhum merge ou deploy de Production.
-- [Evidência da reconciliação e gates](../evidence/runtime/vis002c-v03-ten-context-reconciliation-2026-10-25.md).
+- PR Design System [#52](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/52) distribui `#292723` nos dez contextos de texto longo medidos em tema claro. A preferência do usuário por quase preto também atualiza os três consumidores previamente preservados na v0.2, já mapeados como pares runtime aprovados. `decisions.json`, tema escuro, eyebrows, assinaturas e seletores globais permanecem inalterados.
+- O contraste calculado é 12,77:1 sobre `#F0EDE8` e 11,68:1 sobre `#E8E3DC`. O gate do Design System passou no head `2f11ecf8948c779706a0ce0795e088d29633fb7e`, Actions [#40203905477](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40203905477).
+- Produto PR [#241](https://github.com/EAKerber/MobiliPresenter2D/pull/241), head `f102c3037e2f64ebb904643bbc076064322f1672`: oito workflows SUCCESS e os Deploy Previews principal e isolado READY.
+- A revisão DOM/CSSOM confirmou os dez seletores em Landing, Quem somos e Como funciona: `#292723` em claro; `#C4BCB2` sobre `#20211F` em escuro. Em 390 × 844 px, as três rotas tiveram `scrollWidth` de 390 px; em 1280 × 720 px, `scrollWidth` igualou a largura útil de 1265 px, sem overflow. Eyebrows, assinaturas e tokens globais permaneceram fora da regra.
+- Evidência: [revisão manual do preview em dez contextos](../evidence/runtime/vis002c-v03-preview-10-contexts-manual-review-2026-10-25.md). A conferência cobre DOM/CSSOM e uma captura de preview; não é homologação global.
+- PRs #241 e #52 permanecem DRAFT. Produto #240 continua em v0.2; não integrar junto de #241 sem reconciliar pins/branches. Nenhum merge ou deploy de Production.
 
 
 ## VIS-002 — contraste de foco nos hotspots do Viewer (25/10/2026)
