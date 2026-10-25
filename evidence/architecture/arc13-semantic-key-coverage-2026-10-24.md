@@ -32,3 +32,16 @@ Uma proposta não canônica define regras e 13 exemplos de substituição semân
 O índice ARC-13 revisado é o blob `1954dfd9a4fe6194812b4fd336281eed39f64ecf`, gerado para `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`. Revalidei as propostas contra as ocorrências atuais desse índice: 13/13 substituições de chaves numéricas coincidem unicamente por arquivo, linha, chave atual e texto; os cinco rótulos de Admin também coincidem unicamente e não têm chave preenchida. As 18 chaves propostas não duplicam entre si nem colidem com chaves existentes do inventário.
 
 Isso confirma proveniência e ausência de colisões para a amostra; não aprova a convenção, não resolve ownership/consumer e não altera índice, código ou `decisions.json`. Permanecem 199 das 212 referências numéricas sem proposta, 364 das 369 ocorrências sem chave sem proposta e 190 itens de conteúdo deferidos. A decisão de promover a convenção e os exemplos segue pendente de revisão humana.
+
+
+## Tamanho da fila de revisão semântica — 25/10/2026
+
+A `main` do produto ainda aponta para o `productHead` do índice ARC-13. Com os 13 exemplos de chaves numéricas e os cinco rótulos já verificados contra suas fontes, o restante pode ser preparado por módulo/consumer sem misturar ownership:
+
+| Fila | Restantes | Agrupamento confirmado | Observação de revisão |
+|---|---:|---|---|
+| Chaves baseadas em linha | 199 de 212 | `configuration.js` 64; `hierarchy-administration.js` 32; `flow-model.js` 30; `presentation-contract.js` 29; `pricing-contract.js` 24; `administration-v5.js` 13; `legacy-stage-repair.js` 7 | 132 são templates com valores dinâmicos; documentar parâmetros e revisar owner/consumer antes de qualquer compartilhamento. |
+| Ocorrências sem chave | 364 de 369 | `admin.js` 209; `app.js` 155 | 59 são templates; o índice ainda os classifica com consumer não resolvido, então precisa de leitura de contexto antes de nomear. |
+| Conteúdo deferido | 190 | Inventário editorial separado | Não mesclar com strings de runtime nem gerar chaves sem atribuir owner e consumer. |
+
+Esta é uma fila de revisão, não uma convenção aprovada nem um lote de migração. A convenção global e os owners continuam aguardando revisão humana.
