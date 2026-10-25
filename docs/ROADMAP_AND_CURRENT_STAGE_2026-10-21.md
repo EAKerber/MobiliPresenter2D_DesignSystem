@@ -434,3 +434,10 @@ O consumer `updateSelection` foi revisado até os sinks DOM. Dos 13 registros do
 ## ARC-13 — resumo de preços: contratos e limites (25/10/2026)
 
 Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. A proposta cobre **13 mensagens** completas/parameterizáveis, sem colisões. Cinco casos foram deferidos: copy longo com ownership de conteúdo, sufixo de contagem que exige plural, declaração fixa sobre Módulo 02, duas mensagens dentro de uma string HTML e texto de rateio montado em fragmentos/lista. O principal atrito agora é fronteira de mensagem: quatro valores com moeda são concatenados e precisam virar templates com parâmetro formatado; o rateio pede contrato explícito de contagem/lista. [Proposta e casos deferidos](../evidence/architecture/arc13-semantic-key-proposal-configurator-pricing-2026-10-25.json). Isso não muda o índice nem o produto.
+
+
+## ARC-13 — convenção aprovada e próximos consumers Admin (25/10/2026)
+
+- A convenção de chaves semânticas foi aprovada para uso documental: preservar o namespace existente, trocar o sufixo numérico por camelCase semântico, manter valores dinâmicos como parâmetros e compartilhar chaves somente quando owner, consumer e contrato coincidirem. Os 13 exemplos da proposta continuam não canônicos.
+- A proposta [dos fluxos transacionais do Admin](../evidence/architecture/arc13-semantic-key-proposal-admin-transactional-save-2026-10-25.json) rastreia 41 ocorrências em `persistHandlesButton` e `saveButton`; consolida duas mensagens repetidas no mesmo consumer, propõe 39 chaves sem colisões observadas no índice-base e exclui dois rótulos dinâmicos de revisão para auditoria compartilhada.
+- O escopo é documental: nenhum código, `decisions.json` ou índice ARC canônico foi alterado. Os textos enviados pela API e os detalhes dinâmicos de validação permanecem fora das propostas.

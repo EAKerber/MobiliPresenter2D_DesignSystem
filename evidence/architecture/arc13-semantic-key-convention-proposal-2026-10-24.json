@@ -2,10 +2,10 @@
   "schema": "M2DArc13SemanticKeyConventionProposal/1",
   "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
   "createdAt": "2026-10-24",
-  "status": "proposal-only-not-canonical",
+  "status": "convention-approved-examples-remain-proposals",
   "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
   "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
-  "rationale": "Primeira proposta de convenção e substituição semântica para amostra de chaves ancoradas em linhas. Não atualiza decisões canônicas, índice, código ou runtime.",
+  "rationale": "The convention is approved for documentary use and future proposal batches. The 13 sample key mappings remain proposals and do not update decisions, the canonical index, product code, or runtime.",
   "proposedRules": [
     "Preservar o namespace de domínio já existente no semanticKey; substituir somente o sufixo numérico por um nome estável da condição ou função.",
     "Usar camelCase no sufixo, sem número de linha, nome de arquivo, texto traduzido ou versão de schema como identidade da mensagem.",
@@ -166,5 +166,15 @@
     "Validar se versões explícitas de schema pertencem à mensagem traduzível ou à lógica de migração; a proposta de chave evita versionar a identidade.",
     "Revisar a relação entre as linhas 23 e 282 de configuration.js e as mensagens repetidas entre domínios antes de deduplicar.",
     "Completar os 199 casos numéricos restantes após aceitar a convenção, ou alterar os exemplos primeiro."
-  ]
+  ],
+  "approval": {
+    "date": "2026-10-25",
+    "scope": "Semantic key naming convention only: preserve domain namespace, use stable semantic camelCase suffixes, keep dynamic values as parameters, and share keys only when owner, consumer, and parameter contract match.",
+    "userAuthorized": true,
+    "notAuthorized": [
+      "Product runtime migration",
+      "Canonical ARC index migration",
+      "Unreviewed sample-key mappings"
+    ]
+  }
 }
