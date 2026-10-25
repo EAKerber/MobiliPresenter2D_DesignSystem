@@ -20,3 +20,31 @@ Na linha 1697, a mensagem visível “Inclua itens na administração para preen
 ## Limite
 
 Esta é uma recomendação de classificação sustentada pela origem fixada, não uma alteração do índice. Não gerei chaves para esses valores e não modifiquei o produto, o índice nem `decisions.json`. A fila sem chave cai de 364 para 358 candidatos a texto depois que essas exclusões forem incorporadas ao índice; a limpeza no índice permanece pendente.
+
+
+## Complemento após ampliar a inspeção de sinks — 25/10/2026
+
+A primeira leitura detectou seis literais técnicos; a inspeção de propriedades DOM, classes, IDs, atributos ARIA, elementos e chamadas CSSOM encontrou mais treze ocorrências técnicas no mesmo inventário. Portanto, a recomendação total é excluir **19 ocorrências** da fila sem chave:
+
+| Linha em app/admin/admin.js | Literal | Evidência |
+|---:|---|---|
+| 825 | `asset-preview${field === "maskAsset" ? " asset-preview--mask" : ""}` | Atribuído a `preview.className`. |
+
+| Linha em app/app.js | Literal | Evidência |
+|---:|---|---|
+| 617 | `customStage-${stage.id}` | Atribuído a `panel.id`. |
+| 618, 1677 | `${panel.id}-heading` | Usado como ID de heading em `aria-labelledby` e `title.id`. |
+| 749 | `--handle-swatch` | Nome de custom property CSS em `style.setProperty`. |
+| 977 | `module-detail__carousel-content` | Atribuído a `className`. |
+| 1144, 1145 | `front`, `side` | Valores de enum passados ao renderer; rótulos visíveis estão em campos separados. |
+| 1350 | `legend` | Nome de elemento em `document.createElement`. |
+| 1382, 1390 | `has-module-detail` | Nome de classe em `classList.remove/add`. |
+| 1417 | `module-detail__close` | Atribuído a `className`. |
+| 1462, 1648 | `dl` | Nome de elemento em `document.createElement`. |
+| 1492 | `requirement-hidden` | Código interno comparado em condição. |
+| 1608 | `title` | Nome de atributo em `removeAttribute`. |
+| 1697 | `admin-note` | Atribuído a `className`; a mensagem visível na mesma linha permanece candidata localizável. |
+| 2047 | `--mobile-pip-top` | Nome de custom property CSS em `removeProperty`. |
+| 2534 | `alert` | Valor do atributo ARIA `role`. |
+
+Os 19 registros têm correspondência única por arquivo/linha/texto no índice fixado. Com essa reclassificação proposta, os 364 itens sem chave caem para **345 candidatos locais**. O índice permanece sem alteração; o número 345 só se tornará canônico após reconciliação do próprio inventário. A lista inicial de seis casos acima permanece como evidência e é complementada por esta revisão ampliada.
