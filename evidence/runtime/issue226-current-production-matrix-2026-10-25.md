@@ -21,3 +21,15 @@ Nos seis pares viewport/tema, somente os itens abertos cresceram; a abertura do 
 Teclado nativo em `.foundation-list`: Enter abriu e fechou; Espaço abriu e fechou; o foco permaneceu no `summary`. Redimensionamento da janela com um item aberto (769 px → 501 px de viewport interno) preservou o estado aberto e os irmãos fechados mantiveram suas alturas. O limite mínimo da janela do navegador impediu usar este método para chegar a 390 px; essa largura foi verificada com emulação de viewport na matriz acima.
 
 **Limites:** não arquivei capturas antes/depois nesta passagem. A tentativa de zoom pelo atalho do navegador não alterou escala/viewport nesta ferramenta, então zoom permanece não verificado. A divergência de pixels em uma captura WebKit histórica, com DOM/geometria iguais, também não foi reproduzida nem resolvida por esta leitura Chromium. Portanto, a amostra atual não basta para fechar a issue #226; comparação visual WebKit e zoom seguem pendentes.
+
+
+## Complemento de reflow em viewport CSS equivalente a zoom (25/10/2026)
+
+Rota pública em contexto Chromium isolado, sem sessão, com viewport CSS emulado. As medidas abaixo aproximam a largura efetiva do layout a 200% e 400% sobre uma tela de 1366 px; visualViewport.scale permaneceu 1, portanto isto **não é um teste de zoom real do navegador**.
+
+| Largura CSS emulada | Largura útil / scroll | .foundation-list | .study-topics |
+|---:|---:|---|---|
+| 683 × 768 (~200%) | 668 / 668 px | Uma coluna; fechado 91,33 px; aberto 252,8 px; irmãos fechados 91,33 px. | Uma coluna; fechado 76,33 px; aberto 134,1 px; irmãos fechados 76,33 px. |
+| 341 × 768 (~400%) | 326 / 326 px | Uma coluna; fechado 150/131,33 px; aberto 356 px; os outros fechados mantiveram 131,33 px. | Uma coluna; fechado 76,33/82 px; aberto 155 px; os outros fechados mantiveram suas alturas. |
+
+Não houve overflow horizontal; abrir o primeiro details não alterou a altura intrínseca dos irmãos fechados. Esta emulação confirma o comportamento em larguras CSS equivalentes, mas não substitui a verificação de zoom do navegador nem as capturas antes/depois exigidas pela issue. #226 continua aberta.
