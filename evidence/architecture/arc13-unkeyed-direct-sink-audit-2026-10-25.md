@@ -78,3 +78,8 @@ O consumer `updateSelection` foi revisado até os sinks DOM. Dos 13 registros do
 ## ARC-13 — lote Admin de materiais com consumer confirmado (25/10/2026)
 
 `renderMaterials` foi rastreada até os labels, opções, alt da prévia, disclosure de destinos e ação de remoção. O lote tem **10 ocorrências**, dez chaves candidatas no namespace `admin.materials` e zero colisões. O nome do material no alt é parâmetro; o espaço inicial do texto da checkbox precisa ser preservado ou normalizado deliberadamente na extração. [Proposta não canônica](../evidence/architecture/arc13-semantic-key-proposal-admin-materials-2026-10-25.json). Sem mudança do índice ou do produto.
+
+
+## ARC-13 — lote Admin de etapas com consumer confirmado (25/10/2026)
+
+`renderStages` foi rastreada aos sinks da seção de itens não atribuídos e dos cartões de etapa. O lote contém **12 ocorrências**, doze chaves propostas em `admin.stages` e zero colisões. Os nomes dinâmicos de etapa são parâmetros nas labels acessíveis; a ação “Adicionar” permanece específica deste consumer. [Proposta não canônica](../evidence/architecture/arc13-semantic-key-proposal-admin-stages-2026-10-25.json). Sem alteração do índice ou do produto.

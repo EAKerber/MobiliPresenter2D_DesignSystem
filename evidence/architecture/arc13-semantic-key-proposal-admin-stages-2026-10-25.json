@@ -1,0 +1,180 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/admin/admin.js:renderStages",
+    "occurrences": 12,
+    "uniqueProposedKeys": 12
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "The strings are rendered in the Admin hierarchy editor as visible headings/hints/actions, stage-name field labels, accessible names, state labels and an empty stage message. Dynamic stage labels are kept as explicit parameters.",
+  "limitations": [
+    "Proposal only; no product or canonical index change.",
+    "The shared action word “Adicionar” remains scoped to this specific control and is not shared with other Admin components.",
+    "Other stage card consumers and hierarchy groups remain outside this bucket."
+  ],
+  "entries": [
+    {
+      "proposedKey": "admin.stages.unassignedItemsAria",
+      "text": "Itens do catálogo sem seção",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 624,
+      "owner": "Admin hierarchy editor",
+      "consumer": "Unassigned items section or stage card label/action/status rendered by renderStages",
+      "parameters": [],
+      "sourceLine": "  availableItems.setAttribute(\"aria-label\", \"Itens do catálogo sem seção\");",
+      "review": "Proposal only; check labeling and aria-label parameter contracts before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.stages.availableItemsHeading",
+      "text": "Itens disponíveis",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 626,
+      "owner": "Admin hierarchy editor",
+      "consumer": "Unassigned items section or stage card label/action/status rendered by renderStages",
+      "parameters": [],
+      "sourceLine": "  availableHeading.textContent = \"Itens disponíveis\";",
+      "review": "Proposal only; check labeling and aria-label parameter contracts before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.stages.availableItemsHint",
+      "text": "Itens pertencem a seções explícitas. Escolha uma seção compatível ou crie a estrutura inicial de uma etapa vazia.",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 629,
+      "owner": "Admin hierarchy editor",
+      "consumer": "Unassigned items section or stage card label/action/status rendered by renderStages",
+      "parameters": [],
+      "sourceLine": "  availableHint.textContent = \"Itens pertencem a seções explícitas. Escolha uma seção compatível ou crie a estrutura inicial de uma etapa vazia.\";",
+      "review": "Proposal only; check labeling and aria-label parameter contracts before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.stages.addItemAction",
+      "text": "Adicionar",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 649,
+      "owner": "Admin hierarchy editor",
+      "consumer": "Unassigned items section or stage card label/action/status rendered by renderStages",
+      "parameters": [],
+      "sourceLine": "    add.textContent = \"Adicionar\";",
+      "review": "Proposal only; check labeling and aria-label parameter contracts before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.stages.availableItemsEmpty",
+      "text": "Todos os itens compatíveis já pertencem a uma seção.",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 658,
+      "owner": "Admin hierarchy editor",
+      "consumer": "Unassigned items section or stage card label/action/status rendered by renderStages",
+      "parameters": [],
+      "sourceLine": "    empty.textContent = \"Todos os itens compatíveis já pertencem a uma seção.\";",
+      "review": "Proposal only; check labeling and aria-label parameter contracts before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.stages.stageNameLabel",
+      "text": "Nome da etapa",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 677,
+      "owner": "Admin hierarchy editor",
+      "consumer": "Unassigned items section or stage card label/action/status rendered by renderStages",
+      "parameters": [],
+      "sourceLine": "    nameLabel.append(document.createTextNode(\"Nome da etapa\"));",
+      "review": "Proposal only; check labeling and aria-label parameter contracts before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.stages.stageNameAccessibleLabel",
+      "text": "Nome da etapa ${stage.label}",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 683,
+      "owner": "Admin hierarchy editor",
+      "consumer": "Unassigned items section or stage card label/action/status rendered by renderStages",
+      "parameters": [
+        {
+          "name": "stageLabel",
+          "expression": "stage.label"
+        }
+      ],
+      "sourceLine": "    nameInput.setAttribute(\"aria-label\", `Nome da etapa ${stage.label}`);",
+      "review": "Proposal only; check labeling and aria-label parameter contracts before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.stages.removeAction",
+      "text": "Remover etapa",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 699,
+      "owner": "Admin hierarchy editor",
+      "consumer": "Unassigned items section or stage card label/action/status rendered by renderStages",
+      "parameters": [],
+      "sourceLine": "    remove.textContent = \"Remover etapa\";",
+      "review": "Proposal only; check labeling and aria-label parameter contracts before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.stages.enabledAccessibleLabel",
+      "text": "Ativar etapa ${stage.label}",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 711,
+      "owner": "Admin hierarchy editor",
+      "consumer": "Unassigned items section or stage card label/action/status rendered by renderStages",
+      "parameters": [
+        {
+          "name": "stageLabel",
+          "expression": "stage.label"
+        }
+      ],
+      "sourceLine": "    enabledInput.setAttribute(\"aria-label\", `Ativar etapa ${stage.label}`);",
+      "review": "Proposal only; check labeling and aria-label parameter contracts before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.stages.enabledState",
+      "text": "Ativa",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 712,
+      "owner": "Admin hierarchy editor",
+      "consumer": "Unassigned items section or stage card label/action/status rendered by renderStages",
+      "parameters": [],
+      "sourceLine": "    enabledLabel.append(enabledInput, document.createTextNode(stage.enabled ? \"Ativa\" : \"Inativa\"));",
+      "review": "Proposal only; check labeling and aria-label parameter contracts before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.stages.disabledState",
+      "text": "Inativa",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 712,
+      "owner": "Admin hierarchy editor",
+      "consumer": "Unassigned items section or stage card label/action/status rendered by renderStages",
+      "parameters": [],
+      "sourceLine": "    enabledLabel.append(enabledInput, document.createTextNode(stage.enabled ? \"Ativa\" : \"Inativa\"));",
+      "review": "Proposal only; check labeling and aria-label parameter contracts before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.stages.emptyStageHint",
+      "text": "Etapa vazia. Adicione um item disponível para criar o primeiro grupo e seção.",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 723,
+      "owner": "Admin hierarchy editor",
+      "consumer": "Unassigned items section or stage card label/action/status rendered by renderStages",
+      "parameters": [],
+      "sourceLine": "      empty.textContent = \"Etapa vazia. Adicione um item disponível para criar o primeiro grupo e seção.\";",
+      "review": "Proposal only; check labeling and aria-label parameter contracts before canonical assignment."
+    }
+  ]
+}
