@@ -38,3 +38,19 @@ A issue #208 **continua aberta**. A base antiga já não representa todos os ach
 ## Comparação visual temporária para DS04-02
 
 Como leitura visual auxiliar, montei em uma camada DOM temporária, na página isolada de login Admin (900 × 700 CSS px), duas cópias do CTA usando os valores exatos do código da rota protegida: texto branco atual sobre `#E2C991` (A) e texto `#20211F` (B). A opção B reutiliza uma cor escura já presente em `--primary-text`; contraste calculado: **10,01:1** contra **1,62:1** na A. A comparação deixa a diferença legível. Ela é uma simulação, não o CTA autenticado de `/access/manage.html`, não constitui decisão canônica e não muda o produto.
+
+
+## Readback adicional DS04-12 — 25/10/2026
+
+Na rota pública Production `/viewer/`, medi o estado dos quatro indicadores de página em contexto anônimo, sem tocar nos controles. Viewports CSS de 320 × 844 e 390 × 844, com preferência de cor clara/escura emulada:
+
+| Viewport | Tema | Indicador selecionado | Indicadores inativos | Overflow horizontal |
+|---:|---|---:|---:|---|
+| 320 px | claro | 4,96:1 (`#8B6A40` / `#FFFFFF`) | **1,75:1** (`#C9C3BB` / `#FFFFFF`) | não (`320/320`) |
+| 320 px | escuro | 9,29:1 (`#D8BC7C` / `#1B1C1A`) | 9,78:1 (`#C9C3BB` / `#1B1C1A`) | não (`320/320`) |
+| 390 px | claro | 4,96:1 (`#8B6A40` / `#FFFFFF`) | **1,75:1** (`#C9C3BB` / `#FFFFFF`) | não (`390/390`) |
+| 390 px | escuro | 9,29:1 (`#D8BC7C` / `#1B1C1A`) | 9,78:1 (`#C9C3BB` / `#1B1C1A`) | não (`390/390`) |
+
+A CSSOM confirmou que o valor inativo é fixado em `#c9c3bb`; a regra mobile consta no blob atual de `app/viewer/viewer.css`, `90d23678630c17f63ac343bfd7e5e1ce3bbcb1b2`. Em 768 e 1280 px o contêiner `.mobile-view-nav` está com `display:none` e os botões medem 0 × 0; esses estilos ocultos não foram tratados como indicadores visíveis nem como falha de contraste. A largura de documento coincidiu com a largura cliente nos oito cenários; a janela desktop de 1280 px reservou 15 px de scrollbar, sem overflow.
+
+**Conclusão:** DS04-12 é confirmado no Viewer público mobile e no tema claro: a paginação inativa fica abaixo de 3:1. O resultado é uma amostra de um componente e dois tamanhos, não uma auditoria global. Nenhum CSS, token, decisão canônica ou estado de Production foi alterado.
