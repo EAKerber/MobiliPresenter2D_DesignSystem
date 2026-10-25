@@ -52,3 +52,10 @@ Esta é uma fila de revisão, não uma convenção aprovada nem um lote de migra
 O usuário aprovou a convenção operacional: preservar o namespace existente, usar sufixo semântico estável em camelCase, manter valores dinâmicos como parâmetros e compartilhar uma chave somente quando owner, consumer e contrato de parâmetros coincidirem. Números de linha, nomes de arquivo, texto traduzido e versões de schema não compõem a identidade da chave.
 
 A aprovação canoniza as regras, não os exemplos nem seus owners. A auditoria dos 13 exemplos numéricos e cinco rótulos confirma correspondência única e ausência de colisões na amostra observada; cada chave ainda exige revisão contextual antes de migração. O índice, o runtime e decisions.json não foram alterados. A fila segue: 199 propostas numéricas restantes, 364 textos sem chave sem proposta e 190 itens de conteúdo deferidos.
+
+
+## Primeiro lote após aprovação da convenção — configuration.js (25/10/2026)
+
+O arquivo [arc13-semantic-key-proposal-configuration-batch-2026-10-25.json](arc13-semantic-key-proposal-configuration-batch-2026-10-25.json) registra candidatos para as 64 ocorrências remanescentes em app/core/configuration.js: 63 chaves sugeridas, 33 ocorrências com parâmetros e zero colisões com as chaves presentes no índice ARC-13. As ocorrências das linhas 455 e 459 compartilham a sugestão conflictingEventTarget: o texto, owner/consumer e parâmetro rule.id são idênticos, mas o registro mantém as duas proveniências para revisão contextual. Cada linha preserva texto atual, contexto de código, owner, consumer, parâmetros e hashes.
+
+Este lote reduz de 199 para 135 as referências numéricas ainda sem sugestão. As chaves continuam candidatas, não foram inseridas no índice e nenhum código do produto foi alterado.
