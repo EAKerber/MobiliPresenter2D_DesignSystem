@@ -2,34 +2,44 @@
 
 ## Escopo e autorização
 
-Teste autorizado pelo usuário para preview na PR de produto [#242](https://github.com/EAKerber/MobiliPresenter2D/pull/242). A regra foi limitada a `.scene-hotspot:focus-visible`; sem mudança em tokens, hover, seleção, dados da cena, `decisions.json`, merge ou Production.
+Teste autorizado pelo usuário para preview na PR de produto [#242](https://github.com/EAKerber/MobiliPresenter2D/pull/242). A regra permanece limitada a `.scene-hotspot:focus-visible`; sem mudança em tokens, hover, seleção, dados da cena, `decisions.json`, merge ou Production.
 
-Preview testado: https://deploy-preview-242--mobilipresenter2d.netlify.app/viewer/
-Head da PR: `2727c85e933f4f17f539a97a263c7845d31efa0b`.
+Preview usado para leitura visual e captura: https://deploy-preview-242--mobilipresenter2d.netlify.app/viewer/
+Head da PR: `c2659513c22d886bc4de63074a66ed9228524c0f`.
+Deploy Preview confirmado no DOM: `6ade805a7dc745ffae862ccd`.
 
-## Iteração e resultado
+## Implementação em teste
 
-A primeira versão colocou as keylines fora do contorno e foi rejeitada: a inspeção móvel mostrou recorte na borda direita do hotspot 07. A versão final manteve o anel aprovado — 4 px, offset declarado de 3 px, acento #8B6A40 no claro e #D8BC7C no escuro — e usa keylines neutras fina preta e branca por `box-shadow: 0 0 0 1px #000, 0 0 0 3px #fff`. As keylines ficam dentro da extensão externa já ocupada pelo outline; não aumentam a geometria externa.
+O anel VIS-002 continua com 4 px, offset CSS declarado de 3 px, `#8B6A40` no claro e `#D8BC7C` no escuro. A regra de foco usa `box-shadow: 0 0 0 2px #000, 0 0 0 3px #fff`: faixa preta ampliada para 2 px e faixa branca na extensão de 3 px. A extensão externa do outline não mudou.
 
-## Matriz observada
+## Verificações atuais
 
-| Viewport | Tema | Hotspots com foco visível | Keylines preta e branca | Menor folga do indicador ao limite da cena | Overflow horizontal |
-|---|---|---:|---|---:|---|
-| 390 × 844 | claro | 7/7 | 7/7 | 0,11 px | não |
-| 390 × 844 | escuro | 7/7 | 7/7 | 0,11 px | não |
-| 1280 × 800 | claro | 7/7 | 7/7 | 6,29 px | não |
-| 1280 × 800 | escuro | 7/7 | 7/7 | 6,29 px | não |
+No Deploy Preview do PR, em 390 × 844 e 1280 × 800, nos temas claro e escuro:
 
-A inspeção visual confirmou no preview que os anéis permanecem dentro da cena para os sete hotspots; a leitura DOM/CSS confirmou o estado `:focus-visible`, as duas camadas de cor e ausência de rolagem horizontal. Os checks do commit terminaram com sucesso: App build purity, Current variant fidelity, Summary pricing browser, Stone browser, Mobile browser, Public routing before Clerk e Current asset gates.
+- Os sete hotspots aceitaram foco visível; as duas cores das keylines e o outline foram confirmados no CSS computado.
+- O indicador permaneceu dentro da cena; folga mínima computada de 0,11 CSS px no mobile e 6,29 px no desktop.
+- Não houve overflow horizontal.
 
-## Limites
+Os sete checks associados ao head terminaram com sucesso: App build purity, Current variant fidelity, Summary pricing browser, Stone browser, Mobile browser, Public routing before Clerk e Current asset gates.
 
-- A rota contém apenas a cena Cozinha; não generalizar para outras fotografias.
-- A folga móvel mínima é pequena (0,11 CSS px) sob a geometria computada nesta sessão.
-- A medição anterior de contraste na foto era aproximada e baseada nos pixels da imagem-base. Esta verificação não mede contraste de cada pixel composto do contorno/keylines contra a imagem e não declara conformidade WCAG.
-- Não cobre outras cenas, navegadores, zoom do navegador nem revisão humana final de design.
-- PR #242 permanece DRAFT. A experiência é candidata para revisão do usuário; sem integração ou publicação.
+## Medição sobre pixels compostos
+
+Amostrei capturas escuras de 390 × 844 comparando o hotspot focado com uma captura-base temporária sem outline/sombra. No hotspot 01, sobre área clara, pixels da faixa escura tiveram contraste de 7,05:1 no mínimo amostrado, 7,56:1 no percentil 10 e 9,16:1 na mediana. No hotspot 02, sobre áreas mais escuras da foto, pixels da faixa preta chegaram a 2,04:1 no mínimo; o percentil 10 ficou em 3,00:1 e a mediana em 7,29:1.
+
+Isso confirma melhora em uma área clara, mas não comprova contraste de 3:1 em cada trecho da fotografia. A rasterização e o fundo variam ao longo do contorno, e a faixa branca não demonstrou uma margem confiável nos pontos amostrados. Não declarar conformidade WCAG com esta amostra.
+
+## Estado do preview isolado
+
+A rota equivalente em `https://deploy-preview-242--m2d-auth-ci-isolated.netlify.app/viewer/` respondeu sem os dados do Viewer, exibiu “Informações temporariamente indisponíveis” e registrou HTTP 503 para um recurso. O Deploy Preview principal acima renderizou a cena e permitiu a medição. A causa do 503 no site isolado não foi determinada; isso não alterou os checks verdes do commit.
+
+## Limites e estado
+
+- A amostra visual contém apenas a cena Cozinha; não generalizar para outras fotografias.
+- A folga mobile mínima permanece pequena (0,11 CSS px).
+- A medição de pixels é diagnóstica para os hotspots 01 e 02, não uma certificação WCAG global.
+- PR #242 permanece DRAFT. Revisão visual humana pendente; sem integração ou publicação.
+- A camada neutra continua experimental e não altera a decisão canônica.
 
 ## Referência
 
-A cor e a geometria do anel continuam conforme VIS-002. As keylines são uma camada experimental específica do estado de foco e não alteram a decisão canônica.
+A cor e a geometria do anel permanecem conforme VIS-002. As keylines só afetam o foco visível e não alteram a decisão canônica.
