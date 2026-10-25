@@ -1,5 +1,12 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+
+## Issue #226 — matriz atual em Production (25/10/2026)
+
+A rechecagem após reload confirmou, nas duas grades `.foundation-list` e `.study-topics`, que um item aberto cresce sem esticar irmãos fechados nos viewports 1366 × 768, 768 × 1024 e 390 × 844, em tema claro/escuro. Enter e Espaço preservam o toggle nativo; duas aberturas sequenciais são independentes; o fechamento restaura a geometria sem overflow. A regra `align-items:start` está ativa nas duas grades em Production. [Matriz e limites](../evidence/runtime/issue226-current-production-matrix-2026-10-25.md).
+
+A issue permanece aberta: não foram arquivadas capturas antes/depois, zoom não foi efetivamente testado e a divergência visual WebKit histórica segue inconclusiva. Esta rechecagem no Chromium é evidência atual limitada, não homologação visual cross-browser.
+
 ## VIS-002C v0.3 — revisão dos dez contextos concluída (25/10/2026)
 
 - PR Design System [#52](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/52) distribui `#292723` nos dez contextos de texto longo medidos em tema claro. A preferência do usuário por quase preto também atualiza os três consumidores previamente preservados na v0.2, já mapeados como pares runtime aprovados. `decisions.json`, tema escuro, eyebrows, assinaturas e seletores globais permanecem inalterados.
