@@ -92,3 +92,8 @@ Na fila originalmente não chaveada e unclassified, a inspeção de source/linha
 A fotografia acima continua correta para a cobertura total de 728 ocorrências (369 sem chave, incluindo lotes com propostas separadas). Na subfila de 364 candidatos sem chave e sem consumer, a revisão separou 19 literais técnicos e quatro mensagens de diagnóstico interno, restando **341 itens**: 208 em `app/admin/admin.js` e 133 em `app/app.js`. Isso não altera o número do índice nem os 369 itens sem chave da cobertura total.
 
 O [mapa corrigido](arc13-unkeyed-consumer-scope-map-2026-10-25.json) substitui o mapa anterior, que podia atribuir listeners do módulo à função anterior. São pistas lexicais/call sites; consumers, ownership e contratos seguem pendentes. Nenhum lote de chaves foi criado para esses itens.
+
+
+## Reclassificação adicional de identificadores — 25/10/2026
+
+A subfila cai de 341 para **338** após separar três formatos técnicos confirmados no código: slug interno de etapa, ID ligado por `aria-controls` e ID ligado por `aria-describedby`. Totais atuais da subfila: 22 valores técnicos e quatro diagnósticos internos fora da fila de revisão, 207 ocorrências no Admin e 131 no Configurador. A cobertura total do índice continua 728 localizáveis / 369 sem chave; nenhuma classificação canônica foi alterada.

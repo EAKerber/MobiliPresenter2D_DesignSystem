@@ -9,13 +9,15 @@
     "configurator": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6"
   },
   "counts": {
-    "previousQueue": 364,
-    "technicalValues": 19,
-    "consoleOnlyDiagnostics": 4,
-    "remaining": 341,
-    "admin": 208,
-    "configurator": 133,
-    "scopeBuckets": 75,
+    "originalCandidates": 364,
+    "technicalValuesExcluded": 22,
+    "consoleOnlyDiagnosticMessagesExcluded": 4,
+    "remainingCandidates": 338,
+    "byFile": {
+      "app/admin/admin.js": 207,
+      "app/app.js": 131
+    },
+    "lexicalScopeBuckets": 75,
     "duplicateTextGroups": 21
   },
   "method": "Brace-aware lexical scope hints. This is not an AST or call graph; a scope does not prove a user-facing consumer. Literal values, parameters, route and source line are included for manual tracing. No key proposals.",
@@ -120,6 +122,24 @@
         "file": "app/app.js",
         "line": 2534,
         "literal": "alert"
+      },
+      {
+        "file": "app/admin/admin.js",
+        "line": 1445,
+        "literal": "stage-${label.trim().toLocaleLowerCase(\"pt-BR\").normalize(\"NFD\").replace(/[\\u0300-\\u036f]/g, \"\").replace(/[^a-z0-9]+/g, \"-\").replace(/^-|-$/g, \"\").slice(0, 28) || \"extra\"}",
+        "reason": "computed slug assigned to internal stage.id"
+      },
+      {
+        "file": "app/app.js",
+        "line": 1131,
+        "literal": "detailViews-${entity.id}",
+        "reason": "ID referenced by aria-controls and assigned to stage.id"
+      },
+      {
+        "file": "app/app.js",
+        "line": 1530,
+        "literal": "blocked-${entity.id}",
+        "reason": "ID referenced by aria-describedby and assigned to status.id"
       }
     ],
     "diagnostics": [
@@ -156,11 +176,11 @@
     },
     {
       "scope": "app/app.js :: function startConfigurator > function createDetailCarousel",
-      "count": 19
+      "count": 18
     },
     {
       "scope": "app/admin/admin.js :: module/top-level",
-      "count": 15
+      "count": 14
     },
     {
       "scope": "app/app.js :: function startConfigurator > function updateSelection",
@@ -219,10 +239,6 @@
       "count": 5
     },
     {
-      "scope": "app/app.js :: function startConfigurator > function updateModuleCards",
-      "count": 5
-    },
-    {
       "scope": "app/app.js :: function startConfigurator > function renderCustomStage",
       "count": 5
     },
@@ -260,6 +276,10 @@
     },
     {
       "scope": "app/app.js :: function startConfigurator > function createModuleNavigationButton",
+      "count": 4
+    },
+    {
+      "scope": "app/app.js :: function startConfigurator > function updateModuleCards",
       "count": 4
     },
     {
@@ -2799,21 +2819,6 @@
     },
     {
       "file": "app/admin/admin.js",
-      "line": 1445,
-      "route": "/admin.html",
-      "currentText": "stage-${label.trim().toLocaleLowerCase(\"pt-BR\").normalize(\"NFD\").replace(/[\\u0300-\\u036f]/g, \"\").replace(/[^a-z0-9]+/g, \"-\").replace(/^-|-$/g, \"\").slice(0, 28) || \"extra\"}",
-      "parameters": [
-        "label.trim().toLocaleLowerCase(\"pt-BR\").normalize(\"NFD\").replace(/[\\u0300-\\u036f]/g, \"\").replace(/[^a-z0-9]+/g, \"-\").replace(/^-|-$/g, \"\").slice(0, 28) || \"extra\""
-      ],
-      "sourceLine": "  let id = `stage-${label.trim().toLocaleLowerCase(\"pt-BR\").normalize(\"NFD\").replace(/[\\u0300-\\u036f]/g, \"\").replace(/[^a-z0-9]+/g, \"-\").replace(/^-|-$/g, \"\").slice(0, 28) || \"extra\"}`;",
-      "lexicalScopePath": [
-        "module/top-level"
-      ],
-      "ownerHint": "admin interface",
-      "classification": "interface-localizable"
-    },
-    {
-      "file": "app/admin/admin.js",
       "line": 1451,
       "route": "/admin.html",
       "currentText": "Nome da nova cor ou textura",
@@ -4028,22 +4033,6 @@
     },
     {
       "file": "app/app.js",
-      "line": 1131,
-      "route": "/config/",
-      "currentText": "detailViews-${entity.id}",
-      "parameters": [
-        "entity.id"
-      ],
-      "sourceLine": "    collapse.setAttribute(\"aria-controls\", `detailViews-${entity.id}`);",
-      "lexicalScopePath": [
-        "function startConfigurator",
-        "function createDetailCarousel"
-      ],
-      "ownerHint": "configurator interface",
-      "classification": "interface-localizable"
-    },
-    {
-      "file": "app/app.js",
       "line": 1143,
       "route": "/config/",
       "currentText": "Foco",
@@ -4771,22 +4760,6 @@
       "currentText": "Controlado por um evento da configuração.",
       "parameters": [],
       "sourceLine": "        input.title = override ? \"Controlado por um evento da configuração.\" : \"\";",
-      "lexicalScopePath": [
-        "function startConfigurator",
-        "function updateModuleCards"
-      ],
-      "ownerHint": "configurator interface",
-      "classification": "interface-localizable"
-    },
-    {
-      "file": "app/app.js",
-      "line": 1530,
-      "route": "/config/",
-      "currentText": "blocked-${entity.id}",
-      "parameters": [
-        "entity.id"
-      ],
-      "sourceLine": "        input.setAttribute(\"aria-describedby\", blocked ? `blocked-${entity.id}` : \"\");",
       "lexicalScopePath": [
         "function startConfigurator",
         "function updateModuleCards"

@@ -63,3 +63,16 @@ Quatro templates restantes foram rastreados. Todos alimentam objetos de erro de 
 | `app/app.js:538` | `missing Modules view adapter: ${view.id}` | Diagnóstico interno de layout, pelo fluxo descrito acima. |
 
 A fila de revisão passa de 345 para **341** textos: 208 no Admin e 133 no Configurador. Exclusão documental; índice canônico inalterado.
+
+
+## Segunda revisão de literais técnicos — 25/10/2026
+
+Uma busca dirigida por templates com formato de identificador encontrou mais três valores que a triagem anterior não havia separado. O código fixado confirma que todos são infraestrutura DOM/modelo, não conteúdo de interface:
+
+| Arquivo:linha | Literal | Uso confirmado |
+|---|---|---|
+| `app/admin/admin.js:1445` | `stage-${label.trim().toLocaleLowerCase("pt-BR").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 28) || "extra"}` | computed slug assigned to internal stage.id. |
+| `app/app.js:1131` | `detailViews-${entity.id}` | ID referenced by aria-controls and assigned to stage.id. |
+| `app/app.js:1530` | `blocked-${entity.id}` | ID referenced by aria-describedby and assigned to status.id. |
+
+A fila de revisão cai de 341 para **338** textos: 207 no Admin e 131 no Configurador. A busca foi dirigida e não prova exaustividade. Nenhuma alteração no índice ou no produto.

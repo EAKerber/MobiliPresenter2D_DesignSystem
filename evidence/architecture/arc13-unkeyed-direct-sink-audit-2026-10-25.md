@@ -46,3 +46,10 @@ Na distribuição sintática inicial de 345 itens, quatro diagnósticos sem saí
 | **Total** | **341** |
 
 Há 21 grupos de texto repetido; igualdade textual não basta para compartilhar chave. Índice, runtime e `decisions.json` permanecem inalterados.
+
+
+## Correção adicional — identificadores dinâmicos (25/10/2026)
+
+A revisão dos formatos semelhantes a identificadores encontrou três falsos positivos adicionais: um slug que vira `stage.id`, o ID do carrossel referenciado por `aria-controls` e o ID de status referenciado por `aria-describedby`. A fila atual passa de 341 para **338** (207 Admin, 131 Configurador). A reclassificação é somente documental e está registrada no [mapa corrigido](arc13-unkeyed-consumer-scope-map-2026-10-25.json); a busca dirigida não atesta cobertura completa.
+
+Após excluir os três itens da categoria “outras expressões”, a distribuição heurística fica: 106 escrita textual direta, 33 ARIA/alt, 14 tooltips, 66 mapas/arrays, 3 markup e **116 outras expressões** — total 338. As categorias continuam sendo pistas de sintaxe, não consumidores comprovados.
