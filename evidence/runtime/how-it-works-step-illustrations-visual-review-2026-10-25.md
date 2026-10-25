@@ -1,15 +1,20 @@
-# Revisão visual das ilustrações de etapas — Como funciona (Production, 25/10/2026)
+# Revisão visual das imagens com alt vazio — Como funciona (Production, 25/10/2026)
 
-**Alvo:** `EAKerber/MobiliPresenter2D@main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, rota `/how-it-works/`, carregada em contexto público isolado. A revisão ocorreu em tema escuro, viewport 851×397 CSS px. Rolei até a seção para acionar as imagens lazy; as cinco ficaram completas e visíveis na captura.
+**Alvo:** `EAKerber/MobiliPresenter2D@main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, rota `/how-it-works/`, em contexto público isolado. A inspeção visual ocorreu em tema escuro, viewport 851×397 CSS px, após scroll para acionar o carregamento lazy. Os oito elementos observados mantinham `alt=""`.
 
-| Arquivo | Representação observada | Texto próximo |
+| Elemento | Contexto observado | Classificação sustentada pela evidência |
 |---|---|---|
-| `etapa-cozinha.webp` | gabinete/área de cozinha | “Cozinha” e “Comece pelo ambiente prioritário.” |
-| `etapa-lavanderia.webp` | lavadora e armários | “Lavanderia” e “Acrescente o que fizer sentido.” |
-| `etapa-sala-v1.webp` | sofá e luminária | “Sala” e “Inclua outros ambientes no seu ritmo.” |
-| `etapa-quarto.webp` | cama e mesa lateral | “Quarto” e “Complete em outro momento.” |
-| `etapa-escritorio.webp` | mesa, cadeira e luminária | “Escritório” e “Continue quando quiser.” |
+| Ícone WhatsApp (`whatsapp.svg`) | `aria-hidden="true"`; o link é nomeado “Fale conosco pelo WhatsApp”. | Decorativo/redundante para tecnologia assistiva; o link fornece o nome acessível. |
+| Ilustração de móveis prontos (`comparacao-moveis-prontos-raster-v1.png`) | Desenho de um gabinete, sem texto embutido; título “Móveis prontos” e critérios/detalhes estão em texto no mesmo cartão e na comparação adjacente. | Ilustração representativa de categoria; a inspeção não encontrou dado textual único. |
+| Logo no cartão comparativo (`logo-dark-380.png`) | O wordmark visível repete o título “Casa em Módulos” no cartão. | Marca redundante ao nome textual do cartão. |
+| `etapa-cozinha.webp` | Gabinete/área de cozinha. | Ambiente já nomeado “Cozinha”; descrição: “Comece pelo ambiente prioritário.” |
+| `etapa-lavanderia.webp` | Lavadora e armários. | Ambiente já nomeado “Lavanderia”; descrição: “Acrescente o que fizer sentido.” |
+| `etapa-sala-v1.webp` | Sofá e luminária. | Ambiente já nomeado “Sala”; descrição: “Inclua outros ambientes no seu ritmo.” |
+| `etapa-quarto.webp` | Cama e mesa lateral. | Ambiente já nomeado “Quarto”; descrição: “Complete em outro momento.” |
+| `etapa-escritorio.webp` | Mesa, cadeira e luminária. | Ambiente já nomeado “Escritório”; descrição: “Continue quando quiser.” |
 
-As artes são ilustrações simples do ambiente correspondente; não exibem texto nem detalhe informativo distinto do título/descrição adjacentes. A leitura visual sustenta classificá-las como decorativas/redundantes para tecnologia assistiva, mantendo `alt=""`. **Nenhum `alt`, conteúdo, CSS ou código foi alterado.** Isto registra a inspeção e sua conclusão técnica; não equivale a uma aprovação visual formal nem certifica outras rotas, temas, larguras ou estados.
+As ilustrações são simples representações visuais das categorias e etapas; não exibem texto nem informação única além dos nomes e descrições adjacentes. A observação sustenta manter `alt=""` nos oito elementos: para as sete imagens em cartões/lista, o contexto textual já identifica a categoria; no ícone, o link tem nome acessível e a própria imagem está oculta da árvore acessível.
 
-A inspeção foi somente de DOM e pixels após scroll em página pública; não houve interação com formulários, autenticação, escrita de dados ou simulação de falha de imagem. A evidência anterior continua válida quanto à contagem geral (28/28 completas após scroll); esta passagem foca apenas as cinco ilustrações de etapas.
+**Nenhum `alt`, conteúdo, CSS ou código foi alterado.** Esta é uma revisão técnica do conteúdo publicado, não uma aprovação visual formal nem uma certificação de acessibilidade global. O registro vale para esta rota, commit, tema, viewport e sessão; não cobre outras rotas, larguras, estados, nem teste com tecnologia assistiva.
+
+A leitura foi somente de DOM e pixels. Não houve interação com formulários, autenticação ou escrita de dados, nem simulação de falha de imagem. A evidência anterior permanece como fonte da contagem de carregamento geral (28/28 imagens completas após scroll); esta revisão classifica os oito casos com `alt=""`.
