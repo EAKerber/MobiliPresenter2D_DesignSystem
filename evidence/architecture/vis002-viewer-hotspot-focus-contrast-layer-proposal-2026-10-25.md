@@ -2,7 +2,9 @@
 
 ## Estado
 
-**Proposta para revisão; não canônica e não autorizada para implementação.** Não altera `decisions.json`, CSS, produto ou cor de foco já aprovada.
+**Aprovada pelo usuário para teste em preview em 25/10/2026; não canônica.** A autorização cobre somente `.scene-hotspot:focus-visible` na PR de produto [#242](https://github.com/EAKerber/MobiliPresenter2D/pull/242), sem merge, Production, `decisions.json`, outros estados ou tokens globais.
+
+Para tornar A concreta, o preview usa keylines neutras opacas `#FFFFFF` e `#000000`, imediatamente externas ao anel dourado. O anel autorizado continua em 4 px com offset 3 px; as duas keylines são experimentais e não mudam a referência homologada.
 
 O preview da PR #242 implementa corretamente o foco autorizado: contorno de 4 px, offset declarado de 3 px, `#8B6A40` no tema claro e `#D8BC7C` no escuro, restrito a `.scene-hotspot:focus-visible`. A rechecagem por teclado confirmou os sete hotspots em uma cena; a distinção do anel sobre a fotografia continua insuficiente em trechos medidos.
 
@@ -33,6 +35,8 @@ A amostra compara pixels da imagem-base com a cor do traçado; não é captura d
 4. Confirmar navegação por Tab sem mudar seleção, indicador dentro da cena, sem recorte/overflow e sem sobreposição que apague marcadores vizinhos.
 5. Manter DRAFT até inspeção visual humana; não mergear nem publicar em Production sem autorização.
 
-## Decisão necessária
+## Decisão e limite
 
-Para criar uma segunda implementação de preview, escolher explicitamente A, B ou C. Até essa revisão, PR #242 continua limitada ao foco aprovado e permanece DRAFT; nenhuma camada adicional foi aplicada.
+O usuário escolheu **A — testar keylines no preview**. A implementação experimental está na branch da PR #242: outline dourado de 4 px/offset 3 px, acrescido de uma camada branca e outra preta em `box-shadow`, somente em `.scene-hotspot:focus-visible`. Os valores neutros escolhidos são `#FFFFFF` e `#000000`; a revisão renderizada precisa confirmar ordem/espessura visual e a medição de contraste na fotografia.
+
+A seleção autoriza esse segundo preview, não torna a camada canônica e não autoriza merge ou Production. O restante do gate permanece: sete hotspots, temas claro/escuro, desktop/mobile, foco por teclado sem alterar seleção, captura renderizada, recorte/overflow e colisão com marcadores vizinhos. Existe apenas a cena Cozinha publicada; não generalizar a conclusão para outras fotografias.
