@@ -73,3 +73,8 @@ Os dois lotes subsequentes à aprovação da convenção agora cobrem as 199 oco
 As 364 ocorrências ainda sem chave foram mapeadas contra os arquivos-fonte no commit de produto registrado pelo índice. A análise lexical as agrupou em 72 funções candidatas; encontrou 22 grupos de texto repetido e seis valores com aparência de código/markup que exigem reclassificação. O agrupamento não confirma consumers nem autoriza compartilhamento. O próximo passo é revisar uso DOM/ARIA e ownership antes de propor as chaves.
 
 [Mapa com proveniência e linhas](arc13-unkeyed-consumer-context-map-2026-10-25.json).
+
+
+## Reclassificação sugerida de literais técnicos — 25/10/2026
+
+A revisão de contexto confirmou seis ocorrências não textuais entre os 364 itens sem chave: classes CSS `has-module-detail` e `admin-note`, tags HTML `dl` e código interno `requirement-hidden`. As seis não devem receber chaves de localização. A mensagem visível na linha que contém `admin-note` permanece uma ocorrência localizável separada. Com esta revisão, 358 itens sem chave permanecem candidatos de texto; o índice original não foi alterado. [Auditoria](arc13-unkeyed-code-literal-reclassification-2026-10-25.md).
