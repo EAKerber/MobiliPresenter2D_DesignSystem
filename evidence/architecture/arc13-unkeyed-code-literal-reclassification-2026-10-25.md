@@ -76,3 +76,8 @@ Uma busca dirigida por templates com formato de identificador encontrou mais tr�
 | `app/app.js:1530` | `blocked-${entity.id}` | ID referenced by aria-describedby and assigned to status.id. |
 
 A fila de revisão cai de 341 para **338** textos: 207 no Admin e 131 no Configurador. A busca foi dirigida e não prova exaustividade. Nenhuma alteração no índice ou no produto.
+
+
+## Complemento — valor de categoria usado apenas em comparação (25/10/2026)
+
+A revisão dos sinks em `updateSelection` encontrou `Estrutural` na condição `product.category === "Estrutural"`. O valor escolhe entre duas descrições exibidas; ele próprio não é renderizado. Reclassificação adicional: um valor técnico, totalizando **23 valores técnicos** fora da fila. Restam **337 textos** (207 Admin, 130 Configurador). Evidência documental sobre a head fixada; índice e produto continuam sem alteração.

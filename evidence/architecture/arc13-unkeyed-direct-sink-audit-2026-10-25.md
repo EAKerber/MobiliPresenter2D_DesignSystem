@@ -58,3 +58,13 @@ Após excluir os três itens da categoria “outras expressões”, a distribui�
 ## ARC-13 — primeiro lote com consumer confirmado (25/10/2026)
 
 Rastreei `createDetailCarousel` no Configurador: o lote reúne **26 ocorrências** de títulos/rótulos curtos/descrições, nomes acessíveis, tooltips e ações de recolher. A proposta contém 16 chaves novas e quatro reutilizações intencionais de chaves já atribuídas ao mesmo carrossel; usa parâmetros `pageLabel`, `shortLabel`, `pageNumber` e `pageCount`. Anterior/próximo continuam mensagens distintas. A auditoria encontrou zero colisões com significado diferente e zero conflito de texto entre chaves. [Proposta não canônica](../evidence/architecture/arc13-semantic-key-proposal-configurator-carousel-2026-10-25.json). O índice e o produto não mudaram; os itens continuam sem chave canônica até reconciliação.
+
+
+## Reclassificação de valor de enum — 25/10/2026
+
+O literal `Estrutural` em `app/app.js:1435` é comparado com `product.category` para escolher uma das duas descrições. Não é exibido por essa linha. Com essa exclusão, a fila de revisão cai de 338 para **337** (207 Admin, 130 Configurador); a categoria sem sink direto cai de 116 para **115**. Trata-se de reclassificação documental, ainda não aplicada ao índice.
+
+
+## ARC-13 — ajuste após revisão do consumer do Viewer (25/10/2026)
+
+O literal `Estrutural` em `updateSelection` é um valor comparado para escolher uma descrição, não um rótulo renderizado. A fila documental atual fica em **337 textos** (207 Admin, 130 Configurador), com 23 valores técnicos e quatro diagnósticos internos separados. [Reclassificação](../evidence/architecture/arc13-unkeyed-code-literal-reclassification-2026-10-25.md). O índice permanece em 369 textos sem chave no total; os lotes contextualizados continuam propostas até reconciliação canônica.

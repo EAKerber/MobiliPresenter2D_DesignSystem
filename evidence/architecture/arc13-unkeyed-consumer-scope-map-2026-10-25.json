@@ -10,12 +10,12 @@
   },
   "counts": {
     "originalCandidates": 364,
-    "technicalValuesExcluded": 22,
+    "technicalValuesExcluded": 23,
     "consoleOnlyDiagnosticMessagesExcluded": 4,
-    "remainingCandidates": 338,
+    "remainingCandidates": 337,
     "byFile": {
       "app/admin/admin.js": 207,
-      "app/app.js": 131
+      "app/app.js": 130
     },
     "lexicalScopeBuckets": 75,
     "duplicateTextGroups": 21
@@ -140,6 +140,12 @@
         "line": 1530,
         "literal": "blocked-${entity.id}",
         "reason": "ID referenced by aria-describedby and assigned to status.id"
+      },
+      {
+        "file": "app/app.js",
+        "line": 1435,
+        "literal": "Estrutural",
+        "reason": "compared with product.category to select a different explanatory sentence; the value itself is not rendered"
       }
     ],
     "diagnostics": [
@@ -183,11 +189,11 @@
       "count": 14
     },
     {
-      "scope": "app/app.js :: function startConfigurator > function updateSelection",
-      "count": 14
+      "scope": "app/admin/admin.js :: function renderEvents",
+      "count": 13
     },
     {
-      "scope": "app/admin/admin.js :: function renderEvents",
+      "scope": "app/app.js :: function startConfigurator > function updateSelection",
       "count": 13
     },
     {
@@ -4604,20 +4610,6 @@
       "currentText": "Valor atual na simulação",
       "parameters": [],
       "sourceLine": "    priceLabel.textContent = \"Valor atual na simulação\";",
-      "lexicalScopePath": [
-        "function startConfigurator",
-        "function updateSelection"
-      ],
-      "ownerHint": "configurator interface",
-      "classification": "interface-localizable"
-    },
-    {
-      "file": "app/app.js",
-      "line": 1435,
-      "route": "/config/",
-      "currentText": "Estrutural",
-      "parameters": [],
-      "sourceLine": "      priceDescription.textContent = product.category === \"Estrutural\"",
       "lexicalScopePath": [
         "function startConfigurator",
         "function updateSelection"
