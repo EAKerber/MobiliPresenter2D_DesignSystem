@@ -86,7 +86,7 @@ Os pesos abaixo são uma ferramenta de planejamento, não metas ou decisões can
 - Produto PR [#241](https://github.com/EAKerber/MobiliPresenter2D/pull/241), head `f102c3037e2f64ebb904643bbc076064322f1672`: oito workflows SUCCESS e os Deploy Previews principal e isolado READY.
 - A revisão DOM/CSSOM confirmou os dez seletores em Landing, Quem somos e Como funciona: `#292723` em claro; `#C4BCB2` sobre `#20211F` em escuro. Em 390 × 844 px, as três rotas tiveram `scrollWidth` de 390 px; em 1280 × 720 px, `scrollWidth` igualou a largura útil de 1265 px, sem overflow. Eyebrows, assinaturas e tokens globais permaneceram fora da regra.
 - Evidência: [revisão manual do preview em dez contextos](../evidence/runtime/vis002c-v03-preview-10-contexts-manual-review-2026-10-25.md). A conferência cobre DOM/CSSOM e uma captura de preview; não é homologação global.
-- PRs #241 e #52 permanecem DRAFT. Produto #240 continua em v0.2; não integrar junto de #241 sem reconciliar pins/branches. Nenhum merge ou deploy de Production.
+- PRs #241 e #52 permanecem DRAFT. A PR de produto #240 foi fechada como supersedida: seu mapeamento v0.2 dos oito seletores foi substituído na #241 pela distribuição v0.3, que mantém esses oito contextos e acrescenta dois medidos. Não há integração separada da #240; nenhuma PR foi mergeada nem publicada em Production.
 
 
 ## VIS-002 — contraste de foco nos hotspots do Viewer (25/10/2026)
@@ -133,7 +133,7 @@ Os pesos abaixo são uma ferramenta de planejamento, não metas ou decisões can
 - `DECISION_APPLICATION_MAP.md` foi reconciliado ao mesmo commit: as oito rotas apontam às folhas CSS efetivamente carregadas e a evidência runtime atual ou às lacunas explícitas.
 - O [mapa de famílias CSS/runtime](../evidence/architecture/visual-rule-family-runtime-map-2026-10-24.md) classifica as oito folhas por layout, texto/cor, interação/foco e movimento/assets, com evidência parcial ou `NOT VERIFIED`.
 - **Próximo trabalho desta etapa:** revisão humana das PRs DRAFT validadas (#239, #241–#244 e Design System #51/#52). NAV-005 já foi implementado no escopo autorizado e validado no preview #244; a evidência está em [validação do preview #244](../evidence/runtime/nav005-pr244-preview-implementation-check-2026-10-24.md), mas a decisão canônica continua `implementationAuthorized=false`. O próximo trabalho técnico é retomar cobertura autenticada do Configurador (#232/DS-05A), sem inferir cobertura por semelhança de seletor.
-- VIS-002C v0.3 e produto #241 têm gates/preview passados, mas seguem em DRAFT. Produto #240 permanece HOLD devido aos cinco seletores compartilhados com cores divergentes.
+- VIS-002C v0.3 e produto #241 têm gates/preview passados, mas seguem em DRAFT. A PR #240 foi encerrada como supersedida pela #241; os cinco seletores compartilhados com divergência foram reconciliados em v0.3, sem manter uma integração v0.2 ativa.
 
 ---
 
