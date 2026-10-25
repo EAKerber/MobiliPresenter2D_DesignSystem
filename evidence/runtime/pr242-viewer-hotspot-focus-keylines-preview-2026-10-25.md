@@ -30,13 +30,18 @@ Isso confirma melhora em uma área clara, mas não comprova contraste de 3:1 em 
 
 ## Estado do preview isolado
 
-No endereço `https://deploy-preview-242--m2d-auth-ci-isolated.netlify.app/viewer/`, a página carrega, mas `GET /api/public-modules` retorna HTTP 503 com `{"error":"public_modules_unavailable"}`; o Viewer mostra “Informações temporariamente indisponíveis” e não renderiza hotspots. Os logs de borda apontam a função `public-modules`, sem linhas de log de aplicação. No Deploy Preview principal, o mesmo endpoint retorna HTTP 200 e a cena renderiza. A causa interna do 503 isolado permanece indeterminada; não atribuí-lo a uma variável específica sem evidência. Os checks verdes do commit não cobrem esse runtime do Viewer isolado.
+No endereço `https://deploy-preview-242--m2d-auth-ci-isolated.netlify.app/viewer/`, a página carrega, mas `GET /api/public-modules` retorna HTTP 503 com `{"error":"public_modules_unavailable"}`; o Viewer não renderiza hotspots. A função de Netlify `public-modules` foi inspecionada no head testado: ela lê o snapshot publicado em Netlify Blobs (`configurator-settings`) e responde 503 quando a leitura retorna ausência/invalidez ou falha interna. A versão Deploy Preview tenta recorrer à URL primária do mesmo site; a rota primária `https://m2d-auth-ci-isolated.netlify.app/api/public-modules` também retorna o mesmo 503.
+
+Isso aponta, como inferência do código e das respostas, para snapshot publicado ausente/inválido no Netlify Blobs do site isolado ou falha de leitura desse armazenamento. Os logs de borda identificam a função `public-modules`, mas não têm linhas de log da aplicação; não é possível distinguir essas causas. `DATABASE_URL` e `ACCESS_GATE_SECRET` estão configuradas no site isolado com escopos de build, functions e runtime, mas não são lidas por essa função. Não há evidência para adicionar ou trocar essas variáveis como correção do 503.
+
+No Deploy Preview principal, `GET /api/public-modules` retorna HTTP 200 e a cena renderiza. Os checks verdes do commit não cobrem o runtime isolado do Viewer.
 
 ## Limites e estado
 
 - A amostra visual contém apenas a cena Cozinha; não generalizar para outras fotografias.
 - A folga mobile mínima permanece pequena (0,11 CSS px).
 - A medição de pixels é diagnóstica para os hotspots 01 e 02, não uma certificação WCAG global.
+- O preview isolado precisa de um snapshot público válido ou de uma leitura funcional do armazenamento para renderizar o Viewer; isso está fora do escopo autorizado do PR #242.
 - PR #242 permanece DRAFT. Revisão visual humana pendente; sem integração ou publicação.
 - A camada neutra continua experimental e não altera a decisão canônica.
 
