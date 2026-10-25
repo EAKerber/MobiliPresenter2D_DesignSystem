@@ -5,6 +5,10 @@
 A comparação lado a lado em Production mostrou que a superfície candidata `#F0EDE8` remove o branco puro e harmoniza melhor os três cartões com o contexto claro, mantendo `#514A43` em contraste de 7,46:1. O tema escuro já computa cartão `#20211F` e texto `#F4F1EB` (14,34:1). A evidência é uma simulação DOM transitória, sem alteração de produto: [método, medições e limites](../evidence/runtime/issue205-viewer-detail-card-surface-ab-2026-10-25.md). #205 continua backlog e sem implementação autorizada; foco, zoom, matriz completa e o overflow de 320 px permanecem pendentes.
 
 
+## Issue #208 — reconciliação DS-04 com `main` (25/10/2026)
+
+Recomparei os 16 achados à base atual do produto `main@5ccb2a8`. DS04-01, 03–05, 07–09 já têm suporte de tema claro no código atual; DS04-11 está delimitado como exceção técnica, com validação visual parcial. Permanecem riscos em DS04-02 (P1), DS04-06 (P1), DS04-10 (P2) e DS04-12 (P3). A rota pública `/access/` respondeu em claro/escuro; `/access/manage.html` redirecionou a login sem sessão, então o CTA de gestão segue sem readback runtime. [Reconcilição fonte/runtime e contrastes](../evidence/architecture/issue208-ds04-main-source-reconciliation-2026-10-25.md). Issue #208 continua aberta; nenhum produto ou Production foi alterado.
+
 ## Issue #224 — seleção durante scroll real no preview da PR #243 (25/10/2026)
 
 Repeti o cenário com seleção de Lavanderia após 100 ms de animação e confirmei que scrollLeft estava efetivamente em movimento antes do clique, a 320/390 px e em claro/escuro (quatro combinações). A seleção e a página 2 permaneceram sincronizadas; o cartão terminou inteiramente dentro da janela e sem overflow do documento. [Método e medições](../evidence/runtime/pr243-issue224-carousel-in-motion-recheck-2026-10-25.md). A evidência confirma apenas o preview; issue #224 e PR #243 continuam abertas/DRAFT até revisão, integração e readback em Production.
