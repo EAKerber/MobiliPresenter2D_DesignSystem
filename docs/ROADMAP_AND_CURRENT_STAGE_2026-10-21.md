@@ -14,7 +14,7 @@
 |---|---:|---|---|
 | Alta | Dentro de implementação (25%) | Revisão humana da PR consolidada #238 e integração aprovada; depois revalidar o gate em main e fechar #232. | #238 está DRAFT; sem merge nem Production nesta etapa. |
 | Alta | Dentro de evidência (30%) | Concluir zoom real e a divergência histórica WebKit da issue #226. | Automação não conseguiu confirmar/operar a janela correta do navegador; largura CSS emulada não substitui zoom real. |
-| Alta | Dentro de decisões (20%) | Decidir fallback para falha de imagem e contraste do foco sobre fotografia/superfícies variadas. | Há comparação visual DOM-only, ainda sem decisão canônica nem teste de 404 real/leitor de tela. |
+| Alta | Dentro de decisões (20%) | Revisar contraste do foco sobre fotografia/superfícies variadas e decisões restantes. O fallback da ilustração principal de Como funciona foi escolhido e validado no preview da #241. | Foco sobre fotografia ainda depende de medições e revisão por componente; fallback limitado à ilustração principal, sem homologação global. |
 | Média | Dentro de evidência (30%) | Ampliar mapa por componente de foco, seleção, carregamento/erro, movimento e tema, incluindo estados e rotas que permanecem não verificados. | Rotas privadas exigem sessão autorizada; não extrapolar medições pontuais. |
 | Média | ARC-13 (15%) | Classificar 190 itens de conteúdo deferidos; resolver 369 textos sem chave e 212 chaves baseadas em linha; aprovar convenção e migrar em lotes. | Convenção e ownership precisam de revisão antes de mudanças em lote. |
 | Futura | Etapas seguintes (10%) | Schema de UI, dados de textos/localização e inventário JS, mantendo separados dados de interface e dados do Configurador. | Só começa depois da fundação visual e ARC-13. |
@@ -49,21 +49,21 @@ Os pesos abaixo são uma ferramenta de planejamento, não metas ou decisões can
 | Frente | Peso | Conclusão estimada | Contribuição | O que falta para fechar |
 |---|---:|---:|---:|---|
 | Inventário e evidência runtime | 30% | 35% | 10,5 p.p. | Cobrir famílias/estados com evidência atual; fechar zoom real e divergência WebKit da #226; capturas de desktop claro/escuro já foram arquivadas.; manter áreas autenticadas como não verificadas até sessão autorizada. |
-| Decisões e homologação visual | 20% | 20% | 4 p.p. | Resolver contraste do foco sobre imagens/superfícies, fallback de imagem e decisões ainda pendentes; registrar somente escolhas aprovadas. |
+| Decisões e homologação visual | 20% | 22% | 4,4 p.p. | Fallback escopado aprovado e validado; ainda revisar foco sobre imagens/superfícies e decisões pendentes. |
 | Implementação por componente e integração | 25% | 20% | 5 p.p. | Revisar e integrar previews aprovados, revalidar em Production e resolver conflitos/branches sobrepostos. O código atual integrado segue estimado em 18% (faixa 15–20%). |
 | ARC-13: ownership e chaves semânticas | 15% | 30% | 4,5 p.p. | Classificar os 190 itens de conteúdo deferidos, resolver 369 textos sem chave e 212 chaves baseadas em linha; aprovar convenção, extrair e migrar em lotes revisáveis. |
 | Etapas futuras: schema de UI, textos/localização e inventário JS | 10% | 0% | 0 p.p. | Começam depois da fundação visual/etapa atual; preservar Português do Brasil e separar dados de interface dos dados do configurador. |
-| **Total ponderado** | **100%** |  | **24 p.p.** | **Estimativa geral: ~24% (faixa 22–26%).** |
+| **Total ponderado** | **100%** |  | **24,4 p.p.** | **Estimativa geral arredondada: ~24% (faixa 22–26%).** |
 
 ### Ordem de trabalho recomendada
 
 1. Revisar a PR consolidada #238 (a antiga #245 foi encerrada como supersedida) e decidir sua integração após revisão dos checks; em seguida revalidar em main e fechar #232. Não publicar Production automaticamente. #240 e #241 ainda sobrepõem seletores e versões e precisam de reconciliação própria.
 2. Fechar a evidência independente da #226 com zoom real e rever a diferença WebKit; as capturas antes/depois das duas grades em desktop claro e escuro já estão arquivadas. A largura CSS emulada já está medida, mas não substitui esse requisito.
-3. Continuar mapa por componente para estados de foco, seleção, carregamento/erro, movimento e temas. A varredura de imagem de 25/10 localizou um colapso apenas no wrapper grande de estudo de espaço; o fallback não está decidido.
+3. Continuar o mapa por componente para foco, seleção, carregamento/erro, movimento e temas. O fallback da ilustração principal de estudo de espaço foi implementado na PR #241 e validado com HTTP 404 real no preview; ampliar a cobertura para outras imagens/rotas exige evidência própria.
 4. Avançar ARC-13 em lotes de ownership/chaves após revisão da convenção, sem substituição em massa de strings.
 5. Só então iniciar schema de UI, localização e inventário funcional de JavaScript, conforme sequência do plano.
 
-**Impedimentos externos atuais:** o zoom real depende de uma janela de navegador cujo URL não pôde ser confirmado pela automação; evidência de rotas privadas requer sessão de Production fornecida pelo usuário; fallback visual e alguns estados de foco precisam de decisão canônica. Não há falha confirmada de variável no gate autenticado.
+**Impedimentos externos atuais:** zoom real e divergência WebKit da #226 seguem pendentes; rotas privadas exigem sessão autorizada; foco sobre fotografias/superfícies variadas ainda precisa de revisão. O fallback aprovado da ilustração principal foi validado em preview com HTTP 404 real. Não há falha confirmada de variável no gate autenticado.
 
 ## VIS-002C v0.3 — revisão dos dez contextos concluída (25/10/2026)
 
@@ -104,8 +104,8 @@ Os pesos abaixo são uma ferramenta de planejamento, não metas ou decisões can
 ### Rechecagem visual em Production — imagens com `alt=""` (25/10/2026)
 
 - Os oito casos de `alt=""` em `/how-it-works/` foram revisados em DOM e pixels: ícone WhatsApp, ilustração de móveis prontos, logo repetido pelo título e cinco ilustrações das etapas. Os sete itens visuais têm categoria/nome e contexto textual adjacente; o ícone de WhatsApp está oculto da árvore acessível e o link tem nome acessível próprio. A observação sustenta manter `alt=""` nos oito contextos.
-- Evidência: [revisão das imagens com alt vazio](../evidence/runtime/how-it-works-step-illustrations-visual-review-2026-10-25.md). Mudança documental somente; nenhum `alt`, CSS ou código do produto foi alterado. O restante do item 2 — verificações de teclado, movimento reduzido e erro de imagem em rotas/estados ainda sem cobertura — segue parcial.
-- Complemento de erro de imagem em 341×768: Landing 5/5 e Viewer 2/2 imagens com `alt` descritivo preservaram as caixas; em Como funciona, 19/20 preservaram. O único colapso foi a ilustração principal de estudo de espaço (−149,7 px); o mesmo arquivo no cartão compacto manteve sua caixa, indicando dependência do wrapper/composição. Todos os `src` foram restaurados. O ensaio usou falha sintética no DOM isolado, não 404 de rede; alt vazio e outras cenas do Viewer não foram testados. O fallback visual ainda não tem decisão canônica; não alterei produto. [Evidência e limites](../evidence/runtime/public-image-failure-runtime-production-2026-10-25.md).
+- Evidência: [revisão das imagens com alt vazio](../evidence/runtime/how-it-works-step-illustrations-visual-review-2026-10-25.md). Mudança documental somente; nenhum `alt`, CSS ou código do produto foi alterado. O restante do item 2 — verificações de teclado, movimento reduzido e falha de imagem em outros contextos — segue parcial.
+- Complemento de erro de imagem em 341×768: Landing 5/5 e Viewer 2/2 imagens com `alt` descritivo preservaram as caixas; em Como funciona, 19/20 preservaram. O único colapso foi a ilustração principal de estudo de espaço (−149,7 px); o mesmo arquivo no cartão compacto manteve sua caixa. Na PR #241, um HTTP 404 real same-origin no preview acionou o placeholder 3:2 em 341×768, sem overflow, mantendo legenda e descrição acessível. A correção segue DRAFT; outros assets, alt vazio, outras cenas do Viewer e leitores de tela continuam sem cobertura. [Evidência e limites da varredura inicial](../evidence/runtime/public-image-failure-runtime-production-2026-10-25.md).
 
 
 ---
