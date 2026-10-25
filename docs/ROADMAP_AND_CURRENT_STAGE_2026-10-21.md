@@ -1,16 +1,15 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
-## Revalidação CI-BASELINE-01 — 24/10/2026, 23:43 UTC
+## Revalidação CI-BASELINE-01 — 25/10/2026, 01:14 UTC
 
-- Produto PR [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238) avançou para o head `ec4f64b2d1fff63d028f631a979d4eeda2ef847b`. Os Deploy Previews principal e isolado estão SUCCESS; o contrato da fixture V5 e o gate anônimo passaram no run [#40143867157](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40143867157).
-- O gate autenticado [#40143867153](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40143867153) falhou em `ds05a-finishes-estimate-readiness`. O diagnóstico sanitizado mostra o painel de Acabamentos e a estimativa no DOM, mas sem área renderizada, porque `.workspace` está oculto. As suítes funcionais foram ignoradas após a falha.
-- A diferença de contexto agora está identificada no código: o gate de Config usa `CI_STAGING_ORIGIN`, ainda apontado ao host estável, enquanto a fixture V5 é semeada no Deploy Preview via `getDeployStore()`. A função de leitura usa `getStore()` em Production e `getDeployStore()` em Deploy Preview. Portanto, o gate está lendo outro store; o log não registrou o status HTTP exato do endpoint, então a falha específica da resposta ainda não é afirmada.
-- Próximo ajuste de CI, sem alterar `app/` ou o runtime: usar o host exato do Deploy Preview #238 também no gate autenticado; validar o marcador e o branch antes de criar grant; permitir no validador somente esse preview específico e adicionar casos que continuem negando outros previews. Reexecutar o gate e as cinco suítes nesse mesmo contexto.
-- Issue #232 permanece aberta. Esta execução não validou os cinco fluxos funcionais no staging. O registro positivo anterior em `abc33d2` permanece histórico e não substitui a falha observada no head atual.
+- Produto PR [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238) está aberta/DRAFT no head `ecd2c5b07246a59f2ed959376eb311f53cffdf2e`. Os dois Deploy Previews estão READY; checks estáticos, browser geral, fixture-contract, gate anônimo e current-asset-gates passaram.
+- O job autenticado validou preflight, grant real, conexão com o papel restrito, negação de Admin e revogação. No Deploy Preview, `/api/buyer-configuration` respondeu 200; o probe confirmou V5 `validated`, workspace visível e sem erro de configuração. Replay após revogação foi negado com HTTP 400 e a sessão redirecionou a `/access/`.
+- **As cinco suítes funcionais autenticadas falharam ainda em interações.** Mobile/PiP e Summary/Pricing e Stone falharam asserts de console; Keyboard e Flow terminaram em timeouts. O resumo sanitizado não contém status HTTP de erro nem códigos de rede. A evidência não identifica ainda a causa funcional e não comprova cobertura homologada.
+- Os commits do harness retiraram DS-05A visual do host estável fixo, preservaram nele o gate real de sessão/Admin/revogação, fizeram os fluxos funcionais usarem o Deploy Preview #238 com fixture V5, herdaram o caminho Chromium do contêiner e aceitaram HTTP 400 como rejeição de replay revogado.
+- O check Supabase Preview foi skipped por ausência de Supabase Branch associada; usa-se o banco interno de teste já autorizado, sem novo projeto. Nenhuma variável foi impressa ou reconfigurada.
+- Issue [#232](https://github.com/EAKerber/MobiliPresenter2D/issues/232) permanece aberta. PR #238 segue DRAFT até compreender e corrigir as falhas das suítes; sem merge, alteração de Production ou deploy de Production. [Evidência detalhada](../evidence/runtime/ds05a-authenticated-preview-suites-2026-10-25.md).
 
 ---
-
-
 
 ## Revalidação de execução — 24/10/2026
 
