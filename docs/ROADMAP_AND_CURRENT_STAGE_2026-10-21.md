@@ -16,11 +16,11 @@
 
 ## Issue #226 — matriz atual em Production (25/10/2026)
 
-- Complemento em contexto Chromium isolado: nos viewports CSS emulados 683×768 (~200%) e 341×768 (~400%), o scroll width igualou a largura útil; as grades ficaram em uma coluna e os irmãos fechados mantiveram suas alturas após abertura. É uma verificação de largura efetiva, não zoom real (visualViewport.scale=1); capturas comparativas e zoom continuam pendentes. [Matriz atualizada](../evidence/runtime/issue226-current-production-matrix-2026-10-25.md).
+- Complemento em contexto Chromium isolado: nos viewports CSS emulados 683×768 (~200%) e 341×768 (~400%), o scroll width igualou a largura útil; as grades ficaram em uma coluna e os irmãos fechados mantiveram suas alturas após abertura. É uma verificação de largura efetiva, não zoom real (visualViewport.scale=1); capturas antes/depois das duas grades agora estão arquivadas em 1366×768 no tema claro; zoom real e comparação WebKit continuam pendentes. [Matriz atualizada](../evidence/runtime/issue226-current-production-matrix-2026-10-25.md).
 
 A rechecagem após reload confirmou, nas duas grades `.foundation-list` e `.study-topics`, que um item aberto cresce sem esticar irmãos fechados nos viewports 1366 × 768, 768 × 1024 e 390 × 844, em tema claro/escuro. Enter e Espaço preservam o toggle nativo; duas aberturas sequenciais são independentes; o fechamento restaura a geometria sem overflow. A regra `align-items:start` está ativa nas duas grades em Production. [Matriz e limites](../evidence/runtime/issue226-current-production-matrix-2026-10-25.md).
 
-A issue permanece aberta: não foram arquivadas capturas antes/depois, zoom não foi efetivamente testado e a divergência visual WebKit histórica segue inconclusiva. Esta rechecagem no Chromium é evidência atual limitada, não homologação visual cross-browser.
+A issue permanece aberta: zoom real não foi efetivamente testado e a divergência visual WebKit histórica segue inconclusiva. Capturas fechado/aberto das duas grades agora estão arquivadas em 1366×768, tema claro. Esta rechecagem no Chromium é evidência atual limitada, não homologação visual cross-browser.
 
 ## Plano ponderado de conclusão — avaliação provisória (25/10/2026)
 
@@ -28,7 +28,7 @@ Os pesos abaixo são uma ferramenta de planejamento, não metas ou decisões can
 
 | Frente | Peso | Conclusão estimada | Contribuição | O que falta para fechar |
 |---|---:|---:|---:|---|
-| Inventário e evidência runtime | 30% | 35% | 10,5 p.p. | Cobrir famílias/estados com evidência atual; fechar zoom e capturas da #226; manter áreas autenticadas como não verificadas até sessão autorizada. |
+| Inventário e evidência runtime | 30% | 35% | 10,5 p.p. | Cobrir famílias/estados com evidência atual; fechar zoom real e divergência WebKit da #226; capturas de desktop claro já foram arquivadas.; manter áreas autenticadas como não verificadas até sessão autorizada. |
 | Decisões e homologação visual | 20% | 20% | 4 p.p. | Resolver contraste do foco sobre imagens/superfícies, fallback de imagem e decisões ainda pendentes; registrar somente escolhas aprovadas. |
 | Implementação por componente e integração | 25% | 20% | 5 p.p. | Revisar e integrar previews aprovados, revalidar em Production e resolver conflitos/branches sobrepostos. O código atual integrado segue estimado em 18% (faixa 15–20%). |
 | ARC-13: ownership e chaves semânticas | 15% | 30% | 4,5 p.p. | Classificar os 190 itens de conteúdo deferidos, resolver 369 textos sem chave e 212 chaves baseadas em linha; aprovar convenção, extrair e migrar em lotes revisáveis. |
@@ -38,12 +38,12 @@ Os pesos abaixo são uma ferramenta de planejamento, não metas ou decisões can
 ### Ordem de trabalho recomendada
 
 1. Resolver a decisão de integração dos previews estáveis sem publicar Production automaticamente. #240 e #241 sobrepõem seletores e versões; #238 e #245 têm relação de base/escopo, e a trava de fixture impede juntá-los sem uma validação explícita do contrato. Manter separados é a escolha correta enquanto essa fronteira não for revista.
-2. Fechar a evidência independente da #226 com zoom real e capturas antes/depois; então rever a diferença WebKit. A largura CSS emulada já está medida, mas não substitui esse requisito.
+2. Fechar a evidência independente da #226 com zoom real e rever a diferença WebKit; as capturas antes/depois das duas grades em desktop claro já estão arquivadas. A largura CSS emulada já está medida, mas não substitui esse requisito.
 3. Continuar mapa por componente para estados de foco, seleção, carregamento/erro, movimento e temas. A varredura de imagem de 25/10 localizou um colapso apenas no wrapper grande de estudo de espaço; o fallback não está decidido.
 4. Avançar ARC-13 em lotes de ownership/chaves após revisão da convenção, sem substituição em massa de strings.
 5. Só então iniciar schema de UI, localização e inventário funcional de JavaScript, conforme sequência do plano.
 
-**Impedimentos externos atuais:** zoom real/capturas dependem de uma janela de navegador cujo URL não pôde ser confirmado pela automação; evidência de rotas privadas requer sessão de Production fornecida pelo usuário; fallback visual e alguns estados de foco precisam de decisão canônica. Não há falha confirmada de variável no gate autenticado.
+**Impedimentos externos atuais:** o zoom real depende de uma janela de navegador cujo URL não pôde ser confirmado pela automação; evidência de rotas privadas requer sessão de Production fornecida pelo usuário; fallback visual e alguns estados de foco precisam de decisão canônica. Não há falha confirmada de variável no gate autenticado.
 
 ## VIS-002C v0.3 — revisão dos dez contextos concluída (25/10/2026)
 
