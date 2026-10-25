@@ -45,12 +45,13 @@ O usuário aprovou a convenção operacional de chaves semânticas: preservar na
 A amostra de 13 substituições numéricas e cinco rótulos administrativos segue auditada como candidata, com proveniência única e sem colisões no índice observado. Próximos passos ARC-13: revisar contexto/owner/consumer e parâmetros da amostra; preparar lotes para as 199 chaves numéricas restantes, as 364 ocorrências sem proposta e os 190 itens de conteúdo deferidos. Nenhum índice ou código de produto foi migrado nesta etapa. decisions.json continua inalterado.
 
 
-## ARC-13 — reconciliação da fila sem chave (25/10/2026)
+## ARC-13 — reconciliação da fila sem chave e rastreio inicial (25/10/2026)
 
-Dos 364 candidatos sem chave e com classificação de interface, 19 literais são valores técnicos de DOM/CSS/enum e quatro mensagens são diagnósticos internos que só chegam a debug e console. Restam **341 textos para revisão de consumer/owner/contrato**: 208 no Admin e 133 no Configurador. Índice intacto; exclusões apenas documentais.
+O mapa corrigido encontrou 364 candidatos originais sem chave. Exclui 24 valores técnicos de DOM/CSS/enum e quatro diagnósticos somente de console, restando **336 ocorrências para revisão de consumer/owner/contrato**: 207 em `app/admin/admin.js` e 129 em `app/app.js`. O mapa cobre 75 buckets lexicais e 21 grupos de texto duplicado; esses grupos são pistas, não prova de consumer ou equivalência.
 
-O mapa anterior foi substituído porque podia carregar a função anterior através de listeners. O [mapa corrigido de escopos](../evidence/architecture/arc13-unkeyed-consumer-scope-map-2026-10-25.json) traz ocorrências, fontes e limites: escopo léxico direciona a leitura, mas não prova renderização ou equivalência de contrato. Próxima revisão: confirmar buckets, rastrear constantes de topo aos call sites e classificar consumers reais antes de propor chaves. Sem migração do índice ou produto.
+O bucket lexical `app/admin/admin.js :: module/top-level` foi rastreado até seus sinks diretos: quatro títulos de pricing, label de tipo/base, limite de etapas, defaults de prompt e recuperação de conta. O rastreio separa copy de interface de valores de prompt que podem virar dados persistidos. Nenhuma chave foi proposta ou migrada. [Ocorrências, call sites e owner pendente](../evidence/architecture/arc13-admin-top-level-consumer-trace-2026-10-25.md).
 
+Próximos buckets prioritários: `saveButton` (23), `persistHandlesButton` (21) e `createDetailCarousel` (18). Confirmar sinks e valores dinâmicos antes de propor chaves. O [mapa corrigido de escopos](../evidence/architecture/arc13-unkeyed-consumer-scope-map-2026-10-25.json) permanece lexical e não prova renderização; sem migração do índice ou produto.
 ## Atualização pós-consolidação CI-BASELINE-01 — 25/10/2026
 
 - As alterações estáveis que estavam distribuídas entre as PRs de produto #238 e #245 foram consolidadas na PR [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238), head `1fccf635078aee68aa735caf0df02fdb62402c93`. A PR #245 foi encerrada sem merge como supersedida; seu trabalho está preservado no commit de merge da #238.
