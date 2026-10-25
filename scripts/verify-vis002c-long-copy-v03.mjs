@@ -4,7 +4,7 @@ import {createHash} from "node:crypto";
 import {readFile} from "node:fs/promises";
 
 const read=path=>readFile(new URL("../"+path,import.meta.url),"utf8");
-const blob=text=>createHash("sha1").update("blob "+Buffer.byteLength(text,"utf8")+"\0").update(text,"utf8").digest("hex");
+const blob=text=>createHash("sha1").update("blob "+Buffer.byteLength(text,"utf8")+"\\0").update(text,"utf8").digest("hex");
 const luminance=hex=>{
   const rgb=hex.slice(1).match(/.{2}/g).map(x=>parseInt(x,16)/255);
   const f=x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4;
@@ -28,15 +28,19 @@ assert.equal(mapping.status,"scoped-candidate-user-authorized-2026-10-24; canoni
 assert.equal(mapping.sourceDecisionGitBlob,"63b60f8d87327c6fd1e80c8cdf4ff832c4089bfa");
 assert.equal(mapping.roleRef,"VIS-002.approvedPalette.colors.textPrimary.light");
 assert.equal(mapping.value.toUpperCase(),"#292723");
-assert.equal(mapping.contexts.length,7);
+assert.equal(mapping.contexts.length,10);
 assert.equal(mapping.constraints.globalUsage,false);
 assert.equal(mapping.constraints.darkThemeMustStayUnchanged,true);
 assert.equal(mapping.constraints.onlyMeasuredContexts,true);
-assert.deepEqual(mapping.preservedMapping.contexts,oldMap.contexts.slice(0,3).map(({route,selector})=>({route,selector})));
-assert.equal(mapping.preservedMapping.value,"#705C4B");
+assert.equal(mapping.constraints.priorV0_2ColorReplacedOnMappedContexts,true);
+assert.deepEqual(mapping.supersededMapping.contexts,oldMap.contexts.slice(0,3).map(({route,selector})=>({route,selector})));
+assert.equal(mapping.supersededMapping.value,"#705C4B");
 assert.equal(oldMap.version,"0.2.0");
 
 const expected=[
+  {route:"/",selector:".hero-description",background:"#F0EDE8"},
+  {route:"/how-it-works/",selector:".how-hero-note",background:"#F0EDE8"},
+  {route:"/about/",selector:".about-scale p:not(.eyebrow)",background:"#F0EDE8"},
   {route:"/",selector:".story-section > p:not(.eyebrow)",background:"#E8E3DC"},
   {route:"/",selector:".feature-copy > p:not(.eyebrow):not(.feature-availability)",background:"#F0EDE8"},
   {route:"/about/",selector:".about-closing > p:not(.eyebrow):not(.about-closing__signature)",background:"#F0EDE8"},
@@ -47,6 +51,7 @@ const expected=[
 ];
 assert.deepEqual(mapping.contexts.map(({route,selector,background})=>({route,selector,background})),expected);
 for(const c of mapping.contexts)assert.ok(contrast("#292723",c.background)>=4.5,"Contrast below threshold: "+c.selector);
+for(const c of mapping.contexts)assert.equal(c.foreground,"#292723");
 assert.equal(manifest.version,"0.3.0");
 assert.equal(manifest.status,"SCOPED_CANDIDATE_USER_AUTHORIZED");
 assert.equal(manifest.token,"--ds-vis002c-long-copy-light");
@@ -54,24 +59,25 @@ assert.equal(manifest.value,"#292723");
 assert.equal(manifest.roleRef,mapping.roleRef);
 assert.equal(manifest.constraints.allowsGlobalUsage,false);
 assert.equal(manifest.constraints.changesCanonicalDecision,false);
-assert.equal(manifest.constraints.changesExistingV0_2Contexts,false);
-assert.equal(manifest.contexts.length,7);
-assert.deepEqual(manifest.contexts.map(({route,selector,background})=>({route,selector,background})),expected);
+assert.equal(manifest.constraints.changesPriorV0_2ColorOnThreeMeasuredContexts,true);
+assert.equal(manifest.contexts.length,10);
+assert.deepEqual(manifest.contexts.map(({route,selector,background,contrast})=>({route,selector,background,contrast})),
+  mapping.contexts.map(({route,selector,background,contrast})=>({route,selector,background,contrast})));
 
 const selectors=expected.map(c=>'html[data-theme="light"] '+c.selector);
 const expectedCss=[
   "/* GENERATED CANDIDATE — VIS-002C measured long-copy contexts only.",
   " * Mapping: docs/VIS002C_CONTEXTUAL_MAPPING_V0_3_0.json",
   " * Decision source blob: 63b60f8d87327c6fd1e80c8cdf4ff832c4089bfa",
-  " * Does not change v0.2, global roles, text color declarations, or dark theme.",
+  " * Replaces v0.2 color only on the three mapped legacy consumers; no global role or dark-theme change.",
   " */",
-  selectors.join(",\n")+" {",
+  selectors.join(",\\n")+" {",
   "  --ds-vis002c-long-copy-light: #292723;",
   "}",
   ""
-].join("\n");
+].join("\\n");
 assert.equal(css,expectedCss,"Generated CSS differs from the exact scoped projection");
-assert.doesNotMatch(css,/\bcolor\s*:/i,"Artifact may not set text color directly");
-assert.doesNotMatch(css,/:root\s*\{/,"Global token scope is not authorized");
+assert.doesNotMatch(css,/\\bcolor\\s*:/i,"Artifact may not set text color directly");
+assert.doesNotMatch(css,/:root\\s*\\{/, "Global token scope is not authorized");
 
 console.log(`VIS002C_LONG_COPY_V03_PASS contexts=${mapping.contexts.length} dark=unchanged global=false`);
