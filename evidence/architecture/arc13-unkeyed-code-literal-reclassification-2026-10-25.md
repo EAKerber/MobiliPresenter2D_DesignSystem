@@ -32,6 +32,7 @@ A primeira leitura detectou seis literais técnicos; a inspeção de propriedade
 
 | Linha em app/app.js | Literal | Evidência |
 |---:|---|---|
+|---:|---|---|
 | 617 | `customStage-${stage.id}` | Atribuído a `panel.id`. |
 | 618, 1677 | `${panel.id}-heading` | Usado como ID de heading em `aria-labelledby` e `title.id`. |
 | 749 | `--handle-swatch` | Nome de custom property CSS em `style.setProperty`. |
