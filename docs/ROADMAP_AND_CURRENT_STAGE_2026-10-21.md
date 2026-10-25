@@ -683,3 +683,10 @@ The approved naming convention remains stable. The frozen consumer map has 336 r
 - No Viewer público Production, o preenchimento dos pontos inativos mede 1,75:1 contra branco em 320 e 390 px no tema claro; no tema escuro mede 9,78:1 contra `#1B1C1A`. Os pontos ativos medem 4,96:1 no claro e 9,29:1 no escuro. Sem overflow horizontal nas quatro combinações visíveis.
 - A partir de 768 px, `.mobile-view-nav` fica oculto; não contei esses botões de 0 × 0 como indicadores visíveis. O achado confirma DS04-12 no âmbito mobile/light e não autoriza correção de produto. [Readback DS-04 atualizado](../evidence/architecture/issue208-ds04-main-source-reconciliation-2026-10-25.md).
 - Próximo gate: manter a proposta de correção pendente de revisão/decisão; a PR #51 continua documental e não altera CSS nem Production.
+
+
+### NAV-005 — acesso público, leitura responsiva ampliada — 25/10/2026
+
+- No Deploy Preview da PR #244, ampliei a leitura DOM/CSSOM de `/access/` para 280, 290, 291, 320, 321, 390, 486 e 900 px, em claro e escuro; 1280 px foi lido em claro. Sem overflow em nenhum cenário medido; alvos de tema/menu continuam 44×44 px e o identificador permanece completo.
+- A 290 px o header usa duas linhas; a 291 px volta a uma faixa, com nome quebrado dentro do espaço disponível. O logo mede 83,7 px no limite de 291 px, redução de 20,3% ante a referência de 105 px. A etiqueta do tema some em 320 px e reaparece em 321 px. Capturas visuais dos limites confirmaram a composição.
+- Essa ampliação reduz a lacuna de largura/tema no estado público, mas não cobre Configurador/Admin autenticados nem gestão autenticada. A PR #244 segue DRAFT; sem alteração de código, merge ou Production. [Evidência ampliada](../evidence/runtime/nav005-pr244-preview-implementation-check-2026-10-24.md).
