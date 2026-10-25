@@ -477,3 +477,9 @@ Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. 
 
 - Proposta cobre 14 textos em labels de pricing, criação de etapas/materiais e recuperação de senha; não foram encontradas colisões no índice-base.
 - Mensagem e valor padrão de prompt são chaves separadas. Erros vindos da API e o fallback dinâmico da base de preço permanecem fora. Sem alteração no produto, índice canônico ou decisões. [Proposta](../evidence/architecture/arc13-semantic-key-proposal-admin-pricing-creation-recovery-2026-10-25.json).
+
+
+### ARC-13 — Admin interactions and authentication feedback (25/10/2026)
+
+- Proposta reúne 13 ocorrências em mensagens de pricing, divisão de seção/grupo e erros de login/senha; propõe 12 chaves sem colisões no índice-base.
+- O rótulo de revisão foi recomposto com parâmetro inteiro; a mensagem de quantidade disponível ficou deferida até definir pluralização. Erros dinâmicos da API permanecem fora. [Detalhes](../evidence/architecture/arc13-semantic-key-proposal-admin-interactions-auth-2026-10-25.json).

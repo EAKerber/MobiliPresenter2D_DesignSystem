@@ -1,0 +1,205 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/admin/admin.js: hierarchy choice and split prompts, pricing change feedback, login/password fallback, revision label",
+    "sourceLiteralOccurrences": 13,
+    "proposedKeys": 12,
+    "deferredCountMessage": 1
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "The revision label is recomposed as one message with an integer parameter; remaining entries are explicit UI labels, prompts, or feedback messages.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "The `${availableCount} disponível(is)` message is deferred until a pluralization contract is established.",
+    "API-provided error.message remains dynamic; only literal fallback messages are proposed.",
+    "The revision template combines two source literals at one line into a single message boundary."
+  ],
+  "entries": [
+    {
+      "proposedKey": "admin.hierarchySections.newSectionPrompt",
+      "text": "Nome da nova seção",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1793
+        }
+      ],
+      "owner": "Section split action",
+      "consumer": "event click on stagesList",
+      "sink": "window.prompt message",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchyGroups.newGroupPrompt",
+      "text": "Nome do novo grupo",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1815
+        }
+      ],
+      "owner": "Section split action",
+      "consumer": "event click on stagesList",
+      "sink": "window.prompt message",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchyGroups.newGroupPromptDefault",
+      "text": "Novo grupo",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1815
+        }
+      ],
+      "owner": "Section split action",
+      "consumer": "event click on stagesList",
+      "sink": "window.prompt default",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.pricingPublication.enabledDraftOnly",
+      "text": "Exibição de preços base ativada apenas no rascunho. Clique em Publicar configuração para autorizar valores públicos.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1498
+        }
+      ],
+      "owner": "Admin pricing publication toggle feedback",
+      "consumer": "event change on pricingList",
+      "sink": "saveMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.pricingPublication.disabledDraftOnly",
+      "text": "Exibição de preços base desativada apenas no rascunho. Clique em Publicar configuração para retirar valores da API pública.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1499
+        }
+      ],
+      "owner": "Admin pricing publication toggle feedback",
+      "consumer": "event change on pricingList",
+      "sink": "saveMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.pricing.typeChangedReset",
+      "text": "Tipo de preço alterado. O valor foi zerado para evitar conversão implícita entre R$ e %.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1517
+        }
+      ],
+      "owner": "Admin price rule editor",
+      "consumer": "event change on pricingList",
+      "sink": "saveMessage success",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchyChoices.scopeNote",
+      "text": "Estas são opções do item, não itens hierárquicos independentes. Disponibilidade e dados comerciais continuam nas abas próprias.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 384
+        }
+      ],
+      "owner": "Admin hierarchy choice list",
+      "consumer": "function appendHierarchyChoiceOptions",
+      "sink": "details note",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchyChoices.available",
+      "text": "Disponível",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 398
+        }
+      ],
+      "owner": "Admin hierarchy choice list",
+      "consumer": "function appendHierarchyChoiceOptions",
+      "sink": "availability status",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchyChoices.unavailable",
+      "text": "Indisponível",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 398
+        }
+      ],
+      "owner": "Admin hierarchy choice list",
+      "consumer": "function appendHierarchyChoiceOptions",
+      "sink": "availability status",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.auth.loginFailed",
+      "text": "Não foi possível entrar. Confira os dados e tente novamente.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1610
+        }
+      ],
+      "owner": "Admin login form",
+      "consumer": "event submit on loginForm",
+      "sink": "loginMessage fallback error",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.auth.passwordUpdateFailed",
+      "text": "Não foi possível atualizar a senha.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1637
+        }
+      ],
+      "owner": "Admin password action form",
+      "consumer": "event submit on passwordActionForm",
+      "sink": "loginMessage fallback error",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationLoad.revisionLabel",
+      "text": "Versão {revision} · editor hierárquico",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1289
+        },
+        {
+          "file": "app/admin/admin.js",
+          "line": 1289
+        }
+      ],
+      "sourceLines": [
+        1289
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "loadSettings",
+      "sink": "revisionLabel textContent",
+      "parameterContract": [
+        "revision"
+      ]
+    }
+  ]
+}
