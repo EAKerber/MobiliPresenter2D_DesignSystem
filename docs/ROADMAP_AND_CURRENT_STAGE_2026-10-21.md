@@ -441,3 +441,9 @@ Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. 
 - A convenção de chaves semânticas foi aprovada para uso documental: preservar o namespace existente, trocar o sufixo numérico por camelCase semântico, manter valores dinâmicos como parâmetros e compartilhar chaves somente quando owner, consumer e contrato coincidirem. Os 13 exemplos da proposta continuam não canônicos.
 - A proposta [dos fluxos transacionais do Admin](../evidence/architecture/arc13-semantic-key-proposal-admin-transactional-save-2026-10-25.json) rastreia 41 ocorrências em `persistHandlesButton` e `saveButton`; consolida duas mensagens repetidas no mesmo consumer, propõe 39 chaves sem colisões observadas no índice-base e exclui dois rótulos dinâmicos de revisão para auditoria compartilhada.
 - O escopo é documental: nenhum código, `decisions.json` ou índice ARC canônico foi alterado. Os textos enviados pela API e os detalhes dinâmicos de validação permanecem fora das propostas.
+
+
+### ARC-13 — Admin loading e autenticação (25/10/2026)
+
+- Proposta documental rastreia 12 textos de `loadSettings`, `showUser` e `showPasswordAction` até os sinks visíveis no Admin, com 12 chaves sem colisões no índice-base.
+- A proposta exclui o rótulo de revisão dinâmico e qualquer texto dinâmico de erro; nenhum arquivo do produto, `decisions.json` ou índice canônico foi alterado. [Detalhes e ocorrências](../evidence/architecture/arc13-semantic-key-proposal-admin-loading-auth-2026-10-25.json).
