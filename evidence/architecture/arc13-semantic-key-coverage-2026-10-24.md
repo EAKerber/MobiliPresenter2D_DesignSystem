@@ -148,3 +148,12 @@ O cruzamento considera também `sourceLines` dos templates montados em runtime; 
 - Contagem atual: 220 combinações distintas de arquivo, linha e texto com proposta documental em 337 entradas brutas do mapa ARC-13 (**65.3%**); 112 combinações distintas permanecem sem proposta. O mapa possui 5 entrada(s) adicional(is) que repetem exatamente arquivo/linha/texto, ainda sem desambiguação por ocorrência.
 - O cálculo cruza texto e localização das propostas com o mapa; templates montados em runtime usam as linhas de origem registradas. Propostas documentais não significam aprovação, migração ou implementação.
 - A PR #51 está aberta em DRAFT, com zero checks e status de commit sem statuses. Código do produto, índice canônico e `decisions.json` permanecem inalterados.
+
+
+## Medição documental atualizada — 25/10/2026, após o lote de controles de puxador
+
+- A cobertura foi recalculada sobre o mapa congelado de 337 candidatos sem consumer confirmado (arc13-unkeyed-consumer-scope-map-2026-10-25.json), usando identidade arquivo + linha + texto literal. Propostas que identificam fragmentos por linha foram reconciliadas com todos os candidatos daquela linha; isso contabiliza propostas documentais, não cobertura de implementação.
+- 309 de 337 ocorrências (91,7%) agora aparecem em propostas contextuais; 28 seguem sem proposta neste mapa. O total inclui o lote de controles de puxador (6 referências de literais em 5 chaves). Uma proposta pode compor diversos fragmentos de origem em uma mensagem parametrizada.
+- O lote recém-adicionado controles do puxador (arc13-semantic-key-proposal-configurator-handle-controls-2026-10-25.json) teve suas 5 chaves consultadas contra as 2.181 referências do índice ARC-13 fixado: nenhuma colisão prévia nem duplicata no lote.
+- A aprovação da convenção vale para as regras de nomes, não para promover estes exemplos a chaves canônicas. Índice, código do produto e decisions.json continuam inalterados; ownership de descrições provenientes do catálogo e pluralização continuam fora desta proposta.
+- As medições anteriores deste arquivo são snapshots históricos. Este bloco é o readback mais recente desta fila; 91,7% representa preparação documental para revisão, e não implementação ou conclusão do ARC-13.

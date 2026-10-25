@@ -519,3 +519,8 @@ Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. 
 
 - Proposta cobre 6 literais de origem em acessibilidade de imagem, navegação entre etapas, abertura de ficha e estado vazio do resumo, com 5 chaves e zero colisões no índice-base.
 - Labels de produto/etapa ficam como parâmetros; a mensagem de abertura recompõe dois fragmentos numa frase. Nenhuma alteração no produto ou índice canônico. [Detalhes](../evidence/architecture/arc13-semantic-key-proposal-configurator-stage-and-detail-messages-2026-10-25.json).
+
+
+### ARC-13 semantic key proposal readback — 25/10/2026
+
+The user approved the key naming convention: preserve the existing namespace, use stable semantic camelCase suffixes, keep dynamic values as parameters, and share a key only when owner, consumer, and parameter contract match. The convention is canonical; proposal examples are still non-canonical. The current unkeyed-consumer map has 337 candidates. Across the contextual proposal batches, 309/337 (91.7%) have documentary proposals, leaving 28 unmatched in this map. The latest batch covers configurator handle help, accessible labels, priced description, and selection announcements (6 literal references / 5 keys), with zero collisions against the pinned 2,181-candidate index. Product code, the canonical index, and decisions.json were not changed. Dynamic catalog copy, pluralization, and ownership review remain prerequisites before extraction or migration.
