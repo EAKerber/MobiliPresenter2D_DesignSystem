@@ -383,3 +383,12 @@ Com isso, todas as 212 referências numéricas têm proposta rastreável; as 364
 ## Correção de classificação ARC-13 — literais técnicos (25/10/2026)
 
 A revisão dos seis sinais de possível código/markup confirmou que todos são valores técnicos: duas ocorrências de classe CSS, duas tags HTML, um código interno de estado e uma classe CSS adicional. A mensagem de interface na mesma linha do último caso segue separadamente classificada como localizável. Recomenda-se retirar as seis ocorrências técnicas da fila antes de nomear chaves; sem atualizar o índice, a fila atual de 364 cai para 358 candidatos locais após aplicar essa classificação. A decisão de refletir a reclassificação no índice fica para o lote de manutenção do próprio inventário. [Auditoria de origem](../evidence/architecture/arc13-unkeyed-code-literal-reclassification-2026-10-25.md).
+
+
+## ARC-13 — reclassificação técnica e sinks dos textos sem chave (25/10/2026)
+
+A revisão ampliada encontrou 19 valores técnicos entre as 364 ocorrências sem chave: classes/IDs CSS e DOM, nomes de tags/atributos, enum, código interno e role ARIA. Recomenda-se excluí-los da localização; ficam 345 candidatos de texto (208 Admin, 137 Configurador), sem atualização do índice.
+
+O rastreio sintático da linha de origem encontrou 106 textos enviados diretamente a textContent/createTextNode, 33 em ARIA/alt, 14 em title/tooltip, três templates HTML, 66 valores em mapas/arrays e 123 em expressões sem sink explícito na própria linha. Os 189 valores de mapas/arrays e outras expressões ainda precisam ser ligados a consumers reais. Há 21 grupos repetidos após exclusões; igualdade de texto não basta para compartilhar chaves. [Auditoria de sinks](../evidence/architecture/arc13-unkeyed-direct-sink-audit-2026-10-25.md) · [Reclassificação técnica](../evidence/architecture/arc13-unkeyed-code-literal-reclassification-2026-10-25.md).
+
+A verificação cruzada dos 217 candidatos de chave já propostos (212 ocorrências numéricas + cinco labels) encontrou 214 chaves únicas: três repetições agrupadas por texto/contrato idênticos e zero colisões com o índice fixado. Ainda falta revisão semântica das propostas; índice e produto seguem intactos.
