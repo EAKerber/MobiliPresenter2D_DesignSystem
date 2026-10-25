@@ -48,3 +48,21 @@ O workflow Admin executou com sucesso as suítes de hierarquia, persistência is
 A verificação manual do preview permanece limitada a `/admin.html` e `/access/`: em 291 px, os cabeçalhos ficam em uma linha, sem overflow, com identificadores completos e controles 44×44; em 288 px, as ações passam à segunda linha; o rótulo do tema some em 320 px e aparece em 321 px. A rota autenticada do Configurador e a gestão de acesso autenticada continuam sem leitura runtime nesta sessão.
 
 Escopo autorizado: somente preview. `decisions.json` segue byte-preservado, com a autorização canônica falsa. Sem merge, sem deploy Production e sem homologação global.
+
+
+## Auditoria ampliada de larguras no preview #244 — 25/10/2026
+
+Head de produto reobservada: `063796224c55924a8b3a909c9631c6b5f5590972`. Ampliei a leitura no Deploy Preview da rota pública `/access/`, contexto isolado sem sessão, com preferências de cor clara e escura emuladas. A largura do documento coincidiu com a viewport em todas as leituras abaixo.
+
+| Largura | Composição do header | Logo | Rótulo do tema | Menu e overflow |
+|---:|---|---:|---|---|
+| 280 / 290 px | duas linhas; ações em y=66,6 px | 105 px | somente ícone | alvo 44×44, margem direita 14 px; sem overflow |
+| 291 px | uma faixa; nome completo, quebrado em duas linhas internas | 83,7 px (20,3% abaixo da referência de 105 px) | somente ícone | alvo 44×44, margem 13,7 px; sem overflow |
+| 320 px | uma faixa | 99,7 px | somente ícone | alvo 44×44, margem 14 px; sem overflow |
+| 321 px | uma faixa; nome completo | 86,5 px (17,6% abaixo da referência) | “Auto” visível | alvo 44×44, margem 13,7 px; sem overflow |
+| 390 / 486 px | uma faixa; nome completo | 132 px | “Auto” visível | alvo 44×44, margem 14 px; sem overflow |
+| 900 px | uma faixa; nome completo | 135 px | “Automático” visível | alvo 44×44, margem 16 px; sem overflow |
+
+Os resultados foram equivalentes nos temas claro e escuro para 280, 290, 291, 320, 321, 390, 486 e 900 px; também medi 1280 px em claro, sem overflow. Capturas visuais nos limites 290/291 px confirmaram que a composição passa de duas linhas para uma faixa entre esses valores, sem cortar o identificador. A captura inclui a barra flutuante de colaboração do Netlify na borda inferior, fora do conteúdo do site.
+
+A regra de logo limita a redução ao intervalo de 73,5–105 px abaixo de 380 px; o menor valor medido no limite aprovado de 291 px foi 83,7 px. Em 320 px ou menos o texto do tema desaparece, e reaparece em 321 px. Esta leitura continua restrita à tela pública de acesso: não verifica runtime autenticado de `/config/`, `/admin.html` ou `/access/manage.html`, nem autoriza alteração do produto.
