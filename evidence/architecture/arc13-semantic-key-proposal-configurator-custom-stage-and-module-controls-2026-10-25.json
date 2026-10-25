@@ -1,0 +1,240 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/app.js: renderCustomStage, createModuleNavigationButton, createModuleSelectionControl",
+    "sourceLiteralOccurrences": 12,
+    "uniqueProposedKeys": 12
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "The batch follows three direct UI consumers: custom-stage messages, module navigation accessibility/title text, and module selection status. Product labels remain parameters.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "Module title, reference label and entity label are runtime/catalog data.",
+    "Direction labels and action terms are parameters to full templates; their final localized forms need content review.",
+    "This proposal does not update any runtime code."
+  ],
+  "entries": [
+    {
+      "proposedKey": "configurator.customStage.description",
+      "text": "Escolha os itens desta etapa.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1678
+        }
+      ],
+      "sourceLines": [
+        1678
+      ],
+      "owner": "Custom stage header",
+      "consumer": "renderCustomStage",
+      "sink": "stage description",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.customStage.eventControlledTitle",
+      "text": "Controlado por um evento da configuração.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1692
+        }
+      ],
+      "sourceLines": [
+        1692
+      ],
+      "owner": "Custom stage item",
+      "consumer": "renderCustomStage",
+      "sink": "input title when disabled",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.customStage.optionalItem",
+      "text": "Item opcional",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1694
+        }
+      ],
+      "sourceLines": [
+        1694
+      ],
+      "owner": "Custom stage item",
+      "consumer": "renderCustomStage",
+      "sink": "item type small text",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.customStage.moduleItem",
+      "text": "Módulo",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1694
+        }
+      ],
+      "sourceLines": [
+        1694
+      ],
+      "owner": "Custom stage item",
+      "consumer": "renderCustomStage",
+      "sink": "item type small text",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.customStage.emptyStageNote",
+      "text": "Inclua itens na administração para preencher esta etapa.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1697
+        }
+      ],
+      "sourceLines": [
+        1697
+      ],
+      "owner": "Custom stage empty state",
+      "consumer": "renderCustomStage",
+      "sink": "list empty note",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.moduleNavigation.previousDirection",
+      "text": "anterior",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1312
+        }
+      ],
+      "sourceLines": [
+        1312
+      ],
+      "owner": "Module detail navigation",
+      "consumer": "createModuleNavigationButton",
+      "sink": "aria-label/title template parameter",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.moduleNavigation.nextDirection",
+      "text": "próximo",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1312
+        }
+      ],
+      "sourceLines": [
+        1312
+      ],
+      "owner": "Module detail navigation",
+      "consumer": "createModuleNavigationButton",
+      "sink": "aria-label/title template parameter",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.moduleNavigation.openModuleAria",
+      "text": "Abrir módulo ${directionLabel}: ${targetProduct.title}",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1313
+        }
+      ],
+      "sourceLines": [
+        1313
+      ],
+      "owner": "Module detail navigation",
+      "consumer": "createModuleNavigationButton",
+      "sink": "button aria-label",
+      "parameterContract": [
+        "directionLabel",
+        "targetProduct.title"
+      ]
+    },
+    {
+      "proposedKey": "configurator.moduleNavigation.moduleTitle",
+      "text": "Módulo ${directionLabel}: ${targetProduct.referenceLabel}",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1314
+        }
+      ],
+      "sourceLines": [
+        1314
+      ],
+      "owner": "Module detail navigation",
+      "consumer": "createModuleNavigationButton",
+      "sink": "button title",
+      "parameterContract": [
+        "directionLabel",
+        "targetProduct.referenceLabel"
+      ]
+    },
+    {
+      "proposedKey": "configurator.moduleSelection.ariaLabel",
+      "text": "${isVisible ? \"Desselecionar\" : \"Selecionar\"} ${entity.label}",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1335
+        }
+      ],
+      "sourceLines": [
+        1335
+      ],
+      "owner": "Module detail selection control",
+      "consumer": "createModuleSelectionControl",
+      "sink": "checkbox aria-label",
+      "parameterContract": [
+        "action",
+        "entity.label"
+      ]
+    },
+    {
+      "proposedKey": "configurator.moduleSelection.selectedStatus",
+      "text": "Selecionado",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1337
+        }
+      ],
+      "sourceLines": [
+        1337
+      ],
+      "owner": "Module detail selection control",
+      "consumer": "createModuleSelectionControl",
+      "sink": "visible state text",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.moduleSelection.selectAction",
+      "text": "Selecionar",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1337
+        }
+      ],
+      "sourceLines": [
+        1337
+      ],
+      "owner": "Module detail selection control",
+      "consumer": "createModuleSelectionControl",
+      "sink": "visible state text",
+      "parameterContract": []
+    }
+  ]
+}

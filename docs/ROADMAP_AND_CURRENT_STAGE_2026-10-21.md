@@ -489,3 +489,9 @@ Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. 
 
 - Proposta reúne 18 literais de origem em controles hierárquicos, selectors, guardrails e acesso, com 14 chaves sem colisões no índice-base; rótulos de revisão compartilham contrato e sink.
 - Três mensagens com pluralização e um fallback de enum foram deferidos. Nenhuma alteração no produto, índice canônico ou decisões. [Proposta](../evidence/architecture/arc13-semantic-key-proposal-admin-remaining-controls-2026-10-25.json).
+
+
+### ARC-13 — Configurator custom stages and module controls (25/10/2026)
+
+- Proposta documenta 12 literais nos consumers `renderCustomStage`, `createModuleNavigationButton` e `createModuleSelectionControl`, com parâmetros explícitos para títulos e labels do catálogo; zero colisões no índice-base.
+- Só documentação foi alterada; nenhum código do produto, índice ARC canônico ou decisão foi modificado. [Detalhes](../evidence/architecture/arc13-semantic-key-proposal-configurator-custom-stage-and-module-controls-2026-10-25.json).
