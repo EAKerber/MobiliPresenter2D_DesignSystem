@@ -134,3 +134,10 @@ Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. 
 - O recorte lexical de 337 candidatos em `app/admin/admin.js` e `app/app.js` tem propostas não canônicas para 126 ocorrências únicas: **37,4%**. Restam 211 ocorrências sem proposta no recorte.
 - A contagem cruza referências `arquivo:linha` dos JSONs de proposta contra as ocorrências do mapa ARC-13; não soma chaves de outros módulos nem entradas repetidas. Duas mensagens repetidas no handler de publicação foram consolidadas em uma chave e preservadas como duas ocorrências-fonte.
 - Esta porcentagem mede cobertura documental da fila ARC-13, não implementação, aprovação de conteúdo, alteração do índice canônico ou conclusão do Design System. O índice e `decisions.json` continuam inalterados; a PR #51 continua DRAFT e sem checks executados.
+
+
+## Revisão do cálculo de cobertura — 25/10/2026
+
+A estimativa anterior de 126/337 foi substituída após incluir os lotes de Admin adicionados depois daquele snapshot e corrigir a chave de correspondência. O recorte contém 337 entradas brutas em 332 combinações distintas de arquivo, linha e texto; 206 combinações já têm proposta documental, equivalente a **61.1%** do total bruto. Restam 126 combinações sem proposta; cinco entradas repetem a mesma combinação arquivo/linha/texto e precisam ser desambiguadas no mapeamento.
+
+O cruzamento considera também `sourceLines` dos templates montados em runtime; portanto algumas propostas cobrem várias literais de origem. Isso mede somente cobertura documental da fila ARC-13, não implementação nem aprovação. A PR #51 continua DRAFT e sem checks executados; o índice canônico, `decisions.json` e produto continuam inalterados.
