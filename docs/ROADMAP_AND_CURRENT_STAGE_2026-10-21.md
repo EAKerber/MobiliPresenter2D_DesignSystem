@@ -364,3 +364,10 @@ Produto PR [#244](https://github.com/EAKerber/MobiliPresenter2D/pull/244), head 
 Foi preparado um arquivo de candidatos para as 64 ocorrências restantes de validação em app/core/configuration.js. São 63 chaves propostas; as duas ocorrências idênticas de conflicting event target compartilham uma chave candidata porque mantêm a mesma mensagem, owner/consumer e parâmetro rule.id. O lote contém 33 templates com os parâmetros preservados, teve zero colisões com as chaves do índice auditado e mantém proveniência por linha e hash do arquivo. As sugestões ainda exigem revisão contextual; não alteram o índice nem o produto.
 
 A fila de chaves numéricas sem proposta passa de 199 para 135. Próximos módulos dimensionados: hierarchy-administration.js (32), flow-model.js (30), presentation-contract.js (29), pricing-contract.js (24), administration-v5.js (13) e legacy-stage-repair.js (7). Também seguem 364 ocorrências sem chave e 190 itens de conteúdo deferidos.
+
+
+## ARC-13 — chaves numéricas propostas nos sete módulos (25/10/2026)
+
+O lote de configuration.js e o lote dos seis módulos centrais registram propostas para todas as 199 ocorrências que restavam das 212 chaves numéricas. Juntos são 199 ocorrências mapeadas a propostas; os 13 exemplos prévios permanecem candidatos auditados. O lote central cobre 135 ocorrências em hierarchy-administration.js, flow-model.js, presentation-contract.js, pricing-contract.js, administration-v5.js e legacy-stage-repair.js; 133 chaves sugeridas, 99 templates e zero colisões contra o índice atual. Uma mesma chave agrupa três ocorrências de unsupported layout profile, com owner/consumer e parâmetro profile iguais. Propostas não são aprovação de chaves individuais, e o índice/runtime continuam intactos.
+
+A próxima frente é resolver contexto e ownership dos 364 textos sem chave em admin.js e app.js. O inventário não atribui consumer com confiança suficiente para compartilhar ou nomear tudo automaticamente; investigar os call sites antes de preparar sugestões. Os 190 itens de conteúdo deferidos seguem em trilha editorial separada.
