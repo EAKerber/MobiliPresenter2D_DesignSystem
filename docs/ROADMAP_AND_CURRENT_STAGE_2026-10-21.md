@@ -1,5 +1,10 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+## Issue #205 — comparação temporária de cartões do Viewer (25/10/2026)
+
+A comparação lado a lado em Production mostrou que a superfície candidata `#F0EDE8` remove o branco puro e harmoniza melhor os três cartões com o contexto claro, mantendo `#514A43` em contraste de 7,46:1. O tema escuro já computa cartão `#20211F` e texto `#F4F1EB` (14,34:1). A evidência é uma simulação DOM transitória, sem alteração de produto: [método, medições e limites](../evidence/runtime/issue205-viewer-detail-card-surface-ab-2026-10-25.md). #205 continua backlog e sem implementação autorizada; foco, zoom, matriz completa e o overflow de 320 px permanecem pendentes.
+
+
 ## Issue #224 — seleção durante scroll real no preview da PR #243 (25/10/2026)
 
 Repeti o cenário com seleção de Lavanderia após 100 ms de animação e confirmei que scrollLeft estava efetivamente em movimento antes do clique, a 320/390 px e em claro/escuro (quatro combinações). A seleção e a página 2 permaneceram sincronizadas; o cartão terminou inteiramente dentro da janela e sem overflow do documento. [Método e medições](../evidence/runtime/pr243-issue224-carousel-in-motion-recheck-2026-10-25.md). A evidência confirma apenas o preview; issue #224 e PR #243 continuam abertas/DRAFT até revisão, integração e readback em Production.
