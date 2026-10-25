@@ -1,5 +1,10 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+## NAV-005 — rechecagem pública do cabeçalho privado no preview (25/10/2026)
+
+Na PR de produto [#244](https://github.com/EAKerber/MobiliPresenter2D/pull/244), em contexto isolado sem sessão, revalidei /admin.html e /access/ em claro/escuro a 291, 320, 321 e 288 px. Em 291 px, nome completo, menu à direita e alvos de 44×44 px cabem sem overflow; em 288 px as ações passam à segunda linha, como aprovado. O rótulo “Auto” aparece em 321 px e fica icon-only em 320 px. No Admin, logo mede 74,5 px a 291 px (29,1% menor que a referência de 105 px). A rota /config/ redirecionou para acesso inválido sem sessão; portanto, Configurador e gestão de acesso autenticados continuam sem evidência runtime. PR #244 permanece DRAFT, sem merge/Production. [Evidência](../evidence/runtime/nav005-pr244-public-header-preview-recheck-2026-10-25.md).
+
+
 ## VIS-002 — keylines de foco do Viewer em preview (25/10/2026)
 
 Na PR de produto [#242](https://github.com/EAKerber/MobiliPresenter2D/pull/242), a alternativa A foi testada em preview autorizado. A primeira composição com keylines externas recortou o hotspot 07 em mobile e foi substituída: a versão atual usa linhas preta (1 px) e branca (3 px) dentro da extensão externa do anel VIS-002 aprovado (4 px, offset declarado 3 px; #8B6A40 claro / #D8BC7C escuro). Os sete hotspots passaram por leitura de foco em claro/escuro, 390×844 e 1280×800, sem overflow; folga mínima do indicador à cena de 0,11 px no mobile. Os checks associados ao head passaram. O teste cobre somente a cena Cozinha e não mede contraste pixel a pixel das linhas compostas com a foto. PR permanece DRAFT, sem merge ou Production. [Evidência](../evidence/runtime/pr242-viewer-hotspot-focus-keylines-preview-2026-10-25.md) · [Proposta atualizada](../evidence/architecture/vis002-viewer-hotspot-focus-contrast-layer-proposal-2026-10-25.md).
