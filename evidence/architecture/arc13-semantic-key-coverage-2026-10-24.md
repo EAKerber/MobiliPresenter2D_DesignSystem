@@ -150,9 +150,9 @@ O cruzamento considera também `sourceLines` dos templates montados em runtime; 
 - A PR #51 está aberta em DRAFT, com zero checks e status de commit sem statuses. Código do produto, índice canônico e `decisions.json` permanecem inalterados.
 
 
-## Medição documental atualizada — 25/10/2026, após o fallback de base de preços
+## Medição documental atualizada — 25/10/2026, após o ramo de pedra sem adicional
 
-- O mapa contém 336 linhas candidatas brutas e 331 identidades distintas; cinco linhas repetem uma identidade. O seletor CSS passado a closest() foi reclassificado entre 24 literais técnicos, sem alterar o índice ARC-13.
-- 314 de 331 identidades distintas (94,9%) aparecem em propostas contextuais; 17 seguem sem proposta. O lote mais recente propõe Base: {basis}, mantendo rule.basis como parâmetro, com zero colisões nas 2.181 referências do índice fixado.
-- A proposta localiza só o prefixo do fallback; valores enum legíveis ao cliente ainda precisam de uma tabela de rótulos ou política segura. A convenção aprovada não canoniza os exemplos. Produto, índice e decisions.json permanecem sem mudança.
-- As medições anteriores são snapshots históricos; 94,9% mede preparação documental, não implementação ou conclusão ARC-13. Pluralização, ownership de catálogo/editorial e strings misturadas com HTML continuam sem contrato.
+- O mapa contém 336 linhas candidatas brutas e 331 identidades distintas; cinco linhas repetem uma identidade. Um seletor CSS foi reclassificado como técnico, fora da fila de UI.
+- 315 de 331 identidades distintas (95,2%) aparecem em propostas contextuais; 16 seguem sem proposta. A última proposta cobre o ramo sem adicional da pedra em uma chave, com stone.description como parâmetro; a variante com preço continua separada para revisão do formato monetário.
+- A chave foi comparada às 2.181 referências do índice ARC-13 fixado, sem colisão prévia nem duplicata. Código, índice e decisions.json permanecem inalterados.
+- Os snapshots anteriores são históricos. 95,2% mede preparação documental, não implementação ou conclusão ARC-13. Pluralização, ownership de conteúdo/catalogo e strings misturadas com HTML continuam pendentes.

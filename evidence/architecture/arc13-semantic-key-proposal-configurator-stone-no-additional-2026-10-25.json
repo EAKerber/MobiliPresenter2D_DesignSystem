@@ -1,0 +1,46 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "sourceBlobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+  "scope": {
+    "consumer": "app/app.js: renderStonePackages no-adjustment description branch",
+    "sourceLiteralOccurrences": 1,
+    "uniqueProposedKeys": 1
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "The no-adjustment branch is a complete sentence suffix attached to the catalog-owned stone description. The fixed UI wording gets a stable key while the catalog description remains a parameter.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "This records only the no-adjustment branch. The priced branch still uses the current currency formatter and needs a paired review before migration."
+  ],
+  "entries": [
+    {
+      "proposedKey": "configurator.stones.noAdditionalDescription",
+      "text": "{stoneDescription} · sem adicional.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 795,
+          "currentText": " · sem adicional."
+        }
+      ],
+      "sourceLines": [
+        795
+      ],
+      "owner": "Configurator stone package option",
+      "consumer": "renderStonePackages",
+      "sink": "stone description small text when global adjustment is zero",
+      "parameterContract": [
+        "stone.description (catalog-owned copy)"
+      ]
+    }
+  ]
+}
