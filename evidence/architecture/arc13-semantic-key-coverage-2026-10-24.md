@@ -150,10 +150,10 @@ O cruzamento considera também `sourceLines` dos templates montados em runtime; 
 - A PR #51 está aberta em DRAFT, com zero checks e status de commit sem statuses. Código do produto, índice canônico e `decisions.json` permanecem inalterados.
 
 
-## Medição documental atualizada — 25/10/2026, após os lotes de controles do puxador, pedra, serviço e dimensão
+## Medição documental atualizada — 25/10/2026, após os lotes de controles e mensagens do Configurador
 
-- O mapa congelado contém 337 linhas brutas e 332 identidades distintas por arquivo + linha + texto literal; cinco linhas repetem exatamente uma identidade e não podem ser desambiguadas por ocorrência com a evidência disponível.
-- 310 de 332 identidades distintas (93,4%) aparecem em propostas contextuais; 22 identidades distintas seguem sem proposta. Este bloco inclui os controles do puxador (6 referências fonte/5 chaves) e o lote de pedra, serviço e dimensão (3 referências/3 chaves). É cobertura documental, não implementação.
-- As três chaves do lote mais recente foram consultadas contra as 2.181 referências do índice ARC-13 fixado: nenhuma colisão prévia ou duplicata interna.
-- A convenção aprovada define regras de nomeação, não promove exemplos a chaves canônicas. Índice, produto e decisions.json continuam inalterados. Ownership de descrições do catálogo, pluralização, enum fallbacks e notas editoriais continuam separados.
-- As medições anteriores permanecem snapshots históricos; 93,4% representa preparação para revisão, não conclusão do ARC-13.
+- O mapa congelado contém 337 linhas brutas e 332 identidades distintas por arquivo + linha + texto literal; cinco linhas repetem exatamente uma identidade.
+- 314 de 332 identidades distintas (94,6%) aparecem em propostas contextuais; 18 identidades seguem sem proposta. Esta atualização inclui controles do puxador (6 referências fonte/5 chaves), pedra/serviço/dimensão (3/3) e feedback de dimensão e acabamento local (4/4). É cobertura documental, não implementação.
+- As quatro chaves novas foram comparadas às 2.181 referências do índice ARC-13 fixado: nenhuma colisão prévia ou duplicata interna.
+- A convenção aprovada define nomes, não promove exemplos a chaves canônicas. Código, índice e decisions.json permanecem inalterados. Pluralização, ownership de conteúdo/catálogo e mensagens HTML montadas continuam pendentes de contrato.
+- As medições anteriores permanecem snapshots históricos; 94,6% significa preparação para revisão, não conclusão do ARC-13.
