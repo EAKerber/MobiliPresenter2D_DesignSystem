@@ -97,3 +97,8 @@ O [mapa corrigido](arc13-unkeyed-consumer-scope-map-2026-10-25.json) substitui o
 ## Reclassificação adicional de identificadores — 25/10/2026
 
 A subfila cai de 341 para **338** após separar três formatos técnicos confirmados no código: slug interno de etapa, ID ligado por `aria-controls` e ID ligado por `aria-describedby`. Totais atuais da subfila: 22 valores técnicos e quatro diagnósticos internos fora da fila de revisão, 207 ocorrências no Admin e 131 no Configurador. A cobertura total do índice continua 728 localizáveis / 369 sem chave; nenhuma classificação canônica foi alterada.
+
+
+## ARC-13 — primeiro lote com consumer confirmado (25/10/2026)
+
+Rastreei `createDetailCarousel` no Configurador: o lote reúne **26 ocorrências** de títulos/rótulos curtos/descrições, nomes acessíveis, tooltips e ações de recolher. A proposta contém 16 chaves novas e quatro reutilizações intencionais de chaves já atribuídas ao mesmo carrossel; usa parâmetros `pageLabel`, `shortLabel`, `pageNumber` e `pageCount`. Anterior/próximo continuam mensagens distintas. A auditoria encontrou zero colisões com significado diferente e zero conflito de texto entre chaves. [Proposta não canônica](../evidence/architecture/arc13-semantic-key-proposal-configurator-carousel-2026-10-25.json). O índice e o produto não mudaram; os itens continuam sem chave canônica até reconciliação.

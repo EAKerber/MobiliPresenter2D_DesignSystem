@@ -53,3 +53,8 @@ Há 21 grupos de texto repetido; igualdade textual não basta para compartilhar 
 A revisão dos formatos semelhantes a identificadores encontrou três falsos positivos adicionais: um slug que vira `stage.id`, o ID do carrossel referenciado por `aria-controls` e o ID de status referenciado por `aria-describedby`. A fila atual passa de 341 para **338** (207 Admin, 131 Configurador). A reclassificação é somente documental e está registrada no [mapa corrigido](arc13-unkeyed-consumer-scope-map-2026-10-25.json); a busca dirigida não atesta cobertura completa.
 
 Após excluir os três itens da categoria “outras expressões”, a distribuição heurística fica: 106 escrita textual direta, 33 ARIA/alt, 14 tooltips, 66 mapas/arrays, 3 markup e **116 outras expressões** — total 338. As categorias continuam sendo pistas de sintaxe, não consumidores comprovados.
+
+
+## ARC-13 — primeiro lote com consumer confirmado (25/10/2026)
+
+Rastreei `createDetailCarousel` no Configurador: o lote reúne **26 ocorrências** de títulos/rótulos curtos/descrições, nomes acessíveis, tooltips e ações de recolher. A proposta contém 16 chaves novas e quatro reutilizações intencionais de chaves já atribuídas ao mesmo carrossel; usa parâmetros `pageLabel`, `shortLabel`, `pageNumber` e `pageCount`. Anterior/próximo continuam mensagens distintas. A auditoria encontrou zero colisões com significado diferente e zero conflito de texto entre chaves. [Proposta não canônica](../evidence/architecture/arc13-semantic-key-proposal-configurator-carousel-2026-10-25.json). O índice e o produto não mudaram; os itens continuam sem chave canônica até reconciliação.

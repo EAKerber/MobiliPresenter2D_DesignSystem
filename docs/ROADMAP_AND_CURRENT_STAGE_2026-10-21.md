@@ -404,3 +404,8 @@ A verificação cruzada dos 217 candidatos de chave já propostos (212 ocorrênc
 ## ARC-13 — revisão adicional de identificadores técnicos (25/10/2026)
 
 A leitura dos textos com formato de identificador detectou três itens que ainda estavam na fila: slug dinâmico de `stage.id`, ID do carrossel usado por `aria-controls` e ID de status usado por `aria-describedby`. A evidência está no relatório de reclassificação e no [mapa atualizado](../evidence/architecture/arc13-unkeyed-consumer-scope-map-2026-10-25.json). A fila documental atual tem **338 textos** (207 Admin, 131 Configurador), após 22 valores técnicos e quatro mensagens diagnósticas internas. O índice/produto continuam sem mudança. A revisão por padrão de identificador é dirigida, então não declaro exaustividade; o próximo impedimento é rastrear consumers indiretos e validar se os demais valores têm contrato de UI.
+
+
+## ARC-13 — primeiro lote com consumer confirmado (25/10/2026)
+
+Rastreei `createDetailCarousel` no Configurador: o lote reúne **26 ocorrências** de títulos/rótulos curtos/descrições, nomes acessíveis, tooltips e ações de recolher. A proposta contém 16 chaves novas e quatro reutilizações intencionais de chaves já atribuídas ao mesmo carrossel; usa parâmetros `pageLabel`, `shortLabel`, `pageNumber` e `pageCount`. Anterior/próximo continuam mensagens distintas. A auditoria encontrou zero colisões com significado diferente e zero conflito de texto entre chaves. [Proposta não canônica](../evidence/architecture/arc13-semantic-key-proposal-configurator-carousel-2026-10-25.json). O índice e o produto não mudaram; os itens continuam sem chave canônica até reconciliação.
