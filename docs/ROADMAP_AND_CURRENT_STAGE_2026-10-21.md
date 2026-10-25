@@ -7,7 +7,7 @@ A comparação lado a lado em Production mostrou que a superfície candidata `#F
 
 ## Issue #208 — reconciliação DS-04 com `main` (25/10/2026)
 
-Recomparei os 16 achados à base atual do produto `main@5ccb2a8`. DS04-01, 03–05, 07–09 já têm suporte de tema claro no código atual; DS04-11 está delimitado como exceção técnica, com validação visual parcial. Permanecem riscos em DS04-02 (P1), DS04-06 (P1), DS04-10 (P2) e DS04-12 (P3). A rota pública `/access/` respondeu em claro/escuro; `/access/manage.html` redirecionou a login sem sessão, então o CTA de gestão segue sem readback runtime. [Reconcilição fonte/runtime e contrastes](../evidence/architecture/issue208-ds04-main-source-reconciliation-2026-10-25.md). Issue #208 continua aberta; nenhum produto ou Production foi alterado.
+Recomparei os 16 achados à base atual do produto `main@5ccb2a8`. DS04-01, 03–05, 07–09 já têm suporte de tema claro no código atual; DS04-11 está delimitado como exceção técnica, com validação visual parcial. Permanecem riscos em DS04-02 (P1), DS04-06 (P1), DS04-10 (P2) e DS04-12 (P3). A rota pública `/access/` respondeu em claro/escuro; `/access/manage.html` redirecionou a login sem sessão, então o CTA de gestão segue sem readback runtime. Uma simulação DOM separada comparou texto atual branco (1,62:1) e `#20211F` (10,01:1), sem constituir decisão canônica. [Reconciliação fonte/runtime e contrastes](../evidence/architecture/issue208-ds04-main-source-reconciliation-2026-10-25.md). Issue #208 continua aberta; nenhum produto ou Production foi alterado.
 
 ## Issue #224 — seleção durante scroll real no preview da PR #243 (25/10/2026)
 
