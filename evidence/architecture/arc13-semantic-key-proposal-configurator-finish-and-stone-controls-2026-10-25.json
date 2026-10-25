@@ -1,0 +1,105 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/app.js: renderFinishControlsFromData and renderStonePackages",
+    "sourceLiteralOccurrences": 5,
+    "proposedKeys": 4,
+    "deferredPricingFragment": 1
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "Fragment pairs are recomposed into complete aria/description messages with public finish or stone labels as dynamic parameters. The event-controlled title remains separate by consumer.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "The stone “sem adicional” suffix is deferred with its amount alternative because the complete description branch and currency formatting contract must be reviewed together.",
+    "Public labels and stone labels remain catalog data parameters."
+  ],
+  "entries": [
+    {
+      "proposedKey": "configurator.finishes.applyGlobalAria",
+      "text": "Aplicar {publicLabel} ao conjunto",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 718
+        },
+        {
+          "file": "app/app.js",
+          "line": 718
+        }
+      ],
+      "sourceLines": [
+        718
+      ],
+      "owner": "Global finish control",
+      "consumer": "function renderFinishControlsFromData",
+      "sink": "button aria-label",
+      "parameterContract": [
+        "publicLabel"
+      ]
+    },
+    {
+      "proposedKey": "configurator.finishes.selectedSummary",
+      "text": "Selecionada: {publicLabel}.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 726
+        }
+      ],
+      "sourceLines": [
+        726
+      ],
+      "owner": "Selected finish description",
+      "consumer": "function renderFinishControlsFromData",
+      "sink": "selectedFinishDescription text",
+      "parameterContract": [
+        "publicLabel"
+      ]
+    },
+    {
+      "proposedKey": "configurator.stones.selectAria",
+      "text": "Selecionar pedra {stoneLabel}",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 784
+        }
+      ],
+      "sourceLines": [
+        784
+      ],
+      "owner": "Stone package control",
+      "consumer": "function renderStonePackages",
+      "sink": "button aria-label",
+      "parameterContract": [
+        "stoneLabel"
+      ]
+    },
+    {
+      "proposedKey": "configurator.stones.eventControlled",
+      "text": "Controlado por um evento da configuração.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 803
+        }
+      ],
+      "sourceLines": [
+        803
+      ],
+      "owner": "Stone skirting toggle",
+      "consumer": "function renderStonePackages",
+      "sink": "toggle title",
+      "parameterContract": []
+    }
+  ]
+}

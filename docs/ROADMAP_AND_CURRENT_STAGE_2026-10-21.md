@@ -501,3 +501,9 @@ Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. 
 
 - Proposta cobre 9 textos de seleção de módulos, estados de cards e controles de acessórios, sem colisões observadas no índice-base.
 - Títulos de produto permanecem parâmetros; mensagens iguais em consumers diferentes não foram compartilhadas automaticamente. Sem alteração de código, índice canônico ou decisões. [Detalhes](../evidence/architecture/arc13-semantic-key-proposal-configurator-module-and-accessory-controls-2026-10-25.json).
+
+
+### ARC-13 — Configurator finish and stone controls (25/10/2026)
+
+- Proposta recompõe fragmentos de acabamento em rótulos acessíveis completos e cobre controles de pedra, com 4 chaves sem colisões no índice-base.
+- O ramo de descrição “sem adicional” ficou deferido junto da alternativa com valor, para revisão conjunta do formato monetário. Sem alterações no produto ou índice canônico. [Detalhes](../evidence/architecture/arc13-semantic-key-proposal-configurator-finish-and-stone-controls-2026-10-25.json).
