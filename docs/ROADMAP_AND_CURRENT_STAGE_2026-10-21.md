@@ -695,4 +695,5 @@ The approved naming convention remains stable. The frozen consumer map has 336 r
 ### VIS-002 — diagnóstico de escala CSSOM no foco do Viewer — 25/10/2026
 
 - No preview #242, a quantização de 1/3 px reapareceu em elementos de diagnóstico sem CSS de produto: valores 1–8 px produziram 0,6667; 2; 2,6667; 4; 4,6667; 6; 6,6667; 8 px, tanto para outline como offset. O ambiente reportava `devicePixelRatio≈1`, `visualViewport.scale=1`, zoom CSS 1 e sem transforms; portanto não atribuí a causa a zoom ou ao seletor do hotspot.
+- Em seguida, o teste repetido com `deviceScaleFactor` emulado de 1, 1,25, 1,5 e 2 preservou exatamente a mesma série, afastando DPR emulado como causa isolada. A origem restante (Chrome/DevTools ou outra escala) segue desconhecida; o valor aprovado não foi alterado.
 - Uma redistribuição temporária de keylines dentro do mesmo raio máximo não teve nova amostragem de pixels e não foi adotada. Mantém-se a declaração VIS-002 4/3 px; contraste composto em todas as fotografias segue sem prova. [Readback e limites](../evidence/runtime/pr242-viewer-hotspot-focus-keylines-preview-2026-10-25.md).
