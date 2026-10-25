@@ -59,3 +59,10 @@ A aprovação canoniza as regras, não os exemplos nem seus owners. A auditoria 
 O arquivo [arc13-semantic-key-proposal-configuration-batch-2026-10-25.json](arc13-semantic-key-proposal-configuration-batch-2026-10-25.json) registra candidatos para as 64 ocorrências remanescentes em app/core/configuration.js: 63 chaves sugeridas, 33 ocorrências com parâmetros e zero colisões com as chaves presentes no índice ARC-13. As ocorrências das linhas 455 e 459 compartilham a sugestão conflictingEventTarget: o texto, owner/consumer e parâmetro rule.id são idênticos, mas o registro mantém as duas proveniências para revisão contextual. Cada linha preserva texto atual, contexto de código, owner, consumer, parâmetros e hashes.
 
 Este lote reduz de 199 para 135 as referências numéricas ainda sem sugestão. As chaves continuam candidatas, não foram inseridas no índice e nenhum código do produto foi alterado.
+
+
+## Reconciliação da fila numérica — 25/10/2026
+
+Os dois lotes subsequentes à aprovação da convenção agora cobrem as 199 ocorrências que não tinham proposta: 64 em configuration.js e 135 nos seis módulos centrais. O arquivo de configuration registra 63 chaves sugeridas (duas linhas idênticas agrupadas); o lote central registra 133 chaves sugeridas (três ocorrências idênticas agrupadas). Os 13 exemplos iniciais mais essas 199 propostas cobrem as 212 referências numéricas inventariadas. Isso é cobertura de proposta, não aprovação semântica final, ownership confirmado ou extração. Zero chaves propostas colidiram com o índice atual. A fila seguinte permanece 364 textos sem chave, com consumer não resolvido, e 190 itens de conteúdo deferidos em trilha separada.
+
+[Lote de configuration.js](arc13-semantic-key-proposal-configuration-batch-2026-10-25.json) · [Lote dos seis módulos](arc13-semantic-key-proposal-core-modules-2026-10-25.json).
