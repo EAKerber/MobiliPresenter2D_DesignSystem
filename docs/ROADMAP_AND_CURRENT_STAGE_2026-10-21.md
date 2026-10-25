@@ -1,5 +1,10 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+## VIS-002C — complemento de tema escuro em mobile no preview #241 (25/10/2026)
+
+Em 390×844 px, tema escuro, revalidei no preview da PR #241 os dez seletores de texto longo nas rotas Landing, About e Como funciona. Todos computaram #C4BCB2 com tema escuro ativo; cada rota manteve clientWidth=scrollWidth=390. Isso completa a leitura DOM/CSSOM clara e escura em desktop e mobile para os dez seletores; não mede contraste pixel a pixel nem amplia a homologação além das superfícies listadas. [Evidência](../evidence/runtime/vis002c-v03-preview-10-contexts-manual-review-2026-10-25.md).
+
+
 ## NAV-005 — rechecagem pública do cabeçalho privado no preview (25/10/2026)
 
 Na PR de produto [#244](https://github.com/EAKerber/MobiliPresenter2D/pull/244), em contexto isolado sem sessão, revalidei /admin.html e /access/ em claro/escuro a 291, 320, 321 e 288 px. Em 291 px, nome completo, menu à direita e alvos de 44×44 px cabem sem overflow; em 288 px as ações passam à segunda linha, como aprovado. O rótulo “Auto” aparece em 321 px e fica icon-only em 320 px. No Admin, logo mede 74,5 px a 291 px (29,1% menor que a referência de 105 px). A rota /config/ redirecionou para acesso inválido sem sessão; portanto, Configurador e gestão de acesso autenticados continuam sem evidência runtime. PR #244 permanece DRAFT, sem merge/Production. [Evidência](../evidence/runtime/nav005-pr244-public-header-preview-recheck-2026-10-25.md).
