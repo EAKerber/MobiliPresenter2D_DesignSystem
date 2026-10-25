@@ -1,5 +1,10 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+## Issue #224 — seleção durante scroll real no preview da PR #243 (25/10/2026)
+
+Repeti o cenário com seleção de Lavanderia após 100 ms de animação e confirmei que scrollLeft estava efetivamente em movimento antes do clique, a 320/390 px e em claro/escuro (quatro combinações). A seleção e a página 2 permaneceram sincronizadas; o cartão terminou inteiramente dentro da janela e sem overflow do documento. [Método e medições](../evidence/runtime/pr243-issue224-carousel-in-motion-recheck-2026-10-25.md). A evidência confirma apenas o preview; issue #224 e PR #243 continuam abertas/DRAFT até revisão, integração e readback em Production.
+
+
 ## VIS-002C — complemento de tema escuro em mobile no preview #241 (25/10/2026)
 
 Em 390×844 px, tema escuro, revalidei no preview da PR #241 os dez seletores de texto longo nas rotas Landing, About e Como funciona. Todos computaram #C4BCB2 com tema escuro ativo; cada rota manteve clientWidth=scrollWidth=390. Isso completa a leitura DOM/CSSOM clara e escura em desktop e mobile para os dez seletores; não mede contraste pixel a pixel nem amplia a homologação além das superfícies listadas. [Evidência](../evidence/runtime/vis002c-v03-preview-10-contexts-manual-review-2026-10-25.md).
