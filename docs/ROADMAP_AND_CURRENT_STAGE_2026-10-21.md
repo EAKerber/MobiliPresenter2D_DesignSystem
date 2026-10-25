@@ -47,13 +47,17 @@ A issue permanece aberta: não foram arquivadas capturas antes/depois, zoom não
 - Evidência histórica: [revisão manual do preview da head `baef9acd`](../evidence/runtime/pr241-vis002-v03-preview-manual-review-2026-10-25.md).
 
 
-## Revalidação CI-BASELINE-01 — 25/10/2026, diagnóstico da navegação
+## CI-BASELINE-01 / DS-05A — causa do timeout e estado atual (25/10/2026)
 
-- Produto PR [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238) segue DRAFT no head `fd61a37a11dd63b3e537d3d76a2303bfdfc4f06a`. A tentativa 2 do gate autenticado [Actions #40201992400](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40201992400) passou por preflight, grant, papel restrito, bootstrap V5, negação de Admin e revogação; o browser ficou `validated`, com workspace visível e sem erro HTTP/rede/página. A primeira tentativa do run falhou genericamente no resgate; a repetição passou.
-- Três das cinco suítes passaram (Mobile/PiP, Summary/Pricing e Stone). Keyboard e Flow continuam em timeout na navegação de etapas.
-- A nova sonda mostrou botões existentes com geometria 0×0; um clone fiel e um botão novo no mesmo `nav` recebem 44 px. Remover e recolocar o mesmo nó no mesmo lugar também restaura sua caixa de 44 px. As folhas CSS e a regra `.flow-step` estão presentes. Isso aponta para estado de layout recuperável por reinserção, mas não determina qual operação do runtime causa a invalidação nem comprova correção de produto.
-- Não há variável faltando confirmada. A PR #238 mantém a guarda de escopo em testes/CI; qualquer ajuste de runtime requer PR separada com preview e nova validação das cinco suítes. Issue [#232](https://github.com/EAKerber/MobiliPresenter2D/issues/232) permanece aberta; PRs #238 e #51 continuam DRAFT, sem merge ou Production. [Evidência detalhada](../evidence/runtime/ds05a-nav-layout-reinsert-diagnostic-2026-10-25.md).
+- O diagnóstico de #238 identificou a perda de geometria dos botões da navegação: nós existentes ficavam em 0×0 após a troca do perfil responsivo; reinserir o mesmo nó restaurava 44 px. A configuração do Supabase/Netlify não era a causa.
+- A correção de runtime foi isolada na PR #245: flex sizing para a navegação, criação em fragmento e reinserção da barra após mudança de perfil, preservando o foco. O gate autenticado em c4d55b7 passou as cinco suítes e os cenários de grant, papel restrito, revoke, replay negado e redirecionamento.
+- No head atual #245 dbfbd9a7, o Deploy Preview está READY e todos os checks acionados nesse head passaram. O gate autenticado não foi reexecutado nesse último head porque só mudou o workflow Stone; seu resultado mais recente segue no c4d55b7. A correção de runtime não mudou desde o head autenticado.
+- A causa do timeout de Stone também foi removida: o limite de 10 min expirava durante o download do Chromium. Com cache, instalação separada e timeout de 20 min, Stone concluiu em 54 s.
+- #238 permanece DRAFT no head fd61a37 e ainda tem o resultado antigo de Keyboard/Flow em timeout, pois sua branch de preview não contém a correção de runtime. Sua trava isolated-fixture-contract rejeita alterações de app/app.js e app/styles.css para manter a extração de CI/fixture limitada ao escopo aprovado.
+- As branches não foram fundidas: #238 contém a infraestrutura e o contrato da fixture; #245 contém a correção funcional, depende dessa base para o preview autenticado e adiciona o suporte de fixture ao seu Deploy Preview. Unificá-las agora exigiria alterar a trava e reexecutar a validação do escopo combinado; o ganho de reduzir uma branch não compensa enfraquecer esse limite antes da revisão. Ambas continuam DRAFT, sem merge ou Production.
+- Issue #232 permanece aberta até revisão e integração. Supabase Preview segue skipped por falta de branch associada; o banco interno de teste existente foi usado, sem criar outro projeto/branch.
 
+**Próximo passo técnico:** revisão humana do par de PRs e, depois da decisão sobre a infraestrutura, atualizar a base do trabalho funcional para a integração adequada. Não há variável faltando confirmada.
 ### Rechecagem visual em Production — imagens com `alt=""` (25/10/2026)
 
 - Os oito casos de `alt=""` em `/how-it-works/` foram revisados em DOM e pixels: ícone WhatsApp, ilustração de móveis prontos, logo repetido pelo título e cinco ilustrações das etapas. Os sete itens visuais têm categoria/nome e contexto textual adjacente; o ícone de WhatsApp está oculto da árvore acessível e o link tem nome acessível próprio. A observação sustenta manter `alt=""` nos oito contextos.
