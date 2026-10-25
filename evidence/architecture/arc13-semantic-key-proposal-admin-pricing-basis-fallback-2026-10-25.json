@@ -1,0 +1,47 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "sourceBlobSha": "79925345e43096df77bef54fe257e483f922edd8",
+  "scope": {
+    "consumer": "app/admin/admin.js: renderPricing fallback for an unrecognized pricing basis",
+    "sourceLiteralOccurrences": 1,
+    "uniqueProposedKeys": 1
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "The fixed prefix is interface copy; rule.basis remains an explicit parameter as required by the approved convention. The mapping of known enum values stays in the separate pricingBasisLabels table.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "This localizes only the fallback prefix. If rule.basis can expose internal enum identifiers, a separate human-readable label map or safe fallback policy is still needed.",
+    "Proposed key remains non-canonical pending owner and output review."
+  ],
+  "entries": [
+    {
+      "proposedKey": "admin.pricing.basisFallback",
+      "text": "Base: {basis}",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1216,
+          "currentText": "Base: ${rule.basis}"
+        }
+      ],
+      "sourceLines": [
+        1216
+      ],
+      "owner": "Admin pricing editor",
+      "consumer": "renderPricing",
+      "sink": "pricing basis small text when pricingBasisLabels has no match",
+      "parameterContract": [
+        "rule.basis (enum value; current fallback exposes it verbatim)"
+      ]
+    }
+  ]
+}
