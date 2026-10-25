@@ -45,3 +45,10 @@ A `main` do produto ainda aponta para o `productHead` do índice ARC-13. Com os 
 | Conteúdo deferido | 190 | Inventário editorial separado | Não mesclar com strings de runtime nem gerar chaves sem atribuir owner e consumer. |
 
 Esta é uma fila de revisão, não uma convenção aprovada nem um lote de migração. A convenção global e os owners continuam aguardando revisão humana.
+
+
+## Decisão da convenção — 25/10/2026
+
+O usuário aprovou a convenção operacional: preservar o namespace existente, usar sufixo semântico estável em camelCase, manter valores dinâmicos como parâmetros e compartilhar uma chave somente quando owner, consumer e contrato de parâmetros coincidirem. Números de linha, nomes de arquivo, texto traduzido e versões de schema não compõem a identidade da chave.
+
+A aprovação canoniza as regras, não os exemplos nem seus owners. A auditoria dos 13 exemplos numéricos e cinco rótulos confirma correspondência única e ausência de colisões na amostra observada; cada chave ainda exige revisão contextual antes de migração. O índice, o runtime e decisions.json não foram alterados. A fila segue: 199 propostas numéricas restantes, 364 textos sem chave sem proposta e 190 itens de conteúdo deferidos.
