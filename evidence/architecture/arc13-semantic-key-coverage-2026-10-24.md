@@ -127,3 +127,10 @@ O consumer `updateSelection` foi revisado até os sinks DOM. Dos 13 registros do
 ## ARC-13 — resumo de preços: contratos e limites (25/10/2026)
 
 Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. A proposta cobre **13 mensagens** completas/parameterizáveis, sem colisões. Cinco casos foram deferidos: copy longo com ownership de conteúdo, sufixo de contagem que exige plural, declaração fixa sobre Módulo 02, duas mensagens dentro de uma string HTML e texto de rateio montado em fragmentos/lista. O principal atrito agora é fronteira de mensagem: quatro valores com moeda são concatenados e precisam virar templates com parâmetro formatado; o rateio pede contrato explícito de contagem/lista. [Proposta e casos deferidos](../evidence/architecture/arc13-semantic-key-proposal-configurator-pricing-2026-10-25.json). Isso não muda o índice nem o produto.
+
+
+## Snapshot de propostas por ocorrência — 25/10/2026
+
+- O recorte lexical de 337 candidatos em `app/admin/admin.js` e `app/app.js` tem propostas não canônicas para 126 ocorrências únicas: **37,4%**. Restam 211 ocorrências sem proposta no recorte.
+- A contagem cruza referências `arquivo:linha` dos JSONs de proposta contra as ocorrências do mapa ARC-13; não soma chaves de outros módulos nem entradas repetidas. Duas mensagens repetidas no handler de publicação foram consolidadas em uma chave e preservadas como duas ocorrências-fonte.
+- Esta porcentagem mede cobertura documental da fila ARC-13, não implementação, aprovação de conteúdo, alteração do índice canônico ou conclusão do Design System. O índice e `decisions.json` continuam inalterados; a PR #51 continua DRAFT e sem checks executados.
