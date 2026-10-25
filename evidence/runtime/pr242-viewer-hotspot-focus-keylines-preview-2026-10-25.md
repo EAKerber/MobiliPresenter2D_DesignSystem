@@ -48,3 +48,14 @@ No Deploy Preview principal, `GET /api/public-modules` retorna HTTP 200 e a cena
 ## Referência
 
 A cor e a geometria do anel permanecem conforme VIS-002. As keylines só afetam o foco visível e não alteram a decisão canônica.
+
+
+## Diagnóstico adicional de escala CSSOM — 25/10/2026
+
+No preview principal da PR #242, 390 × 844, inspecionei um hotspot selecionado e um não selecionado enquanto recebiam `:focus-visible`. A regra da branch declara outline 4 px, offset 3 px e keylines com raio máximo 3 px. O CSSOM reportou a espessura 4 px como 4 px, mas devolveu offset `2.66667px` para os 3 px declarados.
+
+Para separar regra do produto de comportamento de leitura, criei e removi imediatamente elementos `div` de diagnóstico, sem classes nem transforms, com `outline` e `outline-offset` inline de 1 a 8 px. A página reportou: 1→0,66667; 2→2; 3→2,66667; 4→4; 5→4,66667; 6→6; 7→6,66667; 8→8 px — o mesmo padrão de quantização em largura e offset. O viewport era 390 px, `visualViewport.scale=1`, `devicePixelRatio≈1`, zoom CSS do root/body `1`, sem transform nos ancestrais. Isso mostra que a discrepância não é exclusiva do seletor de hotspot. Uma escala interna de renderização é uma hipótese compatível com o padrão, mas a causa continua **não confirmada**.
+
+Também comparei, apenas no DOM da sessão isolada, uma redistribuição de `box-shadow` de raios `2/3` para `1/3` (faixas preta/branca de 2 px/1 px para 1 px/2 px), sem ampliar o limite exterior de 3 px. As capturas de um hotspot sobre a fotografia em claro/escuro pareceram semelhantes; não repeti amostragem de pixels com a variante. A alternativa não foi adotada nem considerada aprovada.
+
+**Consequência:** manter a declaração aprovada 4/3 px; não ajustar a regra para forçar um valor CSSOM específico. A validação de contraste da keyline sobre as sete áreas fotográficas segue inconclusiva e requer revisão/evidência visual adicional. Nenhum arquivo do produto foi alterado nesta leitura.
