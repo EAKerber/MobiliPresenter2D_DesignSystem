@@ -1,0 +1,183 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/app.js: renderModuleControlsFromData, updateModuleCards, updateAccessoryControls",
+    "occurrences": 9,
+    "uniqueProposedKeys": 9
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "These labels and messages are direct UI sinks for module and accessory selection. Module title remains an explicit aria-label parameter.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "Product titles and configuration-derived statuses remain dynamic data.",
+    "Repeated “Controlado por um evento” copy stays separately scoped to three consumers pending an intentional shared-key review."
+  ],
+  "entries": [
+    {
+      "proposedKey": "configurator.moduleControls.includeAria",
+      "text": "Incluir ${product.title}",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 654
+        }
+      ],
+      "sourceLines": [
+        654
+      ],
+      "owner": "Configurator module chooser",
+      "consumer": "function renderModuleControlsFromData",
+      "sink": "module checkbox aria-label",
+      "parameterContract": [
+        "product.title"
+      ]
+    },
+    {
+      "proposedKey": "configurator.moduleControls.eventControlled",
+      "text": "Controlado por um evento da configuração.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 658
+        }
+      ],
+      "sourceLines": [
+        658
+      ],
+      "owner": "Configurator module chooser",
+      "consumer": "function renderModuleControlsFromData",
+      "sink": "module checkbox title",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.moduleControls.detailsAria",
+      "text": "Ver detalhes de ${product.title}",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 678
+        }
+      ],
+      "sourceLines": [
+        678
+      ],
+      "owner": "Configurator module chooser",
+      "consumer": "function renderModuleControlsFromData",
+      "sink": "module detail button aria-label",
+      "parameterContract": [
+        "product.title"
+      ]
+    },
+    {
+      "proposedKey": "configurator.moduleCards.eventControlled",
+      "text": "Controlado por um evento da configuração.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1529
+        }
+      ],
+      "sourceLines": [
+        1529
+      ],
+      "owner": "Configurator module cards",
+      "consumer": "function updateModuleCards",
+      "sink": "module card title",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.moduleCards.included",
+      "text": "Incluído",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1542
+        }
+      ],
+      "sourceLines": [
+        1542
+      ],
+      "owner": "Configurator module cards",
+      "consumer": "function updateModuleCards",
+      "sink": "module state label",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.moduleCards.notIncluded",
+      "text": "Não incluído",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1542
+        }
+      ],
+      "sourceLines": [
+        1542
+      ],
+      "owner": "Configurator module cards",
+      "consumer": "function updateModuleCards",
+      "sink": "module state label",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.moduleCards.requiresBaseIncluded",
+      "text": "Requer suporte incluído",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1542
+        }
+      ],
+      "sourceLines": [
+        1542
+      ],
+      "owner": "Configurator module cards",
+      "consumer": "function updateModuleCards",
+      "sink": "module state label",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.accessories.eventControlled",
+      "text": "Controlado por um evento da configuração.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1558
+        }
+      ],
+      "sourceLines": [
+        1558
+      ],
+      "owner": "Configurator accessory controls",
+      "consumer": "function updateAccessoryControls",
+      "sink": "accessory checkbox title",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.accessories.lightingRequirementsNote",
+      "text": "Inclua a lateral da geladeira e o aéreo da pia para habilitar a iluminação.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1558
+        }
+      ],
+      "sourceLines": [
+        1558
+      ],
+      "owner": "Configurator accessory controls",
+      "consumer": "function updateAccessoryControls",
+      "sink": "accessory guidance note",
+      "parameterContract": []
+    }
+  ]
+}

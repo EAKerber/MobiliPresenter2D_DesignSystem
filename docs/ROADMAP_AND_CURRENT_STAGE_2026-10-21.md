@@ -495,3 +495,9 @@ Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. 
 
 - Proposta documenta 12 literais nos consumers `renderCustomStage`, `createModuleNavigationButton` e `createModuleSelectionControl`, com parâmetros explícitos para títulos e labels do catálogo; zero colisões no índice-base.
 - Só documentação foi alterada; nenhum código do produto, índice ARC canônico ou decisão foi modificado. [Detalhes](../evidence/architecture/arc13-semantic-key-proposal-configurator-custom-stage-and-module-controls-2026-10-25.json).
+
+
+### ARC-13 — Configurator modules and accessories (25/10/2026)
+
+- Proposta cobre 9 textos de seleção de módulos, estados de cards e controles de acessórios, sem colisões observadas no índice-base.
+- Títulos de produto permanecem parâmetros; mensagens iguais em consumers diferentes não foram compartilhadas automaticamente. Sem alteração de código, índice canônico ou decisões. [Detalhes](../evidence/architecture/arc13-semantic-key-proposal-configurator-module-and-accessory-controls-2026-10-25.json).
