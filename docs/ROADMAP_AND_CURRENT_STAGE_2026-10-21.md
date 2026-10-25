@@ -371,3 +371,10 @@ A fila de chaves numéricas sem proposta passa de 199 para 135. Próximos módul
 O lote de configuration.js e o lote dos seis módulos centrais registram propostas para todas as 199 ocorrências que restavam das 212 chaves numéricas. Juntos são 199 ocorrências mapeadas a propostas; os 13 exemplos prévios permanecem candidatos auditados. O lote central cobre 135 ocorrências em hierarchy-administration.js, flow-model.js, presentation-contract.js, pricing-contract.js, administration-v5.js e legacy-stage-repair.js; 133 chaves sugeridas, 99 templates e zero colisões contra o índice atual. Uma mesma chave agrupa três ocorrências de unsupported layout profile, com owner/consumer e parâmetro profile iguais. Propostas não são aprovação de chaves individuais, e o índice/runtime continuam intactos.
 
 A próxima frente é resolver contexto e ownership dos 364 textos sem chave em admin.js e app.js. O inventário não atribui consumer com confiança suficiente para compartilhar ou nomear tudo automaticamente; investigar os call sites antes de preparar sugestões. Os 190 itens de conteúdo deferidos seguem em trilha editorial separada.
+
+
+## ARC-13 — fila sem chave mapeada por contexto (25/10/2026)
+
+As 364 ocorrências sem chave em admin.js e app.js foram associadas, por análise lexical dos arquivos fonte pinados, a 72 funções candidatas a contexto de consumo. O mapa preserva linha, hash, texto, parâmetros e trecho exato de código. Foram encontrados 22 grupos de texto repetido; seis ocorrências parecem código ou markup e precisam ser reclassificadas. O nome da função é apenas pista, não prova do consumer: por isso ainda não gerei chaves para esta fila. Próximo passo é revisar os contextos de DOM/ARIA e owners, especialmente duplicatas entre funções e possíveis falsos positivos. [Mapa de contexto](../evidence/architecture/arc13-unkeyed-consumer-context-map-2026-10-25.json).
+
+Com isso, todas as 212 referências numéricas têm proposta rastreável; as 364 sem chave agora têm contexto de código indexado, mas ainda não têm proposta de chave. Os 190 itens de conteúdo permanecem em inventário editorial separado. Nenhum índice ou runtime foi alterado.
