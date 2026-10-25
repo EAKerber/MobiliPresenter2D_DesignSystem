@@ -429,3 +429,8 @@ O consumer `updateSelection` foi revisado até os sinks DOM. Dos 13 registros do
 ## ARC-13 — lote Admin de etapas com consumer confirmado (25/10/2026)
 
 `renderStages` foi rastreada aos sinks da seção de itens não atribuídos e dos cartões de etapa. O lote contém **12 ocorrências**, doze chaves propostas em `admin.stages` e zero colisões. Os nomes dinâmicos de etapa são parâmetros nas labels acessíveis; a ação “Adicionar” permanece específica deste consumer. [Proposta não canônica](../evidence/architecture/arc13-semantic-key-proposal-admin-stages-2026-10-25.json). Sem alteração do índice ou do produto.
+
+
+## ARC-13 — resumo de preços: contratos e limites (25/10/2026)
+
+Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. A proposta cobre **13 mensagens** completas/parameterizáveis, sem colisões. Cinco casos foram deferidos: copy longo com ownership de conteúdo, sufixo de contagem que exige plural, declaração fixa sobre Módulo 02, duas mensagens dentro de uma string HTML e texto de rateio montado em fragmentos/lista. O principal atrito agora é fronteira de mensagem: quatro valores com moeda são concatenados e precisam virar templates com parâmetro formatado; o rateio pede contrato explícito de contagem/lista. [Proposta e casos deferidos](../evidence/architecture/arc13-semantic-key-proposal-configurator-pricing-2026-10-25.json). Isso não muda o índice nem o produto.
