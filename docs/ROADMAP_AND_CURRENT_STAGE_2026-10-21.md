@@ -7,6 +7,13 @@
 - **3/5 suítes funcionais passaram:** Mobile/PiP, Summary/Pricing e Stone. Keyboard e Flow ainda falham em navegação de etapas. Diagnóstico sanitizado encontrou botões da barra com geometria 0×0 embora estejam no DOM e computem `display:block`; Keyboard preveniu Ctrl+→ mas ficou em Módulos, e Flow não conseguiu clicar Módulos no perfil stacked. O ponto central atingiu `MAIN.workspace`. A causa de produto não está confirmada; não considerar cobertura homologada.
 - O coletor registra apenas campos de estrutura/estilo permitidos; nenhum valor de variável, URI de banco, cookie, grant ou token foi armazenado. Supabase Preview foi skipped pela ausência de Supabase Branch, usando-se o banco interno já autorizado.
 - A remoção do rewrite corrige o 404 de rota; o bloqueio restante é de geometria/interação do menu de etapas no Preview, não falta de variável confirmada. Issue [#232](https://github.com/EAKerber/MobiliPresenter2D/issues/232) permanece aberta até correção e aprovação das cinco suítes. PRs #238 e #51 seguem DRAFT, sem merge ou Production. [Evidência detalhada](../evidence/runtime/ds05a-authenticated-preview-suites-2026-10-25.md) · [Actions #40152094552](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40152094552).
+
+### Rechecagem visual em Production — ilustrações de etapas (25/10/2026)
+
+- As cinco imagens com `alt=""` da lista de etapas em `/how-it-works/` foram inspecionadas visualmente após scroll e carregamento lazy. Cozinha, lavanderia, sala, quarto e escritório mostram ilustrações simples do ambiente já nomeado e descrito ao lado, sem texto ou conteúdo informativo exclusivo; a observação sustenta o uso decorativo/redundante de `alt=""` nesses cinco itens.
+- Evidência: [revisão visual das ilustrações](../evidence/runtime/how-it-works-step-illustrations-visual-review-2026-10-25.md). A mudança é documental; nenhum `alt`, CSS ou código do produto foi alterado. O restante do item 2 — estados de teclado/movimento reduzido e erro de imagem em rotas/estados ainda não cobertos — permanece parcial.
+
+
 ---
 
 ## Revalidação de execução — 24/10/2026
