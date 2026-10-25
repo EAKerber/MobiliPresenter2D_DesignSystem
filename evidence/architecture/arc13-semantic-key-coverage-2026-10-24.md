@@ -150,10 +150,10 @@ O cruzamento considera também `sourceLines` dos templates montados em runtime; 
 - A PR #51 está aberta em DRAFT, com zero checks e status de commit sem statuses. Código do produto, índice canônico e `decisions.json` permanecem inalterados.
 
 
-## Medição documental atualizada — 25/10/2026, após a proposta de feedback dimensional
+## Medição documental atualizada — 25/10/2026, após revisão do literal técnico
 
-- O mapa congelado contém 337 linhas brutas e 332 identidades distintas por arquivo + linha + texto literal; cinco linhas repetem exatamente uma identidade.
-- 313 de 332 identidades distintas (94,3%) aparecem em propostas contextuais; 19 identidades seguem sem proposta. A proposta dimensional e de acabamento local registra quatro chaves, mas a mensagem de anúncio de ajuste dimensional já estava coberta por um lote anterior; portanto, o ganho líquido nesta medição é de três identidades.
-- As quatro chaves desta proposta foram comparadas às 2.181 referências do índice ARC-13 fixado: nenhuma colisão prévia ou duplicata interna.
+- O mapa atualizado contém 336 linhas candidatas brutas; a revisão excluiu um seletor CSS usado por closest() e agora registra 24 literais técnicos e quatro diagnósticos internos. As 336 linhas representam 331 identidades distintas por arquivo + linha + texto literal; cinco linhas repetem exatamente uma identidade.
+- 313 de 331 identidades distintas (94,6%) aparecem em propostas contextuais; 18 seguem sem proposta. O lote de feedback dimensional e acabamento local propõe quatro chaves, mas uma mensagem de ajuste dimensional já estava coberta antes; seu ganho líquido é de três identidades.
+- A classificação técnica está documentada no mapa ARC-13 atualizado. As quatro chaves do lote mais recente foram comparadas às 2.181 referências fixadas: zero colisões prévias ou duplicatas.
 - A convenção aprovada define nomes, não promove exemplos a chaves canônicas. Código, índice e decisions.json permanecem inalterados. Pluralização, ownership de conteúdo/catálogo e mensagens HTML montadas continuam pendentes de contrato.
-- As medições anteriores permanecem snapshots históricos; 94,3% significa preparação para revisão, não conclusão do ARC-13.
+- Os snapshots anteriores são históricos; 94,6% é preparação documental para revisão, não implementação ou conclusão do ARC-13.

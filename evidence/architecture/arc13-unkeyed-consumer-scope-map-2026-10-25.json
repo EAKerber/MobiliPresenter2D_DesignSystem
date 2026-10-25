@@ -10,12 +10,12 @@
   },
   "counts": {
     "originalCandidates": 364,
-    "technicalValuesExcluded": 23,
+    "technicalValuesExcluded": 24,
     "consoleOnlyDiagnosticMessagesExcluded": 4,
-    "remainingCandidates": 337,
+    "remainingCandidates": 336,
     "byFile": {
       "app/admin/admin.js": 207,
-      "app/app.js": 130
+      "app/app.js": 129
     },
     "lexicalScopeBuckets": 75,
     "duplicateTextGroups": 21
@@ -146,6 +146,12 @@
         "line": 1435,
         "literal": "Estrutural",
         "reason": "compared with product.category to select a different explanatory sentence; the value itself is not rendered"
+      },
+      {
+        "file": "app/app.js",
+        "line": 2450,
+        "literal": "button, .scene-hotspot",
+        "reason": "CSS selector passed to event.target.closest() during pointer dragging; it controls event targeting and is not displayed as interface copy."
       }
     ],
     "diagnostics": [
@@ -218,7 +224,7 @@
     },
     {
       "scope": "app/app.js :: function startConfigurator",
-      "count": 9
+      "count": 8
     },
     {
       "scope": "app/admin/admin.js :: function renderPricing",
@@ -5469,19 +5475,6 @@
       "currentText": "Mini-cena pequena.",
       "parameters": [],
       "sourceLine": "    announce([\"Mini-cena pequena.\", \"Mini-cena média.\", \"Mini-cena grande.\"][mobilePipSizeIndex]);",
-      "lexicalScopePath": [
-        "function startConfigurator"
-      ],
-      "ownerHint": "configurator interface",
-      "classification": "interface-localizable"
-    },
-    {
-      "file": "app/app.js",
-      "line": 2450,
-      "route": "/config/",
-      "currentText": "button, .scene-hotspot",
-      "parameters": [],
-      "sourceLine": "    if (event.target.closest(\"button, .scene-hotspot\")) return;",
       "lexicalScopePath": [
         "function startConfigurator"
       ],
