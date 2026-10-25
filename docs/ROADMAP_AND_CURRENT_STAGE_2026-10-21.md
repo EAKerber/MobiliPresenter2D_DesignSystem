@@ -447,3 +447,9 @@ Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. 
 
 - Proposta documental rastreia 12 textos de `loadSettings`, `showUser` e `showPasswordAction` até os sinks visíveis no Admin, com 12 chaves sem colisões no índice-base.
 - A proposta exclui o rótulo de revisão dinâmico e qualquer texto dinâmico de erro; nenhum arquivo do produto, `decisions.json` ou índice canônico foi alterado. [Detalhes e ocorrências](../evidence/architecture/arc13-semantic-key-proposal-admin-loading-auth-2026-10-25.json).
+
+
+### ARC-13 — Admin assets e eventos (25/10/2026)
+
+- Foram mapeadas 10 ocorrências em `renderObjectAssets` e 13 em `renderEvents`, sem colisões observadas no índice-base.
+- Caminhos de assets, labels de catálogo/alvos e valores de estado continuam dados dinâmicos; as propostas cobrem texto fixo e contratos explícitos para templates. Nenhum arquivo do produto, `decisions.json` ou índice ARC canônico foi alterado. [Assets](../evidence/architecture/arc13-semantic-key-proposal-admin-object-assets-2026-10-25.json) · [Eventos](../evidence/architecture/arc13-semantic-key-proposal-admin-events-2026-10-25.json).
