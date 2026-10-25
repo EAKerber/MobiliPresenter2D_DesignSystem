@@ -471,3 +471,9 @@ Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. 
 
 - Proposta reúne 28 ocorrências dos editores de grupos de materiais, dependências, itens/seções/grupos hierárquicos e paginação. Não foram encontradas colisões no índice-base.
 - Títulos de grupo e estado da página usam parâmetros explícitos; ações curtas continuam separadas por consumer. Nenhum arquivo de produto, índice canônico ou decisão foi alterado. [Detalhes](../evidence/architecture/arc13-semantic-key-proposal-admin-hierarchy-material-dependency-pager-2026-10-25.json).
+
+
+### ARC-13 — Admin pricing constants, creation prompts e recovery (25/10/2026)
+
+- Proposta cobre 14 textos em labels de pricing, criação de etapas/materiais e recuperação de senha; não foram encontradas colisões no índice-base.
+- Mensagem e valor padrão de prompt são chaves separadas. Erros vindos da API e o fallback dinâmico da base de preço permanecem fora. Sem alteração no produto, índice canônico ou decisões. [Proposta](../evidence/architecture/arc13-semantic-key-proposal-admin-pricing-creation-recovery-2026-10-25.json).
