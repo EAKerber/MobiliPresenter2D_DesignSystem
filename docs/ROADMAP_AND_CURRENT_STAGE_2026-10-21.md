@@ -709,3 +709,6 @@ O preview principal retornou 200 em `/api/public-modules`, enquanto o projeto is
 ### Delimitação do 503 isolado por leitura do código (25/10/2026)
 
 O código de `main@5ccb2a8` confirma que `public-modules` lê a chave `published` no Netlify Blobs `configurator-settings`. No site primário isolado, o contexto é `production`, portanto usa `getStore`; o fallback ao host primário só roda em contexto `deploy-preview`. A rota não usa Supabase nem `DATABASE_URL`/`ACCESS_GATE_SECRET`. Ausência, snapshot inválido e erro de leitura continuam indistinguíveis porque a função retorna o mesmo 503 e os logs não têm erro interno. O GET/PUT em `/api/configuration` requer sessão admin e o PUT publica configuração validada, mas não escrevi no storage; ferramentas conectadas não permitem ler Blobs. Assim, snapshot ausente é hipótese forte, ainda não confirmada. [Evidência e limites](../evidence/runtime/pr242-viewer-hotspot-focus-keylines-preview-2026-10-25.md).
+
+
+Readback adicional confirma que o deploy primário do site isolado `m2d-auth-ci-isolated` é READY em `main@5ccb2a8`, contexto `production`; isso confirma o caminho `getStore`, não `getDeployStore`. O conteúdo do Blob segue não observável pelas ferramentas conectadas.
