@@ -9,7 +9,7 @@ Se o pacote existe no catálogo, a função aplica a seleção global, sincroniz
 
 ## Achado de gramática que pede correção
 
-Os rótulos canônicos atuais incluem `Clara mineral` e `Preta mineral`; a mensagem resultante usa concordância masculina fixa (“Clara mineral aplicado”, “Preta mineral aplicado”). O suffixo `aplicado ao conjunto.` também aparece no anúncio do puxador, mas não deve ser compartilhado sem considerar o substantivo implícito: puxador é masculino; pedra/acabamento é feminino. Labels futuros podem variar mais.
+Os rótulos canônicos atuais incluem `Clara mineral` e `Preta mineral`; a mensagem resultante usa concordância masculina fixa (“Clara mineral aplicado”, “Preta mineral aplicado”). O sufixo `aplicado ao conjunto.` também aparece no anúncio do puxador, mas não deve ser compartilhado sem considerar o substantivo implícito: puxador é masculino; pedra/acabamento é feminino. Labels futuros podem variar mais.
 
 A correção precisa tornar a gramática independente do nome editorial, por exemplo, formular a mensagem com sujeito fixo (“Acabamento de pedra selecionado para o conjunto”) ou passar uma forma/contrato explícito do catálogo. Confirmar com owner de produto/catálogo antes de alterar a copy; não corrigida nesta etapa.
 
