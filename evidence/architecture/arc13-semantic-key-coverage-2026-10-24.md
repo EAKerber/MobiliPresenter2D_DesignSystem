@@ -141,3 +141,10 @@ Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. 
 A estimativa anterior de 126/337 foi substituída após incluir os lotes de Admin adicionados depois daquele snapshot e corrigir a chave de correspondência. O recorte contém 337 entradas brutas em 332 combinações distintas de arquivo, linha e texto; 206 combinações já têm proposta documental, equivalente a **61.1%** do total bruto. Restam 126 combinações sem proposta; cinco entradas repetem a mesma combinação arquivo/linha/texto e precisam ser desambiguadas no mapeamento.
 
 O cruzamento considera também `sourceLines` dos templates montados em runtime; portanto algumas propostas cobrem várias literais de origem. Isso mede somente cobertura documental da fila ARC-13, não implementação nem aprovação. A PR #51 continua DRAFT e sem checks executados; o índice canônico, `decisions.json` e produto continuam inalterados.
+
+
+## Snapshot após lote de labels e recovery — 25/10/2026
+
+- Contagem atual: 220 combinações distintas de arquivo, linha e texto com proposta documental em 337 entradas brutas do mapa ARC-13 (**65.3%**); 112 combinações distintas permanecem sem proposta. O mapa possui 5 entrada(s) adicional(is) que repetem exatamente arquivo/linha/texto, ainda sem desambiguação por ocorrência.
+- O cálculo cruza texto e localização das propostas com o mapa; templates montados em runtime usam as linhas de origem registradas. Propostas documentais não significam aprovação, migração ou implementação.
+- A PR #51 está aberta em DRAFT, com zero checks e status de commit sem statuses. Código do produto, índice canônico e `decisions.json` permanecem inalterados.
