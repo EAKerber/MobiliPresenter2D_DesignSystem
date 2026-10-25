@@ -12,9 +12,10 @@
 
 ## VIS-002 — contraste de foco nos hotspots do Viewer (25/10/2026)
 
-- Revisão complementar do preview da PR de produto [#242](https://github.com/EAKerber/MobiliPresenter2D/pull/242), head `af2166d`, confirmou em Cozinha que os sete hotspots recebem o contorno aprovado de 4 px/offset 3 px, ficam dentro da cena em 390 px e não causam overflow horizontal.
-- A comparação aproximada do traçado com a imagem de base `assets/kitchen/base.png` encontrou medianas de contraste de 1,24–1,46:1 no tema escuro e 3,18–3,92:1 no claro em desktop; em mobile, 1,26–1,46:1 no escuro e 3,31–3,94:1 no claro. É uma única cena e pixels da imagem sob o anel, sem pretensão de auditoria WCAG nem generalização para outras fotos. A baixa distinção observada mantém pendente a aprovação visual final.
-- Evidência: [amostra de contraste por imagem](../evidence/runtime/pr242-viewer-focus-image-contrast-sample-2026-10-25.md). As cores e a geometria permanecem como aprovadas; nenhuma alternativa ou código de produto foi aplicada. PR #242 continua DRAFT, sem merge/Production.
+- A PR de produto [#242](https://github.com/EAKerber/MobiliPresenter2D/pull/242), head `af2166df42019b273c27d672149ebe49b143c0fb`, usa o anel aprovado de 4 px/offset 3 px nos sete hotspots.
+- Rechecagem por teclado no preview, em mobile 390 × 844 e tema escuro: os sete hotspots receberam `:focus-visible`, `#D8BC7C`, largura 4 px e offset 3 px; todos ficaram dentro da cena, sem overflow. O hotspot 01 manteve sua seleção enquanto o foco percorreu 01–07.
+- O branch publica somente a cena da Cozinha. A distinção do anel sobre a fotografia segue como limite: a amostra aproximada anterior mediu medianas de 1,24–1,46:1 no escuro. A nova leitura confirma renderização/posicionamento, não suficiência de contraste nem generalização a outras cenas.
+- [Rechecagem por teclado](../evidence/runtime/pr242-viewer-hotspot-focus-preview-keyboard-recheck-2026-10-25.md) · [amostra anterior de contraste](../evidence/runtime/pr242-viewer-focus-image-contrast-sample-2026-10-25.md). Sem mudança de CSS ou decisão. PR #242 permanece DRAFT; sem merge/Production.
 
 
 ## Registro histórico supersedido — revisão inicial do preview VIS-002C v0.3 (head `baef9acd`)
