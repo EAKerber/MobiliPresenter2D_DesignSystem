@@ -251,7 +251,7 @@
         2052
       ],
       "owner": "Admin configuration editor",
-      "consumer": "revisionLabel shared DOM sink",
+      "consumer": "Admin configuration editor revisionLabel textContent",
       "sink": "revisionLabel textContent",
       "parameterContract": [
         "revision"
