@@ -1,5 +1,12 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+## VIS-002 — contraste de foco nos hotspots do Viewer (25/10/2026)
+
+- Revisão complementar do preview da PR de produto [#242](https://github.com/EAKerber/MobiliPresenter2D/pull/242), head `af2166d`, confirmou em Cozinha que os sete hotspots recebem o contorno aprovado de 4 px/offset 3 px, ficam dentro da cena em 390 px e não causam overflow horizontal.
+- A comparação aproximada do traçado com a imagem de base `assets/kitchen/base.png` encontrou medianas de contraste de 1,24–1,46:1 no tema escuro e 3,18–3,92:1 no claro em desktop; em mobile, 1,26–1,46:1 no escuro e 3,31–3,94:1 no claro. É uma única cena e pixels da imagem sob o anel, sem pretensão de auditoria WCAG nem generalização para outras fotos. A baixa distinção observada mantém pendente a aprovação visual final.
+- Evidência: [amostra de contraste por imagem](../evidence/runtime/pr242-viewer-focus-image-contrast-sample-2026-10-25.md). As cores e a geometria permanecem como aprovadas; nenhuma alternativa ou código de produto foi aplicada. PR #242 continua DRAFT, sem merge/Production.
+
+
 ## Revisão manual do preview VIS-002C v0.3 — 25/10/2026
 
 - A revisão em preview da PR de produto [#241](https://github.com/EAKerber/MobiliPresenter2D/pull/241), head `baef9acd`, verificou os sete seletores autorizados em Landing, Quem somos e Como funciona. Em 390 px, os três documentos ficaram sem overflow horizontal. Tema claro usa `#292723` nos contextos v0.3; tema escuro manteve `#C4BCB2` sobre `#20211F`.
