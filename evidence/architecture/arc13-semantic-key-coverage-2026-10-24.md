@@ -152,8 +152,8 @@ O cruzamento considera também `sourceLines` dos templates montados em runtime; 
 
 ## Medição documental atualizada — 25/10/2026, após o lote de controles de puxador
 
-- A cobertura foi recalculada sobre o mapa congelado de 337 candidatos sem consumer confirmado (arc13-unkeyed-consumer-scope-map-2026-10-25.json), usando identidade arquivo + linha + texto literal. Propostas que identificam fragmentos por linha foram reconciliadas com todos os candidatos daquela linha; isso contabiliza propostas documentais, não cobertura de implementação.
-- 309 de 337 ocorrências (91,7%) agora aparecem em propostas contextuais; 28 seguem sem proposta neste mapa. O total inclui o lote de controles de puxador (6 referências de literais em 5 chaves). Uma proposta pode compor diversos fragmentos de origem em uma mensagem parametrizada.
-- O lote recém-adicionado controles do puxador (arc13-semantic-key-proposal-configurator-handle-controls-2026-10-25.json) teve suas 5 chaves consultadas contra as 2.181 referências do índice ARC-13 fixado: nenhuma colisão prévia nem duplicata no lote.
-- A aprovação da convenção vale para as regras de nomes, não para promover estes exemplos a chaves canônicas. Índice, código do produto e decisions.json continuam inalterados; ownership de descrições provenientes do catálogo e pluralização continuam fora desta proposta.
-- As medições anteriores deste arquivo são snapshots históricos. Este bloco é o readback mais recente desta fila; 91,7% representa preparação documental para revisão, e não implementação ou conclusão do ARC-13.
+- O mapa congelado contém 337 linhas brutas e 332 identidades distintas por arquivo + linha + texto literal; cinco linhas repetem exatamente uma identidade e não podem ser desambiguadas por ocorrência com a evidência disponível.
+- 307 de 332 identidades distintas (92,5%) aparecem em propostas contextuais; 25 identidades distintas seguem sem proposta. O lote de controles do puxador adicionou 6 referências fonte em 5 chaves. Esta é cobertura documental, não implementação.
+- As cinco chaves do lote foram consultadas contra as 2.181 referências do índice ARC-13 fixado: nenhuma colisão prévia ou duplicata interna.
+- A convenção aprovada define regras de nomeação, não promove exemplos a chaves canônicas. Índice, produto e decisions.json continuam inalterados. Ownership de descrições do catálogo e pluralização continuam separados.
+- Os snapshots anteriores permanecem históricos; esta medição distingue linhas brutas, identidades repetidas e identidades únicas. 92,5% representa preparação para revisão, não conclusão do ARC-13.
