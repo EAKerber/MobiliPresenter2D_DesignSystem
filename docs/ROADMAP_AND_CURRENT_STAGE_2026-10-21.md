@@ -1,5 +1,12 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+## Revisão manual do preview VIS-002C v0.3 — 25/10/2026
+
+- A revisão em preview da PR de produto [#241](https://github.com/EAKerber/MobiliPresenter2D/pull/241), head `baef9acd`, verificou os sete seletores autorizados em Landing, Quem somos e Como funciona. Em 390 px, os três documentos ficaram sem overflow horizontal. Tema claro usa `#292723` nos contextos v0.3; tema escuro manteve `#C4BCB2` sobre `#20211F`.
+- Três contextos anteriores preservados pelo mapa v0.2 — `.hero-description`, `.about-scale p:not(.eyebrow)` e `.how-hero-note` — continuam com `#705C4B` no claro. O par medido contra `#F0EDE8` tem 5,41:1; passa 4,5:1, embora não siga a preferência tonal por quase preto em texto corrido. Não foram incluídos na alteração restrita da v0.3; qualquer ajuste requer reconciliação de escopo, inclusive com a PR de produto #240.
+- Evidência: [revisão manual do preview](../evidence/runtime/pr241-vis002-v03-preview-manual-review-2026-10-25.md). Revisão pontual; sem alteração de código do produto. PRs Design System #52 e produto #241 continuam DRAFT, sem merge ou Production.
+
+
 ## Revalidação CI-BASELINE-01 — 25/10/2026, diagnóstico da navegação
 
 - Produto PR [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238) segue DRAFT no head `fd61a37a11dd63b3e537d3d76a2303bfdfc4f06a`. A tentativa 2 do gate autenticado [Actions #40201992400](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40201992400) passou por preflight, grant, papel restrito, bootstrap V5, negação de Admin e revogação; o browser ficou `validated`, com workspace visível e sem erro HTTP/rede/página. A primeira tentativa do run falhou genericamente no resgate; a repetição passou.
