@@ -150,10 +150,10 @@ O cruzamento considera também `sourceLines` dos templates montados em runtime; 
 - A PR #51 está aberta em DRAFT, com zero checks e status de commit sem statuses. Código do produto, índice canônico e `decisions.json` permanecem inalterados.
 
 
-## Medição documental atualizada — 25/10/2026, após o lote de controles de puxador
+## Medição documental atualizada — 25/10/2026, após os lotes de controles do puxador, pedra, serviço e dimensão
 
 - O mapa congelado contém 337 linhas brutas e 332 identidades distintas por arquivo + linha + texto literal; cinco linhas repetem exatamente uma identidade e não podem ser desambiguadas por ocorrência com a evidência disponível.
-- 307 de 332 identidades distintas (92,5%) aparecem em propostas contextuais; 25 identidades distintas seguem sem proposta. O lote de controles do puxador adicionou 6 referências fonte em 5 chaves. Esta é cobertura documental, não implementação.
-- As cinco chaves do lote foram consultadas contra as 2.181 referências do índice ARC-13 fixado: nenhuma colisão prévia ou duplicata interna.
-- A convenção aprovada define regras de nomeação, não promove exemplos a chaves canônicas. Índice, produto e decisions.json continuam inalterados. Ownership de descrições do catálogo e pluralização continuam separados.
-- Os snapshots anteriores permanecem históricos; esta medição distingue linhas brutas, identidades repetidas e identidades únicas. 92,5% representa preparação para revisão, não conclusão do ARC-13.
+- 310 de 332 identidades distintas (93,4%) aparecem em propostas contextuais; 22 identidades distintas seguem sem proposta. Este bloco inclui os controles do puxador (6 referências fonte/5 chaves) e o lote de pedra, serviço e dimensão (3 referências/3 chaves). É cobertura documental, não implementação.
+- As três chaves do lote mais recente foram consultadas contra as 2.181 referências do índice ARC-13 fixado: nenhuma colisão prévia ou duplicata interna.
+- A convenção aprovada define regras de nomeação, não promove exemplos a chaves canônicas. Índice, produto e decisions.json continuam inalterados. Ownership de descrições do catálogo, pluralização, enum fallbacks e notas editoriais continuam separados.
+- As medições anteriores permanecem snapshots históricos; 93,4% representa preparação para revisão, não conclusão do ARC-13.
