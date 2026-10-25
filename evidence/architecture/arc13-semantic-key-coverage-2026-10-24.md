@@ -78,3 +78,10 @@ As 364 ocorrências ainda sem chave foram mapeadas contra os arquivos-fonte no c
 ## Reclassificação sugerida de literais técnicos — 25/10/2026
 
 A revisão de contexto confirmou seis ocorrências não textuais entre os 364 itens sem chave: classes CSS `has-module-detail` e `admin-note`, tags HTML `dl` e código interno `requirement-hidden`. As seis não devem receber chaves de localização. A mensagem visível na linha que contém `admin-note` permanece uma ocorrência localizável separada. Com esta revisão, 358 itens sem chave permanecem candidatos de texto; o índice original não foi alterado. [Auditoria](arc13-unkeyed-code-literal-reclassification-2026-10-25.md).
+
+
+## Readback cruzado dos lotes e sinks — 25/10/2026
+
+Revalidei todos os lotes de propostas no índice fixado. São 217 ocorrências propostas (13 exemplos numéricos, 199 sufixos numéricos restantes e cinco labels de Admin), com 214 chaves únicas. As três ocorrências excedentes estão agrupadas em duas chaves repetidas: duas instâncias de conflicting event target e três de unsupported layout profile. Todas têm contratos de owner/consumer/parâmetros registrados para revisão; não há colisões entre qualquer chave proposta e as chaves do índice atual.
+
+Na fila originalmente não chaveada e unclassified, a inspeção de source/linha identificou 19 literais técnicos para exclusão; restam 345 candidatos de texto. Desses, 106 têm escrita textual direta, 33 são ARIA/alt, 14 são title/tooltip, três vêm de markup, 66 estão em mapas/arrays e 123 em outras expressões. Os últimos 189 ainda não foram ligados ao consumer real. [Auditoria de sinks](arc13-unkeyed-direct-sink-audit-2026-10-25.md) · [Reclassificação dos 19 literais](arc13-unkeyed-code-literal-reclassification-2026-10-25.md).
