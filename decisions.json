@@ -690,25 +690,6 @@
       "status": "future",
       "verdict": "revisit",
       "decision": "Generalização multiambiente é futura; não homologada."
-    },
-    {
-      "id": "IMG-001",
-      "status": "approved-for-scoped-preview-implementation-and-validated",
-      "verdict": "agreed",
-      "context": "Ilustração principal de estudo de espaço em /how-it-works/.",
-      "decision": "Manter reservado um frame responsivo escalável 3:2 quando a imagem falhar. Mostrar dentro do frame o estado 'Imagem indisponível' e a descrição alternativa da imagem. Preservar a legenda original.",
-      "scope": "Somente a ilustração principal de estudo de espaço em /how-it-works/. Esta decisão não cria token global nem estabelece comportamento para outras imagens, rotas ou cenas.",
-      "accessibility": "O placeholder assume a semântica acessível com estado de indisponibilidade e a descrição alternativa; a imagem quebrada é removida da árvore acessível.",
-      "approvalSource": "Usuário escolheu a opção A em 2026-10-25 e esclareceu: placeholder padrão escalável com descrição por cima.",
-      "implementation": "Autorizada para preview na PR de produto #241. Sem merge ou publicação em Production.",
-      "validation": {
-        "status": "same-origin-http-404-verified-in-preview",
-        "pullRequest": 241,
-        "head": "ebd67cdd003047543b70d21972173af80da3594e",
-        "viewportCssPx": "341x768",
-        "result": "HTTP 404 real acionou o fallback; frame 3:2 permaneceu 304x202.667 CSS px, sem overflow; placeholder visível, imagem ocultada e nome acessível contendo estado e alt.",
-        "limits": "Validação cobre a ilustração principal nessa rota, preview e viewport indicados. Não comprova todos os temas, larguras, imagens, cenas do Viewer ou leitores de tela."
-      }
     }
   ],
   "evidenceAndWorkItems": {
