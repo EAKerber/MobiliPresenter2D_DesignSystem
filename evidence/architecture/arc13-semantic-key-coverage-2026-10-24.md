@@ -85,3 +85,10 @@ A revisão de contexto confirmou seis ocorrências não textuais entre os 364 it
 Revalidei todos os lotes de propostas no índice fixado. São 217 ocorrências propostas (13 exemplos numéricos, 199 sufixos numéricos restantes e cinco labels de Admin), com 214 chaves únicas. As três ocorrências excedentes estão agrupadas em duas chaves repetidas: duas instâncias de conflicting event target e três de unsupported layout profile. Todas têm contratos de owner/consumer/parâmetros registrados para revisão; não há colisões entre qualquer chave proposta e as chaves do índice atual.
 
 Na fila originalmente não chaveada e unclassified, a inspeção de source/linha identificou 19 literais técnicos para exclusão; restam 345 candidatos de texto. Desses, 106 têm escrita textual direta, 33 são ARIA/alt, 14 são title/tooltip, três vêm de markup, 66 estão em mapas/arrays e 123 em outras expressões. Os últimos 189 ainda não foram ligados ao consumer real. [Auditoria de sinks](arc13-unkeyed-direct-sink-audit-2026-10-25.md) · [Reclassificação dos 19 literais](arc13-unkeyed-code-literal-reclassification-2026-10-25.md).
+
+
+## Atualização da fila ARC-13 sem chave — 25/10/2026
+
+A fotografia acima continua correta para a cobertura total de 728 ocorrências (369 sem chave, incluindo lotes com propostas separadas). Na subfila de 364 candidatos sem chave e sem consumer, a revisão separou 19 literais técnicos e quatro mensagens de diagnóstico interno, restando **341 itens**: 208 em `app/admin/admin.js` e 133 em `app/app.js`. Isso não altera o número do índice nem os 369 itens sem chave da cobertura total.
+
+O [mapa corrigido](arc13-unkeyed-consumer-scope-map-2026-10-25.json) substitui o mapa anterior, que podia atribuir listeners do módulo à função anterior. São pistas lexicais/call sites; consumers, ownership e contratos seguem pendentes. Nenhum lote de chaves foi criado para esses itens.

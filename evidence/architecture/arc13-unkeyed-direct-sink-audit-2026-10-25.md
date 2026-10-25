@@ -6,7 +6,7 @@
 
 ## Contagem após revisão dos falsos positivos técnicos
 
-O índice contém 364 referências sem chave e consumer “unclassified” em `app/admin/admin.js` e `app/app.js`. A inspeção das linhas de origem confirmou 19 valores técnicos (classes/IDs CSS/DOM, tags HTML, enum, nome de atributo e role ARIA) que não devem receber chaves de localização. Permanecem **345 candidatos de texto**: 208 de Admin e 137 do Configurador. O índice ainda não foi editado.
+O índice contém 364 referências sem chave e consumer “unclassified” em `app/admin/admin.js` e `app/app.js`. A inspeção das linhas de origem confirmou 19 valores técnicos (classes/IDs CSS/DOM, tags HTML, enum, nome de atributo e role ARIA) que não devem receber chaves de localização. Permaneciam **345 candidatos de texto**: 208 de Admin e 137 do Configurador. A reconciliação removeu quatro diagnósticos sem saída de interface; a fila atual tem **341 candidatos**: 208 no Admin e 133 no Configurador. O índice ainda não foi editado.
 
 ## Destino sintático na linha de origem
 
@@ -18,7 +18,7 @@ O índice contém 364 referências sem chave e consumer “unclassified” em `a
 | Valores de mapas/arrays ou dados de composição | 66 |
 | HTML/template de markup | 3 |
 | Outras expressões/constantes sem sink explícito na mesma linha | 123 |
-| **Total** | **345** |
+| **Total na revisão inicial** | **345** |
 
 Essas classes descrevem apenas o padrão sintático da linha. Os 66 valores em mapas/arrays e os 123 em outras expressões ainda precisam ser ligados ao renderer/consumer real. As pistas não substituem ownership, não autorizam compartilhar chaves e não constituem cobertura de chamadas DOM construídas indiretamente.
 
@@ -27,3 +27,22 @@ Essas classes descrevem apenas o padrão sintático da linha. Os 66 valores em m
 Após excluir as 19 referências técnicas, há 21 grupos de texto repetido. A revisão deve decidir separadamente se cada grupo tem o mesmo consumer e contrato de parâmetros; igualdade textual não é suficiente para compartilhar uma chave.
 
 Nenhuma sugestão de chave foi criada para estes 345 itens nesta auditoria. O índice, runtime e decisions.json permanecem inalterados.
+
+
+## Releitura do escopo de consumo — 25/10/2026
+
+O mapa anterior foi descartado: a heurística podia manter o escopo anterior ao atravessar listeners. O mapa corrigido associa as **341** ocorrências a escopos lexicais reconhecíveis, sem afirmar que isso prova o consumer. Há **75 buckets lexicais**. Owners, consumers e contratos ainda precisam de revisão.
+
+Na distribuição sintática inicial de 345 itens, quatro diagnósticos sem saída direta foram removidos da classe sem sink:
+
+| Pista sintática | Ocorrências atuais |
+|---|---:|
+| Escrita textual direta | 106 |
+| ARIA/alt | 33 |
+| Tooltip `title` | 14 |
+| Mapas/arrays | 66 |
+| Markup | 3 |
+| Outras expressões após remoção dos diagnósticos | 119 |
+| **Total** | **341** |
+
+Há 21 grupos de texto repetido; igualdade textual não basta para compartilhar chave. Índice, runtime e `decisions.json` permanecem inalterados.

@@ -49,3 +49,17 @@ A primeira leitura detectou seis literais técnicos; a inspeção de propriedade
 | 2534 | `alert` | Valor do atributo ARIA `role`. |
 
 Os 19 registros têm correspondência única por arquivo/linha/texto no índice fixado. Com essa reclassificação proposta, os 364 itens sem chave caem para **345 candidatos locais**. O índice permanece sem alteração; o número 345 só se tornará canônico após reconciliação do próprio inventário. A lista inicial de seis casos acima permanece como evidência e é complementada por esta revisão ampliada.
+
+
+## Complemento — diagnósticos internos sem saída de interface (25/10/2026)
+
+Quatro templates restantes foram rastreados. Todos alimentam objetos de erro de layout; `applyBuyerFlowLayout()` os passa a `setFlowLayoutErrors(errors)`, que atualiza `CASA_FLOW_LAYOUT_ERRORS`, registra `console.error("Flow layout invariant failure", errors)` e os expõe por `CASA_EM_MODULOS_DEBUG.getFlowLayoutErrors`. Não encontrei sink de interface para essas mensagens. Recomendo excluí-las da fila de localização, sem alterar o índice:
+
+| Arquivo:linha | Literal | Evidência |
+|---|---|---|
+| `app/app.js:214` | `missing renderer section: ${stage.id}/${section.id}` | Diagnóstico interno de layout, pelo fluxo descrito acima. |
+| `app/app.js:234` | `missing group grid for ${stageId}` | Diagnóstico interno de layout, pelo fluxo descrito acima. |
+| `app/app.js:360` | `missing renderer section: ${stageId}/${section.id}` | Diagnóstico interno de layout, pelo fluxo descrito acima. |
+| `app/app.js:538` | `missing Modules view adapter: ${view.id}` | Diagnóstico interno de layout, pelo fluxo descrito acima. |
+
+A fila de revisão passa de 345 para **341** textos: 208 no Admin e 133 no Configurador. Exclusão documental; índice canônico inalterado.
