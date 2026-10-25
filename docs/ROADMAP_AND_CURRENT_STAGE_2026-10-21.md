@@ -465,3 +465,9 @@ Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. 
 
 - Proposta reúne 20 ocorrências em `syncPasswordReveal`, `appendInitialStateControl`, `appendNominalDimensionControls` e `renderFinishes`, com 18 chaves e zero colisões no índice-base.
 - Templates de nomes de item, eixo e acabamento mantêm seus valores como parâmetros. Não altera código, índice canônico ou decisões. [Proposta](../evidence/architecture/arc13-semantic-key-proposal-admin-hierarchy-auth-finishes-2026-10-25.json).
+
+
+### ARC-13 — Admin hierarchy, dependencies e pagination (25/10/2026)
+
+- Proposta reúne 28 ocorrências dos editores de grupos de materiais, dependências, itens/seções/grupos hierárquicos e paginação. Não foram encontradas colisões no índice-base.
+- Títulos de grupo e estado da página usam parâmetros explícitos; ações curtas continuam separadas por consumer. Nenhum arquivo de produto, índice canônico ou decisão foi alterado. [Detalhes](../evidence/architecture/arc13-semantic-key-proposal-admin-hierarchy-material-dependency-pager-2026-10-25.json).
