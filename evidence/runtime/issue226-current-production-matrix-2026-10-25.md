@@ -33,3 +33,13 @@ Rota pública em contexto Chromium isolado, sem sessão, com viewport CSS emulad
 | 341 × 768 (~400%) | 326 / 326 px | Uma coluna; fechado 150/131,33 px; aberto 356 px; os outros fechados mantiveram 131,33 px. | Uma coluna; fechado 76,33/82 px; aberto 155 px; os outros fechados mantiveram suas alturas. |
 
 Não houve overflow horizontal; abrir o primeiro details não alterou a altura intrínseca dos irmãos fechados. Esta emulação confirma o comportamento em larguras CSS equivalentes, mas não substitui a verificação de zoom do navegador nem as capturas antes/depois exigidas pela issue. #226 continua aberta.
+## Capturas comparativas arquivadas — 25/10/2026
+
+Production `/how-it-works/`, Chromium isolado, 1366 × 768 CSS px, tema claro. Em cada grupo, os três `<details>` iniciaram fechados; abri o primeiro `summary` nativo e medi todos os retângulos antes de capturar. O grupo fora da tela permaneceu fechado. As quatro capturas mostram baseline fechado e primeiro item aberto em cada grade:
+
+- `.foundation-list` fechado: [captura](issue226-captures/foundation-closed-1366x768-light.webp); alturas 141,33/141,33/141,33 px.
+- `.foundation-list` primeiro aberto: [captura](issue226-captures/foundation-first-open-1366x768-light.webp); alturas 325,05/141,33/141,33 px.
+- `.study-topics` fechado: [captura](issue226-captures/study-topics-closed-1366x768-light.webp); alturas 76,33/76,33/76,33 px.
+- `.study-topics` primeiro aberto: [captura](issue226-captures/study-topics-first-open-1366x768-light.webp); alturas 134,08/76,33/76,33 px.
+
+As caixas dos irmãos fechados não cresceram. Estas capturas completam a evidência antes/depois em desktop claro para ambas as seções; não são zoom do navegador nem cobrem tema escuro. A issue segue aberta até zoom real, revisão da divergência visual WebKit e integração apropriada.
