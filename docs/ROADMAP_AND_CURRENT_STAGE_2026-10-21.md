@@ -524,3 +524,11 @@ Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. 
 ### ARC-13 semantic key proposal readback — 25/10/2026
 
 The approved naming convention remains stable. The frozen consumer map has 336 raw candidates, 331 distinct file/line/literal identities, and five duplicate rows. Contextual proposals cover 315/331 distinct identities (95.2%); 16 lack proposals. The residual register groups them into plural/list formatting (8), strings embedded in HTML (3), and catalog/editorial ownership (5), and records the remaining raw-enum fallback risk. No product runtime, canonical index, or decisions.json change was made. The next gate is choosing the pluralization/message format and assigning content owners; see the linked residual register.
+
+
+### ARC-13 — decisões residuais e nós de texto em HTML (25/10/2026)
+
+- O usuário adiou as oito mensagens de plural/lista para a etapa de localização. Os cinco itens de catálogo/editorial devem permanecer no catálogo e aguardam revisão do owner do conteúdo.
+- Proposta documental para as três identidades em `app/app.js:1603, 1607 e 1661`: cinco chaves textuais em nós separados, preservando o markup e mantendo distintos os consumers `renderCurrentValue` e `renderSummary`. Colisões no índice e nos lotes de proposta: zero. [Proposta](../evidence/architecture/arc13-semantic-key-proposal-configurator-html-text-nodes-2026-10-25.json).
+- Readback do mapa ARC-13: **318/331 (96,1%)** identidades distintas com proposta; 13 sem proposta (oito adiadas para localização, cinco esperando owner). Risco de fallback bruto de enum segue separado. A porcentagem mede preparação documental, não implementação nem conclusão.
+- PR #51 continua DRAFT; sem mudança de runtime, índice canônico, `decisions.json`, merge ou Production.

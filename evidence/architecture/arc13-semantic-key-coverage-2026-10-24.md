@@ -155,3 +155,10 @@ O cruzamento considera também `sourceLines` dos templates montados em runtime; 
 - O mapa tem 336 linhas candidatas e 331 identidades distintas; cinco linhas repetem identidade. Um seletor CSS está excluído como técnico.
 - 315 de 331 identidades distintas (95,2%) aparecem em propostas; 16 seguem sem proposta. A [triagem residual](arc13-semantic-key-residual-review-2026-10-25.md) agrupa as 16 por pluralização/listas (8), strings em HTML (3) e ownership catálogo/editorial (5), e registra o risco restante do fallback de enum.
 - Propostas continuam não canônicas. Código, índice ARC-13 e decisions.json não mudaram. O próximo gate é o contrato de pluralização e a definição de owners; isso é preparação para revisão, não conclusão ou implementação.
+
+
+## Decisões residuais e medição atualizada — 25/10/2026
+
+- A proposta não canônica [dos nós de texto do Configurador](arc13-semantic-key-proposal-configurator-html-text-nodes-2026-10-25.json) cobre as três identidades de origem em `app.js:1603, 1607 e 1661`, com cinco chaves separadas por consumer/text node. O HTML estrutural permanece no código.
+- Cobertura documental recalculada: **318/331 identidades distintas (96,1%)**; 13 continuam sem proposta: oito mensagens de plural/lista, adiadas explicitamente pelo usuário até a etapa de localização, e cinco conteúdos de catálogo/editorial mantidos no catálogo, aguardando revisão do owner. Cálculo cruza `sourceOccurrences`, `sourceLines` e referências de linha dos lotes com o mapa congelado; as cinco linhas duplicadas são contadas como uma identidade cada.
+- Essa porcentagem mede propostas contextuais, não aprovação final, migração, cobertura total de localização nem conclusão do Design System. O produto, o índice ARC-13 e `decisions.json` permanecem inalterados. O risco independente de fallback de enum segue na triagem residual.

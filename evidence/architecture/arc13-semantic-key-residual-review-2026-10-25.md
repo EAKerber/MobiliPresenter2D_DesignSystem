@@ -19,3 +19,12 @@ A chave candidata `admin.pricing.basisFallback` localiza somente o prefixo fixo.
 ## Estado
 
 A convenção ARC-13 foi aprovada; exemplos individuais continuam candidatos. Não há autorização para alterar `decisions.json`, o índice canônico ou o runtime por este registro. Próximo gate: decidir o contrato de pluralização e nomear owner dos cinco itens de conteúdo; em paralelo, confirmar a abordagem de nós de texto para as três strings misturadas com HTML.
+
+
+## Readback após decisões do usuário — 25/10/2026
+
+- **Plural/listas (8):** adiadas até a etapa de localização, quando o contrato de mensagens será definido. Permanecem sem proposta por escolha de escopo, não como bloqueio desta triagem.
+- **Strings com HTML (3):** proposta documental criada em [arc13-semantic-key-proposal-configurator-html-text-nodes-2026-10-25.json](arc13-semantic-key-proposal-configurator-html-text-nodes-2026-10-25.json). São cinco chaves para três identidades de origem: uma label de estimativa e dois nós de texto em cada um dos dois consumers de preço pendente. A estrutura HTML permanece em código; nenhuma migração foi feita.
+- **Catálogo/editorial (5):** permanecem no catálogo e aguardam revisão do owner de conteúdo. Nenhuma chave é proposta até essa revisão.
+
+A medição documental passa a **318/331 identidades (96,1%)** com propostas; **13** seguem sem proposta (8 adiadas + 5 aguardando owner). Convenção aprovada, exemplos ainda não canônicos. Sem alteração de produto, índice ARC-13 ou `decisions.json`. O fallback de enum bruto continua como risco separado antes de migração.
