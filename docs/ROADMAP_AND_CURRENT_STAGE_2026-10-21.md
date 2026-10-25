@@ -1,5 +1,10 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+## VIS-002 — keylines de foco do Viewer em preview (25/10/2026)
+
+Na PR de produto [#242](https://github.com/EAKerber/MobiliPresenter2D/pull/242), a alternativa A foi testada em preview autorizado. A primeira composição com keylines externas recortou o hotspot 07 em mobile e foi substituída: a versão atual usa linhas preta (1 px) e branca (3 px) dentro da extensão externa do anel VIS-002 aprovado (4 px, offset declarado 3 px; #8B6A40 claro / #D8BC7C escuro). Os sete hotspots passaram por leitura de foco em claro/escuro, 390×844 e 1280×800, sem overflow; folga mínima do indicador à cena de 0,11 px no mobile. Os checks associados ao head passaram. O teste cobre somente a cena Cozinha e não mede contraste pixel a pixel das linhas compostas com a foto. PR permanece DRAFT, sem merge ou Production. [Evidência](../evidence/runtime/pr242-viewer-hotspot-focus-keylines-preview-2026-10-25.md) · [Proposta atualizada](../evidence/architecture/vis002-viewer-hotspot-focus-contrast-layer-proposal-2026-10-25.md).
+
+
 ## ARC-13 — auditoria cruzada das propostas (25/10/2026)
 
 A auditoria independente comparou 30 lotes documentais com o índice fixado: 517 registros, 507 chaves distintas e quatro reaproveitamentos preexistentes já documentados como intencionais. Não houve colisão não documentada. Uma divergência de rótulo de consumer para o mesmo sink de revisão foi padronizada nos dois lotes. Todas as chaves permanecem candidatas; índice, catálogo, produto e `decisions.json` não foram alterados. [Método, resultado e limites](../evidence/architecture/arc13-semantic-key-proposal-cross-batch-audit-2026-10-25.md).
