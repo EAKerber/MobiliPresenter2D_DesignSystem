@@ -34,3 +34,7 @@ Na verificação do Viewer, 390 × 844 px, claro e escuro, os quatro pontos de n
 ## Conclusão e próximo gate
 
 A issue #208 **continua aberta**. A base antiga já não representa todos os achados: DS04-01, 03, 04, 05, 07, 08 e 09 têm correções de código/tokens presentes; DS04-11 está explicitamente delimitado como exceção, embora a validação visual seja parcial. Permanecem riscos ativos em DS04-02 (P1), DS04-06 (P1), DS04-10 (P2) e DS04-12 (P3). DS04-02 exige sessão Admin válida para confirmação runtime; não coletei credenciais. O issue não autoriza implementação, então os riscos foram documentados sem CSS, produto, `decisions.json`, merge ou Production alterados.
+
+## Comparação visual temporária para DS04-02
+
+Como leitura visual auxiliar, montei em uma camada DOM temporária, na página isolada de login Admin (900 × 700 CSS px), duas cópias do CTA usando os valores exatos do código da rota protegida: texto branco atual sobre `#E2C991` (A) e texto `#20211F` (B). A opção B reutiliza uma cor escura já presente em `--primary-text`; contraste calculado: **10,01:1** contra **1,62:1** na A. A comparação deixa a diferença legível. Ela é uma simulação, não o CTA autenticado de `/access/manage.html`, não constitui decisão canônica e não muda o produto.
