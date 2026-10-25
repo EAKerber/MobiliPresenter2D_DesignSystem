@@ -35,6 +35,13 @@ O usuário respondeu **13=B, 14=A, 15=A, 16=A**, pedindo compromisso entre A e B
 
 **Compatibilidade de ARC-09 e ARC-13:** ARC-09 escolhe *propriedade/forma de publicação* (código versionado e sem CMS), enquanto ARC-13 escolhe *abrangência da extração/localização* (cobertura sistemática, não só textos reutilizados). Não são decisões contraditórias.
 
+
+### Convenção operacional ARC-13 — aprovada em 2026-10-25
+
+A convenção para propor chaves semânticas foi aprovada pelo usuário: preservar o namespace de domínio existente e substituir o sufixo numérico por um sufixo semântico estável em camelCase; não usar número de linha, nome de arquivo, texto traduzido ou versão de schema como identidade. Valores dinâmicos permanecem parâmetros do template. Compartilhar uma chave somente quando owner, consumer e contrato de parâmetros coincidirem; nomes iguais em contextos distintos permanecem separados até revisão. Toda proposta continua exigindo rastreabilidade, verificação de colisões e revisão de interpolação.
+
+Esta aprovação torna canônicas as regras de nomeação. Não aprova automaticamente cada chave de exemplo, ownership ainda não resolvido, alteração do índice, extração do catálogo ou migração de runtime. Os 13 exemplos numéricos e cinco rótulos de Admin permanecem amostra auditada de candidatos; seus mapeamentos precisam de revisão contextual antes de uso. O arquivo decisions.json permanece autoridade visual e não foi alterado.
+
 ## 3. Arquitetura alvo — autoridades e passagem de dados
 
 ```text
