@@ -22,6 +22,13 @@ O mapa anterior foi substituído porque podia carregar a função anterior atrav
 - A PR #238 continua DRAFT e a issue #232 aberta para revisão e integração. Supabase Preview foi skipped porque a validação usa o banco interno de teste autorizado. Nada foi integrado à main nem publicado em Production.
 - A estimativa geral permanece **~24% (faixa 22–26%)**, pois a consolidação melhora a prontidão e remove uma branch de PR aberta, mas não conta como integração em main. O código integrado permanece estimado em ~18% (15–20%).
 
+### Readiness da PR #238 e auditoria read-only da role — 25/10/2026
+
+- A PR #238 segue DRAFT e mergeable, base `main@5ccb2a8`, head `1fccf635078aee68aa735caf0df02fdb62402c93`; nenhuma review humana ou thread de revisão foi registrada.
+- Os nove workflows de PR associados ao head atual concluíram SUCCESS. As cinco suítes Keyboard, Flow, Mobile/PiP, Summary/Pricing e Stone foram executadas na prévia protegida com a fixture V5 sintética publicada pelo plugin restrito aos Deploy Previews #238/#245; o gate autenticado separado verifica grant, bootstrap, negação de Admin, revogação e replay.
+- Auditoria somente leitura no Supabase de teste: `access_ci_fixture` está sem atributos elevados e sem memberships que lhe concedam outras roles; não tem SELECT/INSERT/UPDATE/DELETE nas tabelas `access_control`; `PUBLIC` não tem EXECUTE nas funções fixture, e a role só recebeu EXECUTE nas duas funções dedicadas. Nenhuma escrita foi feita nessa consulta.
+- Próximo gate: review humana da PR #238, resolver comentários se houver e, depois, autorização de integração. Não há falha de variável identificada no gate atual.
+
 ### Pendências e pesos atuais
 
 | Prioridade | Peso do plano | Trabalho ainda necessário | Bloqueio ou critério de saída |
@@ -50,7 +57,7 @@ O mapa anterior foi substituído porque podia carregar a função anterior atrav
 
 ## Issue #226 — matriz atual em Production (25/10/2026)
 
-- Complemento em contexto Chromium isolado: nos viewports CSS emulados 683×768 (~200%) e 341×768 (~400%), o scroll width igualou a largura útil; as grades ficaram em uma coluna e os irmãos fechados mantiveram suas alturas após abertura. É uma verificação de largura efetiva, não zoom real (visualViewport.scale=1); capturas antes/depois das duas grades estão arquivadas em 1366×768 nos temas claro e escuro; zoom real e comparação WebKit continuam pendentes. [Matriz atualizada](../evidence/runtime/issue226-current-production-matrix-2026-10-25.md).
+- Complemento em contexto Chromium isolado: nos viewports CSS emulados 683×768 (~200%) e 341×768 (~400%), o scroll width igualou a largura útil; as grades ficaram em uma coluna e os irmãos fechados mantiveram suas alturas após abertura. É uma verificação de largura efetiva, não zoom real (visualViewport.scale=1); capturas antes/depois das duas grades estão arquivadas em 1366×768 nos temas claro e escuro; o zoom real foi confirmado manualmente e a paridade WebKit foi concluída no gate reproduzível. [Matriz atualizada](../evidence/runtime/issue226-current-production-matrix-2026-10-25.md).
 
 A rechecagem após reload confirmou, nas duas grades `.foundation-list` e `.study-topics`, que um item aberto cresce sem esticar irmãos fechados nos viewports 1366 × 768, 768 × 1024 e 390 × 844, em tema claro/escuro. Enter e Espaço preservam o toggle nativo; duas aberturas sequenciais são independentes; o fechamento restaura a geometria sem overflow. A regra `align-items:start` está ativa nas duas grades em Production. [Matriz e limites](../evidence/runtime/issue226-current-production-matrix-2026-10-25.md).
 
