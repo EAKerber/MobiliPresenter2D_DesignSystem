@@ -27,10 +27,10 @@ O mapa anterior foi substituído porque podia carregar a função anterior atrav
 | Prioridade | Peso do plano | Trabalho ainda necessário | Bloqueio ou critério de saída |
 |---|---:|---|---|
 | Alta | Dentro de implementação (25%) | Revisão humana da PR consolidada #238 e integração aprovada; depois revalidar o gate em main e fechar #232. | #238 está DRAFT; sem merge nem Production nesta etapa. |
-| Alta | Dentro de evidência (30%) | Concluir zoom real do navegador na issue #226; a discrepância de captura WebKit foi resolvida no gate reproduzível. | Automação Windows não conseguiu confirmar a URL da janela Chrome; largura CSS emulada não substitui zoom real. |
+| Alta | Dentro de evidência (30%) | Ampliar a matriz runtime por componente e estados; o zoom real da issue #226 foi confirmado manualmente e a issue foi encerrada. | A confirmação manual não produziu readback automatizado de viewport; rotas privadas ainda exigem sessão autorizada. |
 | Alta | Dentro de decisões (20%) | Revisar contraste do foco sobre fotografia/superfícies variadas e decisões restantes. O fallback da ilustração principal de Como funciona foi escolhido e validado no preview da #241. | Foco sobre fotografia ainda depende de medições e revisão por componente; fallback limitado à ilustração principal, sem homologação global. |
 | Média | Dentro de evidência (30%) | Ampliar mapa por componente de foco, seleção, carregamento/erro, movimento e tema, incluindo estados e rotas que permanecem não verificados. | Rotas privadas exigem sessão autorizada; não extrapolar medições pontuais. |
-| Média | ARC-13 (15%) | Revisar 190 itens de conteúdo deferidos; preparar 199 chaves numéricas restantes (132 templates) em sete módulos; depois revisar 364 textos sem chave (209 em `admin.js`, 155 em `app.js`); aprovar convenção/owners e migrar em lotes. | Convenção e ownership seguem aguardando revisão humana. A fila está dimensionada por módulo; a amostra 13+5 foi verificada sem colisões. Não gerar chaves canônicas nem migrar antes dessa decisão. |
+| Média | ARC-13 (15%) | Revisar 190 itens de conteúdo deferidos; preparar 199 chaves numéricas restantes (132 templates) em sete módulos; depois revisar 364 textos sem chave (209 em `admin.js`, 155 em `app.js`); aplicar a convenção aprovada e revisar ownership em lotes. | A convenção foi aprovada; oito casos de plural/lista seguem adiados para localização e cinco textos de catálogo/editorial aguardam revisão do owner. A fila está dimensionada por módulo; a amostra 13+5 foi verificada sem colisões. |
 | Futura | Etapas seguintes (10%) | Schema de UI, dados de textos/localização e inventário JS, mantendo separados dados de interface e dados do Configurador. | Só começa depois da fundação visual e ARC-13. |
 
 
@@ -54,7 +54,7 @@ O mapa anterior foi substituído porque podia carregar a função anterior atrav
 
 A rechecagem após reload confirmou, nas duas grades `.foundation-list` e `.study-topics`, que um item aberto cresce sem esticar irmãos fechados nos viewports 1366 × 768, 768 × 1024 e 390 × 844, em tema claro/escuro. Enter e Espaço preservam o toggle nativo; duas aberturas sequenciais são independentes; o fechamento restaura a geometria sem overflow. A regra `align-items:start` está ativa nas duas grades em Production. [Matriz e limites](../evidence/runtime/issue226-current-production-matrix-2026-10-25.md).
 
-A issue #226 permanece aberta somente para zoom real do navegador. O gate isolado passou 8/8 combinações funcionais e teve paridade pixel a pixel em Chromium/WebKit, em 390/1366 px e temas claro/escuro; a antiga divergência era da captura e foi resolvida com recorte explícito baseado nas coordenadas do elemento. A evidência cruzada está vinculada na matriz atualizada. A automação ainda não conseguiu validar a URL da janela Chrome para operar zoom real; emulação de viewport continua insuficiente.
+A issue #226 foi encerrada após confirmação manual do usuário em zoom real de 400% na rota `/how-it-works/`. O gate passou 8/8 combinações funcionais em Chromium/WebKit, em 390/1366 px e temas claro/escuro; a divergência anterior era da captura e foi resolvida com recorte pelas coordenadas dos elementos. A automação não leu o zoom manual e não fornece métrica automatizada de viewport a 400%. Ver [confirmação manual e limites](../evidence/runtime/issue226-real-zoom-user-confirmation-2026-10-25.md).
 
 ## Plano ponderado de conclusão — avaliação provisória (25/10/2026)
 
@@ -62,22 +62,22 @@ Os pesos abaixo são uma ferramenta de planejamento, não metas ou decisões can
 
 | Frente | Peso | Conclusão estimada | Contribuição | O que falta para fechar |
 |---|---:|---:|---:|---|
-| Inventário e evidência runtime | 30% | 35% | 10,5 p.p. | Cobrir famílias/estados com evidência atual; fechar zoom real da #226; o gate WebKit agora tem paridade 4/4 por navegador; capturas de desktop claro/escuro estão arquivadas; manter áreas autenticadas como não verificadas até sessão autorizada. |
+| Inventário e evidência runtime | 30% | 35% | 10,5 p.p. | Cobrir famílias/estados com evidência atual; o zoom real da #226 foi confirmado manualmente e encerrado; o gate WebKit tem paridade 4/4 por navegador; capturas de desktop claro/escuro estão arquivadas; manter áreas autenticadas como não verificadas até sessão autorizada. |
 | Decisões e homologação visual | 20% | 22% | 4,4 p.p. | Fallback escopado aprovado e validado; ainda revisar foco sobre imagens/superfícies e decisões pendentes. |
 | Implementação por componente e integração | 25% | 20% | 5 p.p. | Revisar e integrar previews aprovados, revalidar em Production e resolver conflitos/branches sobrepostos. O código atual integrado segue estimado em 18% (faixa 15–20%). |
-| ARC-13: ownership e chaves semânticas | 15% | 30% | 4,5 p.p. | Classificar os 190 itens de conteúdo deferidos, resolver 369 textos sem chave e 212 chaves baseadas em linha; aprovar convenção, extrair e migrar em lotes revisáveis. |
+| ARC-13: ownership e chaves semânticas | 15% | 30% | 4,5 p.p. | Classificar os 190 itens de conteúdo deferidos, resolver 369 textos sem chave e 212 chaves baseadas em linha; aplicar a convenção aprovada, revisar owners e migrar em lotes revisáveis. |
 | Etapas futuras: schema de UI, textos/localização e inventário JS | 10% | 0% | 0 p.p. | Começam depois da fundação visual/etapa atual; preservar Português do Brasil e separar dados de interface dos dados do configurador. |
 | **Total ponderado** | **100%** |  | **24,4 p.p.** | **Estimativa geral arredondada: ~24% (faixa 22–26%).** |
 
 ### Ordem de trabalho recomendada
 
 1. Revisar a PR consolidada #238 e a PR de produto #241 após leitura humana; integrar somente com autorização para merge, revalidar em main e então fechar #232. PR #245 e a branch v0.2 #240 foram encerradas como supersedidas; a #241 contém os oito seletores da v0.2 mais dois contextos medidos na distribuição v0.3. Nenhum merge ou deploy em Production foi feito.
-2. Fechar a evidência independente da #226 com zoom real e rever a diferença WebKit; as capturas antes/depois das duas grades em desktop claro e escuro já estão arquivadas. A largura CSS emulada já está medida, mas não substitui esse requisito.
+2. Ampliar a evidência runtime de foco, seleção, carregamento/erro, movimento e temas por componente. A #226 foi encerrada após confirmação manual do zoom real; não há readback automatizado a 400%, e a paridade WebKit automatizada foi resolvida.
 3. Continuar o mapa por componente para foco, seleção, carregamento/erro, movimento e temas. O fallback da ilustração principal de estudo de espaço foi implementado na PR #241 e validado com HTTP 404 real no preview; ampliar a cobertura para outras imagens/rotas exige evidência própria.
 4. Avançar ARC-13 em lotes de ownership/chaves após revisão da convenção, sem substituição em massa de strings.
 5. Só então iniciar schema de UI, localização e inventário funcional de JavaScript, conforme sequência do plano.
 
-**Impedimentos externos atuais:** zoom real e divergência WebKit da #226 seguem pendentes; rotas privadas exigem sessão autorizada; foco sobre fotografias/superfícies variadas ainda precisa de revisão. O fallback aprovado da ilustração principal foi validado em preview com HTTP 404 real. Não há falha confirmada de variável no gate autenticado.
+**Impedimentos atuais:** PRs de produto seguem DRAFT e aguardam revisão humana antes de qualquer integração; rotas privadas exigem sessão autorizada; foco sobre fotografias/superfícies variadas ainda precisa de revisão. A issue #226 está encerrada com confirmação manual, sem medição automatizada de viewport a 400%. O fallback aprovado da ilustração principal foi validado em preview com HTTP 404 real. Não há falha confirmada de variável no gate autenticado.
 
 ## VIS-002C v0.3 — revisão dos dez contextos concluída (25/10/2026)
 
