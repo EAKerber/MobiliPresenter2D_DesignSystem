@@ -1,14 +1,12 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
-## Revalidação CI-BASELINE-01 — 25/10/2026, 01:14 UTC
+## Revalidação CI-BASELINE-01 — 25/10/2026, pós correção de rota
 
-- Produto PR [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238) está aberta/DRAFT no head `ecd2c5b07246a59f2ed959376eb311f53cffdf2e`. Os dois Deploy Previews estão READY; checks estáticos, browser geral, fixture-contract, gate anônimo e current-asset-gates passaram.
-- O job autenticado validou preflight, grant real, conexão com o papel restrito, negação de Admin e revogação. No Deploy Preview, `/api/buyer-configuration` respondeu 200; o probe confirmou V5 `validated`, workspace visível e sem erro de configuração. Replay após revogação foi negado com HTTP 400 e a sessão redirecionou a `/access/`.
-- **As cinco suítes funcionais autenticadas falharam ainda em interações.** Mobile/PiP e Summary/Pricing e Stone falharam asserts de console; Keyboard e Flow terminaram em timeouts. O resumo sanitizado não contém status HTTP de erro nem códigos de rede. A evidência não identifica ainda a causa funcional e não comprova cobertura homologada.
-- Os commits do harness retiraram DS-05A visual do host estável fixo, preservaram nele o gate real de sessão/Admin/revogação, fizeram os fluxos funcionais usarem o Deploy Preview #238 com fixture V5, herdaram o caminho Chromium do contêiner e aceitaram HTTP 400 como rejeição de replay revogado.
-- O check Supabase Preview foi skipped por ausência de Supabase Branch associada; usa-se o banco interno de teste já autorizado, sem novo projeto. Nenhuma variável foi impressa ou reconfigurada.
-- Issue [#232](https://github.com/EAKerber/MobiliPresenter2D/issues/232) permanece aberta. PR #238 segue DRAFT até compreender e corrigir as falhas das suítes; sem merge, alteração de Production ou deploy de Production. [Evidência detalhada](../evidence/runtime/ds05a-authenticated-preview-suites-2026-10-25.md).
-
+- Produto PR [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238) permanece DRAFT no head `75c38601695b08798264b175068155cd17b7334d`. Os Deploy Previews principal e isolado estão READY; checks estáticos, contrato, browser geral, ativos, gate anônimo e regras da Netlify passaram.
+- O rewrite redundante de `/api/access/session` foi removido; o browser autenticado não registrou mais 404, outras falhas HTTP ou erros de rede. Variáveis exigidas passaram no preflight; resgate real, papel restrito, bootstrap V5, negação de Admin e revogação passaram. A configuração foi `validated`, sem erro e com workspace visível.
+- **3/5 suítes funcionais passaram:** Mobile/PiP, Summary/Pricing e Stone. Keyboard e Flow ainda falham em navegação de etapas. Diagnóstico sanitizado encontrou botões da barra com geometria 0×0 embora estejam no DOM e computem `display:block`; Keyboard preveniu Ctrl+→ mas ficou em Módulos, e Flow não conseguiu clicar Módulos no perfil stacked. O ponto central atingiu `MAIN.workspace`. A causa de produto não está confirmada; não considerar cobertura homologada.
+- O coletor registra apenas campos de estrutura/estilo permitidos; nenhum valor de variável, URI de banco, cookie, grant ou token foi armazenado. Supabase Preview foi skipped pela ausência de Supabase Branch, usando-se o banco interno já autorizado.
+- A remoção do rewrite corrige o 404 de rota; o bloqueio restante é de geometria/interação do menu de etapas no Preview, não falta de variável confirmada. Issue [#232](https://github.com/EAKerber/MobiliPresenter2D/issues/232) permanece aberta até correção e aprovação das cinco suítes. PRs #238 e #51 seguem DRAFT, sem merge ou Production. [Evidência detalhada](../evidence/runtime/ds05a-authenticated-preview-suites-2026-10-25.md) · [Actions #40152094552](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40152094552).
 ---
 
 ## Revalidação de execução — 24/10/2026
