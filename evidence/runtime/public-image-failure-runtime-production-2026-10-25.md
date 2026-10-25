@@ -1,0 +1,16 @@
+# Falha induzida de imagens em rotas públicas — 25/10/2026
+
+**Contexto:** páginas Production em Chromium isolado, sem sessão; viewport CSS emulado de 341 × 768 px. Cada alvo carregou com sucesso antes do ensaio. Para simular falha sem alterar arquivos nem enviar gravações ao servidor, troquei o src do elemento somente no DOM isolado por um data URL inválido. A falha observada é induzida, não um 404 natural.
+
+| Rota | Elemento amostrado | Antes | Depois da falha induzida |
+|---|---|---|---|
+| Landing | Hero lifestyle; alt “Ambiente planejado com a interface Casa em Módulos” | 1074 × 1465 intrínsecos; caixa 326 × 350 px; object-fit cover | naturalWidth 0; caixa permaneceu 326 × 350 px; alt preservado; sem handler inline |
+| Viewer | Imagem-base da composição; alt “Composição da cozinha Casa em Módulos” | 1536 × 1024 intrínsecos; caixa 282,7 × 188,4 px; object-fit contain | naturalWidth 0; caixa permaneceu 282,7 × 188,4 px; alt preservado; sem handler inline |
+| Como funciona | Ilustração de planta/estudo de espaço | 1100 × 733 intrínsecos; caixa 288,7 × 192,4 px | naturalWidth 0; caixa caiu para 288,7 × 42,7 px; o pai caiu de 290 × 226,4 para 290 × 76,7 px; alt preservado |
+| Quem somos | DOM continha logo, ícone WhatsApp e logo repetido; não havia imagem de conteúdo para escolher nesta rota | 3/3 elementos carregaram | Falha de conteúdo não induzida nesta rota |
+
+As coleções carregadas antes do ensaio estavam completas na Landing (18/18), Quem somos (3/3) e Viewer (22/22); lazy loading foi forçado para eager apenas na página isolada para aguardar as imagens. O ensaio do Viewer mudou só a camada-base no DOM temporário; não foi feita verificação da composição resultante por screenshot.
+
+**Leitura:** a caixa fixa preservou o layout do hero e da imagem-base do Viewer nesta amostra. Na ilustração da página Como funciona, a falha removeu sua altura intrínseca e expôs um colapso visual. Isso não determina o tratamento estético correto: decisions.json não define um componente visual para fallback de imagem. Não houve alteração do produto.
+
+**Limites:** uma imagem por rota com conteúdo visual; Quem somos não tinha imagem de conteúdo em document.images. A amostra não cobre fundos CSS, todas as cenas, leitores de tela, falhas naturais de rede ou outros estados de carregamento. img.onerror não estava definido como propriedade nos alvos; isso, sozinho, não prova ausência de listeners registrados via addEventListener. Não arquivei capturas antes/depois.
