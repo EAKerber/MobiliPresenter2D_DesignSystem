@@ -1,5 +1,10 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+## ARC-13 — auditoria cruzada das propostas (25/10/2026)
+
+A auditoria independente comparou 30 lotes documentais com o índice fixado: 517 registros, 507 chaves distintas e quatro reaproveitamentos preexistentes já documentados como intencionais. Não houve colisão não documentada. Uma divergência de rótulo de consumer para o mesmo sink de revisão foi padronizada nos dois lotes. Todas as chaves permanecem candidatas; índice, catálogo, produto e `decisions.json` não foram alterados. [Método, resultado e limites](../evidence/architecture/arc13-semantic-key-proposal-cross-batch-audit-2026-10-25.md).
+
+
 
 ## Atualização ARC-13 — convenção aprovada (25/10/2026)
 
