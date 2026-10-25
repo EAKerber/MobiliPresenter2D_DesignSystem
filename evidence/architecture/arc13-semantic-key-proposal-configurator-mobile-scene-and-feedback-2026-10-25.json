@@ -1,0 +1,464 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/app.js: mobile scene pin, size/transparency, module/finish/stone selection feedback, local finish and restore",
+    "sourceLiteralOccurrences": 36,
+    "uniqueProposedKeys": 22
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "The batch traces announcement, aria/title, confirmation and alert messages to direct UI sinks. Product labels are explicit parameters.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "Mini-scene availability announcement is emitted from two runtime paths and shares the same full message/sink contract.",
+    "Product and finish labels remain dynamic content parameters.",
+    "Other mobile scene selector strings such as the technical target selector are not part of this batch."
+  ],
+  "entries": [
+    {
+      "proposedKey": "configurator.localFinish.heading",
+      "text": "Acabamento deste módulo",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1351
+        }
+      ],
+      "sourceLines": [
+        1351
+      ],
+      "owner": "Module local finish control",
+      "consumer": "function createLocalFinishControl",
+      "sink": "fieldset legend",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.localFinish.applyAria",
+      "text": "Aplicar {finishLabel} somente em {productTitle}",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1364
+        }
+      ],
+      "sourceLines": [
+        1364
+      ],
+      "owner": "Module local finish control",
+      "consumer": "function createLocalFinishControl",
+      "sink": "swatch aria-label",
+      "parameterContract": [
+        "finishLabel",
+        "productTitle"
+      ]
+    },
+    {
+      "proposedKey": "configurator.stageNavigation.summaryCompactLabel",
+      "text": "Resumo",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1757
+        }
+      ],
+      "sourceLines": [
+        1757
+      ],
+      "owner": "Configurator flow navigation",
+      "consumer": "function renderStageNavigation",
+      "sink": "compact step label",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.mobileScene.pin",
+      "text": "Fixar cena",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2051
+        },
+        {
+          "file": "app/app.js",
+          "line": 2051
+        }
+      ],
+      "sourceLines": [
+        2051
+      ],
+      "owner": "Mobile scene pin control",
+      "consumer": "function syncPinnedSceneUi",
+      "sink": "aria-label and title",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.mobileScene.unpin",
+      "text": "Liberar cena",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2051
+        },
+        {
+          "file": "app/app.js",
+          "line": 2051
+        }
+      ],
+      "sourceLines": [
+        2051
+      ],
+      "owner": "Mobile scene pin control",
+      "consumer": "function syncPinnedSceneUi",
+      "sink": "aria-label and title",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.mobileScene.pinnedAnnouncement",
+      "text": "Cena fixada para contexto durante a configuração.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2075
+        },
+        {
+          "file": "app/app.js",
+          "line": 2075
+        }
+      ],
+      "sourceLines": [
+        2075
+      ],
+      "owner": "Mobile scene pin control",
+      "consumer": "function setMobileScenePinEnabled",
+      "sink": "live announcement",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.mobileScene.releasedAnnouncement",
+      "text": "Cena liberada para o fluxo normal.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2075
+        },
+        {
+          "file": "app/app.js",
+          "line": 2075
+        }
+      ],
+      "sourceLines": [
+        2075
+      ],
+      "owner": "Mobile scene pin control",
+      "consumer": "function setMobileScenePinEnabled",
+      "sink": "live announcement",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.mobileScene.availableAnnouncement",
+      "text": "Mini-cena disponível abaixo das etapas. Selecione um módulo diretamente na cena.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2086
+        }
+      ],
+      "sourceLines": [
+        2086
+      ],
+      "owner": "Mobile scene pip",
+      "consumer": "function refreshMobileSceneDock",
+      "sink": "live announcement",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.mobileScene.launcherPinnedAnnouncement",
+      "text": "Mini-cena fixada para contexto durante a configuração.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2097
+        }
+      ],
+      "sourceLines": [
+        2097
+      ],
+      "owner": "Mobile scene launcher",
+      "consumer": "function activateScenePipFromLauncher",
+      "sink": "live announcement",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.mobileScene.transparencyEnabled",
+      "text": "Mini-cena com transparência ativada.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2404
+        },
+        {
+          "file": "app/app.js",
+          "line": 2404
+        }
+      ],
+      "sourceLines": [
+        2404
+      ],
+      "owner": "Mobile scene controls",
+      "consumer": "function startConfigurator",
+      "sink": "live announcement",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.mobileScene.transparencyDisabled",
+      "text": "Mini-cena opaca.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2404
+        },
+        {
+          "file": "app/app.js",
+          "line": 2404
+        }
+      ],
+      "sourceLines": [
+        2404
+      ],
+      "owner": "Mobile scene controls",
+      "consumer": "function startConfigurator",
+      "sink": "live announcement",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.mobileScene.sizeSmall",
+      "text": "Mini-cena pequena.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2411
+        },
+        {
+          "file": "app/app.js",
+          "line": 2411
+        },
+        {
+          "file": "app/app.js",
+          "line": 2411
+        }
+      ],
+      "sourceLines": [
+        2411
+      ],
+      "owner": "Mobile scene size control",
+      "consumer": "function startConfigurator",
+      "sink": "live announcement",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.mobileScene.sizeMedium",
+      "text": "Mini-cena média.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2411
+        },
+        {
+          "file": "app/app.js",
+          "line": 2411
+        },
+        {
+          "file": "app/app.js",
+          "line": 2411
+        }
+      ],
+      "sourceLines": [
+        2411
+      ],
+      "owner": "Mobile scene size control",
+      "consumer": "function startConfigurator",
+      "sink": "live announcement",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.mobileScene.sizeLarge",
+      "text": "Mini-cena grande.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2411
+        },
+        {
+          "file": "app/app.js",
+          "line": 2411
+        },
+        {
+          "file": "app/app.js",
+          "line": 2411
+        }
+      ],
+      "sourceLines": [
+        2411
+      ],
+      "owner": "Mobile scene size control",
+      "consumer": "function startConfigurator",
+      "sink": "live announcement",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.handleSelection.deferred",
+      "text": "Puxador será definido depois.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2488
+        },
+        {
+          "file": "app/app.js",
+          "line": 2488
+        }
+      ],
+      "sourceLines": [
+        2488
+      ],
+      "owner": "Configurator handle selection",
+      "consumer": "function startConfigurator",
+      "sink": "live announcement",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.handleSelection.applied",
+      "text": "{handleLabel} aplicado ao conjunto.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2488
+        },
+        {
+          "file": "app/app.js",
+          "line": 2488
+        }
+      ],
+      "sourceLines": [
+        2488
+      ],
+      "owner": "Configurator handle selection",
+      "consumer": "function startConfigurator",
+      "sink": "live announcement",
+      "parameterContract": [
+        "handleLabel"
+      ]
+    },
+    {
+      "proposedKey": "configurator.globalFinish.updatedAnnouncement",
+      "text": "Cor das frentes atualizada para o conjunto.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2339
+        }
+      ],
+      "sourceLines": [
+        2339
+      ],
+      "owner": "Global finish swatch",
+      "consumer": "event click on finishSwatches",
+      "sink": "live announcement",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.localFinish.appliedAnnouncement",
+      "text": "Acabamento aplicado somente ao módulo selecionado.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2349
+        }
+      ],
+      "sourceLines": [
+        2349
+      ],
+      "owner": "Module detail local finish",
+      "consumer": "event click on moduleDetail",
+      "sink": "live announcement",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.closedAnnouncement",
+      "text": "Detalhes do módulo fechados.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2370
+        }
+      ],
+      "sourceLines": [
+        2370
+      ],
+      "owner": "Module detail close control",
+      "consumer": "event click on moduleDetail",
+      "sink": "live announcement",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.stoneSelection.appliedAnnouncement",
+      "text": "{stoneLabel} aplicado ao conjunto.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2501
+        }
+      ],
+      "sourceLines": [
+        2501
+      ],
+      "owner": "Configurator stone selection",
+      "consumer": "function setStonePackage",
+      "sink": "live announcement",
+      "parameterContract": [
+        "stoneLabel"
+      ]
+    },
+    {
+      "proposedKey": "configurator.restore.confirmation",
+      "text": "Recomeçar a configuração? Suas escolhas atuais serão removidas.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2522
+        }
+      ],
+      "sourceLines": [
+        2522
+      ],
+      "owner": "Configurator restore action",
+      "consumer": "event click on restoreButton",
+      "sink": "window.confirm message",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.publishedConfiguration.invalidAlert",
+      "text": "Não foi possível validar a configuração publicada. O configurador está temporariamente indisponível.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2535
+        }
+      ],
+      "sourceLines": [
+        2535
+      ],
+      "owner": "Configurator fail-closed state",
+      "consumer": "function failClosedPublishedConfiguration",
+      "sink": "role=alert text",
+      "parameterContract": []
+    }
+  ]
+}
