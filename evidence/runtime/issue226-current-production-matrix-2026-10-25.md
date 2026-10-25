@@ -43,3 +43,11 @@ Production `/how-it-works/`, Chromium isolado, 1366 × 768 CSS px, tema claro. E
 - `.study-topics` primeiro aberto: [captura](issue226-captures/study-topics-first-open-1366x768-light.webp); alturas 134,08/76,33/76,33 px.
 
 As caixas dos irmãos fechados não cresceram. Estas capturas completam a evidência antes/depois em desktop claro para ambas as seções; não são zoom do navegador nem cobrem tema escuro. A issue segue aberta até zoom real, revisão da divergência visual WebKit e integração apropriada.
+## Capturas comparativas em tema escuro — 25/10/2026
+
+Repiti os quatro estados em contexto isolado de Production, 1366 × 768 CSS px, tema escuro (`body` computou `rgb(17, 18, 16)`). Os retângulos foram idênticos aos do tema claro: `.foundation-list` fechado 141,33/141,33/141,33 px e aberto 325,05/141,33/141,33 px; `.study-topics` fechado 76,33/76,33/76,33 px e aberto 134,08/76,33/76,33 px.
+
+- `.foundation-list` fechado: [captura escura](issue226-captures/foundation-closed-1366x768-dark.webp); aberto: [captura escura](issue226-captures/foundation-first-open-1366x768-dark.webp).
+- `.study-topics` fechado: [captura escura](issue226-captures/study-topics-closed-1366x768-dark.webp); aberto: [captura escura](issue226-captures/study-topics-first-open-1366x768-dark.webp).
+
+Com isso, as capturas antes/depois das duas seções estão arquivadas em tema claro e escuro no viewport desktop de 1366 × 768. A evidência de larguras 768/390 e teclado permanece na matriz acima; zoom real e comparação WebKit seguem pendentes.
