@@ -1,5 +1,12 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+
+## Atualização ARC-13 — convenção aprovada (25/10/2026)
+
+O usuário aprovou a convenção operacional de chaves semânticas: preservar namespace de domínio, usar sufixo camelCase estável, tratar valores dinâmicos como parâmetros e compartilhar chaves somente com owner, consumer e contrato de parâmetros coincidentes. A aprovação encerra a revisão da convenção; não aprova automaticamente chaves individuais, ownership, alteração do índice ou migração do produto.
+
+A amostra de 13 substituições numéricas e cinco rótulos administrativos segue auditada como candidata, com proveniência única e sem colisões no índice observado. Próximos passos ARC-13: revisar contexto/owner/consumer e parâmetros da amostra; preparar lotes para as 199 chaves numéricas restantes, as 364 ocorrências sem proposta e os 190 itens de conteúdo deferidos. Nenhum índice ou código de produto foi migrado nesta etapa. decisions.json continua inalterado.
+
 ## Atualização pós-consolidação CI-BASELINE-01 — 25/10/2026
 
 - As alterações estáveis que estavam distribuídas entre as PRs de produto #238 e #245 foram consolidadas na PR [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238), head `1fccf635078aee68aa735caf0df02fdb62402c93`. A PR #245 foi encerrada sem merge como supersedida; seu trabalho está preservado no commit de merge da #238.
