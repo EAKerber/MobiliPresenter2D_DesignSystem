@@ -419,3 +419,8 @@ O literal `Estrutural` em `updateSelection` é um valor comparado para escolher 
 ## ARC-13 — segundo lote com consumer confirmado (25/10/2026)
 
 O consumer `updateSelection` foi revisado até os sinks DOM. Dos 13 registros do bucket, **12** têm proposta de chave em `configurator.moduleDetail`, sem colisão; `product.title` é parâmetro nomeado. O décimo terceiro item, ` · ${product.configurationNote}`, ficou deferido porque combina pontuação de composição com conteúdo vindo do catálogo; a ownership/mensagem final precisa ser confirmada antes de localizar. [Proposta não canônica](../evidence/architecture/arc13-semantic-key-proposal-module-detail-2026-10-25.json). Nenhum índice ou runtime alterado.
+
+
+## ARC-13 — lote Admin de materiais com consumer confirmado (25/10/2026)
+
+`renderMaterials` foi rastreada até os labels, opções, alt da prévia, disclosure de destinos e ação de remoção. O lote tem **10 ocorrências**, dez chaves candidatas no namespace `admin.materials` e zero colisões. O nome do material no alt é parâmetro; o espaço inicial do texto da checkbox precisa ser preservado ou normalizado deliberadamente na extração. [Proposta não canônica](../evidence/architecture/arc13-semantic-key-proposal-admin-materials-2026-10-25.json). Sem mudança do índice ou do produto.
