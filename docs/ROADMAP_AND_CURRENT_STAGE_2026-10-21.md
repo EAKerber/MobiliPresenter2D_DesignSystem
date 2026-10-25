@@ -453,3 +453,9 @@ Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. 
 
 - Foram mapeadas 10 ocorrências em `renderObjectAssets` e 13 em `renderEvents`, sem colisões observadas no índice-base.
 - Caminhos de assets, labels de catálogo/alvos e valores de estado continuam dados dinâmicos; as propostas cobrem texto fixo e contratos explícitos para templates. Nenhum arquivo do produto, `decisions.json` ou índice ARC canônico foi alterado. [Assets](../evidence/architecture/arc13-semantic-key-proposal-admin-object-assets-2026-10-25.json) · [Eventos](../evidence/architecture/arc13-semantic-key-proposal-admin-events-2026-10-25.json).
+
+
+### ARC-13 — Admin pricing e objects (25/10/2026)
+
+- Propostas de `renderPricing` e `renderObjects`: 7 e 7 textos com sinks e contratos de parâmetros registrados, sem colisões observadas no índice-base.
+- O template da base de preço ficou deferido porque mistura rótulo com enum e fallback bruto; labels dinâmicos do catálogo permanecem parâmetros. [Pricing](../evidence/architecture/arc13-semantic-key-proposal-admin-pricing-2026-10-25.json) · [Objects](../evidence/architecture/arc13-semantic-key-proposal-admin-objects-2026-10-25.json). Sem alterações no produto, `decisions.json` ou índice canônico.
