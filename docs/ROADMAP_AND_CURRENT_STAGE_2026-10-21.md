@@ -1,6 +1,26 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
-## Revalidação CI-BASELINE-01 / DS-05A — cinco fluxos autenticados em preview (25/10/2026)
+## Atualização pós-consolidação CI-BASELINE-01 — 25/10/2026
+
+- As alterações estáveis que estavam distribuídas entre as PRs de produto #238 e #245 foram consolidadas na PR [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238), head `1fccf635078aee68aa735caf0df02fdb62402c93`. A PR #245 foi encerrada sem merge como supersedida; seu trabalho está preservado no commit de merge da #238.
+- A causa de fragmentação era a trava de fixture que bloqueava qualquer alteração em `app/app.js` e `app/styles.css`. A trava foi ajustada para autorizar somente esses dois arquivos validados e o workflow Stone; o gatilho de CI também cobre esses caminhos. A guarda passou no head consolidado.
+- No head consolidado, passaram as cinco suítes autenticadas em Deploy Preview — Mobile/PiP, Keyboard, Flow, Summary/Pricing e Stone — além de grant, papel restrito, revogação e replay negado; build, assets, variantes, gate anônimo e checks de fixture também passaram. Os Deploy Previews principal e isolado estão READY. [Actions #40218470993](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40218470993).
+- A PR #238 continua DRAFT e a issue #232 aberta para revisão e integração. Supabase Preview foi skipped porque a validação usa o banco interno de teste autorizado. Nada foi integrado à main nem publicado em Production.
+- A estimativa geral permanece **~24% (faixa 22–26%)**, pois a consolidação melhora a prontidão e remove uma branch de PR aberta, mas não conta como integração em main. O código integrado permanece estimado em ~18% (15–20%).
+
+### Pendências e pesos atuais
+
+| Prioridade | Peso do plano | Trabalho ainda necessário | Bloqueio ou critério de saída |
+|---|---:|---|---|
+| Alta | Dentro de implementação (25%) | Revisão humana da PR consolidada #238 e integração aprovada; depois revalidar o gate em main e fechar #232. | #238 está DRAFT; sem merge nem Production nesta etapa. |
+| Alta | Dentro de evidência (30%) | Concluir zoom real e a divergência histórica WebKit da issue #226. | Automação não conseguiu confirmar/operar a janela correta do navegador; largura CSS emulada não substitui zoom real. |
+| Alta | Dentro de decisões (20%) | Decidir fallback para falha de imagem e contraste do foco sobre fotografia/superfícies variadas. | Há comparação visual DOM-only, ainda sem decisão canônica nem teste de 404 real/leitor de tela. |
+| Média | Dentro de evidência (30%) | Ampliar mapa por componente de foco, seleção, carregamento/erro, movimento e tema, incluindo estados e rotas que permanecem não verificados. | Rotas privadas exigem sessão autorizada; não extrapolar medições pontuais. |
+| Média | ARC-13 (15%) | Classificar 190 itens de conteúdo deferidos; resolver 369 textos sem chave e 212 chaves baseadas em linha; aprovar convenção e migrar em lotes. | Convenção e ownership precisam de revisão antes de mudanças em lote. |
+| Futura | Etapas seguintes (10%) | Schema de UI, dados de textos/localização e inventário JS, mantendo separados dados de interface e dados do Configurador. | Só começa depois da fundação visual e ARC-13. |
+
+
+## Registro anterior à consolidação — CI-BASELINE-01 / DS-05A (25/10/2026)
 
 - Produto PR [#245](https://github.com/EAKerber/MobiliPresenter2D/pull/245), head `c41c33e798888f62505e2c7ba8bc3122061975b7`, passou o gate autenticado [Actions #40213836389](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40213836389): fixture verificada, resgate, papel restrito, revogação, replay negado e redirecionamento após revogação.
 - As cinco suítes no Deploy Preview passaram: Mobile/PiP, Keyboard, Flow, Summary/Pricing e Stone. Build, assets, variantes e os cinco testes locais de navegador também passaram no mesmo head.
@@ -37,7 +57,7 @@ Os pesos abaixo são uma ferramenta de planejamento, não metas ou decisões can
 
 ### Ordem de trabalho recomendada
 
-1. Resolver a decisão de integração dos previews estáveis sem publicar Production automaticamente. #240 e #241 sobrepõem seletores e versões; #238 e #245 têm relação de base/escopo, e a trava de fixture impede juntá-los sem uma validação explícita do contrato. Manter separados é a escolha correta enquanto essa fronteira não for revista.
+1. Revisar a PR consolidada #238 (a antiga #245 foi encerrada como supersedida) e decidir sua integração após revisão dos checks; em seguida revalidar em main e fechar #232. Não publicar Production automaticamente. #240 e #241 ainda sobrepõem seletores e versões e precisam de reconciliação própria.
 2. Fechar a evidência independente da #226 com zoom real e rever a diferença WebKit; as capturas antes/depois das duas grades em desktop claro e escuro já estão arquivadas. A largura CSS emulada já está medida, mas não substitui esse requisito.
 3. Continuar mapa por componente para estados de foco, seleção, carregamento/erro, movimento e temas. A varredura de imagem de 25/10 localizou um colapso apenas no wrapper grande de estudo de espaço; o fallback não está decidido.
 4. Avançar ARC-13 em lotes de ownership/chaves após revisão da convenção, sem substituição em massa de strings.
