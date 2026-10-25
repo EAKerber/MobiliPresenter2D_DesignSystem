@@ -62,3 +62,12 @@ Também comparei, apenas no DOM da sessão isolada, uma redistribuição de `box
 
 
 No seguimento, repeti o mesmo elemento de diagnóstico com viewport constante e `deviceScaleFactor` emulado em 1, 1,25, 1,5 e 2. O padrão CSSOM permaneceu idêntico em todos os quatro valores (1→0,66667; 2→2; 3→2,66667; 4→4; 5→4,66667; 6→6; 7→6,66667; 8→8), enquanto `devicePixelRatio` reportou cada valor solicitado e `visualViewport.scale` permaneceu 1. Isso afasta DPR emulado como causa isolada; não identifica se a origem restante está no Chrome, na medição DevTools ou em outra escala/renderização. Não emulei zoom pelo menu do navegador nem mudei valores do produto.
+
+
+## Atualização da variante 1 px/2 px — 25/10/2026
+
+Após autorização do usuário para testar keylines em preview, a PR de produto #242 recebeu o commit `55a9c280578d065ba79cbb3565f83ac05964eec8`. O Deploy Preview READY é `6ade958bda108ba3ea541fe2` em https://deploy-preview-242--mobilipresenter2d.netlify.app/viewer/. A sombra foi redistribuída para faixa preta de 1 px e branca de 2 px, mantendo raio total 3 px; o anel VIS-002 permaneceu em 4 px/offset declarado de 3 px, nas cores de tema aprovadas.
+
+A leitura por teclado confirmou `:focus-visible` em 390×844 e 1280×800 nos temas claro e escuro. CSSOM retornou o outline e a sombra esperados; os quatro estados tiveram `scrollWidth <= innerWidth`. Inspecionei screenshots de foco em cada tema/tamanho. Não observei erro de console no preview durante a rechecagem. O Deploy Preview principal retornou HTTP 200 em `/api/public-modules`; o projeto isolado continuou em HTTP 503 com `public_modules_unavailable`, sem mensagem interna nos logs de borda. Essa falha específica permanece sem causa confirmada.
+
+Os sete workflows do head passaram e o deploy do preview ficou READY. Não repeti amostragem de contraste por pixels para esta redistribuição; portanto ela é apenas uma variante visual em teste, sem comprovação de 3:1 em todos os trechos da fotografia e sem declaração de conformidade WCAG. A PR permanece DRAFT, sem merge ou Production.
