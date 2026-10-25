@@ -8,10 +8,10 @@
 - O coletor registra apenas campos de estrutura/estilo permitidos; nenhum valor de variável, URI de banco, cookie, grant ou token foi armazenado. Supabase Preview foi skipped pela ausência de Supabase Branch, usando-se o banco interno já autorizado.
 - A remoção do rewrite corrige o 404 de rota; o bloqueio restante é de geometria/interação do menu de etapas no Preview, não falta de variável confirmada. Issue [#232](https://github.com/EAKerber/MobiliPresenter2D/issues/232) permanece aberta até correção e aprovação das cinco suítes. PRs #238 e #51 seguem DRAFT, sem merge ou Production. [Evidência detalhada](../evidence/runtime/ds05a-authenticated-preview-suites-2026-10-25.md) · [Actions #40152094552](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40152094552).
 
-### Rechecagem visual em Production — ilustrações de etapas (25/10/2026)
+### Rechecagem visual em Production — imagens com `alt=""` (25/10/2026)
 
-- As cinco imagens com `alt=""` da lista de etapas em `/how-it-works/` foram inspecionadas visualmente após scroll e carregamento lazy. Cozinha, lavanderia, sala, quarto e escritório mostram ilustrações simples do ambiente já nomeado e descrito ao lado, sem texto ou conteúdo informativo exclusivo; a observação sustenta o uso decorativo/redundante de `alt=""` nesses cinco itens.
-- Evidência: [revisão visual das ilustrações](../evidence/runtime/how-it-works-step-illustrations-visual-review-2026-10-25.md). A mudança é documental; nenhum `alt`, CSS ou código do produto foi alterado. O restante do item 2 — estados de teclado/movimento reduzido e erro de imagem em rotas/estados ainda não cobertos — permanece parcial.
+- Os oito casos de `alt=""` em `/how-it-works/` foram revisados em DOM e pixels: ícone WhatsApp, ilustração de móveis prontos, logo repetido pelo título e cinco ilustrações das etapas. Os sete itens visuais têm categoria/nome e contexto textual adjacente; o ícone de WhatsApp está oculto da árvore acessível e o link tem nome acessível próprio. A observação sustenta manter `alt=""` nos oito contextos.
+- Evidência: [revisão das imagens com alt vazio](../evidence/runtime/how-it-works-step-illustrations-visual-review-2026-10-25.md). Mudança documental somente; nenhum `alt`, CSS ou código do produto foi alterado. O restante do item 2 — verificações de teclado, movimento reduzido e erro de imagem em rotas/estados ainda sem cobertura — segue parcial.
 
 
 ---
