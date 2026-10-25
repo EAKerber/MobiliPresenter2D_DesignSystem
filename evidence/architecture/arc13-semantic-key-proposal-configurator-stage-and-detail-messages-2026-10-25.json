@@ -1,0 +1,130 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/app.js: module focus, flow stage actions, module detail announcement and summary empty state",
+    "sourceLiteralOccurrences": 6,
+    "uniqueProposedKeys": 5
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "Each message is tied to a direct accessibility, navigation, announcement or empty-state sink. Runtime product and stage labels remain parameters.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "The stage labels are lowercased by the current runtime before interpolation; the localization parameter contract should preserve semantic casing requirements.",
+    "The open-module announcement combines two source fragments into one sentence."
+  ],
+  "entries": [
+    {
+      "proposedKey": "configurator.moduleFocus.imageAlt",
+      "text": "Recorte isolado de ${product.title}",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 998,
+          "currentText": "Recorte isolado de ${product.title}"
+        }
+      ],
+      "sourceLines": [
+        998
+      ],
+      "owner": "Module detail focus image",
+      "consumer": "createModuleFocus",
+      "sink": "img alt",
+      "parameterContract": [
+        "product.title"
+      ]
+    },
+    {
+      "proposedKey": "configurator.flow.nextStageAction",
+      "text": "Continuar para {nextStageLabel} →",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1858,
+          "currentText": "Continuar para ${next.label.toLocaleLowerCase(\"pt-BR\")} →"
+        }
+      ],
+      "sourceLines": [
+        1858
+      ],
+      "owner": "Configurator stage navigation",
+      "consumer": "syncStep",
+      "sink": "nextStepButton text",
+      "parameterContract": [
+        "nextStageLabel"
+      ]
+    },
+    {
+      "proposedKey": "configurator.flow.editFirstStageAction",
+      "text": "Editar {firstStageLabel}",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1858,
+          "currentText": "Editar ${stages[0].label.toLocaleLowerCase(\"pt-BR\")}"
+        }
+      ],
+      "sourceLines": [
+        1858
+      ],
+      "owner": "Configurator stage navigation",
+      "consumer": "syncStep",
+      "sink": "nextStepButton text on summary",
+      "parameterContract": [
+        "firstStageLabel"
+      ]
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.openedAnnouncement",
+      "text": "Ficha de {referenceLabel}, {productTitle}, aberta.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2315,
+          "currentText": ", aberta."
+        },
+        {
+          "file": "app/app.js",
+          "line": 2315,
+          "currentText": "Ficha de "
+        }
+      ],
+      "sourceLines": [
+        2315
+      ],
+      "owner": "Module detail selection",
+      "consumer": "selectEntity",
+      "sink": "live announcement",
+      "parameterContract": [
+        "referenceLabel",
+        "productTitle"
+      ]
+    },
+    {
+      "proposedKey": "configurator.summary.noModules",
+      "text": "Nenhum módulo incluído.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1633,
+          "currentText": "Nenhum módulo incluído."
+        }
+      ],
+      "sourceLines": [
+        1633
+      ],
+      "owner": "Configurator summary empty state",
+      "consumer": "renderSummary",
+      "sink": "list empty item",
+      "parameterContract": []
+    }
+  ]
+}

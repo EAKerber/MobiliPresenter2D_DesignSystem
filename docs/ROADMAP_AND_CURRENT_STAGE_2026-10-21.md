@@ -513,3 +513,9 @@ Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. 
 
 - Proposta cobre 25 literais de origem nos controles da mini-cena, seleções de acabamento/pedra/puxador, confirmação de reset e alerta fail-closed; 22 chaves, sem colisões no índice-base.
 - Labels do catálogo ficam como parâmetros; aviso de disponibilidade emitido por dois caminhos compartilha mensagem e contrato. Sem alteração de produto, índice canônico ou decisões. [Detalhes](../evidence/architecture/arc13-semantic-key-proposal-configurator-mobile-scene-and-feedback-2026-10-25.json).
+
+
+### ARC-13 — Configurator stage and detail messages (25/10/2026)
+
+- Proposta cobre 6 literais de origem em acessibilidade de imagem, navegação entre etapas, abertura de ficha e estado vazio do resumo, com 5 chaves e zero colisões no índice-base.
+- Labels de produto/etapa ficam como parâmetros; a mensagem de abertura recompõe dois fragmentos numa frase. Nenhuma alteração no produto ou índice canônico. [Detalhes](../evidence/architecture/arc13-semantic-key-proposal-configurator-stage-and-detail-messages-2026-10-25.json).
