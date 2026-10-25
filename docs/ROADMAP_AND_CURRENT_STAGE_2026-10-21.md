@@ -9,6 +9,7 @@
 - Uma tentativa de avançar a branch #238 com os arquivos de runtime foi rejeitada pelo gate `isolated-fixture-contract`, que permite somente os arquivos de fixture e CI e rejeita `app/app.js` e `app/styles.css` [Actions #40214217098](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40214217098). A branch #238 foi restaurada ao head `fd61a37...`; a proteção não foi relaxada e nenhum código foi perdido, pois o head validado permanece no PR #245.
 - A Issue [#232](https://github.com/EAKerber/MobiliPresenter2D/issues/232) permanece aberta até revisão e integração. Supabase Preview segue skipped por ausência de branch Supabase associada; foi usado o banco interno já existente, sem criar projeto/branch adicional.
 - Próximo passo: revisão humana dos PRs #238 e #245. Manter separados por escopo; sem merge ou deploy Production até autorização/revisão apropriada.
+- Rechecagem do head atual `c4d55b753dcdc10da4e69db33e9c4497c9cef05c`: o commit preserva o código validado em `c41c33e` e acrescenta somente o gatilho de CI para `app/config/index.html`. O Deploy Preview está READY nesse SHA; o gate autenticado, Flow, Keyboard, Summary/Pricing, Mobile/PiP, build, asset gates e variantes passaram. Stone ainda estava na instalação das ferramentas de navegador. A validação integral anterior de todas as cinco suítes em `c41c33e` permanece válida para o código de runtime, que não mudou.
 
 
 
