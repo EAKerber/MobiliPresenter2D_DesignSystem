@@ -22,6 +22,29 @@ A rechecagem após reload confirmou, nas duas grades `.foundation-list` e `.stud
 
 A issue permanece aberta: não foram arquivadas capturas antes/depois, zoom não foi efetivamente testado e a divergência visual WebKit histórica segue inconclusiva. Esta rechecagem no Chromium é evidência atual limitada, não homologação visual cross-browser.
 
+## Plano ponderado de conclusão — avaliação provisória (25/10/2026)
+
+Os pesos abaixo são uma ferramenta de planejamento, não metas ou decisões canônicas. A estimativa mede a conclusão do plano inteiro; mudanças em preview aumentam a evidência e a prontidão, mas não contam como integração.
+
+| Frente | Peso | Conclusão estimada | Contribuição | O que falta para fechar |
+|---|---:|---:|---:|---|
+| Inventário e evidência runtime | 30% | 35% | 10,5 p.p. | Cobrir famílias/estados com evidência atual; fechar zoom e capturas da #226; manter áreas autenticadas como não verificadas até sessão autorizada. |
+| Decisões e homologação visual | 20% | 20% | 4 p.p. | Resolver contraste do foco sobre imagens/superfícies, fallback de imagem e decisões ainda pendentes; registrar somente escolhas aprovadas. |
+| Implementação por componente e integração | 25% | 20% | 5 p.p. | Revisar e integrar previews aprovados, revalidar em Production e resolver conflitos/branches sobrepostos. O código atual integrado segue estimado em 18% (faixa 15–20%). |
+| ARC-13: ownership e chaves semânticas | 15% | 30% | 4,5 p.p. | Classificar os 190 itens de conteúdo deferidos, resolver 369 textos sem chave e 212 chaves baseadas em linha; aprovar convenção, extrair e migrar em lotes revisáveis. |
+| Etapas futuras: schema de UI, textos/localização e inventário JS | 10% | 0% | 0 p.p. | Começam depois da fundação visual/etapa atual; preservar Português do Brasil e separar dados de interface dos dados do configurador. |
+| **Total ponderado** | **100%** |  | **24 p.p.** | **Estimativa geral: ~24% (faixa 22–26%).** |
+
+### Ordem de trabalho recomendada
+
+1. Resolver a decisão de integração dos previews estáveis sem publicar Production automaticamente. #240 e #241 sobrepõem seletores e versões; #238 e #245 têm relação de base/escopo, e a trava de fixture impede juntá-los sem uma validação explícita do contrato. Manter separados é a escolha correta enquanto essa fronteira não for revista.
+2. Fechar a evidência independente da #226 com zoom real e capturas antes/depois; então rever a diferença WebKit. A largura CSS emulada já está medida, mas não substitui esse requisito.
+3. Continuar mapa por componente para estados de foco, seleção, carregamento/erro, movimento e temas. A varredura de imagem de 25/10 localizou um colapso apenas no wrapper grande de estudo de espaço; o fallback não está decidido.
+4. Avançar ARC-13 em lotes de ownership/chaves após revisão da convenção, sem substituição em massa de strings.
+5. Só então iniciar schema de UI, localização e inventário funcional de JavaScript, conforme sequência do plano.
+
+**Impedimentos externos atuais:** zoom real/capturas dependem de uma janela de navegador cujo URL não pôde ser confirmado pela automação; evidência de rotas privadas requer sessão de Production fornecida pelo usuário; fallback visual e alguns estados de foco precisam de decisão canônica. Não há falha confirmada de variável no gate autenticado.
+
 ## VIS-002C v0.3 — revisão dos dez contextos concluída (25/10/2026)
 
 - PR Design System [#52](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/52) distribui `#292723` nos dez contextos de texto longo medidos em tema claro. A preferência do usuário por quase preto também atualiza os três consumidores previamente preservados na v0.2, já mapeados como pares runtime aprovados. `decisions.json`, tema escuro, eyebrows, assinaturas e seletores globais permanecem inalterados.
