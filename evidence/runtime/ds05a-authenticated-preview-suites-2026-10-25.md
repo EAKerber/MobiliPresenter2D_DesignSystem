@@ -34,3 +34,17 @@ Os diagnósticos sanitizados não registraram status HTTP de erro ou códigos `n
 O gate do host estável verifica sessão, bootstrap, negação de Admin e revogação. As suítes funcionais rodam no Deploy Preview #238, onde a fixture V5 existe. O check Supabase Preview foi skipped porque a branch não tem uma Supabase Branch associada; o fluxo usa o banco interno já autorizado. Nenhum valor de variável, URI, cookie, token ou dado de configuração foi registrado nesta evidência.
 
 Issue #232 permanece aberta até as falhas das suítes serem compreendidas e a cobertura funcional passar. PR #238 permanece DRAFT. Sem merge, mudança de runtime em Production ou deploy de Production.
+
+---
+
+## Rechecagem após corrigir a rota de sessão — 25/10/2026
+
+Produto PR [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238), head `75c38601695b08798264b175068155cd17b7334d`; execução autenticada [Actions #40152094552](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40152094552).
+
+- Os Deploy Previews do produto e do host isolado ficaram READY. Checks estáticos, contrato, browser geral, ativos, gate anônimo e regras da Netlify passaram.
+- A remoção do rewrite duplicado de `/api/access/session` eliminou o 404: o browser não registrou falhas HTTP ou erros de rede.
+- O preflight de variáveis, grant real, papel restrito, bootstrap publicado V5, negação de Admin e revogação passaram. O browser registrou V5 `validated`, sem erro de configuração e com workspace visível.
+- Mobile/PiP, Summary/Pricing e Stone passaram. Keyboard e Flow ainda falharam em interação de etapas. Diagnóstico estrutural limitado e sanitizado: os botões da navegação têm caixa 0×0, apesar de estarem no DOM e computarem `display:block`; no Keyboard, Ctrl+→ foi prevenido mas a etapa permaneceu em Módulos. No Flow, o alvo Módulos não era clicável no perfil stacked e o ponto central atingia `MAIN.workspace`. Não há causa de produto confirmada ainda; não mascarar os asserts nem declarar as duas suítes homologadas.
+- Nenhum valor de variável, URI de banco, cookie, grant ou token foi guardado. Supabase Preview ficou skipped porque a branch não usa Supabase Branch; segue o banco interno autorizado. Issue #232 continua aberta; PRs #238 e #51 seguem DRAFT, sem merge ou deploy em Production.
+
+Esta evidência complementa e supersede o estado funcional anterior na mesma trilha; os registros históricos permanecem abaixo.
