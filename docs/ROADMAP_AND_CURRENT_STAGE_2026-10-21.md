@@ -676,3 +676,10 @@ The approved naming convention remains stable. The frozen consumer map has 336 r
 - A head combinada passou 9/9 workflows e os dois Deploy Previews ficaram SUCCESS. A checagem manual confirmou Tab → foco visível no skip link → Enter → `#main` com foco em `main#main`.
 - O CSS declara offset de 3 px, mas o CSSOM retornou 2,66667 px tanto no skip link como num controle. A divergência já se reproduziu fora do seletor; sua causa permanece desconhecida e não alterei o valor aprovado.
 - A PR #241 continua DRAFT e sem merge/Production; todas as oito PRs de implementação/revisão consultadas ainda não têm reviews humanos. A consolidação reduziu uma branch redundante, mantendo PRs com escopos independentes separados.
+
+
+### DS-04-12 — paginação mobile do Viewer, revalidação Production — 25/10/2026
+
+- No Viewer público Production, o preenchimento dos pontos inativos mede 1,75:1 contra branco em 320 e 390 px no tema claro; no tema escuro mede 9,78:1 contra `#1B1C1A`. Os pontos ativos medem 4,96:1 no claro e 9,29:1 no escuro. Sem overflow horizontal nas quatro combinações visíveis.
+- A partir de 768 px, `.mobile-view-nav` fica oculto; não contei esses botões de 0 × 0 como indicadores visíveis. O achado confirma DS04-12 no âmbito mobile/light e não autoriza correção de produto. [Readback DS-04 atualizado](../evidence/architecture/issue208-ds04-main-source-reconciliation-2026-10-25.md).
+- Próximo gate: manter a proposta de correção pendente de revisão/decisão; a PR #51 continua documental e não altera CSS nem Production.
