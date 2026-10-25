@@ -20,7 +20,7 @@ O mapa anterior foi substituído porque podia carregar a função anterior atrav
 - A causa de fragmentação era a trava de fixture que bloqueava qualquer alteração em `app/app.js` e `app/styles.css`. A trava foi ajustada para autorizar somente esses dois arquivos validados e o workflow Stone; o gatilho de CI também cobre esses caminhos. A guarda passou no head consolidado.
 - No head consolidado, passaram as cinco suítes autenticadas em Deploy Preview — Mobile/PiP, Keyboard, Flow, Summary/Pricing e Stone — além de grant, papel restrito, revogação e replay negado; build, assets, variantes, gate anônimo e checks de fixture também passaram. Os Deploy Previews principal e isolado estão READY. [Actions #40218470993](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40218470993).
 - A PR #238 continua DRAFT e a issue #232 aberta para revisão e integração. Supabase Preview foi skipped porque a validação usa o banco interno de teste autorizado. Nada foi integrado à main nem publicado em Production.
-- A estimativa geral permanece **~24% (faixa 22–26%)**, pois a consolidação melhora a prontidão e remove uma branch de PR aberta, mas não conta como integração em main. O código integrado permanece estimado em ~18% (15–20%).
+- Naquele checkpoint, a estimativa geral era **~24% (faixa 22–26%)**; após fechar a issue #226, a matriz ponderada abaixo foi atualizada para **25,3 p.p. (~25%, faixa 23–27%)**. A prontidão das PRs continua sem equivaler a integração em `main`. O código integrado permanece estimado em ~18% (15–20%).
 
 ### Readiness da PR #238 e auditoria read-only da role — 25/10/2026
 
@@ -28,6 +28,18 @@ O mapa anterior foi substituído porque podia carregar a função anterior atrav
 - Os nove workflows de PR associados ao head atual concluíram SUCCESS. As cinco suítes Keyboard, Flow, Mobile/PiP, Summary/Pricing e Stone foram executadas na prévia protegida com a fixture V5 sintética publicada pelo plugin restrito aos Deploy Previews #238/#245; o gate autenticado separado verifica grant, bootstrap, negação de Admin, revogação e replay.
 - Auditoria somente leitura no Supabase de teste: `access_ci_fixture` está sem atributos elevados e sem memberships que lhe concedam outras roles; não tem SELECT/INSERT/UPDATE/DELETE nas tabelas `access_control`; `PUBLIC` não tem EXECUTE nas funções fixture, e a role só recebeu EXECUTE nas duas funções dedicadas. Nenhuma escrita foi feita nessa consulta.
 - Próximo gate: review humana da PR #238, resolver comentários se houver e, depois, autorização de integração. Não há falha de variável identificada no gate atual.
+
+### Prontidão das PRs de produto — readback de 25/10/2026
+
+| PR | Estado atual | Evidência no head | Bloqueio restante |
+|---|---|---|---|
+| #238 / issue #232 | DRAFT, mergeable; sem reviews ou threads | Nove workflows SUCCESS; cinco suítes protegidas com V5 sintética; gate de grant/revogação e auditoria read-only de privilégios do banco interno. | Review humana e autorização de integração; depois revalidar em `main`. |
+| #241 / VIS-002C e fallback | DRAFT, mergeable; sem reviews ou threads | Nove workflows SUCCESS; preview confirmou dez contextos de texto medidos e fallback 3:2 com HTTP 404 real. | Revisão humana do preview; o fallback só cobre a ilustração principal e não homologa outras rotas/assets. |
+| #242 / hotspot focus | DRAFT, mergeable; sem reviews ou threads | Sete workflows SUCCESS; sete hotspots receberam foco por teclado e ficaram dentro da cena. | Amostra da fotografia escura mostrou contraste mediano de apenas 1,24–1,46:1; falta decisão/revisão visual para a distinção do anel sobre a imagem. |
+| #243 / issue #224 | DRAFT, mergeable; sem reviews ou threads | Sete workflows SUCCESS; seleção de Lavanderia preservada no grupo 2 em 320/390 px, temas claro/escuro, inclusive durante scroll suave. | Review humana e integração autorizada; manter #224 aberta até readback após integração. |
+| #244 / NAV-005 | DRAFT, mergeable; sem reviews ou threads | Oito workflows SUCCESS; preview confirmou uma linha a 291/320 px e quebra abaixo de 291 px em Admin/acesso. | Runtime autenticado em Configurador e gestão de acesso não foi verificado; review de preview antes de integração. |
+
+Os checks são evidência de branch e não equivalem a aceite final. Nenhuma dessas PRs foi marcada pronta, integrada ou publicada por este readback.
 
 ### Pendências e pesos atuais
 
