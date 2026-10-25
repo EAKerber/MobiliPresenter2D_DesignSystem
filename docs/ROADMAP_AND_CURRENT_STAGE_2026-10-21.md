@@ -57,7 +57,7 @@ Os pesos abaixo são uma ferramenta de planejamento, não metas ou decisões can
 
 ### Ordem de trabalho recomendada
 
-1. Revisar a PR consolidada #238 (a antiga #245 foi encerrada como supersedida) e decidir sua integração após revisão dos checks; em seguida revalidar em main e fechar #232. Não publicar Production automaticamente. #240 e #241 ainda sobrepõem seletores e versões e precisam de reconciliação própria.
+1. Revisar a PR consolidada #238 e a PR de produto #241 após leitura humana; integrar somente com autorização para merge, revalidar em main e então fechar #232. PR #245 e a branch v0.2 #240 foram encerradas como supersedidas; a #241 contém os oito seletores da v0.2 mais dois contextos medidos na distribuição v0.3. Nenhum merge ou deploy em Production foi feito.
 2. Fechar a evidência independente da #226 com zoom real e rever a diferença WebKit; as capturas antes/depois das duas grades em desktop claro e escuro já estão arquivadas. A largura CSS emulada já está medida, mas não substitui esse requisito.
 3. Continuar o mapa por componente para foco, seleção, carregamento/erro, movimento e temas. O fallback da ilustração principal de estudo de espaço foi implementado na PR #241 e validado com HTTP 404 real no preview; ampliar a cobertura para outras imagens/rotas exige evidência própria.
 4. Avançar ARC-13 em lotes de ownership/chaves após revisão da convenção, sem substituição em massa de strings.
