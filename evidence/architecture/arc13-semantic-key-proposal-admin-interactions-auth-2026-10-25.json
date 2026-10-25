@@ -195,7 +195,7 @@
         1289
       ],
       "owner": "Admin configuration editor",
-      "consumer": "loadSettings",
+      "consumer": "Admin configuration editor revisionLabel textContent",
       "sink": "revisionLabel textContent",
       "parameterContract": [
         "revision"
