@@ -8,7 +8,7 @@
   "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
   "scope": {
     "consumer": "app/app.js: mobile scene pin, size/transparency, module/finish/stone selection feedback, local finish and restore",
-    "sourceLiteralOccurrences": 36,
+    "sourceLiteralOccurrences": 25,
     "uniqueProposedKeys": 22
   },
   "collisionAudit": {
@@ -29,7 +29,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 1351
+          "line": 1351,
+          "currentText": "Acabamento deste módulo"
         }
       ],
       "sourceLines": [
@@ -46,7 +47,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 1364
+          "line": 1364,
+          "currentText": "Aplicar {finishLabel} somente em {productTitle}"
         }
       ],
       "sourceLines": [
@@ -66,7 +68,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 1757
+          "line": 1757,
+          "currentText": "Resumo"
         }
       ],
       "sourceLines": [
@@ -83,15 +86,18 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2051
+          "line": 2051,
+          "currentText": "Fixar cena"
         },
         {
           "file": "app/app.js",
-          "line": 2051
+          "line": 2052,
+          "currentText": "Fixar cena"
         }
       ],
       "sourceLines": [
-        2051
+        2051,
+        2052
       ],
       "owner": "Mobile scene pin control",
       "consumer": "function syncPinnedSceneUi",
@@ -104,15 +110,18 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2051
+          "line": 2051,
+          "currentText": "Liberar cena"
         },
         {
           "file": "app/app.js",
-          "line": 2051
+          "line": 2052,
+          "currentText": "Liberar cena"
         }
       ],
       "sourceLines": [
-        2051
+        2051,
+        2052
       ],
       "owner": "Mobile scene pin control",
       "consumer": "function syncPinnedSceneUi",
@@ -125,11 +134,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2075
-        },
-        {
-          "file": "app/app.js",
-          "line": 2075
+          "line": 2075,
+          "currentText": "Cena fixada para contexto durante a configuração."
         }
       ],
       "sourceLines": [
@@ -146,11 +152,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2075
-        },
-        {
-          "file": "app/app.js",
-          "line": 2075
+          "line": 2075,
+          "currentText": "Cena liberada para o fluxo normal."
         }
       ],
       "sourceLines": [
@@ -167,11 +170,18 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2086
+          "line": 2086,
+          "currentText": "Mini-cena disponível abaixo das etapas. Selecione um módulo diretamente na cena."
+        },
+        {
+          "file": "app/app.js",
+          "line": 2114,
+          "currentText": "Mini-cena disponível abaixo das etapas. Selecione um módulo diretamente na cena."
         }
       ],
       "sourceLines": [
-        2086
+        2086,
+        2114
       ],
       "owner": "Mobile scene pip",
       "consumer": "function refreshMobileSceneDock",
@@ -184,7 +194,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2097
+          "line": 2097,
+          "currentText": "Mini-cena fixada para contexto durante a configuração."
         }
       ],
       "sourceLines": [
@@ -201,11 +212,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2404
-        },
-        {
-          "file": "app/app.js",
-          "line": 2404
+          "line": 2404,
+          "currentText": "Mini-cena com transparência ativada."
         }
       ],
       "sourceLines": [
@@ -222,11 +230,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2404
-        },
-        {
-          "file": "app/app.js",
-          "line": 2404
+          "line": 2404,
+          "currentText": "Mini-cena opaca."
         }
       ],
       "sourceLines": [
@@ -243,15 +248,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2411
-        },
-        {
-          "file": "app/app.js",
-          "line": 2411
-        },
-        {
-          "file": "app/app.js",
-          "line": 2411
+          "line": 2411,
+          "currentText": "Mini-cena pequena."
         }
       ],
       "sourceLines": [
@@ -268,15 +266,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2411
-        },
-        {
-          "file": "app/app.js",
-          "line": 2411
-        },
-        {
-          "file": "app/app.js",
-          "line": 2411
+          "line": 2411,
+          "currentText": "Mini-cena média."
         }
       ],
       "sourceLines": [
@@ -293,15 +284,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2411
-        },
-        {
-          "file": "app/app.js",
-          "line": 2411
-        },
-        {
-          "file": "app/app.js",
-          "line": 2411
+          "line": 2411,
+          "currentText": "Mini-cena grande."
         }
       ],
       "sourceLines": [
@@ -318,11 +302,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2488
-        },
-        {
-          "file": "app/app.js",
-          "line": 2488
+          "line": 2488,
+          "currentText": "Puxador será definido depois."
         }
       ],
       "sourceLines": [
@@ -339,11 +320,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2488
-        },
-        {
-          "file": "app/app.js",
-          "line": 2488
+          "line": 2488,
+          "currentText": " aplicado ao conjunto."
         }
       ],
       "sourceLines": [
@@ -362,7 +340,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2339
+          "line": 2339,
+          "currentText": "Cor das frentes atualizada para o conjunto."
         }
       ],
       "sourceLines": [
@@ -379,7 +358,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2349
+          "line": 2349,
+          "currentText": "Acabamento aplicado somente ao módulo selecionado."
         }
       ],
       "sourceLines": [
@@ -396,7 +376,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2370
+          "line": 2370,
+          "currentText": "Detalhes do módulo fechados."
         }
       ],
       "sourceLines": [
@@ -413,7 +394,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2501
+          "line": 2501,
+          "currentText": "{stoneLabel} aplicado ao conjunto."
         }
       ],
       "sourceLines": [
@@ -432,7 +414,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2522
+          "line": 2522,
+          "currentText": "Recomeçar a configuração? Suas escolhas atuais serão removidas."
         }
       ],
       "sourceLines": [
@@ -449,7 +432,8 @@
       "sourceOccurrences": [
         {
           "file": "app/app.js",
-          "line": 2535
+          "line": 2535,
+          "currentText": "Não foi possível validar a configuração publicada. O configurador está temporariamente indisponível."
         }
       ],
       "sourceLines": [
@@ -460,5 +444,6 @@
       "sink": "role=alert text",
       "parameterContract": []
     }
-  ]
+  ],
+  "auditNote": "Source occurrence counts were corrected to distinguish multiple different literals on the same line; exact file, line and source text are recorded on each occurrence."
 }

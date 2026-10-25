@@ -511,5 +511,5 @@ Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. 
 
 ### ARC-13 — Configurator mobile scene and feedback (25/10/2026)
 
-- Proposta cobre 36 literais de origem nos controles da mini-cena, seleções de acabamento/pedra/puxador, confirmação de reset e alerta fail-closed; 22 chaves, sem colisões no índice-base.
+- Proposta cobre 25 literais de origem nos controles da mini-cena, seleções de acabamento/pedra/puxador, confirmação de reset e alerta fail-closed; 22 chaves, sem colisões no índice-base.
 - Labels do catálogo ficam como parâmetros; aviso de disponibilidade emitido por dois caminhos compartilha mensagem e contrato. Sem alteração de produto, índice canônico ou decisões. [Detalhes](../evidence/architecture/arc13-semantic-key-proposal-configurator-mobile-scene-and-feedback-2026-10-25.json).
