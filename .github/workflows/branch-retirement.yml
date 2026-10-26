@@ -5,6 +5,7 @@ on:
     paths:
       - 'ops/branch-retirement-batch.json'
       - 'tools/retire_merged_branches.py'
+      - 'tests/test_retire_branches_*.py'
       - '.github/workflows/branch-retirement.yml'
   push:
     branches: [main]
@@ -30,7 +31,19 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m py_compile tools/retire_merged_branches.py
+      - run: python -m unittest discover -s tests -p 'test_retire_branches_*.py'
+      - name: Detect whether PR changes the explicit retirement batch
+        id: batch-change
+        run: |
+          git fetch origin main
+          if git diff --quiet origin/main...HEAD -- ops/branch-retirement-batch.json; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+          else
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+      # Tool-only PRs must not retry consumed manifests.
       - name: Observe pinned refs without mutation
+        if: steps.batch-change.outputs.changed == 'true'
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python tools/retire_merged_branches.py --batch ops/branch-retirement-batch.json
@@ -56,6 +69,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m py_compile tools/retire_merged_branches.py
+      - run: python -m unittest discover -s tests -p 'test_retire_branches_*.py'
       - name: Apply ONLY exact batch with lease and readback
         env:
           GITHUB_TOKEN: ${{ github.token }}
