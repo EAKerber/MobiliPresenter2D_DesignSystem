@@ -1,31 +1,31 @@
 {
   "schemaVersion": "BranchHygieneBatch 0.1",
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "wave": "DS-HYG-P01-2026-10-26",
-  "purpose": "Fully merged squash, exact head/pr metadata and full Git tree equivalence, historical #19/#44/#47; no workflow or active PR dependency.",
+  "wave": "DS-HYG-P02-2026-10-26",
+  "purpose": "Merged exact-tree documentation heads #27/#34/#43, preserved on main, retire refs only.",
   "branches": [
     {
-      "branch": "design/palette-conformance-find004-20261018",
-      "sha": "a313894c86c807d64f585d9160c1aa0088bcbfc2",
+      "branch": "docs/reconcile-approved-visual-decisions-2026-10-19",
+      "sha": "a54ff68ad8acaa8831198e1d2693077c62eadefc",
       "squashMerge": {
-        "pullRequest": 19,
-        "mergeCommit": "3b4eb6b8191077912fb07eb5f23a76c729e11886"
+        "pullRequest": 27,
+        "mergeCommit": "91aba0c1f2191de49720f499a440353c0deafac1"
       }
     },
     {
-      "branch": "docs/contrast-reconciliation-20261021",
-      "sha": "df8c0e0ddc97f18cf1d9aef8f7f01465bdd721cb",
+      "branch": "docs/reconcile-product-release-20261019",
+      "sha": "8d0b11a6075faf19baffd5a618b8ba5598d3baeb",
       "squashMerge": {
-        "pullRequest": 44,
-        "mergeCommit": "5131790512d023d0aa9ca4582215acaeec6dce52"
+        "pullRequest": 34,
+        "mergeCommit": "09262d90764da322dce3607ac4ee8331496cf595"
       }
     },
     {
-      "branch": "docs/reconcile-approved-focus-record-main",
-      "sha": "e93eb77da2da4ff69c15f52a79041398efc665f0",
+      "branch": "docs/reconcile-visual-inventory-20261021",
+      "sha": "0957be0e78dd22dd64be6b64aeb341c8bd5bcb19",
       "squashMerge": {
-        "pullRequest": 47,
-        "mergeCommit": "385bd56caea04ed0431646b9e8bc1e7312505152"
+        "pullRequest": 43,
+        "mergeCommit": "e914c5c811a26ce46d55450c47c2070e7af8f7de"
       }
     }
   ]
