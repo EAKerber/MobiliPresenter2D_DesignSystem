@@ -767,21 +767,17 @@ Após autorização para testar outra distribuição e depois placa opaca, a PR 
 Rechecagem das PRs abertas: produto #238, #241, #242, #243 e #244 estão DRAFT; todos os checks de produto e os dois status Netlify de cada head observado passaram. Design System #51 e #52 também estão DRAFT. A #52 mantém o gate documental; #51 teve somente documentação no último head, sem workflow acionado. As sete PRs têm zero reviews humanos registrados e nenhuma foi integrada. Para sair de DRAFT e consolidar integrações, é necessária revisão humana dos previews e resolução de comentários. A placa opaca da #242 fica como candidata aprovada para permanecer no preview, ainda sem canonização, merge ou Production.
 
 
-## PR #241 — cobertura de falha de imagem na página pública (26/10/2026)
+## PR #241 — fallback compartilhado de imagem (26/10/2026)
 
-No Deploy Preview atual, 16 imagens informativas receberam 404 same-origin e foram restauradas. Confirmei quatro formatos em estado de erro: comparação, cartão de módulo, ícone de benefício e hero final; nenhum exibiu placeholder, embora a caixa e o `alt` permanecessem. O fallback existente continua limitado à ilustração do estudo do espaço. O handover recomenda generalizar o componente, respeitar as proporções e manter `alt=""` decorativo. [Método e medições](../evidence/runtime/pr241-public-image-failure-coverage-2026-10-26.md). A PR #241 segue DRAFT; a ampliação ainda não foi implementada nem validada.
+A implementação na PR de produto [#241](https://github.com/EAKerber/MobiliPresenter2D/pull/241), head `d0fa2874468e913bef9bbab0d4d8c29c444154c4`, agora generaliza o fallback aprovado: a hero da Landing e 18 frames informativos em /how-it-works/ preservam a caixa e mostram estado + descrição alternativa quando a imagem falha. Imagens decorativas `alt=""` ficam fora. O helper compartilha o mesmo CSS claro/escuro e restaura a imagem se ela carregar depois.
 
+O HTML canônico e o gerado e o manifesto ARC-03C passaram o gate de páginas. O teste local cobre erro, recuperação, erro em cache e imagem decorativa. Os 12 checks do GitHub passaram; o Supabase Preview ficou skipped por não haver branch Supabase associada.
 
-## Complemento cross-route — falhas visuais de imagem (26/10/2026)
+O usuário desativou previews de PR. Nenhum Deploy Preview novo foi observado nesta head; por isso, a revisão visual das novas áreas permanece pendente. A PR segue DRAFT, sem reviews/comentários humanos, merge ou Production. Esta atualização supersede a anotação abaixo de que a generalização ainda não havia sido implementada.
 
-Na mesma sessão isolada do preview #241 (390 × 844, claro), o hero da Landing recebeu HTTP 404 e manteve o frame 390 × 350 px sem placeholder; o asset foi restaurado. About só expôs logos e ícone decorativo, sem imagem editorial na amostra. No Viewer/Cozinha, HTTP 404 na base e em `02_inferior_fogao.png` reduziu as camadas visíveis de 18 para 17, sem aviso; ambos os originais carregaram após restauração. A página comum precisa de fallback em sua própria caixa; a composição do Viewer requer tratamento de erro no nível da cena, decidido separadamente. [Medições e limites](../evidence/runtime/pr241-public-image-failure-coverage-2026-10-26.md).
+## Releitura atual do plano e gates — 26/10/2026
 
-
-## Limite temporário de Deploy Preview — compute Netlify (26/10/2026)
-
-O usuário reportou consumo de 233/300 minutos Netlify, acima dos 200 observados pela manhã. Até o fim de outubro, suspender novas ações no repositório do produto que disparem Deploy Preview. Continuar somente análise, documentação e preparação local; não atualizar branches de PR de produto nem iniciar deploy. Retomar publicação de preview após a janela indicada pelo usuário e confirmar o saldo antes de fazê-lo. Esta restrição afeta a validação visual de implementações em aberto, não os testes locais ou a revisão de código.
-
-
-## PR #242 — comportamento aprovado para falha de camada (26/10/2026)
-
-O usuário escolheu cobrir toda a cena do Viewer e exibir placeholder com descrição quando a imagem-base ou uma camada visível falhar. O código atual não escuta erros dos assets em `scene-adapters.js`/ `scene-component.js`; a amostra em 390 × 844 confirmou que a cena fica incompleta sem aviso. A cobertura deve respeitar o frame 3:2 e ignorar falhas de camadas ocultas. [Decisão, contrato proposto e evidência](../evidence/architecture/pr242-viewer-scene-image-failure-design-2026-10-26.md). A implementação fica suspensa até depois da janela de compute Netlify indicada pelo usuário: 233/300, ante 200 pela manhã. Nenhum Deploy Preview será iniciado até o fim de outubro.
+- A implementação da #241 avançou na branch, mas permanece DRAFT; não muda o percentual de código integrado nem autoriza merge.
+- A PR de handover #51 tem 236 arquivos e ainda não recebeu review humano; a PR de Design System #52 está aberta e pronta para revisão, sem merge. O GitHub marca ambas como prontas (`draft=false`), apesar do marcador `[DRAFT]` nos títulos.
+- Estimativa geral permanece em ~25% (faixa 23–27%) e código integrado em ~18% (15–20%). A contribuição só sobe quando decisões e implementação passam pelos gates de integração e leitura runtime.
+- Próximo trabalho documental desimpedido: continuar ARC-13 em lotes de consumer/owner/contrato, sem canonizar propostas, alterar o índice de produto ou migrar runtime. A verificação visual ampliada da #241 aguarda um caminho de validação sem Deploy Preview ou a reativação autorizada dos previews.
