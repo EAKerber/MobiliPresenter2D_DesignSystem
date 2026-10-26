@@ -1,28 +1,18 @@
 {
   "schema": "BoundedBranchRetirement 0.1",
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "wave": "DS-R1-B-2026-10-26",
-  "purpose": "Retire only three ancestry-proven historical audit and homologation refs (zero unique commits); retain commit SHAs and PR history",
+  "wave": "DS-R2-2026-10-26",
+  "purpose": "Retire ancestry-proven merged PR #52 and #56 heads; preserve original commits and PR history.",
   "branches": [
     {
-      "branch": "audit/approved-contrast-runtime-20261020",
-      "sha": "0b3e22326b95171fd835b378ae135c4a72d387d3",
-      "evidence": "ancestor-of-main; no open PR; 0 files changed"
+      "branch": "feat/vis002-role-split-v03-20261024",
+      "sha": "2f11ecf8948c779706a0ce0795e088d29633fb7e",
+      "mergedPr": 52
     },
     {
-      "branch": "audit/authenticated-runtime-20261018",
-      "sha": "7c1e08c52b747abf6ce9e771a40757e3e18bd198",
-      "mergedPrs": [
-        5
-      ]
-    },
-    {
-      "branch": "homologation/visual-review-options-20261018",
-      "sha": "c8c799e84240e36426efa267643a7fae7ebc92f9",
-      "mergedPrs": [
-        4,
-        9
-      ]
+      "branch": "maintenance/bounded-retirement-wave01-20261026",
+      "sha": "aef7a49a75de7bbcf57afe60fbc3ba9d72d1b5b2",
+      "mergedPr": 56
     }
   ]
 }
