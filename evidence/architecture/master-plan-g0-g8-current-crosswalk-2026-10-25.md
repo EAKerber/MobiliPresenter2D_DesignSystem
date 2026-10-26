@@ -6,6 +6,26 @@ A PR [#39](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/39) p
 
 A PR [#51](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51), branch `docs/current-handover-20261024`, contém o handover operacional mais recente e atualizações ARC-13 de 25/10. Este crosswalk atualiza a leitura dos gates antigos à luz dessa evidência; não substitui as fontes canônicas, não muda o produto e não homologa decisões visuais.
 
+## Readback de PRs e gates — 26/10/2026
+
+A leitura atual do GitHub reconcilia os estados de revisão que mudaram desde a auditoria de branches datada de 25/10:
+
+| Repositório | PR | Estado GitHub | Head observado | Reviews submetidas |
+|---|---:|---|---|---:|
+| Design System | [#51](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51) | aberta, pronta para revisão (`draft=false`) | `2351b7ac8c4bb56bf6b6aa5e172a1de36b55f6c4` | 0 |
+| Design System | [#52](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/52) | aberta, pronta para revisão (`draft=false`) | `2f11ecf8948c779706a0ce0795e088d29633fb7e` | 0 |
+| Produto | [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238) | aberta, pronta para revisão (`draft=false`) | `41dcc1424bdeea5782d977d2b0509c88f76fe156` | 0 |
+| Produto | [#241](https://github.com/EAKerber/MobiliPresenter2D/pull/241) | aberta, DRAFT | `d0fa2874468e913bef9bbab0d4d8c29c444154c4` | 0 |
+| Produto | [#242](https://github.com/EAKerber/MobiliPresenter2D/pull/242) | aberta, DRAFT | `aa62c1e4265e084464094433efb74354ffd345e9` | 0 |
+| Produto | [#243](https://github.com/EAKerber/MobiliPresenter2D/pull/243) | aberta, pronta para revisão (`draft=false`) | `8f2c3e5f5c0e2c3d17e01c1abc899675cd058ceb` | 0 |
+| Produto | [#244](https://github.com/EAKerber/MobiliPresenter2D/pull/244) | aberta, pronta para revisão (`draft=false`) | `063796224c55924a8b3a909c9631c6b5f5590972` | 0 |
+
+Alguns títulos ainda contêm o texto “DRAFT”, mas o estado de revisão autoritativo é o campo do GitHub indicado acima. Nenhuma dessas PRs recebeu review submetida no readback. Os previews automáticos por PR foram desativados pelo usuário; não iniciei preview nem deploy nesta atualização documental.
+
+**Gates confirmados:** a issue [#226](https://github.com/EAKerber/MobiliPresenter2D/issues/226) está fechada como concluída. O issue registra a confirmação manual do usuário em zoom real de 400%; não há leitura automatizada da viewport a 400%. A issue [#232](https://github.com/EAKerber/MobiliPresenter2D/issues/232) segue aberta e aponta a PR #238 como aguardando revisão humana, autorização de integração e revalidação em `main`.
+
+**Próximo gate acionável:** revisão humana da PR #238 para destravar #232. Em paralelo, o plano geral continua dependente de revisão das PRs e validações visuais que exigiriam novos previews; as questões de ARC-13 adiadas permanecem fora do escopo até localização e revisão do owner.
+
 ## Estado dos gates
 
 | Gate | Leitura atual | Evidência e limite |
