@@ -18,6 +18,7 @@ on:
       - "tests/export-approved-palette.test.mjs"
       - "dist/approved-palette-reference.css"
       - "dist/approved-palette-reference.manifest.json"
+      - ".github/workflows/p-token-01-reference-export-gate.yml"
 permissions:
   contents: read
 concurrency:
