@@ -771,3 +771,8 @@ No Deploy Preview atual, 16 imagens informativas receberam 404 same-origin e for
 ## Complemento cross-route — falhas visuais de imagem (26/10/2026)
 
 Na mesma sessão isolada do preview #241 (390 × 844, claro), o hero da Landing recebeu HTTP 404 e manteve o frame 390 × 350 px sem placeholder; o asset foi restaurado. About só expôs logos e ícone decorativo, sem imagem editorial na amostra. No Viewer/Cozinha, HTTP 404 na base e em `02_inferior_fogao.png` reduziu as camadas visíveis de 18 para 17, sem aviso; ambos os originais carregaram após restauração. A página comum precisa de fallback em sua própria caixa; a composição do Viewer requer tratamento de erro no nível da cena, decidido separadamente. [Medições e limites](../evidence/runtime/pr241-public-image-failure-coverage-2026-10-26.md).
+
+
+## Limite temporário de Deploy Preview — compute Netlify (26/10/2026)
+
+O usuário reportou consumo de 233/300 minutos Netlify, acima dos 200 observados pela manhã. Até o fim de outubro, suspender novas ações no repositório do produto que disparem Deploy Preview. Continuar somente análise, documentação e preparação local; não atualizar branches de PR de produto nem iniciar deploy. Retomar publicação de preview após a janela indicada pelo usuário e confirmar o saldo antes de fazê-lo. Esta restrição afeta a validação visual de implementações em aberto, não os testes locais ou a revisão de código.
