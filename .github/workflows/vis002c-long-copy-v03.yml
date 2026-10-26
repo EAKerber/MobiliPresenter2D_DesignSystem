@@ -1,0 +1,28 @@
+name: VIS-002C long-copy v0.3 artifact gate
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - decisions.json
+      - docs/VIS002C_CONTEXTUAL_MAPPING_V0_2_0.json
+      - docs/VIS002C_CONTEXTUAL_MAPPING_V0_3_0.json
+      - docs/VIS002C_LONG_COPY_ROLE_SPLIT_V0_3_0_2026-10-24.md
+      - dist/vis002c-long-copy-light-v0.3.0.css
+      - dist/vis002c-long-copy-light-v0.3.0.manifest.json
+      - scripts/verify-vis002c-long-copy-v03.mjs
+      - .github/workflows/vis002c-long-copy-v03.yml
+permissions:
+  contents: read
+jobs:
+  scoped-artifact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify source pin, role, measured contexts, contrast, manifest and CSS projection
+        run: |
+          node --check scripts/verify-vis002c-long-copy-v03.mjs
+          node scripts/verify-vis002c-long-copy-v03.mjs
