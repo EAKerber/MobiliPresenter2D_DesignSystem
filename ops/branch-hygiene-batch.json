@@ -1,32 +1,24 @@
 {
   "schemaVersion": "BranchHygieneBatch 0.1",
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "wave": "DS-HYG-P08-2026-10-26",
-  "purpose": "Merged exact-tree NAV/caption review #13/#15/#18.",
+  "wave": "DS-HYG-P09-2026-10-26",
+  "purpose": "Exact-tree merged historical palette candidate PR #20 plus ancestor operational PR #62/#63.",
   "branches": [
     {
-      "branch": "review/nav-005-private-compact-wrap-runtime-20261018",
-      "sha": "12494bc13c9330f846917d222c57b27af130dab3",
+      "branch": "visual/palette-candidate-a-20261018",
+      "sha": "a1f97b6c6ef84a51b2cdb42a02c0a35f02938c29",
       "squashMerge": {
-        "pullRequest": 13,
-        "mergeCommit": "5e811bc14aff5b0b337d9ed6b286d48a3c249f9d"
+        "pullRequest": 20,
+        "mergeCommit": "dbc855fb1e44d3b2a481d1e38d98d6053abcc97e"
       }
     },
     {
-      "branch": "spec/nav005-narrow-fit-20261019",
-      "sha": "030dea6fb352e4ffe71d11c44a55391f2c2d0743",
-      "squashMerge": {
-        "pullRequest": 15,
-        "mergeCommit": "59ab6a586cecf70c781f81e666c6b7e55a342941"
-      }
+      "branch": "maintenance/retire-squash-proof-wave06-20261026",
+      "sha": "eddbcfa77d14c073c5bc5de0f09a441e9e1bbea5"
     },
     {
-      "branch": "visual/find004-caption-band-candidates-20261018",
-      "sha": "d15e037ba011968f5185441d5c79ecffb6cf3063",
-      "squashMerge": {
-        "pullRequest": 18,
-        "mergeCommit": "a5eee7e939f0db1df3da4a2aaeca2adaaaa01663"
-      }
+      "branch": "maintenance/retire-operational-wave07-20261026",
+      "sha": "7e3fc2b2b82ed7a71b52fabafbb0ab11c87e5c0e"
     }
   ]
 }
