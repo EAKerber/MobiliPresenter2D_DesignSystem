@@ -28,3 +28,13 @@ A convenção ARC-13 foi aprovada; exemplos individuais continuam candidatos. N�
 - **Catálogo/editorial (5):** permanecem no catálogo e aguardam revisão do owner de conteúdo. Nenhuma chave é proposta até essa revisão.
 
 A medição documental passa a **318/331 identidades (96,1%)** com propostas; **13** seguem sem proposta (8 adiadas + 5 aguardando owner). Convenção aprovada, exemplos ainda não canônicos. Sem alteração de produto, índice ARC-13 ou `decisions.json`. O fallback de enum bruto continua como risco separado antes de migração.
+
+## Verificação do fallback de enum no Admin — 26/10/2026
+
+Readback do produto `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`:
+
+- O Admin mostra o rótulo conhecido para `eligible-module-base`; o fallback textual em `renderPricing` só seria usado quando `pricingBasisLabels` não tiver o valor. [Origem e chamada no Admin](https://github.com/EAKerber/MobiliPresenter2D/blob/5ccb2a8dde6dd16e136f03387dc833aab828c5cf/app/admin/admin.js#L89-L91) · [fallback](https://github.com/EAKerber/MobiliPresenter2D/blob/5ccb2a8dde6dd16e136f03387dc833aab828c5cf/app/admin/admin.js#L1216).
+- O contrato aceita somente `eligible-module-base` como base percentual, e `validateRule` rejeita qualquer valor diferente. [Enum e capacidades](https://github.com/EAKerber/MobiliPresenter2D/blob/5ccb2a8dde6dd16e136f03387dc833aab828c5cf/app/core/pricing-contract.js#L7-L20) · [validação](https://github.com/EAKerber/MobiliPresenter2D/blob/5ccb2a8dde6dd16e136f03387dc833aab828c5cf/app/core/pricing-contract.js#L53-L75).
+- A projeção do price book valida o contrato antes de produzir o formato legado. A entrada administrativa hierárquica também valida settings V3; a entrada legada passa pela normalização, que valida o mesmo price book. [projeção e validação do price book](https://github.com/EAKerber/MobiliPresenter2D/blob/5ccb2a8dde6dd16e136f03387dc833aab828c5cf/app/core/configuration.js#L19-L25) · [upgrade hierárquico](https://github.com/EAKerber/MobiliPresenter2D/blob/5ccb2a8dde6dd16e136f03387dc833aab828c5cf/app/core/hierarchy-administration.js#L67-L78).
+
+**Conclusão delimitada:** no fluxo validado desse head, a tabela de rótulos cobre toda base percentual permitida, então o fallback de enum bruto não é alcançável por dados válidos. Ele permanece uma defesa para dado inválido ou validação contornada; não é uma ocorrência adicional a localizar neste recorte. A proposta [admin.pricing.basisFallback](arc13-semantic-key-proposal-admin-pricing-basis-fallback-2026-10-25.json) continua apenas documental e não deve ser tratada como autorização para mudança de runtime, índice canônico ou `decisions.json`. Se o conjunto de bases permitidas crescer, reavaliar rótulos localizados e o fallback antes da migração.
