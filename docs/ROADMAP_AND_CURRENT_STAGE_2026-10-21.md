@@ -743,11 +743,13 @@ A leitura raster encontrou pontos pretos abaixo de 3:1 em cinco dos sete hotspot
 
 ## Atualização de continuidade — 26/10/2026
 
-### CI-BASELINE-01 / issue #232
+### CI-BASELINE-01 / issue #232 — readback atualizado em 26/10/2026
 
-- Após a consolidação, retirei a branch fechada #245 da allowlist do fixture e do workflow autenticado. O produto PR [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238), head `41dcc1424bdeea5782d977d2b0509c88f76fe156`, passou os nove workflows de PR e os dois gates de push.
-- O Deploy Preview isolado #238 confirmou a fixture V5 por readback e `GET /api/public-modules` respondeu 200. Isto corrige o erro do preview #238; não confirma o store primário do site isolado nem Production. [Método e evidência](../evidence/runtime/pr238-ci-fixture-allowlist-cleanup-2026-10-26.md).
-- A PR #238 continua DRAFT. A revisão humana ainda está pendente; nenhuma integração ou publicação foi feita.
+- Após a consolidação da branch #245 em #238, o head `41dcc1424bdeea5782d977d2b0509c88f76fe156` passou os gates locais e as cinco suítes autenticadas no preview então vigente. A leitura abaixo supersede essa validação para o head mais novo.
+- No head atual [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238), `3ccce161235df925c5b708bf6feefbe6f4b10103`, o marker do fixture passou a guardar `COMMIT_REF`; o gate exige igualdade com `github.sha` antes de executar as suítes protegidas.
+- Os gates locais, `isolated-fixture-contract`, gate anônimo e checagem direta de sessão/grant/revogação passaram. A suíte protegida falhou no preflight porque o marker do Deploy Preview não corresponde ao head atual; a falha ocorreu antes da conexão ao banco nessa etapa. O ciclo de sessão/grant isolado anterior terminou com revogação confirmada. [Run e diagnóstico](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40257905366).
+- Os Deploy Previews automáticos por PR estão desativados pelo usuário; não iniciei deploy. Não há status Netlify novo nesta head. Supabase Preview foi skipped por não haver branch associada.
+- A PR #238 permanece aberta e pronta para revisão (`draft=false`), sem review submetida. Issue #232 continua aberta até revisão humana, preview do mesmo commit quando permitido e revalidação; sem integração ou Production.
 
 ### VIS-002C — fallback no head atual da PR #241
 
