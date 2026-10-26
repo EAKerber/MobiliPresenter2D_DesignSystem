@@ -1,31 +1,31 @@
 {
   "schemaVersion": "BranchHygieneBatch 0.1",
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "wave": "DS-HYG-P02-2026-10-26",
-  "purpose": "Merged exact-tree documentation heads #27/#34/#43, preserved on main, retire refs only.",
+  "wave": "DS-HYG-P03-2026-10-26",
+  "purpose": "PR #28/#48/#36 merged and exactly tree-equivalent; retire only historical refs.",
   "branches": [
     {
-      "branch": "docs/reconcile-approved-visual-decisions-2026-10-19",
-      "sha": "a54ff68ad8acaa8831198e1d2693077c62eadefc",
+      "branch": "docs/record-semantic-pairs-approval-2026-10-19",
+      "sha": "166dfb9e4728433a8b92ff3158668e307794c2cc",
       "squashMerge": {
-        "pullRequest": 27,
-        "mergeCommit": "91aba0c1f2191de49720f499a440353c0deafac1"
+        "pullRequest": 28,
+        "mergeCommit": "de765c58ff160d973cb30e1bab8983001e164097"
       }
     },
     {
-      "branch": "docs/reconcile-product-release-20261019",
-      "sha": "8d0b11a6075faf19baffd5a618b8ba5598d3baeb",
+      "branch": "docs/roadmap-current-stage-2026-10-21",
+      "sha": "f313e4915cd123a20a9fff197440a6cbffdd1027",
       "squashMerge": {
-        "pullRequest": 34,
-        "mergeCommit": "09262d90764da322dce3607ac4ee8331496cf595"
+        "pullRequest": 48,
+        "mergeCommit": "de51d5500ce9681533f95b88db845f9e284e50b2"
       }
     },
     {
-      "branch": "docs/reconcile-visual-inventory-20261021",
-      "sha": "0957be0e78dd22dd64be6b64aeb341c8bd5bcb19",
+      "branch": "docs/runtime-admin-login-contrast-20261019",
+      "sha": "397b581099c4c4c17a99efac5d570ec388b43a7b",
       "squashMerge": {
-        "pullRequest": 43,
-        "mergeCommit": "e914c5c811a26ce46d55450c47c2070e7af8f7de"
+        "pullRequest": 36,
+        "mergeCommit": "c9e0a70aacf9c94927513a2c55b48e921593f671"
       }
     }
   ]
