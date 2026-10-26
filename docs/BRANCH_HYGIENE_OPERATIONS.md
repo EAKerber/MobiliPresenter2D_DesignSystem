@@ -55,14 +55,44 @@ Autoridade das informações: `decisions.json` para decisões; `dist/*.manifest.
 - `proposal/vis002-semantic-state-colors-2026-10-19`: head atual difere do head merged da PR #23; não supor equivalência.
 - `architecture/p-token-01-executable-palette-20261022` e `architecture/p-token-02b-contextual-copy-20261022`: mesmo quando merged/equivalentes, **HOLD** por referências nos workflows de exportação enquanto estes triggers existirem.
 
-### Resultados do primeiro ciclo do novo mecanismo (26/10/2026)
+### Resultado verificado do ciclo inicial (26/10/2026)
 
-Partida: 38 branches antes da importação. [DS #64](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/64) portou as três ferramentas, os 27 testes de regressão, dois workflows do produto e o guia; workflow antigo removido, sem batch no merge da ferramenta. [DS #65–#73](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pulls?q=is%3Apr+is%3Amerged+DS-HYG) executaram **9 lotes × 3 refs = 27 exclusões**. Cada lote teve audit em PR e apply em main com `count=3, readback=PASS`. A contagem após #73 é **13 branches** (38 + 2 refs operacionais novas − 27); o manifesto de cada lote, PR, Actions e os SHA-pins são o ledger de proveniência. Nenhuma PR aberta foi alterada.
+**38 branches iniciais → 10 branches finais: 30 refs eliminadas, duas operacionais criadas, redução líquida de 28.** [PR #64](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/64) portou o executor/observador do produto com testes; [PRs #65–#73 e #75](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pulls?q=is%3Apr+is%3Amerged+DS-HYG) executaram **10 lotes de três SHA-pins cada**. Todas as aplicações publicaram `status=PASS; mode=apply; count=3; readback=PASS`, com verificação adicional de contagem/ref na API. PR [#74](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/74) corrigiu os gates P-TOKEN-01 e 02B para disparar em `main`/PR, e ambos passaram em PR e push `main`; isso permitiu retirar as branches de tokens #49/#50 sem perder a validação.
 
-Próxima correção técnica: workflows de P-TOKEN-01 e P-TOKEN-02B ainda disparavam `push` por nome das duas branches de tokens já mescladas. Mover os triggers para `main` e validar os gates em PR antes de retirar as duas refs; não desligar os testes para conseguir uma contagem menor.
+| Lote | PR | Audit Actions | Apply Actions |
+| --- | --- | --- | --- |
+| DS-HYG-P01 | [#65](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/65) | [40415693021](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40415693021) | [40415848947](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40415848947) |
+| DS-HYG-P02 | [#66](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/66) | [40416068259](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416068259) | [40416176289](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416176289) |
+| DS-HYG-P03 | [#67](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/67) | [40416400765](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416400765) | [40416499528](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416499528) |
+| DS-HYG-P04 | [#68](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/68) | [40416656057](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416656057) | [40416836782](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416836782) |
+| DS-HYG-P05 | [#69](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/69) | [40417012867](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417012867) | [40417109760](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417109760) |
+| DS-HYG-P06 | [#70](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/70) | [40417329963](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417329963) | [40417432448](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417432448) |
+| DS-HYG-P07 | [#71](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/71) | [40417594199](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417594199) | [40417800017](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417800017) |
+| DS-HYG-P08 | [#72](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/72) | [40417953084](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417953084) | [40418058996](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40418058996) |
+| DS-HYG-P09 | [#73](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/73) | [40418234061](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40418234061) | [40418380389](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40418380389) |
+| DS-HYG-P10 | [#75](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/75) | [40419192192](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40419192192) | [40419285353](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40419285353) |
 
-**Não apagar à força os oito HOLDs remanescentes:** DS #39, #41, #51; #42, #37, #46 fechadas sem merge; a orphan `docs/handover-reconcile-20261023` e `proposal/vis002-semantic-state-colors-2026-10-19` cujo head difere do head merged. Só fechar/ref-delete após inventário individual de conteúdo único, materialização seletiva com blob SHA e comprovação de substituição. Além desses oito, manter qualquer branch ainda citada nominalmente em CI e o próprio executor operacional até descomissioná-lo com segurança.
+Os manifests históricos, nomes e SHAs exatos foram preservados em cada PR. O arquivo `ops/branch-hygiene-batch.json` na `main` tem **apenas o último lote consumido**; não é uma fila contínua nem deve ser repetido.
+
+### Branches remanescentes e impedimentos reais
+
+Snapshot depois do lote P10, **10 refs**:
+
+| Branch | Situação e próximo gate |
+| --- | --- |
+| `main` | Única referência permanente desejada; toda autoridade documental/token válida deve estar aqui. |
+| `maintenance/ds-product-hygiene-batch01-20261026` | Única branch operacional remanescente; não deletar enquanto houver PR usando esta head; remover ao encerrar os lotes via um caminho com auditoria de PR encerrada (nunca força). |
+| `architecture/dom-css-consolidation-20261020` | PR #39 OPEN: proposta DOM/CSS e experimentos. Extrair artefatos úteis com hash/proveniência e gates; só então fechar a PR e retirar a ref. |
+| `audit/access-confirmation-runtime-20261020` | PR #41 OPEN: auditoria runtime privada. Incorporar evidência válida contextualizada por deploy, sem declarar confirmação atual; fechar após reconciliação. |
+| `docs/current-handover-20261024` | PR #51 OPEN: 236 caminhos alterados, 7 textos já extraídos; completar ledger e preservar binários exclusivos antes de fechar, sem merge integral. |
+| `audit/approved-contrast-runtime-20261021` | PR #42 CLOSED e não merged. Classificar todos os blobs de evidência/decisões antes de retirar. |
+| `audit/auth-session-flow-2026-10-19` | PR #37 CLOSED e não merged. Classificar testes/documentos únicos e achados versus main. |
+| `docs/reconcile-approved-focus-record` | PR #46 CLOSED e não merged. Comparar alterações de decisões com #47/main e provar absorção integral. |
+| `docs/handover-reconcile-20261023` | Não apareceu PR associada; inventariar diferenciais e reconciliação. |
+| `proposal/vis002-semantic-state-colors-2026-10-19` | PR #23 MERGED, mas **head atual da branch difere do head que foi mesclado**. Não presumir equivalência; auditar commits adicionais. |
+
+**Próxima meta:** cada uma das oito refs HOLDS só pode sair depois de materialização seletiva ou prova verificável de cobertura total, comparação de blobs/árvores, revisão da respectiva PR e registro no ledger. Não fazer squash de toda #51, não redatar evidências antigas como atuais e não reabrir homologações visuais CLOSED.
 
 ### Portabilidade e desativação do legado
 
-A rotina antiga `tools/retire_merged_branches.py` / `ops/branch-retirement-batch.json` é **histórica e não deve ser executada em paralelo**. O workflow anterior `.github/workflows/branch-retirement.yml` será removido na migração; seus recibos antigos continuam acessíveis no histórico Actions e PRs #59–#63. Não criar duas autoridades de exclusão.
+A rotina antiga `tools/retire_merged_branches.py`, seu teste, o manifesto legado `ops/branch-retirement-batch.json` e o workflow `.github/workflows/branch-retirement.yml` foram desativados/retirados do estado corrente; **seu conteúdo permanece no histórico Git** e os recibos em Actions/PRs #59–#63. Só `tools/branch_hygiene_*.py` e os workflows de higiene acima operam a partir da `main`. Não existem duas autoridades de exclusão.
