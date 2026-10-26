@@ -731,3 +731,22 @@ A amostragem comparou pixel a pixel a captura focada e uma base equivalente em 3
 O usuário autorizou testar uma nova distribuição das faixas no preview. No head atual da PR de produto #242 (`0ceaac923eccd31db3ec20f8fb044112328d8faf`), a sombra usa preto de 2 px e branco até raio total de 3 px, mantendo anel 4/3 px. Deploy Preview principal READY `6ade9e2f6a324cc60954c806`; os sete workflows e os dois status Netlify passaram. Teclado chegou aos sete hotspots em 390×844 no tema escuro, sem overflow.
 
 A leitura raster encontrou pontos pretos abaixo de 3:1 em cinco dos sete hotspots (02, 03, 04, 06 e 07) e nenhum pixel quase branco distinto da base na faixa de até 4 px definida no método. Esta variante também não demonstra contraste consistente sobre a fotografia. O resultado é diagnóstico de uma cena/viewport, não declaração WCAG. A descrição da PR #242 e a evidência [tabela e método](../evidence/runtime/pr242-viewer-hotspot-focus-keylines-preview-2026-10-25.md) refletem o head novo. Ambas PRs permanecem DRAFT; nenhuma integração ou Production.
+
+
+## Atualização de continuidade — 26/10/2026
+
+### CI-BASELINE-01 / issue #232
+
+- Após a consolidação, retirei a branch fechada #245 da allowlist do fixture e do workflow autenticado. O produto PR [#238](https://github.com/EAKerber/MobiliPresenter2D/pull/238), head `41dcc1424bdeea5782d977d2b0509c88f76fe156`, passou os nove workflows de PR e os dois gates de push.
+- O Deploy Preview isolado #238 confirmou a fixture V5 por readback e `GET /api/public-modules` respondeu 200. Isto corrige o erro do preview #238; não confirma o store primário do site isolado nem Production. [Método e evidência](../evidence/runtime/pr238-ci-fixture-allowlist-cleanup-2026-10-26.md).
+- A PR #238 continua DRAFT. A revisão humana ainda está pendente; nenhuma integração ou publicação foi feita.
+
+### VIS-002C — fallback no head atual da PR #241
+
+No head `45e532b444967bdd901ac2f49fc8d0548daa881a`, carreguei a ilustração principal e provoquei um HTTP 404 same-origin no preview. O placeholder exibiu estado e descrição, manteve o frame 352,67×235,10 px e a rota sem overflow em 390×844; o asset original foi restaurado. A evidência cobre só essa imagem e esse estado. [Readback do head atual](../evidence/runtime/pr241-image-fallback-current-head-recheck-2026-10-26.md). A PR #241 permanece DRAFT, sem merge/Production.
+
+### ARC-13 — cobertura documental do submapa JS
+
+A recontagem atual do recorte lexical de 331 identidades distintas registra 318 propostas de chave (96,1%) e 13 sem proposta: oito casos de plural/lista, adiados pelo usuário até a etapa de localização, e cinco textos de catálogo/editorial mantidos no catálogo enquanto aguardam revisão do owner. Esse percentual mede propostas documentais somente para o recorte; não indica aprovação, canonicalização do índice nem migração de runtime. O escopo mais amplo ARC-13, ownership e extração continua aberto. O índice de produto, código e `decisions.json` não foram alterados. [Cálculo e proveniência](../evidence/architecture/arc13-semantic-key-coverage-2026-10-24.md).
+
+A estimativa ponderada anterior continua em ~25% (faixa 23–27%), e o código integrado em ~18% (15–20%). Os gates e propostas continuam em branches DRAFT, sem integração; por isso esta leitura documental não eleva a contribuição de implementação. A PR #51 continua DRAFT e aguardando revisão humana.
