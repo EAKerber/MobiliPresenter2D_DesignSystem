@@ -770,7 +770,7 @@ Após autorização para testar outra distribuição e depois placa opaca, a PR 
 
 ## Gate de revisão humana antes da integração — 26/10/2026
 
-Rechecagem das PRs abertas em 26/10: produto #238, #241, #242, #243 e #244 permanecem DRAFT; Design System #51 e #52 estão abertas e prontas para revisão (`draft=false`), apesar dos marcadores `[DRAFT]` nos títulos. #51 e #52 ainda não têm reviews humanos. A PR #51 teve somente documentação no último head, sem workflow acionado. Os Deploy Previews por PR foram desativados pelo usuário; a validação visual das implementações novas que dependiam desses previews permanece pendente. Nenhuma PR foi integrada e nenhuma alteração foi publicada em Production. A placa opaca da #242 permanece candidata, sem canonização ou merge.
+Rechecagem das PRs abertas em 26/10: produto #238, #243 e #244 estão prontas para revisão (`draft=false`); #241 e #242 continuam DRAFT. Design System #51 e #52 estão prontas para revisão (`draft=false`), apesar dos marcadores `[DRAFT]` nos títulos. As sete PRs seguem sem reviews humanas; a validação visual das heads novas aguarda previews, desativados pelo usuário. Nenhuma PR foi integrada e nenhuma alteração foi publicada em Production. A placa opaca da #242 permanece candidata, sem canonização ou merge.
 
 
 ## PR #241 — fallback compartilhado de imagem (26/10/2026)
@@ -784,6 +784,7 @@ O usuário desativou previews de PR. Nenhum Deploy Preview novo foi observado ne
 ## Releitura atual do plano e gates — 26/10/2026
 
 - A implementação da #241 avançou na branch, mas permanece DRAFT; não muda o percentual de código integrado nem autoriza merge.
+- A CI-BASELINE da PR #238 está no head `3ccce161235df925c5b708bf6feefbe6f4b10103`; a guarda de commit detectou marker antigo e bloqueou as cinco suítes protegidas antes da conexão ao banco nessa etapa. Nove workflows locais passaram; revalidar o gate protegido exige preview do mesmo head. Issue #232 segue aberta.
 - A PR de handover #51 tem 236 arquivos e ainda não recebeu review humano; a PR de Design System #52 está aberta e pronta para revisão, sem merge. O GitHub marca ambas como prontas (`draft=false`), apesar do marcador `[DRAFT]` nos títulos.
 - Estimativa geral permanece em ~25% (faixa 23–27%) e código integrado em ~18% (15–20%). A contribuição só sobe quando decisões e implementação passam pelos gates de integração e leitura runtime.
 - ARC-13: 318/331 identidades distintas do submapa JS têm proposta documental (96,1%). As 13 restantes são oito casos de plural/lista, adiados pelo usuário até localização, e cinco textos de catálogo/editorial que aguardam revisão do owner. Não há novo lote ARC-13 desimpedido nesse recorte; não gerar propostas para os residuais antes dessas decisões. O [registro residual atualizado](../evidence/architecture/arc13-semantic-key-residual-review-2026-10-25.md) também rastreia o fallback de enum do Admin, fora dessas 13 identidades.
