@@ -1,0 +1,68 @@
+# NAV-005 — validação da implementação em preview da PR #244
+
+Data local: 2026-10-24  
+Produto: [PR #244](https://github.com/EAKerber/MobiliPresenter2D/pull/244), head `b0a0aaf7762239f52f4a64494209f754b468fca5`, base `main@5ccb2a8dde6dd16e136f03387dc833aab828c5cf`  
+Deploy Previews: [principal](https://deploy-preview-244--mobilipresenter2d.netlify.app/) e [isolado](https://deploy-preview-244--m2d-auth-ci-isolated.netlify.app/), ambos READY para o mesmo head.  
+CSS carregado: `/ui-theme.css?v=private-header-nav005-v2`.  
+Contexto: navegador isolado, sem sessão; viewports móveis emulados; leitura DOM/CSSOM sem salvar preferências ou dados.
+
+## Resultado em Administração — `/admin.html`
+
+Os temas claro e escuro tiveram geometria equivalente nos pontos conferidos:
+
+| Viewport | Header | Logo | Tema | Menu | Identificador | Overflow horizontal |
+|---:|---:|---:|---:|---:|---|---|
+| 291 px | 63 px, uma linha | 74,125 px | 44 × 44 px | 44 × 44 px | “Administração” completo | não |
+| 320 px | 63 px, uma linha | 103,125 px | 44 × 44 px | 44 × 44 px | “Administração” completo | não |
+| 288 px | 108,58 px, duas linhas | 105 px | 44 × 44 px | 44 × 44 px | “Administração” completo | não |
+
+A 291 px, a logo reduz 29,4% em relação à referência anterior de 105 px, dentro do teto aprovado. A 288 px, as ações migram para a segunda linha.
+
+## Resultado na tela de acesso — `/access/`
+
+A 291 px, em claro e escuro, o documento mede 291 px sem overflow; o header permanece em uma linha, o identificador “Confirmar acesso” fica completo e os alvos do tema e menu medem 44 × 44 px. A logo mede 83,55 px, redução de 20,4% ante a referência de 105 px.
+
+A 320 px em claro, a etiqueta visível do tema é ocultada e o botão permanece 44 × 44 px. A 321 px em escuro, “Auto” volta a aparecer; documento e viewport medem 321 px. Isso confirma o limite de ícone-only em 320 px.
+
+Durante esta verificação, uma regra genérica da tela de acesso impôs altura mínima de 50 px ao botão do menu. A PR adicionou uma exceção limitada a `.private-header .private-menu-toggle`, e o preview final computou 44 × 44 px. O reset de `min-width:320px` também foi limitado a `body.access-page` e seu elemento raiz para que o piso de 291 px funcione sem alterar o restante do shell público.
+
+## CI e limites
+
+Para o head acima, passaram: build purity [#40139439976](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40139439976), variants [#40139440062](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40139440062), asset gates [#40139439996](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40139439996), summary pricing [#40139439980](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40139439980), Stone [#40139440036](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40139440036), public routing/contracts [#40139440010](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40139440010) e mobile [#40139439989](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40139439989).
+
+O workflow Admin hierarchy [#40139440003](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40139440003) falha na asserção inicial do harness, antes da interação: o teste exige `admin.bundle.js?v=admin-auth-flow-v2`, mas `main` e a branch da PR usam `admin.bundle.js?v=viewer-price-main-ux230-v2`. O arquivo de teste não foi alterado nesta mudança. A falha é uma incompatibilidade preexistente do harness, não evidência de regressão do CSS.
+
+A rota autenticada do Configurador e a sessão autenticada de gerenciamento não foram testadas neste navegador sem sessão. Não contornei a proteção.
+
+## Escopo e status
+
+A autorização nesta conversa permitiu implementar e validar esta proposta somente em preview. `decisions.json` continua inalterado; sua autorização canônica permanece falsa. A PR #244 segue DRAFT, sem merge ou deploy de produção.
+
+
+## Revalidação do preview #244 após ajuste dos harnesses — 25/10/2026
+
+Head atual do produto: [`063796224c55924a8b3a909c9631c6b5f5590972`](https://github.com/EAKerber/MobiliPresenter2D/commit/063796224c55924a8b3a909c9631c6b5f5590972). A PR [#244](https://github.com/EAKerber/MobiliPresenter2D/pull/244) continua aberta/DRAFT; os Deploy Previews principal e isolado estão READY e os oito workflows da head passaram, incluindo Admin hierarchy [#40147009586](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40147009586).
+
+O workflow Admin executou com sucesso as suítes de hierarquia, persistência isolada de Puxadores e Save/readback nativo v5. O trabalho de manutenção ficou restrito aos harnesses de teste: entrada do bundle atual sem cache key fixa, fixture de `/api/admin-bootstrap`, mapeamento do bundle de navegação gerado para o módulo fonte no servidor local e MIME JavaScript para `.mjs`. Nenhum runtime do produto foi alterado por esses ajustes.
+
+A verificação manual do preview permanece limitada a `/admin.html` e `/access/`: em 291 px, os cabeçalhos ficam em uma linha, sem overflow, com identificadores completos e controles 44×44; em 288 px, as ações passam à segunda linha; o rótulo do tema some em 320 px e aparece em 321 px. A rota autenticada do Configurador e a gestão de acesso autenticada continuam sem leitura runtime nesta sessão.
+
+Escopo autorizado: somente preview. `decisions.json` segue byte-preservado, com a autorização canônica falsa. Sem merge, sem deploy Production e sem homologação global.
+
+
+## Auditoria ampliada de larguras no preview #244 — 25/10/2026
+
+Head de produto reobservada: `063796224c55924a8b3a909c9631c6b5f5590972`. Ampliei a leitura no Deploy Preview da rota pública `/access/`, contexto isolado sem sessão, com preferências de cor clara e escura emuladas. A largura do documento coincidiu com a viewport em todas as leituras abaixo.
+
+| Largura | Composição do header | Logo | Rótulo do tema | Menu e overflow |
+|---:|---|---:|---|---|
+| 280 / 290 px | duas linhas; ações em y=66,6 px | 105 px | somente ícone | alvo 44×44, margem direita 14 px; sem overflow |
+| 291 px | uma faixa; nome completo, quebrado em duas linhas internas | 83,7 px (20,3% abaixo da referência de 105 px) | somente ícone | alvo 44×44, margem 13,7 px; sem overflow |
+| 320 px | uma faixa | 99,7 px | somente ícone | alvo 44×44, margem 14 px; sem overflow |
+| 321 px | uma faixa; nome completo | 86,5 px (17,6% abaixo da referência) | “Auto” visível | alvo 44×44, margem 13,7 px; sem overflow |
+| 390 / 486 px | uma faixa; nome completo | 132 px | “Auto” visível | alvo 44×44, margem 14 px; sem overflow |
+| 900 px | uma faixa; nome completo | 135 px | “Automático” visível | alvo 44×44, margem 16 px; sem overflow |
+
+Os resultados foram equivalentes nos temas claro e escuro para 280, 290, 291, 320, 321, 390, 486 e 900 px; também medi 1280 px em claro, sem overflow. Capturas visuais nos limites 290/291 px confirmaram que a composição passa de duas linhas para uma faixa entre esses valores, sem cortar o identificador. A captura inclui a barra flutuante de colaboração do Netlify na borda inferior, fora do conteúdo do site.
+
+A regra de logo limita a redução ao intervalo de 73,5–105 px abaixo de 380 px; o menor valor medido no limite aprovado de 291 px foi 83,7 px. Em 320 px ou menos o texto do tema desaparece, e reaparece em 321 px. Esta leitura continua restrita à tela pública de acesso: não verifica runtime autenticado de `/config/`, `/admin.html` ou `/access/manage.html`, nem autoriza alteração do produto.
