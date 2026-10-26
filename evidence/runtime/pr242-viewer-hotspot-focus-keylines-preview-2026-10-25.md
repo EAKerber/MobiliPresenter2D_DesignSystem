@@ -90,3 +90,20 @@ A captura inicial da variante 1/2 px revelou que o frame de seleção `.selectio
 Após a correção, os sete hotspots foram focalizados nos quatro estados claro/escuro em 390×844 e 1280×800. Todos computaram `:focus-visible`, o anel temático 4 px, a sombra 1/3 px ficou visível e não houve overflow horizontal. A folga mínima computada ao limite da cena é 0,11 CSS px no mobile e 6,29 px no desktop. Em uma captura escura mobile do hotspot 01, pixels exatos pretos e brancos apareceram nas faixas; essa contagem confirma que foram pintados, mas não calcula contraste contra a foto. Nenhuma nova medição por pixel foi feita e não se declara 3:1 em todo o contorno. Não houve erros de console no preview inspecionado; os sete workflows e os dois status Netlify passaram.
 
 O site isolado continua separado: o endpoint primário retorna 503. A leitura de código anterior delimita a rota ao Blob publicado do próprio site, mas o conteúdo do Blob não pode ser lido pelas ferramentas conectadas. PR #242 permanece DRAFT, sem merge ou Production.
+
+
+## Amostragem por pixel da variante 1 px preta/2 px branca — 25/10/2026
+
+Medição no Deploy Preview atualizado, cena Cozinha, 390×844, tema escuro e claro, hotspots 01–07. Para cada imagem, comparei pixels da captura com foco com a captura-base do mesmo documento/viewport e mesmo empilhamento (container de hotspots em z901), com outline/sombra de foco, pseudo realçado e rótulo ocultos na base. Usei contraste WCAG entre a cor focada e a cor-base no mesmo pixel, incluindo apenas pixels com diferença máxima de canal >8. O resultado é diagnóstico raster da faixa, não certificação de conformidade.
+
+| Hotspot | Preta: n / min / P10 / mediana / <3:1 | Branca: n / min / P10 / mediana / <3:1 |
+| --- | --- | --- |
+| 01 | 0 pixels distintos da base | 122 / 1,492 / 1,566 / 1,635 / 113 |
+| 02 | 60 / 6,312 / 6,989 / 8,312 / 0 | 128 / 1,352 / 1,354 / 2,068 / 124 |
+| 03 | 120 / 5,801 / 14,601 / 14,939 / 0 | 128 / 1,340 / 1,349 / 1,406 / 125 |
+| 04 | 197 / 1,050 / 7,205 / 10,801 / 6 | 398 / 1,353 / 1,406 / 1,926 / 333 |
+| 05 | 124 / 7,051 / 13,952 / 14,694 / 0 | 132 / 1,316 / 1,328 / 1,437 / 132 |
+| 06 | 126 / 1,923 / 4,545 / 13,412 / 4 | 132 / 1,290 / 1,302 / 3,352 / 54 |
+| 07 | 86 / 2,243 / 6,126 / 6,265 / 3 | 90 / 1,570 / 1,570 / 1,597 / 88 |
+
+As mesmas medições neutras se repetiram no tema claro, pois a fotografia e as duas keylines são iguais; só o anel dourado muda. A faixa branca fica abaixo de 3:1 na maioria dos pixels amostrados. A preta fica acima de 3:1 na maior parte, mas há pontos abaixo nos hotspots 04, 06 e 07; no hotspot 01, nenhum pixel preto mudou o bastante para ser contado. Portanto esta variante não demonstra contraste consistente sobre toda a foto. Não declarar conformidade WCAG. A PR permanece DRAFT; nenhuma publicação foi feita.
