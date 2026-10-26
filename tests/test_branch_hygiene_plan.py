@@ -96,7 +96,7 @@ class WorkflowSafetyTests(unittest.TestCase):
         self.assertIn("contents: read", workflow)
         self.assertIn("Upload evidence", workflow)
         self.assertNotIn("python tools/branch_hygiene_apply.py", workflow)
-        self.assertNotIn("MOBILIPRESENTER2D_BRANCH_HYGIENE_AUTHORIZED", workflow)
+        self.assertNotIn("MOBILIPRESENTER2D_DESIGNSYSTEM_BRANCH_HYGIENE_AUTHORIZED", workflow)
 
 
 if __name__ == "__main__":
