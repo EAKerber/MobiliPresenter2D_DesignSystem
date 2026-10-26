@@ -2,7 +2,11 @@
 
 ## VIS-002 — implementação do placeholder de falha de imagem do Viewer (26/10/2026)
 
-Na PR de produto [#242](https://github.com/EAKerber/MobiliPresenter2D/pull/242), head `618877e4dc9fcf9376269e15c24bd937ef4e93e9`, a falha da imagem-base ou de camada visível agora cobre a cena e mostra placeholder acessível; falha de camada oculta não invalida a cena. A suíte direcionada passou localmente (17 testes) e os sete workflows GitHub passaram. PR #242 permanece Draft, sem merge/Production. Deploy Previews por PR foram desativados pelo usuário; não houve deploy manual. Confirmação visual do novo head continua pendente, pois os previews antigos não exercitam essa implementação. [Evidência e limites](../evidence/runtime/pr242-viewer-scene-image-failure-implementation-2026-10-26.md).
+Na PR de produto [#242](https://github.com/EAKerber/MobiliPresenter2D/pull/242), a falha da imagem-base ou de camada visível cobre a cena inteira com placeholder acessível; falha em camada oculta não invalida a cena. Head atual `aa62c1e4265e084464094433efb74354ffd345e9`: o segundo commit corrige o mock `classList` do teste para tratar corretamente elementos com múltiplas classes, sem alterar o comportamento do produto.
+
+A suíte direcionada passou 17/17 no workflow `static-and-contract`; os oito checks GitHub passaram. Supabase Preview ficou skipped por não haver branch associada. Não há status externo de Netlify nesta head.
+
+Deploy Previews por PR foram desativados pelo usuário; não houve deploy manual. A revisão visual desta implementação continua pendente; a PR permanece Draft, sem merge/Production. [Evidência de implementação](../evidence/runtime/pr242-viewer-scene-image-failure-implementation-2026-10-26.md).
 
 ## Issue #205 — comparação temporária de cartões do Viewer (25/10/2026)
 
