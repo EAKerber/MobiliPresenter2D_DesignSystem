@@ -1,31 +1,31 @@
 {
   "schemaVersion": "BranchHygieneBatch 0.1",
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "wave": "DS-HYG-P05-2026-10-26",
-  "purpose": "Historical merged full-tree NAV/FIND/process evidence #31/#30/#29.",
+  "wave": "DS-HYG-P06-2026-10-26",
+  "purpose": "Merged exact-tree inventory and palette mapping #40/#35/#21.",
   "branches": [
     {
-      "branch": "evidence/NAV-005-public-compact-runtime-2026-10-19",
-      "sha": "463f6f6379a2744a6987ec31655ae87eab1de386",
+      "branch": "inventory/reconcile-product-1878ae1-2026-10-20",
+      "sha": "a76e8c9ac8ad33e2026faa5856fb076aa0b197ec",
       "squashMerge": {
-        "pullRequest": 31,
-        "mergeCommit": "2aa3914102b07a92aa69b504286d691cde97abad"
+        "pullRequest": 40,
+        "mergeCommit": "0b3e22326b95171fd835b378ae135c4a72d387d3"
       }
     },
     {
-      "branch": "experiments/FIND-010-disabled-control-review-2026-10-19",
-      "sha": "46f2fd1dc409bcb67eb88905fbd96826ab51c723",
+      "branch": "inventory/refresh-product-483ef2e",
+      "sha": "4f0ff4f7fe59900987a85c47e2f4e7dabd7d9c55",
       "squashMerge": {
-        "pullRequest": 30,
-        "mergeCommit": "1dc06e0a49986ff0c7e6962a7c6a962351bf59ae"
+        "pullRequest": 35,
+        "mergeCommit": "d4f71f42be393a6c703692a013836a15c237f533"
       }
     },
     {
-      "branch": "experiments/process-information-blue-pairs-2026-10-19",
-      "sha": "f07ba5e01e67a1d80849198924576c1da794d451",
+      "branch": "palette/application-map-20261019",
+      "sha": "de28bfc405efb1739f1a132286dab1861dccb861",
       "squashMerge": {
-        "pullRequest": 29,
-        "mergeCommit": "8405219c38f2ac4ec7ea7b23df323b4fdbe98912"
+        "pullRequest": 21,
+        "mergeCommit": "a967aecba7a5b759a8bb70ed3106ea88e7c015d5"
       }
     }
   ]
