@@ -1,31 +1,31 @@
 {
   "schemaVersion": "BranchHygieneBatch 0.1",
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "wave": "DS-HYG-P04-2026-10-26",
-  "purpose": "Merged exact-tree VIS/FIND evidence #11 #33 #32.",
+  "wave": "DS-HYG-P05-2026-10-26",
+  "purpose": "Historical merged full-tree NAV/FIND/process evidence #31/#30/#29.",
   "branches": [
     {
-      "branch": "docs/trace-vis-003-find-004-20261018",
-      "sha": "4528dbd7d201acf5876fb102fa30abba1c4321ee",
+      "branch": "evidence/NAV-005-public-compact-runtime-2026-10-19",
+      "sha": "463f6f6379a2744a6987ec31655ae87eab1de386",
       "squashMerge": {
-        "pullRequest": 11,
-        "mergeCommit": "390b08debb8a3bf4833664568a2bd48fc0514cca"
+        "pullRequest": 31,
+        "mergeCommit": "2aa3914102b07a92aa69b504286d691cde97abad"
       }
     },
     {
-      "branch": "evidence/FIND-006-010-config-summary-runtime-2026-10-19",
-      "sha": "92bfec9ecca6842d204a18b978575883582eb54e",
+      "branch": "experiments/FIND-010-disabled-control-review-2026-10-19",
+      "sha": "46f2fd1dc409bcb67eb88905fbd96826ab51c723",
       "squashMerge": {
-        "pullRequest": 33,
-        "mergeCommit": "03155689d384309abbc3d9c1155059fd88ee1af7"
+        "pullRequest": 30,
+        "mergeCommit": "1dc06e0a49986ff0c7e6962a7c6a962351bf59ae"
       }
     },
     {
-      "branch": "evidence/NAV-005-narrow-width-runtime-2026-10-19",
-      "sha": "95ebc3169f5ced493990ba1bbd5182447145951b",
+      "branch": "experiments/process-information-blue-pairs-2026-10-19",
+      "sha": "f07ba5e01e67a1d80849198924576c1da794d451",
       "squashMerge": {
-        "pullRequest": 32,
-        "mergeCommit": "162161a533ebe95e68be50297d84dd9037908705"
+        "pullRequest": 29,
+        "mergeCommit": "8405219c38f2ac4ec7ea7b23df323b4fdbe98912"
       }
     }
   ]
