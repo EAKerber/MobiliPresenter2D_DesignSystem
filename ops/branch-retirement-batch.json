@@ -1,0 +1,23 @@
+{
+  "schema": "BoundedBranchRetirement 0.1",
+  "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "wave": "DS-R1-A-2026-10-26",
+  "purpose": "Only retire three verified ancestors of main; keep their full SHA/PR history",
+  "branches": [
+    {
+      "branch": "inventory/visual-system-20261018",
+      "sha": "30bc6aade93483ff2ed2a65f7ecad798925cfe67",
+      "mergedPrs": [2, 7]
+    },
+    {
+      "branch": "inventory/runtime-evidence-20261018",
+      "sha": "983f0273c8365090329ac8d11d8c582160b50246",
+      "mergedPrs": [3, 8]
+    },
+    {
+      "branch": "docs/implementation-map-20261018",
+      "sha": "78232255930c72fa611828b958ddd95ad6b025c6",
+      "mergedPrs": [1, 6]
+    }
+  ]
+}
