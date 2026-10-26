@@ -712,3 +712,10 @@ O código de `main@5ccb2a8` confirma que `public-modules` lê a chave `published
 
 
 Readback adicional confirma que o deploy primário do site isolado `m2d-auth-ci-isolated` é READY em `main@5ccb2a8`, contexto `production`; isso confirma o caminho `getStore`, não `getDeployStore`. O conteúdo do Blob segue não observável pelas ferramentas conectadas.
+
+
+## VIS-002 — empilhamento e raster da variante 1/2 px (25/10/2026)
+
+A primeira captura revelou que `.selection-frame` em `z-index:900` cobria as keylines sob `.scene-hotspots` em `z-index:500`. A PR [#242](https://github.com/EAKerber/MobiliPresenter2D/pull/242) passou a elevar o container somente durante `:focus-visible` de teclado, via `.scene-hotspots:has(.scene-hotspot:focus-visible) { z-index:901 }`. O anel dourado 4/3 px e a geometria foram preservados. Head `1d5d9dad957800a3dcef72214db67f4d505c47c1`, preview READY `6ade99222c5e1eeeae48d7fc`. Os sete hotspots foram focalizados em claro/escuro, 390×844/1280×800; sem overflow, com folga mínima de 0,11 CSS px mobile e 6,29 px desktop. Captura escura mobile confirmou pixels pretos e brancos visíveis; não mede contraste em relação à foto nem prova 3:1 no contorno completo. Os sete workflows e os dois status Netlify passaram.
+
+A rota `/api/public-modules` no preview principal retorna 200; o site isolado ainda retorna 503. O código localiza a leitura no Blob publicado do próprio site isolado, mas ferramentas conectadas não permitem ler esse objeto. PR #242 permanece DRAFT, sem merge/Production. [Evidência](../evidence/runtime/pr242-viewer-hotspot-focus-keylines-preview-2026-10-25.md).
