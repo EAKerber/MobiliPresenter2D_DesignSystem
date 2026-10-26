@@ -1,31 +1,31 @@
 {
   "schema": "BoundedBranchRetirement 0.1",
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "wave": "DS-R4-2026-10-26",
-  "purpose": "Retire verified merged-squash full-tree-equal audit heads (#25,#38,#45); no active PR/workflow refs, preserve audit history in original PRs.",
+  "wave": "DS-R5-2026-10-26",
+  "purpose": "Verified squash full-tree equivalence #17,#16,#22; preserve original PR audit history.",
   "branches": [
     {
-      "branch": "audit/admin-dark-message-runtime-2026-10-19",
-      "sha": "ae6f4b4ce9f75508297eddacc378d9888c7fb74b",
+      "branch": "audit/how-it-works-caption-contrast-20261018",
+      "sha": "be5488d42705393642e44e90762083c8d6d9db33",
       "squashMerge": {
-        "pullRequest": 25,
-        "mergeCommit": "87e9ca033f75ea7e72d43dcd8237fc165e888988"
+        "pullRequest": 17,
+        "mergeCommit": "47c825d5c29d6defd0c1c59f4cdc358d50d3ea2c"
       }
     },
     {
-      "branch": "audit/auth-session-flow-2026-10-20",
-      "sha": "2ed6e450e6db5db36da39d11aa9a210cb17836d1",
+      "branch": "audit/nav005-runtime-narrow-20261019",
+      "sha": "c0cb07d4a10b42576c77f6c5a56dddcc80df4597",
       "squashMerge": {
-        "pullRequest": 38,
-        "mergeCommit": "507be364c29d83bda8ed6c772b330ee66122eb44"
+        "pullRequest": 16,
+        "mergeCommit": "4430719807f2db90a482f9a3d69e12b74513fcbb"
       }
     },
     {
-      "branch": "audit/g1-public-runtime-20261021",
-      "sha": "70b7b3c93484b5f32a7cc484a2055a18eb6491d6",
+      "branch": "audit/runtime-auth-header-2026-10-18",
+      "sha": "c43d6ec250916ebc8ef27f649176fca303c01b38",
       "squashMerge": {
-        "pullRequest": 45,
-        "mergeCommit": "a03981843f1b24a3b8f1c473e6438ed262c7ecab"
+        "pullRequest": 22,
+        "mergeCommit": "a3b7c4c342a66453400a283b2e1a1693b5a332a2"
       }
     }
   ]
