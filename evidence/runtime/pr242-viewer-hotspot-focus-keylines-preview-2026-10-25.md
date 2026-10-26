@@ -107,3 +107,24 @@ Medição no Deploy Preview atualizado, cena Cozinha, 390×844, tema escuro e cl
 | 07 | 86 / 2,243 / 6,126 / 6,265 / 3 | 90 / 1,570 / 1,570 / 1,597 / 88 |
 
 As mesmas medições neutras se repetiram no tema claro, pois a fotografia e as duas keylines são iguais; só o anel dourado muda. A faixa branca fica abaixo de 3:1 na maioria dos pixels amostrados. A preta fica acima de 3:1 na maior parte, mas há pontos abaixo nos hotspots 04, 06 e 07; no hotspot 01, nenhum pixel preto mudou o bastante para ser contado. Portanto esta variante não demonstra contraste consistente sobre toda a foto. Não declarar conformidade WCAG. A PR permanece DRAFT; nenhuma publicação foi feita.
+
+
+## Amostragem da distribuição 2 px preta / 1 px branca — 26/10/2026
+
+Teste autorizado pelo usuário como nova distribuição em preview. O head da PR de produto #242 é `0ceaac923eccd31db3ec20f8fb044112328d8faf`, Deploy Preview READY `6ade9e2f6a324cc60954c806`. A regra mantém o anel VIS-002 (4 px, offset CSS declarado de 3 px, cores por tema) e distribui as sombras como `0 0 0 2px #000, 0 0 0 3px #fff`; a extensão máxima CSS continua 3 px.
+
+Medi o Viewer da cena Cozinha em 390×844, tema escuro. Os sete hotspots receberam foco por teclado. Para cada um, comparei a captura focada com uma base do mesmo viewport/estado e empilhamento. A amostra ficou limitada ao exterior do retângulo do hotspot, até 4 px, e a pixels cuja diferença máxima de canal excedeu 8. Classifiquei pixels quase pretos (canais ≤20) e quase brancos (canais ≥235) e calculei contraste WCAG sRGB com o pixel-base correspondente. Este é um diagnóstico local, não certificação.
+
+| Hotspot | Preta: n / min / P10 / mediana / <3:1 | Branca: n |
+| --- | --- | --- |
+| 01 | 309 / 7,349 / 11,129 / 12,106 / 0 | 0 |
+| 02 | 308 / 1,587 / 2,972 / 7,990 / 36 | 0 |
+| 03 | 408 / 2,305 / 2,699 / 7,354 / 88 | 0 |
+| 04 | 485 / 1,056 / 6,420 / 11,771 / 33 | 0 |
+| 05 | 388 / 4,797 / 13,015 / 14,231 / 0 | 0 |
+| 06 | 525 / 1,923 / 6,184 / 12,888 / 8 | 0 |
+| 07 | 321 / 2,144 / 4,128 / 11,763 / 24 | 0 |
+
+Há pixels pretos abaixo de 3:1 nos hotspots 02, 03, 04, 06 e 07; a captura-base não distinguiu pixels brancos na faixa definida em nenhum hotspot. Portanto, esta distribuição tampouco demonstra contraste consistente sobre a foto. A amostra cobre apenas tema escuro e viewport mobile desta cena; não generalizar a outros temas, imagens ou ambientes, nem declarar conformidade WCAG.
+
+Todos os sete workflows do head passaram e os dois status Deploy Preview Netlify ficaram SUCCESS; a navegação por teclado confirmou `:focus-visible` nos sete hotspots, sem overflow horizontal. A medição não é aprovação visual. PR #242 continua DRAFT, sem merge/Production.

@@ -724,3 +724,10 @@ A rota `/api/public-modules` no preview principal retorna 200; o site isolado ai
 ## VIS-002 — resultado raster da variante 1/2 px (25/10/2026)
 
 A amostragem comparou pixel a pixel a captura focada e uma base equivalente em 390×844 para os sete hotspots, temas claro/escuro, mantendo o empilhamento da cena. A keyline branca ficou abaixo de 3:1 na maioria dos pixels amostrados; a preta ficou acima na maior parte, mas teve pontos abaixo de 3:1 nos hotspots 04, 06 e 07 e nenhum pixel preto distinto da base no hotspot 01. Esta versão não comprova contraste consistente em toda a fotografia e não autoriza declarar WCAG. A PR #242 segue DRAFT. [Método, tabela por hotspot e limites](../evidence/runtime/pr242-viewer-hotspot-focus-keylines-preview-2026-10-25.md).
+
+
+## VIS-002 — teste adicional da distribuição de keylines 2/1 px (26/10/2026)
+
+O usuário autorizou testar uma nova distribuição das faixas no preview. No head atual da PR de produto #242 (`0ceaac923eccd31db3ec20f8fb044112328d8faf`), a sombra usa preto de 2 px e branco até raio total de 3 px, mantendo anel 4/3 px. Deploy Preview principal READY `6ade9e2f6a324cc60954c806`; os sete workflows e os dois status Netlify passaram. Teclado chegou aos sete hotspots em 390×844 no tema escuro, sem overflow.
+
+A leitura raster encontrou pontos pretos abaixo de 3:1 em cinco dos sete hotspots (02, 03, 04, 06 e 07) e nenhum pixel quase branco distinto da base na faixa de até 4 px definida no método. Esta variante também não demonstra contraste consistente sobre a fotografia. O resultado é diagnóstico de uma cena/viewport, não declaração WCAG. A descrição da PR #242 e a evidência [tabela e método](../evidence/runtime/pr242-viewer-hotspot-focus-keylines-preview-2026-10-25.md) refletem o head novo. Ambas PRs permanecem DRAFT; nenhuma integração ou Production.
