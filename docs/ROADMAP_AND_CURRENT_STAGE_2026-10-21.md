@@ -665,9 +665,9 @@ Revisei 19 registros em `renderSummary` e `createCommercialItemPriceBreakdown`. 
 - Labels de produto/etapa ficam como parâmetros; a mensagem de abertura recompõe dois fragmentos numa frase. Nenhuma alteração no produto ou índice canônico. [Detalhes](../evidence/architecture/arc13-semantic-key-proposal-configurator-stage-and-detail-messages-2026-10-25.json).
 
 
-### ARC-13 semantic key proposal readback — 25/10/2026
+### ARC-13 semantic key proposal readback — 25/10/2026 (historical snapshot)
 
-The approved naming convention remains stable. The frozen consumer map has 336 raw candidates, 331 distinct file/line/literal identities, and five duplicate rows. Contextual proposals cover 315/331 distinct identities (95.2%); 16 lack proposals. The residual register groups them into plural/list formatting (8), strings embedded in HTML (3), and catalog/editorial ownership (5), and records the remaining raw-enum fallback risk. No product runtime, canonical index, or decisions.json change was made. The next gate is choosing the pluralization/message format and assigning content owners; see the linked residual register.
+This snapshot predates the user's decisions on pluralization, HTML text nodes, and catalog ownership. At that point, contextual proposals covered 315/331 identities and 16 lacked proposals. The current readback below records 318/331 with proposals and 13 remaining by explicit scope decision. The [current residual review](../evidence/architecture/arc13-semantic-key-residual-review-2026-10-25.md) preserves the original history and records the post-decision state, including the separate Admin pricing enum-fallback audit. No product runtime, canonical index, or `decisions.json` change was made.
 
 
 ### ARC-13 — decisões residuais e nós de texto em HTML (25/10/2026)
@@ -784,5 +784,5 @@ O usuário desativou previews de PR. Nenhum Deploy Preview novo foi observado ne
 - A implementação da #241 avançou na branch, mas permanece DRAFT; não muda o percentual de código integrado nem autoriza merge.
 - A PR de handover #51 tem 236 arquivos e ainda não recebeu review humano; a PR de Design System #52 está aberta e pronta para revisão, sem merge. O GitHub marca ambas como prontas (`draft=false`), apesar do marcador `[DRAFT]` nos títulos.
 - Estimativa geral permanece em ~25% (faixa 23–27%) e código integrado em ~18% (15–20%). A contribuição só sobe quando decisões e implementação passam pelos gates de integração e leitura runtime.
-- ARC-13: 318/331 identidades distintas do submapa JS têm proposta documental (96,1%). As 13 restantes são oito casos de plural/lista, adiados pelo usuário até localização, e cinco textos de catálogo/editorial que aguardam revisão do owner. Não há novo lote ARC-13 desimpedido nesse recorte; não gerar propostas para os residuais antes dessas decisões. Nenhuma proposta altera o índice canônico ou runtime.
+- ARC-13: 318/331 identidades distintas do submapa JS têm proposta documental (96,1%). As 13 restantes são oito casos de plural/lista, adiados pelo usuário até localização, e cinco textos de catálogo/editorial que aguardam revisão do owner. Não há novo lote ARC-13 desimpedido nesse recorte; não gerar propostas para os residuais antes dessas decisões. O [registro residual atualizado](../evidence/architecture/arc13-semantic-key-residual-review-2026-10-25.md) também rastreia o fallback de enum do Admin, fora dessas 13 identidades.
 - Próxima frente do plano: fechar evidências runtime do inventário visual em Production nas rotas públicas. Os itens que exigem sessão autenticada (#208 DS04-02/06) e revisão visual de heads novas permanecem bloqueados por sessão ou pela desativação dos Deploy Previews; código/Production seguem sem alteração.
