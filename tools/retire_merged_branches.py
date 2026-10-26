@@ -59,6 +59,68 @@ def observe(repo):
     return refs, protected, in_pr
 
 
+
+def verify_squash(repo, entry, control):
+    """Verify one explicitly pinned, fully identical squash merge (fail-closed).
+
+    This is NOT an inferred equivalence or a request to delete other refs.
+    All PR metadata is obtained live and all commit/tree facts are read from Git.
+    """
+    proof = entry.get("squashMerge")
+    if proof is None:
+        return None
+    if (not isinstance(proof, dict)
+            or set(proof) != {"pullRequest", "mergeCommit"}
+            or type(proof["pullRequest"]) is not int
+            or proof["pullRequest"] <= 0
+            or not isinstance(proof["mergeCommit"], str)
+            or not re.fullmatch(r"[0-9a-f]{40}", proof["mergeCommit"])):
+        raise RuntimeError("INVALID_SQUASH_PROOF")
+
+    name, expected = entry["branch"], entry["sha"]
+    pr_number, merge = proof["pullRequest"], proof["mergeCommit"]
+    pr = api(repo, f"pulls/{pr_number}")
+    head, base = pr.get("head") or {}, pr.get("base") or {}
+    if (pr.get("state") != "closed" or not pr.get("merged_at")
+            or pr.get("merge_commit_sha") != merge
+            or head.get("ref") != name or head.get("sha") != expected
+            or (head.get("repo") or {}).get("full_name") != repo
+            or base.get("ref") != "main"
+            or (base.get("repo") or {}).get("full_name") != repo):
+        raise RuntimeError("SQUASH_PR_IDENTITY_MISMATCH:" + name)
+
+    parents = run("git", "rev-list", "--parents", "-n", "1", merge).split()
+    if len(parents) != 2 or parents[0] != merge:
+        raise RuntimeError("SQUASH_MERGE_NOT_SINGLE_PARENT:" + name)
+    if (subprocess.run(["git", "merge-base", "--is-ancestor", merge, control],
+                       check=False).returncode != 0
+            or subprocess.run(["git", "merge-base", "--is-ancestor",
+                               parents[1], expected], check=False).returncode != 0):
+        raise RuntimeError("SQUASH_ANCESTRY_NOT_PROVEN:" + name)
+
+    head_tree = run("git", "show", "-s", "--format=%T", expected)
+    merge_tree = run("git", "show", "-s", "--format=%T", merge)
+    if not re.fullmatch(r"[0-9a-f]{40}", head_tree) or head_tree != merge_tree:
+        raise RuntimeError("SQUASH_FULL_TREE_MISMATCH:" + name)
+
+    # Read named workflow references from origin/main (not the PR's working tree).
+    # Block even when the branch has been fully integrated.
+    grep = subprocess.run(
+        ["git", "grep", "-l", "-F", "-e", name,
+         "origin/main", "--", ".github/workflows"],
+        text=True, capture_output=True, check=False,
+    )
+    if grep.returncode == 0:
+        raise RuntimeError("SQUASH_ACTIVE_WORKFLOW_REF:" + name)
+    if grep.returncode != 1:
+        raise RuntimeError("SQUASH_WORKFLOW_LOOKUP_FAILED:" + name)
+    return {
+        "branch": name, "sha": expected, "pullRequest": pr_number,
+        "mergeCommit": merge, "treeSha": head_tree, "mainSha": control,
+        "proof": "MERGED_SQUASH_IDENTICAL_FULL_TREE",
+    }
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch", required=True)
@@ -74,7 +136,11 @@ def main():
         raise RuntimeError("BATCH_LIMIT_1_TO_3")
     names = set()
     for entry in entries:
-        name, expected = entry["branch"], entry["sha"]
+        if not isinstance(entry, dict):
+            raise RuntimeError("INVALID_ENTRY")
+        name, expected = entry.get("branch"), entry.get("sha")
+        if not isinstance(name, str) or not isinstance(expected, str):
+            raise RuntimeError("INVALID_PINNED_REF")
         if (name == "main" or not re.fullmatch(r"[a-zA-Z0-9._/-]+", name)
                 or name.startswith("-") or ".." in name or "//" in name
                 or not re.fullmatch(r"[0-9a-f]{40}", expected) or name in names):
@@ -93,15 +159,20 @@ def main():
         if os.environ.get("GITHUB_EVENT_NAME") != "pull_request":
             raise RuntimeError("UNEXPECTED_HEAD")
     control = original["main"]
+    squash_proofs = []
     for entry in entries:
         name, expected = entry["branch"], entry["sha"]
         if original.get(name) != expected or name in protected or name in in_pr:
             raise RuntimeError("PRECHECK_REF_PROTECTED_OR_CHANGED:" + name)
         is_ancestor = subprocess.run(["git", "merge-base", "--is-ancestor", expected, control], check=False)
-        if is_ancestor.returncode != 0:
+        proof = verify_squash(repo, entry, control)
+        if is_ancestor.returncode != 0 and proof is None:
             raise RuntimeError("UNMERGED_CONTENT:" + name)
+        if proof is not None:
+            squash_proofs.append(proof)
     receipt = {"repository": repo, "batch": Path(args.batch).name, "main": control,
-               "approvedPins": entries, "deleted": [], "mode": "apply" if args.apply else "audit"}
+               "approvedPins": entries, "squashProofs": squash_proofs,
+               "deleted": [], "mode": "apply" if args.apply else "audit"}
     def save():
         Path("/tmp/branch-retirement-receipt.json").write_text(json.dumps(receipt, indent=2) + "\n")
     save()
@@ -112,6 +183,14 @@ def main():
             current, now_protected, now_pr = observe(repo)
             if current != expected_inventory or current.get("main") != control or name in now_protected or name in now_pr:
                 raise RuntimeError("CONCURRENT_CHANGE_ABORT:" + name)
+            # The same historical identity/tree check must still hold at mutation.
+            # For ancestors, recheck ancestry as well instead of trusting the audit.
+            proof = verify_squash(repo, entry, control)
+            if proof is None and subprocess.run(
+                ["git", "merge-base", "--is-ancestor", expected, control],
+                check=False
+            ).returncode != 0:
+                raise RuntimeError("ANCESTRY_DRIFT:" + name)
             run("git", "push", f"--force-with-lease=refs/heads/{name}:{expected}", "origin", f":refs/heads/{name}")
             expected_inventory.pop(name)
             # GitHub REST may briefly lag the Git ref service after deletion.
