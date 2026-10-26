@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "BranchDispositionSet 0.1",
+  "controlBranch": "main",
+  "preserveBranches": [
+    "architecture/dom-css-consolidation-20261020",
+    "audit/access-confirmation-runtime-20261020",
+    "docs/current-handover-20261024",
+    "audit/approved-contrast-runtime-20261021",
+    "audit/auth-session-flow-2026-10-19",
+    "docs/reconcile-approved-focus-record",
+    "docs/handover-reconcile-20261023",
+    "proposal/vis002-semantic-state-colors-2026-10-19",
+    "architecture/p-token-01-executable-palette-20261022",
+    "architecture/p-token-02b-contextual-copy-20261022"
+  ],
+  "terminalBranches": []
+}
