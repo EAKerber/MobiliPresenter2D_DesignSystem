@@ -776,3 +776,8 @@ Na mesma sessão isolada do preview #241 (390 × 844, claro), o hero da Landing 
 ## Limite temporário de Deploy Preview — compute Netlify (26/10/2026)
 
 O usuário reportou consumo de 233/300 minutos Netlify, acima dos 200 observados pela manhã. Até o fim de outubro, suspender novas ações no repositório do produto que disparem Deploy Preview. Continuar somente análise, documentação e preparação local; não atualizar branches de PR de produto nem iniciar deploy. Retomar publicação de preview após a janela indicada pelo usuário e confirmar o saldo antes de fazê-lo. Esta restrição afeta a validação visual de implementações em aberto, não os testes locais ou a revisão de código.
+
+
+## PR #242 — comportamento aprovado para falha de camada (26/10/2026)
+
+O usuário escolheu cobrir toda a cena do Viewer e exibir placeholder com descrição quando a imagem-base ou uma camada visível falhar. O código atual não escuta erros dos assets em `scene-adapters.js`/ `scene-component.js`; a amostra em 390 × 844 confirmou que a cena fica incompleta sem aviso. A cobertura deve respeitar o frame 3:2 e ignorar falhas de camadas ocultas. [Decisão, contrato proposto e evidência](../evidence/architecture/pr242-viewer-scene-image-failure-design-2026-10-26.md). A implementação fica suspensa até depois da janela de compute Netlify indicada pelo usuário: 233/300, ante 200 pela manhã. Nenhum Deploy Preview será iniciado até o fim de outubro.
