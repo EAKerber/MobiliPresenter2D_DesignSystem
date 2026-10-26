@@ -764,7 +764,7 @@ Após autorização para testar outra distribuição e depois placa opaca, a PR 
 
 ## Gate de revisão humana antes da integração — 26/10/2026
 
-Rechecagem das PRs abertas: produto #238, #241, #242, #243 e #244 estão DRAFT; todos os checks de produto e os dois status Netlify de cada head observado passaram. Design System #51 e #52 também estão DRAFT. A #52 mantém o gate documental; #51 teve somente documentação no último head, sem workflow acionado. As sete PRs têm zero reviews humanos registrados e nenhuma foi integrada. Para sair de DRAFT e consolidar integrações, é necessária revisão humana dos previews e resolução de comentários. A placa opaca da #242 fica como candidata aprovada para permanecer no preview, ainda sem canonização, merge ou Production.
+Rechecagem das PRs abertas em 26/10: produto #238, #241, #242, #243 e #244 permanecem DRAFT; Design System #51 e #52 estão abertas e prontas para revisão (`draft=false`), apesar dos marcadores `[DRAFT]` nos títulos. #51 e #52 ainda não têm reviews humanos. A PR #51 teve somente documentação no último head, sem workflow acionado. Os Deploy Previews por PR foram desativados pelo usuário; a validação visual das implementações novas que dependiam desses previews permanece pendente. Nenhuma PR foi integrada e nenhuma alteração foi publicada em Production. A placa opaca da #242 permanece candidata, sem canonização ou merge.
 
 
 ## PR #241 — fallback compartilhado de imagem (26/10/2026)
@@ -780,4 +780,5 @@ O usuário desativou previews de PR. Nenhum Deploy Preview novo foi observado ne
 - A implementação da #241 avançou na branch, mas permanece DRAFT; não muda o percentual de código integrado nem autoriza merge.
 - A PR de handover #51 tem 236 arquivos e ainda não recebeu review humano; a PR de Design System #52 está aberta e pronta para revisão, sem merge. O GitHub marca ambas como prontas (`draft=false`), apesar do marcador `[DRAFT]` nos títulos.
 - Estimativa geral permanece em ~25% (faixa 23–27%) e código integrado em ~18% (15–20%). A contribuição só sobe quando decisões e implementação passam pelos gates de integração e leitura runtime.
-- Próximo trabalho documental desimpedido: continuar ARC-13 em lotes de consumer/owner/contrato, sem canonizar propostas, alterar o índice de produto ou migrar runtime. A verificação visual ampliada da #241 aguarda um caminho de validação sem Deploy Preview ou a reativação autorizada dos previews.
+- ARC-13: 318/331 identidades distintas do submapa JS têm proposta documental (96,1%). As 13 restantes são oito casos de plural/lista, adiados pelo usuário até localização, e cinco textos de catálogo/editorial que aguardam revisão do owner. Não há novo lote ARC-13 desimpedido nesse recorte; não gerar propostas para os residuais antes dessas decisões. Nenhuma proposta altera o índice canônico ou runtime.
+- Próxima frente do plano: fechar evidências runtime do inventário visual em Production nas rotas públicas. Os itens que exigem sessão autenticada (#208 DS04-02/06) e revisão visual de heads novas permanecem bloqueados por sessão ou pela desativação dos Deploy Previews; código/Production seguem sem alteração.
