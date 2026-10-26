@@ -761,3 +761,8 @@ Após autorização para testar outra distribuição e depois placa opaca, a PR 
 ## Gate de revisão humana antes da integração — 26/10/2026
 
 Rechecagem das PRs abertas: produto #238, #241, #242, #243 e #244 estão DRAFT; todos os checks de produto e os dois status Netlify de cada head observado passaram. Design System #51 e #52 também estão DRAFT. A #52 mantém o gate documental; #51 teve somente documentação no último head, sem workflow acionado. As sete PRs têm zero reviews humanos registrados e nenhuma foi integrada. Para sair de DRAFT e consolidar integrações, é necessária revisão humana dos previews e resolução de comentários. A placa opaca da #242 fica como candidata aprovada para permanecer no preview, ainda sem canonização, merge ou Production.
+
+
+## PR #241 — cobertura de falha de imagem na página pública (26/10/2026)
+
+No Deploy Preview atual, 16 imagens informativas receberam 404 same-origin e foram restauradas. Confirmei quatro formatos em estado de erro: comparação, cartão de módulo, ícone de benefício e hero final; nenhum exibiu placeholder, embora a caixa e o `alt` permanecessem. O fallback existente continua limitado à ilustração do estudo do espaço. O handover recomenda generalizar o componente, respeitar as proporções e manter `alt=""` decorativo. [Método e medições](../evidence/runtime/pr241-public-image-failure-coverage-2026-10-26.md). A PR #241 segue DRAFT; a ampliação ainda não foi implementada nem validada.
