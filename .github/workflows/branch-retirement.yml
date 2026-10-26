@@ -1,0 +1,68 @@
+name: Bounded branch retirement
+
+on:
+  pull_request:
+    paths:
+      - 'ops/branch-retirement-batch.json'
+      - 'tools/retire_merged_branches.py'
+      - '.github/workflows/branch-retirement.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'ops/branch-retirement-batch.json'
+
+concurrency:
+  group: design-system-branch-retirement
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m py_compile tools/retire_merged_branches.py
+      - name: Observe pinned refs without mutation
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python tools/retire_merged_branches.py --batch ops/branch-retirement-batch.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: branch-retirement-audit-${{ github.run_id }}
+          path: /tmp/branch-retirement-receipt.json
+          if-no-files-found: warn
+
+  apply:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m py_compile tools/retire_merged_branches.py
+      - name: Apply ONLY exact batch with lease and readback
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python tools/retire_merged_branches.py --batch ops/branch-retirement-batch.json --apply
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: branch-retirement-receipt-${{ github.run_id }}
+          path: /tmp/branch-retirement-receipt.json
+          if-no-files-found: warn
