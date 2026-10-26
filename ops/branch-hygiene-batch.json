@@ -1,24 +1,28 @@
 {
   "schemaVersion": "BranchHygieneBatch 0.1",
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "wave": "DS-HYG-P09-2026-10-26",
-  "purpose": "Exact-tree merged historical palette candidate PR #20 plus ancestor operational PR #62/#63.",
+  "wave": "DS-HYG-P10-2026-10-26",
+  "purpose": "Retire two identical squash token source heads after export workflows migrated to main, plus ancestor tool-port PR #64.",
   "branches": [
     {
-      "branch": "visual/palette-candidate-a-20261018",
-      "sha": "a1f97b6c6ef84a51b2cdb42a02c0a35f02938c29",
+      "branch": "architecture/p-token-01-executable-palette-20261022",
+      "sha": "7a79005b4c7402139b5529fa86747f8112e58840",
       "squashMerge": {
-        "pullRequest": 20,
-        "mergeCommit": "dbc855fb1e44d3b2a481d1e38d98d6053abcc97e"
+        "pullRequest": 49,
+        "mergeCommit": "70f0eabf609b5b4391459c426d6f7ecaeac070c8"
       }
     },
     {
-      "branch": "maintenance/retire-squash-proof-wave06-20261026",
-      "sha": "eddbcfa77d14c073c5bc5de0f09a441e9e1bbea5"
+      "branch": "architecture/p-token-02b-contextual-copy-20261022",
+      "sha": "3941adc651e72bf6c25a5ff9404c2358d937145e",
+      "squashMerge": {
+        "pullRequest": 50,
+        "mergeCommit": "8f22b610cf45d01d49ca998a4cd08f7b1a097de3"
+      }
     },
     {
-      "branch": "maintenance/retire-operational-wave07-20261026",
-      "sha": "7e3fc2b2b82ed7a71b52fabafbb0ab11c87e5c0e"
+      "branch": "maintenance/ds-product-hygiene-port-20261026",
+      "sha": "f9a8712db06f3712bdaa2ff7638ba429407d098d"
     }
   ]
 }
