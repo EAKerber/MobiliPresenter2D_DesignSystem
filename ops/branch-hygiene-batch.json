@@ -1,31 +1,31 @@
 {
   "schemaVersion": "BranchHygieneBatch 0.1",
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "wave": "DS-HYG-P06-2026-10-26",
-  "purpose": "Merged exact-tree inventory and palette mapping #40/#35/#21.",
+  "wave": "DS-HYG-P07-2026-10-26",
+  "purpose": "Merged exact-tree review/caption NAV-005 alternatives #10/#12/#14, preserve proof in PR.",
   "branches": [
     {
-      "branch": "inventory/reconcile-product-1878ae1-2026-10-20",
-      "sha": "a76e8c9ac8ad33e2026faa5856fb076aa0b197ec",
+      "branch": "review/find-004-caption-options-20261018",
+      "sha": "a67343505854fd0f27d285e9d9390cd471bc5a3e",
       "squashMerge": {
-        "pullRequest": 40,
-        "mergeCommit": "0b3e22326b95171fd835b378ae135c4a72d387d3"
+        "pullRequest": 10,
+        "mergeCommit": "d8a0c9e1c52ef39955810871edb0e9ddf0491066"
       }
     },
     {
-      "branch": "inventory/refresh-product-483ef2e",
-      "sha": "4f0ff4f7fe59900987a85c47e2f4e7dabd7d9c55",
+      "branch": "review/nav-005-compact-header-options-20261018",
+      "sha": "4b26369647f632b927b356bcd022ea842d24110c",
       "squashMerge": {
-        "pullRequest": 35,
-        "mergeCommit": "d4f71f42be393a6c703692a013836a15c237f533"
+        "pullRequest": 12,
+        "mergeCommit": "7ad6b644049cefae319ce1554932351b4a961d55"
       }
     },
     {
-      "branch": "palette/application-map-20261019",
-      "sha": "de28bfc405efb1739f1a132286dab1861dccb861",
+      "branch": "review/nav-005-narrow-theme-control-options-20261018",
+      "sha": "24fe1fd2615077c9063d563c02d5bcb59479be99",
       "squashMerge": {
-        "pullRequest": 21,
-        "mergeCommit": "a967aecba7a5b759a8bb70ed3106ea88e7c015d5"
+        "pullRequest": 14,
+        "mergeCommit": "24a95441247081bbcf8fe8fbae26b64d8096e230"
       }
     }
   ]
