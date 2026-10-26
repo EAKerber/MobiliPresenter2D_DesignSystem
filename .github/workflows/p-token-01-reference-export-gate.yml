@@ -3,7 +3,7 @@ name: P-TOKEN-01 VIS-002 reference export gate
 on:
   push:
     branches:
-      - architecture/p-token-01-executable-palette-20261022
+      - main
     paths:
       - "decisions.json"
       - "scripts/export-approved-palette.mjs"
