@@ -23,7 +23,7 @@ Autoridade das informações: `decisions.json` para decisões; `dist/*.manifest.
 ### Rotina de um lote
 
 1. **Ler e reconciliar** inventário atual de `main`, PRs abertas, `.github/workflows`, e eventual conteúdo exclusivo, inclusive imagens e evidências. Para cada ref candidata, exigir um dos seguintes: (a) head é ancestral da `main`; (b) PR *merged* com head SHA idêntico à ref, commit de squash de um pai integrado à `main`, pai do merge ancestral do head e **árvore Git integral** do head exatamente igual à do merge. No caso (b) colocar `squashMerge` no manifesto. Caso contrário, **HOLD** e ledger de substituição/proveniência, sem delete.
-2. Criar **nova branch operacional a partir do SHA observado de `main`**, apenas para alterar `ops/branch-hygiene-batch.json`; descrever refs/SHAs/PRs/árvores e riscos no PR em **draft**. Manter 1–3 refs por lote, sem automatizar toda a lista.
+2. Criar branch operacional a partir do SHA observado de `main` **ou reutilizar uma branch operacional cujas PRs anteriores estejam fechadas/merged, sem PR ativa e com divergência reduzida ao novo manifesto**. A reutilização reduz branches temporárias: conferir `compare main...head` antes de cada nova PR e exigir só o manifesto atualizado, sem reaproveitar lotes consumidos. Descrever refs/SHAs/PRs/árvores e riscos no PR em **draft**. Manter 1–3 refs por lote, sem automatizar toda a lista.
 3. GitHub Actions `pull_request` calcula observação e plano, executa testes, e faz **audit-only** se o manifesto mudou. Conferir logs/artefato `m2d-ds-branch-batch-audit-<run>` e status **PASS** antes de marcar a PR pronta.
 4. Comparar novamente SHA da PR e da `main`, checks e ausência de drift. Mesclar por **merge commit**. O push para `main` do manifesto aciona `apply` com `MOBILIPRESENTER2D_DESIGNSYSTEM_BRANCH_HYGIENE_AUTHORIZED=1` dentro do job; não expor essa flag como permissão generalizada.
 5. Exigir log/artefato `m2d-ds-branch-batch-receipt-<run>` com `status=PASS`, `mode=apply`, `count=N`, `readback=PASS`. Consultar GitHub novamente e confirmar a ausência de **cada** ref. Atualizar o handover com PR, commits, SHA das refs, runs e contagem; não reutilizar manifesto consumido.
@@ -54,6 +54,14 @@ Autoridade das informações: `decisions.json` para decisões; `dist/*.manifest.
 - `docs/handover-reconcile-20261023`: não existe PR associada no inventário inicial; analisar exclusividade.
 - `proposal/vis002-semantic-state-colors-2026-10-19`: head atual difere do head merged da PR #23; não supor equivalência.
 - `architecture/p-token-01-executable-palette-20261022` e `architecture/p-token-02b-contextual-copy-20261022`: mesmo quando merged/equivalentes, **HOLD** por referências nos workflows de exportação enquanto estes triggers existirem.
+
+### Resultados do primeiro ciclo do novo mecanismo (26/10/2026)
+
+Partida: 38 branches antes da importação. [DS #64](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/64) portou as três ferramentas, os 27 testes de regressão, dois workflows do produto e o guia; workflow antigo removido, sem batch no merge da ferramenta. [DS #65–#73](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pulls?q=is%3Apr+is%3Amerged+DS-HYG) executaram **9 lotes × 3 refs = 27 exclusões**. Cada lote teve audit em PR e apply em main com `count=3, readback=PASS`. A contagem após #73 é **13 branches** (38 + 2 refs operacionais novas − 27); o manifesto de cada lote, PR, Actions e os SHA-pins são o ledger de proveniência. Nenhuma PR aberta foi alterada.
+
+Próxima correção técnica: workflows de P-TOKEN-01 e P-TOKEN-02B ainda disparavam `push` por nome das duas branches de tokens já mescladas. Mover os triggers para `main` e validar os gates em PR antes de retirar as duas refs; não desligar os testes para conseguir uma contagem menor.
+
+**Não apagar à força os oito HOLDs remanescentes:** DS #39, #41, #51; #42, #37, #46 fechadas sem merge; a orphan `docs/handover-reconcile-20261023` e `proposal/vis002-semantic-state-colors-2026-10-19` cujo head difere do head merged. Só fechar/ref-delete após inventário individual de conteúdo único, materialização seletiva com blob SHA e comprovação de substituição. Além desses oito, manter qualquer branch ainda citada nominalmente em CI e o próprio executor operacional até descomissioná-lo com segurança.
 
 ### Portabilidade e desativação do legado
 
