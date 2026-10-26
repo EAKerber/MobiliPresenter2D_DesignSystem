@@ -81,3 +81,12 @@ A rota não consulta Supabase nem lê `DATABASE_URL` ou `ACCESS_GATE_SECRET`. `n
 
 
 O readback do projeto Netlify confirma o caminho efetivamente ativo: site `m2d-auth-ci-isolated`, deploy `6adc77b6603e52a336fe045d`, branch `main`, commit `5ccb2a8dde6dd16e136f03387dc833aab828c5cf`, contexto `production`, estado READY. Portanto o endpoint primário lê o store compartilhado do site isolado, não o store de um Deploy Preview. Ainda não foi possível ler o Blob para confirmar ausência/invalidez versus erro de leitura.
+
+
+## Correção de empilhamento e leitura raster — 25/10/2026
+
+A captura inicial da variante 1/2 px revelou que o frame de seleção `.selection-frame` (`z-index:900`) cobria as sombras da camada `.scene-hotspots` (`z-index:500`). Uma alteração temporária de empilhamento fez as faixas aparecerem. A PR de produto #242 adicionou `.scene-hotspots:has(.scene-hotspot:focus-visible) { z-index:901 }`, que só eleva a camada enquanto há foco visível de teclado; a regra não muda tokens, seleção ou geometria do anel. Head atual `1d5d9dad957800a3dcef72214db67f4d505c47c1`; Deploy Preview READY `6ade99222c5e1eeeae48d7fc`.
+
+Após a correção, os sete hotspots foram focalizados nos quatro estados claro/escuro em 390×844 e 1280×800. Todos computaram `:focus-visible`, o anel temático 4 px, a sombra 1/3 px ficou visível e não houve overflow horizontal. A folga mínima computada ao limite da cena é 0,11 CSS px no mobile e 6,29 px no desktop. Em uma captura escura mobile do hotspot 01, pixels exatos pretos e brancos apareceram nas faixas; essa contagem confirma que foram pintados, mas não calcula contraste contra a foto. Nenhuma nova medição por pixel foi feita e não se declara 3:1 em todo o contorno. Não houve erros de console no preview inspecionado; os sete workflows e os dois status Netlify passaram.
+
+O site isolado continua separado: o endpoint primário retorna 503. A leitura de código anterior delimita a rota ao Blob publicado do próprio site, mas o conteúdo do Blob não pode ser lido pelas ferramentas conectadas. PR #242 permanece DRAFT, sem merge ou Production.
