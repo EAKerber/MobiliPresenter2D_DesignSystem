@@ -3,7 +3,15 @@ name: P-TOKEN-02B approved contextual text export
 on:
   push:
     branches:
-      - architecture/p-token-02b-contextual-copy-20261022
+      - main
+    paths:
+      - "decisions.json"
+      - "scripts/export-approved-contextual-text.mjs"
+      - "tests/export-approved-contextual-text.test.mjs"
+      - "dist/approved-contextual-support-text.*"
+      - ".github/workflows/p-token-02b-contextual-export.yml"
+
+  pull_request:
     paths:
       - "decisions.json"
       - "scripts/export-approved-contextual-text.mjs"
