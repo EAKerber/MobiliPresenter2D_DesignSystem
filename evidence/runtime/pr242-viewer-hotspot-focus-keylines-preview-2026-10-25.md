@@ -128,3 +128,12 @@ Medi o Viewer da cena Cozinha em 390×844, tema escuro. Os sete hotspots receber
 Há pixels pretos abaixo de 3:1 nos hotspots 02, 03, 04, 06 e 07; a captura-base não distinguiu pixels brancos na faixa definida em nenhum hotspot. Portanto, esta distribuição tampouco demonstra contraste consistente sobre a foto. A amostra cobre apenas tema escuro e viewport mobile desta cena; não generalizar a outros temas, imagens ou ambientes, nem declarar conformidade WCAG.
 
 Todos os sete workflows do head passaram e os dois status Deploy Preview Netlify ficaram SUCCESS; a navegação por teclado confirmou `:focus-visible` nos sete hotspots, sem overflow horizontal. A medição não é aprovação visual. PR #242 continua DRAFT, sem merge/Production.
+
+
+## Placa opaca de apoio — head 584c9d3, 26/10/2026
+
+A distribuição 2/1 px foi substituída no Deploy Preview da PR de produto #242 por uma placa opaca de 8 px atrás do foco: branca (`#fff`) no tema claro e quase preta (`#111`) no escuro. O anel VIS-002 permaneceu com 4 px, offset CSS declarado de 3 px e dourado `#8B6A40` / `#D8BC7C`. O limite computado do anel foi 6,67 px; a placa se estende até 8 px.
+
+No head `584c9d3f06896b9c4f44f4437914c9f7b7400d08`, deploy principal READY `6adea3e8c5b47f8e0f4cee0c`, sete workflows passaram e os status Netlify principal/isolado passaram. O foco por Tab alcançou os sete hotspots em 390×844, tema escuro. Também medi todos os sete com `:focus-visible` em 390×844 e 1280×800, claro e escuro; todos permaneceram no viewport, sem overflow horizontal.
+
+O contraste sRGB calculado entre o anel dourado e sua placa uniforme foi 4,96:1 no claro e 10,25:1 no escuro, idêntico nos sete controles por compartilharem as mesmas cores. Capturas mostraram o anel dourado contra a placa nas duas aparências. Isso demonstra contraste do anel em relação à placa neste componente e nesta cena; não é auditoria de acessibilidade global nem prova de contraste da borda externa da placa contra toda a fotografia. A variante continua candidata de preview, sem merge, mudança em `decisions.json` ou Production.
