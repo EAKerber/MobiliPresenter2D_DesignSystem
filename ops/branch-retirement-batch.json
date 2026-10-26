@@ -1,23 +1,28 @@
 {
   "schema": "BoundedBranchRetirement 0.1",
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "wave": "DS-R1-A-2026-10-26",
-  "purpose": "Only retire three verified ancestors of main; keep their full SHA/PR history",
+  "wave": "DS-R1-B-2026-10-26",
+  "purpose": "Retire only three ancestry-proven historical audit and homologation refs (zero unique commits); retain commit SHAs and PR history",
   "branches": [
     {
-      "branch": "inventory/visual-system-20261018",
-      "sha": "30bc6aade93483ff2ed2a65f7ecad798925cfe67",
-      "mergedPrs": [2, 7]
+      "branch": "audit/approved-contrast-runtime-20261020",
+      "sha": "0b3e22326b95171fd835b378ae135c4a72d387d3",
+      "evidence": "ancestor-of-main; no open PR; 0 files changed"
     },
     {
-      "branch": "inventory/runtime-evidence-20261018",
-      "sha": "983f0273c8365090329ac8d11d8c582160b50246",
-      "mergedPrs": [3, 8]
+      "branch": "audit/authenticated-runtime-20261018",
+      "sha": "7c1e08c52b747abf6ce9e771a40757e3e18bd198",
+      "mergedPrs": [
+        5
+      ]
     },
     {
-      "branch": "docs/implementation-map-20261018",
-      "sha": "78232255930c72fa611828b958ddd95ad6b025c6",
-      "mergedPrs": [1, 6]
+      "branch": "homologation/visual-review-options-20261018",
+      "sha": "c8c799e84240e36426efa267643a7fae7ebc92f9",
+      "mergedPrs": [
+        4,
+        9
+      ]
     }
   ]
 }
