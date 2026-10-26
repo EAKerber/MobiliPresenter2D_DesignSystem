@@ -1,5 +1,9 @@
 # Plano geral e etapa atual do Design System — 2026-10-21
 
+## VIS-002 — implementação do placeholder de falha de imagem do Viewer (26/10/2026)
+
+Na PR de produto [#242](https://github.com/EAKerber/MobiliPresenter2D/pull/242), head `618877e4dc9fcf9376269e15c24bd937ef4e93e9`, a falha da imagem-base ou de camada visível agora cobre a cena e mostra placeholder acessível; falha de camada oculta não invalida a cena. A suíte direcionada passou localmente (17 testes) e os sete workflows GitHub passaram. PR #242 permanece Draft, sem merge/Production. Deploy Previews por PR foram desativados pelo usuário; não houve deploy manual. Confirmação visual do novo head continua pendente, pois os previews antigos não exercitam essa implementação. [Evidência e limites](../evidence/runtime/pr242-viewer-scene-image-failure-implementation-2026-10-26.md).
+
 ## Issue #205 — comparação temporária de cartões do Viewer (25/10/2026)
 
 A comparação lado a lado em Production mostrou que a superfície candidata `#F0EDE8` remove o branco puro e harmoniza melhor os três cartões com o contexto claro, mantendo `#514A43` em contraste de 7,46:1. O tema escuro já computa cartão `#20211F` e texto `#F4F1EB` (14,34:1). A evidência é uma simulação DOM transitória, sem alteração de produto: [método, medições e limites](../evidence/runtime/issue205-viewer-detail-card-surface-ab-2026-10-25.md). #205 continua backlog e sem implementação autorizada; foco, zoom, matriz completa e o overflow de 320 px permanecem pendentes.

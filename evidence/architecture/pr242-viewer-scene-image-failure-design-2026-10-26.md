@@ -28,6 +28,14 @@ A implementação fica em preview depois da janela de economia de compute indica
 
 No preview #241, 390 × 844 px, tema claro, a imagem-base e `02_inferior_fogao.png` receberam 404 same-origin. Em ambos os casos `.scene-stage` ficou em 346,7 × 231,1 px, o número de imagens visíveis carregadas caiu de 18 para 17 e não apareceu fallback. Ambos os originais foram restaurados e carregaram. Esta amostra é só a cena Cozinha, um viewport e um tema. Registro completo: [auditoria cross-route de imagens](../runtime/pr241-public-image-failure-coverage-2026-10-26.md).
 
+## Implementação em PR de produto — head `618877e4dc9fcf9376269e15c24bd937ef4e93e9`
+
+A PR #242 implementa a decisão de falha de cena: erro na imagem-base ou em uma camada visível oculta base, camadas, hotspots e seleção, preservando o frame 3:2 e apresentando placeholder acessível com descrição. Erros de camadas ocultas são ignorados; URLs de assets com falha são verificadas em renderizações subsequentes, inclusive se a camada voltar a ficar visível. O listener captura erros de imagem apenas dentro do stage.
+
+A suíte `node --test --test-reporter=dot app/viewer/scene-adapters.test.mjs` passou localmente (17 testes); os sete workflows GitHub do head atual também passaram. A PR permanece Draft e sem merge/Production. Os Deploy Previews por PR foram desativados pelo usuário e nenhum deploy manual foi iniciado; por isso, a confirmação visual do placeholder neste head permanece pendente. Previews anteriores não comprovam o comportamento do código novo.
+
+[Evidência de implementação, CI e limites](../runtime/pr242-viewer-scene-image-failure-implementation-2026-10-26.md).
+
 ## Estado
 
-A decisão define o comportamento de preview; não aprova merge, Production nem a implantação agora. Nenhum arquivo do produto foi alterado nesta etapa.
+A decisão define o comportamento de preview; não aprova merge, Production nem implantação. A implementação descrita acima está no head atual da PR #242 e aguarda confirmação visual.
