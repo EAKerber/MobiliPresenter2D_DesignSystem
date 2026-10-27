@@ -1,12 +1,12 @@
 {
   "schemaVersion": "BranchHygieneBatch 0.1",
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "wave": "DS-HYG-P12-2026-10-26",
-  "purpose": "Retire superseded SHA-exact operational hygiene ref after all PRs using it were closed/merged; head ancestor of current main, no unique tree content.",
+  "wave": "DS-HYG-P13-2026-10-26",
+  "purpose": "Retire the last operational branch after PR #87 merged, preserving its complete history by ancestry. Branch exact head is an ancestor of the canonical main; no open PR or active workflow depends on it. No HOLD refs in this batch.",
   "branches": [
     {
-      "branch": "maintenance/ds-product-hygiene-batch01-20261026",
-      "sha": "740c194fdfe15b945cc2abf67566705d6c5b1834"
+      "branch": "maintenance/ds-pr41-runtime-evidence-extract-20261026",
+      "sha": "544ca50735443bdbe9beffccee39b7542056df57"
     }
   ]
 }
