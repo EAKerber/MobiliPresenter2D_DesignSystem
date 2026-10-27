@@ -1,6 +1,6 @@
 import copy
 import unittest
-from tools.ds_dag_tag_retain import PREFIX, RULESET_ID, REPO, OPS, PATTERN, validate
+from tools.ds_dag_tag_retain import PREFIX, RULESET_ID, REPO, OPS, PATTERN, OWNER_VERIFIED_RULE_UPDATED_AT, validate
 
 
 class RetentionCreationSafetyTests(unittest.TestCase):
@@ -20,6 +20,7 @@ class RetentionCreationSafetyTests(unittest.TestCase):
         self.heads = {"refs/heads/main": self.main_sha, "refs/heads/" + OPS: "f" * 40}
         self.heads.update({"refs/heads/" + c["branch"]: c["sha"] for c in self.rows})
         self.rule = {"id": RULESET_ID, "target": "tag", "source": REPO, "enforcement": "active",
+                     "updated_at": OWNER_VERIFIED_RULE_UPDATED_AT,
                      "bypass_actors": [], "current_user_can_bypass": "never",
                      "conditions": {"ref_name": {"exclude": [], "include": [PATTERN]}},
                      "rules": [{"type": "deletion"}, {"type": "update"},
@@ -58,6 +59,13 @@ class RetentionCreationSafetyTests(unittest.TestCase):
 
     def test_rule_disabled_rejected(self):
         self.rule["enforcement"] = "disabled"
+        with self.assertRaisesRegex(ValueError, "TAG_PROTECTION_NOT_VERIFIED"):
+            self.check()
+
+    def test_actions_masked_bypass_requires_same_owner_verified_revision(self):
+        self.rule["bypass_actors"] = None
+        self.assertEqual(len(self.check()), 8)
+        self.rule["updated_at"] = "2026-10-28T00:00:00Z"
         with self.assertRaisesRegex(ValueError, "TAG_PROTECTION_NOT_VERIFIED"):
             self.check()
 
