@@ -1,0 +1,534 @@
+{
+  "schemaVersion": "DS-HoldBranchInventory 0.1",
+  "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "baselineMain": "390bef5ded2fd3bc904de49e8130ebeb514671d4",
+  "policy": "No mass merge, no deletion without ancestry/squash proof and field-level reconciliation",
+  "branches": [
+    {
+      "branch": "architecture/dom-css-consolidation-20261020",
+      "head": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
+      "pr": 39,
+      "disposition": "HOLD",
+      "exclusive": [
+        {
+          "path": ".github/workflows/declarative-ui-p1.yml",
+          "sha": "c7d37c390bc9b72ce247fab87303aa4b9a4fee46",
+          "size": 624
+        },
+        {
+          "path": ".github/workflows/public-dom-audit.yml",
+          "sha": "e23831b7796b8857e5919d795740b044380d1b6d",
+          "size": 1503
+        },
+        {
+          "path": "docs/architecture/CSS-OWNERSHIP-RISKS-2026-10-20.md",
+          "sha": "2d597017c99e80b6b9b45e029c8ade7aa3cda215",
+          "size": 15782
+        },
+        {
+          "path": "docs/architecture/CSS-READINESS-AND-CURRENT-GATE-2026-10-20.md",
+          "sha": "f4015599a49e54a96ffbf675931a1fa9a552dc28",
+          "size": 18558
+        },
+        {
+          "path": "docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md",
+          "sha": "2be93e56fd42945cdfe780e89edee1603ab378f6",
+          "size": 21676
+        },
+        {
+          "path": "docs/architecture/css-component-architecture-proposal-2026-10-20.md",
+          "sha": "3034980b933e1788692e9508273dc6d87c1c1465",
+          "size": 11262
+        },
+        {
+          "path": "docs/architecture/declarative-ui-increment-plan-2026-10-20.md",
+          "sha": "6d668c6ba2c02c6d8806567b69c6770a244c0e87",
+          "size": 9801
+        },
+        {
+          "path": "docs/architecture/declarative-ui-schema-boundaries-proposal-2026-10-20.md",
+          "sha": "9997732c1377c7a7710fd029e0d143c060c0a06a",
+          "size": 11643
+        },
+        {
+          "path": "docs/architecture/dom-css-consolidation-baseline-2026-10-20.md",
+          "sha": "f3aecefcebddce22f3b1edd748e30c803968a13f",
+          "size": 9717
+        },
+        {
+          "path": "docs/architecture/dom-css-runtime-public-baseline-2026-10-20.md",
+          "sha": "7ce976e595fefd5222a4a3de761dc0fdac195b5c",
+          "size": 5761
+        },
+        {
+          "path": "docs/architecture/dom-css-static-crosswalk-2026-10-20.json",
+          "sha": "b721ff49f11a170d7db226e5218c632a4e53869a",
+          "size": 63234
+        },
+        {
+          "path": "docs/architecture/dom-js-component-ownership-2026-10-20.md",
+          "sha": "7565726930a31efb3d7c1ddbc16893fa5150233d",
+          "size": 11715
+        },
+        {
+          "path": "docs/architecture/ui-adr-001-declarative-boundaries-2026-10-20.md",
+          "sha": "934d4b700de49eb4584f25a72bcb2343ea1b58b4",
+          "size": 10076
+        },
+        {
+          "path": "docs/architecture/ui-adr-002-landing-component-pilot-2026-10-20.md",
+          "sha": "bc9e8dfdf6c4073ad3d5cb0d0c25f35648eb8abd",
+          "size": 10059
+        },
+        {
+          "path": "docs/architecture/ui-adr-003-landing-benefit-variants-2026-10-20.md",
+          "sha": "901913e308f25f75d1cd154610044e110f07c3e1",
+          "size": 9645
+        },
+        {
+          "path": "docs/architecture/ui-adr-004-cross-page-reuse-gate-2026-10-20.md",
+          "sha": "8e7e23ec0b94ee27a683b13d6aa2c9f7f5919a25",
+          "size": 7176
+        },
+        {
+          "path": "docs/architecture/ui-adr-005-public-header-controller-2026-10-20.md",
+          "sha": "eb5cbe85723014683a76b347e4d4033666d2b451",
+          "size": 12890
+        },
+        {
+          "path": "experiments/declarative-ui/README.md",
+          "sha": "76706f3ea72193d3399712b2998e00572181fdf2",
+          "size": 3237
+        },
+        {
+          "path": "experiments/declarative-ui/landing-benefits.mjs",
+          "sha": "b89d8b902382087f4434808db5a999afb2b9f02a",
+          "size": 1537
+        },
+        {
+          "path": "experiments/declarative-ui/registry.mjs",
+          "sha": "44831dc8f2ec37e8ea36a4d08ec29e4f9fd2547f",
+          "size": 5759
+        },
+        {
+          "path": "experiments/declarative-ui/registry.test.mjs",
+          "sha": "25c64960d3ff7600bac672f5110f2519d6636990",
+          "size": 3435
+        },
+        {
+          "path": "experiments/public-dom/README.md",
+          "sha": "d704fb318ffcf68e9c25f04cff9deb015ac08d5d",
+          "size": 2241
+        },
+        {
+          "path": "experiments/public-dom/audit-public-dom.mjs",
+          "sha": "bffef9b9bfa874489a1afd5ea314b6b1cb119659",
+          "size": 8742
+        },
+        {
+          "path": "experiments/public-dom/compare-benefit-shadow.mjs",
+          "sha": "53a48614f78c6f698870b95c960a1b1629ca610c",
+          "size": 2460
+        }
+      ],
+      "modified": [
+        {
+          "path": "DECISION_APPLICATION_MAP.md",
+          "sourceSha": "4960a07e5a79a7c751ecb36cdf6ccc88ded4b67c",
+          "mainSha": "0e5101eca5e928f7442e2f1cba0c57a76262b8c1",
+          "size": 15116
+        },
+        {
+          "path": "FINDINGS_REGISTER.md",
+          "sourceSha": "4db026889f6c7a579d520c7d2b3118b5054eb032",
+          "mainSha": "1ccc8e26bf5d1817d50ab1abeba3e0ff73e63857",
+          "size": 16433
+        },
+        {
+          "path": "PALETTE_CONFORMANCE.md",
+          "sourceSha": "015becd5c217850335f90a51b52c8e5c97594450",
+          "mainSha": "37ee3b6ed8b3890506a1abc541d03c1c3f9d1f63",
+          "size": 11715
+        },
+        {
+          "path": "README.md",
+          "sourceSha": "4b9481bf9702f3f14f286153edfe6abb82d2f02e",
+          "mainSha": "333463e325299dec739eff4736e03d3e07843ff1",
+          "size": 3921
+        },
+        {
+          "path": "RUNTIME_AUDIT.md",
+          "sourceSha": "6018b772421584f7efe2ba0f1d8ad6f2f470f6be",
+          "mainSha": "cb7c084a0d519384f969c850e6ec72b0383c05dd",
+          "size": 37504
+        },
+        {
+          "path": "VISUAL_INVENTORY.md",
+          "sourceSha": "9f38f1c346ea23eb3f116125937c6a9b053bddfa",
+          "mainSha": "6e0be7d3232c78f60661174cb91f7099280799ad",
+          "size": 9845
+        },
+        {
+          "path": "decisions.json",
+          "sourceSha": "d715f428319e1d2e290ec40936c846a46bfca5b7",
+          "mainSha": "63b60f8d87327c6fd1e80c8cdf4ff832c4089bfa",
+          "size": 40388
+        },
+        {
+          "path": "runtime-evidence.json",
+          "sourceSha": "2f1888971916bdbdc723d8dfe867ff69325cfd9f",
+          "mainSha": "9679bec7426329f5706409fdd014469f917c0b3b",
+          "size": 46774
+        },
+        {
+          "path": "visual-inventory.json",
+          "sourceSha": "5bdb7f600247c67c275e0fd8a9f0fd3650228009",
+          "mainSha": "0e3ad3f39d82c4ec48cbb6b9839c8d4c479f5fec",
+          "size": 893201
+        }
+      ]
+    },
+    {
+      "branch": "audit/access-confirmation-runtime-20261020",
+      "head": "ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37",
+      "pr": 41,
+      "disposition": "HOLD",
+      "exclusive": [],
+      "modified": [
+        {
+          "path": "DECISION_APPLICATION_MAP.md",
+          "sourceSha": "154749d79881246ad49d0aa4bbc5a0890871f774",
+          "mainSha": "0e5101eca5e928f7442e2f1cba0c57a76262b8c1",
+          "size": 15936
+        },
+        {
+          "path": "FINDINGS_REGISTER.md",
+          "sourceSha": "b22b1c0eb51b302ca1721fe67acd7c1063046aed",
+          "mainSha": "1ccc8e26bf5d1817d50ab1abeba3e0ff73e63857",
+          "size": 17434
+        },
+        {
+          "path": "PALETTE_CONFORMANCE.md",
+          "sourceSha": "5a582b89ff2f3b88dbba608e56055f09cb5dda32",
+          "mainSha": "37ee3b6ed8b3890506a1abc541d03c1c3f9d1f63",
+          "size": 12129
+        },
+        {
+          "path": "README.md",
+          "sourceSha": "e53ce61febea5cce9fcc2037423b34bf7b72fc4f",
+          "mainSha": "333463e325299dec739eff4736e03d3e07843ff1",
+          "size": 1965
+        },
+        {
+          "path": "RUNTIME_AUDIT.md",
+          "sourceSha": "4fb29c2662bed0ae99ed89a43046df738a3198d6",
+          "mainSha": "cb7c084a0d519384f969c850e6ec72b0383c05dd",
+          "size": 41373
+        },
+        {
+          "path": "VISUAL_INVENTORY.md",
+          "sourceSha": "1b3bf73bc779fbca0570d64142a7e81244f20e0c",
+          "mainSha": "6e0be7d3232c78f60661174cb91f7099280799ad",
+          "size": 10307
+        },
+        {
+          "path": "decisions.json",
+          "sourceSha": "d715f428319e1d2e290ec40936c846a46bfca5b7",
+          "mainSha": "63b60f8d87327c6fd1e80c8cdf4ff832c4089bfa",
+          "size": 40388
+        },
+        {
+          "path": "runtime-evidence.json",
+          "sourceSha": "3989f7bd0fadb35abd6ea38f63f5579636863905",
+          "mainSha": "9679bec7426329f5706409fdd014469f917c0b3b",
+          "size": 56822
+        }
+      ]
+    },
+    {
+      "branch": "audit/approved-contrast-runtime-20261021",
+      "head": "e848e079071f4b2ce788e18a10a2284e6a24ff7a",
+      "pr": 42,
+      "disposition": "HOLD",
+      "exclusive": [],
+      "modified": [
+        {
+          "path": "DECISION_APPLICATION_MAP.md",
+          "sourceSha": "8e32d9f9e7e309da467ed60f7a984893d18cef69",
+          "mainSha": "0e5101eca5e928f7442e2f1cba0c57a76262b8c1",
+          "size": 15739
+        },
+        {
+          "path": "FINDINGS_REGISTER.md",
+          "sourceSha": "0708ea4a5d206cadcff5e3200e30390ad91e9326",
+          "mainSha": "1ccc8e26bf5d1817d50ab1abeba3e0ff73e63857",
+          "size": 17036
+        },
+        {
+          "path": "PALETTE_CONFORMANCE.md",
+          "sourceSha": "4b049d3cb6f77360b22b6848922375ef708201d5",
+          "mainSha": "37ee3b6ed8b3890506a1abc541d03c1c3f9d1f63",
+          "size": 13216
+        },
+        {
+          "path": "README.md",
+          "sourceSha": "e53ce61febea5cce9fcc2037423b34bf7b72fc4f",
+          "mainSha": "333463e325299dec739eff4736e03d3e07843ff1",
+          "size": 1965
+        },
+        {
+          "path": "RUNTIME_AUDIT.md",
+          "sourceSha": "66effe49f768ac056623f1b86e94db1f84bcfa06",
+          "mainSha": "cb7c084a0d519384f969c850e6ec72b0383c05dd",
+          "size": 38628
+        },
+        {
+          "path": "VISUAL_INVENTORY.md",
+          "sourceSha": "e66745893bd8ce6369525534879fc5d04e1db1d6",
+          "mainSha": "6e0be7d3232c78f60661174cb91f7099280799ad",
+          "size": 10404
+        },
+        {
+          "path": "decisions.json",
+          "sourceSha": "d53be6695ec7beb4538ae6cc7e4e212425578617",
+          "mainSha": "63b60f8d87327c6fd1e80c8cdf4ff832c4089bfa",
+          "size": 43165
+        },
+        {
+          "path": "evidence/runtime/contrast-approved-pairs-2026-10-20.md",
+          "sourceSha": "e3c3ddffe451e1ebec6da2366f461e543073e45f",
+          "mainSha": "560ffb3a9bdb84aa32155d140901b97345842eef",
+          "size": 3163
+        },
+        {
+          "path": "runtime-evidence.json",
+          "sourceSha": "54888689e19e76190e30eac61563f5fbcdd422bb",
+          "mainSha": "9679bec7426329f5706409fdd014469f917c0b3b",
+          "size": 51223
+        }
+      ]
+    },
+    {
+      "branch": "audit/auth-session-flow-2026-10-19",
+      "head": "360d2e6d93d93ab74036149b518f22c01d57ecb0",
+      "pr": 37,
+      "disposition": "HOLD",
+      "exclusive": [],
+      "modified": [
+        {
+          "path": "DECISION_APPLICATION_MAP.md",
+          "sourceSha": "4960a07e5a79a7c751ecb36cdf6ccc88ded4b67c",
+          "mainSha": "0e5101eca5e928f7442e2f1cba0c57a76262b8c1",
+          "size": 15116
+        },
+        {
+          "path": "FINDINGS_REGISTER.md",
+          "sourceSha": "ee1156572bd49010ec9c3c1c21e4475a89c4641a",
+          "mainSha": "1ccc8e26bf5d1817d50ab1abeba3e0ff73e63857",
+          "size": 15684
+        },
+        {
+          "path": "PALETTE_CONFORMANCE.md",
+          "sourceSha": "015becd5c217850335f90a51b52c8e5c97594450",
+          "mainSha": "37ee3b6ed8b3890506a1abc541d03c1c3f9d1f63",
+          "size": 11715
+        },
+        {
+          "path": "README.md",
+          "sourceSha": "a51d8234ce3438d29795ed8ca099391742dab4fd",
+          "mainSha": "333463e325299dec739eff4736e03d3e07843ff1",
+          "size": 1965
+        },
+        {
+          "path": "RUNTIME_AUDIT.md",
+          "sourceSha": "43bd00b937a5a70a29986608bfaaf0357fa83b69",
+          "mainSha": "cb7c084a0d519384f969c850e6ec72b0383c05dd",
+          "size": 35716
+        },
+        {
+          "path": "VISUAL_INVENTORY.md",
+          "sourceSha": "9f38f1c346ea23eb3f116125937c6a9b053bddfa",
+          "mainSha": "6e0be7d3232c78f60661174cb91f7099280799ad",
+          "size": 9845
+        },
+        {
+          "path": "decisions.json",
+          "sourceSha": "d715f428319e1d2e290ec40936c846a46bfca5b7",
+          "mainSha": "63b60f8d87327c6fd1e80c8cdf4ff832c4089bfa",
+          "size": 40388
+        },
+        {
+          "path": "runtime-evidence.json",
+          "sourceSha": "835efbc5e2720b2fe4bf9a8808c4e1b89b87fe56",
+          "mainSha": "9679bec7426329f5706409fdd014469f917c0b3b",
+          "size": 42227
+        },
+        {
+          "path": "visual-inventory.json",
+          "sourceSha": "5bdb7f600247c67c275e0fd8a9f0fd3650228009",
+          "mainSha": "0e3ad3f39d82c4ec48cbb6b9839c8d4c479f5fec",
+          "size": 893201
+        }
+      ]
+    },
+    {
+      "branch": "docs/handover-reconcile-20261023",
+      "head": "96093786ed8fb182c604182c37a42681cba8d6c9",
+      "pr": null,
+      "disposition": "HOLD",
+      "exclusive": [],
+      "modified": [
+        {
+          "path": ".github/workflows/p-token-01-reference-export-gate.yml",
+          "sourceSha": "ccc4d9412bfb13e3af49a3863447491cff301f5c",
+          "mainSha": "9c6787b2f7d6100620b1d0aa333f0e126c87e25e",
+          "size": 1727
+        },
+        {
+          "path": ".github/workflows/p-token-02b-contextual-export.yml",
+          "sourceSha": "a40789854e6609fa771dbee39580e5b0d4af7258",
+          "mainSha": "06bfd2f8cfb2f383f0ec3359d4cde2563e44d9a3",
+          "size": 1029
+        },
+        {
+          "path": "DECISION_APPLICATION_MAP.md",
+          "sourceSha": "390d50320152ba3745991f8b09143753752ab718",
+          "mainSha": "0e5101eca5e928f7442e2f1cba0c57a76262b8c1",
+          "size": 16535
+        },
+        {
+          "path": "FINDINGS_REGISTER.md",
+          "sourceSha": "5ad3f1fb75dff26211822073f064b1b68b1f1a3b",
+          "mainSha": "1ccc8e26bf5d1817d50ab1abeba3e0ff73e63857",
+          "size": 18254
+        },
+        {
+          "path": "README.md",
+          "sourceSha": "946a2fadbdf493578e3bc4e1cba235944a287d8c",
+          "mainSha": "333463e325299dec739eff4736e03d3e07843ff1",
+          "size": 8121
+        },
+        {
+          "path": "docs/ARCHITECTURE_CURRENT_HANDOVER_2026-10-22.md",
+          "sourceSha": "179218c19c2acedd0dab13ff6104538542320a01",
+          "mainSha": "7af6738451a9da0561148f934e38008bdee889cf",
+          "size": 25442
+        }
+      ]
+    },
+    {
+      "branch": "docs/reconcile-approved-focus-record",
+      "head": "430f4e1c7b376ae08e1788bd3aa365a32f2b76e2",
+      "pr": 46,
+      "disposition": "HOLD",
+      "exclusive": [],
+      "modified": [
+        {
+          "path": "DECISION_APPLICATION_MAP.md",
+          "sourceSha": "d9b10deca79b56258b85ce6c6afc04e7f7325a97",
+          "mainSha": "0e5101eca5e928f7442e2f1cba0c57a76262b8c1",
+          "size": 15964
+        },
+        {
+          "path": "FINDINGS_REGISTER.md",
+          "sourceSha": "f2160cbc5ddc595f411f74636b543c2f8c975149",
+          "mainSha": "1ccc8e26bf5d1817d50ab1abeba3e0ff73e63857",
+          "size": 17321
+        },
+        {
+          "path": "README.md",
+          "sourceSha": "e53ce61febea5cce9fcc2037423b34bf7b72fc4f",
+          "mainSha": "333463e325299dec739eff4736e03d3e07843ff1",
+          "size": 1965
+        },
+        {
+          "path": "RUNTIME_AUDIT.md",
+          "sourceSha": "6018b772421584f7efe2ba0f1d8ad6f2f470f6be",
+          "mainSha": "cb7c084a0d519384f969c850e6ec72b0383c05dd",
+          "size": 37504
+        },
+        {
+          "path": "decisions.json",
+          "sourceSha": "f972d9969f49f80ec9ca01be4ca8cf86fd0d7d11",
+          "mainSha": "63b60f8d87327c6fd1e80c8cdf4ff832c4089bfa",
+          "size": 44137
+        },
+        {
+          "path": "runtime-evidence.json",
+          "sourceSha": "9d9796ed0bc4dad2bf30e7188c9c11b3f75bf14e",
+          "mainSha": "9679bec7426329f5706409fdd014469f917c0b3b",
+          "size": 52132
+        }
+      ]
+    },
+    {
+      "branch": "proposal/vis002-semantic-state-colors-2026-10-19",
+      "head": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
+      "pr": 23,
+      "disposition": "HOLD",
+      "exclusive": [],
+      "modified": [
+        {
+          "path": "DECISION_APPLICATION_MAP.md",
+          "sourceSha": "e1749adaeafe491359cdfc6cfc8dbcb78b6dd589",
+          "mainSha": "0e5101eca5e928f7442e2f1cba0c57a76262b8c1",
+          "size": 12000
+        },
+        {
+          "path": "FINDINGS_REGISTER.md",
+          "sourceSha": "eb5474c39b802a0c3aff335776266b3a885eb14d",
+          "mainSha": "1ccc8e26bf5d1817d50ab1abeba3e0ff73e63857",
+          "size": 12545
+        },
+        {
+          "path": "PALETTE_APPLICATION_MAP.md",
+          "sourceSha": "d6b46505d4ccfb77d38f421560ed644f84005056",
+          "mainSha": "f907570bd639d69d96f74453613a14392a05ca65",
+          "size": 16979
+        },
+        {
+          "path": "PALETTE_CONFORMANCE.md",
+          "sourceSha": "24ac625c6133cd86e08775d9f44db2a106552784",
+          "mainSha": "37ee3b6ed8b3890506a1abc541d03c1c3f9d1f63",
+          "size": 11035
+        },
+        {
+          "path": "README.md",
+          "sourceSha": "550c1d51bdf92b58f0a11febc3645957a1392872",
+          "mainSha": "333463e325299dec739eff4736e03d3e07843ff1",
+          "size": 1576
+        },
+        {
+          "path": "RUNTIME_AUDIT.md",
+          "sourceSha": "cd5a8d46cf084b2beb818255b5e508db58a2c108",
+          "mainSha": "cb7c084a0d519384f969c850e6ec72b0383c05dd",
+          "size": 22380
+        },
+        {
+          "path": "VISUAL_INVENTORY.md",
+          "sourceSha": "2431736034a8f6409cb50a1b8c547ac92e7ef342",
+          "mainSha": "6e0be7d3232c78f60661174cb91f7099280799ad",
+          "size": 8907
+        },
+        {
+          "path": "decisions.json",
+          "sourceSha": "0578f1d626eab0cd1e6d64647642fd93db4911fb",
+          "mainSha": "63b60f8d87327c6fd1e80c8cdf4ff832c4089bfa",
+          "size": 35528
+        },
+        {
+          "path": "runtime-evidence.json",
+          "sourceSha": "799759999d0b8eb23c475d2179daafa3ee5e309c",
+          "mainSha": "9679bec7426329f5706409fdd014469f917c0b3b",
+          "size": 24619
+        },
+        {
+          "path": "visual-inventory.json",
+          "sourceSha": "ae097f251aaaede86277ff347e2990adc7953ca6",
+          "mainSha": "0e3ad3f39d82c4ec48cbb6b9839c8d4c479f5fec",
+          "size": 889888
+        }
+      ]
+    }
+  ]
+}
