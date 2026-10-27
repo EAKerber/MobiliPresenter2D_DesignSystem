@@ -1,0 +1,111 @@
+{
+  "schema": "DSD04PR51CanonicalBlobArchival/1",
+  "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "sourcePR": 51,
+  "sourceHead": "28062602a4ddcd1bee090742fe2587fe3837175d",
+  "mainBaseline": "6984276f08b8214bda1502886ccf3431e4555677",
+  "archiveMeaning": "Preserve original bytes of replaced existing-path files as inert text, without restoring historical authority.",
+  "counts": {
+    "exclusivePaths": 0,
+    "divergentExistingPaths": 11,
+    "preservedOldBlobCopies": 11,
+    "inertWorkflowCopies": 2,
+    "totalBytes": 1366256
+  },
+  "items": [
+    {
+      "sourcePath": ".github/workflows/p-token-01-reference-export-gate.yml",
+      "archivePath": "docs/historical-branch-blobs/pr51/.github/workflows/p-token-01-reference-export-gate.yml.txt",
+      "sourceSha": "ccc4d9412bfb13e3af49a3863447491cff301f5c",
+      "currentCanonicalSha": "9c6787b2f7d6100620b1d0aa333f0e126c87e25e",
+      "bytes": 1727,
+      "category": "INERT_OLD_WORKFLOW"
+    },
+    {
+      "sourcePath": ".github/workflows/p-token-02b-contextual-export.yml",
+      "archivePath": "docs/historical-branch-blobs/pr51/.github/workflows/p-token-02b-contextual-export.yml.txt",
+      "sourceSha": "a40789854e6609fa771dbee39580e5b0d4af7258",
+      "currentCanonicalSha": "06bfd2f8cfb2f383f0ec3359d4cde2563e44d9a3",
+      "bytes": 1029,
+      "category": "INERT_OLD_WORKFLOW"
+    },
+    {
+      "sourcePath": "DECISION_APPLICATION_MAP.md",
+      "archivePath": "docs/historical-branch-blobs/pr51/DECISION_APPLICATION_MAP.md.txt",
+      "sourceSha": "d59986c8f88b34fa63b58743d8c46b5441aaac1f",
+      "currentCanonicalSha": "0e5101eca5e928f7442e2f1cba0c57a76262b8c1",
+      "bytes": 17011,
+      "category": "OLD_CANONICAL_DOCUMENT"
+    },
+    {
+      "sourcePath": "FINDINGS_REGISTER.md",
+      "archivePath": "docs/historical-branch-blobs/pr51/FINDINGS_REGISTER.md.txt",
+      "sourceSha": "85c767854c077e123eba243cc5707718dbbe17d7",
+      "currentCanonicalSha": "1ccc8e26bf5d1817d50ab1abeba3e0ff73e63857",
+      "bytes": 19159,
+      "category": "OLD_CANONICAL_DOCUMENT"
+    },
+    {
+      "sourcePath": "README.md",
+      "archivePath": "docs/historical-branch-blobs/pr51/README.md.txt",
+      "sourceSha": "946a2fadbdf493578e3bc4e1cba235944a287d8c",
+      "currentCanonicalSha": "333463e325299dec739eff4736e03d3e07843ff1",
+      "bytes": 8121,
+      "category": "OLD_CANONICAL_DOCUMENT"
+    },
+    {
+      "sourcePath": "RUNTIME_AUDIT.md",
+      "archivePath": "docs/historical-branch-blobs/pr51/RUNTIME_AUDIT.md.txt",
+      "sourceSha": "841225664d8ff96ce563f029402db107211afde9",
+      "currentCanonicalSha": "cb7c084a0d519384f969c850e6ec72b0383c05dd",
+      "bytes": 60698,
+      "category": "OLD_CANONICAL_DOCUMENT"
+    },
+    {
+      "sourcePath": "docs/ARCHITECTURE_CURRENT_HANDOVER_2026-10-22.md",
+      "archivePath": "docs/historical-branch-blobs/pr51/docs/ARCHITECTURE_CURRENT_HANDOVER_2026-10-22.md.txt",
+      "sourceSha": "22e717bcd5a74b6822a45bce3c5d8fa30e044a83",
+      "currentCanonicalSha": "7af6738451a9da0561148f934e38008bdee889cf",
+      "bytes": 67560,
+      "category": "OLD_CANONICAL_DOCUMENT"
+    },
+    {
+      "sourcePath": "docs/ARCHITECTURE_DECISIONS_ARC01_ARC16_AND_EXECUTION_2026-10-21.md",
+      "archivePath": "docs/historical-branch-blobs/pr51/docs/ARCHITECTURE_DECISIONS_ARC01_ARC16_AND_EXECUTION_2026-10-21.md.txt",
+      "sourceSha": "b26a55b507e9044d7b107093eb5033a017a5a8be",
+      "currentCanonicalSha": "03f94f72071d98816a1cf664471c457a48b69f0e",
+      "bytes": 20297,
+      "category": "OLD_CANONICAL_DOCUMENT"
+    },
+    {
+      "sourcePath": "docs/ROADMAP_AND_CURRENT_STAGE_2026-10-21.md",
+      "archivePath": "docs/historical-branch-blobs/pr51/docs/ROADMAP_AND_CURRENT_STAGE_2026-10-21.md.txt",
+      "sourceSha": "e47ef676effb563fdd208f151708e870bb27c36f",
+      "currentCanonicalSha": "6b1ce6dcb50ee0e3ed822a3e2d602d933565e8e1",
+      "bytes": 147383,
+      "category": "OLD_CANONICAL_DOCUMENT"
+    },
+    {
+      "sourcePath": "runtime-evidence.json",
+      "archivePath": "docs/historical-branch-blobs/pr51/runtime-evidence.json.txt",
+      "sourceSha": "843686b44e0b6bd4efd1a592b7a73ccfc216a99f",
+      "currentCanonicalSha": "9679bec7426329f5706409fdd014469f917c0b3b",
+      "bytes": 76331,
+      "category": "OLD_SNAPSHOT_INDEX"
+    },
+    {
+      "sourcePath": "visual-inventory.json",
+      "archivePath": "docs/historical-branch-blobs/pr51/visual-inventory.json.txt",
+      "sourceSha": "1d6262eb5657f50687bd874616c24b576d0a6a6e",
+      "currentCanonicalSha": "0e3ad3f39d82c4ec48cbb6b9839c8d4c479f5fec",
+      "bytes": 946940,
+      "category": "OLD_SNAPSHOT_INDEX"
+    }
+  ],
+  "limits": [
+    "This preserves each old blob as a tree entry reachable from main, not full commit DAG of old ref",
+    "Current root decisions.json, reports, runtime-evidence.json, visual-inventory.json and workflow definitions are untouched",
+    "Do not treat archive as a second canonical source or automatic branch-safe deletion proof",
+    "Branch hygiene's original ancestry/squash-tree gate still blocks delete"
+  ]
+}

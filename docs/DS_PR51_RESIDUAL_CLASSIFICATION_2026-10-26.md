@@ -70,3 +70,7 @@ Mais 71 fontes históricas do head #51: 69 MDs `*consumer-trace-*` e dois índic
 ## D04 — zero caminhos exclusivos da #51 (27/10/2026; após último lote, sujeito a readback)
 
 45 relatórios runtime históricos em [manifesto Git exato](DS_D04_RUNTIME_EVIDENCE_BLOBS_2026-10-27.json) e [interpretação](DS_D04_RUNTIME_EVIDENCE_PRESERVATION_2026-10-27.md). Saldo esperado da diferença de paths 45→**0**, mas **11 paths existentes em ambas as árvores possuem blobs de conteúdo diferente** e a ref da #51 diverge em Git. Nenhum desses fatos autoriza eliminar a ref; verificar runtime historical states separadamente e manter `ops/branch-dispositions.json` como HOLD.
+
+## D04 — os 11 caminhos modificados da #51 ganharam destinos inertes (27/10/2026)
+
+Sem paths exclusivos, a diferença restante em arquivos da #51 eram 11 versões anteriores de workflows, mapas/achados, handovers, runtime e inventário. [Manifesto](DS_D04_PR51_OLD_CANONICAL_BLOBS_2026-10-27.json) mapeia todos para `docs/historical-branch-blobs/pr51/**/*.txt` (SHA exato) sem alterar as fontes canônicas. Histórico de commits ainda diverge; executor de higiene original exige ancestry/squash proof, logo **não apagar branch** sob falso argumento de merge ou duplicidade. [Relatório](DS_D04_PR51_CANONICAL_ARCHIVE_2026-10-27.md).
