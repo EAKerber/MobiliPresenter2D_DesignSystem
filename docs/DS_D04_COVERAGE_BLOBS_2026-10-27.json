@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "DS-D04-CoverageProvenance 0.1",
+  "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "baseMain": "45fa47c670bce94ff83df4c2844ede659925fa1e",
+  "sourcePR": 51,
+  "sourceHead": "28062602a4ddcd1bee090742fe2587fe3837175d",
+  "sourceBlobs": [
+    {
+      "path": "evidence/architecture/master-plan-g0-g8-current-crosswalk-2026-10-25.md",
+      "sha": "6199eb0d80ac7ff895febe125c862d12fa446670",
+      "bytes": 9939
+    },
+    {
+      "path": "evidence/architecture/runtime-inventory-coverage-2026-10-24.md",
+      "sha": "0d9e1c13c58e4f8c20d48d2ab86c706e62e50b04",
+      "bytes": 9869
+    },
+    {
+      "path": "evidence/architecture/visual-rule-family-runtime-map-2026-10-24.md",
+      "sha": "9a06e487e1c057cc559f22135971ed4470d4bd9e",
+      "bytes": 9117
+    },
+    {
+      "path": "evidence/architecture/issue208-ds04-main-source-reconciliation-2026-10-25.md",
+      "sha": "0322934e5d34c511bd9011f3cd2f328b7e0830a1",
+      "bytes": 8634
+    }
+  ],
+  "authority": "dated review evidence only",
+  "limitations": [
+    "Product head 5ccb2a8 and PR status readings were dated 24–26 October 2026, not verified now",
+    "Static CSS block count and partial runtime coverage are not global conformance",
+    "Many historic intra-evidence links still refer to source material under HOLD"
+  ]
+}

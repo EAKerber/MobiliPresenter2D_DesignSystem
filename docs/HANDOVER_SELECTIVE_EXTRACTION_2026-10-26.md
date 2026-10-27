@@ -74,3 +74,7 @@ Seleção de 9 blobs SHA-exact de [PR #39](https://github.com/EAKerber/MobiliPre
 ## D04 — contrato ARC-13 e Viewer / DS-05A (27/10/2026)
 
 Quatro fontes exclusivas da #51 em [manifesto](DS_D04_CONTRACT_PROVENANCE_2026-10-27.json) e [síntese com limites](DS_D04_CONTRACT_PROVENANCE_2026-10-27.md). Convenção de chaves aprovada apenas para nomeação (não exemplos), erro global do Viewer com placeholder aprovado para comportamento (não deploy), gate auth com pendências Keyboard/Flow. Dois documentos de suporte já existem na main com SHAs originais e não serão duplicados. Após merge, 197 caminhos exclusivos restantes na #51.
+
+## D04 — matrizes CSS, G0–G8 e 16 achados DS-04 (27/10/2026)
+
+Quatro documentos por Git Blob exato de #51, classificação e SHAs em [DS_D04_COVERAGE_RECONCILIATION_2026-10-27.md](DS_D04_COVERAGE_RECONCILIATION_2026-10-27.md) e [manifesto](DS_D04_COVERAGE_BLOBS_2026-10-27.json). As leituras de Production/PR são datadas e parciais; evidência estática não cobre navegador autenticado nem estado atual. Após merge, 193 exclusivos na #51.
