@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "DS-PR39-NineCanonicalDifferences 0.1",
+  "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "sourcePR": 39,
+  "sourceHead": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
+  "baselineMain": "aa21206809e590a249ee12190971d62b72d0ee34",
+  "proofBasis": [
+    "Live PR head and snapshot tree",
+    "DS_HOLD_BRANCH_BLOBS_2026-10-26.json source blob identities",
+    "By-field comparison of decisions.json, runtime-evidence.json and visual-inventory.json",
+    "Line-level classification of 6 Markdown paths",
+    "21 exclusive source blobs preserved by exact Git hashes in PR #93"
+  ],
+  "category": "SUPERSEDED_HISTORICAL_SNAPSHOT_NOT_NORMATIVE",
+  "files": [
+    {
+      "path": "DECISION_APPLICATION_MAP.md",
+      "sourceSha": "4960a07e5a79a7c751ecb36cdf6ccc88ded4b67c",
+      "mainSha": "0e5101eca5e928f7442e2f1cba0c57a76262b8c1",
+      "disposition": "SUPERSEDED_SNAPSHOT: 2026-10-19 product/deploy references and historic NAV-005/VIS-002/VIS-003 status; main's later application map prevails"
+    },
+    {
+      "path": "FINDINGS_REGISTER.md",
+      "sourceSha": "4db026889f6c7a579d520c7d2b3118b5054eb032",
+      "mainSha": "1ccc8e26bf5d1817d50ab1abeba3e0ff73e63857",
+      "disposition": "SUPERSEDED_SNAPSHOT: earlier pending-post-deploy statuses of findings; source findings must remain dated and main current register prevails"
+    },
+    {
+      "path": "PALETTE_CONFORMANCE.md",
+      "sourceSha": "015becd5c217850335f90a51b52c8e5c97594450",
+      "mainSha": "37ee3b6ed8b3890506a1abc541d03c1c3f9d1f63",
+      "disposition": "SUPERSEDED_SNAPSHOT: 2026-10-18 preliminary palette pair mapping; main has later measured/current-context distinctions"
+    },
+    {
+      "path": "README.md",
+      "sourceSha": "4b9481bf9702f3f14f286153edfe6abb82d2f02e",
+      "mainSha": "333463e325299dec739eff4736e03d3e07843ff1",
+      "disposition": "SUPERSEDED_NAVIGATION: old README uniquely linked #39 plans; original referenced docs now source-SHA-preserved at their canonical historic paths via PR #93; current README remains canonical"
+    },
+    {
+      "path": "RUNTIME_AUDIT.md",
+      "sourceSha": "6018b772421584f7efe2ba0f1d8ad6f2f470f6be",
+      "mainSha": "cb7c084a0d519384f969c850e6ec72b0383c05dd",
+      "disposition": "OLDER_RUNTIME_SNAPSHOT: comparison of normalized substantive lines found no old-only substantive lines; main expanded later; not proof of current behavior"
+    },
+    {
+      "path": "VISUAL_INVENTORY.md",
+      "sourceSha": "9f38f1c346ea23eb3f116125937c6a9b053bddfa",
+      "mainSha": "6e0be7d3232c78f60661174cb91f7099280799ad",
+      "disposition": "OLDER_PROVENANCE: product snapshot 483ef2e vs main 1878ae1, old VIS-003 status pending and old map description; main newer"
+    },
+    {
+      "path": "decisions.json",
+      "sourceSha": "d715f428319e1d2e290ec40936c846a46bfca5b7",
+      "mainSha": "63b60f8d87327c6fd1e80c8cdf4ff832c4089bfa",
+      "disposition": "SUPERSEDED_DECISION_FIELDS: same 22 IDs, changed NAV-005 VIS-002 VIS-003 EST-02; main latest approvals/limited runtime notes remain sole normative authority"
+    },
+    {
+      "path": "runtime-evidence.json",
+      "sourceSha": "2f1888971916bdbdc723d8dfe867ff69325cfd9f",
+      "mainSha": "9679bec7426329f5706409fdd014469f917c0b3b",
+      "disposition": "EXTENDED_HISTORICAL_INDEX: 23 original top-level keys all present in main; interactions 6 preserved as prefix of 7, contrast follow-ups 3 extended to 5; main has 4 additional top-level records; old data remains historical"
+    },
+    {
+      "path": "visual-inventory.json",
+      "sourceSha": "5bdb7f600247c67c275e0fd8a9f0fd3650228009",
+      "mainSha": "0e3ad3f39d82c4ec48cbb6b9839c8d4c479f5fec",
+      "disposition": "OLDER_STATIC_SOURCE: old snapshot product=483ef2e on 2026-10-19, main snapshot=1878ae1 on 2026-10-20; eight HTML entries, only access/admin HTML sourceCoverage changed; CSS sourceCoverage unchanged; do not revert main"
+    }
+  ],
+  "approval": "PR closure as superseded, branch SHA remains HOLD; does not approve deleting divergent Git history or replacing main"
+}
