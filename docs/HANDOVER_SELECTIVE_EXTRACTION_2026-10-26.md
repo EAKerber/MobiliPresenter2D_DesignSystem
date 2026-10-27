@@ -70,3 +70,7 @@ Após esta extração, **207** caminhos exclusivos da #51 continuam HOLD (218 an
 ## Lote D04 — ownership e fluxo crítico Admin (27/10/2026)
 
 Seleção de 9 blobs SHA-exact de [PR #39](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/39) e [PR #51](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51). Proposta de documentação estática/ownership (3) e contratos de erros, auth e publicação no Admin (6). Proveniência [JSON](DS_D04_OWNERSHIP_AND_ADMIN_BLOBS_2026-10-27.json) e [nota](DS_D04_OWNERSHIP_AND_ADMIN_2026-10-27.md). Não aplicar workflows históricos nem confundir PR com homologação. Contagens condicionadas ao merge: #39 21 exclusivos, #51 201. Gates de exclusão permanecem independentes.
+
+## D04 — contrato ARC-13 e Viewer / DS-05A (27/10/2026)
+
+Quatro fontes exclusivas da #51 em [manifesto](DS_D04_CONTRACT_PROVENANCE_2026-10-27.json) e [síntese com limites](DS_D04_CONTRACT_PROVENANCE_2026-10-27.md). Convenção de chaves aprovada apenas para nomeação (não exemplos), erro global do Viewer com placeholder aprovado para comportamento (não deploy), gate auth com pendências Keyboard/Flow. Dois documentos de suporte já existem na main com SHAs originais e não serão duplicados. Após merge, 197 caminhos exclusivos restantes na #51.

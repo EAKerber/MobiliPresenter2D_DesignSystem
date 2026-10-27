@@ -1,0 +1,180 @@
+{
+  "schema": "M2DArc13SemanticKeyConventionProposal/1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "status": "convention-approved-examples-remain-proposals",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "rationale": "The convention is approved for documentary use and future proposal batches. The 13 sample key mappings remain proposals and do not update decisions, the canonical index, product code, or runtime.",
+  "proposedRules": [
+    "Preservar o namespace de domínio já existente no semanticKey; substituir somente o sufixo numérico por um nome estável da condição ou função.",
+    "Usar camelCase no sufixo, sem número de linha, nome de arquivo, texto traduzido ou versão de schema como identidade da mensagem.",
+    "Manter no sufixo a intenção quando ela distingue uso, por exemplo validation, error, label, action ou aria; não adicionar intenção redundante ao namespace existente.",
+    "Valores dinâmicos pertencem aos parâmetros do template, não à chave. Cada proposta deve registrar o contrato dos parâmetros.",
+    "Só compartilhar chave quando owner, consumer e contrato de parâmetros coincidirem. Texto igual em domínios diferentes e mensagens parecidas com parâmetros distintos permanecem separadas até revisão.",
+    "Tratar toda substituição abaixo como candidata; revisar owner/consumer, colisões e interpolação antes de atualizar o índice ou extrair catálogo."
+  ],
+  "entries": [
+    {
+      "currentKey": "admin.configuration.validation.23",
+      "proposedKey": "admin.configuration.validation.priceBookProjectionUnsupportedWithDetails",
+      "text": "price book pricing is not v3-compatible: ${projected.errors?.[0] || projected.code}",
+      "file": "app/core/configuration.js",
+      "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+      "line": 23,
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "parameters": [
+        "projected.errors[0] or projected.code"
+      ],
+      "review": "A entrada sem detalhes na linha 282 permanece chave separada nesta proposta; confirmar se ambas são variantes do mesmo erro antes de consolidar."
+    },
+    {
+      "currentKey": "admin.configuration.validation.282",
+      "proposedKey": "admin.configuration.validation.priceBookProjectionUnsupported",
+      "text": "price book pricing is not v3-compatible",
+      "file": "app/core/configuration.js",
+      "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+      "line": 282,
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "parameters": [],
+      "review": "Não compartilhar chave com a linha 23 sem verificar se o detalhe dinâmico é opcional no mesmo contrato."
+    },
+    {
+      "currentKey": "admin.configuration.validation.284",
+      "proposedKey": "admin.configuration.validation.unsupportedSettingsSchema",
+      "text": "unsupported settings schema",
+      "file": "app/core/configuration.js",
+      "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+      "line": 284,
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "parameters": []
+    },
+    {
+      "currentKey": "admin.configuration.validation.298",
+      "proposedKey": "admin.configuration.validation.stageCountOutOfRange",
+      "text": "stage count must be between 2 and 12",
+      "file": "app/core/configuration.js",
+      "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+      "line": 298,
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "parameters": [],
+      "review": "A mesma frase aparece em outro domínio; manter namespace de configuração próprio."
+    },
+    {
+      "currentKey": "admin.configuration.validation.301",
+      "proposedKey": "admin.configuration.validation.duplicateStageId",
+      "text": "duplicate stage: ${stage.id}",
+      "file": "app/core/configuration.js",
+      "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+      "line": 301,
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "parameters": [
+        "stage.id"
+      ]
+    },
+    {
+      "currentKey": "admin.configuration.validation.305",
+      "proposedKey": "admin.configuration.validation.duplicateStageType",
+      "text": "duplicate stage type: ${kind}",
+      "file": "app/core/configuration.js",
+      "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+      "line": 305,
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "parameters": [
+        "kind"
+      ]
+    },
+    {
+      "currentKey": "admin.configuration.validation.309",
+      "proposedKey": "admin.configuration.validation.modulesStageMustRemainEnabled",
+      "text": "modules stage must remain enabled",
+      "file": "app/core/configuration.js",
+      "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+      "line": 309,
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "parameters": []
+    },
+    {
+      "currentKey": "admin.hierarchyValidation.143",
+      "proposedKey": "admin.hierarchyValidation.unsupportedHierarchySettingsSchema",
+      "text": "unsupported hierarchy settings schema",
+      "file": "app/core/hierarchy-administration.js",
+      "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+      "line": 143,
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": []
+    },
+    {
+      "currentKey": "admin.presentationValidation.55",
+      "proposedKey": "admin.presentationValidation.unsupportedPresentationComponent",
+      "text": "unsupported presentation component: ${component || \"(empty)\"}",
+      "file": "app/core/presentation-contract.js",
+      "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+      "line": 55,
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "parameters": [
+        "component or empty fallback"
+      ]
+    },
+    {
+      "currentKey": "admin.flowValidation.76",
+      "proposedKey": "admin.flowValidation.customStageHierarchyDefaultsMissing",
+      "text": "custom stage hierarchy defaults are missing: ${stage.id}",
+      "file": "app/core/flow-model.js",
+      "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+      "line": 76,
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "parameters": [
+        "stage.id"
+      ]
+    },
+    {
+      "currentKey": "admin.pricing.validation.56",
+      "proposedKey": "admin.pricing.validation.invalidPricingRule",
+      "text": "invalid pricing rule: ${path}",
+      "file": "app/core/pricing-contract.js",
+      "blobSha": "d16e7954e80216c4448ddc82410012d8aa889b8b",
+      "line": 56,
+      "consumer": "pricing validation error surfaced in the admin service-error panel",
+      "parameters": [
+        "path"
+      ]
+    },
+    {
+      "currentKey": "admin.validation.164",
+      "proposedKey": "admin.validation.pricingCannotBeProjectedToPreviousSchema",
+      "text": "pricing cannot be projected to the previous schema",
+      "file": "app/core/administration-v5.js",
+      "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+      "line": 164,
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "parameters": []
+    },
+    {
+      "currentKey": "admin.legacyHandles.54",
+      "proposedKey": "admin.legacyHandles.requiresCurrentSchema",
+      "text": "A origem publicada precisa estar no schema v3 atual.",
+      "file": "app/core/legacy-stage-repair.js",
+      "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+      "line": 54,
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "parameters": []
+    }
+  ],
+  "reviewQuestions": [
+    "Aprovar ou ajustar os segmentos atuais de namespace antes de promover a convenção.",
+    "Validar se versões explícitas de schema pertencem à mensagem traduzível ou à lógica de migração; a proposta de chave evita versionar a identidade.",
+    "Revisar a relação entre as linhas 23 e 282 de configuration.js e as mensagens repetidas entre domínios antes de deduplicar.",
+    "Completar os 199 casos numéricos restantes após aceitar a convenção, ou alterar os exemplos primeiro."
+  ],
+  "approval": {
+    "date": "2026-10-25",
+    "scope": "Semantic key naming convention only: preserve domain namespace, use stable semantic camelCase suffixes, keep dynamic values as parameters, and share keys only when owner, consumer, and parameter contract match.",
+    "userAuthorized": true,
+    "notAuthorized": [
+      "Product runtime migration",
+      "Canonical ARC index migration",
+      "Unreviewed sample-key mappings"
+    ]
+  }
+}
