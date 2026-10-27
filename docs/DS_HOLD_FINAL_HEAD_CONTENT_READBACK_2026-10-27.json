@@ -1,0 +1,101 @@
+{
+  "schema": "DSFinalHOLDHeadReadback/1",
+  "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "verifiedAt": "2026-10-27",
+  "mainSha": "18e50981c322e153819d7cb1ce80139d8f71c4d9",
+  "proofs": {
+    "mainBlobsContainEveryHEADBlob": true,
+    "headSourceRefs": 8,
+    "unreachableBlobsAcrossEightHeads": 0,
+    "pr51ExclusivePaths": 0,
+    "pr51ModifiedPathsArchivedInertly": 11,
+    "otherSevenMissingHeadBlobInstancesArchivedInertly": 54,
+    "otherSevenUniqueBlobsArchived": 45,
+    "mainHygieneAction": {
+      "id": 40448667631,
+      "conclusion": "success"
+    },
+    "openPullRequests": 0,
+    "branches": 10,
+    "operationalBranchAncestry": {
+      "base": "maintenance/ds-pr41-runtime-evidence-extract-20261026",
+      "head": "main",
+      "status": "ahead",
+      "ahead_by": 1,
+      "behind_by": 0
+    }
+  },
+  "heads": [
+    {
+      "branch": "architecture/dom-css-consolidation-20261020",
+      "sha": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
+      "blobCount": 70,
+      "blobContentMissingFromMain": 0,
+      "gitCommitHistoryNotInMain": 54,
+      "retirementGate": "BLOCKED_UNDER_ANCESTRY_OR_EXACT_SQUASH_POLICY"
+    },
+    {
+      "branch": "audit/access-confirmation-runtime-20261020",
+      "sha": "ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37",
+      "blobCount": 54,
+      "blobContentMissingFromMain": 0,
+      "gitCommitHistoryNotInMain": 3,
+      "retirementGate": "BLOCKED_UNDER_ANCESTRY_OR_EXACT_SQUASH_POLICY"
+    },
+    {
+      "branch": "audit/approved-contrast-runtime-20261021",
+      "sha": "e848e079071f4b2ce788e18a10a2284e6a24ff7a",
+      "blobCount": 48,
+      "blobContentMissingFromMain": 0,
+      "gitCommitHistoryNotInMain": 9,
+      "retirementGate": "BLOCKED_UNDER_ANCESTRY_OR_EXACT_SQUASH_POLICY"
+    },
+    {
+      "branch": "audit/auth-session-flow-2026-10-19",
+      "sha": "360d2e6d93d93ab74036149b518f22c01d57ecb0",
+      "blobCount": 43,
+      "blobContentMissingFromMain": 0,
+      "gitCommitHistoryNotInMain": 12,
+      "retirementGate": "BLOCKED_UNDER_ANCESTRY_OR_EXACT_SQUASH_POLICY"
+    },
+    {
+      "branch": "docs/current-handover-20261024",
+      "sha": "28062602a4ddcd1bee090742fe2587fe3837175d",
+      "blobCount": 316,
+      "blobContentMissingFromMain": 0,
+      "gitCommitHistoryNotInMain": 814,
+      "retirementGate": "BLOCKED_UNDER_ANCESTRY_OR_EXACT_SQUASH_POLICY"
+    },
+    {
+      "branch": "docs/handover-reconcile-20261023",
+      "sha": "96093786ed8fb182c604182c37a42681cba8d6c9",
+      "blobCount": 88,
+      "blobContentMissingFromMain": 0,
+      "gitCommitHistoryNotInMain": 6,
+      "retirementGate": "BLOCKED_UNDER_ANCESTRY_OR_EXACT_SQUASH_POLICY"
+    },
+    {
+      "branch": "docs/reconcile-approved-focus-record",
+      "sha": "430f4e1c7b376ae08e1788bd3aa365a32f2b76e2",
+      "blobCount": 49,
+      "blobContentMissingFromMain": 0,
+      "gitCommitHistoryNotInMain": 2,
+      "retirementGate": "BLOCKED_UNDER_ANCESTRY_OR_EXACT_SQUASH_POLICY"
+    },
+    {
+      "branch": "proposal/vis002-semantic-state-colors-2026-10-19",
+      "sha": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
+      "blobCount": 34,
+      "blobContentMissingFromMain": 0,
+      "gitCommitHistoryNotInMain": 11,
+      "retirementGate": "BLOCKED_UNDER_ANCESTRY_OR_EXACT_SQUASH_POLICY"
+    }
+  ],
+  "constraints": [
+    "The comparison is HEAD tree/blob content coverage only, not every intermediate historical version.",
+    "Github compare behind_by is a dated count from base=branch head...main; it may change with future merges.",
+    "No source branch is safe for deletion by existing ancestry/exact squash-tree workflow.",
+    "The operational branch is an ancestor of main but terminal self-deletion cannot be SHA-pinned from its own PR.",
+    "No destructive action or change to product repo performed."
+  ]
+}
