@@ -1,0 +1,628 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sources": [
+    {
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6"
+    },
+    {
+      "file": "app/core/technical-drawings.js",
+      "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871"
+    },
+    {
+      "file": "app/viewer/technical-views.js",
+      "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292"
+    },
+    {
+      "file": "app/core/scene-component.js",
+      "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6"
+    }
+  ],
+  "reviewScope": "Configurator technical-detail carousel and shared Viewer technical views/drawings, plus scene hotspot accessible name. The scanned helpers and direct DOM/ARIA bindings in this scope were manually reviewed.",
+  "totals": {
+    "classifiedEntries": 33,
+    "sourceLocations": 41
+  },
+  "notes": [
+    "Inventory only: product code remains unchanged.",
+    "V5/domain labels, module titles, references, segment names and measured values stay as data parameters; they are not moved into translation resources.",
+    "Dimension symbols L/A/P and unit mm need domain/measurement-format review; `milímetros` in accessible prose is localizable.",
+    "This batch does not classify other text in app/app.js, all routes, catalog content or server messages."
+  ],
+  "entries": [
+    {
+      "semanticKey": "technicalView.caption.front",
+      "currentText": "Vista frontal",
+      "sources": [
+        {
+          "file": "app/viewer/technical-views.js",
+          "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+          "line": 21
+        },
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1074
+        }
+      ],
+      "consumer": "technical view captions and carousel page title",
+      "owner": "technical-view component",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "technicalView.caption.side",
+      "currentText": "Vista lateral",
+      "sources": [
+        {
+          "file": "app/viewer/technical-views.js",
+          "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+          "line": 21
+        },
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1074
+        }
+      ],
+      "consumer": "technical view captions and carousel page title",
+      "owner": "technical-view component",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "technicalView.caption.internal",
+      "currentText": "Vista interna",
+      "sources": [
+        {
+          "file": "app/viewer/technical-views.js",
+          "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+          "line": 37
+        },
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 964
+        }
+      ],
+      "consumer": "internal view caption and carousel page title",
+      "owner": "technical-view component",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "technicalView.caption.isometric",
+      "currentText": "Projeção isométrica",
+      "sources": [
+        {
+          "file": "app/viewer/technical-views.js",
+          "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+          "line": 21
+        },
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1085
+        }
+      ],
+      "consumer": "isometric view caption and carousel page title",
+      "owner": "technical-view component",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "technicalView.note.frontCountConfirmed",
+      "currentText": "Número de frentes confirmado; proporções internas orientativas.",
+      "sources": [
+        {
+          "file": "app/viewer/technical-views.js",
+          "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+          "line": 23
+        }
+      ],
+      "consumer": "technical-view explanatory note",
+      "owner": "technical-view component",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "technicalView.note.proportionalDrawing",
+      "currentText": "Desenho proporcional · cotas nominais.",
+      "sources": [
+        {
+          "file": "app/viewer/technical-views.js",
+          "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+          "line": 23
+        }
+      ],
+      "consumer": "technical-view explanatory note",
+      "owner": "technical-view component",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "technicalView.note.internal",
+      "currentText": "Vãos internos confirmados; medidas não representam o envelope externo.",
+      "sources": [
+        {
+          "file": "app/viewer/technical-views.js",
+          "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+          "line": 38
+        }
+      ],
+      "consumer": "internal view explanatory note",
+      "owner": "technical-view component",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "technicalView.caption.moduleDetail",
+      "currentText": "Detalhe do módulo",
+      "sources": [
+        {
+          "file": "app/viewer/technical-views.js",
+          "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+          "line": 44
+        }
+      ],
+      "consumer": "focused module view heading",
+      "owner": "technical-view component",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "technicalView.note.focusUnavailable",
+      "currentText": "Recorte do módulo indisponível.",
+      "sources": [
+        {
+          "file": "app/viewer/technical-views.js",
+          "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+          "line": 46
+        }
+      ],
+      "consumer": "fallback note when focused asset is missing",
+      "owner": "technical-view component",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "technicalView.note.focusSelected",
+      "currentText": "Recorte do módulo selecionado na cena.",
+      "sources": [
+        {
+          "file": "app/viewer/technical-views.js",
+          "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+          "line": 56
+        }
+      ],
+      "consumer": "focused module explanatory note",
+      "owner": "technical-view component",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "technicalView.aria.internalSegments",
+      "currentText": "Vista interna frontal com segmentos confirmados: {segments}.",
+      "sources": [
+        {
+          "file": "app/viewer/technical-views.js",
+          "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+          "line": 34
+        }
+      ],
+      "consumer": "internal SVG accessible name",
+      "owner": "technical-view component",
+      "parameters": [
+        "segments: domain segment labels and formatted dimensions"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "technicalView.aria.focusedModule",
+      "currentText": "Recorte isolado de {moduleTitle}",
+      "sources": [
+        {
+          "file": "app/viewer/technical-views.js",
+          "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+          "line": 52
+        }
+      ],
+      "consumer": "focused module image accessible name",
+      "owner": "technical-view component",
+      "parameters": [
+        "moduleTitle: V5/domain title data"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "technicalView.aria.hotspot",
+      "currentText": "Ver ficha de {reference}, {title}",
+      "sources": [
+        {
+          "file": "app/core/scene-component.js",
+          "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+          "line": 49
+        }
+      ],
+      "consumer": "scene hotspot accessible name",
+      "owner": "shared scene hotspot",
+      "parameters": [
+        "reference and title: V5/domain display data"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "technicalDrawing.aria.elevation",
+      "currentText": "{view}: {horizontalLabel} {width} milímetros por A {height} milímetros{amplificationNote}",
+      "sources": [
+        {
+          "file": "app/core/technical-drawings.js",
+          "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+          "line": 76
+        }
+      ],
+      "consumer": "technical drawing accessible name",
+      "owner": "technical drawing component",
+      "parameters": [
+        "view: front or side",
+        "horizontalLabel and dimensions: drawing/domain data",
+        "amplificationNote: optional localized sentence"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "technicalDrawing.aria.isometric",
+      "currentText": "Projeção isométrica orientativa: {horizontalLabel} {width} milímetros, A {height} milímetros e {depthLabel} {depth} milímetros{amplificationNote}",
+      "sources": [
+        {
+          "file": "app/core/technical-drawings.js",
+          "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+          "line": 105
+        }
+      ],
+      "consumer": "isometric drawing accessible name",
+      "owner": "technical drawing component",
+      "parameters": [
+        "dimension labels and values: drawing/domain data",
+        "amplificationNote: optional localized sentence"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "technicalDrawing.note.thicknessAmplified",
+      "currentText": "A espessura foi ampliada apenas para legibilidade.",
+      "sources": [
+        {
+          "file": "app/core/technical-drawings.js",
+          "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+          "line": 76
+        }
+      ],
+      "consumer": "optional accessible explanation on technical drawings",
+      "owner": "technical drawing component",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "technicalDrawing.aria.internalDefault",
+      "currentText": "Vista interna frontal: {segments}.",
+      "sources": [
+        {
+          "file": "app/core/technical-drawings.js",
+          "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+          "line": 135
+        }
+      ],
+      "consumer": "fallback accessible name for internal drawing",
+      "owner": "technical drawing component",
+      "parameters": [
+        "segments: domain labels and formatted values"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "configurator.dimension.label.width",
+      "currentText": "Largura",
+      "sources": [
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1057
+        }
+      ],
+      "consumer": "nominal dimension list",
+      "owner": "configurator module detail",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "configurator.dimension.label.height",
+      "currentText": "Altura",
+      "sources": [
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1058
+        },
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1058
+        }
+      ],
+      "consumer": "nominal dimension list",
+      "owner": "configurator module detail",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "configurator.dimension.label.depth",
+      "currentText": "Profundidade",
+      "sources": [
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1059
+        },
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1052
+        }
+      ],
+      "consumer": "nominal dimension list",
+      "owner": "configurator module detail",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "configurator.dimension.label.thickness",
+      "currentText": "Espessura",
+      "sources": [
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1053
+        }
+      ],
+      "consumer": "panel nominal dimension list",
+      "owner": "configurator module detail",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "configurator.dimension.summary",
+      "currentText": "Medidas nominais: {display}{axes}",
+      "sources": [
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1065
+        }
+      ],
+      "consumer": "selected module dimension summary",
+      "owner": "configurator module detail",
+      "parameters": [
+        "display and axes: domain-provided values"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "configurator.carousel.aria",
+      "currentText": "Visualizações do módulo",
+      "sources": [
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1122
+        }
+      ],
+      "consumer": "technical carousel accessible name",
+      "owner": "configurator module detail",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "configurator.carousel.title",
+      "currentText": "Visualizações",
+      "sources": [
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1126
+        }
+      ],
+      "consumer": "technical carousel heading",
+      "owner": "configurator module detail",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "configurator.carousel.intro",
+      "currentText": "Navegue pelo foco do módulo e pelas vistas orientativas.",
+      "sources": [
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1134
+        }
+      ],
+      "consumer": "technical carousel introduction",
+      "owner": "configurator module detail",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "configurator.carousel.dots.aria",
+      "currentText": "Páginas de visualização",
+      "sources": [
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1140
+        }
+      ],
+      "consumer": "carousel page controls accessible name",
+      "owner": "configurator module detail",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "configurator.carousel.control.show",
+      "currentText": "Mostrar {page}",
+      "sources": [
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1171
+        },
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1173
+        },
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1210
+        }
+      ],
+      "consumer": "previous/next/page dot accessible labels",
+      "owner": "configurator module detail",
+      "parameters": [
+        "page: technical carousel page label",
+        "current and total page numbers: numeric state"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "configurator.carousel.title.previous",
+      "currentText": "Anterior: {shortPage}",
+      "sources": [
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1172
+        }
+      ],
+      "consumer": "previous control title",
+      "owner": "configurator module detail",
+      "parameters": [
+        "shortPage: technical carousel short label"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "configurator.carousel.title.next",
+      "currentText": "Próxima: {shortPage}",
+      "sources": [
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1174
+        }
+      ],
+      "consumer": "next control title",
+      "owner": "configurator module detail",
+      "parameters": [
+        "shortPage: technical carousel short label"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "configurator.carousel.collapse.expand",
+      "currentText": "Expandir visualizações",
+      "sources": [
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1270
+        }
+      ],
+      "consumer": "collapsed carousel accessible label",
+      "owner": "configurator module detail",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "configurator.carousel.collapse.collapse",
+      "currentText": "Recolher visualizações",
+      "sources": [
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1270
+        }
+      ],
+      "consumer": "expanded carousel accessible label",
+      "owner": "configurator module detail",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "configurator.carousel.action.show",
+      "currentText": "Mostrar",
+      "sources": [
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1271
+        }
+      ],
+      "consumer": "collapsed carousel visible control label",
+      "owner": "configurator module detail",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "configurator.carousel.action.hide",
+      "currentText": "Recolher",
+      "sources": [
+        {
+          "file": "app/app.js",
+          "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+          "line": 1271
+        }
+      ],
+      "consumer": "expanded carousel visible control label",
+      "owner": "configurator module detail",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    }
+  ]
+}
