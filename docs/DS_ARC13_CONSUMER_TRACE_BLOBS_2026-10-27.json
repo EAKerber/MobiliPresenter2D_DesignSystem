@@ -1,0 +1,467 @@
+{
+  "schema": "DSARC13ConsumerTracePreservation/1",
+  "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "sourcePR": 51,
+  "sourceHead": "28062602a4ddcd1bee090742fe2587fe3837175d",
+  "sourceProductHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "baselineMain": "1a7e9d26d4d2b74902764a4bf0301c03fa274b8a",
+  "purpose": "Preserve source-specific consumer/owner/branch/error-state contracts, and scope/context maps, without promoting localization keys.",
+  "inventory": {
+    "tracesTotal": 69,
+    "tracesAdmin": 33,
+    "tracesConfigurator": 36,
+    "scopeMaps": 2,
+    "bytes": 576502,
+    "priorExclusive": 151,
+    "expectedExclusiveAfter": 80
+  },
+  "artifacts": [
+    {
+      "path": "evidence/architecture/arc13-admin-appendHierarchyChoiceOptions-consumer-trace-2026-10-25.md",
+      "sha": "449b2c38b005440d96242edcd644751689b18c23",
+      "bytes": 2900,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-appendInitialStateControl-consumer-trace-2026-10-25.md",
+      "sha": "3dd1da3550db70208911c45e6b9cb04e123d3595",
+      "bytes": 3547,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-appendMaterialAvailabilityList-consumer-trace-2026-10-25.md",
+      "sha": "b3619514113a64c5b123edde69c1a4162d591df1",
+      "bytes": 1157,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-appendNominalDimensionControls-consumer-trace-2026-10-25.md",
+      "sha": "71465d9d3e896909b3d4c7ce9c675b8aff3155f1",
+      "bytes": 3040,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-catalogObjects-consumer-trace-2026-10-25.md",
+      "sha": "5ee3a5c5db923fdb792daa4b73773b8c21d5a470",
+      "bytes": 1242,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-compatibleDestinationOptions-consumer-trace-2026-10-25.md",
+      "sha": "adc955fa66cc6bcbdb738f47ce8a92167651da0a",
+      "bytes": 1138,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-defaultEmptyPlacement-consumer-trace-2026-10-25.md",
+      "sha": "b4ceb270488e69290dde1149a6171cd1520808e9",
+      "bytes": 1100,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-eventTriggerOptions-consumer-trace-2026-10-25.md",
+      "sha": "25bc0c5bde55d8b92dce045b4c2e9ff5e70d97ef",
+      "bytes": 1067,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-makeMaterialCheckboxDropdown-consumer-trace-2026-10-25.md",
+      "sha": "6589921370f0757de694dbc66f8ca74ac62d70ad",
+      "bytes": 1042,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-makeOrderButtons-consumer-trace-2026-10-25.md",
+      "sha": "c6cf160663a90cafaa8605830e24a9f8d957a403",
+      "bytes": 1097,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-materialGroupsList-change-consumer-trace-2026-10-25.md",
+      "sha": "74c993ce800427b78218c12a2b51c7ed829b996e",
+      "bytes": 1154,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-materialTargetOptions-consumer-trace-2026-10-25.md",
+      "sha": "2babbfc907c0f551cb4eed393e14c22f6dff6bdb",
+      "bytes": 1142,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-pricingList-change-consumer-trace-2026-10-25.md",
+      "sha": "bca177e15a80ed9a7a04a42bf49c457ecb82939b",
+      "bytes": 1616,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-renderDependencies-consumer-trace-2026-10-25.md",
+      "sha": "39053fbd9297814110b4695f54755ef7317cacc0",
+      "bytes": 2751,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-renderEvents-consumer-trace-2026-10-25.md",
+      "sha": "a9a001cac1af603873708582184ac1aad48535a4",
+      "bytes": 4411,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-renderFinishes-consumer-trace-2026-10-25.md",
+      "sha": "4992315ad49213a44bc8cd2d843384037a477243",
+      "bytes": 2829,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-renderGroup-consumer-trace-2026-10-25.md",
+      "sha": "ddde737c8b96837e4b9b2f0b5e1ad2a5b2bd22cc",
+      "bytes": 2271,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-renderItem-consumer-trace-2026-10-25.md",
+      "sha": "1d82e75f80d3b1060896fb94bb5113e061daf844",
+      "bytes": 2991,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-renderMaterialGroups-consumer-trace-2026-10-25.md",
+      "sha": "cfa46dd7a9d249c6c7e8bcb428f12e74c3d87cf6",
+      "bytes": 5567,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-renderMaterials-consumer-trace-2026-10-25.md",
+      "sha": "cfe39944fcc3d14cd1798b0989a865cfc6f65f73",
+      "bytes": 4276,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-renderObjectAssets-consumer-trace-2026-10-25.md",
+      "sha": "48a0dc64479dee5fb05b49b2f0e95945b2f4b74e",
+      "bytes": 4294,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-renderObjects-consumer-trace-2026-10-25.md",
+      "sha": "9ed70e90242d8ea3c90ae68e7daeff6b4ab30a62",
+      "bytes": 3665,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-renderPager-consumer-trace-2026-10-25.md",
+      "sha": "aa9f840e45865d9491fb4832a8907cc837e5a557",
+      "bytes": 2281,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-renderPricing-consumer-trace-2026-10-25.md",
+      "sha": "d8ff2aae579c33549d236c2931362c0cee1c14b1",
+      "bytes": 4524,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-renderSection-consumer-trace-2026-10-25.md",
+      "sha": "f3bd3856a4450471e65e31f68efab3563f13a7ca",
+      "bytes": 2931,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-renderStages-consumer-trace-2026-10-25.md",
+      "sha": "f3d947a234e8fdf8c7d9f1c7aeb5843aeb03e137",
+      "bytes": 4949,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-setMaterialTarget-consumer-trace-2026-10-25.md",
+      "sha": "8d2a81d46d99d0d007f54f8998d08f9113bfacbb",
+      "bytes": 1220,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-showPasswordAction-consumer-trace-2026-10-25.md",
+      "sha": "16f38d53c3018c49403c4234038d911392fad285",
+      "bytes": 2341,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-showUser-consumer-trace-2026-10-25.md",
+      "sha": "2c1464d868200e0c07260ace27c9fb4eadf14f92",
+      "bytes": 1955,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-stagesList-change-consumer-trace-2026-10-25.md",
+      "sha": "66a70e98f4bdef79646098188970b89edecc8279",
+      "bytes": 1186,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-stagesList-click-consumer-trace-2026-10-25.md",
+      "sha": "d982ad6dd4f079fccaf43532d26b17e8ba50b065",
+      "bytes": 1570,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-syncPasswordReveal-consumer-trace-2026-10-25.md",
+      "sha": "f3f75e55a147b6dcb7b401fd13aecbf2a09140bd",
+      "bytes": 2746,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-admin-top-level-consumer-trace-2026-10-25.md",
+      "sha": "1c3cfc6aa2118e5726b61909280089437cdacd6b",
+      "bytes": 4568,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-activateScenePipFromLauncher-consumer-trace-2026-10-25.md",
+      "sha": "2751b31ad9e8db96725535ee3231ff556b6e1a5c",
+      "bytes": 1324,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-applyMaterialLibrary-consumer-trace-2026-10-25.md",
+      "sha": "e2fa5f698276e4e8617ee8cb66386a2e24bf8968",
+      "bytes": 1341,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-createCommercialItemPriceBreakdown-consumer-trace-2026-10-25.md",
+      "sha": "8918ef1c4aafa78ce73ff44c2b2cf3c8daa7dceb",
+      "bytes": 2027,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-createLocalFinishControl-consumer-trace-2026-10-25.md",
+      "sha": "0c0341de728c810c8e2949edf0dd210aa3f82a0c",
+      "bytes": 1335,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-createModuleFocus-consumer-trace-2026-10-25.md",
+      "sha": "6044527a8b017eaf11279c9d2f9a753cca4d85e8",
+      "bytes": 1489,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-createModuleNavigationButton-consumer-trace-2026-10-25.md",
+      "sha": "6b021c376684b853fe1e0e863c4b4240d8e0de24",
+      "bytes": 1225,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-createModuleSelectionControl-consumer-trace-2026-10-25.md",
+      "sha": "de2ca6c881e3d68b8f2eca386bd698c9180479c3",
+      "bytes": 1451,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-detail-carousel-consumer-trace-2026-10-25.md",
+      "sha": "c0ccada109726b89f7ae0a9f9b4902f28918492e",
+      "bytes": 5531,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-detailCarousel-collapse-consumer-trace-2026-10-25.md",
+      "sha": "1ce0d3713c75d4c9d5ed7d27607462afddbc57de",
+      "bytes": 968,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-dimensionSummary-consumer-trace-2026-10-25.md",
+      "sha": "5f9d5ba49869dc2e9582756511d6984ce84b6a80",
+      "bytes": 1474,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-failClosedPublishedConfiguration-consumer-trace-2026-10-25.md",
+      "sha": "751fe45fe19ea9db1a62161c072e6d52d61c9746",
+      "bytes": 1314,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-finishSwatches-click-consumer-trace-2026-10-25.md",
+      "sha": "c6bbf0e7f8539d42cc9094c644d83e571241e87d",
+      "bytes": 1466,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-moduleDetail-click-consumer-trace-2026-10-25.md",
+      "sha": "e4ff91ade050c1a01ef772935c9ecb9c9683c4d8",
+      "bytes": 1219,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-productForCurrentConfiguration-consumer-trace-2026-10-25.md",
+      "sha": "9ff66985b709ef622640192f975e09ed0f7efc32",
+      "bytes": 1426,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-refreshMobileSceneDock-consumer-trace-2026-10-25.md",
+      "sha": "b8037eb0fd82151855415380001be2858ecbae9f",
+      "bytes": 1871,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-renderCurrentValue-consumer-trace-2026-10-25.md",
+      "sha": "6d2ac95560d68ea9ddf5a5ce36cdd86df7249da8",
+      "bytes": 1293,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-renderCustomStage-consumer-trace-2026-10-25.md",
+      "sha": "af7feec6dd8ec9482c92bd5ddde4071100eddced",
+      "bytes": 2120,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-renderFinishControlsFromData-consumer-trace-2026-10-25.md",
+      "sha": "2d4c3928894070c2403039eec3c2a7d26ea7961b",
+      "bytes": 1533,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-renderHandleControlsFromData-consumer-trace-2026-10-25.md",
+      "sha": "0d95e3b9212779ddaf79db649b0622a4be22bf76",
+      "bytes": 1875,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-renderModuleControlsFromData-consumer-trace-2026-10-25.md",
+      "sha": "97b065ac1d0d4ce3730378e0259a93340fb81ab1",
+      "bytes": 1877,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-renderServiceChecklist-consumer-trace-2026-10-25.md",
+      "sha": "596e61209d16df2283bcfa1dd376bdcef85808cf",
+      "bytes": 1170,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-renderStageNavigation-consumer-trace-2026-10-25.md",
+      "sha": "f2756b5e859d5a62ab1c30788052517c064acbe2",
+      "bytes": 1554,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-renderStonePackages-consumer-trace-2026-10-25.md",
+      "sha": "7dedc94d3fb8bf385ddc742c3d642aee859e2413",
+      "bytes": 1420,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-renderSummary-consumer-trace-2026-10-25.md",
+      "sha": "f934f39195e37f79be0e10391ec0218458f7383f",
+      "bytes": 2574,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-restoreButton-click-consumer-trace-2026-10-25.md",
+      "sha": "1773138c7db56ab67fa1887add869711948b140b",
+      "bytes": 1191,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-selectEntity-consumer-trace-2026-10-25.md",
+      "sha": "1282b47da238596409c3b7aec8a41b42e789017d",
+      "bytes": 1151,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-setEntityVisibility-consumer-trace-2026-10-25.md",
+      "sha": "43c7e93ac08cb8bbf061615f16e61d59d32911dd",
+      "bytes": 1508,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-setMobileScenePinEnabled-consumer-trace-2026-10-25.md",
+      "sha": "e11f25b73654cab9718d6488a6d7775fd256ccd2",
+      "bytes": 978,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-setStonePackage-consumer-trace-2026-10-25.md",
+      "sha": "e74b92f01ec03bdfc586b83d5b66dc8c7d9b76de",
+      "bytes": 1589,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-startConfigurator-announcements-consumer-trace-2026-10-25.md",
+      "sha": "e7476b678506c1d9616b636536770caca2e39ba4",
+      "bytes": 1665,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-syncPinnedSceneUi-consumer-trace-2026-10-25.md",
+      "sha": "2817544f72d412c7a54895c065299022870ef5c6",
+      "bytes": 1306,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-syncStep-consumer-trace-2026-10-25.md",
+      "sha": "8b773bd0ee14f4b08f290ba3c1e1b64e7efb9ef0",
+      "bytes": 1046,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-updateAccessoryControls-consumer-trace-2026-10-25.md",
+      "sha": "cbdbd2e823178c40820c81eb6b0f01ba3805416a",
+      "bytes": 2145,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-updateModuleCards-consumer-trace-2026-10-25.md",
+      "sha": "11e0266852262ba8fa64b8bd98ecf3a934fda3d5",
+      "bytes": 1610,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-updateNavigationLabels-consumer-trace-2026-10-25.md",
+      "sha": "6a7f90eefb4e3456b732813abafc66e441b07f4f",
+      "bytes": 1143,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-config-updateSelection-consumer-trace-2026-10-25.md",
+      "sha": "98c75a86998e5b992d1e80a9456ed106c23bd060",
+      "bytes": 2501,
+      "kind": "STATIC_CONSUMER_TRACE"
+    },
+    {
+      "path": "evidence/architecture/arc13-unkeyed-consumer-context-map-2026-10-25.json",
+      "sha": "fa8dd35dd3b002e320e847baeaa7c032774b6db7",
+      "bytes": 235912,
+      "kind": "LEXICAL_SCOPE_CONTEXT_MAP"
+    },
+    {
+      "path": "evidence/architecture/arc13-unkeyed-consumer-scope-map-2026-10-25.json",
+      "sha": "1c675dd30db5b0167e9e07dbda1e3aacb2801983",
+      "bytes": 197312,
+      "kind": "LEXICAL_SCOPE_CONTEXT_MAP"
+    }
+  ],
+  "classifications": {
+    "approval": "HISTORICAL_STATIC_EVIDENCE_ONLY",
+    "notRuntimeValidated": true,
+    "noLocaleKeysApproved": true,
+    "sourceSnapshotsOnly": true
+  },
+  "reviewSamples": [
+    "Admin renderPricing: base-price publication defaults and draft/publish distinction",
+    "Admin showUser: role gates, dynamic error.message fallback, retry",
+    "Configurator failClosedPublishedConfiguration: HTTP 422 vs other errors, public message vs internal diagnostic",
+    "Configurator createCommercialItemPriceBreakdown: plural/formatting and rule-conditioned rows",
+    "Configurator PiP: manual vs automatic announcements and focus return",
+    "Configurator detail carousel: distinctions among aria/labels and conditional pages"
+  ],
+  "limitations": [
+    "Samples and source fingerprints verified; each of 69 files retained with unchanged Git Blob SHA to preserve any consumer details beyond index",
+    "No current product readback or runtime proof; 5ccb2a8 snapshot only",
+    "Scope/context maps are lexical hints, not AST or runtime call graphs",
+    "Records can reference other proposal batches still HOLD; import does not approve any candidate mapping",
+    "Branch deletion still requires ancestry/tree gate; closing #51 is not enough"
+  ]
+}

@@ -58,3 +58,7 @@ Leitura integral do mestre JS com **2.181** ocorrências e mestre HTML com **480
 ## D04 — fechamento da faixa `arc13-classified-*` (27/10/2026; pendente de merge)
 
 Trinta lotes vinculados ao master não são contextualmente redundantes apesar de coincidirem nos quatro campos de ocorrência: conservam SHA de origem, notas e, em alguns casos, owners/consumers e parâmetros diferentes. Dois arquivos auxiliares são exclusões independentes do índice. [Manifesto](DS_ARC13_CLASSIFIED_CONTEXT_BLOBS_2026-10-27.json) e [relatório](DS_ARC13_CLASSIFIED_CONTEXT_RECONCILIATION_2026-10-27.md). Após merge, os 32 batches ficam preservados sem modificar a aprovação de chaves, e a #51 passa a 151 exclusivos (34 outros ARC13 + 69 consumer traces + 3 outros arquitetura + 45 runtime). Manter head HOLD.
+
+## D04 — 69 traces e dois mapas (27/10/2026; pendente de gate)
+
+Mais 71 fontes históricas do head #51: 69 MDs `*consumer-trace-*` e dois índices de escopo/contexto `arc13-unkeyed-consumer-*-map`. Identificam regras de autorização, price breakdown, estados de erro e ARIA não capturados por inventário lexical. [Manifesto](DS_ARC13_CONSUMER_TRACE_BLOBS_2026-10-27.json) · [riscos](DS_ARC13_CONSUMER_TRACE_PRESERVATION_2026-10-27.md). Após merge: 151→80 exclusivos. Permanecem 32 outras fontes ARC13, 3 propostas VIS-002, 45 notas runtime. Não existe autorização de descarte de histórico divergente.
