@@ -4,9 +4,6 @@
   "preserveBranches": [
     "architecture/dom-css-consolidation-20261020",
     "docs/current-handover-20261024",
-    "audit/approved-contrast-runtime-20261021",
-    "audit/auth-session-flow-2026-10-19",
-    "docs/handover-reconcile-20261023",
     "proposal/vis002-semantic-state-colors-2026-10-19"
   ],
   "terminalBranches": [
@@ -21,6 +18,24 @@
       "sha": "ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37",
       "allowDelete": true,
       "reason": "Protected exact-commit archival tag; reviewed bounded P13 batch. Runtime executor must revalidate tag, ruleset, full DAG and branch SHA."
+    },
+    {
+      "branch": "audit/approved-contrast-runtime-20261021",
+      "sha": "e848e079071f4b2ce788e18a10a2284e6a24ff7a",
+      "allowDelete": true,
+      "reason": "P14 reviewed SHA-exact protected archival tag; runtime proof and leases mandatory."
+    },
+    {
+      "branch": "audit/auth-session-flow-2026-10-19",
+      "sha": "360d2e6d93d93ab74036149b518f22c01d57ecb0",
+      "allowDelete": true,
+      "reason": "P14 reviewed SHA-exact protected archival tag; runtime proof and leases mandatory."
+    },
+    {
+      "branch": "docs/handover-reconcile-20261023",
+      "sha": "96093786ed8fb182c604182c37a42681cba8d6c9",
+      "allowDelete": true,
+      "reason": "P14 reviewed SHA-exact protected archival tag; runtime proof and leases mandatory."
     }
   ]
 }

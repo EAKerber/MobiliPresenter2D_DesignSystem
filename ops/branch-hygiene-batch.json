@@ -1,18 +1,23 @@
 {
   "schemaVersion": "BranchHygieneBatch 0.1",
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "wave": "DS-HYG-P13-2026-10-27",
-  "purpose": "Retire two small divergent HOLD refs only after full PROTECTED_ARCHIVE_TAG_EXACT_COMMIT readback, SHA leases and gated CI. Retain all eight protected tags permanently.",
+  "wave": "DS-HYG-P14-2026-10-27",
+  "purpose": "Retire three small historical HOLDs with eight protected archival refs still complete; require strict runtime proof and SHA lease before each deletion.",
   "branches": [
     {
-      "branch": "docs/reconcile-approved-focus-record",
-      "sha": "430f4e1c7b376ae08e1788bd3aa365a32f2b76e2",
-      "protectedArchiveTag": "refs/tags/ds-history/2026-10-27/docs--reconcile-approved-focus-record-430f4e1c7b37"
+      "branch": "audit/approved-contrast-runtime-20261021",
+      "sha": "e848e079071f4b2ce788e18a10a2284e6a24ff7a",
+      "protectedArchiveTag": "refs/tags/ds-history/2026-10-27/audit--approved-contrast-runtime-20261021-e848e079071f"
     },
     {
-      "branch": "audit/access-confirmation-runtime-20261020",
-      "sha": "ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37",
-      "protectedArchiveTag": "refs/tags/ds-history/2026-10-27/audit--access-confirmation-runtime-20261020-ae58f2199e9b"
+      "branch": "audit/auth-session-flow-2026-10-19",
+      "sha": "360d2e6d93d93ab74036149b518f22c01d57ecb0",
+      "protectedArchiveTag": "refs/tags/ds-history/2026-10-27/audit--auth-session-flow-2026-10-19-360d2e6d93d9"
+    },
+    {
+      "branch": "docs/handover-reconcile-20261023",
+      "sha": "96093786ed8fb182c604182c37a42681cba8d6c9",
+      "protectedArchiveTag": "refs/tags/ds-history/2026-10-27/docs--handover-reconcile-20261023-96093786ed8f"
     }
   ]
 }
