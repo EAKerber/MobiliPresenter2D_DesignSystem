@@ -30,6 +30,23 @@ jobs:
       - run: |
           python -m unittest tests/test_ds_dag_tag_retain.py -v
           python -m py_compile tools/ds_dag_tag_retain.py
+      - name: Inspect effective ruleset with workflow identity (read-only)
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          from tools.ds_dag_tag_retain import gh, RULESET_ID
+          import json
+          r = gh("/rulesets/" + str(RULESET_ID))
+          print(json.dumps({
+            "id": r.get("id"), "target": r.get("target"),
+            "source": r.get("source"), "enforcement": r.get("enforcement"),
+            "bypass_actors": r.get("bypass_actors"),
+            "current_user_can_bypass": r.get("current_user_can_bypass"),
+            "conditions": r.get("conditions"),
+            "rule_types": [x.get("type") for x in r.get("rules", [])]
+          }, indent=2))
+          PY
 
   publish:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
