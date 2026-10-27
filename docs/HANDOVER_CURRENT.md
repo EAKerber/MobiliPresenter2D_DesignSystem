@@ -127,3 +127,11 @@ A [PR #78](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/78) i
 - [Registro de decisões](../decisions.json), [achados](../FINDINGS_REGISTER.md), [paleta](../PALETTE_CONFORMANCE.md), [mapa de aplicação](../DECISION_APPLICATION_MAP.md)
 
 **GATE DE PUBLICAÇÃO DESTE HANDOVER:** verificar apenas que o documento e o ponteiro do README estão na `main`, preservam as fontes e não alteram decisões/tokens/workflows. Este artefato não constitui gate de runtime/produção do produto.
+
+## Continuação D04 — triagem da PR #51 e preservação visual (26/10/2026)
+
+Retomada auditada contra `main@9386d0fc847369bfd5080cb22859b25c90cda021`: 10 branches (1 main, 1 operacional, 8 HOLD), 2 PRs abertas (#39 e #51), [Actions #40435400023](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40435400023) **PASS** nessa main. A comparação do head `#51@28062602a4ddcd1bee090742fe2587fe3837175d` encontrou 221 caminhos exclusivos e 11 divergentes; 161 em arquitetura (153 ARC-13) e 60 em runtime (11 WebP). O diff histórico da PR conta 236 caminhos por usar uma base diferente.
+
+Foi preparado um lote incremental D04-MEDIA-01 para preservar **3 WebP originais de comparação do fallback** já referenciados por `evidence/runtime/image-failure-fallback-options-2026-10-25.md`, junto com [classificação por grupos](DS_PR51_RESIDUAL_CLASSIFICATION_2026-10-26.md), [inventário SHA-pinned](DS_PR51_RESIDUAL_INVENTORY_2026-10-26.json) e atualização do [ledger D04](HANDOVER_SELECTIVE_EXTRACTION_2026-10-26.md). **Não considerar merge, CI ou readback concluídos sem verificação posterior da PR.** Após integração os 218 blobs exclusivos restantes da #51 devem continuar HOLD; próximas prioridades: 8 capturas da issue #226 com seus textos e triagem dos 153 ARC-13, sem substituir documentação vigente.
+
+Nenhum gate de runtime do produto, homologação visual, exclusão de branch ou deploy foi executado nesta classificação. O repositório do produto permanece fora do escopo de escrita.

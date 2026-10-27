@@ -44,3 +44,17 @@ Primeiro lote D04: sete documentos originais, sem mudança de decisões visuais,
 
 Não houve promoção de `decisions.json`, alterações em `runtime-evidence.json` ou atualização de autoridade no README. A PR #41 foi **encerrada sem merge integral** após [#78](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/78) preservar os sete blobs exclusivos e [#79](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/79) classificar FIND-015 como achado histórico. Sua branch permanece **HOLD** para conservação do histórico divergente, sem elegibilidade automática à exclusão. O recorte é evidência histórica com proveniência de blob, não homologação de novo padrão.
 
+
+## Terceiro recorte — D04-MEDIA-01 / inventário residual da PR #51 (26/10/2026)
+
+O confronto de árvores `main@9386d0fc847369bfd5080cb22859b25c90cda021` vs. `#51@28062602a4ddcd1bee090742fe2587fe3837175d` encontrou **232 diferenças: 221 caminhos exclusivos + 11 arquivos existentes divergentes**. A classificação por grupos e SHA está em [DS_PR51_RESIDUAL_CLASSIFICATION_2026-10-26.md](DS_PR51_RESIDUAL_CLASSIFICATION_2026-10-26.md) e o inventário de cada blob em [DS_PR51_RESIDUAL_INVENTORY_2026-10-26.json](DS_PR51_RESIDUAL_INVENTORY_2026-10-26.json).
+
+D04-MEDIA-01 seleciona as três capturas WebP citadas pelo documento `evidence/runtime/image-failure-fallback-options-2026-10-25.md`, preservando seus Git Blobs originais:
+
+| Arquivo relativo a `evidence/runtime/` | Git Blob SHA | Bytes |
+| --- | --- | ---: |
+| `image-failure-fallback-baseline-2026-10-25.webp` | `86a4bd1a721ac54250f423953248f5580cfa8f57` | 33588 |
+| `image-failure-fallback-option-a-2026-10-25.webp` | `a3cbaa497d4e95065c7e51ed4d9fb3aa17930052` | 22388 |
+| `image-failure-fallback-option-b-2026-10-25.webp` | `9b31f191d704a3e9d43bf91d79b3aa747114539b` | 24828 |
+
+Os estados representados são baseline, opção A e opção B em DOM isolado: **nenhuma opção foi homologada**. Esta integração é exclusivamente documental/binária, sem alteração de design tokens, decisões, workflows ou código de produto. O destino e a identidade dos blobs exigem readback após merge; até lá, os 218 arquivos ainda não escolhidos continuam sob HOLD, assim como a branch #51.
