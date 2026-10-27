@@ -1,0 +1,62 @@
+name: DS historical DAG tag retention (exact SHA, no deletes)
+
+on:
+  pull_request:
+    paths:
+      - 'tools/ds_dag_tag_retain.py'
+      - 'tests/test_ds_dag_tag_retain.py'
+      - '.github/workflows/ds-dag-tag-retain.yml'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ds-dag-tag-retain.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ds-historical-tag-retention
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          python -m unittest tests/test_ds_dag_tag_retain.py -v
+          python -m py_compile tools/ds_dag_tag_retain.py
+
+  publish:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: read
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+          persist-credentials: true
+      - name: Fetch all historical heads
+        run: git fetch origin '+refs/heads/*:refs/remotes/origin/*'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Create exactly eight lightweight tags after all gates
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python tools/ds_dag_tag_retain.py --apply
+      - name: Preserve non-destructive readback receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ds-dag-tag-retention-${{ github.run_id }}
+          path: ds-dag-retention-receipt.json
+          if-no-files-found: warn
