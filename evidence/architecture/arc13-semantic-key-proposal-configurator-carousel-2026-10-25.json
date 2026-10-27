@@ -1,0 +1,516 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/app.js:createDetailCarousel",
+    "occurrences": 26,
+    "distinctTexts": 21,
+    "newProposedKeys": 16
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "distinctTextConflictsWithinBatch": 0,
+    "sharedKeyGroups": [
+      {
+        "key": "configurator.carousel.pageFocusTitle",
+        "texts": [
+          "Foco no módulo"
+        ],
+        "parameterContracts": [
+          [],
+          []
+        ]
+      },
+      {
+        "key": "configurator.carousel.pageFrontTitle",
+        "texts": [
+          "Vista frontal"
+        ],
+        "parameterContracts": [
+          [],
+          []
+        ]
+      },
+      {
+        "key": "configurator.carousel.pageLateralTitle",
+        "texts": [
+          "Vista lateral"
+        ],
+        "parameterContracts": [
+          [],
+          []
+        ]
+      },
+      {
+        "key": "configurator.carousel.pageInternalTitle",
+        "texts": [
+          "Vista interna"
+        ],
+        "parameterContracts": [
+          [],
+          []
+        ]
+      },
+      {
+        "key": "configurator.carousel.pageIsometricTitle",
+        "texts": [
+          "Projeção isométrica"
+        ],
+        "parameterContracts": [
+          [],
+          []
+        ]
+      },
+      {
+        "key": "configurator.carousel.navigation.showPage",
+        "texts": [
+          "Mostrar ${pageLabel}"
+        ],
+        "parameterContracts": [
+          [
+            {
+              "name": "pageLabel",
+              "expression": "previousPage.label"
+            }
+          ],
+          [
+            {
+              "name": "pageLabel",
+              "expression": "nextPage.label"
+            }
+          ]
+        ]
+      }
+    ],
+    "intentionalExistingKeyReuse": [
+      {
+        "key": "configurator.carousel.collapse.expand",
+        "text": "Expandir visualizações",
+        "line": 1285,
+        "matchingExistingLocations": [
+          {
+            "line": 1270,
+            "text": "Expandir visualizações"
+          }
+        ]
+      },
+      {
+        "key": "configurator.carousel.collapse.collapse",
+        "text": "Recolher visualizações",
+        "line": 1285,
+        "matchingExistingLocations": [
+          {
+            "line": 1270,
+            "text": "Recolher visualizações"
+          }
+        ]
+      },
+      {
+        "key": "configurator.carousel.action.show",
+        "text": "Mostrar",
+        "line": 1286,
+        "matchingExistingLocations": [
+          {
+            "line": 1271,
+            "text": "Mostrar"
+          }
+        ]
+      },
+      {
+        "key": "configurator.carousel.action.hide",
+        "text": "Recolher",
+        "line": 1286,
+        "matchingExistingLocations": [
+          {
+            "line": 1271,
+            "text": "Recolher"
+          }
+        ]
+      }
+    ]
+  },
+  "rationale": "The source consumer is one carousel. Repeated page titles and navigation labels use the same purpose and parameter contract. Previous/next tooltips remain separate. Four collapse/action labels reuse matching keys already assigned to the same component's initialization path.",
+  "limitations": [
+    "Proposal only; no product or canonical index mutation.",
+    "The index still reports these occurrences unkeyed until reconciliation.",
+    "Visual/accessibility approval and extraction are outside this proposal."
+  ],
+  "entries": [
+    {
+      "proposedKey": "configurator.carousel.pageFocusShortLabel",
+      "text": "Foco",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1143,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      { label: \"Foco no módulo\", node: createCarouselPage(\"Foco no módulo\", createModuleFocus(entity, product), \"Visual isolado da peça selecionada na cena.\"), shortLabel: \"Foco\" },",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.pageFocusTitle",
+      "text": "Foco no módulo",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1143,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      { label: \"Foco no módulo\", node: createCarouselPage(\"Foco no módulo\", createModuleFocus(entity, product), \"Visual isolado da peça selecionada na cena.\"), shortLabel: \"Foco\" },",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.pageFocusTitle",
+      "text": "Foco no módulo",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1143,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      { label: \"Foco no módulo\", node: createCarouselPage(\"Foco no módulo\", createModuleFocus(entity, product), \"Visual isolado da peça selecionada na cena.\"), shortLabel: \"Foco\" },",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.pageFocusDescription",
+      "text": "Visual isolado da peça selecionada na cena.",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1143,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      { label: \"Foco no módulo\", node: createCarouselPage(\"Foco no módulo\", createModuleFocus(entity, product), \"Visual isolado da peça selecionada na cena.\"), shortLabel: \"Foco\" },",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.pageFrontShortLabel",
+      "text": "Frontal",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1144,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      { label: \"Vista frontal\", node: createCarouselPage(\"Vista frontal\", createProportionalView(product, \"front\"), frontViewNote(product)), shortLabel: \"Frontal\" },",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.pageFrontTitle",
+      "text": "Vista frontal",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1144,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      { label: \"Vista frontal\", node: createCarouselPage(\"Vista frontal\", createProportionalView(product, \"front\"), frontViewNote(product)), shortLabel: \"Frontal\" },",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.pageFrontTitle",
+      "text": "Vista frontal",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1144,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      { label: \"Vista frontal\", node: createCarouselPage(\"Vista frontal\", createProportionalView(product, \"front\"), frontViewNote(product)), shortLabel: \"Frontal\" },",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.pageLateralShortLabel",
+      "text": "Lateral",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1145,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      { label: \"Vista lateral\", node: createCarouselPage(\"Vista lateral\", createProportionalView(product, \"side\"), sideViewNote(product)), shortLabel: \"Lateral\" },",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.pageLateralTitle",
+      "text": "Vista lateral",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1145,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      { label: \"Vista lateral\", node: createCarouselPage(\"Vista lateral\", createProportionalView(product, \"side\"), sideViewNote(product)), shortLabel: \"Lateral\" },",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.pageLateralTitle",
+      "text": "Vista lateral",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1145,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      { label: \"Vista lateral\", node: createCarouselPage(\"Vista lateral\", createProportionalView(product, \"side\"), sideViewNote(product)), shortLabel: \"Lateral\" },",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.pageInternalShortLabel",
+      "text": "Interna",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1147,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "        ? [{ label: \"Vista interna\", node: createCarouselPage(\"Vista interna\", createOrientativeInternalFront(product.dimensions.nominalMm, product.technicalLayout.internalFront), \"Vãos internos confirmados; não equivalem ao envelope externo do módulo.\"), shortLabel: \"Interna\" }]",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.pageInternalTitle",
+      "text": "Vista interna",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1147,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "        ? [{ label: \"Vista interna\", node: createCarouselPage(\"Vista interna\", createOrientativeInternalFront(product.dimensions.nominalMm, product.technicalLayout.internalFront), \"Vãos internos confirmados; não equivalem ao envelope externo do módulo.\"), shortLabel: \"Interna\" }]",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.pageInternalTitle",
+      "text": "Vista interna",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1147,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "        ? [{ label: \"Vista interna\", node: createCarouselPage(\"Vista interna\", createOrientativeInternalFront(product.dimensions.nominalMm, product.technicalLayout.internalFront), \"Vãos internos confirmados; não equivalem ao envelope externo do módulo.\"), shortLabel: \"Interna\" }]",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.pageIsometricShortLabel",
+      "text": "Isométrica",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1149,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      { label: \"Projeção isométrica\", node: createCarouselPage(\"Projeção isométrica\", createTechnicalIsometricView(product), product.drawingSpec?.kind === \"panel\" ? \"Painel estrutural em proporção; espessura ampliada somente para leitura.\" : \"Projeção isométrica orientativa das cotas nominais.\"), shortLabel: \"Isométrica\" }",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.pageIsometricPanelDescription",
+      "text": "Painel estrutural em proporção; espessura ampliada somente para leitura.",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1149,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      { label: \"Projeção isométrica\", node: createCarouselPage(\"Projeção isométrica\", createTechnicalIsometricView(product), product.drawingSpec?.kind === \"panel\" ? \"Painel estrutural em proporção; espessura ampliada somente para leitura.\" : \"Projeção isométrica orientativa das cotas nominais.\"), shortLabel: \"Isométrica\" }",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.pageIsometricTitle",
+      "text": "Projeção isométrica",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1149,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      { label: \"Projeção isométrica\", node: createCarouselPage(\"Projeção isométrica\", createTechnicalIsometricView(product), product.drawingSpec?.kind === \"panel\" ? \"Painel estrutural em proporção; espessura ampliada somente para leitura.\" : \"Projeção isométrica orientativa das cotas nominais.\"), shortLabel: \"Isométrica\" }",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.pageIsometricTitle",
+      "text": "Projeção isométrica",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1149,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      { label: \"Projeção isométrica\", node: createCarouselPage(\"Projeção isométrica\", createTechnicalIsometricView(product), product.drawingSpec?.kind === \"panel\" ? \"Painel estrutural em proporção; espessura ampliada somente para leitura.\" : \"Projeção isométrica orientativa das cotas nominais.\"), shortLabel: \"Isométrica\" }",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.navigation.showPage",
+      "text": "Mostrar ${previousPage.label}",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1171,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [
+        {
+          "name": "pageLabel",
+          "expression": "previousPage.label"
+        }
+      ],
+      "sourceLine": "      previous.setAttribute(\"aria-label\", `Mostrar ${previousPage.label}`);",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.navigation.previousPageTitle",
+      "text": "Anterior: ${previousPage.shortLabel}",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1172,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [
+        {
+          "name": "shortLabel",
+          "expression": "previousPage.shortLabel"
+        }
+      ],
+      "sourceLine": "      previous.title = `Anterior: ${previousPage.shortLabel}`;",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.navigation.showPage",
+      "text": "Mostrar ${nextPage.label}",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1173,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [
+        {
+          "name": "pageLabel",
+          "expression": "nextPage.label"
+        }
+      ],
+      "sourceLine": "      next.setAttribute(\"aria-label\", `Mostrar ${nextPage.label}`);",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.navigation.nextPageTitle",
+      "text": "Próxima: ${nextPage.shortLabel}",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1174,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [
+        {
+          "name": "shortLabel",
+          "expression": "nextPage.shortLabel"
+        }
+      ],
+      "sourceLine": "      next.title = `Próxima: ${nextPage.shortLabel}`;",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.navigation.pageIndicator",
+      "text": "Mostrar ${page.label}, página ${index + 1} de ${pages.length}",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1210,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [
+        {
+          "name": "pageLabel",
+          "expression": "page.label"
+        },
+        {
+          "name": "pageNumber",
+          "expression": "index + 1"
+        },
+        {
+          "name": "pageCount",
+          "expression": "pages.length"
+        }
+      ],
+      "sourceLine": "      dot.setAttribute(\"aria-label\", `Mostrar ${page.label}, página ${index + 1} de ${pages.length}`);",
+      "reusesExistingKey": false,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.collapse.expand",
+      "text": "Expandir visualizações",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1285,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      collapse.setAttribute(\"aria-label\", nextCollapsed ? \"Expandir visualizações\" : \"Recolher visualizações\");",
+      "reusesExistingKey": true,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.collapse.collapse",
+      "text": "Recolher visualizações",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1285,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      collapse.setAttribute(\"aria-label\", nextCollapsed ? \"Expandir visualizações\" : \"Recolher visualizações\");",
+      "reusesExistingKey": true,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.action.show",
+      "text": "Mostrar",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1286,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      collapse.textContent = nextCollapsed ? \"Mostrar\" : \"Recolher\";",
+      "reusesExistingKey": true,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.carousel.action.hide",
+      "text": "Recolher",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1286,
+      "owner": "Configurator module detail carousel",
+      "consumer": "Page title/short label, description, accessible navigation label, tooltip, or collapse action rendered by createDetailCarousel",
+      "parameters": [],
+      "sourceLine": "      collapse.textContent = nextCollapsed ? \"Mostrar\" : \"Recolher\";",
+      "reusesExistingKey": true,
+      "review": "Proposal only; verify the same user meaning and parameter contract before assigning it in the canonical index."
+    }
+  ]
+}

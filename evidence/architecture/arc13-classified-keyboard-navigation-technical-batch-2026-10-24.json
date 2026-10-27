@@ -1,0 +1,692 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/core/keyboard-shortcuts.js",
+      "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+      "candidateOccurrences": 35
+    }
+  ],
+  "reviewScope": "Complete lexical candidate review of the configurator keyboard-shortcuts runtime. All candidates are selectors, event/state values, accessibility attributes, motion preferences or navigation invariant diagnostics; they are not user-visible prose in current product call sites.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 35,
+    "classifiedLocalizableOccurrences": 0,
+    "excludedNonlocalizableOccurrences": 35,
+    "deferredDomainOccurrences": 0,
+    "distinctCandidateTexts": 31
+  },
+  "limitations": [
+    "Inventory only; keyboard navigation behavior and locale resources remain unchanged.",
+    "Invariant messages are exposed only through the module diagnostic API; current application call sites do not display them."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 2
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": ".flow-nav [data-step][aria-current='step']",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 29
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": ".flow-nav [data-step].is-active",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 30
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "modules",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 31
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "#moduleList [data-select-entity]",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 35
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": ".module-card",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 45
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": ".module-number",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 45
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "#moduleList .module-card.is-selected [data-select-entity]",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 52
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "#moduleList .module-card.is-selected",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 76
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "#moduleDetail [data-close-module-detail]",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 87
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": ".flow-nav [data-step]",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 94
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "is-active",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 97
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "step",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 97
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": ":disabled",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 114
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "true",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 114
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "textarea, select",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 121
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": ".flow-nav [data-step][aria-current='step']",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 128
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "aria-controls",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 129
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": ".controls > .panel, .controls > .flow-stage-layout",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 132
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "missing-section-element",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 181
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "multiple rendered elements own section ${modelSection.id}",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 185
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "missing rendered element for section ${modelSection.id}",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 186
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "unowned-section-control",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 200
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "interactive control in section ${modelSection.id} has no flow item owner",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 203
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "rendered flow item ${itemId} is not owned by section ${modelSection.id}",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 211
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "modeled flow item ${itemId} is not represented in section ${modelSection.id}",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 223
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "missing-flow-model",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 243
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "normalized flow model is not installed",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 243
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "active stage is absent from normalized flow: ${stageId}",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 249
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "missing-flow-stage",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 249
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "true",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 276
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "(prefers-reduced-motion: reduce)",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 371
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "(prefers-reduced-motion: reduce)",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 435
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "input[type='checkbox'], [role='switch']",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 487
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    },
+    {
+      "currentText": "input[type='checkbox'], [role='switch']",
+      "source": {
+        "file": "app/core/keyboard-shortcuts.js",
+        "blobSha": "c87577e9f577d6ae757248830d1cb4659fec12c3",
+        "line": 498
+      },
+      "consumer": "keyboard navigation selector, invariant diagnostic, event/control value, or accessibility-state identifier",
+      "owner": "shared configurator keyboard navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Technical navigation/DOM invariant detail; the core exposes diagnostics programmatically and the product caller does not render these messages as interface feedback."
+      ]
+    }
+  ]
+}
