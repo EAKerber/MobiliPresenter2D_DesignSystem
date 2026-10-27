@@ -78,3 +78,7 @@ Quatro fontes exclusivas da #51 em [manifesto](DS_D04_CONTRACT_PROVENANCE_2026-1
 ## D04 — matrizes CSS, G0–G8 e 16 achados DS-04 (27/10/2026)
 
 Quatro documentos por Git Blob exato de #51, classificação e SHAs em [DS_D04_COVERAGE_RECONCILIATION_2026-10-27.md](DS_D04_COVERAGE_RECONCILIATION_2026-10-27.md) e [manifesto](DS_D04_COVERAGE_BLOBS_2026-10-27.json). As leituras de Production/PR são datadas e parciais; evidência estática não cobre navegador autenticado nem estado atual. Após merge, 193 exclusivos na #51.
+
+## D03/D04 — PR #39 documentos, experimentos e workflows inertes (27/10/2026)
+
+21 Git Blobs exclusivos da #39 selecionados: 12 docs/ADRs, 7 experimentos isolados e 2 arquivos de workflow mantidos como texto inerte `docs/architecture/legacy-workflow-sources/*.yml.txt` com **mesmo blob SHA**. [Relatório de risco](DS_PR39_EXCLUSIVE_CLOSURE_2026-10-27.md) · [manifesto 21 blobs](DS_PR39_ALL_EXCLUSIVE_BLOBS_2026-10-27.json). Não promova experimentos como contrato do produto; workflows antigos não ativados; 9 caminhos canônicos divergentes ainda exigem reconciliação por campo. Nenhum branch delete neste lote.

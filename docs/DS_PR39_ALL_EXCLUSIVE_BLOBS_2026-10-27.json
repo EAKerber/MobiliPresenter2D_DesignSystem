@@ -1,0 +1,163 @@
+{
+  "schemaVersion": "DS-D03D04-PR39Disposition 0.1",
+  "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "sourcePullRequest": 39,
+  "sourceHead": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
+  "sourceDate": "2026-10-20",
+  "baselineMain": "aaa30ae97efceaa9ea153cd10055a1a99e8e33f3",
+  "policy": "Preserve exclusive blobs exact-by-SHA without merging obsolete canonical documents, promoting ADRs or enabling GitHub workflows",
+  "records": [
+    {
+      "sourcePath": ".github/workflows/declarative-ui-p1.yml",
+      "targetPath": "docs/architecture/legacy-workflow-sources/declarative-ui-p1.yml.txt",
+      "sourceBlob": "c7d37c390bc9b72ce247fab87303aa4b9a4fee46",
+      "bytes": 624,
+      "kind": "INERT_WORKFLOW_TEXT"
+    },
+    {
+      "sourcePath": ".github/workflows/public-dom-audit.yml",
+      "targetPath": "docs/architecture/legacy-workflow-sources/public-dom-audit.yml.txt",
+      "sourceBlob": "e23831b7796b8857e5919d795740b044380d1b6d",
+      "bytes": 1503,
+      "kind": "INERT_WORKFLOW_TEXT"
+    },
+    {
+      "sourcePath": "docs/architecture/CSS-OWNERSHIP-RISKS-2026-10-20.md",
+      "targetPath": "docs/architecture/CSS-OWNERSHIP-RISKS-2026-10-20.md",
+      "sourceBlob": "2d597017c99e80b6b9b45e029c8ade7aa3cda215",
+      "bytes": 15782,
+      "kind": "ARCHITECTURE_DOC_HISTORICAL"
+    },
+    {
+      "sourcePath": "docs/architecture/CSS-READINESS-AND-CURRENT-GATE-2026-10-20.md",
+      "targetPath": "docs/architecture/CSS-READINESS-AND-CURRENT-GATE-2026-10-20.md",
+      "sourceBlob": "f4015599a49e54a96ffbf675931a1fa9a552dc28",
+      "bytes": 18558,
+      "kind": "ARCHITECTURE_DOC_HISTORICAL"
+    },
+    {
+      "sourcePath": "docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md",
+      "targetPath": "docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md",
+      "sourceBlob": "2be93e56fd42945cdfe780e89edee1603ab378f6",
+      "bytes": 21676,
+      "kind": "ARCHITECTURE_DOC_HISTORICAL"
+    },
+    {
+      "sourcePath": "docs/architecture/css-component-architecture-proposal-2026-10-20.md",
+      "targetPath": "docs/architecture/css-component-architecture-proposal-2026-10-20.md",
+      "sourceBlob": "3034980b933e1788692e9508273dc6d87c1c1465",
+      "bytes": 11262,
+      "kind": "ARCHITECTURE_DOC_HISTORICAL"
+    },
+    {
+      "sourcePath": "docs/architecture/declarative-ui-increment-plan-2026-10-20.md",
+      "targetPath": "docs/architecture/declarative-ui-increment-plan-2026-10-20.md",
+      "sourceBlob": "6d668c6ba2c02c6d8806567b69c6770a244c0e87",
+      "bytes": 9801,
+      "kind": "ARCHITECTURE_DOC_HISTORICAL"
+    },
+    {
+      "sourcePath": "docs/architecture/declarative-ui-schema-boundaries-proposal-2026-10-20.md",
+      "targetPath": "docs/architecture/declarative-ui-schema-boundaries-proposal-2026-10-20.md",
+      "sourceBlob": "9997732c1377c7a7710fd029e0d143c060c0a06a",
+      "bytes": 11643,
+      "kind": "ARCHITECTURE_DOC_HISTORICAL"
+    },
+    {
+      "sourcePath": "docs/architecture/dom-css-runtime-public-baseline-2026-10-20.md",
+      "targetPath": "docs/architecture/dom-css-runtime-public-baseline-2026-10-20.md",
+      "sourceBlob": "7ce976e595fefd5222a4a3de761dc0fdac195b5c",
+      "bytes": 5761,
+      "kind": "ARCHITECTURE_DOC_HISTORICAL"
+    },
+    {
+      "sourcePath": "docs/architecture/ui-adr-001-declarative-boundaries-2026-10-20.md",
+      "targetPath": "docs/architecture/ui-adr-001-declarative-boundaries-2026-10-20.md",
+      "sourceBlob": "934d4b700de49eb4584f25a72bcb2343ea1b58b4",
+      "bytes": 10076,
+      "kind": "ARCHITECTURE_DOC_HISTORICAL"
+    },
+    {
+      "sourcePath": "docs/architecture/ui-adr-002-landing-component-pilot-2026-10-20.md",
+      "targetPath": "docs/architecture/ui-adr-002-landing-component-pilot-2026-10-20.md",
+      "sourceBlob": "bc9e8dfdf6c4073ad3d5cb0d0c25f35648eb8abd",
+      "bytes": 10059,
+      "kind": "ARCHITECTURE_DOC_HISTORICAL"
+    },
+    {
+      "sourcePath": "docs/architecture/ui-adr-003-landing-benefit-variants-2026-10-20.md",
+      "targetPath": "docs/architecture/ui-adr-003-landing-benefit-variants-2026-10-20.md",
+      "sourceBlob": "901913e308f25f75d1cd154610044e110f07c3e1",
+      "bytes": 9645,
+      "kind": "ARCHITECTURE_DOC_HISTORICAL"
+    },
+    {
+      "sourcePath": "docs/architecture/ui-adr-004-cross-page-reuse-gate-2026-10-20.md",
+      "targetPath": "docs/architecture/ui-adr-004-cross-page-reuse-gate-2026-10-20.md",
+      "sourceBlob": "8e7e23ec0b94ee27a683b13d6aa2c9f7f5919a25",
+      "bytes": 7176,
+      "kind": "ARCHITECTURE_DOC_HISTORICAL"
+    },
+    {
+      "sourcePath": "docs/architecture/ui-adr-005-public-header-controller-2026-10-20.md",
+      "targetPath": "docs/architecture/ui-adr-005-public-header-controller-2026-10-20.md",
+      "sourceBlob": "eb5cbe85723014683a76b347e4d4033666d2b451",
+      "bytes": 12890,
+      "kind": "ARCHITECTURE_DOC_HISTORICAL"
+    },
+    {
+      "sourcePath": "experiments/declarative-ui/README.md",
+      "targetPath": "experiments/declarative-ui/README.md",
+      "sourceBlob": "76706f3ea72193d3399712b2998e00572181fdf2",
+      "bytes": 3237,
+      "kind": "ISOLATED_EXPERIMENT_HISTORICAL"
+    },
+    {
+      "sourcePath": "experiments/declarative-ui/landing-benefits.mjs",
+      "targetPath": "experiments/declarative-ui/landing-benefits.mjs",
+      "sourceBlob": "b89d8b902382087f4434808db5a999afb2b9f02a",
+      "bytes": 1537,
+      "kind": "ISOLATED_EXPERIMENT_HISTORICAL"
+    },
+    {
+      "sourcePath": "experiments/declarative-ui/registry.mjs",
+      "targetPath": "experiments/declarative-ui/registry.mjs",
+      "sourceBlob": "44831dc8f2ec37e8ea36a4d08ec29e4f9fd2547f",
+      "bytes": 5759,
+      "kind": "ISOLATED_EXPERIMENT_HISTORICAL"
+    },
+    {
+      "sourcePath": "experiments/declarative-ui/registry.test.mjs",
+      "targetPath": "experiments/declarative-ui/registry.test.mjs",
+      "sourceBlob": "25c64960d3ff7600bac672f5110f2519d6636990",
+      "bytes": 3435,
+      "kind": "ISOLATED_EXPERIMENT_HISTORICAL"
+    },
+    {
+      "sourcePath": "experiments/public-dom/README.md",
+      "targetPath": "experiments/public-dom/README.md",
+      "sourceBlob": "d704fb318ffcf68e9c25f04cff9deb015ac08d5d",
+      "bytes": 2241,
+      "kind": "ISOLATED_EXPERIMENT_HISTORICAL"
+    },
+    {
+      "sourcePath": "experiments/public-dom/audit-public-dom.mjs",
+      "targetPath": "experiments/public-dom/audit-public-dom.mjs",
+      "sourceBlob": "bffef9b9bfa874489a1afd5ea314b6b1cb119659",
+      "bytes": 8742,
+      "kind": "ISOLATED_EXPERIMENT_HISTORICAL"
+    },
+    {
+      "sourcePath": "experiments/public-dom/compare-benefit-shadow.mjs",
+      "targetPath": "experiments/public-dom/compare-benefit-shadow.mjs",
+      "sourceBlob": "53a48614f78c6f698870b95c960a1b1629ca610c",
+      "bytes": 2460,
+      "kind": "ISOLATED_EXPERIMENT_HISTORICAL"
+    }
+  ],
+  "neverAutomated": [
+    ".github/workflows/declarative-ui-p1.yml",
+    ".github/workflows/public-dom-audit.yml"
+  ],
+  "classification": "source-only extraction; historic evidence, not runtime certification or product merge"
+}
