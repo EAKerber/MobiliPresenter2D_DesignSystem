@@ -12,6 +12,7 @@ import os
 import re
 import subprocess
 from pathlib import Path
+from urllib.parse import quote
 
 from branch_hygiene_observe import api_get
 from ds_dag_tag_retain import (
@@ -110,7 +111,7 @@ def main():
     live_branches = refs("heads")
     tags = refs("tags", PREFIX + "*")
     rule = api_get(REPO, f"rulesets/{RULESET_ID}", token)
-    info = api_get(REPO, "branches/" + OPS, token)
+    info = api_get(REPO, "branches/" + quote(OPS, safe=""), token)
     workflow_dir = Path(".github/workflows")
     has_dependency = any(
         OPS in p.read_text(encoding="utf-8") for pat in ("*.yml", "*.yaml")
