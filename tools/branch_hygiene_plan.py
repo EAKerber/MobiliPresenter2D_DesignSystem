@@ -161,6 +161,16 @@ def select_bounded_batch(plan: dict[str, Any], batch: dict[str, Any]) -> list[di
             and isinstance(proof["mergeCommit"], str)
             and re.fullmatch(r"[0-9a-f]{40}", proof["mergeCommit"]) is not None
         )
+        archive = ref.get("protectedArchiveTag")
+        archive_shape = (
+            isinstance(archive, str)
+            and re.fullmatch(r"refs/tags/ds-history/2026-10-27/[a-zA-Z0-9._-]+-[0-9a-f]{12}", archive) is not None
+            and archive == "refs/tags/ds-history/2026-10-27/" + name.replace("/", "--") + "-" + sha[:12]
+            and any(e.get("kind") == "explicit-terminal-disposition"
+                    and e.get("recordedSha") == sha for e in (entry or {}).get("evidence", []))
+        )
+        if archive is not None and (not archive_shape or proof is not None):
+            raise ValueError("BAD_ARCHIVE_PROOF_OR_CONFLICT:" + name)
         ancestor_proven = (
             entry is not None
             and entry.get("action") == "delete-candidate"
@@ -169,9 +179,14 @@ def select_bounded_batch(plan: dict[str, Any], batch: dict[str, Any]) -> list[di
         )
         if (not entry or entry["sha"] != sha or entry.get("protections")
                 or (proof is not None and not valid_proof_shape)
-                or not (ancestor_proven or valid_proof_shape)):
+                or not (ancestor_proven or valid_proof_shape or archive_shape)):
             raise ValueError("UNSAFE_OR_MOVED_BRANCH:" + name)
-        result.append({**entry, "squashMerge": proof} if valid_proof_shape else entry)
+        if archive_shape:
+            result.append({**entry, "protectedArchiveTag": archive})
+        elif valid_proof_shape:
+            result.append({**entry, "squashMerge": proof})
+        else:
+            result.append(entry)
     return result
 
 

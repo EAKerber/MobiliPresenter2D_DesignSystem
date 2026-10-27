@@ -13,6 +13,7 @@ from pathlib import Path
 
 from branch_hygiene_observe import observe, api_get
 from branch_hygiene_plan import build_plan, load_json, select_bounded_batch
+from branch_hygiene_archive import verify_protected_archive
 
 AUTH_ENV = "MOBILIPRESENTER2D_DESIGNSYSTEM_BRANCH_HYGIENE_AUTHORIZED"
 
@@ -123,6 +124,11 @@ def apply(plan_path: Path, dispositions_path: Path, expected_plan: str,
         if (result := verify_squash_merge(repository, token, item, fresh_plan["controlSha"])) is not None
     ]
 
+    archive_proofs = [
+        proof for item in selected
+        if (proof := verify_protected_archive(repository, token, item)) is not None
+    ]
+
     if not audit_only:
         if (os.environ.get("GITHUB_EVENT_NAME") != "push"
                 or os.environ.get("GITHUB_REF") != "refs/heads/main"):
@@ -140,6 +146,7 @@ def apply(plan_path: Path, dispositions_path: Path, expected_plan: str,
         "batch": batch_path.name,
         "approvedPins": [{"branch": x["branch"], "sha": x["sha"]} for x in selected],
         "squashProofs": squash_proofs,
+        "protectedArchiveProofs": archive_proofs,
         "mode": "audit" if audit_only else "apply",
         "deleted": [],
         "readback": "NOT_APPLIED" if audit_only else "PENDING",
@@ -188,6 +195,7 @@ def apply(plan_path: Path, dispositions_path: Path, expected_plan: str,
             raise RuntimeError("REF_DRIFT_BEFORE_DELETE:" + branch)
         # Recheck PR identity and exact tree *immediately* before mutation.
         verify_squash_merge(repository, token, entry, fresh_plan["controlSha"])
+        verify_protected_archive(repository, token, entry)
 
         subprocess.run([
             "git", "push", f"--force-with-lease=refs/heads/{branch}:{sha}",
@@ -196,6 +204,8 @@ def apply(plan_path: Path, dispositions_path: Path, expected_plan: str,
         expected_inventory.pop(branch)
         if remote_refs() != expected_inventory:
             raise RuntimeError("REF_READBACK_FAILED:" + branch)
+        # Retention evidence must outlive deletion; verify again post-apply.
+        verify_protected_archive(repository, token, entry)
         receipt["deleted"].append({"branch": branch, "sha": sha})
         save()
 
