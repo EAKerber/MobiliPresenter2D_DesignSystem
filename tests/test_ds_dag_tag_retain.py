@@ -69,6 +69,17 @@ class RetentionCreationSafetyTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "TAG_PROTECTION_NOT_VERIFIED"):
             self.check()
 
+    def test_utc_normalized_same_second_is_accepted(self):
+        self.rule["bypass_actors"] = None
+        self.rule["updated_at"] = "2026-10-27T11:49:23Z"
+        self.assertEqual(len(self.check()), 8)
+
+    def test_revision_missing_blocks_when_masked(self):
+        self.rule["bypass_actors"] = None
+        self.rule.pop("updated_at")
+        with self.assertRaisesRegex(ValueError, "TAG_PROTECTION_NOT_VERIFIED"):
+            self.check()
+
     def test_rule_bypass_rejected(self):
         self.rule["bypass_actors"] = [{"actor_id": 1}]
         with self.assertRaisesRegex(ValueError, "TAG_PROTECTION_NOT_VERIFIED"):
