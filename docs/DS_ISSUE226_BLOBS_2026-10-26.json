@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "DS-D04-BlobSet 0.1",
+  "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "sourcePR": 51,
+  "sourceHead": "28062602a4ddcd1bee090742fe2587fe3837175d",
+  "baselineMain": "0ceb9da7ab6144f9f302e6ddfdaa65d2e5ca0aa4",
+  "group": "ISSUE-226-2026-10-25",
+  "role": "historical evidence; not current-runtime validation",
+  "notice": "Manual zoom confirmation in later source says issue closed; earlier source says zoom pending. Preserve both as dated observations.",
+  "blobs": [
+    {
+      "path": "evidence/runtime/issue226-captures/foundation-closed-1366x768-dark.webp",
+      "sha": "0e54a1127a7273705d2ffe26349909196dfe2868",
+      "bytes": 47964
+    },
+    {
+      "path": "evidence/runtime/issue226-captures/foundation-closed-1366x768-light.webp",
+      "sha": "07e55cab6d3d014bfd5d3d3c160fdf47ec55e97a",
+      "bytes": 46484
+    },
+    {
+      "path": "evidence/runtime/issue226-captures/foundation-first-open-1366x768-dark.webp",
+      "sha": "0125b601293d68e4f73f2ab94bed1b35a49b0fab",
+      "bytes": 42084
+    },
+    {
+      "path": "evidence/runtime/issue226-captures/foundation-first-open-1366x768-light.webp",
+      "sha": "ca476748abbc4ca6026cd114540ed0408065bd2b",
+      "bytes": 40706
+    },
+    {
+      "path": "evidence/runtime/issue226-captures/study-topics-closed-1366x768-dark.webp",
+      "sha": "22a9b11c81a24c35f3769a185f23602d7e6d65c9",
+      "bytes": 41138
+    },
+    {
+      "path": "evidence/runtime/issue226-captures/study-topics-closed-1366x768-light.webp",
+      "sha": "33464639b4823e4dddf3077753467ed7fe07a282",
+      "bytes": 44610
+    },
+    {
+      "path": "evidence/runtime/issue226-captures/study-topics-first-open-1366x768-dark.webp",
+      "sha": "96c6f6c6ac87a05cdedcbb2253830e508bdb2402",
+      "bytes": 43396
+    },
+    {
+      "path": "evidence/runtime/issue226-captures/study-topics-first-open-1366x768-light.webp",
+      "sha": "297f6de82f0608c7f46a74921abbe869e12819d8",
+      "bytes": 46042
+    },
+    {
+      "path": "evidence/runtime/issue226-current-production-matrix-2026-10-25.md",
+      "sha": "ace8a70be1790db183e89b3bb4dd75f2ed949826",
+      "bytes": 7556
+    },
+    {
+      "path": "evidence/runtime/issue226-accordion-grid-current-production-recheck-2026-10-24.md",
+      "sha": "156ccb6fff223bc58b13e54e7e832a346010e17e",
+      "bytes": 5486
+    },
+    {
+      "path": "evidence/runtime/issue226-real-zoom-user-confirmation-2026-10-25.md",
+      "sha": "6dee54d3f9035a22223f00c28b559f250668c729",
+      "bytes": 2050
+    }
+  ]
+}

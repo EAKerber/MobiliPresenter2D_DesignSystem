@@ -58,3 +58,11 @@ D04-MEDIA-01 seleciona as três capturas WebP citadas pelo documento `evidence/r
 | `image-failure-fallback-option-b-2026-10-25.webp` | `9b31f191d704a3e9d43bf91d79b3aa747114539b` | 24828 |
 
 Os estados representados são baseline, opção A e opção B em DOM isolado: **nenhuma opção foi homologada**. Esta integração é exclusivamente documental/binária, sem alteração de design tokens, decisões, workflows ou código de produto. O destino e a identidade dos blobs exigem readback após merge; até lá, os 218 arquivos ainda não escolhidos continuam sob HOLD, assim como a branch #51.
+
+## Quarto recorte D04 — ISSUE-226 (26/10/2026, preservação histórica)
+
+A origem continua [PR #51](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51), head `28062602a4ddcd1bee090742fe2587fe3837175d`. Selecionados **11 blobs originais** (3 Markdown de rastreamento + 8 WebP do antes/depois em claro/escuro). Contagem de bytes de imagens: **352424**, preservados sem transcodificação. Consulte o [manifest exato de proveniência](DS_ISSUE226_BLOBS_2026-10-26.json).
+
+A sequência documental importa: `issue226-current-production-matrix-2026-10-25.md` inicialmente anotava a issue como aberta por zoom real pendente, mas `issue226-real-zoom-user-confirmation-2026-10-25.md` registra confirmação manual posterior do usuário em 400% e **declara issue encerrada em 25/10**. A leitura presente só confirma a **ordem e o texto dos snapshots históricos**, não reconsulta nem certifica a issue no repositório do produto. O teste manual não possui screenshot/medição própria; o gate WebKit isolado anterior passou conforme o documento. Não converter afirmações dos snapshots em verificação moderna independente.
+
+Após esta extração, **207** caminhos exclusivos da #51 continuam HOLD (218 antes, 11 retirados), condicionados à manutenção dos mesmos heads. `decisions.json`, workflows, produto e deploys permanecem inalterados.
