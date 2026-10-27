@@ -79,3 +79,20 @@ Fontes permanentes de prova:
 ## Prompt mínimo de recuperação
 
 > Leia integralmente `docs/HANDOVER_DAG_HYGIENE_2026-10-27.md` e `docs/HANDOVER_CURRENT.md` de `EAKerber/MobiliPresenter2D_DesignSystem@main`. Confirme refs Git, PRs, rulesets, tags, CI e `ops/branch-dispositions.json` antes de agir. Respeite os gates: 8 HEADs têm todos os blobs preservados, **mas não os DAGs intermediários**, e tags ainda não estão protegidas. Prossiga pela proteção/verificação da retenção histórica; não remova branches sem prova de alcançabilidade e executor homologado. Atualize o handover por PR e reporte SHA/link.
+
+## Readback e próximo gate executável — 27/10/2026 (rodada de retomada)
+
+**Snapshot remoto independente antes desta alteração documental:** `main@f5c445224a443ead95961a0bd790f9251af9b774`; CI de branch hygiene `40494975930` **PASS**; **10 branches**, **0 PRs abertas**, **0 tags** em `refs/tags/`, **0 rulesets** em `/repos/EAKerber/MobiliPresenter2D_DesignSystem/rulesets`. Os oito HEADs HOLD ainda correspondem exatamente aos SHAs do manifesto `DS_DAG_TAG_RETENTION_PROPOSAL_2026-10-27.json`; a ref operacional estava em `7a6aab439fe271a00d12005babdd6f6aa91c88a1` e é ancestral da `main` (comparação: `main` 1 commit à frente, nenhum atrás). **0 deleções e 0 tags criadas**.
+
+### Ação humana necessária: proteção do namespace de tags
+
+O conector disponível nesta rodada permite ler rulesets e Git refs, mas **não expõe criação/edição de rulesets nem criação de tag refs**. Isso não pode ser resolvido movendo refs de branch ou simulando tags. Para destravar o próximo gate, o proprietário deverá configurar no GitHub:
+
+1. [Configurações de rulesets do Design System](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/settings/rules): `New ruleset` → `New tag ruleset`. Nome sugerido: `DS historical DAG retention 2026-10-27`; **Enforcement: Active**.
+2. **Target tags → Include by pattern:** `ds-history/2026-10-27/*` (a correspondência é sobre nomes de tags, sem prefixo `refs/tags/`; os oito nomes propostos têm somente um segmento depois da última barra).
+3. **Tag protections:** ativar `Restrict updates` e `Restrict deletions`. **Não ativar `Restrict creations`**, para permitir o primeiro push das tags leves exatas. Deixar a lista de **bypass vazia** ou documentar e revisar todos os atores com bypass antes de considerar proteção suficiente. Salvar a regra ativa.
+4. Fazer readback da regra pelo GitHub: alvo `tag`, `enforcement=active`, padrão de inclusão correspondente, regras de `update` e `deletion` e exceções/bypass. Se a API listar `[]`, regra desativada, escopo diferente ou permissões insuficientes, **manter HOLD**.
+
+Documentação oficial: [criar rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/creating-rulesets-for-a-repository) e [proteções disponíveis](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets). Esta proteção fornece controle operacional, **não imutabilidade absoluta contra administradores capazes de alterar a própria regra**.
+
+**Depois da confirmação:** retomar fase de **criação não destrutiva** das oito tags leves `refs/tags/ds-history/2026-10-27/*` apontadas por SHA no manifesto, com `git push` sem `--force`, readback independente de SHA/tipo de objeto/ancestralidade/proteção e recibo; somente numa PR e gate posteriores considerar suporte de executor e exclusão em lotes de 1–3. O manifesto `ops/branch-hygiene-batch.json` permanece P12 consumido; **não reaplicar**. A branch operacional ainda exige gate de terminalidade independente. **Não realizar operações no repo de produto nesta frente.**
