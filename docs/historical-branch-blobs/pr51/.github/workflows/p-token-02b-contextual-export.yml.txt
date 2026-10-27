@@ -1,0 +1,33 @@
+name: P-TOKEN-02B approved contextual text export
+
+on:
+  push:
+    branches:
+      - architecture/p-token-02b-contextual-copy-20261022
+    paths:
+      - "decisions.json"
+      - "scripts/export-approved-contextual-text.mjs"
+      - "tests/export-approved-contextual-text.test.mjs"
+      - "dist/approved-contextual-support-text.*"
+      - ".github/workflows/p-token-02b-contextual-export.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  contextual:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Syntax check
+        run: |
+          node --check scripts/export-approved-contextual-text.mjs
+          node --check tests/export-approved-contextual-text.test.mjs
+      - name: Source-pinned export check
+        run: node scripts/export-approved-contextual-text.mjs --check
+      - name: Contextual scope and determinism
+        run: node --test tests/export-approved-contextual-text.test.mjs

@@ -1,0 +1,47 @@
+name: P-TOKEN-01 VIS-002 reference export gate
+
+on:
+  push:
+    branches:
+      - architecture/p-token-01-executable-palette-20261022
+    paths:
+      - "decisions.json"
+      - "scripts/export-approved-palette.mjs"
+      - "tests/export-approved-palette.test.mjs"
+      - "dist/approved-palette-reference.css"
+      - "dist/approved-palette-reference.manifest.json"
+      - ".github/workflows/p-token-01-reference-export-gate.yml"
+  pull_request:
+    paths:
+      - "decisions.json"
+      - "scripts/export-approved-palette.mjs"
+      - "tests/export-approved-palette.test.mjs"
+      - "dist/approved-palette-reference.css"
+      - "dist/approved-palette-reference.manifest.json"
+permissions:
+  contents: read
+concurrency:
+  group: p-token-01-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  reference-export:
+    name: Approved reference palette / deterministic / no product deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Node syntax
+        run: |
+          node --check scripts/export-approved-palette.mjs
+          node --check tests/export-approved-palette.test.mjs
+      - name: Compare versioned dist to canonical decisions
+        run: node scripts/export-approved-palette.mjs --check
+      - name: "Tests: provenance, scope, determinism and fail-closed"
+        run: node --test tests/export-approved-palette.test.mjs
+      - name: Assert no runtime integration
+        run: |
+          test ! -e app || (echo "This Design System branch must not contain product runtime" && exit 1)
+          grep -q 'DO NOT LINK into app pages' dist/approved-palette-reference.css

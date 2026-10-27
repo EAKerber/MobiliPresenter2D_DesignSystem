@@ -106,3 +106,7 @@ Fonte #51, 35 blobs exatos: 32 candidatos/auditorias ARC-13 e 3 documentos VIS-0
 ## D04 — últimas 45 notas runtime exclusivas da #51 (27/10/2026)
 
 Copiar original histórico por SHA exata de 45 arquivos `evidence/runtime/*.md` abrangendo navegação/teclado, DS05A, contraste, foco VIS-002 e falhas de imagem. [Manifesto](DS_D04_RUNTIME_EVIDENCE_BLOBS_2026-10-27.json) · [classificação de leitura](DS_D04_RUNTIME_EVIDENCE_PRESERVATION_2026-10-27.md). Produção/preview/CI são snapshots separados, não certificação atual. Após merge, **zero exclusivos** na #51; **11 modificados** e ancestralidade divergida impedem delete.
+
+## D04 — preservação inerte dos 11 blobs modificados da #51 (27/10/2026)
+
+Comparação fonte/head e main identificou **11 paths compartilhados com blobs diferentes** depois de zerar exclusivos na #101. Todos os 11 blobs antigos foram destinados a `docs/historical-branch-blobs/pr51/**/*.txt` por SHA exato, incluindo 2 workflows sem ativação. [SHA e pares old/main](DS_D04_PR51_OLD_CANONICAL_BLOBS_2026-10-27.json) · [aviso sobre reachability](DS_D04_PR51_CANONICAL_ARCHIVE_2026-10-27.md). Cobertura de conteúdo ≠ integridade de commit DAG; refs não elegíveis a delete automaticamente.
