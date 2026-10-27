@@ -36,9 +36,9 @@ O saldo de **193 caminhos exclusivos da #51** após #91 é:
 | `arc13-classified-*` | 38 | 1.777.887 B | HOLD: batches de classificação; avaliar cobertura/deduplicação vs fonte e versão antes de importar |
 | Outros `arc13-*` (fora consumer/classified) | 38 | 2.420.206 B | HOLD: propostas/índices de suporte, não migrar automaticamente para catálogo |
 | `*consumer-trace-*` | 69 | 143.278 B | HOLD: rastreios estáticos pontuais, selecionar por risco/owner |
-| Outros `evidence/architecture/` | 3 | a conferir no novo tree | HOLD: propostas/casos restantes, não aprovações de produto |
+| Outros `evidence/architecture/` | 3 | 15.817 B | HOLD: propostas/casos restantes, não aprovações de produto |
 | `evidence/runtime/*.md` | 45 | 162.306 B | HOLD: snapshots de rotas, CI e previews, não status atual |
 
-**Observação sobre os tamanhos:** os quatro bytes/grupos acima usam a fotografia após #90; #91 extraiu exatamente quatro arquivos do grupo "outros arquitetura" (9.939 + 9.869 + 9.117 + 8.634 bytes), então esse grupo mudou de 7 para 3 e os tamanhos individuais remanescentes devem ser calculados do tree atual antes de qualquer operação destrutiva.
+**Observação sobre os tamanhos:** os tamanhos foram calculados no tree atual após PR #91, comparando o HEAD SHA imutável da #51 com a main. Os 3 restantes no grupo de outros arquivos de arquitetura são propostas de VIS-002 para superfícies/foco, não homologações.
 
 A PR [#51](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51) está **CLOSED, NOT MERGED**, desde `2026-10-27T03:14:18Z` pelo evento atribuído à conta `EAKerber`. A branch de origem ainda existe; D04 e `ops/branch-dispositions.json` seguem impondo **HOLD**. Encerrar PR não prova integridade de todos os dados remanescentes e não satisfaz a elegibilidade do executor de exclusão. A PR #39 permanece aberta; #39 tem 21 exclusivos (12 docs/ADRs, 7 arquivos de experimento, 2 workflows antigos). Nenhum workflow histórico novo foi ativado.
