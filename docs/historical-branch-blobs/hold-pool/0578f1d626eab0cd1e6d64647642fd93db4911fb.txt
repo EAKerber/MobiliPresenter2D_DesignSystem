@@ -1,0 +1,621 @@
+{
+  "schema": "M2DReview1",
+  "project": "MobiliPresenter2D",
+  "consolidationDate": "2026-10-18",
+  "sources": [
+    "ChatGPT: Inventário De Design System",
+    "ChatGPT: Continuar Inventário Design System",
+    "User decisions and clarifications in the current conversation"
+  ],
+  "scopeNotice": "Aprovação conceitual não é autorização de implementação. Cores, medidas, layouts e especificações listados como pendentes não são tokens nem padrões homologados.",
+  "decisions": [
+    {
+      "id": "GOV-001",
+      "status": "defined",
+      "verdict": "agreed",
+      "decision": null,
+      "recoveryNote": "Texto de origem não recuperado nas fontes consultadas até 2026-10-18. Lacuna de proveniência encerrada como não recuperável nesta consolidação; ID e estado do checkpoint preservados, sem reconstruir conteúdo. Reabrir somente se a fonte original for encontrada."
+    },
+    {
+      "id": "NAV-001",
+      "status": "direction",
+      "verdict": "agreed",
+      "decision": null,
+      "recoveryNote": "Texto de origem não recuperado nas fontes consultadas até 2026-10-18. Lacuna de proveniência encerrada como não recuperável nesta consolidação; ID e estado do checkpoint preservados, sem reconstruir conteúdo. Reabrir somente se a fonte original for encontrada."
+    },
+    {
+      "id": "NAV-002",
+      "status": "direction",
+      "verdict": "agreed",
+      "decision": null,
+      "recoveryNote": "Texto de origem não recuperado nas fontes consultadas até 2026-10-18. Lacuna de proveniência encerrada como não recuperável nesta consolidação; ID e estado do checkpoint preservados, sem reconstruir conteúdo. Reabrir somente se a fonte original for encontrada."
+    },
+    {
+      "id": "NAV-003",
+      "status": "direction",
+      "verdict": "agreed",
+      "decision": "Usar no site todo o mesmo favicon já aplicado na página Como funciona."
+    },
+    {
+      "id": "NAV-004",
+      "status": "functional-contract-approved",
+      "verdict": "agreed",
+      "decision": "Menu público abre e fecha pelo botão, responde a Escape e clique fora, permite navegação por teclado, expõe aria-expanded, devolve foco quando adequado e respeita preferência por movimento reduzido. Páginas públicas dão acesso a Ambientes (landing), Como funciona, Quem somos e Contato.",
+      "notApproved": [
+        "Estética do header; tratada separadamente em NAV-005."
+      ],
+      "publicContactAccess": {
+        "status": "current-access-retained-with-approved-public-header-pattern",
+        "decision": "The existing 'Fale conosco' link to WhatsApp remains the public contact access under the user's approval of wide public-header option A. This does not establish a separate contact route."
+      }
+    },
+    {
+      "id": "NAV-005",
+      "status": "approved-for-wide-and-compact-structure-with-narrow-fit-rule",
+      "verdict": "agreed",
+      "decision": "Header global com acesso às quatro páginas públicas. Identificação do ambiente do viewer fica em área contextual separada do header; controles e interação da cena ficam no conteúdo do viewer. O viewer é subpágina de ambiente, portanto Ambientes não deve ser falsamente marcado como a página ativa.",
+      "examplesNotApproved": [
+        "Ambientes › Cozinha é somente exemplo de breadcrumb."
+      ],
+      "notApproved": [
+        "Aplicação do comportamento no código do produto até validação DOM da proposta",
+        "Comportamento com identificadores contextuais excepcionalmente longos"
+      ],
+      "future": [
+        "Generalização multiambiente (ENV-001)."
+      ],
+      "wideLayoutPatternsApproved": {
+        "publicPages": "Option A: retain the existing expanded/wide public-page pattern with the logo at left, public navigation exposed horizontally, and contact/theme controls in the established right-side area.",
+        "privatePages": "Option B: logo and current page/area identifier at left; theme control and hamburger at right, with the hamburger at the far edge.",
+        "secondaryNavigationPages": "Use a viewer-like contextual header for pages intended to be reached from another page. Move the theme control inside the header. In the right-side cluster, place the theme control to the left of a hamburger/menu at the far edge; retain contextual return navigation.",
+        "scope": "Approved for expanded/wide layouts only. Breakpoint values and compact/mobile compositions are recorded separately in compactLayoutPatternsApproved."
+      },
+      "implementationAuthorized": false,
+      "approvedAt": "2026-10-18",
+      "approvalSource": "User selection of wide/compact header patterns, compact option A, and narrow-fit rule: keep the theme label while reducing the logo by no more than 30%, then switch the theme control to icon-only.",
+      "compactLayoutPatternsApproved": {
+        "publicPages": "Option A: preserve a single-row header. Keep the brand at left; place the compact theme control immediately before the hamburger at the far right. Group public page navigation and the existing contact access in the hamburger menu.",
+        "privatePages": "Option A: preserve a single row with the brand and current page/area identifier together at left; place the theme control immediately before the hamburger at the far right. At very narrow widths, apply compactNarrowFitRule.",
+        "secondaryNavigationPages": "Option A: preserve a single row with the brand and contextual return label together at left; place the theme control before the menu/hamburger at the far right.",
+        "scope": "Estrutura aprovada mais a regra de encaixe estreito. A especificação técnica recomendada registra valores estreitos de logo e controles, limiar do container e fallback abaixo da largura mínima; esses valores vêm de medições aproximadas e exigem validação runtime. Ela não autoriza implementação no produto nem define padrões para outros componentes."
+      },
+      "compactNarrowFitRule": {
+        "status": "approved-behavioral-rule-with-corrected-assistant-defined-values; post-implementation-validation-pending",
+        "rule": "Keep the theme control's text label visible while reducing the logo as needed, up to a maximum 30% reduction. If the one-row header would require reducing the logo further, change the theme control to icon-only. Keep the full page/area identifier and place the hamburger at the far right.",
+        "reference": "The published /admin.html header at a 320 CSS px viewport showed .brand__logo at 105 px wide. For this observed case, a 30% reduction is approximately 73.5 px. This is a calculation reference for the compact header, not a global logo token.",
+        "accessibility": "The icon-only theme control must retain an accessible name/state description.",
+        "stillOpen": [
+          "Validar a composição recomendada em runtime após eventual implementação, nos dois temas.",
+          "Rever o fallback com identificadores de página excepcionalmente longos."
+        ]
+      },
+      "compactNarrowFitImplementationSpec": {
+        "status": "assistant-defined-at-user-request; current-product-geometry-runtime-measured; corrected-recommendation-pending-post-implementation-validation",
+        "scope": "Header compacto de páginas privadas; preservar a estrutura aprovada.",
+        "measurementBasis": {
+          "viewportCssPx": 320,
+          "horizontalPaddingCssPxPerSide": 14,
+          "brandPlusIdentifierCssPx": 189.9,
+          "brandGapCssPx": 9,
+          "pageIdentifierCssPx": 75.9,
+          "headerGapCssPx": 8,
+          "currentActionClusterCssPx": 119.1,
+          "currentThemeTargetCssPx": "74.1 × 40",
+          "currentHamburgerTargetCssPx": "40 × 40",
+          "observedAtLocal": "2026-10-18",
+          "runtimeTheme": "dark",
+          "measuredViewportsCssPx": [
+            288,
+            306,
+            313,
+            320,
+            340,
+            350,
+            360
+          ],
+          "note": "DOM atual: duas linhas até 340 px nos pontos amostrados, sem overflow; a proposta continua sendo cálculo e não comportamento implementado."
+        },
+        "logo": {
+          "flexBasisCssPx": 105,
+          "minWidthCssPx": 73.5,
+          "maxReductionPercent": 30,
+          "behavior": "Deixar flex-shrink reduzir a logo somente conforme a falta de espaço, sem reduzir abaixo de 73,5 px. Identificador da página não encolhe nem é truncado.",
+          "at320ViewportApproxWidthCssPx": 103,
+          "at320ReductionApproxPercent": 2
+        },
+        "themeControl": {
+          "label": "Manter o rótulo até cerca de 321 px de viewport, se a logo couber com redução de no máximo 30%; usar ícone-only em 320 px ou menos.",
+          "iconOnlyWhenAvailableHeaderWidthAtOrBelowCssPx": 292.5,
+          "approximateViewportThresholdCssPx": 320,
+          "thresholdDerivation": "Marca mínima = 73,5 + 9 + 75,9 = 158,4 px. Ações rotuladas = 74,1 + gap recomendado 8 + menu 44 = 126,1 px. Com gap do header 8 e margens totais 28, exige 320,5 px; arredondar para 321 px para manter rótulo; icon-only em 320 px ou menos.",
+          "icon": "Ícone de estado: sol no tema claro e lua no tema escuro. Nome acessível informa o tema atual; aria-pressed acompanha o estado escuro.",
+          "targetCssPx": "44 × 44",
+          "hamburgerTargetCssPx": "44 × 44",
+          "gapCssPx": 8
+        },
+        "compactMinimum": {
+          "oneRowViewportCssPx": 291,
+          "below": "Abaixo de 291 px, permitir duas linhas em vez de comprimir mais a logo, reduzir o identificador ou causar overflow. Manter o tema icon-only.",
+          "rationale": "Com logo no piso, identificador, controles 44×44 px, gap entre ações 8 px, gap do header 8 px e margens de 14 px por lado, a composição icon-only exige 290,4 px; arredondar para 291 px. Abaixo, permitir duas linhas."
+        },
+        "implementation": "Não autorizada neste registro. Implementar depois da validação DOM e revisão da especificação no repositório do produto.",
+        "specificationSource": "Valores definidos pelo assistente a pedido do usuário, derivados da geometria publicada e da regra de redução homologada.",
+        "statusNotice": "A geometria da implementação atual foi medida no runtime. Os parâmetros recomendados são cálculos para uma futura mudança e não comprovam funcionamento; não são tokens globais.",
+        "runtimeValidation": {
+          "status": "current-product-geometry-validated-at-sampled-widths; proposed-values-calculated-not-implemented",
+          "evidenceFile": "NAV-005_RUNTIME_VALIDATION_2026-10-18.md",
+          "samples": [
+            288,
+            306,
+            313,
+            320,
+            340,
+            350,
+            360
+          ],
+          "themeMeasured": "dark",
+          "lightTheme": "stylesheet declarations inspected; live DOM geometry not measured",
+          "implementationChanged": false
+        }
+      }
+    },
+    {
+      "id": "VIS-001",
+      "status": "pending",
+      "verdict": "revisit",
+      "decision": null,
+      "note": "A decidir, ponto de discussão futuro."
+    },
+    {
+      "id": "VIS-002",
+      "status": "palette-base-focus-and-semantic-swatches-approved; component-mapping-and-runtime-validation-pending",
+      "verdict": "agreed",
+      "decision": "Paleta-base de identidade compartilhada entre interfaces, com aplicação contextual. A arquitetura futura de tokens deve poder atender light e dark; não presumir ambos os modos em todas as rotas. Revisar contraste de texto, controles, foco e estados. Definir semanticamente erro, aviso, sucesso e informação, além de foco, seleção, hover, pressionado e desabilitado. Informação de processo usa o azul homologado; informação promocional de produto usa a cor terciária cobre com base aprovada #A64D13. O usuário aprovou a paleta visual A: neutros quentes para claro e escuro, superfície clara marfim em vez de branco puro, superfície suave, textos, bordas e tratamento de foco em contorno.",
+      "notApproved": [
+        "Global token implementation or blanket assignment without component/route mapping",
+        "Copper variants by theme or surface",
+        "Component-specific mapping and application of the approved semantic swatches",
+        "Selection, hover, pressed, disabled and loading appearances beyond the existing approved directions",
+        "Runtime application and component-specific contrast validation"
+      ],
+      "semanticColors": {
+        "approvedDirection": "Estados semânticos reconhecíveis, harmonizados com a marca, com combinações adequadas por tema. Mensagens não dependem apenas da cor.",
+        "functionalInformation": "Informações de processo e funcionamento usam o azul homologado. São informativas e não equivalem a aviso, erro ou confirmação de sucesso.",
+        "editorialCommercial": "Informações promocionais de produto, campanhas, condições especiais e destaques institucionais pertencem à comunicação promocional/comercial. Não classificar a campanha de três meses como warning técnico.",
+        "candidateSwatches": "A prancha A/B permanece como comparação experimental. Os pares de erro, sucesso e aviso foram selecionados por maior contraste em cada tema e registrados em selectedStatusSwatches; conferir o quadro aprovado visualEvidence/experiments/VIS-002-semantic-states-selected.svg.",
+        "processInformation": {
+          "status": "semantic-role-approved",
+          "colorFamily": "blue homologated",
+          "decision": "Usar o azul homologado para instruções e informações sobre o funcionamento/processo.",
+          "existingImplementation": {
+            "token": "--info",
+            "light": "#245d87",
+            "dark": "#a7d1f0",
+            "source": "EAKerber/MobiliPresenter2D app/admin/admin.css",
+            "status": "current usage; confirm its mapping against live route states in the visual/runtime audit."
+          }
+        },
+        "promotionalTertiary": {
+          "status": "approved-base",
+          "hex": "#A64D13",
+          "role": "Cor terciária para informações promocionais de produto e campanhas.",
+          "variants": "Variações por tema e superfície ainda dependem de medição de contraste e revisão visual.",
+          "historicalSampleContrast": {
+            "value": "5.69:1",
+            "pair": "white text on copper",
+            "source": "previous image-based estimate",
+            "status": "reference evidence, not a runtime audit"
+          }
+        },
+        "selectedStatusSwatches": {
+          "status": "approved-contextual-pairs; component-mapping-and-runtime-validation-pending",
+          "selectionRule": "Em cada estado, selecionar separadamente para claro e escuro o par com maior contraste de texto entre as opções A e B.",
+          "error": {
+            "light": {
+              "foreground": "#8E382F",
+              "background": "#F0E5E1",
+              "contrast": "6.17:1"
+            },
+            "dark": {
+              "foreground": "#E7AAA2",
+              "background": "#352522",
+              "contrast": "7.41:1"
+            }
+          },
+          "success": {
+            "light": {
+              "foreground": "#35634A",
+              "background": "#E5ECE6",
+              "contrast": "5.76:1"
+            },
+            "dark": {
+              "foreground": "#A8CAB1",
+              "background": "#223129",
+              "contrast": "7.63:1"
+            }
+          },
+          "warning": {
+            "light": {
+              "foreground": "#70531E",
+              "background": "#EEE7D8",
+              "contrast": "5.79:1"
+            },
+            "dark": {
+              "foreground": "#E4C989",
+              "background": "#332C1E",
+              "contrast": "8.56:1"
+            }
+          },
+          "scope": "Aprovação dos pares contextuais de texto/fundo mostrados no quadro. Não atribui token global nem decide ícones, bordas, transparências ou mapeamento de componentes."
+        }
+      },
+      "contextualSelection": "Semântica compartilhada; intensidade da seleção varia por tarefa: viewer discreto e com cena protagonista; configurador mais explícito para distinguir opções próximas; admin forte e inequívoco em telas densas. Foco é independente e perceptível em todos os contextos/temas.",
+      "est01Addendum": "No configurador, uma seleção que altera a configuração combina indicador explícito (ex. check) e destaque moderado de superfície ou borda, sem competir com o conteúdo. Foco não cria uma terceira aparência ornamentada.",
+      "notYetSpecified": [
+        "Global token mapping and light/dark variants beyond the two approved contextual pairs",
+        "Additional final contrast pairs in other components, surfaces and themes",
+        "Visual variants and measurements for focus, selection, hover, pressed, disabled and loading",
+        "Copper variations by theme/surface outside approved base #A64D13",
+        "Mapping of other semantic state colors to actual screens and tokens",
+        "Mapeamento dos valores aprovados da paleta para componentes/rotas e validação no DOM; variantes e pares técnicos de estados semânticos."
+      ],
+      "approvedRuntimePairs": [
+        {
+          "status": "previous-pair-reopened-and-superseded-by-approved-palette",
+          "context": "Light-theme body support text on the audited warm surface",
+          "foreground": "#675F55",
+          "background": "#F0EDE8",
+          "contrast": "5.38:1",
+          "selected": "Option B in visual review",
+          "scope": "Exact inspected pair only; not a global text token.",
+          "routeSelectors": [
+            {
+              "route": "/",
+              "selector": ".hero-description"
+            },
+            {
+              "route": "/how-it-works/",
+              "selector": ".how-hero-note"
+            },
+            {
+              "route": "/about/",
+              "selector": ".about-scale p:not(.eyebrow)"
+            }
+          ],
+          "previousStatus": "approved-contextual-pair",
+          "reconsiderationReason": "O usuário rejeitou esteticamente #675F55 como tom secundário. A paleta A agora aprova #705C4B no papel secundário; aplicação nos seletores listados ainda precisa de validação DOM.",
+          "candidateReplacement": {
+            "foreground": "#705C4B",
+            "background": "#F0EDE8",
+            "contrast": "5.41:1",
+            "status": "approved-palette-pair; product-application-pending"
+          }
+        },
+        {
+          "status": "approved-contextual-pair",
+          "context": "Light-theme small warm eyebrow label on the audited warm surface",
+          "foreground": "#70522F",
+          "background": "#E8E3DC",
+          "contrast": "5.60:1",
+          "selected": "Option B in visual review",
+          "scope": "Exact inspected pair only; not a global color token.",
+          "routeSelectors": [
+            {
+              "route": "/how-it-works/",
+              "selector": ".study-band .eyebrow"
+            }
+          ]
+        }
+      ],
+      "implementationAuthorized": false,
+      "approvedAt": "2026-10-18",
+      "approvalSource": "User selection of the alternatives in the visual review.",
+      "approvedPalette": {
+        "status": "approved-for-design-system-palette; product-application-pending",
+        "scope": "Valores e papéis apresentados na prancha PALETTE-candidate-A-v2.svg. A aprovação define a paleta de referência; não cria tokens técnicos nem autoriza implementação no produto.",
+        "colors": {
+          "canvas": {
+            "light": "#E8E3DC",
+            "dark": "#171614"
+          },
+          "surface": {
+            "light": "#F0EDE8",
+            "dark": "#211F1C"
+          },
+          "surfaceSoft": {
+            "light": "#DED9D2",
+            "dark": "#2C2924"
+          },
+          "textPrimary": {
+            "light": "#292723",
+            "dark": "#F0EAE1"
+          },
+          "textSecondary": {
+            "light": "#705C4B",
+            "dark": "#C7BBAA"
+          },
+          "border": {
+            "light": "#D6CCC0",
+            "dark": "#4E4942"
+          },
+          "focusOutline": {
+            "light": "#8B6A40",
+            "dark": "#D8BC7C"
+          }
+        },
+        "focusTreatment": {
+          "outlineWidthCssPx": 4,
+          "offsetCssPx": 3,
+          "status": "approved-visual-reference; verify keyboard focus appearance in real components"
+        },
+        "contrast": {
+          "primaryLightOnCanvas": "11.68:1",
+          "secondaryLightOnSurface": "5.41:1",
+          "secondaryLightOnCanvas": "4.95:1",
+          "secondaryLightOnSoftSurface": "4.50:1",
+          "primaryDarkOnCanvas": "15.12:1",
+          "secondaryDarkOnSurface": "8.70:1",
+          "focusLightOnSurface": "4.25:1",
+          "focusDarkOnSurface": "8.93:1",
+          "note": "Calculated for the listed opaque solid color pairs. Component transparency, combined backgrounds and runtime rendering still require validation."
+        },
+        "approvalSource": "Aprovação explícita do usuário após revisão visual da prancha PALETTE-candidate-A-v2.svg."
+      }
+    },
+    {
+      "id": "VIS-003",
+      "status": "visual-treatment-and-scoped-color-pair-approved; product-implementation-pending",
+      "verdict": "agreed",
+      "finding": "FIND-004",
+      "decision": "No tema escuro, manter a legenda integrada à ilustração sobre uma faixa escura opaca na base. Para FIND-004, o usuário escolheu a alternativa A: faixa #20211F com texto #F0EDE8 (contraste calculado 13,85:1).",
+      "approvedScope": "Somente a composição e o par sólido desta legenda: .study-art figcaption em /how-it-works/, tema escuro.",
+      "notApproved": [
+        "Token global de superfície/texto ou extensão para outros componentes e temas",
+        "Gradiente, opacidade, dimensões, espaçamento e comportamento responsivo",
+        "Implementação no produto; requer auditoria do DOM final após mudança"
+      ],
+      "evidence": "Auditoria runtime em 2026-10-18 encontrou #C4BCB2 sobre #FCF9EF, 1,78:1. A prancha experimental comparou três cores sólidas; a seleção A fixa o par #F0EDE8 sobre #20211F com 13,85:1.",
+      "implementationAuthorized": false,
+      "approvedAt": "2026-10-18",
+      "approvalSource": "Seleção explícita do usuário da alternativa A na prancha FIND-004.",
+      "approvedPair": {
+        "foreground": "#F0EDE8",
+        "background": "#20211F",
+        "contrast": "13.85:1",
+        "status": "approved-contextual-pair",
+        "scope": "FIND-004 only; not a global token"
+      }
+    },
+    {
+      "id": "EST-01",
+      "status": "direction-agreed",
+      "context": "Configurador",
+      "decision": "Seleção que altera a configuração combina indicador explícito com destaque moderado de superfície ou borda, mantendo legibilidade e distinção entre seleção e foco.",
+      "notYetSpecified": [
+        "Formato do indicador",
+        "Cores",
+        "Espessuras",
+        "Comportamento por tipo de seleção",
+        "Contraste light/dark"
+      ],
+      "implementationAuthorized": false
+    },
+    {
+      "id": "EST-02",
+      "status": "direction-agreed",
+      "context": "Viewer, configurador e admin; temas light/dark",
+      "decision": "Foco de teclado com contorno externo independente, perceptível e sem decoração excessiva. Focus-visible quando apropriado; preservar a aparência de seleção quando os estados coexistem sem criar terceira variante ornamentada.",
+      "notYetSpecified": [
+        "Cor por tema/superfície",
+        "Espessura e afastamento",
+        "Limites de clipping",
+        "Contraste em componentes reais",
+        "Componentes especiais"
+      ],
+      "implementationAuthorized": false
+    },
+    {
+      "id": "EST-03",
+      "status": "direction-agreed",
+      "decision": "Hover informa interatividade; pressionado confirma a ação naquele instante. Nenhum se confunde com seleção persistente ou confirmação de conclusão. O feedback depende da família: botão pode ter micro movimento sutil; campos, seletores densos e cards técnicos permanecem geometricamente estáveis. Viewer discreto; configurador/admin explícitos sem agitação. Não depender de hover; suportar touch e respeitar movimento reduzido.",
+      "notYetSpecified": [
+        "Escala",
+        "Deslocamento",
+        "Duração",
+        "Easing",
+        "Cores",
+        "Sombras",
+        "Exceções por componente"
+      ],
+      "implementationAuthorized": false
+    },
+    {
+      "id": "EST-04",
+      "status": "direction-agreed",
+      "decision": "Desabilitado (ação não permitida) e somente leitura (valor consultável, mas não editável) têm semântica e comportamento distintos. Somente leitura mantém legibilidade e, quando pertinente, permite seleção/cópia. Desabilitado não aciona; seu motivo deve ser compreensível quando necessário e não depender apenas de opacidade. Separar editabilidade, habilitação, publicação, disponibilidade na UI e seleção; não colapsar status. Evitar poluição visual com agrupamento por seção e informação no contexto da decisão, quando viável.",
+      "notYetSpecified": [
+        "Combinações válidas",
+        "Layout/localização por tela",
+        "Indicadores de publicação e disponibilidade",
+        "Diferenças entre permissão, publicação e estado comercial",
+        "Acessibilidade/contraste",
+        "Exceções"
+      ],
+      "implementationAuthorized": false
+    },
+    {
+      "id": "EST-05",
+      "status": "direction-agreed",
+      "decision": "Bloquear somente ações com dependências ou riscos reais de conflito/duplicidade; regiões independentes permanecem utilizáveis. Operações críticas, especialmente publicação, recebem proteção e feedback explícitos. Distinguir carregamento, alterações locais, salvando/aguardando confirmação, persistência confirmada, falha/estado incerto e estados de publicação. Nunca indicar Salvo ou Publicado sem confirmação real.",
+      "notYetSpecified": [
+        "Hierarquia/posição do feedback",
+        "Retry e recuperação",
+        "Concorrência/idempotência",
+        "Offline",
+        "Operações longas",
+        "Publicação parcial",
+        "Regras por controle/seção/operação"
+      ],
+      "implementationAuthorized": false
+    },
+    {
+      "id": "EST-06",
+      "status": "direction-agreed",
+      "decision": "Feedback contextual junto à ação/área afetada. Estados relevantes permanecem visíveis; sucessos comuns são discretos; aviso global pode complementar operação crítica. Distinguir edição local, andamento, confirmação, falha e resultado desconhecido. Evitar feedback redundante.",
+      "notYetSpecified": [
+        "Layout",
+        "Mensagens",
+        "Severidade/acessibilidade",
+        "Duração e fechamento de feedback transitório",
+        "Preservação local",
+        "Retry/offline",
+        "Conflitos e estado desconhecido"
+      ],
+      "implementationAuthorized": false
+    },
+    {
+      "id": "EST-07",
+      "status": "direction-agreed",
+      "decision": "Preservar edição local e evitar sobrescrita silenciosa. Resolver conflitos explicitamente no início; automação só após validação de segurança e confiabilidade. Não presumir produto sofisticado de diff/merge: conflito raro pede aviso compreensível, alternativas simples e registro da escolha.",
+      "notificationPolicy": "Erro/aviso relevante não pode depender de toast efêmero. Manter feedback contextual persistente quando exigir ação e histórico consultável como complemento; não registrar cada interação ou sucesso trivial.",
+      "notYetSpecified": [
+        "Regra de precedência e opções",
+        "Forma do histórico",
+        "Persistência e retenção",
+        "Privacidade/expurgo",
+        "Retry/offline/idempotência",
+        "Preservação local em reload/fechamento"
+      ]
+    },
+    {
+      "id": "EST-08",
+      "status": "direction-agreed",
+      "decision": "Recuperação persistente proporcional à importância/custo de refazer. Priorizar rascunhos administrativos e configurações trabalhosas; estados transitórios do viewer não precisam da mesma garantia.",
+      "guarantees": "Rascunho recuperável, salvamento confirmado e publicação confirmada são estados distintos. Não restaurar silenciosamente por cima de uma versão remota mais recente.",
+      "conflictComplexityBound": "Evitar editor diff/merge sofisticado em conflito raro: aviso claro, opções simples e decisão registrada, sem conciliação automática inicial.",
+      "privacyAndPersistence": "Considerar identidade/contexto do rascunho e dispositivo compartilhado; mecanismo, retenção, quotas, criptografia, exclusão e armazenamento permanecem por definir.",
+      "implementationAuthorized": false
+    },
+    {
+      "id": "EST-09",
+      "status": "direction-agreed",
+      "decision": "Novas tentativas automáticas somente quando comprovadamente seguras. Se o resultado for desconhecido, consultar o estado remoto antes de repetir, sobretudo em salvar/publicar. Distinguir falha confirmada, estado desconhecido e sucesso confirmado; preservar trabalho local."
+    },
+    {
+      "id": "EST-10",
+      "status": "direction-agreed",
+      "decision": "Histórico enxuto e contextual, com indicador discreto. Pendências permanecem acessíveis até resolução; ocorrências resolvidas têm retenção limitada e proporcional. Marcar como lida não significa resolvida. Agrupar eventos repetidos sem perder frequência/contexto; registrar resultados críticos; sucessos triviais não exigem registro. Separar histórico de auditoria administrativa e evitar dados sensíveis desnecessários.",
+      "notYetSpecified": [
+        "Duração de retenção",
+        "Critérios de descarte/encerramento",
+        "Persistência entre sessões"
+      ]
+    },
+    {
+      "id": "PRIVATE-HEADER-001",
+      "status": "direction-recorded-from-current-user-request",
+      "decision": "Páginas privadas: logo e identificador da página/área à esquerda; controle claro/escuro e menu hambúrguer à direita em todas as resoluções. Login administrativo também identifica a área como Administração.",
+      "menu": "Separar destinos públicos de destinos privados e mostrar somente páginas privadas acessíveis conforme sessão e tipo de conta. Quando autenticado, incluir email atual e ação Sair.",
+      "configurator": "A ação específica Reiniciar fica antes do hambúrguer; o menu permanece o último controle comum."
+    },
+    {
+      "id": "CMP-001",
+      "status": "ongoing",
+      "verdict": "revisit",
+      "decision": null,
+      "recoveryNote": "O checkpoint registra ongoing/revisit sem descrição explicativa recuperável. A governança de componentes permanece em aberto; nenhum conteúdo foi inferido."
+    },
+    {
+      "id": "ENV-001",
+      "status": "future",
+      "verdict": "revisit",
+      "decision": "Generalização multiambiente é futura; não homologada."
+    }
+  ],
+  "evidenceAndWorkItems": {
+    "DS-04-v2": {
+      "status": "audit-reported-incomplete",
+      "method": "Verificador CSSOM em Chromium com fixtures representativas.",
+      "reportedExamples": [
+        "Contador de módulos",
+        "Texto auxiliar da cena",
+        "Número dos módulos",
+        "Títulos de seção",
+        "Detalhamento de preço",
+        "Valor do rodapé",
+        "Opções administrativas",
+        "Mensagens de sucesso do Admin"
+      ],
+      "reportedContrastRange": "1.00:1–1.53:1 em problemas reportados",
+      "limits": "Não executou a aplicação completa com DOM dinâmico real; estados de autenticação e dados publicados não tiveram cobertura integral.",
+      "issueReferences": [
+        "MobiliPresenter2D issue #208 — auditoria de temas",
+        "MobiliPresenter2D issue #209 — contador de módulos (problema funcional separado)"
+      ]
+    },
+    "v0.3-laboratory": {
+      "status": "experimental; alternatives are not homologated",
+      "contentsReportedInChat": [
+        "Seis comparações interativas antes/depois com alternância light/dark.",
+        "Duas alternativas para a barra de preço: manter superfície escura ou adaptar à superfície clara.",
+        "Cálculo de contraste em DOM/fixture ilustrativo.",
+        "Registro de pareceres e observações por componente.",
+        "Importação/exportação preservando EST-01 a EST-10."
+      ],
+      "reportedExample": {
+        "component": "botão de avanço no tema claro",
+        "contrastBefore": "2.20:1",
+        "contrastProposal": "4.96:1",
+        "limitation": "Valores de fixture isolado, não medição da produção; resultado não homologa a estética."
+      },
+      "archivedLocationReported": "MobiliPresenter2D / DesignSystem / Laboratorio",
+      "packageReported": "Inclui v0.2 original, decisões canônicas, laboratório, auditor e relatórios; arquivo ainda não importado neste repositório."
+    },
+    "DS-05": {
+      "status": "plano recomendado e trabalho previsto; não há resultado de execução DS-05A no material recuperado",
+      "sequence": [
+        "DS-05A: validar em DOM real o contador de módulos, barra de preço/próxima etapa e opções do Admin; detector deve achar os três casos sem regras específicas.",
+        "DS-05B: ampliar cobertura a light/dark/auto, breakpoints, hover, foco, seleção, desabilitado e estados gerados por JS; diferenciar PASS, FAIL, EXCEÇÃO e NÃO TESTADO.",
+        "DS-05C: ligar famílias reais, evidências, alternativas e decisões ao laboratório v0.3."
+      ],
+      "notComplete": true
+    },
+    "v02Original": {
+      "status": "reported-in-chat; source not yet imported",
+      "filename": "MobiliPresenter2D_DesignSystem_Estatico_v0.2_unico.html",
+      "reportedContents": [
+        "Inventário de 43 famílias de componentes",
+        "Comparações visuais",
+        "Decisões de navegação",
+        "Importação/exportação JSON"
+      ],
+      "knownIssue": "A v0.2 poderia perder decisões EST detalhadas ao reexportar JSON; v0.3 foi descrita como separando o registro canônico das avaliações experimentais."
+    }
+  },
+  "recoveryGaps": [
+    "O HTML provisório/v0.3 e o inventário original de 43 famílias ainda não foram importados neste repositório."
+  ],
+  "designDecisionWorkflow": {
+    "status": "proposed-method-from-chat-not-a-final-product-approval",
+    "principle": "O laboratório pode apoiar decisões futuras e preservar precedentes; o detector mede e apresenta evidência, mas não escolhe sozinho entre alternativas estéticas.",
+    "componentDecisionCard": [
+      "Componente original em light/dark com CSS e contraste calculado.",
+      "Uma ou mais alternativas renderizadas com o mesmo DOM e conteúdo.",
+      "Gate automático de contraste/acessibilidade.",
+      "Homologação visual humana quando existir escolha estética.",
+      "Decisão registrada e reutilizável para reduzir regressões."
+    ],
+    "noAutomaticApproval": true
+  },
+  "resolvedRecoveryGaps": [
+    {
+      "ids": [
+        "GOV-001",
+        "NAV-001",
+        "NAV-002"
+      ],
+      "status": "source-unrecoverable-closed",
+      "resolution": "Origem ausente documentada; manter os IDs e estados conhecidos sem reconstruir o texto decisório."
+    }
+  ]
+}

@@ -1,0 +1,1411 @@
+{
+  "schema": "M2DRuntimeAudit1",
+  "observedAt": "2026-10-18",
+  "timezone": "America/Sao_Paulo",
+  "site": "https://casaemmodulos.casa/",
+  "deployedRevision": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
+  "deployedRevisionStatus": "verified-production-deploy",
+  "productSnapshot": {
+    "repository": "EAKerber/MobiliPresenter2D",
+    "branch": "main",
+    "commit": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
+    "note": "Static inventory snapshot matches the verified production Netlify deploy commit."
+  },
+  "scope": {
+    "readOnly": true,
+    "productCodeChanged": false,
+    "authenticationAttempted": true,
+    "automatedTestSuiteRun": false,
+    "screenshots": {
+      "shownInlineInTask": [
+        {
+          "route": "/",
+          "viewport": "1440x900",
+          "theme": "light"
+        },
+        {
+          "route": "/",
+          "viewport": "1440x900",
+          "theme": "dark"
+        },
+        {
+          "route": "/viewer/",
+          "viewport": "1440x900",
+          "theme": "dark"
+        }
+      ],
+      "persistedInRepository": true,
+      "assets": [
+        {
+          "path": "visualEvidence/public/landing/landing-light.jpg",
+          "sourceRoute": "/",
+          "theme": "light",
+          "viewport": "1265x712",
+          "format": "JPEG",
+          "source": "Browser viewport capture of the published site"
+        },
+        {
+          "path": "visualEvidence/public/landing/landing-dark.jpg",
+          "sourceRoute": "/",
+          "theme": "dark",
+          "viewport": "1265x712",
+          "format": "JPEG",
+          "source": "Browser viewport capture of the published site"
+        },
+        {
+          "path": "visualEvidence/public/viewer/viewer-dark.jpg",
+          "sourceRoute": "/viewer/",
+          "theme": "dark",
+          "viewport": "1265x712",
+          "format": "JPEG",
+          "source": "Browser viewport capture of the published site"
+        },
+        {
+          "path": "visualEvidence/private/admin-login/admin-login-light.jpg",
+          "sourceRoute": "/admin.html",
+          "theme": "light",
+          "viewport": "1280x720",
+          "format": "JPEG",
+          "state": "signed-out, menu closed",
+          "deployedRevision": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
+          "source": "Browser capture of the published production site"
+        },
+        {
+          "path": "visualEvidence/private/admin-login/admin-login-dark.jpg",
+          "sourceRoute": "/admin.html",
+          "theme": "dark",
+          "viewport": "1280x720",
+          "format": "JPEG",
+          "state": "signed-out, menu closed",
+          "deployedRevision": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
+          "source": "Browser capture of the published production site"
+        },
+        {
+          "path": "visualEvidence/private/admin-login/admin-login-menu-dark.jpg",
+          "sourceRoute": "/admin.html",
+          "theme": "dark",
+          "viewport": "1280x720",
+          "format": "JPEG",
+          "state": "signed-out, private and public navigation groups expanded",
+          "deployedRevision": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
+          "source": "Browser capture of the published production site"
+        },
+        {
+          "path": "visualEvidence/public/how-it-works/how-it-works-light-compact-486x590.jpg",
+          "sourceRoute": "/how-it-works/",
+          "theme": "light",
+          "viewport": "486x590 browser capture",
+          "format": "JPEG",
+          "state": "top of page; settled light theme; compact header and hero",
+          "deployedRevision": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
+          "source": "CloudConvert browser capture of the published production site"
+        },
+        {
+          "path": "visualEvidence/private/admin-login/admin-login-light-2026-10-19.svg",
+          "sourceRoute": "/admin.html",
+          "theme": "light",
+          "viewport": "1036x582 CSS px; raster 1554x873 at DPR 1.5",
+          "format": "SVG with embedded JPEG capture",
+          "state": "signed-out login form; menu closed",
+          "deployedRevision": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+          "source": "Browser capture of the published production site in an isolated signed-out context"
+        },
+        {
+          "path": "visualEvidence/private/admin-login/admin-login-dark-2026-10-19.svg",
+          "sourceRoute": "/admin.html",
+          "theme": "dark (automatic)",
+          "viewport": "1036x582 CSS px; raster 1554x873 at DPR 1.5",
+          "format": "SVG with embedded JPEG capture",
+          "state": "signed-out login form; menu closed",
+          "deployedRevision": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+          "source": "Browser capture of the published production site in an isolated signed-out context"
+        },
+        {
+          "path": "visualEvidence/private/access-confirmation/access-menu-light-2026-10-20.jpg",
+          "sourceRoute": "/access/",
+          "theme": "light",
+          "viewport": "390x844 CSS px; DPR 1",
+          "format": "JPEG",
+          "state": "signed-out isolated context; missing access token; private and public menu groups expanded",
+          "deployedRevision": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+          "source": "Browser capture of the published production site"
+        },
+        {
+          "path": "visualEvidence/private/access-confirmation/access-menu-dark-2026-10-20.jpg",
+          "sourceRoute": "/access/",
+          "theme": "dark",
+          "viewport": "390x844 CSS px; DPR 1",
+          "format": "JPEG",
+          "state": "signed-out isolated context; missing access token; private and public menu groups expanded",
+          "deployedRevision": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+          "source": "Browser capture of the published production site"
+        },
+        {
+          "path": "visualEvidence/private/admin-login/admin-login-menu-light-2026-10-20.jpg",
+          "sourceRoute": "/admin.html",
+          "theme": "light",
+          "viewport": "390x844 CSS px; DPR 1",
+          "format": "JPEG",
+          "state": "signed-out; login form present; private and public menu groups expanded",
+          "deployedRevision": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+          "source": "Browser capture of the published production site in an isolated signed-out context"
+        },
+        {
+          "path": "visualEvidence/private/admin-login/admin-login-menu-dark-2026-10-20.jpg",
+          "sourceRoute": "/admin.html",
+          "theme": "dark",
+          "viewport": "390x844 CSS px; DPR 1",
+          "format": "JPEG",
+          "state": "signed-out; login form present; private and public menu groups expanded",
+          "deployedRevision": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+          "source": "Browser capture of the published production site in an isolated signed-out context"
+        }
+      ],
+      "currentPassDisplayed": [
+        {
+          "route": "/how-it-works/",
+          "viewport": "486x590 browser capture",
+          "theme": "dark",
+          "state": "top of page; compact header and hero"
+        },
+        {
+          "route": "/how-it-works/",
+          "viewport": "486x590 browser capture",
+          "theme": "light",
+          "state": "top of page; compact header and hero"
+        },
+        {
+          "route": "/admin.html",
+          "viewport": "1280x720 browser capture",
+          "theme": "dark",
+          "state": "authenticated admin editor; screenshot contains account context and was not persisted"
+        },
+        {
+          "route": "/admin.html",
+          "viewport": "1036x582 CSS px",
+          "theme": "light and dark",
+          "state": "signed-out administrative login form; screenshot persisted under visualEvidence/private/admin-login"
+        },
+        {
+          "route": "/access/",
+          "viewport": "390x844 CSS px",
+          "theme": "light",
+          "state": "signed-out; no valid access token; private and public menu expanded"
+        },
+        {
+          "route": "/access/",
+          "viewport": "390x844 CSS px",
+          "theme": "dark",
+          "state": "signed-out; no valid access token; private and public menu expanded"
+        },
+        {
+          "route": "/admin.html",
+          "viewport": "390x844 CSS px",
+          "theme": "light",
+          "state": "signed-out login form; menu open"
+        },
+        {
+          "route": "/admin.html",
+          "viewport": "390x844 CSS px",
+          "theme": "dark",
+          "state": "signed-out login form; menu open"
+        }
+      ],
+      "currentPassPersisted": true,
+      "currentPassNote": "Current signed-out login captures for the published product snapshot 483ef2e are persisted under visualEvidence/private/admin-login. Authenticated editor screenshots were omitted because they contain account/access data. Capturas atuais da confirmação de acesso em produção, 390×844 CSS px, temas claro/escuro e menu aberto, estão em visualEvidence/private/access-confirmation. O token estava ausente; a validação autenticada segue pendente. A tela de login administrativo também foi capturada em 390×844 CSS px nos dois temas, com o menu aberto, sem credenciais. Uma aba autenticada de /config/ mostrou a navegação privada correta durante a leitura; nenhuma captura foi salva porque o menu pode conter dados da conta. O estado das abas anônimas e os limites estão em evidence/runtime/private-menu-cross-tab-state-2026-10-20.md."
+    },
+    "authenticationCompletedByUser": true,
+    "authenticatedScreenshotsPersisted": false,
+    "privateAuthenticatedScreenshotsPersisted": false
+  },
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844,
+      "role": "mobile"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "role": "tablet"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "role": "desktop"
+    }
+  ],
+  "routeObservations": [
+    {
+      "requested": "/",
+      "actual": "/",
+      "access": "public",
+      "noHorizontalOverflow": [
+        390,
+        768,
+        1440
+      ],
+      "headerHeights": {
+        "390": 71,
+        "768": 89,
+        "1440": 89
+      }
+    },
+    {
+      "requested": "/how-it-works/",
+      "actual": "/how-it-works/",
+      "access": "public",
+      "noHorizontalOverflow": [
+        390,
+        768,
+        1440
+      ],
+      "headerHeights": {
+        "390": 71,
+        "768": 89,
+        "1440": 89
+      }
+    },
+    {
+      "requested": "/about/",
+      "actual": "/about/",
+      "access": "public",
+      "noHorizontalOverflow": [
+        390,
+        768,
+        1440
+      ],
+      "headerHeights": {
+        "390": 71,
+        "768": 89,
+        "1440": 89
+      }
+    },
+    {
+      "requested": "/viewer/",
+      "actual": "/viewer/",
+      "access": "public",
+      "noHorizontalOverflow": [
+        390,
+        768,
+        1440
+      ],
+      "publishedKitchenLoaded": true,
+      "headerHeights": {
+        "390": 65,
+        "768": 70,
+        "1440": 78
+      }
+    },
+    {
+      "requested": "/admin.html",
+      "actual": "/admin.html",
+      "access": "login-only",
+      "noHorizontalOverflow": [
+        390,
+        768,
+        1440
+      ],
+      "headerHeights": {
+        "390": 66,
+        "768": 68,
+        "1440": 78
+      },
+      "viewport": "390x844 CSS px; DPR 1",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "menuState": "signed-out; private and public groups open; Escape closes and restores focus",
+      "currentProductCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+      "deployId": "6ad6c3b51b6be05647167f94",
+      "surfaces": {
+        "light": {
+          "header": "#F0EDE8",
+          "menu": "#FFFFFF",
+          "body": "#F7F5F2",
+          "foreground": "#22211F"
+        },
+        "dark": {
+          "header": "#171816",
+          "menu": "#1B1C1A",
+          "body": "#111210",
+          "foreground": "#F4F1EB"
+        }
+      },
+      "evidence": "evidence/runtime/admin-login-menu-2026-10-20.md"
+    },
+    {
+      "requested": "/config/",
+      "actual": "/access/",
+      "access": "redirect-without-session",
+      "noHorizontalOverflow": [
+        1440
+      ]
+    },
+    {
+      "requested": "/access/",
+      "actual": "/access/",
+      "access": "access-link-confirmation",
+      "noHorizontalOverflow": [
+        390,
+        1440
+      ],
+      "emailLinkSentOrValidated": false,
+      "viewport": "390x844 CSS px; DPR 1",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "menu": {
+        "openedOnFirstClick": true,
+        "closedWithEscape": true,
+        "focusReturnedToToggle": true,
+        "signedOutPrivateLinks": [
+          "Entrar na administração"
+        ],
+        "publicLinks": [
+          "Ambientes",
+          "Cozinha",
+          "Como funciona",
+          "Quem somos",
+          "Fale conosco"
+        ],
+        "authenticatedState": "not tested"
+      },
+      "tokenState": "No valid token supplied; page showed the expected request-new-link message.",
+      "currentProductCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+      "deployId": "6ad6c3b51b6be05647167f94",
+      "surfaces": {
+        "light": {
+          "header": "#FFFFFF",
+          "menu": "#FFFFFF",
+          "body": "#F7F5F2",
+          "foreground": "#22211F"
+        },
+        "dark": {
+          "header": "#171816",
+          "menu": "#1B1C1A",
+          "body": "#111210",
+          "foreground": "#F4F1EB"
+        }
+      },
+      "evidence": "evidence/runtime/access-confirmation-menu-2026-10-20.md"
+    },
+    {
+      "requested": "/access/manage.html",
+      "actual": "/admin.html?returnTo=%2Faccess%2Fmanage.html",
+      "access": "redirect-without-session",
+      "authenticatedSurfaceObserved": false,
+      "noHorizontalOverflow": [
+        390,
+        768,
+        1440
+      ]
+    },
+    {
+      "requested": "/access/manage",
+      "actual": "/access/manage",
+      "access": "authenticated",
+      "noHorizontalOverflow": "not measured",
+      "menu": "Opened with private/public groups, signed-in account indicator, and logout",
+      "note": "No recipient values were copied into the audit."
+    },
+    {
+      "requested": "/how-it-works/",
+      "actual": "/how-it-works/",
+      "access": "public",
+      "viewport": "486x590 CSS px",
+      "theme": "light",
+      "headerHeightPx": 77.93,
+      "headerWidthPx": 470.67,
+      "brandWidthPx": 160,
+      "menuOpened": true,
+      "compactHeaderDeviation": "Theme label hidden before brand reduction; WhatsApp contact remains outside expanded public menu.",
+      "currentProductCommit": "not independently identified during this follow-up",
+      "evidence": "evidence/runtime/how-it-works-public-compact-header-2026-10-19.md",
+      "observedAt": "2026-10-19",
+      "screenshotPersisted": false,
+      "narrowWidthSweep": {
+        "observedAt": "2026-10-19",
+        "theme": "dark",
+        "samples": [
+          {
+            "viewport": 360,
+            "innerWidth": 360,
+            "documentClientWidth": 345,
+            "bodyWidth": 344.7,
+            "headerWidth": 344.7,
+            "headerHeight": 68,
+            "brandWidth": 129.6,
+            "themeTarget": 44,
+            "themeLabelVisible": false,
+            "layout": "single-row",
+            "horizontalOverflow": false
+          },
+          {
+            "viewport": 340,
+            "innerWidth": 340,
+            "documentClientWidth": 325,
+            "bodyWidth": 324.7,
+            "headerWidth": 324.7,
+            "headerHeight": 68,
+            "brandWidth": 122.4,
+            "themeTarget": 44,
+            "themeLabelVisible": false,
+            "layout": "single-row",
+            "horizontalOverflow": false
+          },
+          {
+            "viewport": 321,
+            "innerWidth": 321,
+            "documentClientWidth": 306,
+            "bodyWidth": 320,
+            "headerWidth": 320,
+            "headerHeight": 68,
+            "brandWidth": 120,
+            "themeTarget": 44,
+            "themeLabelVisible": false,
+            "layout": "single-row; 320px min-width clips 14px",
+            "horizontalOverflow": true
+          },
+          {
+            "viewport": 320,
+            "innerWidth": 320,
+            "documentClientWidth": 305,
+            "bodyWidth": 320,
+            "headerWidth": 320,
+            "headerHeight": 68,
+            "brandWidth": 120,
+            "themeTarget": 44,
+            "themeLabelVisible": false,
+            "layout": "single-row; 320px min-width clips 15px",
+            "horizontalOverflow": true
+          },
+          {
+            "viewport": 291,
+            "innerWidth": 291,
+            "documentClientWidth": 276,
+            "bodyWidth": 320,
+            "headerWidth": 320,
+            "headerHeight": 68,
+            "brandWidth": 120,
+            "themeTarget": 44,
+            "themeLabelVisible": false,
+            "layout": "single-row; clipped; body/html min-width 320px",
+            "documentScrollWidth": 320,
+            "horizontalOverflow": true
+          },
+          {
+            "viewport": 290,
+            "innerWidth": 290,
+            "documentClientWidth": 275,
+            "bodyWidth": 320,
+            "headerWidth": 320,
+            "headerHeight": 68,
+            "brandWidth": 120,
+            "themeTarget": 44,
+            "themeLabelVisible": false,
+            "layout": "single-row; clipped; body/html min-width 320px",
+            "documentScrollWidth": 320,
+            "horizontalOverflow": true,
+            "menuButtonVisibleWidth": 11
+          }
+        ],
+        "sourceRules": {
+          "htmlBodyMinWidth": "320px in public-theme.css?v=gold-system-r1",
+          "pageOverflowX": "clip on .how-page in how-it-works.css",
+          "themeIconOnly": "@media (max-width: 1150px) in ui-theme.css?v=ds01-theme-v1"
+        },
+        "productIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/218",
+        "screenshotPersisted": false
+      }
+    },
+    {
+      "requested": "/config/",
+      "actual": "/config/",
+      "access": "public",
+      "viewport": "1280x720 CSS px",
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "stageSequence": [
+        "modules",
+        "summary"
+      ],
+      "counterInitial": "8 of 8",
+      "initialIncludedModuleToggles": 7,
+      "initialEstimate": "R$ 8,740.00",
+      "summaryAfterNavigation": "Nenhum módulo incluído; 0 incluído(s); R$ 0.00",
+      "counterAfterNavigation": "8 of 8",
+      "cause": "unknown; state changed with stage navigation",
+      "evidence": "evidence/runtime/configurator-summary-label-counter-2026-10-19.md",
+      "observedAt": "2026-10-19",
+      "screenshotPersisted": false
+    },
+    {
+      "requested": "/config/",
+      "actual": "/config/",
+      "access": "authenticated",
+      "viewport": "516x800 CSS px",
+      "themes": [
+        "light"
+      ],
+      "stageSequence": [
+        "modules"
+      ],
+      "preLoadCounter": "7 of 7; seven default module toggles checked",
+      "afterPublishedConfigurationLoad": {
+        "counter": "0 of 7 modules visible",
+        "checkedModuleToggles": 0,
+        "totalModuleToggles": 7,
+        "estimate": "R$ 0.00"
+      },
+      "productCommit": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+      "deployId": "6ad5a4e245dad08b373fcbd1",
+      "evidence": "After asynchronous published configuration was applied, all seven module toggles were unchecked and the counter matched 0/7.",
+      "screenshotPersisted": false,
+      "observedAt": "2026-10-19"
+    },
+    {
+      "requested": "/config/",
+      "actual": "/config/",
+      "access": "authenticated existing browser tab",
+      "observedAt": "2026-10-20",
+      "viewport": "1036x582 CSS px",
+      "noHorizontalOverflow": [
+        1036
+      ],
+      "menu": {
+        "authenticatedPrivateLinks": [
+          "Configurador",
+          "Administração",
+          "Gerenciar acessos"
+        ],
+        "publicLinks": [
+          "Ambientes",
+          "Cozinha",
+          "Como funciona",
+          "Quem somos",
+          "Fale conosco"
+        ],
+        "logoutVisible": true,
+        "openedAndClosed": true,
+        "escapeRestoredFocus": true,
+        "emailPersisted": false
+      },
+      "productCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+      "deployId": "6ad6c3b51b6be05647167f94",
+      "evidence": "evidence/runtime/private-menu-cross-tab-state-2026-10-20.md",
+      "note": "Existing open tab was read without login/logout; a 400 POST to /.netlify/identity/token appeared in its network request list. Request body/headers were not inspected."
+    }
+  ],
+  "interactions": [
+    {
+      "route": "/",
+      "control": "#menuToggle",
+      "status": "conditional",
+      "evidence": "During active #introSplash (opacity 1, pointer-events auto), first click left menu closed. After overlay exit (observed around 1.8s; opacity 0 and pointer-events none), click opened primaryNav and aria-expanded became true.",
+      "interpretation": "Intro overlay intercepts early menu click; this does not establish cause of private-menu reports."
+    },
+    {
+      "route": "/admin.html",
+      "control": ".private-menu-toggle",
+      "viewport": "390x844",
+      "status": "opened-on-first-click; Escape closed and focus returned to toggle",
+      "evidence": "Signed-out menu groups matched the private/public structure; one private destination (Entrar na administração) and five public destinations. No horizontal overflow.",
+      "observedAt": "2026-10-20",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "productCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+      "deployId": "6ad6c3b51b6be05647167f94",
+      "relatedFinding": "FIND-015",
+      "evidenceFile": "evidence/runtime/admin-login-menu-2026-10-20.md"
+    },
+    {
+      "route": "/how-it-works/",
+      "control": "menuToggle on compact browser viewport",
+      "status": "opened",
+      "evidence": "The accessibility tree listed Ambientes, Como funciona, and Quem somos. The WhatsApp link remained outside the menu.",
+      "interpretation": "The menu opens in this public state; contact placement diverges from approved NAV-005 compact structure."
+    },
+    {
+      "route": "/how-it-works/",
+      "control": "#menuToggle",
+      "status": "opened-on-first-click; compact contents diverge from NAV-005",
+      "theme": "light",
+      "viewport": "486x590 CSS px",
+      "evidence": "Expanded primaryNav exposed Ambientes, Como funciona, Quem somos. No contact/WhatsApp link was present; .header-cta remained visible outside the menu.",
+      "productIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/218",
+      "evidenceFile": "evidence/runtime/how-it-works-public-compact-header-2026-10-19.md",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "observedAt": "2026-10-19",
+      "route": "/config/",
+      "viewport": "1280x720 CSS px",
+      "method": "Read-only browser DOM/accessibility tree; computed foreground and solid ancestor backgrounds composed in sRGB; WCAG relative-luminance calculation.",
+      "productCommit": "not independently identified during this follow-up",
+      "screenshotPersisted": false,
+      "productCodeChanged": false,
+      "control": "summary stage button",
+      "status": "counter-summary-contradiction-reproduced",
+      "evidence": "On initial Modules stage, seven inclusion toggles were Value=1 and viewer showed 8/8 with R$ 8,740.00. Without changing a checkbox, navigating to Summary showed no modules, 0 included, R$ 0.00 while viewer remained at 8/8.",
+      "interpretation": "The transition coincided with stage navigation; cause and persistence are not isolated.",
+      "relatedIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/209",
+      "evidenceFile": "evidence/runtime/configurator-summary-label-counter-2026-10-19.md"
+    },
+    {
+      "observedAt": "2026-10-19",
+      "route": "/config/",
+      "viewport": "516x800 CSS px",
+      "theme": "light",
+      "productCommit": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+      "productCodeChanged": false,
+      "control": "private menu toggle",
+      "status": "menu-scene-overlap-not-observed",
+      "evidence": "With the menu open, public destinations remained visible above the scene. Computed #viewerCard isolation was isolate.",
+      "relatedIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/214",
+      "evidenceFile": "PRODUCT_RECONCILIATION_2026-10-19.md",
+      "screenshotPersisted": false
+    },
+    {
+      "observedAt": "2026-10-20",
+      "route": "/access/",
+      "viewport": "390x844 CSS px",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "productCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+      "deployId": "6ad6c3b51b6be05647167f94",
+      "productCodeChanged": false,
+      "control": "private menu toggle",
+      "status": "opened-on-first-click; Escape closed and focus returned to toggle",
+      "evidence": "Signed-out private group listed only Entrar na administração; public group listed Ambientes, Cozinha, Como funciona, Quem somos and Fale conosco. No horizontal overflow. No valid access token was supplied, so authenticated links were not evaluated.",
+      "relatedFinding": "FIND-015",
+      "evidenceFile": "evidence/runtime/access-confirmation-menu-2026-10-20.md"
+    },
+    {
+      "observedAt": "2026-10-20",
+      "route": "private pages across open tabs",
+      "viewport": "existing /config/ tab 1036x582 CSS px; new /admin.html tab",
+      "control": "role-aware private menu",
+      "status": "mixed authenticated and anonymous DOM states",
+      "evidence": "/config/ menu showed private destinations and Sair; existing /admin.html and /access/manage.html menus showed only the anonymous admin entry; a new /admin.html tab also showed the anonymous login form. No login/logout or reload was performed.",
+      "relatedFinding": "FIND-007",
+      "evidenceFile": "evidence/runtime/private-menu-cross-tab-state-2026-10-20.md",
+      "productCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+      "deployId": "6ad6c3b51b6be05647167f94",
+      "productCodeChanged": false
+    }
+  ],
+  "contrastScreening": {
+    "method": "Computed browser text and solid-surface colors; WCAG relative luminance ratio. Exploratory technical screen, not independent certification.",
+    "candidates": [
+      {
+        "route": "/",
+        "selector": ".hero-description",
+        "theme": "light",
+        "foreground": "#706C66",
+        "background": "#F0EDE8",
+        "fontSize": "16px",
+        "ratio": 4.47,
+        "threshold": 4.5,
+        "viewport": "390x844"
+      },
+      {
+        "route": "/how-it-works/",
+        "selector": ".how-hero-note",
+        "theme": "light",
+        "foreground": "#706C66",
+        "background": "#F0EDE8",
+        "fontSize": "16px",
+        "ratio": 4.47,
+        "threshold": 4.5,
+        "viewport": "1440x900"
+      },
+      {
+        "route": "/about/",
+        "selector": ".about-scale p:not(.eyebrow)",
+        "theme": "light",
+        "foreground": "#706C66",
+        "background": "#F0EDE8",
+        "fontSize": "16px",
+        "ratio": 4.47,
+        "threshold": 4.5,
+        "viewport": "1440x900"
+      },
+      {
+        "route": "/how-it-works/",
+        "selector": ".study-band .eyebrow",
+        "theme": "light",
+        "foreground": "#8B6A40",
+        "background": "#E8E3DC",
+        "fontSize": "11.52px",
+        "ratio": 3.89,
+        "threshold": 4.5,
+        "viewport": "1440x900"
+      },
+      {
+        "route": "/how-it-works/",
+        "selector": ".study-art figcaption",
+        "theme": "dark",
+        "foreground": "#C4BCB2",
+        "background": "#FCF9EF",
+        "ratio": 1.78,
+        "threshold": 4.5,
+        "viewport": "1440x900"
+      }
+    ],
+    "observedApprovedBase": {
+      "route": "/how-it-works/",
+      "selector": ".launch-badge",
+      "theme": "dark",
+      "foreground": "#FFFFFF",
+      "background": "#A64D13",
+      "ratio": 5.69,
+      "note": "Confirms only this current pair on this component; no new variant approval.",
+      "viewport": "1440x900"
+    },
+    "exclusions": [
+      "Image-overlaid viewer hotspots were not certified by text/background computation; inspect actual active states visually.",
+      "Pseudo-element, gradient and transparent compositing cases remain unverified."
+    ],
+    "followUpObservations": [
+      {
+        "observedAt": "2026-10-18",
+        "route": "/how-it-works/",
+        "theme": "dark",
+        "viewport": "515x608 CSS px",
+        "scrollY": 4725,
+        "method": "Read-only DOM computed foreground and nearest opaque ancestor background; WCAG relative luminance calculation. Text elements screened: 161. Threshold used: 4.5:1 for normal text.",
+        "findings": [
+          {
+            "selector": ".study-art figcaption",
+            "text": "Esquema conceitual de estudo do espaço",
+            "foreground": "#C4BCB2",
+            "background": "#FCF9EF",
+            "fontSize": "10.88px",
+            "fontWeight": 400,
+            "ratio": 1.78,
+            "threshold": 4.5,
+            "status": "confirmed-below-threshold",
+            "relatedFinding": "FIND-004"
+          }
+        ],
+        "result": "Only this pair was below 4.5:1 among the screened text elements on this route and state. The DOM scan does not certify text over images, gradients, pseudo-elements, or transparency.",
+        "productCodeChanged": false,
+        "screenshotPersisted": false
+      },
+      {
+        "observedAt": "2026-10-19",
+        "route": "/config/",
+        "viewport": "1280x720 CSS px",
+        "method": "Read-only browser DOM/accessibility tree; computed foreground and solid ancestor backgrounds composed in sRGB; WCAG relative-luminance calculation.",
+        "productCommit": "not independently identified during this follow-up",
+        "screenshotPersisted": false,
+        "productCodeChanged": false,
+        "theme": "light and dark",
+        "selector": ".price-state__breakdown dt",
+        "text": "Módulos",
+        "findings": [
+          {
+            "theme": "light",
+            "computedForeground": "rgba(255, 255, 255, 0.68)",
+            "fontSize": "11px",
+            "fontWeight": 750,
+            "overlayBackground": "rgba(203, 188, 170, 0.13)",
+            "opaqueAncestorBackground": "#FFFFFF",
+            "compositedForegroundRgb": [
+              252.84,
+              252.21,
+              251.46
+            ],
+            "compositedBackgroundRgb": [
+              248.24,
+              246.29,
+              243.95
+            ],
+            "ratio": 1.05,
+            "threshold": 4.5,
+            "status": "confirmed-below-threshold",
+            "relatedFinding": "FIND-010",
+            "relatedIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/208"
+          },
+          {
+            "theme": "dark",
+            "computedForeground": "rgba(255, 255, 255, 0.68)",
+            "fontSize": "11px",
+            "fontWeight": 750,
+            "overlayBackground": "rgba(203, 188, 170, 0.13)",
+            "opaqueAncestorBackground": "#1B1C1A",
+            "compositedForegroundRgb": [
+              189.36,
+              189.02,
+              187.71
+            ],
+            "compositedBackgroundRgb": [
+              49.88,
+              48.8,
+              44.72
+            ],
+            "ratio": 6.95,
+            "threshold": 4.5,
+            "status": "meets-threshold-for-observed-pair",
+            "relatedFinding": "FIND-010"
+          }
+        ],
+        "result": "The same hard-coded translucent white label foreground contrasts adequately in dark mode but nearly disappears on the light summary card."
+      },
+      {
+        "observedAt": "2026-10-19",
+        "route": "/admin.html",
+        "viewport": "1036x582 CSS px",
+        "method": "Read-only browser computed styles; sRGB composition of text and solid ancestor backgrounds; WCAG relative luminance ratio. Exploratory screen, not independent certification.",
+        "productCommit": "483ef2e6f76a562a3096516ef68d8dfe072ec21f",
+        "access": "authenticated admin editor; screenshot not persisted",
+        "theme": "light and dark",
+        "screenshotPersisted": false,
+        "productCodeChanged": false,
+        "findings": [
+          {
+            "selector": ".initial-state-option",
+            "text": "Iniciar visível no configurador",
+            "fontSize": "10px",
+            "theme": "light",
+            "computedForeground": "#706C66",
+            "compositedBackground": "#EAE7E2",
+            "ratio": 4.22,
+            "threshold": 4.5,
+            "status": "confirmed-below-threshold",
+            "relatedFinding": "FIND-013",
+            "relatedIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/208"
+          },
+          {
+            "selector": ".initial-state-option",
+            "text": "Iniciar visível no configurador",
+            "fontSize": "10px",
+            "theme": "dark",
+            "computedForeground": "#C4BCB2",
+            "compositedBackground": "#232321",
+            "ratio": 8.36,
+            "threshold": 4.5,
+            "status": "meets-threshold-for-observed-pair",
+            "relatedFinding": "FIND-013"
+          },
+          {
+            "selector": ".switch",
+            "text": "Ativa",
+            "fontSize": "12px",
+            "theme": "light",
+            "computedForeground": "#706C66",
+            "compositedBackground": "#FFFFFF",
+            "ratio": 5.22,
+            "threshold": 4.5,
+            "status": "meets-threshold-for-observed-pair"
+          },
+          {
+            "selector": ".switch",
+            "text": "Ativa",
+            "fontSize": "12px",
+            "theme": "dark",
+            "computedForeground": "#C4BCB2",
+            "compositedBackground": "#1B1C1A",
+            "ratio": 9.11,
+            "threshold": 4.5,
+            "status": "meets-threshold-for-observed-pair"
+          },
+          {
+            "selector": "#saveMessage",
+            "text": "Configuração carregada",
+            "fontSize": "13px",
+            "theme": "light",
+            "computedForeground": "#706C66",
+            "compositedBackground": "#F7F5F2",
+            "ratio": 4.79,
+            "threshold": 4.5,
+            "status": "meets-threshold-for-observed-pair"
+          },
+          {
+            "selector": "#saveMessage",
+            "text": "Configuração carregada",
+            "fontSize": "13px",
+            "theme": "dark",
+            "computedForeground": "#C4BCB2",
+            "compositedBackground": "#111210",
+            "ratio": 10,
+            "threshold": 4.5,
+            "status": "meets-threshold-for-observed-pair"
+          }
+        ],
+        "result": "The light-theme initial-state label is below the 4.5:1 screening threshold; the two other observed examples remain above it."
+      }
+    ]
+  },
+  "contrastAutomation": {
+    "productWorkflowGateFound": false,
+    "source": "Static repository inventory from the previous stage",
+    "note": "The reported runtime pairs were measured during this audit, not detected by product CI."
+  },
+  "unverified": "Authenticated administration, access management, invitation flows and configurator,Full keyboard behavior: Escape, outside click, focus restoration and tab order,Runtime reduced-motion preference,Dynamic hover, pressed, focus, selection and loading state coverage,Contrast on images, gradients, pseudo-elements and transparent layers\\n- Authenticated screenshots from this pass were omitted because they contain account/access data; only the current public settled light-theme capture was persisted.\\n- Numeric non-text contrast for the raster light-theme logo remains unmeasured. The follow-up identified the 486 × 590 CSS viewport, asset source, opacity and filter; no stable visual defect was observed.",
+  "authenticatedSessionObservations": [
+    {
+      "route": "/admin.html",
+      "state": "authenticated",
+      "observation": "Editor loaded on fresh navigation; post-login administrative-data error was not visible in that visit. Menu opened with private destinations and logout. A previous menu state immediately after sign-in showed the signed-out entry option; the transition inconsistency was not reproduced after fresh navigation."
+    },
+    {
+      "route": "/config/",
+      "state": "authenticated",
+      "observation": "Configurator loaded. Menu opened with private/public groups and logout. Indicator showed 8 of 8 items included while all seven modules were unselected; lighting was disabled by its dependency."
+    },
+    {
+      "route": "/access/manage.html",
+      "state": "authenticated",
+      "observation": "Management page loaded; menu opened with private/public groups and logout. Invitation values were not read or recorded."
+    },
+    {
+      "route": "/config/ menu overlay",
+      "state": "authenticated narrow viewport",
+      "observation": "The scene oven image visually overlays the public navigation list and obscures part of the Como funciona link. Links remained present in the accessibility tree. Exact stacking or hit-testing cause not isolated; evidence includes the user-provided screenshot and live visual confirmation."
+    },
+    {
+      "route": "/admin.html",
+      "state": "authenticated after login; menu stale until reload",
+      "observation": "The editor loaded without the reported administrative-data error. First menu opening after login showed the anonymous entry action and omitted private routes/logout. Reloading the page synchronized the menu; it then showed Configurador, Administração, Gerenciar acessos, public routes, and logout. Reproduced once; cause unknown.",
+      "productBacklog": "https://github.com/EAKerber/MobiliPresenter2D/issues/213",
+      "productDataChanged": false
+    },
+    {
+      "route": "/access/manage",
+      "state": "authenticated",
+      "observation": "The page loaded in a new tab and its menu immediately showed private/public navigation and logout. Account and invitation values were not copied or persisted.",
+      "sideEffects": "No invitation sent; no access records changed."
+    },
+    {
+      "route": "/admin.html",
+      "state": "authenticated immediately after user login",
+      "observation": "Identity token/user and admin bootstrap/configuration reads returned 200 and the editor loaded without the intermittent administrative-data error. The same-document menu still showed the signed-out entry item after login. A new authenticated navigation to /access/manage.html populated the role-aware private/public menu and logout. Menu values/account details were not copied.",
+      "productBacklog": [
+        "https://github.com/EAKerber/MobiliPresenter2D/issues/212",
+        "https://github.com/EAKerber/MobiliPresenter2D/issues/213"
+      ],
+      "productDataChanged": false
+    },
+    {
+      "route": "POST /api/access/session",
+      "state": "unauthenticated temporary-session fallback probe",
+      "observation": "The public route and direct Netlify function URL returned 404 HTML. No temporary access session was created or validated. Configuration/admin-bootstrap endpoints remained available.",
+      "productBacklog": "https://github.com/EAKerber/MobiliPresenter2D/issues/222",
+      "productDataChanged": false
+    },
+    {
+      "route": "private menu cross-tab state",
+      "state": "mixed; read-only observation",
+      "observation": "On the existing /config/ tab, the menu showed Configurador, Administração, Gerenciar acessos, public routes, and Sair. Existing /admin.html and /access/manage.html tabs showed Entrar na administração and public routes without Sair. A new /admin.html tab opened the anonymous login form. No login/logout was performed and existing pages were not reloaded.",
+      "networkClue": "Existing /config/ request list included POST /.netlify/identity/token status 400; request body and headers not inspected. New anonymous /admin.html requested POST /api/access/session and received 404, separately tracked by issue #222.",
+      "evidence": "evidence/runtime/private-menu-cross-tab-state-2026-10-20.md",
+      "productBacklog": "https://github.com/EAKerber/MobiliPresenter2D/issues/213",
+      "accountEmailPersisted": false,
+      "invitationValuesPersisted": false,
+      "productDataChanged": false,
+      "productCodeChanged": false
+    }
+  ],
+  "findingsRegister": "FINDINGS_REGISTER.md",
+  "productBacklogIssues": {
+    "FIND-001": 215,
+    "FIND-002": 216,
+    "FIND-003": 216,
+    "FIND-004": 217,
+    "FIND-005": 212,
+    "FIND-006": 209,
+    "FIND-007": 213,
+    "FIND-008": 208,
+    "FIND-009": 214,
+    "FIND-010": 208,
+    "FIND-013": 208,
+    "FIND-014": 222
+  },
+  "baselineAuditReconciliation": {
+    "productIssue": 208,
+    "baselineCommit": "67d31976c605c76c7ef10876d03fdeb17369ab78",
+    "productionCommit": "298c11441f82cacfff2f809fd9e5ad6f1fc33c0a",
+    "sourceReviewOnly": true,
+    "resolvedInSource": [
+      "DS04-01",
+      "DS04-08"
+    ],
+    "remainingStaticCandidates": [
+      "DS04-02",
+      "DS04-03",
+      "DS04-04",
+      "DS04-05",
+      "DS04-06",
+      "DS04-07",
+      "DS04-09",
+      "DS04-10",
+      "DS04-12"
+    ],
+    "explicitTechnicalException": [
+      "DS04-11"
+    ],
+    "runtimeContrastMeasured": false,
+    "details": "See FINDINGS_REGISTER.md and product issue #208. Baseline contrast values are historical and were not remeasured against the production DOM."
+  },
+  "lightThemeReviewObservations": [
+    {
+      "route": "/config/",
+      "theme": "light",
+      "viewport": "narrow browser viewport",
+      "stage": "summary",
+      "selector": ".price-state__breakdown dt",
+      "observation": "The Módulos label appears almost illegible on the light summary card. Visual confirmation only; no new numeric computed contrast measurement."
+    },
+    {
+      "route": "/config/",
+      "theme": "light",
+      "viewport": "narrow browser viewport",
+      "stage": "services",
+      "selector": ".service-check.is-blocked",
+      "observation": "Disabled lighting option text appears strongly faded. Recorded for visual review only; control is unavailable due to dependencies and is not classified as a confirmed WCAG failure."
+    },
+    {
+      "route": "/config/",
+      "theme": "light and dark",
+      "viewport": "narrow browser viewport",
+      "stage": "services",
+      "selector": "[data-private-menu] and scene image",
+      "observation": "Scene image overlays and obscures part of the Como funciona menu link in both themes."
+    },
+    {
+      "route": "/how-it-works/",
+      "theme": "light",
+      "viewport": "486x590 browser capture",
+      "stage": "compact header",
+      "selector": "brand mark and header surface",
+      "observation": "The first frame after switching to light appeared faded; the settled repository capture and an independent capture show the mark legible against the light header. No visual contrast defect is confirmed. DOM contrast and responsible asset/CSS rule were not measured."
+    },
+    {
+      "route": "/how-it-works/",
+      "theme": "light",
+      "viewport": "486x590 CSS px",
+      "stage": "settled compact header",
+      "selector": "header .brand img",
+      "observation": "After the theme transition settled, the logo appeared dark and legible. currentSrc was /branding/logo-light-380.png, computed opacity 1, filter none. The earlier washed-out appearance was transient and not reproduced in the settled state.",
+      "contrast": "No numeric text-color ratio calculated for the raster logo; non-text contrast not measured.",
+      "evidenceFile": "evidence/runtime/how-it-works-public-compact-header-2026-10-19.md",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "observedAt": "2026-10-19",
+      "route": "/config/",
+      "viewport": "1280x720 CSS px",
+      "method": "Read-only browser DOM/accessibility tree; computed foreground and solid ancestor backgrounds composed in sRGB; WCAG relative-luminance calculation.",
+      "productCommit": "not independently identified during this follow-up",
+      "screenshotPersisted": false,
+      "productCodeChanged": false,
+      "theme": "light",
+      "stage": "summary",
+      "selector": ".price-state__breakdown dt",
+      "observation": "The Módulos label is rendered with rgba(255,255,255,.68) over the near-white summary card and appears nearly white; calculated composed contrast is 1.05:1.",
+      "contrast": "1.05:1 against the computed composite background; threshold 4.5:1 for 11px normal text.",
+      "relatedIssue": "https://github.com/EAKerber/MobiliPresenter2D/issues/208",
+      "evidenceFile": "evidence/runtime/configurator-summary-label-counter-2026-10-19.md"
+    }
+  ],
+  "compactHeaderMeasurements": {
+    "route": "/admin.html",
+    "access": "signed-out",
+    "theme": "dark",
+    "method": "Read-only DOM geometry from published page at explicit CSS viewport sizes.",
+    "samples": [
+      {
+        "viewport": "390x844",
+        "headerHeightPx": 65.9,
+        "layout": "single-row",
+        "brandAndContextWidthPx": 216.9,
+        "actionsWidthPx": 127.1,
+        "horizontalOverflow": false
+      },
+      {
+        "viewport": "360x760",
+        "headerHeightPx": 62,
+        "layout": "single-row",
+        "horizontalOverflow": false
+      },
+      {
+        "viewport": "350x760",
+        "headerHeightPx": 62,
+        "layout": "single-row",
+        "horizontalOverflow": false
+      },
+      {
+        "viewport": "340x760",
+        "headerHeightPx": 104.2,
+        "layout": "two-row",
+        "brandAndContextWidthPx": 189.9,
+        "actionsWidthPx": 119.1,
+        "horizontalOverflow": false
+      },
+      {
+        "viewport": "335x760",
+        "headerHeightPx": 104.2,
+        "layout": "two-row",
+        "horizontalOverflow": false
+      },
+      {
+        "viewport": "320x760",
+        "headerHeightPx": 104.2,
+        "layout": "two-row",
+        "brandAndContextWidthPx": 189.9,
+        "actionsWidthPx": 119.1,
+        "horizontalOverflow": false
+      }
+    ],
+    "interpretation": "Observed transition lies between 340 and 350 CSS px in these samples; exact CSS breakpoint is not inferred. Current implementation behavior is evidence, not approval of a two-row compact design. NAV-005 option A approves a one-row composition; behavior when the items no longer fit remains pending.",
+    "screenshotPersisted": false,
+    "followUpValidation": {
+      "observedAtLocal": "2026-10-18",
+      "route": "/admin.html",
+      "access": "signed-out",
+      "themeRuntime": "dark",
+      "method": "Read-only DOM geometry in published page using explicit viewport overrides; override reset after capture.",
+      "samples": [
+        {
+          "viewportCssPx": 288,
+          "headerHeightPx": 104.2,
+          "layout": "two-row",
+          "brandWidthPx": 189.9,
+          "logoWidthPx": 105,
+          "pageIdentifierWidthPx": 75.9,
+          "actionsWidthPx": 119.1,
+          "themeTargetPx": "74.1 × 40",
+          "menuTargetPx": "40 × 40",
+          "horizontalOverflow": false
+        },
+        {
+          "viewportCssPx": 306,
+          "headerHeightPx": 104.2,
+          "layout": "two-row",
+          "brandWidthPx": 189.9,
+          "logoWidthPx": 105,
+          "pageIdentifierWidthPx": 75.9,
+          "actionsWidthPx": 119.1,
+          "themeTargetPx": "74.1 × 40",
+          "menuTargetPx": "40 × 40",
+          "horizontalOverflow": false
+        },
+        {
+          "viewportCssPx": 313,
+          "headerHeightPx": 104.2,
+          "layout": "two-row",
+          "brandWidthPx": 189.9,
+          "logoWidthPx": 105,
+          "pageIdentifierWidthPx": 75.9,
+          "actionsWidthPx": 119.1,
+          "themeTargetPx": "74.1 × 40",
+          "menuTargetPx": "40 × 40",
+          "horizontalOverflow": false
+        },
+        {
+          "viewportCssPx": 320,
+          "headerHeightPx": 104.2,
+          "layout": "two-row",
+          "brandWidthPx": 189.9,
+          "logoWidthPx": 105,
+          "pageIdentifierWidthPx": 75.9,
+          "actionsWidthPx": 119.1,
+          "themeTargetPx": "74.1 × 40",
+          "menuTargetPx": "40 × 40",
+          "horizontalOverflow": false
+        },
+        {
+          "viewportCssPx": 340,
+          "headerHeightPx": 104.2,
+          "layout": "two-row",
+          "brandWidthPx": 189.9,
+          "logoWidthPx": 105,
+          "pageIdentifierWidthPx": 75.9,
+          "actionsWidthPx": 119.1,
+          "themeTargetPx": "74.1 × 40",
+          "menuTargetPx": "40 × 40",
+          "horizontalOverflow": false
+        },
+        {
+          "viewportCssPx": 350,
+          "headerHeightPx": 62,
+          "layout": "single-row",
+          "brandWidthPx": 189.9,
+          "logoWidthPx": 105,
+          "pageIdentifierWidthPx": 75.9,
+          "actionsWidthPx": 119.1,
+          "themeTargetPx": "74.1 × 40",
+          "menuTargetPx": "40 × 40",
+          "horizontalOverflow": false
+        },
+        {
+          "viewportCssPx": 360,
+          "headerHeightPx": 62,
+          "layout": "single-row",
+          "brandWidthPx": 189.9,
+          "logoWidthPx": 105,
+          "pageIdentifierWidthPx": 75.9,
+          "actionsWidthPx": 119.1,
+          "themeTargetPx": "74.1 × 40",
+          "menuTargetPx": "40 × 40",
+          "horizontalOverflow": false
+        }
+      ],
+      "stylesheetReview": {
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "result": "Loaded stylesheets define theme-specific colors and shared geometry rules/media queries for this header; no theme-specific geometry override was found.",
+        "limitation": "Rendered geometry was measured only in dark mode to avoid changing the persisted theme preference."
+      },
+      "calculation": {
+        "logoBasePx": 105,
+        "maxReductionPercent": 30,
+        "logoFloorPx": 73.5,
+        "brandGapPx": 9,
+        "pageIdentifierPx": 75.9,
+        "resultingMinimumBrandWidthPx": 158.4,
+        "labeledThemeWidthBasisPx": 74.1,
+        "recommendedThemeAndMenuHitTargetsPx": "44 × 44 each",
+        "recommendedActionGapPx": 8,
+        "headerGapPx": 8,
+        "inlinePaddingPxPerSide": 14,
+        "labeledLayoutMinimumViewportPx": 321,
+        "iconOnlyOneRowMinimumViewportPx": 291,
+        "method": "Marca mínima = 73,5 + 9 + 75,9 = 158,4 px. Ações rotuladas = 74,1 + 8 + 44 = 126,1 px; acrescentar gap do header 8 e padding total 28: 320,5 px, arredondado para 321. Em icon-only: ações 44 + 8 + 44 = 96 px; total 158,4 + 96 + 8 + 28 = 290,4 px, arredondado para 291."
+      },
+      "interpretation": "Current production layout wraps through 340 px at sampled widths and uses 40 px high theme and 40 × 40 px menu targets at <=380 px. Measurements validate current behavior, not proposed design. Corrected recommendation: retain the theme label from 321 px; switch to icon-only at 320 px and below. Icon-only one-row composition is feasible from about 291 px; below that, allow two rows. These are calculated targets, not observed product behavior or CSS breakpoints.",
+      "limitations": [
+        "No live light-theme geometry capture; only CSS declarations reviewed for the light variant.",
+        "The proposal still requires a product implementation and a separate runtime check afterward.",
+        "Long page-identifier fallback remains untested.",
+        "No product code or user preference was modified."
+      ]
+    }
+  },
+  "latestRuntimeRelease": {
+    "observedAt": "2026-10-20",
+    "repository": "EAKerber/MobiliPresenter2D",
+    "branch": "main",
+    "productCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+    "netlifyDeployId": "6ad6c3b51b6be05647167f94",
+    "deployStatus": "ready",
+    "staticInventoryCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+    "note": "Deploy de produção confirmado no commit indicado. O inventário estático cobre as mudanças HTML/CSS/assets desde 483ef2e; a validação autenticada pós-login segue pendente em FIND-007.",
+    "publishedAt": "2026-10-20T01:28:40.575Z"
+  },
+  "productFindingResolutionStatus": {
+    "FIND-006": {
+      "productIssue": 209,
+      "status": "resolved",
+      "pullRequests": [
+        219,
+        220
+      ],
+      "evidence": "PRODUCT_RECONCILIATION_2026-10-19.md"
+    },
+    "FIND-009": {
+      "productIssue": 214,
+      "status": "resolved",
+      "pullRequests": [
+        221
+      ],
+      "evidence": "PRODUCT_RECONCILIATION_2026-10-19.md"
+    }
+  },
+  "authFlowReview": {
+    "observedAtLocal": "2026-10-19",
+    "site": "https://casaemmodulos.casa/",
+    "deployedCommit": "unknown; exact live deploy SHA not independently verified during this pass",
+    "readOnly": true,
+    "login": {
+      "completedByUser": true,
+      "identityTokenStatus": 200,
+      "identityUserStatus": 200
+    },
+    "adminData": {
+      "route": "/admin.html",
+      "adminBootstrapStatus": 200,
+      "configurationStatuses": [
+        200,
+        200
+      ],
+      "editorLoadedOnFirstVisit": true,
+      "reportedLoadErrorReproduced": false,
+      "diagnosis": {
+        "exactUiErrorSource": "/api/admin-bootstrap non-2xx; the client currently maps all non-2xx statuses to the same generic administrative-data message",
+        "serverStatuses": {
+          "401": "Netlify Identity did not resolve an authenticated user",
+          "403": "Identity user exists but lacks administration permission",
+          "503": "Netlify Identity unavailable"
+        },
+        "loginOrdering": "Browser login awaits Identity, obtains the JWT, writes the auth cookie, emits the login event, then returns the user for the form handler.",
+        "overlap": "Both the auth listener and form submit handler call showUser(user); adminDataPromise coalesces the bootstrap request, but both continuations may call loadSettings.",
+        "assessment": "A UI overlap exists, but a simple bootstrap-before-cookie race is weakened by the observed order and single-flight bootstrap. Transient disagreement between browser identity and Netlify function identity context remains possible, as does an Identity outage; neither is proven.",
+        "nextSignal": "Record bootstrap status, elapsed time, and request ID without user data or credentials on a future occurrence. No diagnostic instrumentation was deployed."
+      }
+    },
+    "menu": {
+      "sameAdminDocumentAfterLogin": "stale signed-out entry item; private routes and logout omitted",
+      "newAuthenticatedNavigation": "/access/manage.html menu contained private/public navigation and logout",
+      "likelyCause": "Admin and private-navigation bundles each contain a separate module-local auth event bus; the login event likely does not reach the header listener. High-confidence code-based hypothesis, not a verified fix.",
+      "postFixRuntimeVerification": "Partial: a aba /config/ exibiu o menu autenticado, mas abas existentes /admin.html e /access/manage.html exibiram o estado anônimo; uma nova aba /admin.html também abriu anônima. Não houve login/logout controlado nesta visita, então a transição no mesmo documento e a validade/propagação da sessão continuam pendentes.",
+      "currentCrossPageObservation": "evidence/runtime/private-menu-cross-tab-state-2026-10-20.md"
+    },
+    "configurator": {
+      "route": "/config/",
+      "buyerConfigurationStatus": 200,
+      "initialCount": "0 of 7 visible modules",
+      "errorVisible": false
+    },
+    "temporaryAccessSessionFallback": {
+      "route": "POST /api/access/session",
+      "status": 404,
+      "directFunctionRoute": "/.netlify/functions/access-session-status",
+      "directFunctionStatus": 404,
+      "comparisonRoutes": {
+        "configuration": 200,
+        "adminBootstrap": 200
+      },
+      "sourceMainDeclaresRouteAndFunction": true,
+      "temporarySessionValidated": false,
+      "productIssue": 222
+    },
+    "productIssues": {
+      "adminLoadIntermittent": 212,
+      "stalePostLoginMenu": 213,
+      "temporarySessionFallback404": 222
+    },
+    "privacy": {
+      "accountEmailPersisted": false,
+      "invitationValuesPersisted": false,
+      "productDataChanged": false,
+      "productCodeChanged": false
+    },
+    "evidence": "evidence/runtime/auth-session-flow-2026-10-19.md",
+    "productCorrection": {
+      "pullRequest": 223,
+      "mergedCommit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+      "mergedAt": "2026-10-20T01:28:20Z",
+      "productionDeploy": {
+        "id": "6ad6c3b51b6be05647167f94",
+        "state": "ready",
+        "publishedAt": "2026-10-20T01:28:40.575Z",
+        "commit": "1878ae1057ce7c6190e0c8cb08a1f3baadd49463"
+      },
+      "productIssue": 213,
+      "status": "Correção publicada; observada diferença de estado entre abas autenticada/anônimas; validação controlada de pós-login e saída ainda pendente."
+    }
+  }
+}

@@ -1,0 +1,644 @@
+{
+  "schema": "DSHoldHeadBlobPool/1",
+  "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "mainBaseline": "a762825e02f3ce06d0f499c08447ff17c0d59968",
+  "freezeDate": "2026-10-27",
+  "purpose": "Deduplicated content retention of historic HOLD HEAD blobs not yet reachable from main; no commit ancestry preserved by this pool.",
+  "sourceRefs": [
+    {
+      "ref": "architecture/dom-css-consolidation-20261020",
+      "head": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
+      "notYetReachableContent": 9
+    },
+    {
+      "ref": "audit/access-confirmation-runtime-20261020",
+      "head": "ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37",
+      "notYetReachableContent": 8
+    },
+    {
+      "ref": "audit/approved-contrast-runtime-20261021",
+      "head": "e848e079071f4b2ce788e18a10a2284e6a24ff7a",
+      "notYetReachableContent": 9
+    },
+    {
+      "ref": "audit/auth-session-flow-2026-10-19",
+      "head": "360d2e6d93d93ab74036149b518f22c01d57ecb0",
+      "notYetReachableContent": 9
+    },
+    {
+      "ref": "docs/handover-reconcile-20261023",
+      "head": "96093786ed8fb182c604182c37a42681cba8d6c9",
+      "notYetReachableContent": 3
+    },
+    {
+      "ref": "docs/reconcile-approved-focus-record",
+      "head": "430f4e1c7b376ae08e1788bd3aa365a32f2b76e2",
+      "notYetReachableContent": 6
+    },
+    {
+      "ref": "proposal/vis002-semantic-state-colors-2026-10-19",
+      "head": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
+      "notYetReachableContent": 10
+    }
+  ],
+  "totals": {
+    "sourceRefs": 7,
+    "unreachableInstances": 54,
+    "uniqueUnreachableBlobs": 45,
+    "deduplicatedInstances": 9,
+    "originalBytesUnique": 2744271
+  },
+  "artifacts": [
+    {
+      "sha": "015becd5c217850335f90a51b52c8e5c97594450",
+      "bytes": 11715,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/015becd5c217850335f90a51b52c8e5c97594450.txt",
+      "usages": [
+        {
+          "branch": "architecture/dom-css-consolidation-20261020",
+          "head": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
+          "path": "PALETTE_CONFORMANCE.md"
+        },
+        {
+          "branch": "audit/auth-session-flow-2026-10-19",
+          "head": "360d2e6d93d93ab74036149b518f22c01d57ecb0",
+          "path": "PALETTE_CONFORMANCE.md"
+        }
+      ]
+    },
+    {
+      "sha": "0578f1d626eab0cd1e6d64647642fd93db4911fb",
+      "bytes": 35528,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/0578f1d626eab0cd1e6d64647642fd93db4911fb.txt",
+      "usages": [
+        {
+          "branch": "proposal/vis002-semantic-state-colors-2026-10-19",
+          "head": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
+          "path": "decisions.json"
+        }
+      ]
+    },
+    {
+      "sha": "0708ea4a5d206cadcff5e3200e30390ad91e9326",
+      "bytes": 17036,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/0708ea4a5d206cadcff5e3200e30390ad91e9326.txt",
+      "usages": [
+        {
+          "branch": "audit/approved-contrast-runtime-20261021",
+          "head": "e848e079071f4b2ce788e18a10a2284e6a24ff7a",
+          "path": "FINDINGS_REGISTER.md"
+        }
+      ]
+    },
+    {
+      "sha": "154749d79881246ad49d0aa4bbc5a0890871f774",
+      "bytes": 15936,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/154749d79881246ad49d0aa4bbc5a0890871f774.txt",
+      "usages": [
+        {
+          "branch": "audit/access-confirmation-runtime-20261020",
+          "head": "ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37",
+          "path": "DECISION_APPLICATION_MAP.md"
+        }
+      ]
+    },
+    {
+      "sha": "179218c19c2acedd0dab13ff6104538542320a01",
+      "bytes": 25442,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/179218c19c2acedd0dab13ff6104538542320a01.txt",
+      "usages": [
+        {
+          "branch": "docs/handover-reconcile-20261023",
+          "head": "96093786ed8fb182c604182c37a42681cba8d6c9",
+          "path": "docs/ARCHITECTURE_CURRENT_HANDOVER_2026-10-22.md"
+        }
+      ]
+    },
+    {
+      "sha": "1b3bf73bc779fbca0570d64142a7e81244f20e0c",
+      "bytes": 10307,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/1b3bf73bc779fbca0570d64142a7e81244f20e0c.txt",
+      "usages": [
+        {
+          "branch": "audit/access-confirmation-runtime-20261020",
+          "head": "ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37",
+          "path": "VISUAL_INVENTORY.md"
+        }
+      ]
+    },
+    {
+      "sha": "2431736034a8f6409cb50a1b8c547ac92e7ef342",
+      "bytes": 8907,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/2431736034a8f6409cb50a1b8c547ac92e7ef342.txt",
+      "usages": [
+        {
+          "branch": "proposal/vis002-semantic-state-colors-2026-10-19",
+          "head": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
+          "path": "VISUAL_INVENTORY.md"
+        }
+      ]
+    },
+    {
+      "sha": "24ac625c6133cd86e08775d9f44db2a106552784",
+      "bytes": 11035,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/24ac625c6133cd86e08775d9f44db2a106552784.txt",
+      "usages": [
+        {
+          "branch": "proposal/vis002-semantic-state-colors-2026-10-19",
+          "head": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
+          "path": "PALETTE_CONFORMANCE.md"
+        }
+      ]
+    },
+    {
+      "sha": "2f1888971916bdbdc723d8dfe867ff69325cfd9f",
+      "bytes": 46774,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/2f1888971916bdbdc723d8dfe867ff69325cfd9f.txt",
+      "usages": [
+        {
+          "branch": "architecture/dom-css-consolidation-20261020",
+          "head": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
+          "path": "runtime-evidence.json"
+        }
+      ]
+    },
+    {
+      "sha": "390d50320152ba3745991f8b09143753752ab718",
+      "bytes": 16535,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/390d50320152ba3745991f8b09143753752ab718.txt",
+      "usages": [
+        {
+          "branch": "docs/handover-reconcile-20261023",
+          "head": "96093786ed8fb182c604182c37a42681cba8d6c9",
+          "path": "DECISION_APPLICATION_MAP.md"
+        }
+      ]
+    },
+    {
+      "sha": "3989f7bd0fadb35abd6ea38f63f5579636863905",
+      "bytes": 56822,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/3989f7bd0fadb35abd6ea38f63f5579636863905.txt",
+      "usages": [
+        {
+          "branch": "audit/access-confirmation-runtime-20261020",
+          "head": "ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37",
+          "path": "runtime-evidence.json"
+        }
+      ]
+    },
+    {
+      "sha": "43bd00b937a5a70a29986608bfaaf0357fa83b69",
+      "bytes": 35716,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/43bd00b937a5a70a29986608bfaaf0357fa83b69.txt",
+      "usages": [
+        {
+          "branch": "audit/auth-session-flow-2026-10-19",
+          "head": "360d2e6d93d93ab74036149b518f22c01d57ecb0",
+          "path": "RUNTIME_AUDIT.md"
+        }
+      ]
+    },
+    {
+      "sha": "4960a07e5a79a7c751ecb36cdf6ccc88ded4b67c",
+      "bytes": 15116,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/4960a07e5a79a7c751ecb36cdf6ccc88ded4b67c.txt",
+      "usages": [
+        {
+          "branch": "architecture/dom-css-consolidation-20261020",
+          "head": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
+          "path": "DECISION_APPLICATION_MAP.md"
+        },
+        {
+          "branch": "audit/auth-session-flow-2026-10-19",
+          "head": "360d2e6d93d93ab74036149b518f22c01d57ecb0",
+          "path": "DECISION_APPLICATION_MAP.md"
+        }
+      ]
+    },
+    {
+      "sha": "4b049d3cb6f77360b22b6848922375ef708201d5",
+      "bytes": 13216,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/4b049d3cb6f77360b22b6848922375ef708201d5.txt",
+      "usages": [
+        {
+          "branch": "audit/approved-contrast-runtime-20261021",
+          "head": "e848e079071f4b2ce788e18a10a2284e6a24ff7a",
+          "path": "PALETTE_CONFORMANCE.md"
+        }
+      ]
+    },
+    {
+      "sha": "4b9481bf9702f3f14f286153edfe6abb82d2f02e",
+      "bytes": 3921,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/4b9481bf9702f3f14f286153edfe6abb82d2f02e.txt",
+      "usages": [
+        {
+          "branch": "architecture/dom-css-consolidation-20261020",
+          "head": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
+          "path": "README.md"
+        }
+      ]
+    },
+    {
+      "sha": "4db026889f6c7a579d520c7d2b3118b5054eb032",
+      "bytes": 16433,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/4db026889f6c7a579d520c7d2b3118b5054eb032.txt",
+      "usages": [
+        {
+          "branch": "architecture/dom-css-consolidation-20261020",
+          "head": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
+          "path": "FINDINGS_REGISTER.md"
+        }
+      ]
+    },
+    {
+      "sha": "4fb29c2662bed0ae99ed89a43046df738a3198d6",
+      "bytes": 41373,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/4fb29c2662bed0ae99ed89a43046df738a3198d6.txt",
+      "usages": [
+        {
+          "branch": "audit/access-confirmation-runtime-20261020",
+          "head": "ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37",
+          "path": "RUNTIME_AUDIT.md"
+        }
+      ]
+    },
+    {
+      "sha": "54888689e19e76190e30eac61563f5fbcdd422bb",
+      "bytes": 51223,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/54888689e19e76190e30eac61563f5fbcdd422bb.txt",
+      "usages": [
+        {
+          "branch": "audit/approved-contrast-runtime-20261021",
+          "head": "e848e079071f4b2ce788e18a10a2284e6a24ff7a",
+          "path": "runtime-evidence.json"
+        }
+      ]
+    },
+    {
+      "sha": "550c1d51bdf92b58f0a11febc3645957a1392872",
+      "bytes": 1576,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/550c1d51bdf92b58f0a11febc3645957a1392872.txt",
+      "usages": [
+        {
+          "branch": "proposal/vis002-semantic-state-colors-2026-10-19",
+          "head": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
+          "path": "README.md"
+        }
+      ]
+    },
+    {
+      "sha": "5a582b89ff2f3b88dbba608e56055f09cb5dda32",
+      "bytes": 12129,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/5a582b89ff2f3b88dbba608e56055f09cb5dda32.txt",
+      "usages": [
+        {
+          "branch": "audit/access-confirmation-runtime-20261020",
+          "head": "ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37",
+          "path": "PALETTE_CONFORMANCE.md"
+        }
+      ]
+    },
+    {
+      "sha": "5ad3f1fb75dff26211822073f064b1b68b1f1a3b",
+      "bytes": 18254,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/5ad3f1fb75dff26211822073f064b1b68b1f1a3b.txt",
+      "usages": [
+        {
+          "branch": "docs/handover-reconcile-20261023",
+          "head": "96093786ed8fb182c604182c37a42681cba8d6c9",
+          "path": "FINDINGS_REGISTER.md"
+        }
+      ]
+    },
+    {
+      "sha": "5bdb7f600247c67c275e0fd8a9f0fd3650228009",
+      "bytes": 893201,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/5bdb7f600247c67c275e0fd8a9f0fd3650228009.txt",
+      "usages": [
+        {
+          "branch": "architecture/dom-css-consolidation-20261020",
+          "head": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
+          "path": "visual-inventory.json"
+        },
+        {
+          "branch": "audit/auth-session-flow-2026-10-19",
+          "head": "360d2e6d93d93ab74036149b518f22c01d57ecb0",
+          "path": "visual-inventory.json"
+        }
+      ]
+    },
+    {
+      "sha": "6018b772421584f7efe2ba0f1d8ad6f2f470f6be",
+      "bytes": 37504,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/6018b772421584f7efe2ba0f1d8ad6f2f470f6be.txt",
+      "usages": [
+        {
+          "branch": "architecture/dom-css-consolidation-20261020",
+          "head": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
+          "path": "RUNTIME_AUDIT.md"
+        },
+        {
+          "branch": "docs/reconcile-approved-focus-record",
+          "head": "430f4e1c7b376ae08e1788bd3aa365a32f2b76e2",
+          "path": "RUNTIME_AUDIT.md"
+        }
+      ]
+    },
+    {
+      "sha": "66effe49f768ac056623f1b86e94db1f84bcfa06",
+      "bytes": 38628,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/66effe49f768ac056623f1b86e94db1f84bcfa06.txt",
+      "usages": [
+        {
+          "branch": "audit/approved-contrast-runtime-20261021",
+          "head": "e848e079071f4b2ce788e18a10a2284e6a24ff7a",
+          "path": "RUNTIME_AUDIT.md"
+        }
+      ]
+    },
+    {
+      "sha": "799759999d0b8eb23c475d2179daafa3ee5e309c",
+      "bytes": 24619,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/799759999d0b8eb23c475d2179daafa3ee5e309c.txt",
+      "usages": [
+        {
+          "branch": "proposal/vis002-semantic-state-colors-2026-10-19",
+          "head": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
+          "path": "runtime-evidence.json"
+        }
+      ]
+    },
+    {
+      "sha": "835efbc5e2720b2fe4bf9a8808c4e1b89b87fe56",
+      "bytes": 42227,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/835efbc5e2720b2fe4bf9a8808c4e1b89b87fe56.txt",
+      "usages": [
+        {
+          "branch": "audit/auth-session-flow-2026-10-19",
+          "head": "360d2e6d93d93ab74036149b518f22c01d57ecb0",
+          "path": "runtime-evidence.json"
+        }
+      ]
+    },
+    {
+      "sha": "8e32d9f9e7e309da467ed60f7a984893d18cef69",
+      "bytes": 15739,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/8e32d9f9e7e309da467ed60f7a984893d18cef69.txt",
+      "usages": [
+        {
+          "branch": "audit/approved-contrast-runtime-20261021",
+          "head": "e848e079071f4b2ce788e18a10a2284e6a24ff7a",
+          "path": "DECISION_APPLICATION_MAP.md"
+        }
+      ]
+    },
+    {
+      "sha": "9d9796ed0bc4dad2bf30e7188c9c11b3f75bf14e",
+      "bytes": 52132,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/9d9796ed0bc4dad2bf30e7188c9c11b3f75bf14e.txt",
+      "usages": [
+        {
+          "branch": "docs/reconcile-approved-focus-record",
+          "head": "430f4e1c7b376ae08e1788bd3aa365a32f2b76e2",
+          "path": "runtime-evidence.json"
+        }
+      ]
+    },
+    {
+      "sha": "9f38f1c346ea23eb3f116125937c6a9b053bddfa",
+      "bytes": 9845,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/9f38f1c346ea23eb3f116125937c6a9b053bddfa.txt",
+      "usages": [
+        {
+          "branch": "architecture/dom-css-consolidation-20261020",
+          "head": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
+          "path": "VISUAL_INVENTORY.md"
+        },
+        {
+          "branch": "audit/auth-session-flow-2026-10-19",
+          "head": "360d2e6d93d93ab74036149b518f22c01d57ecb0",
+          "path": "VISUAL_INVENTORY.md"
+        }
+      ]
+    },
+    {
+      "sha": "a51d8234ce3438d29795ed8ca099391742dab4fd",
+      "bytes": 1965,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/a51d8234ce3438d29795ed8ca099391742dab4fd.txt",
+      "usages": [
+        {
+          "branch": "audit/auth-session-flow-2026-10-19",
+          "head": "360d2e6d93d93ab74036149b518f22c01d57ecb0",
+          "path": "README.md"
+        }
+      ]
+    },
+    {
+      "sha": "ae097f251aaaede86277ff347e2990adc7953ca6",
+      "bytes": 889888,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/ae097f251aaaede86277ff347e2990adc7953ca6.txt",
+      "usages": [
+        {
+          "branch": "proposal/vis002-semantic-state-colors-2026-10-19",
+          "head": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
+          "path": "visual-inventory.json"
+        }
+      ]
+    },
+    {
+      "sha": "b22b1c0eb51b302ca1721fe67acd7c1063046aed",
+      "bytes": 17434,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/b22b1c0eb51b302ca1721fe67acd7c1063046aed.txt",
+      "usages": [
+        {
+          "branch": "audit/access-confirmation-runtime-20261020",
+          "head": "ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37",
+          "path": "FINDINGS_REGISTER.md"
+        }
+      ]
+    },
+    {
+      "sha": "cd5a8d46cf084b2beb818255b5e508db58a2c108",
+      "bytes": 22380,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/cd5a8d46cf084b2beb818255b5e508db58a2c108.txt",
+      "usages": [
+        {
+          "branch": "proposal/vis002-semantic-state-colors-2026-10-19",
+          "head": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
+          "path": "RUNTIME_AUDIT.md"
+        }
+      ]
+    },
+    {
+      "sha": "d53be6695ec7beb4538ae6cc7e4e212425578617",
+      "bytes": 43165,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/d53be6695ec7beb4538ae6cc7e4e212425578617.txt",
+      "usages": [
+        {
+          "branch": "audit/approved-contrast-runtime-20261021",
+          "head": "e848e079071f4b2ce788e18a10a2284e6a24ff7a",
+          "path": "decisions.json"
+        }
+      ]
+    },
+    {
+      "sha": "d6b46505d4ccfb77d38f421560ed644f84005056",
+      "bytes": 16979,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/d6b46505d4ccfb77d38f421560ed644f84005056.txt",
+      "usages": [
+        {
+          "branch": "proposal/vis002-semantic-state-colors-2026-10-19",
+          "head": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
+          "path": "PALETTE_APPLICATION_MAP.md"
+        }
+      ]
+    },
+    {
+      "sha": "d715f428319e1d2e290ec40936c846a46bfca5b7",
+      "bytes": 40388,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/d715f428319e1d2e290ec40936c846a46bfca5b7.txt",
+      "usages": [
+        {
+          "branch": "architecture/dom-css-consolidation-20261020",
+          "head": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
+          "path": "decisions.json"
+        },
+        {
+          "branch": "audit/access-confirmation-runtime-20261020",
+          "head": "ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37",
+          "path": "decisions.json"
+        },
+        {
+          "branch": "audit/auth-session-flow-2026-10-19",
+          "head": "360d2e6d93d93ab74036149b518f22c01d57ecb0",
+          "path": "decisions.json"
+        }
+      ]
+    },
+    {
+      "sha": "d9b10deca79b56258b85ce6c6afc04e7f7325a97",
+      "bytes": 15964,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/d9b10deca79b56258b85ce6c6afc04e7f7325a97.txt",
+      "usages": [
+        {
+          "branch": "docs/reconcile-approved-focus-record",
+          "head": "430f4e1c7b376ae08e1788bd3aa365a32f2b76e2",
+          "path": "DECISION_APPLICATION_MAP.md"
+        }
+      ]
+    },
+    {
+      "sha": "e1749adaeafe491359cdfc6cfc8dbcb78b6dd589",
+      "bytes": 12000,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/e1749adaeafe491359cdfc6cfc8dbcb78b6dd589.txt",
+      "usages": [
+        {
+          "branch": "proposal/vis002-semantic-state-colors-2026-10-19",
+          "head": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
+          "path": "DECISION_APPLICATION_MAP.md"
+        }
+      ]
+    },
+    {
+      "sha": "e3c3ddffe451e1ebec6da2366f461e543073e45f",
+      "bytes": 3163,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/e3c3ddffe451e1ebec6da2366f461e543073e45f.txt",
+      "usages": [
+        {
+          "branch": "audit/approved-contrast-runtime-20261021",
+          "head": "e848e079071f4b2ce788e18a10a2284e6a24ff7a",
+          "path": "evidence/runtime/contrast-approved-pairs-2026-10-20.md"
+        }
+      ]
+    },
+    {
+      "sha": "e53ce61febea5cce9fcc2037423b34bf7b72fc4f",
+      "bytes": 1965,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/e53ce61febea5cce9fcc2037423b34bf7b72fc4f.txt",
+      "usages": [
+        {
+          "branch": "audit/access-confirmation-runtime-20261020",
+          "head": "ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37",
+          "path": "README.md"
+        },
+        {
+          "branch": "audit/approved-contrast-runtime-20261021",
+          "head": "e848e079071f4b2ce788e18a10a2284e6a24ff7a",
+          "path": "README.md"
+        },
+        {
+          "branch": "docs/reconcile-approved-focus-record",
+          "head": "430f4e1c7b376ae08e1788bd3aa365a32f2b76e2",
+          "path": "README.md"
+        }
+      ]
+    },
+    {
+      "sha": "e66745893bd8ce6369525534879fc5d04e1db1d6",
+      "bytes": 10404,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/e66745893bd8ce6369525534879fc5d04e1db1d6.txt",
+      "usages": [
+        {
+          "branch": "audit/approved-contrast-runtime-20261021",
+          "head": "e848e079071f4b2ce788e18a10a2284e6a24ff7a",
+          "path": "VISUAL_INVENTORY.md"
+        }
+      ]
+    },
+    {
+      "sha": "eb5474c39b802a0c3aff335776266b3a885eb14d",
+      "bytes": 12545,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/eb5474c39b802a0c3aff335776266b3a885eb14d.txt",
+      "usages": [
+        {
+          "branch": "proposal/vis002-semantic-state-colors-2026-10-19",
+          "head": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
+          "path": "FINDINGS_REGISTER.md"
+        }
+      ]
+    },
+    {
+      "sha": "ee1156572bd49010ec9c3c1c21e4475a89c4641a",
+      "bytes": 15684,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/ee1156572bd49010ec9c3c1c21e4475a89c4641a.txt",
+      "usages": [
+        {
+          "branch": "audit/auth-session-flow-2026-10-19",
+          "head": "360d2e6d93d93ab74036149b518f22c01d57ecb0",
+          "path": "FINDINGS_REGISTER.md"
+        }
+      ]
+    },
+    {
+      "sha": "f2160cbc5ddc595f411f74636b543c2f8c975149",
+      "bytes": 17321,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/f2160cbc5ddc595f411f74636b543c2f8c975149.txt",
+      "usages": [
+        {
+          "branch": "docs/reconcile-approved-focus-record",
+          "head": "430f4e1c7b376ae08e1788bd3aa365a32f2b76e2",
+          "path": "FINDINGS_REGISTER.md"
+        }
+      ]
+    },
+    {
+      "sha": "f972d9969f49f80ec9ca01be4ca8cf86fd0d7d11",
+      "bytes": 44137,
+      "archivePath": "docs/historical-branch-blobs/hold-pool/f972d9969f49f80ec9ca01be4ca8cf86fd0d7d11.txt",
+      "usages": [
+        {
+          "branch": "docs/reconcile-approved-focus-record",
+          "head": "430f4e1c7b376ae08e1788bd3aa365a32f2b76e2",
+          "path": "decisions.json"
+        }
+      ]
+    }
+  ],
+  "policy": [
+    "Source original blob stored unchanged by SHA under inert .txt path",
+    "Archive items are not root decisions, workflows or runtime catalogs",
+    "This does not make old HEAD commits reachable nor satisfy branch hygiene ancestry/squash gate",
+    "Do not delete branches from this preservation proof alone"
+  ]
+}

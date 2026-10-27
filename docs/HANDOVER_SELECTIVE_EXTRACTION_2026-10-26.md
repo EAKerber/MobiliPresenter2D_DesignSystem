@@ -110,3 +110,7 @@ Copiar original histórico por SHA exata de 45 arquivos `evidence/runtime/*.md` 
 ## D04 — preservação inerte dos 11 blobs modificados da #51 (27/10/2026)
 
 Comparação fonte/head e main identificou **11 paths compartilhados com blobs diferentes** depois de zerar exclusivos na #101. Todos os 11 blobs antigos foram destinados a `docs/historical-branch-blobs/pr51/**/*.txt` por SHA exato, incluindo 2 workflows sem ativação. [SHA e pares old/main](DS_D04_PR51_OLD_CANONICAL_BLOBS_2026-10-27.json) · [aviso sobre reachability](DS_D04_PR51_CANONICAL_ARCHIVE_2026-10-27.md). Cobertura de conteúdo ≠ integridade de commit DAG; refs não elegíveis a delete automaticamente.
+
+## D04 — sete HEADs HOLD, deduplicação por SHA (27/10/2026)
+
+45 blobs históricos distintos (54 usos em sete refs) preservados em paths inertes `docs/historical-branch-blobs/hold-pool/<sha>.txt`; [inventário](DS_HOLD_HEAD_BLOB_POOL_2026-10-27.json) e [interpretação](DS_HOLD_HEAD_BLOB_COVERAGE_2026-10-27.md). Conteúdo anterior de decisions/index/auditorias não substitui main. Somados à #102, oito cabeças HOLD ficam com seus blobs retidos na árvore principal após merge, mas commits e ancestry ainda precisam de gate próprio.
