@@ -2,9 +2,7 @@
   "schemaVersion": "BranchDispositionSet 0.1",
   "controlBranch": "main",
   "preserveBranches": [
-    "architecture/dom-css-consolidation-20261020",
-    "docs/current-handover-20261024",
-    "proposal/vis002-semantic-state-colors-2026-10-19"
+    "docs/current-handover-20261024"
   ],
   "terminalBranches": [
     {
@@ -36,6 +34,18 @@
       "sha": "96093786ed8fb182c604182c37a42681cba8d6c9",
       "allowDelete": true,
       "reason": "P14 reviewed SHA-exact protected archival tag; runtime proof and leases mandatory."
+    },
+    {
+      "branch": "architecture/dom-css-consolidation-20261020",
+      "sha": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
+      "allowDelete": true,
+      "reason": "P15: historical HEAD preserved by protected archive tag (exact SHA); mandatory independent runtime DAG verification."
+    },
+    {
+      "branch": "proposal/vis002-semantic-state-colors-2026-10-19",
+      "sha": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
+      "allowDelete": true,
+      "reason": "P15: historical HEAD preserved by protected archive tag (exact SHA); mandatory independent runtime DAG verification."
     }
   ]
 }
