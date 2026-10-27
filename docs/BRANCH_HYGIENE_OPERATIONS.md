@@ -57,7 +57,7 @@ Autoridade das informações: `decisions.json` para decisões; `dist/*.manifest.
 
 ### Resultado verificado do ciclo inicial (26/10/2026)
 
-**38 branches iniciais → 10 branches finais: 30 refs eliminadas, duas operacionais criadas, redução líquida de 28.** [PR #64](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/64) portou o executor/observador do produto com testes; [PRs #65–#73 e #75](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pulls?q=is%3Apr+is%3Amerged+DS-HYG) executaram **10 lotes de três SHA-pins cada**. Todas as aplicações publicaram `status=PASS; mode=apply; count=3; readback=PASS`, com verificação adicional de contagem/ref na API. PR [#74](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/74) corrigiu os gates P-TOKEN-01 e 02B para disparar em `main`/PR, e ambos passaram em PR e push `main`; isso permitiu retirar as branches de tokens #49/#50 sem perder a validação.
+**38 branches iniciais → 10 branches no checkpoint de 26/10: 32 refs eliminadas em 12 lotes, quatro refs temporárias criadas no decorrer dos ciclos, redução líquida de 28.** [PR #64](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/64) portou o executor/observador do produto com testes; [PRs #65–#73 e #75](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pulls?q=is%3Apr+is%3Amerged+DS-HYG) executaram **10 lotes de três SHA-pins cada** na primeira varredura; depois P11 e P12 removeram uma ref operacional cada. Todas as aplicações publicaram `status=PASS; mode=apply; count=3; readback=PASS`, com verificação adicional de contagem/ref na API. PR [#74](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/74) corrigiu os gates P-TOKEN-01 e 02B para disparar em `main`/PR, e ambos passaram em PR e push `main`; isso permitiu retirar as branches de tokens #49/#50 sem perder a validação.
 
 | Lote | PR | Audit Actions | Apply Actions |
 | --- | --- | --- | --- |
@@ -81,9 +81,9 @@ Snapshot depois do lote P10, **10 refs**:
 | Branch | Situação e próximo gate |
 | --- | --- |
 | `main` | Única referência permanente desejada; toda autoridade documental/token válida deve estar aqui. |
-| `maintenance/ds-product-hygiene-batch01-20261026` | Única branch operacional remanescente; não deletar enquanto houver PR usando esta head; remover ao encerrar os lotes via um caminho com auditoria de PR encerrada (nunca força). |
+| `maintenance/ds-pr41-runtime-evidence-extract-20261026` | Única branch operacional remanescente; PRs #78/#79/#80 merged. Conservar até o próximo lote seguro; evitar proliferar branches de manutenção. |
 | `architecture/dom-css-consolidation-20261020` | PR #39 OPEN: proposta DOM/CSS e experimentos. Extrair artefatos úteis com hash/proveniência e gates; só então fechar a PR e retirar a ref. |
-| `audit/access-confirmation-runtime-20261020` | PR #41 OPEN: auditoria runtime privada. Incorporar evidência válida contextualizada por deploy, sem declarar confirmação atual; fechar após reconciliação. |
+| `audit/access-confirmation-runtime-20261020` | PR #41 **CLOSED sem merge integral** (D04). PR #78 incorporou todos os **7 blobs exclusivos** (3 documentos + 4 imagens), e #79 recuperou FIND-015 como achado histórico; branch ainda não pode ser excluída por ancestry ou squash exato. Preservar até prova de conservação do snapshot anterior, sem inferir estado atual do produto. |
 | `docs/current-handover-20261024` | PR #51 OPEN: 236 caminhos alterados, 7 textos já extraídos; completar ledger e preservar binários exclusivos antes de fechar, sem merge integral. |
 | `audit/approved-contrast-runtime-20261021` | PR #42 CLOSED e não merged. Classificar todos os blobs de evidência/decisões antes de retirar. |
 | `audit/auth-session-flow-2026-10-19` | PR #37 CLOSED e não merged. Classificar testes/documentos únicos e achados versus main. |
@@ -92,6 +92,16 @@ Snapshot depois do lote P10, **10 refs**:
 | `proposal/vis002-semantic-state-colors-2026-10-19` | PR #23 MERGED, mas **head atual da branch difere do head que foi mesclado**. Não presumir equivalência; auditar commits adicionais. |
 
 **Próxima meta:** cada uma das oito refs HOLDS só pode sair depois de materialização seletiva ou prova verificável de cobertura total, comparação de blobs/árvores, revisão da respectiva PR e registro no ledger. Não fazer squash de toda #51, não redatar evidências antigas como atuais e não reabrir homologações visuais CLOSED.
+
+### Continuação pós-P10 — encerramento de referência vazia e extração D04
+
+- [PR #77](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/77), audit [40423355239](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40423355239), apply [40423479233](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40423479233): retirou `maintenance/ds-history-archive-pilot-20261026@abb87533d634e0afc2f57dcf8e7ce1faa4bcec05`, idêntica ao antigo head de `main`, sem commits ou árvores exclusivas. `PASS/count=1/readback=PASS`.
+- [PR #78](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/78): sete arquivos datados da PR #41, **todos com blob SHA idêntico**, preservados na `main`, incluindo os quatro JPEG referenciados pelos três Markdown. Ledger [D04](HANDOVER_SELECTIVE_EXTRACTION_2026-10-26.md) contém os sete SHAs e limites: auditoria de 20/10/2026, produto `1878ae1`, deploy `6ad6c3b51b6be05647167f94`, sem comprovação do estado atual. Nenhum `decisions.json` ou `runtime-evidence.json` foi substituído.
+- [PR #79](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/79): FIND-015 recuperado em `FINDINGS_REGISTER.md` como **desvio visual datado**, não homologação nem bug atual. PR [#41](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/41) encerrada SEM MERGE; branch mantida como HOLD devido a histórico divergente.
+- [PR #80](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/80), audit [40424786709](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40424786709), apply [40424863430](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40424863430): retirou a branch operacional anterior `maintenance/ds-product-hygiene-batch01-20261026@740c194fdfe15b945cc2abf67566705d6c5b1834`, ancestral de `main`, sem PR aberta, `PASS/count=1/readback=PASS`.
+- Estado novo: **10 branches = main + uma operacional + oito HOLDS**, dos quais **2 PRs OPEN** (#39 e #51), **4 PRs encerradas sem merge** (#37, #41, #42, #46), **1 branch sem PR identificada** e **1 branch pós-merge com commits adicionais** (#23). Os dois workflows de tokens continuam validados pela `main`.
+- Inspeção comparativa de árvores: PR #39 possui aproximadamente **24 arquivos exclusivos** (documentação/experimentos e 2 workflows), PR #51 cerca de **221 arquivos exclusivos, 5,1 MB**, sobretudo 161 rastros de arquitetura e 60 de runtime. Esses números são inventário de blobs por caminhos, não prova de que todos sejam necessários ou aprovados. Não incorporar workflows históricos nem imagens indiscriminadamente.
+- A tentativa anterior de registrar um mecanismo alternativo de arquivo histórico foi bloqueada pela camada de segurança; **não repetir via mecanismo substituto**. Nenhuma ref divergente é elegível ao executor atual por simples status da PR ou por idade. Para aproximar-se de `main` única, primeiro classificar e extrair seletivamente materiais exclusivos e conservar a proveniência por método permitido e revisável.
 
 ### Portabilidade e desativação do legado
 
