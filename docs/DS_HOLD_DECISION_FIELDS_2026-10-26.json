@@ -1,0 +1,252 @@
+{
+  "schemaVersion": "DS-HoldDecisionFieldAudit 0.1",
+  "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "baselineMain": "f0417cb3eb243080207efc26b521ccee25e5a91f",
+  "mainBlob": "63b60f8d87327c6fd1e80c8cdf4ff832c4089bfa",
+  "sourceOfAuthority": "decisions.json@main",
+  "limitations": [
+    "Compares decision JSON field paths only; does not reconcile all other files or authorize branch deletion",
+    "Latest main records may not prove current product runtime"
+  ],
+  "sources": [
+    {
+      "branch": "audit/access-confirmation-runtime-20261020",
+      "sourceHead": "ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37",
+      "sourceBlob": "d715f428319e1d2e290ec40936c846a46bfca5b7",
+      "oldIdCount": 22,
+      "novelDecisionIds": [],
+      "missingFromSource": [],
+      "changes": [
+        {
+          "id": "NAV-005",
+          "paths": [
+            ".wideLayoutPatternsApproved.secondaryNavigationPages",
+            ".compactLayoutPatternsApproved.secondaryNavigationPages"
+          ]
+        },
+        {
+          "id": "VIS-002",
+          "paths": [
+            ".notYetSpecified[2]",
+            ".approvedRuntimePairs[0].reconsiderationReason",
+            ".approvedRuntimePairs[0].candidateReplacement.status",
+            ".approvedRuntimePairs[1].status",
+            ".contextualProductImplementation.status",
+            ".contextualProductImplementation.productCommit",
+            ".contextualProductImplementation.netlifyDeployId",
+            ".contextualProductImplementation.contexts[0].runtimeStatus",
+            ".contextualProductImplementation.contexts[0].contrast",
+            ".contextualProductImplementation.contexts[1].runtimeStatus",
+            ".contextualProductImplementation.contexts[1].contrast",
+            ".contextualProductImplementation.contexts[2].runtimeStatus",
+            ".contextualProductImplementation.contexts[2].contrast",
+            ".contextualProductImplementation.contexts[3].runtimeStatus",
+            ".contextualProductImplementation.contexts[3].contrast",
+            ".contextualProductImplementation.postDeployRuntimeVerification"
+          ]
+        },
+        {
+          "id": "VIS-003",
+          "paths": [
+            ".status",
+            ".notApproved[2]",
+            ".implementationEvidence.productCommit",
+            ".implementationEvidence.netlifyDeployId",
+            ".implementationEvidence.status",
+            ".implementationEvidence.postDeployVerification"
+          ]
+        },
+        {
+          "id": "EST-02",
+          "paths": [
+            ".notYetSpecified[0]",
+            ".notYetSpecified[1]",
+            ".notYetSpecified[2]",
+            ".notYetSpecified[3]",
+            ".notYetSpecified[4]",
+            ".approvedPaletteReference"
+          ]
+        }
+      ],
+      "disposition": "HISTORICAL_SUPERSEDED_FIELDS_REVIEWED; BRANCH_STILL_HOLD"
+    },
+    {
+      "branch": "audit/approved-contrast-runtime-20261021",
+      "sourceHead": "e848e079071f4b2ce788e18a10a2284e6a24ff7a",
+      "sourceBlob": "d53be6695ec7beb4538ae6cc7e4e212425578617",
+      "oldIdCount": 22,
+      "novelDecisionIds": [],
+      "missingFromSource": [],
+      "changes": [
+        {
+          "id": "NAV-005",
+          "paths": [
+            ".wideLayoutPatternsApproved.secondaryNavigationPages",
+            ".compactLayoutPatternsApproved.secondaryNavigationPages"
+          ]
+        },
+        {
+          "id": "VIS-002",
+          "paths": [
+            ".notYetSpecified[2]",
+            ".approvedRuntimePairs[0].reconsiderationReason"
+          ]
+        },
+        {
+          "id": "VIS-003",
+          "paths": [
+            ".notApproved[2]",
+            ".implementationEvidence.status",
+            ".implementationEvidence.postDeployVerification.visualReview"
+          ]
+        },
+        {
+          "id": "EST-02",
+          "paths": [
+            ".notYetSpecified[0]",
+            ".notYetSpecified[1]",
+            ".notYetSpecified[2]",
+            ".notYetSpecified[3]",
+            ".notYetSpecified[4]",
+            ".approvedPaletteReference"
+          ]
+        }
+      ],
+      "disposition": "HISTORICAL_SUPERSEDED_FIELDS_REVIEWED; BRANCH_STILL_HOLD"
+    },
+    {
+      "branch": "audit/auth-session-flow-2026-10-19",
+      "sourceHead": "360d2e6d93d93ab74036149b518f22c01d57ecb0",
+      "sourceBlob": "d715f428319e1d2e290ec40936c846a46bfca5b7",
+      "oldIdCount": 22,
+      "novelDecisionIds": [],
+      "missingFromSource": [],
+      "changes": [
+        {
+          "id": "NAV-005",
+          "paths": [
+            ".wideLayoutPatternsApproved.secondaryNavigationPages",
+            ".compactLayoutPatternsApproved.secondaryNavigationPages"
+          ]
+        },
+        {
+          "id": "VIS-002",
+          "paths": [
+            ".notYetSpecified[2]",
+            ".approvedRuntimePairs[0].reconsiderationReason",
+            ".approvedRuntimePairs[0].candidateReplacement.status",
+            ".approvedRuntimePairs[1].status",
+            ".contextualProductImplementation.status",
+            ".contextualProductImplementation.productCommit",
+            ".contextualProductImplementation.netlifyDeployId",
+            ".contextualProductImplementation.contexts[0].runtimeStatus",
+            ".contextualProductImplementation.contexts[0].contrast",
+            ".contextualProductImplementation.contexts[1].runtimeStatus",
+            ".contextualProductImplementation.contexts[1].contrast",
+            ".contextualProductImplementation.contexts[2].runtimeStatus",
+            ".contextualProductImplementation.contexts[2].contrast",
+            ".contextualProductImplementation.contexts[3].runtimeStatus",
+            ".contextualProductImplementation.contexts[3].contrast",
+            ".contextualProductImplementation.postDeployRuntimeVerification"
+          ]
+        },
+        {
+          "id": "VIS-003",
+          "paths": [
+            ".status",
+            ".notApproved[2]",
+            ".implementationEvidence.productCommit",
+            ".implementationEvidence.netlifyDeployId",
+            ".implementationEvidence.status",
+            ".implementationEvidence.postDeployVerification"
+          ]
+        },
+        {
+          "id": "EST-02",
+          "paths": [
+            ".notYetSpecified[0]",
+            ".notYetSpecified[1]",
+            ".notYetSpecified[2]",
+            ".notYetSpecified[3]",
+            ".notYetSpecified[4]",
+            ".approvedPaletteReference"
+          ]
+        }
+      ],
+      "disposition": "HISTORICAL_SUPERSEDED_FIELDS_REVIEWED; BRANCH_STILL_HOLD"
+    },
+    {
+      "branch": "docs/reconcile-approved-focus-record",
+      "sourceHead": "430f4e1c7b376ae08e1788bd3aa365a32f2b76e2",
+      "sourceBlob": "f972d9969f49f80ec9ca01be4ca8cf86fd0d7d11",
+      "oldIdCount": 22,
+      "novelDecisionIds": [],
+      "missingFromSource": [],
+      "changes": [
+        {
+          "id": "NAV-005",
+          "paths": [
+            ".wideLayoutPatternsApproved.secondaryNavigationPages",
+            ".compactLayoutPatternsApproved.secondaryNavigationPages"
+          ]
+        }
+      ],
+      "disposition": "HISTORICAL_SUPERSEDED_FIELDS_REVIEWED; BRANCH_STILL_HOLD"
+    },
+    {
+      "branch": "proposal/vis002-semantic-state-colors-2026-10-19",
+      "sourceHead": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
+      "sourceBlob": "0578f1d626eab0cd1e6d64647642fd93db4911fb",
+      "oldIdCount": 22,
+      "novelDecisionIds": [],
+      "missingFromSource": [],
+      "changes": [
+        {
+          "id": "NAV-005",
+          "paths": [
+            ".wideLayoutPatternsApproved.secondaryNavigationPages",
+            ".compactLayoutPatternsApproved.secondaryNavigationPages"
+          ]
+        },
+        {
+          "id": "VIS-002",
+          "paths": [
+            ".status",
+            ".semanticColors.candidateSwatches",
+            ".semanticColors.processInformation.status",
+            ".semanticColors.processInformation.decision",
+            ".semanticColors.processInformation.existingImplementation.status",
+            ".semanticColors.processInformation.runtimeExamples",
+            ".semanticColors.processInformation.approvedPairs",
+            ".notYetSpecified[2]",
+            ".approvedRuntimePairs[0].reconsiderationReason",
+            ".approvedRuntimePairs[0].candidateReplacement.status",
+            ".approvedRuntimePairs[1].status",
+            ".disabledControlTreatment",
+            ".contextualProductImplementation"
+          ]
+        },
+        {
+          "id": "VIS-003",
+          "paths": [
+            ".status",
+            ".notApproved[2]",
+            ".implementationEvidence"
+          ]
+        },
+        {
+          "id": "EST-02",
+          "paths": [
+            ".notYetSpecified[0]",
+            ".notYetSpecified[1]",
+            ".notYetSpecified[2]",
+            ".notYetSpecified[3]",
+            ".notYetSpecified[4]",
+            ".approvedPaletteReference"
+          ]
+        }
+      ],
+      "disposition": "HISTORICAL_SUPERSEDED_FIELDS_REVIEWED; BRANCH_STILL_HOLD"
+    }
+  ]
+}
