@@ -3,13 +3,24 @@
   "controlBranch": "main",
   "preserveBranches": [
     "architecture/dom-css-consolidation-20261020",
-    "audit/access-confirmation-runtime-20261020",
     "docs/current-handover-20261024",
     "audit/approved-contrast-runtime-20261021",
     "audit/auth-session-flow-2026-10-19",
-    "docs/reconcile-approved-focus-record",
     "docs/handover-reconcile-20261023",
     "proposal/vis002-semantic-state-colors-2026-10-19"
   ],
-  "terminalBranches": []
+  "terminalBranches": [
+    {
+      "branch": "docs/reconcile-approved-focus-record",
+      "sha": "430f4e1c7b376ae08e1788bd3aa365a32f2b76e2",
+      "allowDelete": true,
+      "reason": "Protected exact-commit archival tag; reviewed bounded P13 batch. Runtime executor must revalidate tag, ruleset, full DAG and branch SHA."
+    },
+    {
+      "branch": "audit/access-confirmation-runtime-20261020",
+      "sha": "ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37",
+      "allowDelete": true,
+      "reason": "Protected exact-commit archival tag; reviewed bounded P13 batch. Runtime executor must revalidate tag, ruleset, full DAG and branch SHA."
+    }
+  ]
 }
