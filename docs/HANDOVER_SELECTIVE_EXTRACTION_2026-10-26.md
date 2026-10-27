@@ -94,3 +94,7 @@ Após ler o master via Git Blob SHA, auditoria original-vs-batches em 36 víncul
 ## ARC-13 — contexto de classificação de 32 batches (27/10/2026)
 
 Trinta lotes possuem mesmo multiconjunto lexical do master mas notas/owner/consumer/source-hash/params que não são inteiramente deriváveis do índice. Dois controles negativos independentes cobrem scripts embutidos e grandes arquivos de dados. [Manifesto exato](DS_ARC13_CLASSIFIED_CONTEXT_BLOBS_2026-10-27.json) · [justificativa](DS_ARC13_CLASSIFIED_CONTEXT_RECONCILIATION_2026-10-27.md). Não importar esse material como catálogo; saldo da #51 183→151 após merge.
+
+## D04 — consumer traces ARC-13 (27/10/2026)
+
+69 rastreios textuais do Admin/Configurador e dois mapas lexicais/contextuais históricos conservados por SHA exato. Distinguir owner, consumidor, formato de parâmetros, contratos de erro, ARIA e foco. [Manifesto](DS_ARC13_CONSUMER_TRACE_BLOBS_2026-10-27.json) · [relatório](DS_ARC13_CONSUMER_TRACE_PRESERVATION_2026-10-27.md). Produto não modificado, seleção baseada em categoria e amostras de risco. Prevê #51 exclusivos 151→80.
