@@ -5,6 +5,16 @@
 **Prioridade atual:** estabilizar, reconciliar e reduzir as branches do **Design System primeiro**. Não retomar trabalhos no repositório do produto até nova orientação do usuário.  
 **Este é o ponto de retomada permanente**; o README aponta para cá. Ler o GitHub em tempo real antes de assumir que números ou SHAs continuam atuais.
 
+## Verificação posterior à PR #82 — snapshot de retomada (26/10/2026, São Paulo)
+
+**SHA de `main` confirmado antes desta atualização documental:** `ae9ac472ed4092effd12a3c41d5e3e560dc40f18`, [PR #82](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/82) **MERGED**. A leitura independente de GitHub encontrou **10 branches** (1 `main`, 1 operacional e 8 HOLDS), apenas **duas PRs abertas** ([#39](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/39), [#51](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51)) e observação sem escrita da [Actions #40428162828](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40428162828) **PASS** no mesmo SHA.
+
+**Branch operacional ativa:** `maintenance/ds-pr41-runtime-evidence-extract-20261026@9107ec1fce1feb90429c28729bc6c2e4014f1626` (sem PR aberta em seu head; **não presumir seguro apagar** sem gate completo). Os oito HOLDS estão enumerados na seção 4 e registrados em `ops/branch-dispositions.json`; **não excluir por ser branch antiga ou PR encerrada**. `ops/branch-hygiene-batch.json` conserva o lote P12 já consumido, **não deve ser reaplicado**. O executor ativo é o portado do produto (PR #64); o legado foi desativado.
+
+**Verificações materiais recentes:** PR [#80](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/80) aplicou P12 com readback; PR [#81](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/81) atualizou o procedimento; PR [#82](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/82) publicou este handover e seu ponteiro no README. A extração exata de sete blobs de #41 está na PR #78, o FIND-015 datado na #79, e a #41 ficou **CLOSED sem merge** e **branch HOLD**. A PR #51 ainda contém numerosos arquivos exclusivos (especialmente arquitetura/runtime) e a #39 experimentos/propostas não homologados. A próxima ação é **classificação e extração seletiva com proveniência**, não apagar em massa.
+
+Este bloco registra somente **documentação e leitura Git/Actions**. Não comprova conformidade funcional de login, contraste, produto ou publicação. O commit produzido por esta própria atualização virá depois do SHA de snapshot acima; obter o SHA efetivo na API ao retomar.
+
 ## 0. Bootstrap indispensável
 
 1. Consultar o SHA de `main`, inventário completo de branches, PRs abertas/fechadas relevantes e Actions no repositório [Design System](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem).
@@ -57,12 +67,12 @@ O Design System **já possui o mecanismo do repositório de produto portado e te
 
 **Regra operacional:** abrir PR de manifesto SHA-pinned; aguardar testes e audit PASS; verificar HEAD `main`/PR, escopo e nenhuma PR aberta envolvendo as refs; merge por commit com head esperado; exigir `apply PASS/readback PASS`, consultar refs de novo e registrar recibos. O manifesto já consumido é histórico — **nunca executá-lo outra vez manualmente**. É aceitável reutilizar a única branch operacional após encerrar sua PR anterior, desde que o diff contra a `main` seja limitado ao lote novo.
 
-## 4. Inventário exato das 10 branches — snapshot
+## 4. Inventário das 10 branches — snapshot histórico, revalidado no bloco mais recente
 
 | Branch | SHA em 26/10 | Situação e gate |
 | --- | --- | --- |
-| `main` | `38363dfb8a5b788544931d43ed3f6c72fe6bd719` | Única branch permanente pretendida; reconsultar após merge deste handover |
-| `maintenance/ds-pr41-runtime-evidence-extract-20261026` | `64b50f0c6f6b74dba5c8bae519e48c1dcc65fe35` | Operacional, **ancestral da main**, PR #81 mesclada; somente retirar após a próxima operação segura, sem perder a capacidade de preparar manifests |
+| `main` | `ae9ac472ed4092effd12a3c41d5e3e560dc40f18` **antes da presente atualização** | Única branch permanente pretendida; reconsultar após este commit documental |
+| `maintenance/ds-pr41-runtime-evidence-extract-20261026` | `9107ec1fce1feb90429c28729bc6c2e4014f1626` | Operacional, PR #82 mesclada; revalidar ancestralidade e elegibilidade antes de retirar em batch separado |
 | `architecture/dom-css-consolidation-20261020` | `8e7d857528c9ea14fa45c3f58b57c07c7036bca0` | [#39 OPEN](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/39); ~24 caminhos exclusivos: propostas, experimentos, workflows. Selecionar com proveniência e gates isolados, **não** merge geral |
 | `docs/current-handover-20261024` | `28062602a4ddcd1bee090742fe2587fe3837175d` | [#51 OPEN](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51); ~221 caminhos só nesta branch, ~5,1 MB, majoritariamente 161 rastros de arquitetura e 60 de runtime; precisa classificação/proveniência, sem merge indiscriminado |
 | `audit/access-confirmation-runtime-20261020` | `ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37` | [#41 CLOSED sem merge](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/41); 7 blobs exclusivos importados por #78 e FIND-015 por #79; histórico restante divergente não comprovado como descartável |
