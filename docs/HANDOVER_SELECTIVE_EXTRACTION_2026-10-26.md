@@ -25,3 +25,22 @@ Critério: importar agora sete documentos completos que dão apoio imediato às 
 - Antes de fechar PR #51, registrar evidência de cobertura do conteúdo residual. Até lá o estado é HOLD/PRESERVE.
 
 Primeiro lote D04: sete documentos originais, sem mudança de decisões visuais, runtime, tokens globais ou deploy.
+
+## Segundo recorte independente — PR #41 (20/10/2026)
+
+**Origem:** [PR DS #41](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/41), head `ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37`, [extração seletiva PR #78](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/78). Sete blobs originais foram incorporados nesta PR de extração, sem edição de bytes ou mudança de nomes, preservando os links entre documentos e capturas.
+
+| Caminho original | Git Blob SHA |
+| --- | --- |
+| `evidence/runtime/access-confirmation-menu-2026-10-20.md` | `69763e80890473195e31b2a32cb48042adc20d2e` |
+| `evidence/runtime/admin-login-menu-2026-10-20.md` | `f02e9e218ca812fef66228bd2f3db4e1d3c71940` |
+| `evidence/runtime/private-menu-cross-tab-state-2026-10-20.md` | `d486214a482d7a0e6b78114746f1d476449a177f` |
+| `visualEvidence/private/access-confirmation/access-menu-dark-2026-10-20.jpg` | `f3fee96753339663c7bac9a698ab23a65a6fe929` |
+| `visualEvidence/private/access-confirmation/access-menu-light-2026-10-20.jpg` | `33773d9a5d9684daa1fcbd9db35a64afbccd6e3a` |
+| `visualEvidence/private/admin-login/admin-login-menu-dark-2026-10-20.jpg` | `2041b7d977a5673b4ed2eff350b3cbb1a2c4d1fe` |
+| `visualEvidence/private/admin-login/admin-login-menu-light-2026-10-20.jpg` | `bd311b2a8a2e968276b6a1799bced4942152eb3e` |
+
+**Contexto fixo e limites:** observações anônimas de 20/10/2026 no produto `1878ae1057ce7c6190e0c8cb08a1f3baadd49463`, Netlify `6ad6c3b51b6be05647167f94`. Uma aba existente exibia menu de sessão autenticada enquanto outras exibiam sessão anônima, **sem prova causal nem login/logout controlados**. O estado atual, a validade de sessão, o fluxo de convites e os pares de contraste em todos os contextos **não foram validados por esta extração**.
+
+Não houve promoção de `decisions.json`, alterações em `runtime-evidence.json` ou atualização de autoridade no README. A PR #41 permanece aberta/retida até que suas diferenças textuais restantes e respectivos achados sejam reconciliados com a `main`. O recorte é evidência histórica com proveniência de blob, não homologação de novo padrão.
+
