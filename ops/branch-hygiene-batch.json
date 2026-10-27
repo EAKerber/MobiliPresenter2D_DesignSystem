@@ -1,12 +1,12 @@
 {
   "schemaVersion": "BranchHygieneBatch 0.1",
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "wave": "DS-HYG-P11-2026-10-26",
-  "purpose": "Retire empty preparatory branch created for a blocked historical archive pilot; ref is identical to main, no PR, no unique changes.",
+  "wave": "DS-HYG-P12-2026-10-26",
+  "purpose": "Retire superseded SHA-exact operational hygiene ref after all PRs using it were closed/merged; head ancestor of current main, no unique tree content.",
   "branches": [
     {
-      "branch": "maintenance/ds-history-archive-pilot-20261026",
-      "sha": "abb87533d634e0afc2f57dcf8e7ce1faa4bcec05"
+      "branch": "maintenance/ds-product-hygiene-batch01-20261026",
+      "sha": "740c194fdfe15b945cc2abf67566705d6c5b1834"
     }
   ]
 }
