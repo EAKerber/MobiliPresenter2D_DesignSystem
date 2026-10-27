@@ -1,0 +1,119 @@
+# HANDOVER CANÔNICO — MobiliPresenter2D Design System
+
+**Checkpoint verificado:** 26/10/2026, fuso `America/Sao_Paulo`.  
+**Destino:** próximo chat/agente sem acesso ao contexto corrente.  
+**Prioridade atual:** estabilizar, reconciliar e reduzir as branches do **Design System primeiro**. Não retomar trabalhos no repositório do produto até nova orientação do usuário.  
+**Este é o ponto de retomada permanente**; o README aponta para cá. Ler o GitHub em tempo real antes de assumir que números ou SHAs continuam atuais.
+
+## 0. Bootstrap indispensável
+
+1. Consultar o SHA de `main`, inventário completo de branches, PRs abertas/fechadas relevantes e Actions no repositório [Design System](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem).
+2. Ler este arquivo, [guia operacional de higiene](BRANCH_HYGIENE_OPERATIONS.md), [D01–D04 homologadas](APPROVALS_D01_D04_2026-10-26.md), [ledger de extração D04](HANDOVER_SELECTIVE_EXTRACTION_2026-10-26.md), `decisions.json`, os manifests `dist/` e `FINDINGS_REGISTER.md`.
+3. O repositório do produto é [EAKerber/MobiliPresenter2D](https://github.com/EAKerber/MobiliPresenter2D); o [handover canônico do produto](https://github.com/EAKerber/MobiliPresenter2D/blob/main/docs/handoffs/HANDOVER-CURRENT-2026-10-26.md) descreve a área de produto. **Não editar, criar previews ou iniciar refatorações de produto** durante a etapa atual.
+4. Usar o conector GitHub, sem depender de `gh`. Antes de qualquer escrita: revisar conteúdo exclusivo, HEAD exato, proteções, relações com PR, dependências de workflows, gate e rollback. Atualizar este handover a cada checkpoint material.
+
+## 1. Objetivo e decisões de governança
+
+**Objetivo do usuário:** reduzir a divergência histórica/documental do Design System, preferencialmente a **uma única branch permanente (`main`)**. A meta não é licença para descartar arquivos únicos, fechar PRs indiscriminadamente, apagar árvores de Git exclusivas, ou transformar documentos antigos em norma atual.
+
+**Decisões expressas e vigentes (26/10/2026):**
+
+- **D01=A:** integração incremental, somente após os gates técnicos aplicáveis.
+- **D02=B:** aceitar inicialmente testes isolados **quando cobrem de fato o contrato**, deixando explícito o que falta validar em autenticação/runtime real. Não equivale a conformidade global.
+- **D03=A:** extrair o que ainda é útil das PRs CP-PUBLIC substituídas e somente então encerrá-las, com prova de cobertura.
+- **D04=A:** consolidação seletiva de documentação/evidências com **proveniência e SHA de origem**; não mesclar integralmente a PR DS #51.
+
+Todas as homologações visuais já encerradas permanecem **CLOSED**; não reabrir debates resolvidos (cores, VIS-002, NAV-005, etc.) por encontrar uma implementação divergente. Separar `DECISION_APPROVED`, `TECHNICAL_GATE_PASS`, `DEPLOYED`, `RUNTIME_VERIFIED`, `HISTORICAL_EVIDENCE` e `SAFE_TO_DELETE`: nenhum implica automaticamente os demais. `decisions.json` é fonte para as decisões; as páginas manuais, propostas e capturas são apresentações/observações, não autoridade substituta.
+
+## 2. Estado Git/CI comprovado antes desta publicação
+
+| Item | Verificado |
+| --- | --- |
+| Design System `main` antes do commit deste handover | `38363dfb8a5b788544931d43ed3f6c72fe6bd719` — [PR #81](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/81) |
+| Branches DS | **10**, sendo `main` + 1 operacional + 8 HOLDs |
+| PRs DS abertas | [#39 DOM/CSS e UI declarativa](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/39), [#51 handover/evidências acumuladas](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51) |
+| PR #41 | **CLOSED sem merge integral**; extrações aprovadas já na `main`, branch preservada |
+| Hygiene observacional da main | [Actions #40425292755](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40425292755), **PASS** |
+| Último lote de exclusão | [PR #80](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/80), audit [#40424786709](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40424786709) PASS, apply [#40424863430](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40424863430) **PASS/readback PASS/count=1** |
+| Repositório do produto (somente leitura) | `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`, **61 branches**, **12 PRs abertas** |
+| Product production | Última verificação histórica no handover do produto: Netlify READY alinhado ao seu main. Não foi emitido novo preview/deploy neste trabalho. |
+
+Este documento, quando integrado, criará um SHA de `main` posterior ao registrado na tabela. **É necessário reconsultar a main para obter o commit efetivo.** Não presumir que os valores sejam atuais em um novo chat.
+
+## 3. Higiene: ferramenta canônica e resultados
+
+O Design System **já possui o mecanismo do repositório de produto portado e testado**, integrado em [PR DS #64](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/64):
+
+- `tools/branch_hygiene_observe.py` — inventário Git/API paginado, proteção, árvore, ancestry e heads/bases de PRs abertas.
+- `tools/branch_hygiene_plan.py` — plano determinístico com hash e preservação explícita (`ops/branch-dispositions.json`).
+- `tools/branch_hygiene_apply.py` — batches **de 1 a 3 refs com SHA exato**, reobservação, prova de squash-tree quando aplicável, bloqueio de workflows referenciando branches, `--force-with-lease`, readback independente e recibos.
+- `.github/workflows/branch-hygiene.yml` — **somente leitura** e artefatos de observação; trigger semanal/manual/PR/main.
+- `.github/workflows/branch-hygiene-bounded.yml` — **audit-only no PR**; `apply` apenas no push `main` se `ops/branch-hygiene-batch.json` tiver mudado; sem comando genérico `delete all`.
+- `tests/test_branch_hygiene_*.py` — regressões de segurança. Executor/manifest/workflow antigos `retire_merged_branches` foram aposentados e preservados somente no histórico Git.
+
+**Ledger principal:** [BRANCH_HYGIENE_OPERATIONS.md](BRANCH_HYGIENE_OPERATIONS.md) — modo de usar, dez primeiros lotes, recibos Actions e HOLDs. Depois, [#77](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/77) / [apply #40423479233](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40423479233) removeram ref preparatória vazia (`count=1`); [#80](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/80) / [apply #40424863430](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40424863430) removeram ref operacional anterior (`count=1`).
+
+**Resultado:** partiu de **38 branches**; os primeiros 10 batches removeram **30 refs**, P11/P12 outras **2 refs**, e após criação/aposentadoria de branches operacionais o saldo conferido é **10 refs** (redução líquida de 28). Os arquivos e árvores que permanecem divergentes **não são elegíveis só por nome, idade ou PR encerrada**.
+
+**Regra operacional:** abrir PR de manifesto SHA-pinned; aguardar testes e audit PASS; verificar HEAD `main`/PR, escopo e nenhuma PR aberta envolvendo as refs; merge por commit com head esperado; exigir `apply PASS/readback PASS`, consultar refs de novo e registrar recibos. O manifesto já consumido é histórico — **nunca executá-lo outra vez manualmente**. É aceitável reutilizar a única branch operacional após encerrar sua PR anterior, desde que o diff contra a `main` seja limitado ao lote novo.
+
+## 4. Inventário exato das 10 branches — snapshot
+
+| Branch | SHA em 26/10 | Situação e gate |
+| --- | --- | --- |
+| `main` | `38363dfb8a5b788544931d43ed3f6c72fe6bd719` | Única branch permanente pretendida; reconsultar após merge deste handover |
+| `maintenance/ds-pr41-runtime-evidence-extract-20261026` | `64b50f0c6f6b74dba5c8bae519e48c1dcc65fe35` | Operacional, **ancestral da main**, PR #81 mesclada; somente retirar após a próxima operação segura, sem perder a capacidade de preparar manifests |
+| `architecture/dom-css-consolidation-20261020` | `8e7d857528c9ea14fa45c3f58b57c07c7036bca0` | [#39 OPEN](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/39); ~24 caminhos exclusivos: propostas, experimentos, workflows. Selecionar com proveniência e gates isolados, **não** merge geral |
+| `docs/current-handover-20261024` | `28062602a4ddcd1bee090742fe2587fe3837175d` | [#51 OPEN](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51); ~221 caminhos só nesta branch, ~5,1 MB, majoritariamente 161 rastros de arquitetura e 60 de runtime; precisa classificação/proveniência, sem merge indiscriminado |
+| `audit/access-confirmation-runtime-20261020` | `ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37` | [#41 CLOSED sem merge](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/41); 7 blobs exclusivos importados por #78 e FIND-015 por #79; histórico restante divergente não comprovado como descartável |
+| `audit/approved-contrast-runtime-20261021` | `e848e079071f4b2ce788e18a10a2284e6a24ff7a` | [#42 CLOSED sem merge](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/42); árvore datada, alterações em registro de decisões e evidências, conferir cobertura por conteúdo |
+| `audit/auth-session-flow-2026-10-19` | `360d2e6d93d93ab74036149b518f22c01d57ecb0` | [#37 CLOSED sem merge](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/37); `evidence/runtime/auth-session-flow-2026-10-19.md` já tem **mesmo blob SHA na main**; outros registros divergem temporalmente |
+| `docs/reconcile-approved-focus-record` | `430f4e1c7b376ae08e1788bd3aa365a32f2b76e2` | [#46 CLOSED sem merge](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/46); `PALETTE_CONFORMANCE.md` blob já igual à main; `decisions.json` antigo não deve substituir o atual |
+| `docs/handover-reconcile-20261023` | `96093786ed8fb182c604182c37a42681cba8d6c9` | Sem PR associada no inventário; checkpoint 23/10 e detalhes OIDC/CI/ARC-03C precisam confronto com handovers mais recentes |
+| `proposal/vis002-semantic-state-colors-2026-10-19` | `a924c2be0e8b75d90e4faa570a8a9f55f0b6f812` | [#23 MERGED](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/23), mas HEAD da branch **diferente** do head integrado; SVGs de candidatos/seleção verificados com blobs idênticos na main, `decisions.json` da branch é mais antigo |
+
+**Nota importante sobre HOLD:** não há método autorizado de delete dos oito diverged heads pelo executor atual sem equivalência de árvore completa/ancestralidade e demais proteções. Uma tentativa anterior de criar arquivo/fluxo especial de arquivamento histórico foi **bloqueada por segurança**; não contornar bloqueio por chamada alterna. Retomar pelo caminho documental/integração explicitamente permitido, com verificação real do histórico relevante.
+
+## 5. Reconciliações já materializadas — D04
+
+### Fonte PR #51
+
+A [extração DS #56](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/56) importou **sete documentos originais** de runtime, com SHAs listados no [ledger D04](HANDOVER_SELECTIVE_EXTRACTION_2026-10-26.md), relacionados a produto #238, #241–#244, VIS-002C e fallback. O resto da PR #51 não foi reconciliado. Três WebP de alternativas de fallback permanecem na branch; não descrever como perdidos ou como integrados sem prova.
+
+### Fonte PR #41
+
+A [PR #78](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/78) importou **exatamente 7 blobs** da branch original com identidade SHA confirmada: 3 Markdown de runtime e 4 JPEG relativos a `/access/` e `/admin.html`. A [PR #79](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/79) adicionou FIND-015 em `FINDINGS_REGISTER.md` como **desvio de superfície contextual observado em 20/10/2026**, não problema atual nem homologação. A PR #41 foi encerrada **SEM MERGE integral** e manteve sua referência por cautela. O [guia atualizado por #81](BRANCH_HYGIENE_OPERATIONS.md) documenta todas essas ações.
+
+**Limites:** snapshot do produto `1878ae1`, deploy `6ad6c3b51b6be05647167f94`. Havia diferença visual de estado de login entre abas, porém **não houve sequência controlada login/logout** nem diagnóstico causal da sessão. Nenhuma medição antiga comprova runtime atual. Não copiar `runtime-evidence.json` antigo sobre a main.
+
+## 6. Riscos, inconsistências e critérios de parada
+
+- `index.html` apresenta decisões parcialmente **duplicadas manualmente** em relação a `decisions.json`. Enquanto não existir projeção gerada e verificada, a página visual é demonstração, não fonte canônica; não fazer replace em massa sem testes.
+- Muitos documentos do README são checkpoints **datados** (18–24/10), e relatórios antigos descrevem versões do produto anteriores. Sempre conferir commit/deploy explícitos, artefatos e conteúdo atual antes de atualizar status.
+- #51 representa acúmulo documental de alta entropia. Extrair prioritariamente o que agrega ao roadmap atual; agrupar inventário por `evidence/architecture`, `evidence/runtime`, binários e arquivos modificados; nunca integrar dois documentos contraditórios como autoridade simultânea.
+- #39 tem protótipos úteis e dois workflows exclusivos; não habilitar workflows experimentais automaticamente nem confundir **testes isolados** com integração real de componentes.
+- Aumentar número de branches para fazer limpeza pode neutralizar a redução. Reutilizar branch operacional, fazer PR pequena e aposentar refs de manutenção **somente quando segura e não mais utilizada por PR aberta**.
+- Preservar privacidade: não copiar tokens, emails ou contas de navegação autenticada; as capturas incorporadas de #41 são de telas anônimas.
+- Não gerar Netlify Deploy Previews sem necessidade. Não inventar estados PASS nem resultados de dispositivos/CI. Nenhuma decisão visual nova foi autorizada neste ciclo.
+
+## 7. Plano recomendado para o próximo chat (sem pedir novo questionário)
+
+1. **Revalidar o inventário** de 10 refs/2 PRs abertas e SHA de `main`, checar que este handover foi integrado.
+2. **Classificar PR #51 por grupo**, verificar blobs únicos e relevância atual; extrair seletivamente material importante em PRs pequenas com ledger D04. Priorizar binários que documentam opções realmente aprovadas; preservar o resto até classificação explícita.
+3. **Classificar PR #39**, separar arquitetura ainda útil de documentação superada e experimentos sem gate; trazer apenas o que foi demonstrado e não converter proposal em homologação.
+4. **Fechar 5 HOLDs documentais antigos** (#37, #42, #46, orphan de 23/10 e proposta #23 alterada) só quando toda informação útil estiver representada, ou histórica e seguramente preservada, em `main`. Revisar individualmente os campos `decisions.json` e os blobs, não fazer merge completo do arquivo antigo.
+5. **Revisitar #41**: conteúdo exclusivo já incorporado; provar conservação segura do restante antes de qualquer delete físico.
+6. **Rodar higiene somente para refs elegíveis** através do mecanismo `ops/branch-hygiene-batch.json` (máx. 3, SHA-pinned, PR audit PASS → push main apply PASS → readback). Não existe modo delete indiscriminado; parar quando o próximo gate não estiver demonstrado.
+7. Atualizar o presente arquivo, o ledger e o README, com HEAD/PR/Actions verificados. A `main` deve continuar a única referência **permanente**, mesmo que branches temporárias e HOLDs sobrevivam durante a transição.
+
+## 8. Referências de recuperação
+
+- [Repositório DS / main](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/tree/main)
+- [Guia de higiene + evidências de 12 lotes](BRANCH_HYGIENE_OPERATIONS.md)
+- [D01–D04 aprovadas](APPROVALS_D01_D04_2026-10-26.md)
+- [Ledger D04 de extrações por Git blob](HANDOVER_SELECTIVE_EXTRACTION_2026-10-26.md)
+- [PRs #64–#81](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pulls?q=is%3Apr+is%3Amerged+DS-HYG)
+- [Handover do produto](https://github.com/EAKerber/MobiliPresenter2D/blob/main/docs/handoffs/HANDOVER-CURRENT-2026-10-26.md)
+- [Registro de decisões](../decisions.json), [achados](../FINDINGS_REGISTER.md), [paleta](../PALETTE_CONFORMANCE.md), [mapa de aplicação](../DECISION_APPLICATION_MAP.md)
+
+**GATE DE PUBLICAÇÃO DESTE HANDOVER:** verificar apenas que o documento e o ponteiro do README estão na `main`, preservam as fontes e não alteram decisões/tokens/workflows. Este artefato não constitui gate de runtime/produção do produto.

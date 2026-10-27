@@ -1,5 +1,7 @@
 # MobiliPresenter2D Design System
 
+> **HANDOVER CANÔNICO DE RETOMADA (26/10/2026):** [docs/HANDOVER_CURRENT.md](docs/HANDOVER_CURRENT.md) — estado Git/CI e 10 branches, aprovações, branches HOLD, ledger D04, regras de higiene e plano para o próximo chat. **Ler este arquivo primeiro**, revalidando HEAD e PRs na API antes de executar. O handover histórico do produto está referenciado ali; neste ciclo o foco é exclusivamente Design System.
+
 > **GOVERNANÇA ATUAL (26/10/2026):** [Higiene de branches — mecanismo, critérios, operação e HOLDs](docs/BRANCH_HYGIENE_OPERATIONS.md); [D01–D04 aprovadas](docs/APPROVALS_D01_D04_2026-10-26.md); [extração seletiva da PR #51](docs/HANDOVER_SELECTIVE_EXTRACTION_2026-10-26.md). `decisions.json` é a fonte de decisões; os documentos abaixo são checkpoints datados, não o estado atual automaticamente. **Objetivo: `main` única permanente, só após evidência de integração ou preservação do conteúdo exclusivo.**
 
 > **CHECKPOINT HISTÓRICO (22/10/2026; não é mais o atual):** [estado verificado de MobiliPresenter2D + Design System, HEADs, PRs, issues, branches, gates e próximo ARC-03C](docs/ARCHITECTURE_CURRENT_HANDOVER_2026-10-22.md). Preservado como observação datada, sem prevalecer sobre decisões e handovers posteriores; **ARC-03B 60/60 PASS somente em branch**, #232 auth test fixture aberta, #233 corrigida, PR produto #231 DRAFT/HOLD. Sempre conferir HEAD live antes de atuar.
