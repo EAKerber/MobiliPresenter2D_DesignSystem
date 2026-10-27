@@ -161,3 +161,7 @@ O usuário delegou a política de remoção; a [disposição técnica e de gover
 ## Lote D04 — ownership e ARC-13 crítico (27/10/2026; pré-merge)
 
 Proposta seletiva de **9 blobs históricos originais**, sem adaptar conteúdo: três fontes de ownership DOM/CSS da #39 e seis rastreios ARC-13 de fronteira Admin/auth/persistência da #51. [Manifesto de blobs](DS_D04_OWNERSHIP_AND_ADMIN_BLOBS_2026-10-27.json), [critérios e limites](DS_D04_OWNERSHIP_AND_ADMIN_2026-10-27.md). Se gates, PR e readback aprovarem: exclusivos #39 24→21 e #51 207→201. O restante, incluindo dois workflows e código experimental da #39, permanece HOLD. **Não considerar integração ou validação de runtime confirmadas até recibo final.**
+
+## D04 — aprovação de chave semântica e contrato Viewer recuperados (27/10/2026; pré-merge)
+
+Quatro blobs exclusivos da PR #51 recuperam: (a) a **convenção** ARC-13 aprovada em 25/10 (camelCase, namespace e condição owner/consumer/parâmetros; exemplos e migração **não** aprovados); (b) histórico quantitativo de cobertura; (c) escolha do placeholder com descrição para falha da cena Viewer, sem homologação de release; (d) gate autenticado DS-05A, cujo último estado histórico ainda falhava Keyboard/Flow. Os dois suportes do Viewer (`pr242-viewer-scene-image-failure-implementation` e `pr241-public-image-failure-coverage`) já estão na main com mesmos blobs e não serão duplicados. [Nota](DS_D04_CONTRACT_PROVENANCE_2026-10-27.md) · [manifesto exato](DS_D04_CONTRACT_PROVENANCE_2026-10-27.json). PR #51 201→197 somente após merge/readback; demais HOLDs intactos.
