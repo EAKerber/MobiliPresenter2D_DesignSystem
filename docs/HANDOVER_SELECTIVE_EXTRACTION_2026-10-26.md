@@ -82,3 +82,7 @@ Quatro documentos por Git Blob exato de #51, classificação e SHAs em [DS_D04_C
 ## D03/D04 — PR #39 documentos, experimentos e workflows inertes (27/10/2026)
 
 21 Git Blobs exclusivos da #39 selecionados: 12 docs/ADRs, 7 experimentos isolados e 2 arquivos de workflow mantidos como texto inerte `docs/architecture/legacy-workflow-sources/*.yml.txt` com **mesmo blob SHA**. [Relatório de risco](DS_PR39_EXCLUSIVE_CLOSURE_2026-10-27.md) · [manifesto 21 blobs](DS_PR39_ALL_EXCLUSIVE_BLOBS_2026-10-27.json). Não promova experimentos como contrato do produto; workflows antigos não ativados; 9 caminhos canônicos divergentes ainda exigem reconciliação por campo. Nenhum branch delete neste lote.
+
+## D04 — seis contratos ARC-13 de baixo volume e controle negativo (27/10/2026)
+
+Preservar em main por SHA exata de #51 (não mergeada) 6 arquivos de 24–25/10: proposta do fluxo de salvamento Admin (39 itens), validações de pricing (27) e Admin (72), navegação privada (29), controle negativo de teclado (35 itens, 0 localizáveis) e proposta do carrossel (26). [Relatório](DS_ARC13_CONTRACT_REVIEW_2026-10-27.md) · [manifesto](DS_ARC13_CONTRACT_REVIEW_2026-10-27.json). Inventário não valida segurança nem aprova chaves; #51 193→187 exclusiva após merge.

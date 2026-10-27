@@ -1,0 +1,1561 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/core/presentation-contract.js",
+      "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+      "candidateOccurrences": 32
+    },
+    {
+      "file": "app/core/hierarchy-administration.js",
+      "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+      "candidateOccurrences": 40
+    }
+  ],
+  "reviewScope": "Complete lexical candidate review of presentation-contract and hierarchy-administration validation. The current admin caller passes validator errors into the save feedback panel; user-facing validation text is localizable, while module guards, schema IDs, policy values and stable IDs remain technical.",
+  "totals": {
+    "sourceFilesReviewed": 2,
+    "candidateOccurrencesReviewed": 72,
+    "classifiedLocalizableOccurrences": 63,
+    "excludedNonlocalizableOccurrences": 9,
+    "deferredDomainOccurrences": 0,
+    "distinctCandidateTexts": 69
+  },
+  "limitations": [
+    "Inventory only; runtime validators and locale resources remain unchanged.",
+    "Dynamic stage/group/section IDs and nested paths must remain parameters or receive a later friendly-label mapping."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 2
+      },
+      "consumer": "runtime dependency/schema/mode identifier",
+      "owner": "administration validation implementation",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Module guard, schema marker, stable policy value, or implementation identifier."
+      ]
+    },
+    {
+      "currentText": "Item capability registry is required.",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 7
+      },
+      "consumer": "runtime dependency/schema/mode identifier",
+      "owner": "administration validation implementation",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Module guard, schema marker, stable policy value, or implementation identifier."
+      ]
+    },
+    {
+      "currentText": "ConfiguratorAdministration2D 4.0",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 9
+      },
+      "consumer": "runtime dependency/schema/mode identifier",
+      "owner": "administration validation implementation",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Module guard, schema marker, stable policy value, or implementation identifier."
+      ]
+    },
+    {
+      "currentText": "auto",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 35
+      },
+      "consumer": "runtime dependency/schema/mode identifier",
+      "owner": "administration validation implementation",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Module guard, schema marker, stable policy value, or implementation identifier."
+      ]
+    },
+    {
+      "currentText": "configuration is required",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 68
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.68"
+    },
+    {
+      "currentText": "unsupported hierarchy settings schema",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 143
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.143"
+    },
+    {
+      "currentText": "stage count must be between 2 and 12",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 144
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.144"
+    },
+    {
+      "currentText": "stage ${stage?.id || \"?\"}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 154
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage?.id || \"?\""
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.154"
+    },
+    {
+      "currentText": "invalid stage id: ${stage?.id || \"?\"}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 155
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage?.id || \"?\""
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.155"
+    },
+    {
+      "currentText": "duplicate stage: ${stage.id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 156
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.156"
+    },
+    {
+      "currentText": "invalid stage type: ${stage.id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 159
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.159"
+    },
+    {
+      "currentText": "duplicate stage type: ${kind}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 161
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "kind"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.161"
+    },
+    {
+      "currentText": "invalid label: ${stage.id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 164
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.164"
+    },
+    {
+      "currentText": "boolean",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 165
+      },
+      "consumer": "runtime dependency/schema/mode identifier",
+      "owner": "administration validation implementation",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Module guard, schema marker, stable policy value, or implementation identifier."
+      ]
+    },
+    {
+      "currentText": "invalid enabled state: ${stage.id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 165
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.165"
+    },
+    {
+      "currentText": "${kind} stage must remain enabled",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 166
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "kind"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.166"
+    },
+    {
+      "currentText": "modules",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 166
+      },
+      "consumer": "runtime dependency/schema/mode identifier",
+      "owner": "administration validation implementation",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Module guard, schema marker, stable policy value, or implementation identifier."
+      ]
+    },
+    {
+      "currentText": "summary",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 166
+      },
+      "consumer": "runtime dependency/schema/mode identifier",
+      "owner": "administration validation implementation",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Module guard, schema marker, stable policy value, or implementation identifier."
+      ]
+    },
+    {
+      "currentText": "invalid group list: ${stage.id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 167
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.167"
+    },
+    {
+      "currentText": "enabled stage must contain a group: ${stage.id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 168
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.168"
+    },
+    {
+      "currentText": "invalid group id: ${stage.id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 174
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.174"
+    },
+    {
+      "currentText": "duplicate group: ${stage.id}.${group.id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 175
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id",
+        "group.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.175"
+    },
+    {
+      "currentText": "invalid group label: ${stage.id}.${group.id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 177
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id",
+        "group.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.177"
+    },
+    {
+      "currentText": "invalid group column span: ${stage.id}.${group.id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 178
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id",
+        "group.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.178"
+    },
+    {
+      "currentText": "invalid section list: ${stage.id}.${group.id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 179
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id",
+        "group.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.179"
+    },
+    {
+      "currentText": "invalid section id: ${stage.id}.${group.id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 183
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id",
+        "group.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.183"
+    },
+    {
+      "currentText": "duplicate section: ${stage.id}.${section.id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 184
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id",
+        "section.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.184"
+    },
+    {
+      "currentText": "invalid section label: ${stage.id}.${section.id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 186
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id",
+        "section.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.186"
+    },
+    {
+      "currentText": "invalid section presentation: ${stage.id}.${section.id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 187
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id",
+        "section.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.187"
+    },
+    {
+      "currentText": "invalid item list: ${stage.id}.${section.id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 188
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id",
+        "section.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.188"
+    },
+    {
+      "currentText": "unknown hierarchy item: ${stage.id}.${section.id}.${id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 193
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id",
+        "section.id",
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.193"
+    },
+    {
+      "currentText": "invalid ${kind} item: ${id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 197
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "kind",
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.197"
+    },
+    {
+      "currentText": "item assigned more than once: ${id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 199
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.199"
+    },
+    {
+      "currentText": "mixed interaction behavior: ${stage.id}.${section.id}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 202
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id",
+        "section.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.202"
+    },
+    {
+      "currentText": "too many hierarchy groups",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 207
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.207"
+    },
+    {
+      "currentText": "too many hierarchy sections",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 208
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.208"
+    },
+    {
+      "currentText": "modules stage must remain",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 209
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.209"
+    },
+    {
+      "currentText": "summary stage must remain",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 210
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.210"
+    },
+    {
+      "currentText": "legacy-compatible validation: ${error}",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 214
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "error"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.214"
+    },
+    {
+      "currentText": "A hierarquia foi alterada e não pode ser reduzida ao schema publicado sem perda.",
+      "source": {
+        "file": "app/core/hierarchy-administration.js",
+        "blobSha": "17e37bd3ca3a86e715e579b6907b5e20a5c27a9f",
+        "line": 255
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.hierarchyValidation.255"
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 2
+      },
+      "consumer": "runtime dependency/schema/mode identifier",
+      "owner": "administration validation implementation",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Module guard, schema marker, stable policy value, or implementation identifier."
+      ]
+    },
+    {
+      "currentText": "ConfiguratorPresentation2D 1.1",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 4
+      },
+      "consumer": "runtime dependency/schema/mode identifier",
+      "owner": "administration validation implementation",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Module guard, schema marker, stable policy value, or implementation identifier."
+      ]
+    },
+    {
+      "currentText": "unsupported presentation component: ${component || \"(empty)\"}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 55
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "component || \"(empty)\""
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.55"
+    },
+    {
+      "currentText": "unsupported presentation behavior: ${behavior || \"(empty)\"}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 62
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "behavior || \"(empty)\""
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.62"
+    },
+    {
+      "currentText": "section presentation is required",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 81
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.81"
+    },
+    {
+      "currentText": "unsupported legacy presentation: ${legacy}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 86
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "legacy"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.86"
+    },
+    {
+      "currentText": "invalid presentation policy schema",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 109
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.109"
+    },
+    {
+      "currentText": "stage views are required: ${stageId}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 116
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stageId"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.116"
+    },
+    {
+      "currentText": "stageViews.${stageId}.views.${view?.id || index}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 122
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stageId",
+        "view?.id || index"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.122"
+    },
+    {
+      "currentText": "duplicate or missing view id: ${view?.id || index}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 124
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "view?.id || index"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.124"
+    },
+    {
+      "currentText": "view source section is required: ${view.id}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 130
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "view.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.130"
+    },
+    {
+      "currentText": "unsupported view component: ${view.component || \"(empty)\"}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 133
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "view.component || \"(empty)\""
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.133"
+    },
+    {
+      "currentText": "unsupported layout profile: ${profile}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 136
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "profile"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.136"
+    },
+    {
+      "currentText": "unsupported view projection: ${projection}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 137
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "projection"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.137"
+    },
+    {
+      "currentText": "unsupported view relation: ${view.relation.kind}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 144
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "view.relation.kind"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.144"
+    },
+    {
+      "currentText": "view relation target is missing: ${view.relation.of || \"(empty)\"}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 145
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "view.relation.of || \"(empty)\""
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.145"
+    },
+    {
+      "currentText": "view cannot relate to itself: ${view.id}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 146
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "view.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.146"
+    },
+    {
+      "currentText": "view relations contain a cycle: ${stageId}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 162
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stageId"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.162"
+    },
+    {
+      "currentText": "presentation stage is missing from flow: ${stageId}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 168
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stageId"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.168"
+    },
+    {
+      "currentText": "presentation source section is missing: ${stageId}/${view.sourceSectionId}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 173
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stageId",
+        "view.sourceSectionId"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.173"
+    },
+    {
+      "currentText": "scene PiP policy is required",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 182
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.182"
+    },
+    {
+      "currentText": "unsupported layout profile: ${profile}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 186
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "profile"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.186"
+    },
+    {
+      "currentText": "duplicate PiP profile: ${profile}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 187
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "profile"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.187"
+    },
+    {
+      "currentText": "unsupported layout profile: ${profile}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 191
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "profile"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.191"
+    },
+    {
+      "currentText": "PiP activation references unavailable profile: ${profile}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 192
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "profile"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.192"
+    },
+    {
+      "currentText": "unsupported PiP activation: ${activation}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 193
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "activation"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.193"
+    },
+    {
+      "currentText": "PiP activation is required for profile: ${profile}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 197
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "profile"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.197"
+    },
+    {
+      "currentText": "bottom dock policy is required",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 204
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.204"
+    },
+    {
+      "currentText": "unsupported shell slot: ${slot}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 208
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "slot"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.208"
+    },
+    {
+      "currentText": "duplicate shell slot: ${slot}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 209
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "slot"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.209"
+    },
+    {
+      "currentText": "enabled bottom dock requires at least one slot",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 212
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.212"
+    },
+    {
+      "currentText": "${entry.path}: ${entry.message}",
+      "source": {
+        "file": "app/core/presentation-contract.js",
+        "blobSha": "db6774c799d66ce98a9267fc2f24832d0fa5898c",
+        "line": 221
+      },
+      "consumer": "hierarchy or presentation validation feedback displayed in admin save panel",
+      "owner": "administration hierarchy/presentation validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "entry.path",
+        "entry.message"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation error is surfaced by hierarchy administration feedback; localize the message and retain dynamic IDs/paths as parameters."
+      ],
+      "semanticKey": "admin.presentationValidation.221"
+    }
+  ]
+}

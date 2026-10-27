@@ -42,3 +42,7 @@ O saldo de **193 caminhos exclusivos da #51** após #91 é:
 **Observação sobre os tamanhos:** os tamanhos foram calculados no tree atual após PR #91, comparando o HEAD SHA imutável da #51 com a main. Os 3 restantes no grupo de outros arquivos de arquitetura são propostas de VIS-002 para superfícies/foco, não homologações.
 
 A PR [#51](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51) está **CLOSED, NOT MERGED**, desde `2026-10-27T03:14:18Z` pelo evento atribuído à conta `EAKerber`. A branch de origem ainda existe; D04 e `ops/branch-dispositions.json` seguem impondo **HOLD**. Encerrar PR não prova integridade de todos os dados remanescentes e não satisfaz a elegibilidade do executor de exclusão. A PR #39 permanece aberta; #39 tem 21 exclusivos (12 docs/ADRs, 7 arquivos de experimento, 2 workflows antigos). Nenhum workflow histórico novo foi ativado.
+
+## Seleção D04 ARC-13 por risco (27/10/2026)
+
+Novo lote de seis blobs SHA-exact, classificado em [DS_ARC13_CONTRACT_REVIEW_2026-10-27.md](DS_ARC13_CONTRACT_REVIEW_2026-10-27.md). Quatro entradas `arc13-classified-*` e duas propostas `arc13-semantic-key-proposal-*`; o lote de teclado é controle negativo com 35/35 elementos técnicos não localizáveis. **Se e somente se** o lote passar merge/readback, exclusivos da #51: 193→187; batches classificados: 38→34; outros ARC13: 38→36; traces: 69; outras arquiteturas: 3; runtime: 45. O restante HOLD.

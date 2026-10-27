@@ -1,0 +1,584 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/admin/admin.js: saveButton and persistHandlesButton transactional click handlers",
+    "occurrences": 41,
+    "uniqueProposedKeys": 39,
+    "excludedRevisionLabels": 2
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0,
+    "mergedSameConsumerRepeatedMessages": 2
+  },
+  "rationale": "Proposal traces both transactional handlers to their saveMessage sink. It includes stable literal messages only; payload-provided API messages, thrown validation details, dynamic errors and revision labels remain outside this batch.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "Repeated authorization and concurrent-change messages in saveButton share keys because owner, sink, consumer and parameter contract match.",
+    "Revision labels are excluded for a separate shared-sink audit; preserve model.revision as a parameter.",
+    "API-provided payload.message/payload.error and error.message are runtime content, not literals for this batch.",
+    "Key names are candidates under the approved convention; mappings and content still need review before index or product migration."
+  ],
+  "entries": [
+    {
+      "proposedKey": "admin.handlesPersistence.configurationNotLoaded",
+      "text": "A configuração publicada ainda não foi carregada.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1858
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.schemaUnsupported",
+      "text": "A persistência isolada de Puxadores é exclusiva do v3.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1859
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.confirmIsolatedWrite",
+      "text": "Há alterações locais no painel. Esta operação publicará somente Puxadores no schema v3 e recarregará o painel; outras alterações locais não serão publicadas. Continuar?",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1864
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.cancelled",
+      "text": "Persistência de Puxadores cancelada; nenhuma alteração foi publicada.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1867
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.rereadingBeforeWrite",
+      "text": "Relendo a configuração publicada antes de persistir Puxadores…",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1872
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.sourceReadFailed",
+      "text": "Não foi possível reler a configuração publicada.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1874
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.sourceChanged",
+      "text": "A configuração mudou desde que o painel foi aberto. O painel foi recarregado; revise o estado antes de tentar novamente.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1882
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.planFailed",
+      "text": "Não foi possível preparar a atribuição de Puxadores.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1886
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.alreadyPersisted",
+      "text": "Puxadores já está persistido em Acabamentos.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1892
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.deltaRejected",
+      "text": "A alteração proposta não é exclusivamente a atribuição de Puxadores.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1897
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.writingHandlesOnly",
+      "text": "Persistindo apenas Puxadores em Acabamentos no schema v3…",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1902
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.forbidden",
+      "text": "Sua sessão não tem permissão para persistir Puxadores.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1913
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.concurrentChange",
+      "text": "A configuração mudou durante a gravação. Recarregue o painel antes de tentar novamente.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1914
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.writeRejected",
+      "text": "A API recusou a gravação isolada de Puxadores.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1915
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.responseMismatch",
+      "text": "A resposta da gravação não corresponde ao candidato v3 esperado.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1920
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.readbackFailed",
+      "text": "Puxadores foi gravado, mas a releitura de confirmação falhou.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1924
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.readbackMismatch",
+      "text": "A releitura não corresponde exatamente ao v3 esperado após persistir Puxadores.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1927
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.savedAndReloaded",
+      "text": "Puxadores foi persistido em Acabamentos no v3 publicado. O painel foi recarregado a partir do publicado; outras alterações locais não foram enviadas.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1938
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.savedWithHierarchyStillBlocked",
+      "text": "Puxadores foi persistido em Acabamentos no v3 publicado. A publicação hierárquica v5 continua bloqueada.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1939
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.handlesPersistence.writeFailed",
+      "text": "Falha ao persistir Puxadores.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1943
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "persistHandlesButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.configurationNotLoaded",
+      "text": "A configuração publicada ainda não foi carregada.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1955
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.draftRevisionMismatch",
+      "text": "O rascunho não corresponde à revisão publicada. Recarregue antes de salvar.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1959
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.publishingHierarchyV5",
+      "text": "Publicando configuração hierárquica v5…",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1965
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.forbidden",
+      "text": "Sua sessão não tem permissão para publicar esta configuração.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1974
+        },
+        {
+          "file": "app/admin/admin.js",
+          "line": 2043
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.concurrentChange",
+      "text": "A configuração mudou em outra sessão. Recarregue o painel antes de salvar.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1977
+        },
+        {
+          "file": "app/admin/admin.js",
+          "line": 2044
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.hierarchyApiRejected",
+      "text": "A API recusou a publicação v5.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1979
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.hierarchyResponseMismatch",
+      "text": "A resposta de publicação v5 não corresponde ao documento esperado.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1981
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.hierarchyReadbackFailed",
+      "text": "A publicação v5 foi aceita, mas a releitura de confirmação falhou.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1988
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.hierarchyReadbackMismatch",
+      "text": "A releitura v5 não corresponde à revisão publicada; nenhuma confirmação foi assumida.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1992
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.hierarchyPublishedAndVerified",
+      "text": "Configuração v5 publicada e verificada por releitura.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1999
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.schemaUnsupported",
+      "text": "O schema publicado não é compatível com este editor.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 2004
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.hierarchyPublicationRequired",
+      "text": "A hierarquia foi alterada. Este rascunho não será achatado no schema publicado; publique a hierarquia apenas no checkpoint autenticado.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 2020
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.typedPricingPublicationRequired",
+      "text": "Este tipo de preço exige a futura publicação consolidada. Nenhuma configuração foi publicada; use Percentual para manter compatibilidade com o schema atual.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 2028
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.projectionRejected",
+      "text": "A hierarquia não pode ser publicada com segurança.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 2033
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.publishingCompatibleSchema",
+      "text": "Publicando configuração compatível…",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 2036
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.hierarchyApiBlocked",
+      "text": "A API bloqueou uma publicação hierárquica antes do checkpoint autorizado.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 2047
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.compatibleApiRejected",
+      "text": "A configuração não foi aceita. Confira nomes e itens selecionados.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 2048
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.compatiblePublished",
+      "text": "Configuração compatível publicada. A hierarquia estrutural continua protegida contra publicação prematura.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 2054
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationPublication.publicationFailed",
+      "text": "Falha ao publicar a configuração.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 2057
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "saveButton click flow",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    }
+  ]
+}

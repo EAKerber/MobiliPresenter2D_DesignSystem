@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "DS-D04-Arc13RiskBatch 0.1",
+  "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "sourcePR": 51,
+  "sourceHead": "28062602a4ddcd1bee090742fe2587fe3837175d",
+  "baselineMain": "c15e6ac179f330fc00e41858d39fe904c5c64da1",
+  "sourceProductHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sources": [
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-admin-transactional-save-2026-10-25.json",
+      "sha": "2419b8f53a4d9dca99fd782ce7211d4b21dcdc2a",
+      "bytes": 20236,
+      "category": "PROPOSAL_NOT_APPROVED"
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-pricing-contract-batch-2026-10-24.json",
+      "sha": "b93874ea9a4d171352d6c4108d7769ed59b9ca5e",
+      "bytes": 22852,
+      "category": "CLASSIFIED_CONTEXT_ONLY"
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-private-navigation-batch-2026-10-24.json",
+      "sha": "459a8d66af7f5940aadd0bcbe97cf791b9be3f56",
+      "bytes": 20142,
+      "category": "CLASSIFIED_CONTEXT_ONLY"
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-keyboard-navigation-technical-batch-2026-10-24.json",
+      "sha": "b22898ba5285dd3b3c2b41e808c62f3cb29f687c",
+      "bytes": 28324,
+      "category": "CLASSIFIED_CONTEXT_ONLY"
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-admin-validation-batch-2026-10-24.json",
+      "sha": "b488add42cef82282cb896b3a01640691525d50a",
+      "bytes": 58529,
+      "category": "CLASSIFIED_CONTEXT_ONLY"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-configurator-carousel-2026-10-25.json",
+      "sha": "8036d17b53806adf9c57d7eb6be69e87072cdea6",
+      "bytes": 26088,
+      "category": "PROPOSAL_NOT_APPROVED"
+    }
+  ],
+  "policy": "Source-exact classification/proposals; no migration of keys, runtime, decisions or source code",
+  "counts": {
+    "before": 193,
+    "after": 187,
+    "classifiedBefore": 38,
+    "classifiedAfter": 34,
+    "otherArcBefore": 38,
+    "otherArcAfter": 36,
+    "traceBefore": 69,
+    "otherArchBefore": 3,
+    "runtimeBefore": 45
+  },
+  "notes": [
+    "39 proposed keys are candidates (admin transactional save) not a final catalog",
+    "Pricing validations 27 occurrences: 25 classified interface-localizable, 2 excluded code; visibility depends on consumer",
+    "Private navigation 29 occurrences: 13 localizable, 16 technical",
+    "Keyboard technical 35 occurrences: 0 localizable, 35 excluded: negative control against translating selectors",
+    "Admin validation 72 occurrences: 63 localizable, 9 excluded technical",
+    "Configurator carousel contains 26 proposed semantic keys; owner/consumer/params still need review",
+    "Master ARC13 source-index 1.335MB remains in PR #51 HOLD; links are historical until reconciled"
+  ]
+}
