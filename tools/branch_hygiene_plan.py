@@ -165,6 +165,7 @@ def select_bounded_batch(plan: dict[str, Any], batch: dict[str, Any]) -> list[di
         archive_shape = (
             isinstance(archive, str)
             and re.fullmatch(r"refs/tags/ds-history/2026-10-27/[a-zA-Z0-9._-]+-[0-9a-f]{12}", archive) is not None
+            and archive == "refs/tags/ds-history/2026-10-27/" + name.replace("/", "--") + "-" + sha[:12]
             and any(e.get("kind") == "explicit-terminal-disposition"
                     and e.get("recordedSha") == sha for e in (entry or {}).get("evidence", []))
         )
