@@ -1,0 +1,651 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/core/technical-drawings.js",
+      "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+      "candidateOccurrences": 32
+    }
+  ],
+  "reviewScope": "Supplementary review of technical-drawing lexical candidates. Three SVG accessible-name templates and the isometric prefix map to existing semantic entries in the viewer/configurator batch. The segment unit phrase is interface text; six visible dimension labels are deferred for axis/unit formatting; remaining candidates are implementation/geometry values.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 32,
+    "classifiedLocalizableOccurrences": 1,
+    "excludedNonlocalizableOccurrences": 25,
+    "deferredDomainOccurrences": 6,
+    "distinctCandidateTexts": 21
+  },
+  "limitations": [
+    "Inventory only; runtime and locale resources remain unchanged.",
+    "Visible dimension labels use `mm` and axis notation; defer resource design until measurement localization and formatting conventions are owned."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 2
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "middle",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 23
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "text",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 24
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "text-anchor",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 24
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "panel",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 68
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "svg",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 73
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "viewBox",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 74
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "img",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 75
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "role",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 75
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "aria-label",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 76
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "${horizontalLabel} ${dimension(horizontalMm)} mm",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 83
+      },
+      "consumer": "visible drawing dimension label",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [
+        "dimension value and axis label"
+      ],
+      "classification": "domain-presentation-format",
+      "status": "deferred-domain-review",
+      "notes": [
+        "Fixed `mm` unit and L/A/P axis format require a locale-aware measurement decision."
+      ]
+    },
+    {
+      "currentText": "A ${dimension(spec.faceHeightMm)} mm",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 89
+      },
+      "consumer": "visible drawing dimension label",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [
+        "dimension value and axis label"
+      ],
+      "classification": "domain-presentation-format",
+      "status": "deferred-domain-review",
+      "notes": [
+        "Fixed `mm` unit and L/A/P axis format require a locale-aware measurement decision."
+      ]
+    },
+    {
+      "currentText": "svg",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 103
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "img",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 104
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "role",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 104
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "viewBox",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 104
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "aria-label",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 105
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "M ${left} ${top} L ${right} ${top} L ${right + depthX} ${top + depthY} L ${left + depthX} ${top + depthY} Z",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 109
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "M ${right} ${top} L ${right + depthX} ${top + depthY} L ${right + depthX} ${bottom + depthY} L ${right} ${bottom} Z",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 110
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "${spec.faceHorizontalLabel} ${dimension(spec.faceWidthMm)} mm",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 124
+      },
+      "consumer": "visible drawing dimension label",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [
+        "dimension value and axis label"
+      ],
+      "classification": "domain-presentation-format",
+      "status": "deferred-domain-review",
+      "notes": [
+        "Fixed `mm` unit and L/A/P axis format require a locale-aware measurement decision."
+      ]
+    },
+    {
+      "currentText": "A ${dimension(spec.faceHeightMm)} mm",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 125
+      },
+      "consumer": "visible drawing dimension label",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [
+        "dimension value and axis label"
+      ],
+      "classification": "domain-presentation-format",
+      "status": "deferred-domain-review",
+      "notes": [
+        "Fixed `mm` unit and L/A/P axis format require a locale-aware measurement decision."
+      ]
+    },
+    {
+      "currentText": "${spec.extrusionLabel} ${dimension(spec.extrusionMm)} mm",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 126
+      },
+      "consumer": "visible drawing dimension label",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [
+        "dimension value and axis label"
+      ],
+      "classification": "domain-presentation-format",
+      "status": "deferred-domain-review",
+      "notes": [
+        "Fixed `mm` unit and L/A/P axis format require a locale-aware measurement decision."
+      ]
+    },
+    {
+      "currentText": "svg",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 131
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "img",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 132
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "role",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 132
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "viewBox",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 132
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "module-detail__dimension-line",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 133
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "module-detail__view-shape",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 133
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "${segment.label} ${dimension(segment.spanMm || segment.span)} milímetros",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 134
+      },
+      "consumer": "internal drawing segment accessible description",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [
+        "segment.label: V5/domain text",
+        "dimension: locale-aware value formatting"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "The measured segment description contributes to the SVG accessible name; translate the unit prose and preserve domain label/value parameters."
+      ],
+      "semanticKey": "technicalDrawing.internalSegment.measurementPhrase"
+    },
+    {
+      "currentText": "aria-label",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 135
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "line",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 137
+      },
+      "consumer": "SVG/DOM drawing implementation, geometry, or CSS",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value or geometry command, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "L ${dimension(widthMm)} mm",
+      "source": {
+        "file": "app/core/technical-drawings.js",
+        "blobSha": "5df0515c5378781fd6fc8fc4044bd8837f47f871",
+        "line": 142
+      },
+      "consumer": "visible drawing dimension label",
+      "owner": "technical drawing component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [
+        "dimension value and axis label"
+      ],
+      "classification": "domain-presentation-format",
+      "status": "deferred-domain-review",
+      "notes": [
+        "Fixed `mm` unit and L/A/P axis format require a locale-aware measurement decision."
+      ]
+    }
+  ]
+}

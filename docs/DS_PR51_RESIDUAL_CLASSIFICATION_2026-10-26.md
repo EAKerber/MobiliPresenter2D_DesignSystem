@@ -54,3 +54,7 @@ A #39 está **CLOSED/NOT MERGED**, pois os 21 paths exclusivos foram tratados na
 ## Auditoria de cobertura ARC-13 (27/10/2026)
 
 Leitura integral do mestre JS com **2.181** ocorrências e mestre HTML com **480**. Conferência por multiconjunto `arquivo+linha+texto+classificação` encontrou **27 de 29 lotes JS** e **7 de 7 lotes HTML** iguais nesse critério; dois lotes de UI JS/Viewer técnico não são equivalentes por terem propostas agregadas e templates normalizados, exigindo revisão de owner/consumer. Preservar 4 blobs fonte (índices+exceções) na [extração](DS_ARC13_MASTER_BATCH_RECONCILIATION_2026-10-27.md) e [prova SHA](DS_ARC13_MASTER_BATCH_AUDIT_2026-10-27.json). Se PR passar, 187→183 exclusivos na #51, sem declarar os demais lotes redundantes.
+
+## D04 — fechamento da faixa `arc13-classified-*` (27/10/2026; pendente de merge)
+
+Trinta lotes vinculados ao master não são contextualmente redundantes apesar de coincidirem nos quatro campos de ocorrência: conservam SHA de origem, notas e, em alguns casos, owners/consumers e parâmetros diferentes. Dois arquivos auxiliares são exclusões independentes do índice. [Manifesto](DS_ARC13_CLASSIFIED_CONTEXT_BLOBS_2026-10-27.json) e [relatório](DS_ARC13_CLASSIFIED_CONTEXT_RECONCILIATION_2026-10-27.md). Após merge, os 32 batches ficam preservados sem modificar a aprovação de chaves, e a #51 passa a 151 exclusivos (34 outros ARC13 + 69 consumer traces + 3 outros arquitetura + 45 runtime). Manter head HOLD.

@@ -1,0 +1,2048 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/data/scene-data.js",
+      "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+      "candidateOccurrences": 115
+    }
+  ],
+  "reviewScope": "Complete lexical candidate review of Scene2D data. Human-readable scene/entity/finish labels are authored product content and deferred for ownership; versions, IDs, aliases, tags, assets and structural values are technical.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 115,
+    "classifiedLocalizableOccurrences": 0,
+    "excludedNonlocalizableOccurrences": 93,
+    "deferredOwnershipReviewOccurrences": 22,
+    "distinctCandidateTexts": 92
+  },
+  "limitations": [
+    "Inventory only; scene data and localization resources remain unchanged.",
+    "The product/catalog owner must decide how translated entity labels and aliases are stored and exposed to scene accessibility/selection."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 2
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Scene2D 1.0",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 11
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "cozinha-01@r6-stone-color",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 12
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "cozinha-01",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 13
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Cozinha Casa em Módulos",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 14
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/base.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 16
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/composicao-completa.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 17
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "glass",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 41
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "tempered-glass",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 41
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Vidro temperado",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 41
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "accessory",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 42
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/overlays/tempered-glass.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 43
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Componentes aprovados 02",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 52
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "Componentes aprovados 03",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 74
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "approved-stone-components",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 90
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "03T",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 94
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "faucet-approved",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 94
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Torneira",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 94
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "accessory",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 95
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/overlays/faucet-approved.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 96
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "sink-zone",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 99
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "module-01",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 102
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Aéreo da lavanderia",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 104
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "module",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 105
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/layers/01_modulo_lavanderia.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 107
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/masks/01.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 108
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "laundry-zone",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 114
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "module-02",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 117
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Inferior do fogão",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 119
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "module",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 120
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/layers/02_inferior_fogao.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 122
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/masks/02.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 123
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "cooking-zone",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 129
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "stone-02",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 132
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "02P",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 133
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Pedra do fogão",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 134
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "stone",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 135
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/variants/stone-02-cozinha-exposed-right.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 137
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "cooking-zone",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 144
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "module-03",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 147
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Inferior da pia",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 149
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "module",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 150
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/layers/03_inferior_pia.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 152
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/masks/03.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 153
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "sink-zone",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 159
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "stone-03",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 162
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "03P",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 163
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Pedra da pia",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 164
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "stone",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 165
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/variants/stone-03-pia-exposed-left.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 167
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "sink-zone",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 174
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "module-04",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 177
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Lateral da geladeira",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 179
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "module",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 180
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/layers/04_lateral_geladeira.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 182
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/masks/04.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 183
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "refrigerator-zone",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 201
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "module-05",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 204
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Aéreo do fogão",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 206
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "module",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 207
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/layers/05_aereo_fogao.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 209
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/masks/05.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 210
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "cooking-zone",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 216
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "module-06",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 219
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Aéreo da pia",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 221
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "module",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 222
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/layers/06_aereo_pia.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 224
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/masks/06.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 225
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "sink-zone",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 231
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "module-07",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 234
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Aéreo da geladeira",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 236
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "module",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 237
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/layers/07_aereo_geladeira.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 239
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/masks/07.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 240
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "lighting-08",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 249
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Iluminação",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 251
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "lighting",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 252
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/layers/08_iluminacao.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 254
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "stone-02-joint-bridge",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 265
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "02J",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 266
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Junta da pedra 02–03 (lado 02)",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 267
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "stone-joint",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 268
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/bridges/stone-02-joint-bridge.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 270
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "stone-03-joint-bridge",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 280
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "03J",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 281
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Junta da pedra 02–03 (lado 03)",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 282
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "stone-joint",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 283
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/bridges/stone-03-joint-bridge.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 285
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "range-freestanding",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 295
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "02R",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 296
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Fogão convencional",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 297
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "substitution",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 298
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "assets/kitchen/substitutions/range-freestanding.png",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 300
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "fronts-all",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 313
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Acabamento das frentes",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 314
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "module",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 315
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "module-01",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 317
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "module-02",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 318
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "module-03",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 319
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "module-04",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 320
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "base-light",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 325
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "#eeeae3",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 327
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Base clara",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 327
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "base-light",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 327
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "masked-overlay",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 327
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "stone-all",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 331
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Acabamento geral das pedras",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 332
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "global",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 333
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "stone-02",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 334
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "stone-03",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 334
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "stone-existing",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 335
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "asset-original",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 337
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "Pedra existente",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 337
+      },
+      "consumer": "scene, entity, finish-group or preset authored label",
+      "owner": "product/catalog content",
+      "routes": [
+        "/viewer/",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Rendered from scene/catalog data as product terminology or authored content; decide content-translation ownership and persistence before extraction."
+      ]
+    },
+    {
+      "currentText": "stone-existing",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 337
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    },
+    {
+      "currentText": "stove-zone",
+      "source": {
+        "file": "app/data/scene-data.js",
+        "blobSha": "6fb6f79bc4d360d0c8d4d1e799fe6a7ae617cefd",
+        "line": 343
+      },
+      "consumer": "schema, manifest, entity/finish identifier, alias, tag, asset path, color, or structural value",
+      "owner": "Scene2D data contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable technical identifier, fallback alias, asset path, schema, color or scene structure; not a translation resource."
+      ]
+    }
+  ]
+}

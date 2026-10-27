@@ -1,0 +1,2390 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/core/configuration.js",
+      "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+      "candidateOccurrences": 121
+    }
+  ],
+  "reviewScope": "Complete lexical candidate review of configuration.js. Validation/projection errors reaching the administration panel are localizable; four legacy commercial/finish labels are deferred as editable data; schema versions, IDs, enums, colors and property names are technical.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 121,
+    "classifiedLocalizableOccurrences": 71,
+    "excludedNonlocalizableOccurrences": 46,
+    "deferredOwnershipReviewOccurrences": 4,
+    "distinctCandidateTexts": 103
+  },
+  "limitations": [
+    "Inventory only; configuration behavior and locale resources remain unchanged.",
+    "Dynamic schema paths and product IDs must be preserved as parameters or mapped to friendly labels later.",
+    "Legacy commercial labels require a product/content ownership decision before per-locale persistence is designed."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 2
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "Item capability registry is required.",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 10
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "Typed pricing contract is required.",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 11
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "ConfiguratorAdministration2D 3.0",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 13
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "ConfiguratorAdministration2D 2.0",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 14
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "ConfiguratorAdministration2D 1.0",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 15
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "price book pricing is not v3-compatible: ${projected.errors?.[0] || projected.code}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 23
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "projected.errors?.[0] || projected.code"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.23"
+    },
+    {
+      "currentText": "color",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 57
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "cover",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 58
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "fronts-all",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 58
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "texture",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 62
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "cover",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 63
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "stone-all",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 63
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "#b7b0a7",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 65
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "color",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 65
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "cover",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 65
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "Cromado",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 65
+      },
+      "consumer": "legacy handle/material/finish label",
+      "owner": "configurable commercial/finish content",
+      "routes": [
+        "/admin.html",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Legacy commercial/finish label is stored as configuration data; decide locale ownership and persistence before extraction."
+      ],
+      "semanticKey": "configuration.legacyLabel.65"
+    },
+    {
+      "currentText": "handle-chrome",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 65
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "tango-chrome",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 71
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "tango-iris",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 71
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "handle-chrome",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 75
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "tango-chrome",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 75
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "finish",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 113
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "Frentes",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 113
+      },
+      "consumer": "legacy handle/material/finish label",
+      "owner": "configurable commercial/finish content",
+      "routes": [
+        "/admin.html",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Legacy commercial/finish label is stored as configuration data; decide locale ownership and persistence before extraction."
+      ],
+      "semanticKey": "configuration.legacyLabel.113"
+    },
+    {
+      "currentText": "fronts-all",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 113
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "global",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 113
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "global",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 114
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "handle",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 114
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "handles-all",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 114
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "Modelos de puxador",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 114
+      },
+      "consumer": "legacy handle/material/finish label",
+      "owner": "configurable commercial/finish content",
+      "routes": [
+        "/admin.html",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Legacy commercial/finish label is stored as configuration data; decide locale ownership and persistence before extraction."
+      ],
+      "semanticKey": "configuration.legacyLabel.114"
+    },
+    {
+      "currentText": "Pedra e rodapé",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 115
+      },
+      "consumer": "legacy handle/material/finish label",
+      "owner": "configurable commercial/finish content",
+      "routes": [
+        "/admin.html",
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-domain-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Legacy commercial/finish label is stored as configuration data; decide locale ownership and persistence before extraction."
+      ],
+      "semanticKey": "configuration.legacyLabel.115"
+    },
+    {
+      "currentText": "stone",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 115
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "stone-all",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 115
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "stone-skirting",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 115
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "color",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 235
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "cover",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 235
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "handle-${product.id}-${color.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 235
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "price book pricing is not v3-compatible",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 282
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.282"
+    },
+    {
+      "currentText": "unsupported settings schema",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 284
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.284"
+    },
+    {
+      "currentText": "modules stage must remain",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 296
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.296"
+    },
+    {
+      "currentText": "summary stage must remain",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 297
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.297"
+    },
+    {
+      "currentText": "stage count must be between 2 and 12",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 298
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.298"
+    },
+    {
+      "currentText": "invalid stage id",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 300
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.300"
+    },
+    {
+      "currentText": "duplicate stage: ${stage.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 301
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.301"
+    },
+    {
+      "currentText": "invalid stage type: ${stage.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 304
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.304"
+    },
+    {
+      "currentText": "duplicate stage type: ${kind}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 305
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "kind"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.305"
+    },
+    {
+      "currentText": "invalid label: ${stage.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 307
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.307"
+    },
+    {
+      "currentText": "boolean",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 308
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "invalid enabled state: ${stage.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 308
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.308"
+    },
+    {
+      "currentText": "modules",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 309
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "modules stage must remain enabled",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 309
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.309"
+    },
+    {
+      "currentText": "summary stage must remain enabled",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 310
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.310"
+    },
+    {
+      "currentText": "invalid item list: ${stage.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 311
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.311"
+    },
+    {
+      "currentText": "unknown stage item: ${id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 314
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.314"
+    },
+    {
+      "currentText": "invalid ${kind} item: ${id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 315
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "kind",
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.315"
+    },
+    {
+      "currentText": "item assigned more than once: ${id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 316
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.316"
+    },
+    {
+      "currentText": "enabled stage must contain an item: ${stage.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 319
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.319"
+    },
+    {
+      "currentText": "modules stage must contain a module",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 322
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.322"
+    },
+    {
+      "currentText": "stone skirting requires the stone item",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 324
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.324"
+    },
+    {
+      "currentText": "initial state is required",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 327
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.327"
+    },
+    {
+      "currentText": "invalid initial entity state",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 329
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.329"
+    },
+    {
+      "currentText": "invalid initial viewer entity state",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 330
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.330"
+    },
+    {
+      "currentText": "invalid initial services",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 334
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.334"
+    },
+    {
+      "currentText": "invalid module nominal dimensions",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 339
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.339"
+    },
+    {
+      "currentText": "invalid nominal dimensions: ${item.entityId}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 343
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "item.entityId"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.343"
+    },
+    {
+      "currentText": "object data is required",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 350
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.350"
+    },
+    {
+      "currentText": "missing object data: ${id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 354
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.354"
+    },
+    {
+      "currentText": "invalid title: ${id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 355
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.355"
+    },
+    {
+      "currentText": "string",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 355
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "invalid description: ${id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 356
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.356"
+    },
+    {
+      "currentText": "string",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 356
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "benefits",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 357
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "components",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 357
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "invalid ${field}: ${id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 357
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "field",
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.357"
+    },
+    {
+      "currentText": "requirements",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 357
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "unknown object data",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 359
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.359"
+    },
+    {
+      "currentText": "object assets are required",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 361
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.361"
+    },
+    {
+      "currentText": "invalid object assets: ${id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 363
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.363"
+    },
+    {
+      "currentText": "invalid asset path: ${id}.${field}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 364
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "id",
+        "field"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.364"
+    },
+    {
+      "currentText": "handle products must match the catalog",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 369
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.369"
+    },
+    {
+      "currentText": "invalid or duplicate handle product",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 373
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.373"
+    },
+    {
+      "currentText": "invalid handle product data: ${product.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 375
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "product.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.375"
+    },
+    {
+      "currentText": "invalid handle materials: ${product.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 376
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "product.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.376"
+    },
+    {
+      "currentText": "material library must contain 1 to 100 entries",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 380
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.380"
+    },
+    {
+      "currentText": "invalid or duplicate material id",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 384
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.384"
+    },
+    {
+      "currentText": "invalid material label: ${material.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 386
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "material.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.386"
+    },
+    {
+      "currentText": "color",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 387
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "invalid material type: ${material.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 387
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "material.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.387"
+    },
+    {
+      "currentText": "texture",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 387
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "invalid material color: ${material.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 390
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "material.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.390"
+    },
+    {
+      "currentText": "invalid material texture: ${material.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 391
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "material.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.391"
+    },
+    {
+      "currentText": "invalid material texture size: ${material.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 392
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "material.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.392"
+    },
+    {
+      "currentText": "invalid material groups: ${material.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 393
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "material.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.393"
+    },
+    {
+      "currentText": "three material groups are required",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 397
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.397"
+    },
+    {
+      "currentText": "invalid material group",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 399
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.399"
+    },
+    {
+      "currentText": "invalid material group label: ${group.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 401
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "group.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.401"
+    },
+    {
+      "currentText": "handles-all",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 402
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "invalid group materials: ${group.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 403
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "group.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.403"
+    },
+    {
+      "currentText": "invalid front finish scope",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 404
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.404"
+    },
+    {
+      "currentText": "material and group do not match: ${material.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 408
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "material.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.408"
+    },
+    {
+      "currentText": "invalid finish availability",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 412
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.412"
+    },
+    {
+      "currentText": "at least one global front finish must remain available",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 413
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.413"
+    },
+    {
+      "currentText": "invalid initial material selection",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 414
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.414"
+    },
+    {
+      "currentText": "invalid dependency list",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 417
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.417"
+    },
+    {
+      "currentText": "invalid dependency id",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 419
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.419"
+    },
+    {
+      "currentText": "invalid dependency: ${rule.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 421
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "rule.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.421"
+    },
+    {
+      "currentText": "dependency cycle is not allowed",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 434
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.434"
+    },
+    {
+      "currentText": "invalid event list",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 439
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.439"
+    },
+    {
+      "currentText": "invalid event id",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 441
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.441"
+    },
+    {
+      "currentText": "invalid event: ${rule.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 452
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "rule.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.452"
+    },
+    {
+      "currentText": "conflicting event target: ${rule.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 455
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "rule.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.455"
+    },
+    {
+      "currentText": "${rule.targetId}:${legacyDepth ? \"depth\" : rule.dimension}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 458
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "conflicting event target: ${rule.id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 459
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "rule.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.459"
+    },
+    {
+      "currentText": "pricing is required",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 466
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.466"
+    },
+    {
+      "currentText": "invalid pricing section: ${section}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 470
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "section"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.470"
+    },
+    {
+      "currentText": "pricing identifiers must match: ${section}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 473
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "section"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.473"
+    },
+    {
+      "currentText": "invalid price value: ${section}.${id}",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 476
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "section",
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.476"
+    },
+    {
+      "currentText": "handle front total is fixed",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 479
+      },
+      "consumer": "configuration validation or projection error shown through admin feedback",
+      "owner": "configuration administration feedback",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Validation/projection error is passed to the administration feedback; translate the message and preserve dynamic IDs as parameters."
+      ],
+      "semanticKey": "admin.configuration.validation.479"
+    },
+    {
+      "currentText": "color",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 500
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "texture",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 500
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    },
+    {
+      "currentText": "texture",
+      "source": {
+        "file": "app/core/configuration.js",
+        "blobSha": "99a24b4c98bc018bdb7732513a63610800fb4ffe",
+        "line": 500
+      },
+      "consumer": "schema, enum, color, property, or data identifier",
+      "owner": "configuration contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable configuration identifier, schema, enum, type, or color value rather than display copy."
+      ]
+    }
+  ]
+}

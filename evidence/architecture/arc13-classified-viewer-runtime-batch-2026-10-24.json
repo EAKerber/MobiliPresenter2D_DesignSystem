@@ -1,0 +1,1256 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/viewer/viewer.js",
+      "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+      "candidateOccurrences": 63
+    }
+  ],
+  "reviewScope": "Complete lexical candidate review of the public viewer runtime. Empty/loading/error states, section headings and navigation, labels and text templates are interface copy; dynamic module values stay domain parameters; all other candidates are layout, ARIA, state or selector implementation.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 63,
+    "classifiedLocalizableOccurrences": 17,
+    "excludedNonlocalizableOccurrences": 46,
+    "deferredDomainOccurrences": 0,
+    "distinctCandidateTexts": 49
+  },
+  "limitations": [
+    "Inventory only; viewer runtime and locale resources remain unchanged.",
+    "Module/catalog titles, benefits, descriptions, categories and dimensions are data-driven content and retain their separate content ownership.",
+    "The base-price caption is UI copy; currency and amount formatting need locale-aware handling in a later implementation plan."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 2
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "viewer-empty-state",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 24
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "role",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 25
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "status",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 25
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "Nenhum módulo está visível no viewer neste momento.",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 26
+      },
+      "consumer": "public viewer content, control label, or status",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as public viewer copy or accessible control/status text; dynamic product/category/title values remain parameters."
+      ],
+      "semanticKey": "viewer.scene.empty"
+    },
+    {
+      "currentText": "section",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 39
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "viewer-block ${className}",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 39
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "${module.category} · Módulo ${module.number}",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 52
+      },
+      "consumer": "public viewer content, control label, or status",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [
+        "module.category",
+        "module.number"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as public viewer copy or accessible control/status text; dynamic product/category/title values remain parameters."
+      ],
+      "semanticKey": "viewer.overview.kicker"
+    },
+    {
+      "currentText": "Valor base do módulo",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 70
+      },
+      "consumer": "public viewer content, control label, or status",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as public viewer copy or accessible control/status text; dynamic product/category/title values remain parameters."
+      ],
+      "semanticKey": "viewer.overview.price.label"
+    },
+    {
+      "currentText": "aria-current",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 90
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "is-current",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 90
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "aria-current",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 92
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "aria-label",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 92
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "button",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 92
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "button",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 92
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "Mostrar vista ${index + 1}",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 92
+      },
+      "consumer": "public viewer content, control label, or status",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [
+        "index + 1"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as public viewer copy or accessible control/status text; dynamic product/category/title values remain parameters."
+      ],
+      "semanticKey": "viewer.views.dot.label"
+    },
+    {
+      "currentText": "click",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 93
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "${currentView + 1} / ${keys.length}",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 95
+      },
+      "consumer": "public viewer content, control label, or status",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [
+        "currentView + 1",
+        "keys.length"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as public viewer copy or accessible control/status text; dynamic product/category/title values remain parameters."
+      ],
+      "semanticKey": "viewer.views.counter"
+    },
+    {
+      "currentText": "[data-view-next]",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 96
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "[data-view-previous]",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 96
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "${currentView + 1} / ${count}",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 102
+      },
+      "consumer": "public viewer content, control label, or status",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [
+        "currentView + 1",
+        "count"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as public viewer copy or accessible control/status text; dynamic product/category/title values remain parameters."
+      ],
+      "semanticKey": "viewer.views.counter"
+    },
+    {
+      "currentText": "aria-current",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 103
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "is-current",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 105
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "aria-current",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 106
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "(prefers-reduced-motion: reduce)",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 108
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "detail-panel detail-panel--${descriptor.id}",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 122
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "detail-row",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 126
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "img",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 127
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "lazy",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 127
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "span",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 128
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "#sceneSelection",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 135
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "scene",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 135
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "Selecionado: ${module.number} · ${module.title}",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 135
+      },
+      "consumer": "public viewer content, control label, or status",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [
+        "module.number",
+        "module.title"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as public viewer copy or accessible control/status text; dynamic product/category/title values remain parameters."
+      ],
+      "semanticKey": "viewer.scene.selection"
+    },
+    {
+      "currentText": "#block-views",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 136
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "views",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 136
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "aria-live",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 141
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "block-overview",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 141
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "overview",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 141
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "polite",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 141
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "scene",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 142
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "block-scene",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 143
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "Cena interativa",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 143
+      },
+      "consumer": "public viewer content, control label, or status",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as public viewer copy or accessible control/status text; dynamic product/category/title values remain parameters."
+      ],
+      "semanticKey": "viewer.section.scene.title"
+    },
+    {
+      "currentText": "Clique em um módulo ou use ←/→ e as teclas 1–7.",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 143
+      },
+      "consumer": "public viewer content, control label, or status",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as public viewer copy or accessible control/status text; dynamic product/category/title values remain parameters."
+      ],
+      "semanticKey": "viewer.section.scene.help"
+    },
+    {
+      "currentText": "scene",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 143
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "Desenhos orientativos a partir das dimensões disponíveis.",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 148
+      },
+      "consumer": "public viewer content, control label, or status",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as public viewer copy or accessible control/status text; dynamic product/category/title values remain parameters."
+      ],
+      "semanticKey": "viewer.section.views.help"
+    },
+    {
+      "currentText": "Vistas técnicas",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 148
+      },
+      "consumer": "public viewer content, control label, or status",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as public viewer copy or accessible control/status text; dynamic product/category/title values remain parameters."
+      ],
+      "semanticKey": "viewer.section.views.title"
+    },
+    {
+      "currentText": "aria-label",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 150
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "button",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 150
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "Vista anterior",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 150
+      },
+      "consumer": "public viewer content, control label, or status",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as public viewer copy or accessible control/status text; dynamic product/category/title values remain parameters."
+      ],
+      "semanticKey": "viewer.views.previous"
+    },
+    {
+      "currentText": "span",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 151
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "view-counter",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 151
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "aria-label",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 152
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "button",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 152
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "button",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 152
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "Próxima vista",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 152
+      },
+      "consumer": "public viewer content, control label, or status",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as public viewer copy or accessible control/status text; dynamic product/category/title values remain parameters."
+      ],
+      "semanticKey": "viewer.views.next"
+    },
+    {
+      "currentText": ".block-heading",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 153
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "Detalhes do módulo",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 156
+      },
+      "consumer": "public viewer content, control label, or status",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as public viewer copy or accessible control/status text; dynamic product/category/title values remain parameters."
+      ],
+      "semanticKey": "viewer.section.details.title"
+    },
+    {
+      "currentText": "Informações organizadas para consulta rápida.",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 156
+      },
+      "consumer": "public viewer content, control label, or status",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as public viewer copy or accessible control/status text; dynamic product/category/title values remain parameters."
+      ],
+      "semanticKey": "viewer.section.details.help"
+    },
+    {
+      "currentText": "Carregando informações publicadas…",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 173
+      },
+      "consumer": "public viewer content, control label, or status",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as public viewer copy or accessible control/status text; dynamic product/category/title values remain parameters."
+      ],
+      "semanticKey": "viewer.state.loading"
+    },
+    {
+      "currentText": "viewer-public-error",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 181
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "alert",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 182
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "role",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 182
+      },
+      "consumer": "viewer DOM, layout, ARIA state, style, route or data field binding",
+      "owner": "public viewer runtime",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM, route/layout state or runtime value rather than authored UI text."
+      ]
+    },
+    {
+      "currentText": "Informações temporariamente indisponíveis. Tente novamente mais tarde.",
+      "source": {
+        "file": "app/viewer/viewer.js",
+        "blobSha": "17c8cca26aecfd70d154a71c6bb1ee176e2527bd",
+        "line": 183
+      },
+      "consumer": "public viewer content, control label, or status",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as public viewer copy or accessible control/status text; dynamic product/category/title values remain parameters."
+      ],
+      "semanticKey": "viewer.state.unavailable"
+    }
+  ]
+}

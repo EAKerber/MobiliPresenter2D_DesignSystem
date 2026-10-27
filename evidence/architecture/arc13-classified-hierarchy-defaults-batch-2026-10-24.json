@@ -1,0 +1,933 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/data/hierarchy-defaults.js",
+      "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+      "candidateOccurrences": 50
+    }
+  ],
+  "reviewScope": "Complete lexical candidate review of default configurator hierarchy data. The 14 visible group/section names are editable authored configuration labels, not fixed interface chrome, so their translation ownership is deferred; schema and structural values are excluded.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 50,
+    "classifiedLocalizableOccurrences": 0,
+    "excludedNonlocalizableOccurrences": 36,
+    "deferredOwnershipReviewOccurrences": 14,
+    "distinctCandidateTexts": 42
+  },
+  "limitations": [
+    "Inventory only; hierarchy defaults and locale resources remain unchanged.",
+    "The owning product/content workflow must decide whether localized defaults create separate per-locale configuration values or use resource-backed defaults."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 2
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "ConfiguratorHierarchyDefaults2D 1.0",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 5
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "modules-main",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 9
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "Módulos",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 10
+      },
+      "consumer": "editable default hierarchy group/section label",
+      "owner": "authored configurator hierarchy content",
+      "routes": [
+        "/config/",
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "authored-configurable-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Stored as editable hierarchy data and rendered as product/configurator nomenclature; decide whether localized defaults belong to content ownership or UI resources before extraction."
+      ],
+      "semanticKey": "hierarchy.default.label.10"
+    },
+    {
+      "currentText": "modules",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 13
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "Lista de módulos",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 14
+      },
+      "consumer": "editable default hierarchy group/section label",
+      "owner": "authored configurator hierarchy content",
+      "routes": [
+        "/config/",
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "authored-configurable-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Stored as editable hierarchy data and rendered as product/configurator nomenclature; decide whether localized defaults belong to content ownership or UI resources before extraction."
+      ],
+      "semanticKey": "hierarchy.default.label.14"
+    },
+    {
+      "currentText": "list",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 15
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "selection",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 17
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "module",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 18
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "cabinet-finishes",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 25
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "Acabamentos do conjunto",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 26
+      },
+      "consumer": "editable default hierarchy group/section label",
+      "owner": "authored configurator hierarchy content",
+      "routes": [
+        "/config/",
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "authored-configurable-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Stored as editable hierarchy data and rendered as product/configurator nomenclature; decide whether localized defaults belong to content ownership or UI resources before extraction."
+      ],
+      "semanticKey": "hierarchy.default.label.26"
+    },
+    {
+      "currentText": "fronts",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 30
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "Cor das frentes",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 31
+      },
+      "consumer": "editable default hierarchy group/section label",
+      "owner": "authored configurator hierarchy content",
+      "routes": [
+        "/config/",
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "authored-configurable-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Stored as editable hierarchy data and rendered as product/configurator nomenclature; decide whether localized defaults belong to content ownership or UI resources before extraction."
+      ],
+      "semanticKey": "hierarchy.default.label.31"
+    },
+    {
+      "currentText": "swatches",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 32
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "fronts-all",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 34
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "handles",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 37
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "Puxadores",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 38
+      },
+      "consumer": "editable default hierarchy group/section label",
+      "owner": "authored configurator hierarchy content",
+      "routes": [
+        "/config/",
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "authored-configurable-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Stored as editable hierarchy data and rendered as product/configurator nomenclature; decide whether localized defaults belong to content ownership or UI resources before extraction."
+      ],
+      "semanticKey": "hierarchy.default.label.38"
+    },
+    {
+      "currentText": "grid",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 39
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "handles-all",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 41
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "stone",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 46
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "Pedra do conjunto",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 47
+      },
+      "consumer": "editable default hierarchy group/section label",
+      "owner": "authored configurator hierarchy content",
+      "routes": [
+        "/config/",
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "authored-configurable-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Stored as editable hierarchy data and rendered as product/configurator nomenclature; decide whether localized defaults belong to content ownership or UI resources before extraction."
+      ],
+      "semanticKey": "hierarchy.default.label.47"
+    },
+    {
+      "currentText": "stone-packages",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 51
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "Pacote de pedra",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 52
+      },
+      "consumer": "editable default hierarchy group/section label",
+      "owner": "authored configurator hierarchy content",
+      "routes": [
+        "/config/",
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "authored-configurable-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Stored as editable hierarchy data and rendered as product/configurator nomenclature; decide whether localized defaults belong to content ownership or UI resources before extraction."
+      ],
+      "semanticKey": "hierarchy.default.label.52"
+    },
+    {
+      "currentText": "cards",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 53
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "stone-all",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 55
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "stone-skirting",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 58
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "Rodapé de pedra",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 59
+      },
+      "consumer": "editable default hierarchy group/section label",
+      "owner": "authored configurator hierarchy content",
+      "routes": [
+        "/config/",
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "authored-configurable-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Stored as editable hierarchy data and rendered as product/configurator nomenclature; decide whether localized defaults belong to content ownership or UI resources before extraction."
+      ],
+      "semanticKey": "hierarchy.default.label.59"
+    },
+    {
+      "currentText": "list",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 60
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "stone-skirting",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 62
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "services",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 70
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "Serviços",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 71
+      },
+      "consumer": "editable default hierarchy group/section label",
+      "owner": "authored configurator hierarchy content",
+      "routes": [
+        "/config/",
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "authored-configurable-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Stored as editable hierarchy data and rendered as product/configurator nomenclature; decide whether localized defaults belong to content ownership or UI resources before extraction."
+      ],
+      "semanticKey": "hierarchy.default.label.71"
+    },
+    {
+      "currentText": "lighting",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 75
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "Iluminação",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 76
+      },
+      "consumer": "editable default hierarchy group/section label",
+      "owner": "authored configurator hierarchy content",
+      "routes": [
+        "/config/",
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "authored-configurable-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Stored as editable hierarchy data and rendered as product/configurator nomenclature; decide whether localized defaults belong to content ownership or UI resources before extraction."
+      ],
+      "semanticKey": "hierarchy.default.label.76"
+    },
+    {
+      "currentText": "list",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 77
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "lighting-08",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 79
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "additional-services",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 82
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "Serviços adicionais",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 83
+      },
+      "consumer": "editable default hierarchy group/section label",
+      "owner": "authored configurator hierarchy content",
+      "routes": [
+        "/config/",
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "authored-configurable-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Stored as editable hierarchy data and rendered as product/configurator nomenclature; decide whether localized defaults belong to content ownership or UI resources before extraction."
+      ],
+      "semanticKey": "hierarchy.default.label.83"
+    },
+    {
+      "currentText": "list",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 84
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "service",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 86
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "summary-main",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 93
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "Resumo",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 94
+      },
+      "consumer": "editable default hierarchy group/section label",
+      "owner": "authored configurator hierarchy content",
+      "routes": [
+        "/config/",
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "authored-configurable-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Stored as editable hierarchy data and rendered as product/configurator nomenclature; decide whether localized defaults belong to content ownership or UI resources before extraction."
+      ],
+      "semanticKey": "hierarchy.default.label.94"
+    },
+    {
+      "currentText": "summary",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 97
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "Resumo",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 98
+      },
+      "consumer": "editable default hierarchy group/section label",
+      "owner": "authored configurator hierarchy content",
+      "routes": [
+        "/config/",
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "authored-configurable-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Stored as editable hierarchy data and rendered as product/configurator nomenclature; decide whether localized defaults belong to content ownership or UI resources before extraction."
+      ],
+      "semanticKey": "hierarchy.default.label.98"
+    },
+    {
+      "currentText": "list",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 99
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "summary",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 101
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "items",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 113
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "Opções",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 114
+      },
+      "consumer": "editable default hierarchy group/section label",
+      "owner": "authored configurator hierarchy content",
+      "routes": [
+        "/config/",
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "authored-configurable-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Stored as editable hierarchy data and rendered as product/configurator nomenclature; decide whether localized defaults belong to content ownership or UI resources before extraction."
+      ],
+      "semanticKey": "hierarchy.default.label.114"
+    },
+    {
+      "currentText": "list",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 115
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "all",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 117
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "undefined",
+      "source": {
+        "file": "app/data/hierarchy-defaults.js",
+        "blobSha": "c7029771a0ce289ea9f25ceddcf33d0abbaf6adb",
+        "line": 122
+      },
+      "consumer": "schema, hierarchy, group/section/item ID, presentation type, or JS control",
+      "owner": "hierarchy defaults contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema or configuration identifier/value, not user-facing prose."
+      ]
+    }
+  ]
+}

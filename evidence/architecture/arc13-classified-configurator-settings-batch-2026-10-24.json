@@ -1,0 +1,525 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/data/configurator-settings.js",
+      "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+      "candidateOccurrences": 26
+    }
+  ],
+  "reviewScope": "Complete lexical candidate review of default configurator settings. Human-readable stage labels are localizable; stage IDs, item IDs, schema version, revision and JavaScript control values remain technical.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 26,
+    "classifiedLocalizableOccurrences": 4,
+    "excludedNonlocalizableOccurrences": 22,
+    "deferredDomainOccurrences": 0,
+    "distinctCandidateTexts": 25
+  },
+  "limitations": [
+    "Inventory only; configurator settings and locale resources remain unchanged.",
+    "Labels are sourced from configuration data and must remain paired with stable stage IDs during future locale extraction."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 2
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "ConfiguratorSettings2D 1.0",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 5
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "module-01",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 8
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "module-02",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 8
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "module-03",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 8
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "module-04",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 8
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "module-05",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 8
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "module-06",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 8
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "module-07",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 8
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "modules",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 8
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "Módulos",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 8
+      },
+      "consumer": "configurator stage label",
+      "owner": "configurator stage navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Stage label is rendered in the configurator interface."
+      ],
+      "semanticKey": "configurator.stage.modules"
+    },
+    {
+      "currentText": "Acabamentos",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 9
+      },
+      "consumer": "configurator stage label",
+      "owner": "configurator stage navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Stage label is rendered in the configurator interface."
+      ],
+      "semanticKey": "configurator.stage.finishes"
+    },
+    {
+      "currentText": "finishes",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 9
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "fronts-all",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 9
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "handles-all",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 9
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "stone-all",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 9
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "stone-skirting",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 9
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "lighting-08",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 10
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "move-stone",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 10
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "services",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 10
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "Serviços",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 10
+      },
+      "consumer": "configurator stage label",
+      "owner": "configurator stage navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Stage label is rendered in the configurator interface."
+      ],
+      "semanticKey": "configurator.stage.services"
+    },
+    {
+      "currentText": "tempered-glass",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 10
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "Resumo",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 11
+      },
+      "consumer": "configurator stage label",
+      "owner": "configurator stage navigation",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Stage label is rendered in the configurator interface."
+      ],
+      "semanticKey": "configurator.stage.summary"
+    },
+    {
+      "currentText": "summary",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 11
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "summary",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 11
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    },
+    {
+      "currentText": "undefined",
+      "source": {
+        "file": "app/data/configurator-settings.js",
+        "blobSha": "c380ea16e5cec9851ab213d38e1c71bae4b52015",
+        "line": 15
+      },
+      "consumer": "schema marker, stage/item id, or JavaScript control value",
+      "owner": "configurator settings contract",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable identifier or implementation value, not translated as user-facing copy."
+      ]
+    }
+  ]
+}

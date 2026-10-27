@@ -1,0 +1,411 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/core/scene-component.js",
+      "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+      "candidateOccurrences": 24
+    }
+  ],
+  "reviewScope": "The hotspot accessible-name template `Ver ficha de ${labels.reference}, ${labels.title}` is already classified conceptually as `technicalView.aria.hotspot` in the viewer/configurator batch. This supplement classifies the remaining lexical candidates in the shared scene component.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 24,
+    "classifiedLocalizableOccurrences": 0,
+    "excludedNonlocalizableOccurrences": 24,
+    "deferredDomainOccurrences": 0,
+    "distinctCandidateTexts": 20
+  },
+  "limitations": [
+    "Inventory only; runtime code and localization resources remain unchanged.",
+    "Mask errors are fatal asset/render diagnostics, not intentional interface feedback."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 2
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "Máscara incorporada ausente: ${entity.maskAsset}",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 18
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "Máscara estrutural incorporada ausente: ${structureAsset}",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 25
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "structure-layer structure-layer--${kind}",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 26
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "button",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 44
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "button",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 45
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "scene-hotspot",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 45
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "aria-label",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 49
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "${labels.reference} · ${labels.title}",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 50
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "aria-pressed",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 50
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "false",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 50
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "aria-hidden",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 53
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "scene-hotspot__tag",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 53
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "span",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 53
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "true",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 53
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "aria-disabled",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 60
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "aria-pressed",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 60
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "is-selected",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 60
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "160px 160px",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 71
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "a, button:not(.scene-hotspot), [role='textbox']",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 100
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "aria-hidden",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 118
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "div",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 118
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "selection-frame",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 118
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    },
+    {
+      "currentText": "true",
+      "source": {
+        "file": "app/core/scene-component.js",
+        "blobSha": "6fa00bb31d2ecd3eeccb1d0e5eabcf410acdcab6",
+        "line": 118
+      },
+      "consumer": "rendering, accessibility attribute identifier, event value, CSS class, or internal asset diagnostic",
+      "owner": "shared scene component",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation detail or diagnostic; not presented through an intentional user-facing interface-copy path."
+      ]
+    }
+  ]
+}

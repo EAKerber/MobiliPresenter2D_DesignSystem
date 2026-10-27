@@ -1,0 +1,813 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/landing/landing.js",
+      "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+      "candidateOccurrences": 41
+    }
+  ],
+  "reviewScope": "Complete lexical candidate review of the public landing carousel runtime. Fixed benefit and accessible pagination copy are localizable; the dynamic action label consumes the value classified in landing data; implementation and carousel controls remain technical.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 41,
+    "classifiedLocalizableOccurrences": 3,
+    "excludedNonlocalizableOccurrences": 38,
+    "deferredDomainOccurrences": 0,
+    "distinctCandidateTexts": 32
+  },
+  "limitations": [
+    "Inventory only; landing runtime and locale resources remain unchanged.",
+    "The image preload exception is not user-visible; the page shows a separate static fallback message classified in HTML inventory."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 2
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "Para a sua vida",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 24
+      },
+      "consumer": "public landing mini-benefit label",
+      "owner": "public landing interface",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing benefit text."
+      ],
+      "semanticKey": "landing.benefit.life"
+    },
+    {
+      "currentText": "/landing/assets/icons/ui/gold/${[\"modular\", \"inteligente\", \"para-sua-vida\"][index]}.svg",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 28
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "strong",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 30
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "benefits",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 33
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "span",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 37
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "Imagem indisponível",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 54
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Thrown from image preload, then swallowed by the landing selector; user sees the static fallback in HTML instead of this error string."
+      ]
+    },
+    {
+      "currentText": "is-selected",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 69
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "aria-pressed",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 70
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "is-changing",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 72
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "aria-busy",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 73
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "true",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 73
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "has-image-error",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 86
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "${environment.action} ",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 94
+      },
+      "consumer": "environment destination action label",
+      "owner": "public landing interface",
+      "routes": [
+        "/"
+      ],
+      "parameters": [
+        "action: landing environment content"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Renders the authored action value already classified in landing data; this is a use of that text field, not a duplicate source string."
+      ],
+      "semanticKey": "landing.environment.action"
+    },
+    {
+      "currentText": "href",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 96
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "is-changing",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 99
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "(prefers-reduced-motion: reduce)",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 105
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "environment",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 122
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "aria-pressed",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 124
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "false",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 124
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "div",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 125
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "environment-art",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 125
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "img",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 126
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "strong",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 131
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "span",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 132
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "click",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 134
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "button",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 139
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "button",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 139
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "page-dot",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 139
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "aria-label",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 140
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "click",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 140
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "Mostrar grupo ${index + 1}",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 140
+      },
+      "consumer": "carousel pagination button accessible label",
+      "owner": "public landing interface",
+      "routes": [
+        "/"
+      ],
+      "parameters": [
+        "page: one-based carousel group number"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Accessible label for the mobile carousel page selector."
+      ],
+      "semanticKey": "landing.carousel.page.label"
+    },
+    {
+      "currentText": "(max-width: 760px)",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 144
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "aria-current",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 153
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "false",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 153
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "is-active",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 153
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "true",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 153
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "previousPage",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 154
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "nextPage",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 155
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "${index * 110}ms",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 171
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    },
+    {
+      "currentText": "(prefers-reduced-motion: reduce)",
+      "source": {
+        "file": "app/landing/landing.js",
+        "blobSha": "7bcc6931716b7c4b32c4eb8386d1d658fd29a471",
+        "line": 182
+      },
+      "consumer": "landing carousel DOM, CSS, event, motion, asset or implementation detail",
+      "owner": "landing carousel runtime",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Implementation value, selector, or event state rather than user-facing prose."
+      ]
+    }
+  ]
+}

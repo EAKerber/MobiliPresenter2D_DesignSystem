@@ -1,0 +1,42 @@
+{
+  "schema": "M2DLocalizationLargeDataReview/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "reviewMethod": "Fetched pinned source blobs, inspected every quoted string token and file structure, and separated identifiers/asset paths/base64 image payloads from rendered language.",
+  "totals": {
+    "sourceFilesReviewed": 2,
+    "localizableStrings": 0,
+    "nonLocalizableDataFiles": 2,
+    "deferredDomainStrings": 0
+  },
+  "files": [
+    {
+      "sourceFile": "app/data/stone-data.js",
+      "blobSha": "1d2e9cf8dec27871730bfde130172ecb4a2b63b7",
+      "length": 1298823,
+      "lines": 1,
+      "stringLiterals": 52,
+      "embeddedImages": 24,
+      "technicalIdentifiers": 28,
+      "classification": "non-localizable-data",
+      "status": "excluded-nonlocalizable",
+      "observations": "Objeto de dados com chaves default/under/neutral/objects/upperMask/plinthMask/plinthShade e IDs de visibilidade; valores restantes são data:image/png;base64. Nenhum texto humano exibido."
+    },
+    {
+      "sourceFile": "app/data/mask-data.js",
+      "blobSha": "4de91735896809c994c26c044fc2041c83d95b2b",
+      "length": 309610,
+      "lines": 4,
+      "stringLiterals": 47,
+      "assetPaths": 23,
+      "embeddedImages": 23,
+      "classification": "non-localizable-data",
+      "status": "excluded-nonlocalizable",
+      "observations": "Registro técnico com caminhos de máscara e dados data:image/png;base64, mais use strict. Nenhum texto humano exibido."
+    }
+  ],
+  "limitations": [
+    "This review covers the exact source blob hashes and product head above; changed files require re-review.",
+    "Embedded image payloads and object keys are not localization resources. This review does not cover strings generated elsewhere from these IDs."
+  ]
+}

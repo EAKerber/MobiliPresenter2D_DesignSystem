@@ -1,0 +1,139 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/access/access.js",
+      "blobSha": "e2b99d775576fe24d6757c8f24cf52fb8b498ac4",
+      "candidateOccurrences": 7
+    }
+  ],
+  "reviewScope": "Completion of the exact lexical candidate set in app/access/access.js after the user-facing feedback batch: all remaining endpoint, routing, event, HTTP and response-code strings were inspected and excluded from localization.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 7,
+    "classifiedLocalizableOccurrences": 0,
+    "excludedNonlocalizableOccurrences": 7,
+    "deferredDomainOccurrences": 0,
+    "distinctCandidateTexts": 7
+  },
+  "limitations": [
+    "Inventory only; runtime behavior and locale resources remain unchanged.",
+    "The access feedback strings remain classified in the separate UI batch."
+  ],
+  "entries": [
+    {
+      "currentText": "${window.location.pathname}${window.location.search}",
+      "source": {
+        "file": "app/access/access.js",
+        "blobSha": "e2b99d775576fe24d6757c8f24cf52fb8b498ac4",
+        "line": 8
+      },
+      "consumer": "access redemption implementation detail or API control value",
+      "owner": "access confirmation runtime",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "This candidate is a URL/route, API code, HTTP control, event name, or navigation value; it is not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "click",
+      "source": {
+        "file": "app/access/access.js",
+        "blobSha": "e2b99d775576fe24d6757c8f24cf52fb8b498ac4",
+        "line": 18
+      },
+      "consumer": "access redemption implementation detail or API control value",
+      "owner": "access confirmation runtime",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "This candidate is a URL/route, API code, HTTP control, event name, or navigation value; it is not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "/api/access/redeem",
+      "source": {
+        "file": "app/access/access.js",
+        "blobSha": "e2b99d775576fe24d6757c8f24cf52fb8b498ac4",
+        "line": 22
+      },
+      "consumer": "access redemption implementation detail or API control value",
+      "owner": "access confirmation runtime",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "This candidate is a URL/route, API code, HTTP control, event name, or navigation value; it is not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "POST",
+      "source": {
+        "file": "app/access/access.js",
+        "blobSha": "e2b99d775576fe24d6757c8f24cf52fb8b498ac4",
+        "line": 23
+      },
+      "consumer": "access redemption implementation detail or API control value",
+      "owner": "access confirmation runtime",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "This candidate is a URL/route, API code, HTTP control, event name, or navigation value; it is not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "same-origin",
+      "source": {
+        "file": "app/access/access.js",
+        "blobSha": "e2b99d775576fe24d6757c8f24cf52fb8b498ac4",
+        "line": 24
+      },
+      "consumer": "access redemption implementation detail or API control value",
+      "owner": "access confirmation runtime",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "This candidate is a URL/route, API code, HTTP control, event name, or navigation value; it is not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "invalid_or_expired_link",
+      "source": {
+        "file": "app/access/access.js",
+        "blobSha": "e2b99d775576fe24d6757c8f24cf52fb8b498ac4",
+        "line": 30
+      },
+      "consumer": "access redemption implementation detail or API control value",
+      "owner": "access confirmation runtime",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "This candidate is a URL/route, API code, HTTP control, event name, or navigation value; it is not user-facing prose."
+      ]
+    },
+    {
+      "currentText": "/config/",
+      "source": {
+        "file": "app/access/access.js",
+        "blobSha": "e2b99d775576fe24d6757c8f24cf52fb8b498ac4",
+        "line": 32
+      },
+      "consumer": "access redemption implementation detail or API control value",
+      "owner": "access confirmation runtime",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "This candidate is a URL/route, API code, HTTP control, event name, or navigation value; it is not user-facing prose."
+      ]
+    }
+  ]
+}

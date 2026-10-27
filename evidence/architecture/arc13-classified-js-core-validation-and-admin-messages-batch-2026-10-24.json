@@ -1,0 +1,1441 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/core/flow-layout.js",
+      "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+      "candidateOccurrences": 19
+    },
+    {
+      "file": "app/core/public-module-projection.js",
+      "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+      "candidateOccurrences": 21
+    },
+    {
+      "file": "app/core/administration-v5.js",
+      "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+      "candidateOccurrences": 23
+    },
+    {
+      "file": "app/core/legacy-stage-repair.js",
+      "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+      "candidateOccurrences": 23
+    }
+  ],
+  "reviewScope": "Manual classification of complete lexical candidate sets in four shared core sources: flow-layout diagnostics, public module projection, administration V5 validation, and legacy Puxadores repair. Only administration feedback surfaced to users is localizable; internal diagnostics are excluded and axis/measurement formatting is deferred for domain review.",
+  "totals": {
+    "sourceFilesReviewed": 4,
+    "candidateOccurrencesReviewed": 86,
+    "classifiedLocalizableOccurrences": 22,
+    "excludedNonlocalizableOccurrences": 62,
+    "deferredDomainOccurrences": 2,
+    "distinctCandidateTexts": 79
+  },
+  "limitations": [
+    "Inventory only: product code and locale bundles remain unchanged.",
+    "Classification follows current call sites: flow-layout errors are logged/stored internally; public module projection errors are sanitized by the endpoint; selected administration validation and repair failures are shown in admin feedback.",
+    "Axis order and formatted dimensions require a locale-aware domain decision before resource design."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 2
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "administration core",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal identifier, dependency guard, schema marker, or success text not consumed as user feedback."
+      ]
+    },
+    {
+      "currentText": "Hierarchy v4 compatibility core is required.",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 23
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "administration core",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal identifier, dependency guard, schema marker, or success text not consumed as user feedback."
+      ]
+    },
+    {
+      "currentText": "Item capability registry is required.",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 24
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "administration core",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal identifier, dependency guard, schema marker, or success text not consumed as user feedback."
+      ]
+    },
+    {
+      "currentText": "Presentation contract is required.",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 25
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "administration core",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal identifier, dependency guard, schema marker, or success text not consumed as user feedback."
+      ]
+    },
+    {
+      "currentText": "Layout profile contract is required.",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 26
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "administration core",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal identifier, dependency guard, schema marker, or success text not consumed as user feedback."
+      ]
+    },
+    {
+      "currentText": "Default presentation policy is required.",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 27
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "administration core",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal identifier, dependency guard, schema marker, or success text not consumed as user feedback."
+      ]
+    },
+    {
+      "currentText": "Typed pricing contract is required.",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 28
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "administration core",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal identifier, dependency guard, schema marker, or success text not consumed as user feedback."
+      ]
+    },
+    {
+      "currentText": "ConfiguratorAdministration2D 5.0",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 30
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "administration core",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal identifier, dependency guard, schema marker, or success text not consumed as user feedback."
+      ]
+    },
+    {
+      "currentText": "cannot resolve section behavior: ${stage.id}/${section.id}",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 113
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "administration core",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal identifier, dependency guard, schema marker, or success text not consumed as user feedback."
+      ]
+    },
+    {
+      "currentText": "pricing cannot be projected to the previous schema",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 164
+      },
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "owner": "administration panel",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.validation.164"
+    },
+    {
+      "currentText": "unsupported current administration schema",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 237
+      },
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "owner": "administration panel",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.validation.237"
+    },
+    {
+      "currentText": "presentation policy is required",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 239
+      },
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "owner": "administration panel",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.validation.239"
+    },
+    {
+      "currentText": "invalid viewer price publication permission",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 244
+      },
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "owner": "administration panel",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.validation.244"
+    },
+    {
+      "currentText": "pricing: ${error}",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 246
+      },
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "owner": "administration panel",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.validation.246"
+    },
+    {
+      "currentText": "legacy section presentation is not allowed: ${path}",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 253
+      },
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "owner": "administration panel",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.validation.253"
+    },
+    {
+      "currentText": "invalid section behavior: ${path}",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 255
+      },
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "owner": "administration panel",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.validation.255"
+    },
+    {
+      "currentText": "invalid section component: ${path}",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 260
+      },
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "owner": "administration panel",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.validation.260"
+    },
+    {
+      "currentText": "component behavior mismatch: ${path}",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 265
+      },
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "owner": "administration panel",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.validation.265"
+    },
+    {
+      "currentText": "presentation policy: ${error.path}: ${error.message}",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 273
+      },
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "owner": "administration panel",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.validation.273"
+    },
+    {
+      "currentText": "invalid section component:",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 276
+      },
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "owner": "administration panel",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.validation.276"
+    },
+    {
+      "currentText": "v4-compatible validation: ${error}",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 280
+      },
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "owner": "administration panel",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.validation.280"
+    },
+    {
+      "currentText": "configuration is required",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 305
+      },
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "owner": "administration panel",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.validation.305"
+    },
+    {
+      "currentText": "A hierarquia ou apresentação foi alterada e não pode ser reduzida ao schema publicado sem perda.",
+      "source": {
+        "file": "app/core/administration-v5.js",
+        "blobSha": "fce8319c7ed56d6e0e7e525742275aa2f0e25a32",
+        "line": 349
+      },
+      "consumer": "hierarchy/admin validation error surfaced in admin save feedback",
+      "owner": "administration panel",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.validation.349"
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 2
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "Presentation contract is required.",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 7
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "missing-stage-layout",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 56
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "stage layout is missing",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 56
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "missing renderer group: ${layout.id}/${group.id}",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 66
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "missing-group-binding",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 66
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "missing renderer section: ${layout.id}/${section.id}",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 70
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "missing-section-binding",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 70
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "sectionComponents",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 72
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "missing renderer component: ${layout.id}/${section.id}",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 75
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "renderer component mismatch: ${layout.id}/${section.id} expected ${section.component} but found ${boundComponent}",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 77
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "unexpected renderer group: ${layout.id}/${id}",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 85
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "unexpected-group-binding",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 85
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "unexpected renderer section: ${layout.id}/${id}",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 90
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "unexpected-section-binding",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 90
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "modules-view-requires-one-semantic-section",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 106
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "modules-view-policy-missing",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 118
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "modules-view-source-missing",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 138
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "modules",
+      "source": {
+        "file": "app/core/flow-layout.js",
+        "blobSha": "48d0b255a9d47f32815a54eeb5d51fea6891b23e",
+        "line": 143
+      },
+      "consumer": "internal flow-layout diagnostic; current caller logs/stores the error",
+      "owner": "flow-layout contract",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Not rendered as user feedback by the product caller."
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 2
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal identifier, dependency guard, schema marker, or success text not consumed as user feedback."
+      ]
+    },
+    {
+      "currentText": "ConfiguratorAdministration2D 3.0",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 52
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal identifier, dependency guard, schema marker, or success text not consumed as user feedback."
+      ]
+    },
+    {
+      "currentText": "A origem publicada precisa estar no schema v3 atual.",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 54
+      },
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.legacyHandles.54"
+    },
+    {
+      "currentText": "unsupported_source",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 54
+      },
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ]
+    },
+    {
+      "currentText": "duplicate_owner",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 59
+      },
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ]
+    },
+    {
+      "currentText": "Puxadores está atribuído a mais de uma etapa.",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 59
+      },
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.legacyHandles.59"
+    },
+    {
+      "currentText": "Puxadores já está persistido em Acabamentos.",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 63
+      },
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.legacyHandles.63"
+    },
+    {
+      "currentText": "Puxadores já está atribuído a outra etapa; não é seguro movê-lo automaticamente.",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 65
+      },
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.legacyHandles.65"
+    },
+    {
+      "currentText": "wrong_owner",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 65
+      },
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ]
+    },
+    {
+      "currentText": "A etapa Acabamentos não existe ou não possui lista de itens v3.",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 70
+      },
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.legacyHandles.70"
+    },
+    {
+      "currentText": "missing_finishes",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 70
+      },
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ]
+    },
+    {
+      "currentText": "Puxadores será adicionado à etapa Acabamentos no v3 publicado.",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 83
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal identifier, dependency guard, schema marker, or success text not consumed as user feedback."
+      ]
+    },
+    {
+      "currentText": "ConfiguratorAdministration2D 3.0",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 87
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal identifier, dependency guard, schema marker, or success text not consumed as user feedback."
+      ]
+    },
+    {
+      "currentText": "not_needed",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 91
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal identifier, dependency guard, schema marker, or success text not consumed as user feedback."
+      ]
+    },
+    {
+      "currentText": "Puxadores já está persistido; nenhuma alteração é necessária.",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 91
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal identifier, dependency guard, schema marker, or success text not consumed as user feedback."
+      ]
+    },
+    {
+      "currentText": "A gravação de Puxadores deve permanecer em v3.",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 94
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal identifier, dependency guard, schema marker, or success text not consumed as user feedback."
+      ]
+    },
+    {
+      "currentText": "wrong_candidate_schema",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 94
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Internal identifier, dependency guard, schema marker, or success text not consumed as user feedback."
+      ]
+    },
+    {
+      "currentText": "invalid_candidate_owner",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 99
+      },
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ]
+    },
+    {
+      "currentText": "O candidato deve atribuir Puxadores apenas a Acabamentos.",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 99
+      },
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.legacyHandles.99"
+    },
+    {
+      "currentText": "A gravação proposta altera campos além da atribuição de Puxadores.",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 104
+      },
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.legacyHandles.104"
+    },
+    {
+      "currentText": "unexpected_delta",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 104
+      },
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ]
+    },
+    {
+      "currentText": "A ordem proposta de Acabamentos não corresponde à inserção canônica de Puxadores.",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 110
+      },
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ],
+      "semanticKey": "admin.legacyHandles.110"
+    },
+    {
+      "currentText": "unexpected_item_order",
+      "source": {
+        "file": "app/core/legacy-stage-repair.js",
+        "blobSha": "3ae4a3e6ecb2e8a094b2773b6bae2d2a85c3b053",
+        "line": 110
+      },
+      "consumer": "legacy Puxadores repair failure shown in admin save feedback",
+      "owner": "legacy Puxadores repair flow",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Message is surfaced by the current administration caller; translate the complete sentence/template and preserve dynamic values."
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 2
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "PublicModulePresentation2D 0.1",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 6
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "PublicModulePresentation2D 0.2",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 7
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "ConfiguratorAdministration2D 5.0",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 8
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "published v5 configuration required",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 18
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "catalog and scene required",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 21
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "one enabled modules stage required",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 27
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "invalid published module membership",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 32
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "published module missing from catalog/scene: ",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 39
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "published module editorial record missing or invalid: ",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 42
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "invalid published list: ",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 45
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "invalid public nominal dimensions: ",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 52
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "A × P × E",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 54
+      },
+      "consumer": "public module dimensional presentation",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "domain-presentation-format",
+      "status": "deferred-domain-review",
+      "notes": [
+        "Axis order and symbols are domain notation."
+      ]
+    },
+    {
+      "currentText": "${axes.map((axis) => new Intl.NumberFormat(\"pt-BR\", { maximumFractionDigits: 1 }).format(nominalMm[axis])).join(\" × \")} mm",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 55
+      },
+      "consumer": "public module dimensional presentation",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "domain-presentation-format",
+      "status": "deferred-domain-review",
+      "notes": [
+        "Formatted dimensions and unit require a locale-aware measurement-format decision."
+      ]
+    },
+    {
+      "currentText": "published initial module/finish state missing or invalid",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 78
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "missing published module visibility: ",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 84
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "published front finish library required",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 93
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "invalid published front finish: ",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 107
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "published initial finish must be globally available",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 116
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "invalid viewer price publication permission",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 124
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    },
+    {
+      "currentText": "published base price rules missing",
+      "source": {
+        "file": "app/core/public-module-projection.js",
+        "blobSha": "fff325e9699f806f0e4d599b05374aa7c3d2c43f",
+        "line": 130
+      },
+      "consumer": "schema, dependency, validation code, or internal projection diagnostic; public endpoint sanitizes failures",
+      "owner": "public module projection",
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Endpoint returns a generic public error instead of exposing this internal message."
+      ]
+    }
+  ]
+}

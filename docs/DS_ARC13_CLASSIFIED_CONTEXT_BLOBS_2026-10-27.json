@@ -1,0 +1,274 @@
+{
+  "schema": "DSARC13ClassifiedContextPreservation/1",
+  "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "sourcePR": 51,
+  "sourceHead": "28062602a4ddcd1bee090742fe2587fe3837175d",
+  "sourceProductHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "baselineMain": "74f27605fc2a2b9aa768311da437e7a27caeaabe",
+  "purpose": "Preserve source-context metadata absent from flattened master indices without promoting any localization candidate to approved UI resources.",
+  "verification": {
+    "linkedGroups": 30,
+    "linkedOccurrenceCount": 2445,
+    "linkedFourFieldMultisetMatch": 30,
+    "auxiliaryIndependent": 2,
+    "remainingAfterMerge": 151,
+    "rootPriorExclusive": 183,
+    "tuple": "(source.file or file, source.line or line, currentText or text, classification)",
+    "limits": [
+      "Tuple equality does NOT imply owner,consumer,param,notes,semanticKey equality",
+      "Per-source SHA retained; recheck source commit before applying to product",
+      "All 32 files are evidence, not runtime locale catalogs"
+    ]
+  },
+  "sourceBlobs": [
+    {
+      "path": "evidence/architecture/arc13-classified-access-manager-technical-batch-2026-10-24.json",
+      "sha": "4fbc3755fa8a87cda612db7a15e4e63162dc3e51",
+      "bytes": 13551,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 19
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-access-runtime-technical-batch-2026-10-24.json",
+      "sha": "47278a2c7132d9e86def4facb2b2b2723bf7cc90",
+      "bytes": 5193,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 7
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-admin-runtime-batch-2026-10-24.json",
+      "sha": "e927530fa1cc5e4f5f350e186771c02180a29b79",
+      "bytes": 288312,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 423
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-admin-single-word-dom-sink-batch-2026-10-24.json",
+      "sha": "d60bc82b2185d13ffd05313fea8db08522585550",
+      "bytes": 4960,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 5
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-catalog-data-content-ownership-batch-2026-10-24.json",
+      "sha": "fabb014bdade0efab9884d6f11eb05b576390595",
+      "bytes": 137814,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 196
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-configuration-validation-and-legacy-labels-batch-2026-10-24.json",
+      "sha": "aaa4522566129a145e2b9385145b03107015a0cc",
+      "bytes": 86449,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 121
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-configurator-runtime-batch-2026-10-24.json",
+      "sha": "8603ab1e792ba67790be8b21d781caa7b1b642fe",
+      "bytes": 300821,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 466
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-configurator-settings-batch-2026-10-24.json",
+      "sha": "11a3f024e621a69798484457af0cedc725281a3d",
+      "bytes": 16956,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 26
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-drawing-dimensions-and-runtime-batch-2026-10-24.json",
+      "sha": "d2e9e385662ef45975dc63f0d1b6c98247d8ba9d",
+      "bytes": 20905,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 32
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-flow-model-validation-batch-2026-10-24.json",
+      "sha": "b78fb0db6600092c5e556aede16543f40dd7518c",
+      "bytes": 33071,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 44
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-hierarchy-defaults-batch-2026-10-24.json",
+      "sha": "67ef3b4c524785156c7afe63f143e95aa54ed087",
+      "bytes": 33578,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 50
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-inline-config-scripts-2026-10-24.json",
+      "sha": "3c038c0e1fb732f54eb18d5664b94783d046d616",
+      "bytes": 2343,
+      "classification": "INDEPENDENT_AUDIT_NEGATIVE_CONTROL",
+      "indexOccurrences": null
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-js-core-validation-and-admin-messages-batch-2026-10-24.json",
+      "sha": "5d961f7dd61eb262c14fb3aa4b165b0502a16496",
+      "bytes": 56749,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 86
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-js-low-volume-batch-2026-10-24.json",
+      "sha": "f63f2775690bca37d6a6457ab9859a6b82cc794c",
+      "bytes": 43557,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 65
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-js-navigation-and-economy-batch-2026-10-24.json",
+      "sha": "7b435197d2b2dc1acab322a61d7210db7c2ec5e4",
+      "bytes": 16762,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 28
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-landing-data-batch-2026-10-24.json",
+      "sha": "ff596c16108d7914d26dab9968103894a08cd674",
+      "bytes": 26457,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 41
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-landing-runtime-batch-2026-10-24.json",
+      "sha": "f4cfa1fa3738139ffd7aaebb7b313935361720af",
+      "bytes": 26172,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 41
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-large-data-files-2026-10-24.json",
+      "sha": "71d8c393a965faa1c3a1387112406b12a95a3e3c",
+      "bytes": 1810,
+      "classification": "INDEPENDENT_AUDIT_NEGATIVE_CONTROL",
+      "indexOccurrences": null
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-scene-adapter-batch-2026-10-24.json",
+      "sha": "105d132d22344f300066c11c85c8994ceee49083",
+      "bytes": 22866,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 32
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-scene-component-technical-batch-2026-10-24.json",
+      "sha": "54babc6f83fc1dd8aafcbddcc45f7bc04959a75a",
+      "bytes": 16206,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 24
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-scene-data-content-ownership-batch-2026-10-24.json",
+      "sha": "58aefa3880a426def0dec57f0190a51f40b35fb7",
+      "bytes": 76998,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 115
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-static-about-batch-2026-10-24.json",
+      "sha": "14b8ba5c0755834051b085e6b1f9c4376ca47403",
+      "bytes": 26827,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 44
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-static-access-batch-2026-10-24.json",
+      "sha": "d9638bf6c89c280d672c26a2f16deb87dde41060",
+      "bytes": 19432,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 33
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-static-admin-batch-2026-10-24.json",
+      "sha": "9338f4e630200e51746d5a647ec748fc2c28216f",
+      "bytes": 36242,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 68
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-static-config-batch-2026-10-24.json",
+      "sha": "b6fcbe387aa7d5048f1387a099921f2faa799923",
+      "bytes": 26326,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 45
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-static-how-it-works-batch-2026-10-24.json",
+      "sha": "5b747b47a4dc13163a16a521c7ccbeab31a49964",
+      "bytes": 137152,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 229
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-static-landing-batch-2026-10-24.json",
+      "sha": "0808370a824ee90d12d2b77c5a616af97945735c",
+      "bytes": 24127,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 44
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-static-viewer-batch-2026-10-24.json",
+      "sha": "09e72e237b5f3738807e19a44274290b1f0bfda1",
+      "bytes": 10475,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 17
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-technical-views-runtime-technical-batch-2026-10-24.json",
+      "sha": "e36e43ab3fa20fee61e6b2163ad0592356d09e75",
+      "bytes": 18025,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 25
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-theme-runtime-technical-batch-2026-10-24.json",
+      "sha": "8758c4735c315955a19ec7dbeb8a9d913f5e1c90",
+      "bytes": 20011,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 26
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-viewer-data-batch-2026-10-24.json",
+      "sha": "8487685adb4a7f4f352780dd1a0be645249ebdc8",
+      "bytes": 19556,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 30
+    },
+    {
+      "path": "evidence/architecture/arc13-classified-viewer-runtime-batch-2026-10-24.json",
+      "sha": "6d5f96e7da1acaa0374b52d9b4f6f781603ace55",
+      "bytes": 40780,
+      "classification": "FOUR_FIELD_MATCH_CONTEXT_RICH",
+      "indexOccurrences": 63
+    }
+  ],
+  "contextNotes": [
+    {
+      "group": "JS Admin runtime",
+      "observation": "Batch supplies original blob hash and classification notes; its consumer descriptors are more generic than the source master for 423 occurrences. Do not assume consumer strings match."
+    },
+    {
+      "group": "JS configurator runtime",
+      "observation": "Batch supplies original blob hash, notes and generic consumer descriptors for 466 entries, beyond flattened source index."
+    },
+    {
+      "group": "JS configuration/flow",
+      "observation": "Validation batch contains parameter contracts for 36 occurrences; flow model batch for 27; additional drawing/scenes/viewer entries also retain parameter contracts."
+    },
+    {
+      "group": "HTML 7 batches",
+      "observation": "All four-field tuples match raw HTML index, but batch owner/consumer descriptors differ from the raw index. Example semantic-key fields differ for three static-admin, two static-config and one static-landing occurrences; do not overwrite canonical naming."
+    },
+    {
+      "group": "Negative controls",
+      "observation": "The inline-config-scripts 3-script review and the two large-data-files review are not pointed to by master index and must be kept as independently scoped technical-data exclusions."
+    }
+  ],
+  "allowedUse": "Historical localization inventory research only, not a tested product change, not automatic translations",
+  "deploymentAllowed": false,
+  "decisionManifestModified": false
+}

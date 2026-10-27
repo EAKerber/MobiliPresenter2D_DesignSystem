@@ -1,0 +1,611 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/access/index.html",
+      "blobSha": "e28c09fd31d81f4cfded3f82a7244f8b10dddb2c"
+    },
+    {
+      "file": "app/access/manage.html",
+      "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987"
+    }
+  ],
+  "reviewScope": "Manual review of all static HTML candidates on the public access confirmation and access manager entrypoints. Classifies visible labels, metadata, access policy copy, accessible names, and controls; dynamic grant/session/server messages are not inferred from this static HTML batch.",
+  "totals": {
+    "sourceFilesReviewed": 2,
+    "classifiedOccurrences": 33,
+    "distinctValues": 27
+  },
+  "limitations": [
+    "Inventory only: product HTML/runtime were not changed and no translation bundle was created.",
+    "Authentication roles, recipient addresses, grant states, expiry values, and server-provided messages remain data or runtime-generated content and are not covered by this static batch.",
+    "Brand name Casa em Módulos is preserved as supplied brand content.",
+    "These two entrypoints do not establish ARC-13 coverage for other routes or JavaScript."
+  ],
+  "entries": [
+    {
+      "semanticKey": "access.document.title",
+      "currentText": "Acesso ao configurador | Casa em Módulos",
+      "source": {
+        "file": "app/access/index.html",
+        "blobSha": "e28c09fd31d81f4cfded3f82a7244f8b10dddb2c",
+        "line": 9
+      },
+      "consumer": "browser document title",
+      "owner": "access confirmation page metadata",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "brand.access.logo.alt",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/access/index.html",
+        "blobSha": "e28c09fd31d81f4cfded3f82a7244f8b10dddb2c",
+        "line": 26
+      },
+      "consumer": "brand logo alternative text",
+      "owner": "brand identity image",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "brand.access.home.accessible",
+      "currentText": "Casa em Módulos, início",
+      "source": {
+        "file": "app/access/index.html",
+        "blobSha": "e28c09fd31d81f4cfded3f82a7244f8b10dddb2c",
+        "line": 26
+      },
+      "consumer": "brand home link accessible name",
+      "owner": "access confirmation header",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "access.navigation.current",
+      "currentText": "Confirmar acesso",
+      "source": {
+        "file": "app/access/index.html",
+        "blobSha": "e28c09fd31d81f4cfded3f82a7244f8b10dddb2c",
+        "line": 26
+      },
+      "consumer": "current page navigation link",
+      "owner": "access confirmation header",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.menu.open",
+      "currentText": "Abrir menu",
+      "source": {
+        "file": "app/access/index.html",
+        "blobSha": "e28c09fd31d81f4cfded3f82a7244f8b10dddb2c",
+        "line": 28
+      },
+      "consumer": "menu toggle accessible name",
+      "owner": "shared public navigation",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.primary.label",
+      "currentText": "Menu do site",
+      "source": {
+        "file": "app/access/index.html",
+        "blobSha": "e28c09fd31d81f4cfded3f82a7244f8b10dddb2c",
+        "line": 29
+      },
+      "consumer": "primary navigation accessible name",
+      "owner": "shared public navigation",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.session.logout",
+      "currentText": "Sair",
+      "source": {
+        "file": "app/access/index.html",
+        "blobSha": "e28c09fd31d81f4cfded3f82a7244f8b10dddb2c",
+        "line": 33
+      },
+      "consumer": "logout control",
+      "owner": "access confirmation session controls",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.page.brand",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/access/index.html",
+        "blobSha": "e28c09fd31d81f4cfded3f82a7244f8b10dddb2c",
+        "line": 39
+      },
+      "consumer": "brand heading",
+      "owner": "access confirmation content",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "access.confirmation.title",
+      "currentText": "Confirmar acesso ao configurador",
+      "source": {
+        "file": "app/access/index.html",
+        "blobSha": "e28c09fd31d81f4cfded3f82a7244f8b10dddb2c",
+        "line": 40
+      },
+      "consumer": "access confirmation heading",
+      "owner": "access confirmation content",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.confirmation.expiry",
+      "currentText": "O link recebido por email vale por 3 horas e pode ser usado uma única vez. Confirme abaixo para abrir o configurador.",
+      "source": {
+        "file": "app/access/index.html",
+        "blobSha": "e28c09fd31d81f4cfded3f82a7244f8b10dddb2c",
+        "line": 41
+      },
+      "consumer": "access link expiry and single-use explanation",
+      "owner": "access confirmation content",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.confirmation.confirm",
+      "currentText": "Confirmar e continuar",
+      "source": {
+        "file": "app/access/index.html",
+        "blobSha": "e28c09fd31d81f4cfded3f82a7244f8b10dddb2c",
+        "line": 42
+      },
+      "consumer": "confirm access button",
+      "owner": "access confirmation content",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.confirmation.validating",
+      "currentText": "Verificando o link…",
+      "source": {
+        "file": "app/access/index.html",
+        "blobSha": "e28c09fd31d81f4cfded3f82a7244f8b10dddb2c",
+        "line": 43
+      },
+      "consumer": "access validation status",
+      "owner": "access confirmation content",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.home.return",
+      "currentText": "Voltar ao início",
+      "source": {
+        "file": "app/access/index.html",
+        "blobSha": "e28c09fd31d81f4cfded3f82a7244f8b10dddb2c",
+        "line": 44
+      },
+      "consumer": "return home link",
+      "owner": "access confirmation navigation",
+      "routes": [
+        "/access/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.manage.document.title",
+      "currentText": "Gerenciar acessos | Casa em Módulos",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 14
+      },
+      "consumer": "browser document title",
+      "owner": "access manager page metadata",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "brand.manage.logo.alt",
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 45
+      },
+      "consumer": "brand logo alternative text",
+      "owner": "brand identity image",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "brand.manage.home.accessible",
+      "currentText": "Casa em Módulos, início",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 45
+      },
+      "consumer": "brand home link accessible name",
+      "owner": "access manager header",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Preserve the brand name Casa em Módulos as supplied brand content."
+      ]
+    },
+    {
+      "semanticKey": "access.manage.navigation.current",
+      "currentText": "Gerenciar acessos",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 45
+      },
+      "consumer": "current page navigation link",
+      "owner": "access manager header",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.menu.open",
+      "currentText": "Abrir menu",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 47
+      },
+      "consumer": "menu toggle accessible name",
+      "owner": "shared public navigation",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "navigation.primary.label",
+      "currentText": "Menu do site",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 48
+      },
+      "consumer": "primary navigation accessible name",
+      "owner": "shared public navigation",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.session.logout",
+      "currentText": "Sair",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 52
+      },
+      "consumer": "logout control",
+      "owner": "access manager session controls",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.manage.eyebrow",
+      "currentText": "Acesso do configurador",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 59
+      },
+      "consumer": "access manager section eyebrow",
+      "owner": "access manager content",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.manage.title",
+      "currentText": "Gerenciar convites temporários",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 60
+      },
+      "consumer": "access manager heading",
+      "owner": "access manager content",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.manage.security.description",
+      "currentText": "Envie um link de acesso individual, válido por três horas e com resgate único. Somente contas internas com papel admin ou staff podem usar esta página.",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 61
+      },
+      "consumer": "access manager eligibility and invite policy description",
+      "owner": "access manager content",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.manage.identity.login",
+      "currentText": "Entrar com Netlify Identity",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 63
+      },
+      "consumer": "identity sign-in button",
+      "owner": "access manager sign-in panel",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.manage.form.email.label",
+      "currentText": "Email",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 65
+      },
+      "consumer": "sign-in email label",
+      "owner": "access manager sign-in form",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.manage.form.password.label",
+      "currentText": "Senha",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 66
+      },
+      "consumer": "sign-in password label",
+      "owner": "access manager sign-in form",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.manage.form.submit",
+      "currentText": "Entrar",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 67
+      },
+      "consumer": "sign-in submit button",
+      "owner": "access manager sign-in form",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.manage.denied.title",
+      "currentText": "Acesso restrito",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 70
+      },
+      "consumer": "authorization denied heading",
+      "owner": "access manager status panel",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.manage.denied.body",
+      "currentText": "Esta conta não tem o papel admin ou staff.",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 70
+      },
+      "consumer": "authorization denied explanation",
+      "owner": "access manager status panel",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.manage.invite.email.label",
+      "currentText": "Email do destinatário",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 73
+      },
+      "consumer": "invite recipient email label",
+      "owner": "access manager invite form",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.manage.invite.submit",
+      "currentText": "Enviar link de acesso",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 74
+      },
+      "consumer": "invite submission button",
+      "owner": "access manager invite form",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.manage.recent.title",
+      "currentText": "Acessos recentes",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 77
+      },
+      "consumer": "recent grants list heading",
+      "owner": "access manager grants list",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "access.manage.recent.refresh",
+      "currentText": "Atualizar",
+      "source": {
+        "file": "app/access/manage.html",
+        "blobSha": "c41af2ea77836e56437a8dd646a0e191e9e4f987",
+        "line": 77
+      },
+      "consumer": "refresh grants button",
+      "owner": "access manager grants list",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    }
+  ]
+}
