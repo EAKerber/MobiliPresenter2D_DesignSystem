@@ -1,0 +1,60 @@
+name: DS final operational branch retirement (verified merge second parent)
+
+on:
+  pull_request:
+    paths:
+      - 'tools/ds_terminal_operational.py'
+      - 'tests/test_ds_terminal_operational.py'
+      - '.github/workflows/ds-terminal-operational.yml'
+      - 'ops/ds-last-branch-retirement.json'
+  push:
+    branches: [main]
+    paths:
+      - 'ops/ds-last-branch-retirement.json'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ds-terminal-operational-retirement
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Tests of terminal SHA and negative cases
+        run: |
+          python -m unittest tests/test_ds_terminal_operational.py -v
+          python -m py_compile tools/ds_terminal_operational.py
+
+  apply:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: read
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Remove only verified operational second parent after main merge
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python tools/ds_terminal_operational.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ds-last-operational-retirement-${{ github.run_id }}
+          path: ds-last-branch-receipt.json
+          if-no-files-found: warn
