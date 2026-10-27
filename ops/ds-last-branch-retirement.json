@@ -3,6 +3,6 @@
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
   "branch": "maintenance/ds-pr41-runtime-evidence-extract-20261026",
   "mode": "MERGE_SECOND_PARENT_EXACT_MAIN",
-  "pullRequest": 0,
+  "pullRequest": 118,
   "purpose": "One-shot main merge gate. PR number filled after PR creation. Must pass exact checks and 8 protected tags; no general auto-delete."
 }
