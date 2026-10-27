@@ -46,3 +46,7 @@ A PR [#51](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51) e
 ## Seleção D04 ARC-13 por risco (27/10/2026)
 
 Novo lote de seis blobs SHA-exact, classificado em [DS_ARC13_CONTRACT_REVIEW_2026-10-27.md](DS_ARC13_CONTRACT_REVIEW_2026-10-27.md). Quatro entradas `arc13-classified-*` e duas propostas `arc13-semantic-key-proposal-*`; o lote de teclado é controle negativo com 35/35 elementos técnicos não localizáveis. **Se e somente se** o lote passar merge/readback, exclusivos da #51: 193→187; batches classificados: 38→34; outros ARC13: 38→36; traces: 69; outras arquiteturas: 3; runtime: 45. O restante HOLD.
+
+## Readback D03/D04 — PRs históricas fechadas e saldo real (27/10/2026)
+
+A #39 está **CLOSED/NOT MERGED**, pois os 21 paths exclusivos foram tratados na PR #93 e os 9 canônicos foram reconciliados na PR #94, sem merge integral; ref fonte continua HOLD. A #51 também está CLOSED/NOT MERGED, com ref fonte HOLD. A #95 integrou seis ARC-13 por SHA exata (classes técnicas vs propostas de chave), reduzindo **193→187** caminhos exclusivos: 34 classified + 36 other ARC13 + 69 consumer traces + 3 VIS-002 candidates + 45 runtime docs = 187. [Actions #40444401507](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40444401507) PASS em `main@2d869a9c494313008930bd2e6ee8594262bd985d`. Nenhuma PR aberta no readback; nenhuma ref excluída. A fonte mestre ARC13 de 1.335.718 B não foi materializada/lida integralmente nesta rodada: preservar HOLD até poder conferir cobertura de forma reproduzível.
