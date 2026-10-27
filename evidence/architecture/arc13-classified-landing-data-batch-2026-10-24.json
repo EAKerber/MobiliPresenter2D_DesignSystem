@@ -1,0 +1,827 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/landing/data.js",
+      "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+      "candidateOccurrences": 41
+    }
+  ],
+  "reviewScope": "Complete candidate review of authored public landing data. The tagline, environment labels/titles/action/description and feature statements are localizable; brand, route slugs and image assets remain stable source data.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 41,
+    "classifiedLocalizableOccurrences": 21,
+    "excludedNonlocalizableOccurrences": 20,
+    "deferredDomainOccurrences": 0,
+    "distinctCandidateTexts": 41
+  },
+  "limitations": [
+    "Inventory only; landing content and locale resources remain unchanged.",
+    "Environment and feature copy is authored commercial content; keep content ownership distinct from UI keys when translating."
+  ],
+  "entries": [
+    {
+      "currentText": "Casa em Módulos",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 2
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Product brand; preserve as a brand name."
+      ]
+    },
+    {
+      "currentText": "Móveis inteligentes, pensados para o seu espaço e para o seu orçamento.",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 3
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.hero.tagline"
+    },
+    {
+      "currentText": "/landing/assets/icons/large/cozinha.webp",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 5
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Route or asset path; implementation value."
+      ]
+    },
+    {
+      "currentText": "/viewer/",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 5
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Route or asset path; implementation value."
+      ]
+    },
+    {
+      "currentText": "cozinha",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 5
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable route/data key; keep independent from translated display labels."
+      ]
+    },
+    {
+      "currentText": "Cozinha",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 5
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.environment.kitchen.label"
+    },
+    {
+      "currentText": "Cozinha modular",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 5
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.environment.kitchen.title"
+    },
+    {
+      "currentText": "Explorar a cozinha",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 5
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.environment.kitchen.action"
+    },
+    {
+      "currentText": "Funcionalidade e beleza para o coração da casa.",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 5
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.environment.kitchen.description"
+    },
+    {
+      "currentText": "/landing/assets/icons/large/sala.webp",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 6
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Route or asset path; implementation value."
+      ]
+    },
+    {
+      "currentText": "/landing/assets/icons/small/sala.webp",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 6
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Route or asset path; implementation value."
+      ]
+    },
+    {
+      "currentText": "Conforto e estilo para viver bons momentos.",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 6
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.environment.livingRoom.description"
+    },
+    {
+      "currentText": "sala",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 6
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable route/data key; keep independent from translated display labels."
+      ]
+    },
+    {
+      "currentText": "Sala",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 6
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.environment.livingRoom.label"
+    },
+    {
+      "currentText": "Sala modular",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 6
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.environment.livingRoom.title"
+    },
+    {
+      "currentText": "/landing/assets/icons/large/quarto.webp",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 7
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Route or asset path; implementation value."
+      ]
+    },
+    {
+      "currentText": "/landing/assets/icons/small/quarto.webp",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 7
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Route or asset path; implementation value."
+      ]
+    },
+    {
+      "currentText": "quarto",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 7
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable route/data key; keep independent from translated display labels."
+      ]
+    },
+    {
+      "currentText": "Quarto",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 7
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.environment.bedroom.label"
+    },
+    {
+      "currentText": "Quarto modular",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 7
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.environment.bedroom.title"
+    },
+    {
+      "currentText": "Soluções inteligentes para o seu descanso.",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 7
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.environment.bedroom.description"
+    },
+    {
+      "currentText": "/landing/assets/icons/large/escritorio.webp",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 8
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Route or asset path; implementation value."
+      ]
+    },
+    {
+      "currentText": "/landing/assets/icons/small/escritorio.webp",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 8
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Route or asset path; implementation value."
+      ]
+    },
+    {
+      "currentText": "escritorio",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 8
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable route/data key; keep independent from translated display labels."
+      ]
+    },
+    {
+      "currentText": "Escritório",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 8
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.environment.office.label"
+    },
+    {
+      "currentText": "Escritório modular",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 8
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.environment.office.title"
+    },
+    {
+      "currentText": "Produtividade com organização e design.",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 8
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.environment.office.description"
+    },
+    {
+      "currentText": "/landing/assets/icons/large/lavanderia.webp",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 9
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Route or asset path; implementation value."
+      ]
+    },
+    {
+      "currentText": "/landing/assets/icons/small/lavanderia.webp",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 9
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Route or asset path; implementation value."
+      ]
+    },
+    {
+      "currentText": "lavanderia",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 9
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable route/data key; keep independent from translated display labels."
+      ]
+    },
+    {
+      "currentText": "Lavanderia",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 9
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.environment.laundry.label"
+    },
+    {
+      "currentText": "Lavanderia modular",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 9
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.environment.laundry.title"
+    },
+    {
+      "currentText": "Praticidade que facilita o dia a dia.",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 9
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.environment.laundry.description"
+    },
+    {
+      "currentText": "/landing/assets/icons/ui/white/qualidade.svg",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 12
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Route or asset path; implementation value."
+      ]
+    },
+    {
+      "currentText": "Qualidade de móvel planejado",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 12
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.feature.quality"
+    },
+    {
+      "currentText": "/landing/assets/icons/ui/white/modularidade.svg",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 13
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Route or asset path; implementation value."
+      ]
+    },
+    {
+      "currentText": "Praticidade de um sistema modular",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 13
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.feature.modularity"
+    },
+    {
+      "currentText": "/landing/assets/icons/ui/white/preco.svg",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 14
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Route or asset path; implementation value."
+      ]
+    },
+    {
+      "currentText": "Preço pensado para o seu projeto",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 14
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.feature.price"
+    },
+    {
+      "currentText": "/landing/assets/icons/ui/white/entrega.svg",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 15
+      },
+      "consumer": "brand, route slug, or asset path in authored page data",
+      "owner": "landing data contract",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Route or asset path; implementation value."
+      ]
+    },
+    {
+      "currentText": "Entrega e instalação especializada",
+      "source": {
+        "file": "app/landing/data.js",
+        "blobSha": "69da87e4750c336eeb15daf8c773a87ef99c68bf",
+        "line": 15
+      },
+      "consumer": "public landing hero, environment-card copy, action, or feature statement",
+      "owner": "public landing content",
+      "routes": [
+        "/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Fixed public-facing authored copy; preserve as a localized text entry."
+      ],
+      "semanticKey": "landing.feature.delivery"
+    }
+  ]
+}

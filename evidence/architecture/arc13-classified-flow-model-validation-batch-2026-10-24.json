@@ -1,0 +1,926 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/core/flow-model.js",
+      "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+      "candidateOccurrences": 44
+    }
+  ],
+  "reviewScope": "Complete lexical candidate review of the shared normalized-flow model. Validation messages are passed into administration feedback; schema/mode IDs and nested path fragments remain technical context.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 44,
+    "classifiedLocalizableOccurrences": 31,
+    "excludedNonlocalizableOccurrences": 13,
+    "deferredDomainOccurrences": 0,
+    "distinctCandidateTexts": 41
+  },
+  "limitations": [
+    "Inventory only; flow validation code and locale resources remain unchanged.",
+    "Dynamic path, stage, group, section and item IDs must remain parameters or receive friendly-label mapping later."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 2
+      },
+      "consumer": "flow/schema/action ID or nested validation path",
+      "owner": "flow model contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema, behavior ID or structured validation path; retain as technical context, not translated prose."
+      ]
+    },
+    {
+      "currentText": "Item capability registry is required.",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 7
+      },
+      "consumer": "flow/schema/action ID or nested validation path",
+      "owner": "flow model contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema, behavior ID or structured validation path; retain as technical context, not translated prose."
+      ]
+    },
+    {
+      "currentText": "NormalizedConfiguratorFlow 1.0",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 9
+      },
+      "consumer": "flow/schema/action ID or nested validation path",
+      "owner": "flow model contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema, behavior ID or structured validation path; retain as technical context, not translated prose."
+      ]
+    },
+    {
+      "currentText": "action",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 41
+      },
+      "consumer": "flow/schema/action ID or nested validation path",
+      "owner": "flow model contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema, behavior ID or structured validation path; retain as technical context, not translated prose."
+      ]
+    },
+    {
+      "currentText": "auto",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 48
+      },
+      "consumer": "flow/schema/action ID or nested validation path",
+      "owner": "flow model contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema, behavior ID or structured validation path; retain as technical context, not translated prose."
+      ]
+    },
+    {
+      "currentText": "stack",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 58
+      },
+      "consumer": "flow/schema/action ID or nested validation path",
+      "owner": "flow model contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema, behavior ID or structured validation path; retain as technical context, not translated prose."
+      ]
+    },
+    {
+      "currentText": "custom stage hierarchy defaults are missing: ${stage.id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 76
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.76"
+    },
+    {
+      "currentText": "custom",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 80
+      },
+      "consumer": "flow/schema/action ID or nested validation path",
+      "owner": "flow model contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema, behavior ID or structured validation path; retain as technical context, not translated prose."
+      ]
+    },
+    {
+      "currentText": "custom stage mixes incompatible interaction behaviors: ${stage.id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 93
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.93"
+    },
+    {
+      "currentText": "custom",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 110
+      },
+      "consumer": "flow/schema/action ID or nested validation path",
+      "owner": "flow model contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema, behavior ID or structured validation path; retain as technical context, not translated prose."
+      ]
+    },
+    {
+      "currentText": "legacy hierarchy template is missing for stage: ${stage.id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 127
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.127"
+    },
+    {
+      "currentText": "legacy hierarchy template mixes incompatible interaction behaviors: ${stage.id}/${sectionSpec.id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 153
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id",
+        "sectionSpec.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.153"
+    },
+    {
+      "currentText": "legacy hierarchy template does not assign source item: ${stage.id}/${id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 166
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id",
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.166"
+    },
+    {
+      "currentText": "stack",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 197
+      },
+      "consumer": "flow/schema/action ID or nested validation path",
+      "owner": "flow model contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema, behavior ID or structured validation path; retain as technical context, not translated prose."
+      ]
+    },
+    {
+      "currentText": "hierarchy section mixes incompatible interaction behaviors: ${stage.id}/${sectionEntry.id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 204
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id",
+        "sectionEntry.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.204"
+    },
+    {
+      "currentText": "action",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 211
+      },
+      "consumer": "flow/schema/action ID or nested validation path",
+      "owner": "flow model contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema, behavior ID or structured validation path; retain as technical context, not translated prose."
+      ]
+    },
+    {
+      "currentText": "invalid normalized flow",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 234
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.234"
+    },
+    {
+      "currentText": "stages.${stage.id || stageIndex}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 241
+      },
+      "consumer": "flow/schema/action ID or nested validation path",
+      "owner": "flow model contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema, behavior ID or structured validation path; retain as technical context, not translated prose."
+      ]
+    },
+    {
+      "currentText": "duplicate or missing stage id: ${stage.id || stageIndex}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 242
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id || stageIndex"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.242"
+    },
+    {
+      "currentText": "non-deterministic stage order: ${stage.id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 244
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.244"
+    },
+    {
+      "currentText": "stage groups must be an array: ${stage.id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 245
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.245"
+    },
+    {
+      "currentText": "${stagePath}.groups.${groupEntry.id || groupIndex}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 250
+      },
+      "consumer": "flow/schema/action ID or nested validation path",
+      "owner": "flow model contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema, behavior ID or structured validation path; retain as technical context, not translated prose."
+      ]
+    },
+    {
+      "currentText": "duplicate or missing group id: ${groupEntry.id || groupIndex}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 251
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "groupEntry.id || groupIndex"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.251"
+    },
+    {
+      "currentText": "non-deterministic group order: ${groupEntry.id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 253
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "groupEntry.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.253"
+    },
+    {
+      "currentText": "group sections must be an array: ${groupEntry.id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 254
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "groupEntry.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.254"
+    },
+    {
+      "currentText": "${groupPath}.sections.${sectionEntry.id || sectionIndex}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 257
+      },
+      "consumer": "flow/schema/action ID or nested validation path",
+      "owner": "flow model contract",
+      "routes": [],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable schema, behavior ID or structured validation path; retain as technical context, not translated prose."
+      ]
+    },
+    {
+      "currentText": "duplicate or missing section id in stage ${stage.id}: ${sectionEntry.id || sectionIndex}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 258
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id",
+        "sectionEntry.id || sectionIndex"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.258"
+    },
+    {
+      "currentText": "non-deterministic section order: ${sectionEntry.id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 260
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "sectionEntry.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.260"
+    },
+    {
+      "currentText": "invalid section behavior: ${sectionEntry.behavior}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 261
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "sectionEntry.behavior"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.261"
+    },
+    {
+      "currentText": "section keyboard state must be boolean: ${sectionEntry.id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 262
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "sectionEntry.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.262"
+    },
+    {
+      "currentText": "section must own at least one item: ${sectionEntry.id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 264
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "sectionEntry.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.264"
+    },
+    {
+      "currentText": "unknown flow item: ${itemId}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 270
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "itemId"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.270"
+    },
+    {
+      "currentText": "item repeated in section: ${itemId}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 271
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "itemId"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.271"
+    },
+    {
+      "currentText": "item owned by multiple flow sections: ${itemId}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 273
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "itemId"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.273"
+    },
+    {
+      "currentText": "source stage missing from normalized flow: ${sourceStage.id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 289
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "sourceStage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.289"
+    },
+    {
+      "currentText": "source item missing from normalized flow: ${id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 297
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.297"
+    },
+    {
+      "currentText": "normalized flow invented an item: ${id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 300
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.300"
+    },
+    {
+      "currentText": "settings with stages are required",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 328
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.328"
+    },
+    {
+      "currentText": "flow source cannot mix flat items with hierarchy groups",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 332
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.332"
+    },
+    {
+      "currentText": "invalid source stage at index ${index}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 340
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "index"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.340"
+    },
+    {
+      "currentText": "duplicate source stage: ${stage.id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 343
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "stage.id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.343"
+    },
+    {
+      "currentText": "unknown source item: ${id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 346
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.346"
+    },
+    {
+      "currentText": "source item assigned more than once: ${id}",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 347
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [
+        "id"
+      ],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.347"
+    },
+    {
+      "currentText": "flat legacy settings require explicit hierarchy defaults",
+      "source": {
+        "file": "app/core/flow-model.js",
+        "blobSha": "0d27cd8effda1b0d70e89f55c423fa58d067e8ed",
+        "line": 357
+      },
+      "consumer": "normalized flow validation error shown through administration feedback",
+      "owner": "administration flow validation",
+      "routes": [
+        "/admin.html"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Flow validation error reaches the administration error feedback; localize the message and preserve dynamic stage/item IDs."
+      ],
+      "semanticKey": "admin.flowValidation.357"
+    }
+  ]
+}

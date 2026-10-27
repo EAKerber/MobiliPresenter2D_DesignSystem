@@ -1,0 +1,606 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/viewer/data.js",
+      "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+      "candidateOccurrences": 30
+    }
+  ],
+  "reviewScope": "Complete lexical candidate review of public viewer page-composition data. View labels and detail-section headings are interface copy; adapter/schema versions, layout keys, view-kind IDs and placeholder asset paths remain technical.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 30,
+    "classifiedLocalizableOccurrences": 9,
+    "excludedNonlocalizableOccurrences": 21,
+    "deferredDomainOccurrences": 0,
+    "distinctCandidateTexts": 26
+  },
+  "limitations": [
+    "Inventory only; runtime or locale resources remain unchanged.",
+    "Viewer category names and domain-provided module/catalog content remain data-driven; this batch only classifies fixed layout/view captions."
+  ],
+  "entries": [
+    {
+      "currentText": "PublicSceneAdapter 0.5",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 3
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "ProductCatalog2D 1.0",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 4
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "Scene2D 1.0",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 4
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "details",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 5
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "overview",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 5
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "scene",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 5
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "views",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 5
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "Detalhe do módulo",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 7
+      },
+      "consumer": "viewer view caption or detail-section heading",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as a user-facing viewer caption or detail-section heading."
+      ],
+      "semanticKey": "viewer.view.focus"
+    },
+    {
+      "currentText": "focus",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 7
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "isometric-open",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 8
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "Perspectiva aberta",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 8
+      },
+      "consumer": "viewer view caption or detail-section heading",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as a user-facing viewer caption or detail-section heading."
+      ],
+      "semanticKey": "viewer.view.open"
+    },
+    {
+      "currentText": "internal",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 9
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "Vista interna",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 9
+      },
+      "consumer": "viewer view caption or detail-section heading",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as a user-facing viewer caption or detail-section heading."
+      ],
+      "semanticKey": "viewer.view.internal"
+    },
+    {
+      "currentText": "front",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 10
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "Vista frontal",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 10
+      },
+      "consumer": "viewer view caption or detail-section heading",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as a user-facing viewer caption or detail-section heading."
+      ],
+      "semanticKey": "viewer.view.front"
+    },
+    {
+      "currentText": "side",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 11
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "Vista lateral",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 11
+      },
+      "consumer": "viewer view caption or detail-section heading",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as a user-facing viewer caption or detail-section heading."
+      ],
+      "semanticKey": "viewer.view.side"
+    },
+    {
+      "currentText": "internal-front",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 12
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "internal-front",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 12
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "Vista interna / frontal",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 12
+      },
+      "consumer": "viewer view caption or detail-section heading",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as a user-facing viewer caption or detail-section heading."
+      ],
+      "semanticKey": "viewer.view.internalFront"
+    },
+    {
+      "currentText": "isometric",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 13
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "Vista isométrica",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 13
+      },
+      "consumer": "viewer view caption or detail-section heading",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as a user-facing viewer caption or detail-section heading."
+      ],
+      "semanticKey": "viewer.view.isometric"
+    },
+    {
+      "currentText": "assets/icon-placeholder.svg",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 16
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "Componentes",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 16
+      },
+      "consumer": "viewer view caption or detail-section heading",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as a user-facing viewer caption or detail-section heading."
+      ],
+      "semanticKey": "viewer.detail.components"
+    },
+    {
+      "currentText": "components",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 16
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "components",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 16
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "assets/icon-placeholder.svg",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 17
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "requirements",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 17
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "requirements",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 17
+      },
+      "consumer": "contract/schema identifier, layout key, view type, or asset path",
+      "owner": "viewer page composition data",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable page composition, contract, schema or asset value, not a localized display label."
+      ]
+    },
+    {
+      "currentText": "Requisitos",
+      "source": {
+        "file": "app/viewer/data.js",
+        "blobSha": "f4b19fb8a5da6e950b314b3bf84b459e0b445947",
+        "line": 17
+      },
+      "consumer": "viewer view caption or detail-section heading",
+      "owner": "public viewer interface",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "Rendered as a user-facing viewer caption or detail-section heading."
+      ],
+      "semanticKey": "viewer.detail.requirements"
+    }
+  ]
+}

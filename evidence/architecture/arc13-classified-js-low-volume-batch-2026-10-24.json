@@ -1,0 +1,1355 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/core/admin-bootstrap-retry.mjs",
+      "blobSha": "78d23e7d0d28c700e3481a49a918d7773d0afc23",
+      "candidateOccurrences": 7
+    },
+    {
+      "file": "app/core/browser-compat.js",
+      "blobSha": "ce9fef7bc39b9db3cc3ca22802adc3c0f4e4d936",
+      "candidateOccurrences": 2
+    },
+    {
+      "file": "app/core/fingerprint.js",
+      "blobSha": "3353604acacdcd77614f487a936aeb23a27867f0",
+      "candidateOccurrences": 1
+    },
+    {
+      "file": "app/core/finishes.js",
+      "blobSha": "530c6e46f09550269c51758441e4e602f20fe04e",
+      "candidateOccurrences": 1
+    },
+    {
+      "file": "app/core/hierarchy-editor.js",
+      "blobSha": "5d47b1b83d30789b80d2471680b479b70b415780",
+      "candidateOccurrences": 8
+    },
+    {
+      "file": "app/core/item-capabilities.js",
+      "blobSha": "98ef550b3d57e2f8a06e88ec9e67b841c508f905",
+      "candidateOccurrences": 1
+    },
+    {
+      "file": "app/core/layout-profiles.js",
+      "blobSha": "9f12bf877e234a48de23723074730f5058c2bacc",
+      "candidateOccurrences": 4
+    },
+    {
+      "file": "app/core/pricing.js",
+      "blobSha": "b0f095320bd9ab1d789f9c4004a83d6f27d873e7",
+      "candidateOccurrences": 3
+    },
+    {
+      "file": "app/core/published-buyer-projection.js",
+      "blobSha": "4a3818187f577b0056ccba4c39f24f1881bdb0e2",
+      "candidateOccurrences": 6
+    },
+    {
+      "file": "app/core/published-configuration.js",
+      "blobSha": "7b5d13dfb43983a0efa622c1ad4a4531820a8ad0",
+      "candidateOccurrences": 1
+    },
+    {
+      "file": "app/core/runtime-contracts.js",
+      "blobSha": "593ae7046d01182a05f4e29e1e64f2b2935bd364",
+      "candidateOccurrences": 1
+    },
+    {
+      "file": "app/core/scene-geometry.js",
+      "blobSha": "91f5d37d72c4183d1bb38695fbf74c67a110c8b0",
+      "candidateOccurrences": 5
+    },
+    {
+      "file": "app/core/state.js",
+      "blobSha": "792b89525e5421c889f0ab42ee5977f3fdd1069b",
+      "candidateOccurrences": 2
+    },
+    {
+      "file": "app/core/stone.js",
+      "blobSha": "bbe9531e2d5371f4c9cdfc7631a75a86391e26c5",
+      "candidateOccurrences": 3
+    },
+    {
+      "file": "app/core/v5-normal-save.js",
+      "blobSha": "e9da3059ec2bbb566a0ac4c087553d383451e2e7",
+      "candidateOccurrences": 1
+    },
+    {
+      "file": "app/core/v5-publication-inspection.js",
+      "blobSha": "0da4510829237478927792350fcc459b12517f63",
+      "candidateOccurrences": 1
+    },
+    {
+      "file": "app/core/v5-publication-migration.js",
+      "blobSha": "638cf679a8ec34425cdaaf9b39df36df121c2303",
+      "candidateOccurrences": 1
+    },
+    {
+      "file": "app/core/validation.js",
+      "blobSha": "74ce846a1cb934990ef38200d82175c0425162fb",
+      "candidateOccurrences": 2
+    },
+    {
+      "file": "app/core/visibility.js",
+      "blobSha": "d7af0f76530233e0d3dfb32f2ca08397f855e176",
+      "candidateOccurrences": 2
+    },
+    {
+      "file": "app/data/mock-price-book.js",
+      "blobSha": "e34d0967b83aa03181b6d6b17902056bc074efa2",
+      "candidateOccurrences": 7
+    },
+    {
+      "file": "app/data/presentation-policy-defaults.js",
+      "blobSha": "e7d9643f00212b257eedbc6fb046ea2804462446",
+      "candidateOccurrences": 2
+    },
+    {
+      "file": "app/viewer/public-data.js",
+      "blobSha": "68b78120ba4be4798ff367eaa6ba840278abe6eb",
+      "candidateOccurrences": 4
+    }
+  ],
+  "reviewScope": "Manual classification of all 65 lexical candidates in 22 low-volume runtime source files. User-facing Admin bootstrap/hierarchy and pricing fallback copy are classified; code/schema ids, runtime diagnostics, generated CSS/geometry, and locale constants are excluded; authored mock price-book content is deferred.",
+  "totals": {
+    "sourceFilesReviewed": 22,
+    "candidateOccurrencesReviewed": 65,
+    "classifiedLocalizableOccurrences": 9,
+    "excludedNonlocalizableOccurrences": 54,
+    "deferredOwnershipReviewOccurrences": 2,
+    "distinctCandidateTexts": 41
+  },
+  "limitations": [
+    "Inventory only; no product runtime or bundle was changed.",
+    "Heuristic candidates are classified by their source context; lexical scanning still may miss computed/UI strings and template substitutions.",
+    "Commercial label/disclaimer remains authored data pending source-of-truth review.",
+    "This batch covers only 22 low-volume files, not the rest of the 52 runtime sources."
+  ],
+  "entries": [
+    {
+      "currentText": "authenticated fetch and user lookup required",
+      "source": {
+        "file": "app/core/admin-bootstrap-retry.mjs",
+        "blobSha": "78d23e7d0d28c700e3481a49a918d7773d0afc23",
+        "line": 18
+      },
+      "consumer": "internal exception contract; not shown to users",
+      "owner": "admin bootstrap runtime",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "internal exception contract; not shown to users"
+      ]
+    },
+    {
+      "semanticKey": "admin.bootstrap.network",
+      "currentText": "Não foi possível conectar à administração. Tente novamente.",
+      "source": {
+        "file": "app/core/admin-bootstrap-retry.mjs",
+        "blobSha": "78d23e7d0d28c700e3481a49a918d7773d0afc23",
+        "line": 29
+      },
+      "consumer": "admin bootstrap network failure message",
+      "owner": "admin bootstrap user-facing error",
+      "routes": [
+        "/admin/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.bootstrap.sessionUnconfirmed",
+      "currentText": "Sessão ainda não confirmada. Verifique o acesso e tente novamente.",
+      "source": {
+        "file": "app/core/admin-bootstrap-retry.mjs",
+        "blobSha": "78d23e7d0d28c700e3481a49a918d7773d0afc23",
+        "line": 42
+      },
+      "consumer": "admin bootstrap session readiness error",
+      "owner": "admin bootstrap user-facing error",
+      "routes": [
+        "/admin/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.bootstrap.forbidden",
+      "currentText": "Sua conta não tem permissão administrativa.",
+      "source": {
+        "file": "app/core/admin-bootstrap-retry.mjs",
+        "blobSha": "78d23e7d0d28c700e3481a49a918d7773d0afc23",
+        "line": 45
+      },
+      "consumer": "admin bootstrap authorization error",
+      "owner": "admin bootstrap user-facing error",
+      "routes": [
+        "/admin/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.bootstrap.unavailable",
+      "currentText": "Não foi possível carregar os dados administrativos. Tente novamente.",
+      "source": {
+        "file": "app/core/admin-bootstrap-retry.mjs",
+        "blobSha": "78d23e7d0d28c700e3481a49a918d7773d0afc23",
+        "line": 48
+      },
+      "consumer": "admin bootstrap unavailable error",
+      "owner": "admin bootstrap user-facing error",
+      "routes": [
+        "/admin/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "semanticKey": "admin.bootstrap.invalidPayload",
+      "currentText": "Os dados administrativos recebidos são inválidos.",
+      "source": {
+        "file": "app/core/admin-bootstrap-retry.mjs",
+        "blobSha": "78d23e7d0d28c700e3481a49a918d7773d0afc23",
+        "line": 52
+      },
+      "consumer": "admin bootstrap payload validation error",
+      "owner": "admin bootstrap user-facing error",
+      "routes": [
+        "/admin/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "This identical message occurs at two separate validation branches; each source location remains a separate occurrence."
+      ]
+    },
+    {
+      "semanticKey": "admin.bootstrap.invalidPayload",
+      "currentText": "Os dados administrativos recebidos são inválidos.",
+      "source": {
+        "file": "app/core/admin-bootstrap-retry.mjs",
+        "blobSha": "78d23e7d0d28c700e3481a49a918d7773d0afc23",
+        "line": 55
+      },
+      "consumer": "admin bootstrap payload validation error",
+      "owner": "admin bootstrap user-facing error",
+      "routes": [
+        "/admin/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only",
+      "notes": [
+        "This identical message occurs at two separate validation branches; each source location remains a separate occurrence."
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/browser-compat.js",
+        "blobSha": "ce9fef7bc39b9db3cc3ca22802adc3c0f4e4d936",
+        "line": 2
+      },
+      "consumer": "strict-mode directive or runtime TypeError contract",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or runtime TypeError contract"
+      ]
+    },
+    {
+      "currentText": "Object.hasOwn called on null or undefined",
+      "source": {
+        "file": "app/core/browser-compat.js",
+        "blobSha": "ce9fef7bc39b9db3cc3ca22802adc3c0f4e4d936",
+        "line": 6
+      },
+      "consumer": "strict-mode directive or runtime TypeError contract",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or runtime TypeError contract"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/fingerprint.js",
+        "blobSha": "3353604acacdcd77614f487a936aeb23a27867f0",
+        "line": 2
+      },
+      "consumer": "strict-mode directive",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/finishes.js",
+        "blobSha": "530c6e46f09550269c51758441e4e602f20fe04e",
+        "line": 2
+      },
+      "consumer": "strict-mode directive",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/hierarchy-editor.js",
+        "blobSha": "5d47b1b83d30789b80d2471680b479b70b415780",
+        "line": 2
+      },
+      "consumer": "strict-mode directive, DOM ids, or locale identifier",
+      "owner": "admin hierarchy editor",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, DOM ids, or locale identifier"
+      ]
+    },
+    {
+      "currentText": "${stage.id}-group",
+      "source": {
+        "file": "app/core/hierarchy-editor.js",
+        "blobSha": "5d47b1b83d30789b80d2471680b479b70b415780",
+        "line": 205
+      },
+      "consumer": "strict-mode directive, DOM ids, or locale identifier",
+      "owner": "admin hierarchy editor",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, DOM ids, or locale identifier"
+      ]
+    },
+    {
+      "currentText": "group",
+      "source": {
+        "file": "app/core/hierarchy-editor.js",
+        "blobSha": "5d47b1b83d30789b80d2471680b479b70b415780",
+        "line": 205
+      },
+      "consumer": "strict-mode directive, DOM ids, or locale identifier",
+      "owner": "admin hierarchy editor",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, DOM ids, or locale identifier"
+      ]
+    },
+    {
+      "semanticKey": "admin.hierarchy.group.defaultLabel",
+      "currentText": "Grupo",
+      "source": {
+        "file": "app/core/hierarchy-editor.js",
+        "blobSha": "5d47b1b83d30789b80d2471680b479b70b415780",
+        "line": 206
+      },
+      "consumer": "default group heading in hierarchy editor",
+      "owner": "admin hierarchy editor",
+      "routes": [
+        "/admin/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "currentText": "${stage.id}-items",
+      "source": {
+        "file": "app/core/hierarchy-editor.js",
+        "blobSha": "5d47b1b83d30789b80d2471680b479b70b415780",
+        "line": 209
+      },
+      "consumer": "strict-mode directive, DOM ids, or locale identifier",
+      "owner": "admin hierarchy editor",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, DOM ids, or locale identifier"
+      ]
+    },
+    {
+      "currentText": "items",
+      "source": {
+        "file": "app/core/hierarchy-editor.js",
+        "blobSha": "5d47b1b83d30789b80d2471680b479b70b415780",
+        "line": 209
+      },
+      "consumer": "strict-mode directive, DOM ids, or locale identifier",
+      "owner": "admin hierarchy editor",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, DOM ids, or locale identifier"
+      ]
+    },
+    {
+      "semanticKey": "admin.hierarchy.items.defaultLabel",
+      "currentText": "Itens",
+      "source": {
+        "file": "app/core/hierarchy-editor.js",
+        "blobSha": "5d47b1b83d30789b80d2471680b479b70b415780",
+        "line": 210
+      },
+      "consumer": "default items section heading in hierarchy editor",
+      "owner": "admin hierarchy editor",
+      "routes": [
+        "/admin/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "currentText": "pt-BR",
+      "source": {
+        "file": "app/core/hierarchy-editor.js",
+        "blobSha": "5d47b1b83d30789b80d2471680b479b70b415780",
+        "line": 247
+      },
+      "consumer": "strict-mode directive, DOM ids, or locale identifier",
+      "owner": "admin hierarchy editor",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, DOM ids, or locale identifier"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/item-capabilities.js",
+        "blobSha": "98ef550b3d57e2f8a06e88ec9e67b841c508f905",
+        "line": 2
+      },
+      "consumer": "strict-mode directive",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/layout-profiles.js",
+        "blobSha": "9f12bf877e234a48de23723074730f5058c2bacc",
+        "line": 2
+      },
+      "consumer": "strict-mode directive, schema version, or developer error",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, schema version, or developer error"
+      ]
+    },
+    {
+      "currentText": "ConfiguratorLayoutProfiles2D 1.0",
+      "source": {
+        "file": "app/core/layout-profiles.js",
+        "blobSha": "9f12bf877e234a48de23723074730f5058c2bacc",
+        "line": 4
+      },
+      "consumer": "strict-mode directive, schema version, or developer error",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, schema version, or developer error"
+      ]
+    },
+    {
+      "currentText": "viewport width must be a finite non-negative number",
+      "source": {
+        "file": "app/core/layout-profiles.js",
+        "blobSha": "9f12bf877e234a48de23723074730f5058c2bacc",
+        "line": 11
+      },
+      "consumer": "strict-mode directive, schema version, or developer error",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, schema version, or developer error"
+      ]
+    },
+    {
+      "currentText": "unsupported layout profile: ${profile || \"(empty)\"}",
+      "source": {
+        "file": "app/core/layout-profiles.js",
+        "blobSha": "9f12bf877e234a48de23723074730f5058c2bacc",
+        "line": 18
+      },
+      "consumer": "strict-mode directive, schema version, or developer error",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, schema version, or developer error"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/pricing.js",
+        "blobSha": "b0f095320bd9ab1d789f9c4004a83d6f27d873e7",
+        "line": 2
+      },
+      "owner": "commercial pricing presentation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        null
+      ]
+    },
+    {
+      "currentText": "estimate",
+      "source": {
+        "file": "app/core/pricing.js",
+        "blobSha": "b0f095320bd9ab1d789f9c4004a83d6f27d873e7",
+        "line": 159
+      },
+      "owner": "commercial pricing presentation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        null
+      ]
+    },
+    {
+      "semanticKey": "pricing.estimate.defaultLabel",
+      "currentText": "Estimativa da composição",
+      "source": {
+        "file": "app/core/pricing.js",
+        "blobSha": "b0f095320bd9ab1d789f9c4004a83d6f27d873e7",
+        "line": 161
+      },
+      "consumer": "fallback estimate label exposed to pricing UI",
+      "owner": "pricing presentation",
+      "routes": [
+        "/admin/"
+      ],
+      "parameters": [],
+      "classification": "interface-localizable",
+      "status": "classified-inventory-only"
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/published-buyer-projection.js",
+        "blobSha": "4a3818187f577b0056ccba4c39f24f1881bdb0e2",
+        "line": 2
+      },
+      "consumer": "strict-mode directive, schema/version ids, or internal contract errors",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, schema/version ids, or internal contract errors"
+      ]
+    },
+    {
+      "currentText": "published buyer configuration is required",
+      "source": {
+        "file": "app/core/published-buyer-projection.js",
+        "blobSha": "4a3818187f577b0056ccba4c39f24f1881bdb0e2",
+        "line": 12
+      },
+      "consumer": "strict-mode directive, schema/version ids, or internal contract errors",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, schema/version ids, or internal contract errors"
+      ]
+    },
+    {
+      "currentText": "unsupported published buyer configuration schema",
+      "source": {
+        "file": "app/core/published-buyer-projection.js",
+        "blobSha": "4a3818187f577b0056ccba4c39f24f1881bdb0e2",
+        "line": 16
+      },
+      "consumer": "strict-mode directive, schema/version ids, or internal contract errors",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, schema/version ids, or internal contract errors"
+      ]
+    },
+    {
+      "currentText": "published stage missing from normalized flow: ",
+      "source": {
+        "file": "app/core/published-buyer-projection.js",
+        "blobSha": "4a3818187f577b0056ccba4c39f24f1881bdb0e2",
+        "line": 37
+      },
+      "consumer": "strict-mode directive, schema/version ids, or internal contract errors",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, schema/version ids, or internal contract errors"
+      ]
+    },
+    {
+      "currentText": "BuyerConfiguratorPayload 1.0",
+      "source": {
+        "file": "app/core/published-buyer-projection.js",
+        "blobSha": "4a3818187f577b0056ccba4c39f24f1881bdb0e2",
+        "line": 63
+      },
+      "consumer": "strict-mode directive, schema/version ids, or internal contract errors",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, schema/version ids, or internal contract errors"
+      ]
+    },
+    {
+      "currentText": "invalid published buyer payload",
+      "source": {
+        "file": "app/core/published-buyer-projection.js",
+        "blobSha": "4a3818187f577b0056ccba4c39f24f1881bdb0e2",
+        "line": 100
+      },
+      "consumer": "strict-mode directive, schema/version ids, or internal contract errors",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, schema/version ids, or internal contract errors"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/published-configuration.js",
+        "blobSha": "7b5d13dfb43983a0efa622c1ad4a4531820a8ad0",
+        "line": 1
+      },
+      "consumer": "strict-mode directive",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/runtime-contracts.js",
+        "blobSha": "593ae7046d01182a05f4e29e1e64f2b2935bd364",
+        "line": 2
+      },
+      "consumer": "strict-mode directive",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/scene-geometry.js",
+        "blobSha": "91f5d37d72c4183d1bb38695fbf74c67a110c8b0",
+        "line": 2
+      },
+      "consumer": "strict-mode directive or generated geometry percentages",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or generated geometry percentages"
+      ]
+    },
+    {
+      "currentText": "${bounds.x / scene.canvas.width * 100}%",
+      "source": {
+        "file": "app/core/scene-geometry.js",
+        "blobSha": "91f5d37d72c4183d1bb38695fbf74c67a110c8b0",
+        "line": 8
+      },
+      "consumer": "strict-mode directive or generated geometry percentages",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or generated geometry percentages"
+      ]
+    },
+    {
+      "currentText": "${bounds.y / scene.canvas.height * 100}%",
+      "source": {
+        "file": "app/core/scene-geometry.js",
+        "blobSha": "91f5d37d72c4183d1bb38695fbf74c67a110c8b0",
+        "line": 9
+      },
+      "consumer": "strict-mode directive or generated geometry percentages",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or generated geometry percentages"
+      ]
+    },
+    {
+      "currentText": "${bounds.width / scene.canvas.width * 100}%",
+      "source": {
+        "file": "app/core/scene-geometry.js",
+        "blobSha": "91f5d37d72c4183d1bb38695fbf74c67a110c8b0",
+        "line": 10
+      },
+      "consumer": "strict-mode directive or generated geometry percentages",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or generated geometry percentages"
+      ]
+    },
+    {
+      "currentText": "${bounds.height / scene.canvas.height * 100}%",
+      "source": {
+        "file": "app/core/scene-geometry.js",
+        "blobSha": "91f5d37d72c4183d1bb38695fbf74c67a110c8b0",
+        "line": 11
+      },
+      "consumer": "strict-mode directive or generated geometry percentages",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or generated geometry percentages"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/state.js",
+        "blobSha": "792b89525e5421c889f0ab42ee5977f3fdd1069b",
+        "line": 2
+      },
+      "consumer": "strict-mode directive or schema version",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or schema version"
+      ]
+    },
+    {
+      "currentText": "ViewerState2D 2.2",
+      "source": {
+        "file": "app/core/state.js",
+        "blobSha": "792b89525e5421c889f0ab42ee5977f3fdd1069b",
+        "line": 15
+      },
+      "consumer": "strict-mode directive or schema version",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or schema version"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/stone.js",
+        "blobSha": "bbe9531e2d5371f4c9cdfc7631a75a86391e26c5",
+        "line": 2
+      },
+      "consumer": "strict-mode directive or injected CSS",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or injected CSS"
+      ]
+    },
+    {
+      "currentText": "style",
+      "source": {
+        "file": "app/core/stone.js",
+        "blobSha": "bbe9531e2d5371f4c9cdfc7631a75a86391e26c5",
+        "line": 10
+      },
+      "consumer": "strict-mode directive or injected CSS",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or injected CSS"
+      ]
+    },
+    {
+      "currentText": "\n      #stoneCanvas, #plinthCanvas {\n        z-index: 302;\n      }\n      .layer-group[data-entity-id=\"approved-stone-03\"] > img {\n        -webkit-mask: url(\"assets/kitchen/masks/approved-stone-03-object-only.svg\") center / contain no-repeat;\n        mask: url(\"assets/kitchen/masks/approved-stone-03-object-only.svg\") center / contain no-repeat;\n    ",
+      "source": {
+        "file": "app/core/stone.js",
+        "blobSha": "bbe9531e2d5371f4c9cdfc7631a75a86391e26c5",
+        "line": 12
+      },
+      "consumer": "strict-mode directive or injected CSS",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or injected CSS"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/v5-normal-save.js",
+        "blobSha": "e9da3059ec2bbb566a0ac4c087553d383451e2e7",
+        "line": 1
+      },
+      "consumer": "strict-mode directive",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/v5-publication-inspection.js",
+        "blobSha": "0da4510829237478927792350fcc459b12517f63",
+        "line": 1
+      },
+      "consumer": "strict-mode directive",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/v5-publication-migration.js",
+        "blobSha": "638cf679a8ec34425cdaaf9b39df36df121c2303",
+        "line": 1
+      },
+      "consumer": "strict-mode directive",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/validation.js",
+        "blobSha": "74ce846a1cb934990ef38200d82175c0425162fb",
+        "line": 2
+      },
+      "consumer": "strict-mode directive or internal invalid-scene diagnostic",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or internal invalid-scene diagnostic"
+      ]
+    },
+    {
+      "currentText": "Cena 2D inválida: ${JSON.stringify(errors)}",
+      "source": {
+        "file": "app/core/validation.js",
+        "blobSha": "74ce846a1cb934990ef38200d82175c0425162fb",
+        "line": 119
+      },
+      "consumer": "strict-mode directive or internal invalid-scene diagnostic",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or internal invalid-scene diagnostic"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/core/visibility.js",
+        "blobSha": "d7af0f76530233e0d3dfb32f2ca08397f855e176",
+        "line": 2
+      },
+      "consumer": "strict-mode directive or invariant-cycle diagnostic",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or invariant-cycle diagnostic"
+      ]
+    },
+    {
+      "currentText": "Ciclo de visibilidade detectado em ${entityId}.",
+      "source": {
+        "file": "app/core/visibility.js",
+        "blobSha": "d7af0f76530233e0d3dfb32f2ca08397f855e176",
+        "line": 14
+      },
+      "consumer": "strict-mode directive or invariant-cycle diagnostic",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or invariant-cycle diagnostic"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/data/mock-price-book.js",
+        "blobSha": "e34d0967b83aa03181b6d6b17902056bc074efa2",
+        "line": 2
+      },
+      "consumer": "strict-mode directive, schema/mode identifier, or currency code",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, schema/mode identifier, or currency code"
+      ]
+    },
+    {
+      "currentText": "CommercialPricingRules 1.0",
+      "source": {
+        "file": "app/data/mock-price-book.js",
+        "blobSha": "e34d0967b83aa03181b6d6b17902056bc074efa2",
+        "line": 15
+      },
+      "consumer": "strict-mode directive, schema/mode identifier, or currency code",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, schema/mode identifier, or currency code"
+      ]
+    },
+    {
+      "currentText": "CommercialEstimatePriceBook 2.0",
+      "source": {
+        "file": "app/data/mock-price-book.js",
+        "blobSha": "e34d0967b83aa03181b6d6b17902056bc074efa2",
+        "line": 61
+      },
+      "consumer": "strict-mode directive, schema/mode identifier, or currency code",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, schema/mode identifier, or currency code"
+      ]
+    },
+    {
+      "currentText": "estimate",
+      "source": {
+        "file": "app/data/mock-price-book.js",
+        "blobSha": "e34d0967b83aa03181b6d6b17902056bc074efa2",
+        "line": 62
+      },
+      "consumer": "strict-mode directive, schema/mode identifier, or currency code",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, schema/mode identifier, or currency code"
+      ]
+    },
+    {
+      "currentText": "BRL",
+      "source": {
+        "file": "app/data/mock-price-book.js",
+        "blobSha": "e34d0967b83aa03181b6d6b17902056bc074efa2",
+        "line": 63
+      },
+      "consumer": "strict-mode directive, schema/mode identifier, or currency code",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive, schema/mode identifier, or currency code"
+      ]
+    },
+    {
+      "currentText": "Estimativa da composição",
+      "source": {
+        "file": "app/data/mock-price-book.js",
+        "blobSha": "e34d0967b83aa03181b6d6b17902056bc074efa2",
+        "line": 64
+      },
+      "consumer": "commercial estimate label or disclaimer stored in mock price-book data",
+      "owner": "commercial pricing content",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-commercial-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Keep out of interface locale bundles until canonical price-book ownership and parameterization are settled."
+      ]
+    },
+    {
+      "currentText": "Estimativa comercial sujeita à validação final de medidas, instalação e disponibilidade.",
+      "source": {
+        "file": "app/data/mock-price-book.js",
+        "blobSha": "e34d0967b83aa03181b6d6b17902056bc074efa2",
+        "line": 65
+      },
+      "consumer": "commercial estimate label or disclaimer stored in mock price-book data",
+      "owner": "commercial pricing content",
+      "routes": [
+        "/config/"
+      ],
+      "parameters": [],
+      "classification": "authored-commercial-content",
+      "status": "deferred-ownership-review",
+      "notes": [
+        "Keep out of interface locale bundles until canonical price-book ownership and parameterization are settled."
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/data/presentation-policy-defaults.js",
+        "blobSha": "e7d9643f00212b257eedbc6fb046ea2804462446",
+        "line": 2
+      },
+      "consumer": "strict-mode directive or schema version",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or schema version"
+      ]
+    },
+    {
+      "currentText": "ConfiguratorPresentation2D 1.1",
+      "source": {
+        "file": "app/data/presentation-policy-defaults.js",
+        "blobSha": "e7d9643f00212b257eedbc6fb046ea2804462446",
+        "line": 5
+      },
+      "consumer": "strict-mode directive or schema version",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or schema version"
+      ]
+    },
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/viewer/public-data.js",
+        "blobSha": "68b78120ba4be4798ff367eaa6ba840278abe6eb",
+        "line": 2
+      },
+      "consumer": "strict-mode directive or schema version",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or schema version"
+      ]
+    },
+    {
+      "currentText": "PublicModulePresentation2D 0.1",
+      "source": {
+        "file": "app/viewer/public-data.js",
+        "blobSha": "68b78120ba4be4798ff367eaa6ba840278abe6eb",
+        "line": 13
+      },
+      "consumer": "strict-mode directive or schema version",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or schema version"
+      ]
+    },
+    {
+      "currentText": "PublicModulePresentation2D 0.2",
+      "source": {
+        "file": "app/viewer/public-data.js",
+        "blobSha": "68b78120ba4be4798ff367eaa6ba840278abe6eb",
+        "line": 13
+      },
+      "consumer": "strict-mode directive or schema version",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or schema version"
+      ]
+    },
+    {
+      "currentText": "PublicModulePresentation2D 0.2",
+      "source": {
+        "file": "app/viewer/public-data.js",
+        "blobSha": "68b78120ba4be4798ff367eaa6ba840278abe6eb",
+        "line": 34
+      },
+      "consumer": "strict-mode directive or schema version",
+      "owner": "runtime contract or domain implementation",
+      "routes": [
+        "shared runtime"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "strict-mode directive or schema version"
+      ]
+    }
+  ]
+}

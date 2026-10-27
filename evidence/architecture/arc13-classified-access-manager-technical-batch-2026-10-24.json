@@ -1,0 +1,388 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/access/manage.js",
+      "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+      "candidateOccurrences": 19
+    }
+  ],
+  "reviewScope": "Supplementary completion of the lexical candidate inventory for app/access/manage.js. The three grant state labels at lines 66, 68 and 69 map to existing semantic access-grant entries in arc13-classified-ui-js-batch-2026-10-24.json; this batch classifies the remaining technical candidates.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 19,
+    "classifiedLocalizableOccurrences": 0,
+    "excludedNonlocalizableOccurrences": 19,
+    "deferredDomainOccurrences": 0,
+    "distinctCandidateTexts": 16
+  },
+  "limitations": [
+    "Inventory only; no access-manager runtime or locale resources changed.",
+    "Grant expiry uses runtime-localized date formatting; the existing UI semantic batch records it as a parameter."
+  ],
+  "entries": [
+    {
+      "currentText": "logoutButton",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 20
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "li",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 50
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "strong",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 59
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "secondary",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 74
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "button",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 75
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "click",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 77
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "/api/access/grants",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 80
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "loginForm",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 99
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "submit",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 99
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "email",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 103
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "password",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 103
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "grantForm",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 110
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "submit",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 110
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "sendButton",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 112
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "/api/access/grants",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 116
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "POST",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 117
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "recipient",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 118
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "grantForm",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 120
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    },
+    {
+      "currentText": "access_service_not_configured",
+      "source": {
+        "file": "app/access/manage.js",
+        "blobSha": "a1013d476781cafa52cb63b0706ab3a4fd30041e",
+        "line": 124
+      },
+      "consumer": "access-manager DOM, control, request, or response-code implementation detail",
+      "owner": "access grant manager",
+      "routes": [
+        "/access/manage.html"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "DOM/event/API/HTTP or response code; corresponding user feedback is separately classified in the shared UI batch."
+      ]
+    }
+  ]
+}

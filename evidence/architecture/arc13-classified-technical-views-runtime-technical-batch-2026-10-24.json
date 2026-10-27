@@ -1,0 +1,502 @@
+{
+  "schema": "M2DLocalizationClassifiedBatch/0.1",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "createdAt": "2026-10-24",
+  "sourceFiles": [
+    {
+      "file": "app/viewer/technical-views.js",
+      "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+      "candidateOccurrences": 25
+    }
+  ],
+  "reviewScope": "Supplementary classification of the remaining technical-view lexical candidates. The accessible name for internal segments, its separator and template fragments, and the focused-module image label map to existing semantic entries in the viewer/configurator batch; this file classifies the remaining SVG/DOM, geometry and rendering values.",
+  "totals": {
+    "sourceFilesReviewed": 1,
+    "candidateOccurrencesReviewed": 25,
+    "classifiedLocalizableOccurrences": 0,
+    "excludedNonlocalizableOccurrences": 25,
+    "deferredDomainOccurrences": 0,
+    "distinctCandidateTexts": 22
+  },
+  "limitations": [
+    "Inventory only; runtime and localization resources remain unchanged.",
+    "V5 segment names and measured dimensions are dynamic domain parameters in the separately classified accessibility template."
+  ],
+  "entries": [
+    {
+      "currentText": "use strict",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 2
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "cabinet",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 12
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "isometric",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 16
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "side",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 16
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "h3",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 22
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "count-confirmed",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 23
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "technical-view",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 36
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "h3",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 37
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "technical-view technical-view--focus",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 43
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "h3",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 44
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "svg",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 49
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "${bounds.x} ${bounds.y} ${bounds.width} ${bounds.height}",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 50
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "viewBox",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 50
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "img",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 51
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "preserveAspectRatio",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 51
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "role",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 51
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "xMidYMid meet",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 51
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "aria-label",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 52
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "image",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 53
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "../${entity.asset}",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 54
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "height",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 54
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "href",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 54
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "width",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 54
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "none",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 55
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    },
+    {
+      "currentText": "preserveAspectRatio",
+      "source": {
+        "file": "app/viewer/technical-views.js",
+        "blobSha": "5d8bc557f7b4f8a9f8cac191f57011ba92d06292",
+        "line": 55
+      },
+      "consumer": "technical-view SVG/DOM attribute, view type, CSS class, geometry or asset value",
+      "owner": "technical-view component",
+      "routes": [
+        "/viewer/"
+      ],
+      "parameters": [],
+      "classification": "non-localizable-code",
+      "status": "excluded-nonlocalizable",
+      "notes": [
+        "Stable implementation or geometry value; user-facing captions/accessibility templates are linked to existing semantic entries."
+      ]
+    }
+  ]
+}
