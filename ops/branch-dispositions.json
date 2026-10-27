@@ -1,9 +1,7 @@
 {
   "schemaVersion": "BranchDispositionSet 0.1",
   "controlBranch": "main",
-  "preserveBranches": [
-    "docs/current-handover-20261024"
-  ],
+  "preserveBranches": [],
   "terminalBranches": [
     {
       "branch": "docs/reconcile-approved-focus-record",
@@ -46,6 +44,12 @@
       "sha": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
       "allowDelete": true,
       "reason": "P15: historical HEAD preserved by protected archive tag (exact SHA); mandatory independent runtime DAG verification."
+    },
+    {
+      "branch": "docs/current-handover-20261024",
+      "sha": "28062602a4ddcd1bee090742fe2587fe3837175d",
+      "allowDelete": true,
+      "reason": "P16 final historical HOLD: full 814-intermediate-commit DAG preserved under protected exact SHA lightweight tag, 8/8 tags and blob coverage verified. Runtime proofs mandatory."
     }
   ]
 }

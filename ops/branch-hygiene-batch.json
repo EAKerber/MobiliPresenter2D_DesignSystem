@@ -1,18 +1,13 @@
 {
   "schemaVersion": "BranchHygieneBatch 0.1",
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "wave": "DS-HYG-P15-2026-10-27",
-  "purpose": "Retire two historical refs with protected archive tags and SHA leases; leave the 814-commit docs/current-handover HOLD for its own batch.",
+  "wave": "DS-HYG-P16-2026-10-27",
+  "purpose": "Final diverged HOLD only. Require full historical DAG reachability for 814 intermediate commits and exact protected archive tag; do not retire operational branch.",
   "branches": [
     {
-      "branch": "architecture/dom-css-consolidation-20261020",
-      "sha": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
-      "protectedArchiveTag": "refs/tags/ds-history/2026-10-27/architecture--dom-css-consolidation-20261020-8e7d857528c9"
-    },
-    {
-      "branch": "proposal/vis002-semantic-state-colors-2026-10-19",
-      "sha": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
-      "protectedArchiveTag": "refs/tags/ds-history/2026-10-27/proposal--vis002-semantic-state-colors-2026-10-19-a924c2be0e8b"
+      "branch": "docs/current-handover-20261024",
+      "sha": "28062602a4ddcd1bee090742fe2587fe3837175d",
+      "protectedArchiveTag": "refs/tags/ds-history/2026-10-27/docs--current-handover-20261024-28062602a4dd"
     }
   ]
 }
