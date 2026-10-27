@@ -1,0 +1,131 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/admin/admin.js:renderPricing",
+    "occurrences": 7,
+    "uniqueProposedKeys": 7,
+    "excluded": [
+      "line 1216: Base: ${rule.basis}"
+    ]
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "Strings are traced to direct labels and notes in the Admin DOM. Templates retain visible catalog values as parameters.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "The template `Base: ${rule.basis}` is deferred because it mixes localized copy with an enum-to-label lookup and raw enum fallback; split into a translatable label plus a reviewed dynamic label contract.",
+    "Catalog names and public labels remain dynamic content and are not translated by this proposal."
+  ],
+  "entries": [
+    {
+      "proposedKey": "admin.pricingPublication.viewerHeading",
+      "text": "Exibição pública no Viewer",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1148
+        }
+      ],
+      "owner": "Admin pricing editor",
+      "consumer": "renderPricing",
+      "sink": "pricingList publication card title",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.pricingPublication.viewerBasePriceToggle",
+      "text": "Mostrar preços base no Viewer",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1156
+        }
+      ],
+      "owner": "Admin pricing editor",
+      "consumer": "renderPricing",
+      "sink": "pricingList publication switch label",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.pricingPublication.v5Required",
+      "text": "Esta opção exige uma configuração V5 publicada.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1160
+        }
+      ],
+      "owner": "Admin pricing editor",
+      "consumer": "renderPricing",
+      "sink": "pricingList publication note when disabled",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.pricingPublication.behaviorNote",
+      "text": "Inicialmente desativado. Somente os valores base válidos dos módulos publicados e visíveis serão exibidos; não inclui opções e serviços. Alterar esta opção não publica nada até clicar em Publicar configuração.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1161
+        }
+      ],
+      "owner": "Admin pricing editor",
+      "consumer": "renderPricing",
+      "sink": "pricingList publication note when enabled",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.pricing.priceTypeAria",
+      "text": "Tipo de preço: ${publicLabel}",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1185
+        }
+      ],
+      "owner": "Admin price rule editor",
+      "consumer": "renderPricing",
+      "sink": "price type select aria-label",
+      "parameterContract": [
+        "publicLabel"
+      ]
+    },
+    {
+      "proposedKey": "admin.pricing.valueAria",
+      "text": "Valor de ${publicLabel}",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1206
+        }
+      ],
+      "owner": "Admin price rule editor",
+      "consumer": "renderPricing",
+      "sink": "price input aria-label",
+      "parameterContract": [
+        "publicLabel"
+      ]
+    },
+    {
+      "proposedKey": "admin.pricing.publicEstimateNote",
+      "text": "Os valores publicados são estimativas para clientes. Custos, margens e dados de fornecedores não entram neste painel.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1225
+        }
+      ],
+      "owner": "Admin pricing editor",
+      "consumer": "renderPricing",
+      "sink": "pricingList note",
+      "parameterContract": []
+    }
+  ]
+}

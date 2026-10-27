@@ -1,0 +1,423 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/admin/admin.js: renderMaterialGroups, renderDependencies, renderItem, renderSection, renderGroup, renderPager",
+    "occurrences": 28,
+    "uniqueProposedKeys": 28
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "The batch covers fixed copy and accessible or status text tied to direct sinks in six Admin consumers. Template parameters make the dynamic group title and page counts explicit.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "Group title and page numbers are dynamic parameters; selected values and item names remain catalog/model data.",
+    "Several short actions are context-specific and are not shared with other Admin components."
+  ],
+  "entries": [
+    {
+      "proposedKey": "admin.materialGroups.optionsHeading",
+      "text": "${title} · opções válidas",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 999
+        }
+      ],
+      "owner": "Admin material availability editor",
+      "consumer": "renderMaterialGroups",
+      "sink": "material-group selection controls",
+      "parameterContract": [
+        "title"
+      ]
+    },
+    {
+      "proposedKey": "admin.materialGroups.handleAvailability",
+      "text": "Disponível para clientes",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1005
+        }
+      ],
+      "owner": "Admin material availability editor",
+      "consumer": "renderMaterialGroups",
+      "sink": "material-group selection controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.materialGroups.deferredHandleNote",
+      "text": "Definir depois não é um puxador e não recebe materiais.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1006
+        }
+      ],
+      "owner": "Admin material availability editor",
+      "consumer": "renderMaterialGroups",
+      "sink": "material-group selection controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.materialGroups.handleMaterialsHeading",
+      "text": "Cores e materiais deste puxador",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1007
+        }
+      ],
+      "owner": "Admin material availability editor",
+      "consumer": "renderMaterialGroups",
+      "sink": "material-group selection controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.materialGroups.deferredHandleOption",
+      "text": "Definir depois",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1008
+        }
+      ],
+      "owner": "Admin material availability editor",
+      "consumer": "renderMaterialGroups",
+      "sink": "material-group selection controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.materialGroups.initialHandleLabel",
+      "text": "Puxador selecionado inicialmente",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1008
+        }
+      ],
+      "owner": "Admin material availability editor",
+      "consumer": "renderMaterialGroups",
+      "sink": "material-group selection controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.materialGroups.groupNameLabel",
+      "text": "Nome da opção",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1011
+        }
+      ],
+      "owner": "Admin material availability editor",
+      "consumer": "renderMaterialGroups",
+      "sink": "material-group selection controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.materialGroups.stoneAvailabilityHeading",
+      "text": "Pedras e texturas disponíveis para bancada e rodapé",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1012
+        }
+      ],
+      "owner": "Admin material availability editor",
+      "consumer": "renderMaterialGroups",
+      "sink": "material-group selection controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.materialGroups.frontMaterialChoices",
+      "text": "Materiais válidos para frentes",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1013
+        }
+      ],
+      "owner": "Admin material availability editor",
+      "consumer": "renderMaterialGroups",
+      "sink": "material-group selection controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.materialGroups.initialFinishLabel",
+      "text": "Cor selecionada inicialmente",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1016
+        }
+      ],
+      "owner": "Admin material availability editor",
+      "consumer": "renderMaterialGroups",
+      "sink": "material-group selection controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.materialGroups.initialStoneLabel",
+      "text": "Pedra selecionada inicialmente",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1018
+        }
+      ],
+      "owner": "Admin material availability editor",
+      "consumer": "renderMaterialGroups",
+      "sink": "material-group selection controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.materialGroups.stoneSkirtingNote",
+      "text": "A disponibilidade do serviço de rodapé é controlada separadamente na etapa; pedra e rodapé compartilham o material escolhido.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1019
+        }
+      ],
+      "owner": "Admin material availability editor",
+      "consumer": "renderMaterialGroups",
+      "sink": "material-group selection controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.dependencies.dependentItemLabel",
+      "text": "Item dependente",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1085
+        }
+      ],
+      "owner": "Admin dependency editor",
+      "consumer": "renderDependencies",
+      "sink": "dependency rule card DOM",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.dependencies.itemLabel",
+      "text": "Este item",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1086
+        }
+      ],
+      "owner": "Admin dependency editor",
+      "consumer": "renderDependencies",
+      "sink": "dependency rule card DOM",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.dependencies.requiresAllLabel",
+      "text": "Requer todos estes itens",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1086
+        }
+      ],
+      "owner": "Admin dependency editor",
+      "consumer": "renderDependencies",
+      "sink": "dependency rule card DOM",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.dependencies.removeAction",
+      "text": "Remover dependência",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1087
+        }
+      ],
+      "owner": "Admin dependency editor",
+      "consumer": "renderDependencies",
+      "sink": "dependency rule card DOM",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchyItems.moveTargetLabel",
+      "text": "Mover para",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 432
+        }
+      ],
+      "owner": "Admin hierarchy item editor",
+      "consumer": "renderItem",
+      "sink": "hierarchy item move/action controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchyItems.newSectionAction",
+      "text": "Nova seção",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 452
+        }
+      ],
+      "owner": "Admin hierarchy item editor",
+      "consumer": "renderItem",
+      "sink": "hierarchy item move/action controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchyItems.removeAction",
+      "text": "Retirar",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 462
+        }
+      ],
+      "owner": "Admin hierarchy item editor",
+      "consumer": "renderItem",
+      "sink": "hierarchy item move/action controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchySections.moveGroupLabel",
+      "text": "Mover seção para grupo",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 513
+        }
+      ],
+      "owner": "Admin hierarchy section editor",
+      "consumer": "renderSection",
+      "sink": "hierarchy section move/action controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchySections.moveToNewGroupAction",
+      "text": "Mover para novo grupo",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 538
+        }
+      ],
+      "owner": "Admin hierarchy section editor",
+      "consumer": "renderSection",
+      "sink": "hierarchy section move/action controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchySections.removeAndMergeAction",
+      "text": "Remover seção e unir",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 545
+        }
+      ],
+      "owner": "Admin hierarchy section editor",
+      "consumer": "renderSection",
+      "sink": "hierarchy section move/action controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchyGroups.oneColumnOption",
+      "text": "1 coluna",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 578
+        }
+      ],
+      "owner": "Admin hierarchy group editor",
+      "consumer": "renderGroup",
+      "sink": "hierarchy group layout/action controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchyGroups.twoColumnOption",
+      "text": "2 colunas",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 578
+        }
+      ],
+      "owner": "Admin hierarchy group editor",
+      "consumer": "renderGroup",
+      "sink": "hierarchy group layout/action controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchyGroups.removeAndMergeAction",
+      "text": "Remover grupo e unir conteúdo",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 603
+        }
+      ],
+      "owner": "Admin hierarchy group editor",
+      "consumer": "renderGroup",
+      "sink": "hierarchy group layout/action controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.pager.previousPage",
+      "text": "← Anterior",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 898
+        }
+      ],
+      "owner": "Admin list pager",
+      "consumer": "renderPager",
+      "sink": "pager controls and live status",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.pager.pageStatus",
+      "text": "${index + 1} / ${pages}",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 900
+        }
+      ],
+      "owner": "Admin list pager",
+      "consumer": "renderPager",
+      "sink": "pager controls and live status",
+      "parameterContract": [
+        "currentPage",
+        "totalPages"
+      ]
+    },
+    {
+      "proposedKey": "admin.pager.nextPage",
+      "text": "Próxima →",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 901
+        }
+      ],
+      "owner": "Admin list pager",
+      "consumer": "renderPager",
+      "sink": "pager controls and live status",
+      "parameterContract": []
+    }
+  ]
+}

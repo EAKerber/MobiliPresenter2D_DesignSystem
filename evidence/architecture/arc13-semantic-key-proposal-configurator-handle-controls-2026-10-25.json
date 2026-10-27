@@ -1,0 +1,130 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "sourceBlobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+  "scope": {
+    "consumer": "app/app.js: renderHandleControlsFromData and handleOptions click feedback",
+    "sourceLiteralOccurrences": 6,
+    "uniqueProposedKeys": 5
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "Fixed instructions, accessible labels, priced-description composition, and selection feedback are grouped by the configurator handle owner. Catalog descriptions and handle labels remain parameters rather than being copied into fixed UI messages.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "The description template receives catalog-owned handleDescription and preformatted currency parameters; ownership/localization of catalog values remains separate.",
+    "The application announcement for applying a handle remains distinct from the stone-package announcement because the consumer and content owner differ."
+  ],
+  "entries": [
+    {
+      "proposedKey": "configurator.handles.help",
+      "text": "Escolha global; o total é distribuído pelas 14 frentes aplicáveis. A basculante não entra no rateio.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 734,
+          "currentText": "Escolha global; o total é distribuído pelas 14 frentes aplicáveis. A basculante não entra no rateio."
+        }
+      ],
+      "sourceLines": [
+        734
+      ],
+      "owner": "Configurator handle controls",
+      "consumer": "renderHandleControlsFromData",
+      "sink": "handleHelp textContent",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.handles.selectAriaLabel",
+      "text": "Selecionar puxador {handleLabel}",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 744,
+          "currentText": "Selecionar puxador "
+        }
+      ],
+      "sourceLines": [
+        744
+      ],
+      "owner": "Configurator handle controls",
+      "consumer": "renderHandleControlsFromData",
+      "sink": "button aria-label",
+      "parameterContract": [
+        "handle.label"
+      ]
+    },
+    {
+      "proposedKey": "configurator.handles.pricedDescription",
+      "text": "{handleDescription} · {perFrontPrice} por frente; {totalPrice} no conjunto completo.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 765,
+          "currentText": " por frente; "
+        },
+        {
+          "file": "app/app.js",
+          "line": 765,
+          "currentText": " no conjunto completo."
+        }
+      ],
+      "sourceLines": [
+        765
+      ],
+      "owner": "Configurator handle controls",
+      "consumer": "renderHandleControlsFromData",
+      "sink": "description small textContent when the handle has a price",
+      "parameterContract": [
+        "handle.description",
+        "perFrontPrice (formatCurrency of handle total divided by applicable fronts)",
+        "totalPrice (formatCurrency of handle total)"
+      ]
+    },
+    {
+      "proposedKey": "configurator.handles.unselectedAnnouncement",
+      "text": "Puxador será definido depois.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2488,
+          "currentText": "Puxador será definido depois."
+        }
+      ],
+      "sourceLines": [
+        2488
+      ],
+      "owner": "Configurator handle selection",
+      "consumer": "handleOptions click handler",
+      "sink": "live announcement when the no-handle option is selected",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.handles.selectedAnnouncement",
+      "text": "{handleLabel} aplicado ao conjunto.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2488,
+          "currentText": " aplicado ao conjunto."
+        }
+      ],
+      "sourceLines": [
+        2488
+      ],
+      "owner": "Configurator handle selection",
+      "consumer": "handleOptions click handler",
+      "sink": "live announcement when a handle is selected",
+      "parameterContract": [
+        "handle.label"
+      ]
+    }
+  ]
+}

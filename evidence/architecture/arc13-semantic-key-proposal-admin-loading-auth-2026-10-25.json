@@ -1,0 +1,195 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/admin/admin.js: loadSettings, showUser, showPasswordAction",
+    "occurrences": 12,
+    "uniqueProposedKeys": 12
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "Each string is tied to a direct Admin UI sink: saveMessage, adminServiceError, userLabel, passwordActionTitle or passwordActionButton. Branch-selected invite/recovery content keeps separate keys.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "The dynamic revision label at line 1289 remains outside this proposal and requires a shared-sink parameter audit.",
+    "Dynamic error.message is not proposed; only its literal fallback is included.",
+    "User email and invite/recovery token remain dynamic data, not translation keys."
+  ],
+  "entries": [
+    {
+      "proposedKey": "admin.configurationLoad.apiNotPublished",
+      "text": "A API de configuração ainda não foi publicada.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1285
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "loadSettings",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationLoad.loadFailed",
+      "text": "Não foi possível carregar a configuração.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1285
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "loadSettings",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationLoad.handlesAssignmentPending",
+      "text": "Puxadores ainda não está atribuído no v3 publicado. Persista Puxadores no v3 antes da futura publicação hierárquica.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1294
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "loadSettings",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationLoad.hierarchyLoaded",
+      "text": "Configuração v5 carregada. A hierarquia e os preços tipados podem ser publicados com validação.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1296
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "loadSettings",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.configurationLoad.legacyHierarchyDraft",
+      "text": "Hierarquia carregada. Alterações estruturais permanecem em rascunho até a publicação hierárquica ser habilitada.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1297
+        }
+      ],
+      "owner": "Admin configuration editor",
+      "consumer": "loadSettings",
+      "sink": "saveMessage through setMessage",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.userAccess.administratorFallback",
+      "text": "Administrador",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1550
+        }
+      ],
+      "owner": "Admin access view",
+      "consumer": "showUser",
+      "sink": "userLabel or adminServiceError",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.userAccess.serviceLoadFailed",
+      "text": "Falha ao carregar os dados administrativos.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1560
+        }
+      ],
+      "owner": "Admin access view",
+      "consumer": "showUser",
+      "sink": "userLabel or adminServiceError",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.userAccess.retry",
+      "text": "Tentar novamente",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1565
+        }
+      ],
+      "owner": "Admin access view",
+      "consumer": "showUser",
+      "sink": "retry button text",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.passwordAction.inviteTitle",
+      "text": "Defina uma senha para concluir o convite de administrador.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1596
+        }
+      ],
+      "owner": "Admin authentication form",
+      "consumer": "showPasswordAction",
+      "sink": "passwordActionTitle or passwordActionButton",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.passwordAction.recoveryTitle",
+      "text": "Defina uma nova senha para acessar a administração.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1597
+        }
+      ],
+      "owner": "Admin authentication form",
+      "consumer": "showPasswordAction",
+      "sink": "passwordActionTitle or passwordActionButton",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.passwordAction.acceptInvite",
+      "text": "Aceitar convite",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1598
+        }
+      ],
+      "owner": "Admin authentication form",
+      "consumer": "showPasswordAction",
+      "sink": "passwordActionTitle or passwordActionButton",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.passwordAction.updatePassword",
+      "text": "Atualizar senha",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1598
+        }
+      ],
+      "owner": "Admin authentication form",
+      "consumer": "showPasswordAction",
+      "sink": "passwordActionTitle or passwordActionButton",
+      "parameterContract": []
+    }
+  ]
+}

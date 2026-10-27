@@ -1,0 +1,223 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/admin/admin.js: pricing labels, stage/material creation prompts, password recovery",
+    "occurrences": 14,
+    "uniqueProposedKeys": 14
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "These top-level constants and callbacks have explicit consumers: pricing role/type/basis labels, creation prompt messages/defaults and recovery feedback.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "Pricing basis wording is a label map value; its runtime fallback `Base: ${rule.basis}` remains a separate deferred template.",
+    "Password recovery's API-provided error.message remains dynamic; only the literal fallback is proposed.",
+    "Prompt defaults and prompt labels are separate keys because they occupy different UI roles."
+  ],
+  "entries": [
+    {
+      "proposedKey": "admin.pricingRoles.moduleAndAccessoryBase",
+      "text": "Valores de módulos e acessórios",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 78
+        }
+      ],
+      "owner": "Admin pricing labels",
+      "consumer": "Admin pricing editor",
+      "sink": "renderPricing role heading",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.pricingRoles.finishAdjustment",
+      "text": "Adicional por acabamento",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 80
+        }
+      ],
+      "owner": "Admin pricing labels",
+      "consumer": "Admin pricing editor",
+      "sink": "renderPricing role heading",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.pricingRoles.localAdjustment",
+      "text": "Adicionais locais",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 81
+        }
+      ],
+      "owner": "Admin pricing labels",
+      "consumer": "Admin pricing editor",
+      "sink": "renderPricing role heading",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.pricingRoles.globalAdjustment",
+      "text": "Adicionais globais",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 82
+        }
+      ],
+      "owner": "Admin pricing labels",
+      "consumer": "Admin pricing editor",
+      "sink": "renderPricing role heading",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.pricingTypes.fixedAmount",
+      "text": "Valor fixo",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 86
+        }
+      ],
+      "owner": "Admin pricing type option",
+      "consumer": "Admin pricing editor",
+      "sink": "renderPricing price-type option",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.pricingBases.eligibleModuleBase",
+      "text": "Base: valor base de cada módulo elegível",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 90
+        }
+      ],
+      "owner": "Admin pricing basis label",
+      "consumer": "Admin pricing editor",
+      "sink": "renderPricing basis small text",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.stages.limitReached",
+      "text": "O limite é 12 etapas.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1439
+        }
+      ],
+      "owner": "Admin stage creation",
+      "consumer": "addStageButton click flow",
+      "sink": "saveMessage when stage cap reached",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.stages.newStagePromptDefault",
+      "text": "Nova etapa",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1442
+        }
+      ],
+      "owner": "Admin stage creation",
+      "consumer": "addStageButton click flow",
+      "sink": "window.prompt default",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.stages.newStagePrompt",
+      "text": "Nome da nova etapa",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1443
+        }
+      ],
+      "owner": "Admin stage creation",
+      "consumer": "addStageButton click flow",
+      "sink": "window.prompt message",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.materials.newMaterialPrompt",
+      "text": "Nome da nova cor ou textura",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1451
+        }
+      ],
+      "owner": "Admin material creation",
+      "consumer": "addMaterialButton click flow",
+      "sink": "window.prompt message",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.materials.newMaterialPromptDefault",
+      "text": "Novo material",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1451
+        }
+      ],
+      "owner": "Admin material creation",
+      "consumer": "addMaterialButton click flow",
+      "sink": "window.prompt default",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.auth.recoveryEmailRequired",
+      "text": "Informe seu e-mail para receber o link de recuperação.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1618
+        }
+      ],
+      "owner": "Admin password recovery",
+      "consumer": "recoveryButton click flow",
+      "sink": "loginMessage validation",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.auth.recoveryRequested",
+      "text": "Se a conta existir, você receberá um link para redefinir a senha.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1621
+        }
+      ],
+      "owner": "Admin password recovery",
+      "consumer": "recoveryButton click flow",
+      "sink": "loginMessage success",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.auth.recoveryFailed",
+      "text": "Não foi possível solicitar a recuperação.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1623
+        }
+      ],
+      "owner": "Admin password recovery",
+      "consumer": "recoveryButton click flow",
+      "sink": "loginMessage fallback error",
+      "parameterContract": []
+    }
+  ]
+}

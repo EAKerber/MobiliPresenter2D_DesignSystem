@@ -1,0 +1,125 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/admin/admin.js:renderObjects",
+    "occurrences": 7,
+    "uniqueProposedKeys": 7,
+    "excluded": []
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "Strings are traced to direct labels and notes in the Admin DOM. Templates retain visible catalog values as parameters.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "The template `Base: ${rule.basis}` is deferred because it mixes localized copy with an enum-to-label lookup and raw enum fallback; split into a translatable label plus a reviewed dynamic label contract.",
+    "Catalog names and public labels remain dynamic content and are not translated by this proposal."
+  ],
+  "entries": [
+    {
+      "proposedKey": "admin.objects.publicNameLabel",
+      "text": "Nome público",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 793
+        }
+      ],
+      "owner": "Admin object editor",
+      "consumer": "renderObjects",
+      "sink": "makeField label",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.objects.descriptionLabel",
+      "text": "Descrição",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 794
+        }
+      ],
+      "owner": "Admin object editor",
+      "consumer": "renderObjects",
+      "sink": "makeField label",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.objects.benefitsLabel",
+      "text": "Destaques (um por linha)",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 795
+        }
+      ],
+      "owner": "Admin object editor",
+      "consumer": "renderObjects",
+      "sink": "makeField label",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.objects.componentsLabel",
+      "text": "Componentes (um por linha)",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 796
+        }
+      ],
+      "owner": "Admin object editor",
+      "consumer": "renderObjects",
+      "sink": "makeField label",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.objects.requirementsLabel",
+      "text": "Requisitos (um por linha)",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 797
+        }
+      ],
+      "owner": "Admin object editor",
+      "consumer": "renderObjects",
+      "sink": "makeField label",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.objects.handleMaterialsHeading",
+      "text": "Materiais deste puxador",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 801
+        }
+      ],
+      "owner": "Admin object editor",
+      "consumer": "renderObjects",
+      "sink": "handle material section heading",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.objects.noHandleMaterials",
+      "text": "Nenhum material associado. Configure a lista na aba Cores e acabamentos.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 803
+        }
+      ],
+      "owner": "Admin object editor",
+      "consumer": "renderObjects",
+      "sink": "handle material section note",
+      "parameterContract": []
+    }
+  ]
+}
