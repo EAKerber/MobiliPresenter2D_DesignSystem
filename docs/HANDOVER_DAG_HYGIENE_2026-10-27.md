@@ -108,3 +108,21 @@ Documentação oficial: [criar rulesets](https://docs.github.com/en/repositories
 - **Intacto:** `ops/branch-dispositions.json` ainda mantém os oito `preserveBranches`, `terminalBranches=[]`; lote `ops/branch-hygiene-batch.json` ainda é o P12 **consumido**; não foi reexecutado. Nenhum deploy, mutação do repositório de produto ou merge de código histórico divergido.
 
 **Próximo gate obrigatório, separado:** desenvolver e revisar em **outra PR** o executor de `PROTECTED_ARCHIVE_TAG_EXACT_COMMIT` com validação efetiva de tag protegida, alcance do DAG via `git rev-list`/commit em clone completo, SHA/lease de branch, readback remoto, nenhuma PR aberta, checks e testes negativos. Somente após prova completa retirar branches específicas de `preserveBranches` e excluir em **lotes de 1–3**. A branch operacional exige gate terminal próprio baseado em ancestralidade do HEAD contra merge real e ref remoto (sem manifesto autorreferente). **Não apagar nenhuma ref nesta fase.**
+
+
+## Lotes P13–P16 concluídos — oito HOLDs retirados sem perder DAG (27/10/2026)
+
+**Snapshot pré-última PR:** `main@14549a411c278b476ea1590d1a5c9e48ced8474d`, duas branches (`main` e `maintenance/ds-pr41-runtime-evidence-extract-20261026`), **8/8 tags leves `ds-history/2026-10-27/*`** ainda exatas e protegidas pela ruleset #25953910 (Active; sem bypass; restringe updates/deletions). `ops/branch-dispositions.json`: `preserveBranches=[]`, oito `terminalBranches` com SHA fixo. O lote atual `ops/branch-hygiene-batch.json` é **P16 já consumido**: nunca reexecutá-lo.
+
+| Lote | PR | Actions apply (PASS) | Refs removidas |
+| --- | --- | --- | --- |
+| P13 | [#114](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/114) | [#40511965874](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40511965874) | `docs/reconcile-approved-focus-record`, `audit/access-confirmation-runtime-20261020` |
+| P14 | [#115](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/115) | [#40512535633](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40512535633) | `audit/approved-contrast-runtime-20261021`, `audit/auth-session-flow-2026-10-19`, `docs/handover-reconcile-20261023` |
+| P15 | [#116](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/116) | [#40513316115](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40513316115) | `architecture/dom-css-consolidation-20261020`, `proposal/vis002-semantic-state-colors-2026-10-19` |
+| P16 | [#117](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/117) | [#40514015814](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40514015814) | `docs/current-handover-20261024` (DAG longo, 814 commits intermediários divergentes previamente observados) |
+
+Cada lote exigiu auditoria de PR, verificação da tag protegida por SHA e `object.type=commit`, histórico completo `rev-list --objects --missing=print`, ausência de PR/workflow dependente, regra de proteção, leases SHA e readback após cada deleção. **Não** foi feito merge `ours`, alterações visuais/runtime ou alterações no repo de produto. Tags permanecem mesmo após remover branches.
+
+### Gate terminal separado: PR #118, segundo pai do merge
+
+A branch operacional é ancestral da main mas um lote SHA-pinned criado na sua própria PR seria autorreferente. A [PR #118](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/118) prepara `tools/ds_terminal_operational.py`, testes negativos, um workflow acionado **somente pelo novo manifesto** `ops/ds-last-branch-retirement.json` no push `main`. O workflow só exclui a ref operacional se a main recém-mesclada tiver **dois pais reais**, o *segundo pai* for igual ao HEAD da PR #118 integrada, e o SHA for **idêntico ao HEAD remoto** da branch operacional; também exige ausência de PR aberta, proteção de tag ativa e as oito tags exatas, nenhuma outra branch, estado P16 encerrado, ausência de dependência em workflow, `--force-with-lease`, readback e recibo. O PR deve ser integrado por **merge commit**, jamais squash/rebase. O próprio documento desta PR **não comprova** que o workflow terminal já passou; consultar o recibo/actions após o merge antes de declarar `main` única.
