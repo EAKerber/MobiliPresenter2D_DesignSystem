@@ -14,6 +14,11 @@ from pathlib import Path
 
 REPO = "EAKerber/MobiliPresenter2D_DesignSystem"
 RULESET_ID = 25953910
+# Owner-capable GitHub API confirmed bypass_actors=[] at this exact revision.
+# GitHub Actions GITHUB_TOKEN has no ruleset-write permission and receives null
+# for this protected field (documented API behavior). Timestamp pins the owner's
+# independent attestation; any edit to the ruleset blocks publication.
+OWNER_VERIFIED_RULE_UPDATED_AT = "2026-10-27T08:49:23.055-03:00"
 PREFIX = "refs/tags/ds-history/2026-10-27/"
 PATTERN = PREFIX + "*"
 OPS = "maintenance/ds-pr41-runtime-evidence-extract-20261026"
@@ -60,7 +65,8 @@ def validate(manifest, branches, tags, rule, open_prs, main_sha):
     if (rule.get("id") != RULESET_ID or rule.get("target") != "tag"
             or rule.get("enforcement") != "active"
             or rule.get("source") != REPO
-            or rule.get("bypass_actors") != []
+            or rule.get("bypass_actors") not in ([], None)
+            or rule.get("updated_at") != OWNER_VERIFIED_RULE_UPDATED_AT
             or rule.get("current_user_can_bypass") != "never"
             or rule.get("conditions", {}).get("ref_name") !=
             {"exclude": [], "include": [PATTERN]}
