@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "DS-D04-SelectiveEvidence 0.1",
+  "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "baselineMain": "52695179d776009378e96ca4d51667948593a625",
+  "decisions": "D01=A D02=B D03=A D04=A",
+  "copyRule": "Git blob SHA unchanged; historical/experimental evidence, no runtime certification or normative approval",
+  "sourceHeads": {
+    "39": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
+    "51": "28062602a4ddcd1bee090742fe2587fe3837175d"
+  },
+  "files": [
+    {
+      "pr": 39,
+      "path": "docs/architecture/dom-css-consolidation-baseline-2026-10-20.md",
+      "sha": "f3aecefcebddce22f3b1edd748e30c803968a13f",
+      "bytes": 9717
+    },
+    {
+      "pr": 39,
+      "path": "docs/architecture/dom-css-static-crosswalk-2026-10-20.json",
+      "sha": "b721ff49f11a170d7db226e5218c632a4e53869a",
+      "bytes": 63234
+    },
+    {
+      "pr": 39,
+      "path": "docs/architecture/dom-js-component-ownership-2026-10-20.md",
+      "sha": "7565726930a31efb3d7c1ddbc16893fa5150233d",
+      "bytes": 11715
+    },
+    {
+      "pr": 51,
+      "path": "evidence/architecture/arc13-admin-initializeAdminAccess-consumer-trace-2026-10-25.md",
+      "sha": "cb9460c5017aa1a767da1798f3a90d244267b5e1",
+      "bytes": 1249
+    },
+    {
+      "pr": 51,
+      "path": "evidence/architecture/arc13-admin-loginForm-submit-consumer-trace-2026-10-25.md",
+      "sha": "a26a30af246bf8981514d44c76a4b7d417c3fda4",
+      "bytes": 1387
+    },
+    {
+      "pr": 51,
+      "path": "evidence/architecture/arc13-admin-passwordActionForm-submit-consumer-trace-2026-10-25.md",
+      "sha": "4a8d65edfb0559f4b22a6c1e135f21804154dfbd",
+      "bytes": 1193
+    },
+    {
+      "pr": 51,
+      "path": "evidence/architecture/arc13-admin-loadSettings-consumer-trace-2026-10-25.md",
+      "sha": "0e320780046af6db75db60c210cd38d9b0a6b9d0",
+      "bytes": 3903
+    },
+    {
+      "pr": 51,
+      "path": "evidence/architecture/arc13-admin-savebutton-consumer-trace-2026-10-25.md",
+      "sha": "381ec01b8dc07408c81542a402381f00dc4e165e",
+      "bytes": 6426
+    },
+    {
+      "pr": 51,
+      "path": "evidence/architecture/arc13-admin-handles-persistence-consumer-trace-2026-10-25.md",
+      "sha": "bd6670851100d5ee572d4cdab7c16f289e0b4557",
+      "bytes": 6212
+    }
+  ],
+  "limits": [
+    "The DOM/CSS crosswalk is static lexical inventory, not a collision proof",
+    "ARC13 consumer traces are static at product revision 5ccb2a8 and do not establish authentication/runtime compliance",
+    "No workflows, prototype code or decision manifests are activated or overwritten"
+  ]
+}
