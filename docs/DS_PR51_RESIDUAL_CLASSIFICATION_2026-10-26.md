@@ -66,3 +66,7 @@ Mais 71 fontes históricas do head #51: 69 MDs `*consumer-trace-*` e dois índic
 ## D04 — encaminhamento das 35 fontes arquiteturais remanescentes (27/10/2026)
 
 32 fontes ARC-13 (chaves **ainda candidatas**) e 3 VIS-002 (uma proposta de foco Viewer autorizada somente para preview, demais não canônicas) copiados por SHA exato. [Manifesto](DS_D04_ARCHITECTURE_CANDIDATES_BLOBS_2026-10-27.json), [relatório de limites](DS_D04_ARCHITECTURE_CANDIDATES_2026-10-27.md). Após merge e readback, #51 terá **45** caminhos exclusivos restantes: exclusivamente relatórios `evidence/runtime/*.md`. Histórico de PRs/ref não muda.
+
+## D04 — zero caminhos exclusivos da #51 (27/10/2026; após último lote, sujeito a readback)
+
+45 relatórios runtime históricos em [manifesto Git exato](DS_D04_RUNTIME_EVIDENCE_BLOBS_2026-10-27.json) e [interpretação](DS_D04_RUNTIME_EVIDENCE_PRESERVATION_2026-10-27.md). Saldo esperado da diferença de paths 45→**0**, mas **11 paths existentes em ambas as árvores possuem blobs de conteúdo diferente** e a ref da #51 diverge em Git. Nenhum desses fatos autoriza eliminar a ref; verificar runtime historical states separadamente e manter `ops/branch-dispositions.json` como HOLD.

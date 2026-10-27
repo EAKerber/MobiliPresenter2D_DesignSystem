@@ -102,3 +102,7 @@ Trinta lotes possuem mesmo multiconjunto lexical do master mas notas/owner/consu
 ## D04 — 35 candidatos de arquitetura ARC-13 / VIS-002 (27/10/2026)
 
 Fonte #51, 35 blobs exatos: 32 candidatos/auditorias ARC-13 e 3 documentos VIS-002 com limites de aprovação contextual. [Inventário SHA](DS_D04_ARCHITECTURE_CANDIDATES_BLOBS_2026-10-27.json) · [classificação de autoridade](DS_D04_ARCHITECTURE_CANDIDATES_2026-10-27.md). Não reimplementar catálogos/contrastes por analogia; fonte histórica de 25/10. Após merge: 45 caminhos runtime exclusivos na #51.
+
+## D04 — últimas 45 notas runtime exclusivas da #51 (27/10/2026)
+
+Copiar original histórico por SHA exata de 45 arquivos `evidence/runtime/*.md` abrangendo navegação/teclado, DS05A, contraste, foco VIS-002 e falhas de imagem. [Manifesto](DS_D04_RUNTIME_EVIDENCE_BLOBS_2026-10-27.json) · [classificação de leitura](DS_D04_RUNTIME_EVIDENCE_PRESERVATION_2026-10-27.md). Produção/preview/CI são snapshots separados, não certificação atual. Após merge, **zero exclusivos** na #51; **11 modificados** e ancestralidade divergida impedem delete.

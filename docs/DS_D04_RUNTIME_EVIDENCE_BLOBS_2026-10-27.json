@@ -1,0 +1,300 @@
+{
+  "schema": "DSD04RuntimeEvidencePreservation/1",
+  "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "sourcePR": 51,
+  "sourceHead": "28062602a4ddcd1bee090742fe2587fe3837175d",
+  "mainBeforeMerge": "dd274545ed31c07d0bbe6316dd1fabce60e1c0f6",
+  "productSnapshotBase": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "status": "HISTORICAL_NOT_CURRENT",
+  "inventory": {
+    "files": 45,
+    "totalBytes": 162306,
+    "groups": {
+      "PRODUCTION_OBSERVATION_HISTORICAL": 21,
+      "CI_AUTH_EVIDENCE_HISTORICAL": 6,
+      "MIXED_RUNTIME_EVIDENCE_HISTORICAL": 7,
+      "PREVIEW_OR_PR_HISTORICAL": 11
+    },
+    "exclusivePathsBefore": 45,
+    "exclusivePathsAfter": 0
+  },
+  "artifacts": [
+    {
+      "path": "evidence/runtime/about-skip-link-production-focus-2026-10-24.md",
+      "sha": "9ccfa151e663b225b0bdc54faca7c13daf26798c",
+      "bytes": 2208,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/access-public-invalid-link-focus-production-2026-10-24.md",
+      "sha": "c709adfa21262f0256ead2af493c97c2f84da6d5",
+      "bytes": 2029,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/admin-login-no-session-focus-production-2026-10-24.md",
+      "sha": "3373b81ca8738639bc03b0b6d6b35b529e7be80a",
+      "bytes": 5265,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/ds05a-anonymous-access-gate-2026-10-24.md",
+      "sha": "8037e678efb3cdb93f7be80df2de1048d889b9b1",
+      "bytes": 1799,
+      "role": "CI_AUTH_EVIDENCE_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/ds05a-auth-gate-stability-rerun-2026-10-24.md",
+      "sha": "778a063540343421dd53738f3888bd7ba26da7dd",
+      "bytes": 2022,
+      "role": "CI_AUTH_EVIDENCE_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/ds05a-ci-auth-fixture-limit-2026-10-24.md",
+      "sha": "6b751c3f7aeff658c1ecfd8749c16d93bb33dd41",
+      "bytes": 4857,
+      "role": "CI_AUTH_EVIDENCE_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/ds05a-ci-stage-progression-2026-10-24.md",
+      "sha": "c04f0052d0b2683440a15c19d2f6be15e5faf52c",
+      "bytes": 2982,
+      "role": "CI_AUTH_EVIDENCE_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/ds05a-nav-layout-reinsert-diagnostic-2026-10-25.md",
+      "sha": "23ad76910b31cd914f087340988095474445b0a5",
+      "bytes": 2635,
+      "role": "CI_AUTH_EVIDENCE_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/how-it-works-accordion-keyboard-production-2026-10-24.md",
+      "sha": "6e853c5c49a8022e5eef75f920ba735ec18625c9",
+      "bytes": 2059,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/how-it-works-disclosure-focus-production-2026-10-24.md",
+      "sha": "bede863bc4fe9b347aad4826d974242d6df41855",
+      "bytes": 2079,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/how-it-works-economy-action-focus-production-2026-10-24.md",
+      "sha": "abc7d1f6fad7278f34d434a6860d4cd29a7cadf7",
+      "bytes": 3363,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/how-it-works-economy-focus-six-cards-production-2026-10-24.md",
+      "sha": "73e1d3c838e665ccb7d8942877da66cdb8975dd5",
+      "bytes": 1721,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/how-it-works-images-motion-production-2026-10-24.md",
+      "sha": "fdf4380b0965a906e069728886303679675522a4",
+      "bytes": 1236,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/how-it-works-motion-css-runtime-snapshot-production-2026-10-24.md",
+      "sha": "7789e674336b7e59f7606eec76325db8eba587ed",
+      "bytes": 7440,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/how-it-works-step-illustrations-visual-review-2026-10-25.md",
+      "sha": "0a13e60d92143de9e2ecdc75f614175d9848d97e",
+      "bytes": 2967,
+      "role": "MIXED_RUNTIME_EVIDENCE_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/issue205-viewer-detail-card-surface-ab-2026-10-25.md",
+      "sha": "6f96a2c1c0191d9e84533f1279d06e74766e4785",
+      "bytes": 3495,
+      "role": "MIXED_RUNTIME_EVIDENCE_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/issue217-dark-caption-production-recheck-2026-10-25.md",
+      "sha": "b3b2b97573f32799cbee0f013e72c0d037b48d87",
+      "bytes": 1861,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/issue224-carousel-source-recheck-2026-10-24.md",
+      "sha": "476c30fb8ae760da4484c9f167f1e62a12abf54a",
+      "bytes": 4293,
+      "role": "MIXED_RUNTIME_EVIDENCE_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/issue224-carousel-transient-repro-pr243-2026-10-24.md",
+      "sha": "ed0b7582b04be3975c7b26be5831258478f3203c",
+      "bytes": 2624,
+      "role": "MIXED_RUNTIME_EVIDENCE_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/landing-public-compact-header-production-2026-10-24.md",
+      "sha": "e58535d0bacf7883e2a51034437384e814b2673e",
+      "bytes": 2563,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/nav005-current-production-geometry-recheck-2026-10-24.md",
+      "sha": "025627d852136cb120a17caeaa37421b3f2ba89c",
+      "bytes": 3136,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/nav005-pr244-public-header-preview-recheck-2026-10-25.md",
+      "sha": "1b732a870dd2c7d98e00024bfae0c7ebe4aad2b5",
+      "bytes": 2466,
+      "role": "PREVIEW_OR_PR_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/nav005-public-compact-header-proposal-2026-10-24.md",
+      "sha": "cfd787b8992de8fab3bccb29af9598b7c589bd03",
+      "bytes": 3098,
+      "role": "MIXED_RUNTIME_EVIDENCE_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/netlify-ci-auth-environments-2026-10-24.md",
+      "sha": "2fb6eba3ca6a93cc49b22564ba78443a543c11b8",
+      "bytes": 3771,
+      "role": "CI_AUTH_EVIDENCE_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/pr239-about-skip-link-preview-focus-2026-10-24.md",
+      "sha": "766920e570eadc5c6d0e113ad5ce21ce72e0ea59",
+      "bytes": 2064,
+      "role": "PREVIEW_OR_PR_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/pr239-about-skip-link-preview-manual-recheck-2026-10-24.md",
+      "sha": "7f0f3c95bc98be91253a41b30cc3addc11fb5135",
+      "bytes": 1042,
+      "role": "PREVIEW_OR_PR_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/pr241-image-fallback-current-head-recheck-2026-10-26.md",
+      "sha": "bfc3926bd7596d83bc5990a111f0a238d62a2bd0",
+      "bytes": 1635,
+      "role": "PREVIEW_OR_PR_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/pr241-pr239-about-skip-link-consolidation-preview-2026-10-25.md",
+      "sha": "a4c2c9056354cf2feb9556fd07005989f6a58c30",
+      "bytes": 2357,
+      "role": "PREVIEW_OR_PR_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/pr241-vis002-measured-copy-contrast-preview-2026-10-24.md",
+      "sha": "c8a474ef0a56e5c158de16bb85ff317711d3a156",
+      "bytes": 6511,
+      "role": "PREVIEW_OR_PR_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/pr241-vis002-v03-preview-manual-review-2026-10-25.md",
+      "sha": "8aed29885b188d98df4d175e4f9f88f522323bd4",
+      "bytes": 2547,
+      "role": "PREVIEW_OR_PR_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/pr242-viewer-focus-image-contrast-sample-2026-10-25.md",
+      "sha": "92e705bae836d238e7d493bd3fd49e1ba82738c3",
+      "bytes": 2488,
+      "role": "PREVIEW_OR_PR_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/pr242-viewer-hotspot-focus-keylines-preview-2026-10-25.md",
+      "sha": "4f699702dd247e9d6247d19d956d576830418fb6",
+      "bytes": 16812,
+      "role": "PREVIEW_OR_PR_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/pr242-viewer-hotspot-focus-preview-keyboard-recheck-2026-10-25.md",
+      "sha": "fe51e537bfab2469c93df7b6f7ff2252ab88c0e0",
+      "bytes": 1744,
+      "role": "PREVIEW_OR_PR_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/pr242-viewer-hotspot-focus-preview-manual-review-2026-10-24.md",
+      "sha": "12d97fa4f8bef3b1d894174f568b588b72cdf7fd",
+      "bytes": 1607,
+      "role": "PREVIEW_OR_PR_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/public-focus-ring-production-component-sample-2026-10-24.md",
+      "sha": "36363a3032b8ed7d1bfdb6cfe2e276d34232718e",
+      "bytes": 2078,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/public-headers-320-production-2026-10-24.md",
+      "sha": "c0aeb348e0ff8099bdfa0dd7b228ae6d82e8c7cd",
+      "bytes": 3767,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/public-image-failure-runtime-production-2026-10-25.md",
+      "sha": "f00bbd58d3fef4d7debc1fa0bf127169cc17854d",
+      "bytes": 5840,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/public-menu-production-escape-2026-10-24.md",
+      "sha": "a80a4f99867e916da70aa348c2932b31211c98d9",
+      "bytes": 1731,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/public-routes-keyboard-images-production-2026-10-24.md",
+      "sha": "478dc26c9923eba63b4822ba6344335152f6e4a7",
+      "bytes": 4741,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/public-routes-reduced-motion-runtime-production-2026-10-24.md",
+      "sha": "c6cf6df035105555f40546a2af47ec87a488dc6f",
+      "bytes": 5443,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/public-skip-navigation-focus-2026-10-24.md",
+      "sha": "ebe9cb40a22f628251ce1c8d399affc0ae31003b",
+      "bytes": 2030,
+      "role": "MIXED_RUNTIME_EVIDENCE_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/public-text-contrast-production-themes-2026-10-24.md",
+      "sha": "8bc3d0d66875b1d492315fe3e5fca620362da1a8",
+      "bytes": 7947,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/viewer-hotspot-focus-contrast-production-2026-10-24.md",
+      "sha": "9e58b2b603e768f7cc9cf3c5b5297f92b965a685",
+      "bytes": 13785,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/viewer-scene-hotspot-keyboard-focus-production-2026-10-24.md",
+      "sha": "6593acfed5300043d7b3940b0c63bdd3e6a4570d",
+      "bytes": 1982,
+      "role": "PRODUCTION_OBSERVATION_HISTORICAL"
+    },
+    {
+      "path": "evidence/runtime/vis002c-v03-ten-context-reconciliation-2026-10-25.md",
+      "sha": "410974c8b9dada4ba965934eff686c9ce8b30183",
+      "bytes": 2186,
+      "role": "MIXED_RUNTIME_EVIDENCE_HISTORICAL"
+    }
+  ],
+  "interpretation": [
+    "Dates/heads/previews in source files describe original observations only. Do not infer issue status or head state today.",
+    "A successful isolated CI or keyboard sample does not certify authenticated journeys, iPad behavior or production accessibility.",
+    "Preview-only focus and image fallback implementations require separately authorized visual/running gates.",
+    "Exact Git blob preservation is NOT ancestry/tree equivalence and does not imply branch is safe to delete.",
+    "Some historic reports mention credentials/environment names but do not authorize secret handling or endpoint access."
+  ]
+}

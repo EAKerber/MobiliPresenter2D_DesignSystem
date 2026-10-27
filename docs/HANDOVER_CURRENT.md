@@ -216,3 +216,7 @@ Foco em preservar escopo/owner/parametrização não recuperável pela lista de 
 ## D04 — últimos 35 registros de arquitetura da #51 (27/10/2026, pré-merge)
 
 Seleção de **32 objetos ARC-13** (propostas, auditoria cruzada, residuais e reclassificações) e **3 VIS-002** contextualizados, por Git Blob SHA exato e sem ativar alteração visual. [Manifesto](DS_D04_ARCHITECTURE_CANDIDATES_BLOBS_2026-10-27.json) · [política e limites](DS_D04_ARCHITECTURE_CANDIDATES_2026-10-27.md). Atenção: a evidência VIS-002 de keylines do hotspot só registra autorização para **preview da PR #242**, não Production. Propostas ARC13 seguem candidatas; convenção aprovada não é aprovação de string, catálogo ou owner. Após merge/readback: #51 80→45 exclusivos (apenas notas runtime). Não autoriza exclusão das refs HOLD.
+
+## D04 — últimos 45 relatórios runtime da #51 (27/10/2026; pré-merge)
+
+Seleção de **45 arquivos Markdown runtime** datados (24–26/10) com Git Blobs idênticos da PR #51. [Inventário/SHAs](DS_D04_RUNTIME_EVIDENCE_BLOBS_2026-10-27.json) e [nota sobre limites e status datado](DS_D04_RUNTIME_EVIDENCE_PRESERVATION_2026-10-27.md). Amostras incluem DS-05A auth fixture, Issue #224, NAV-005, PRs #242 e contraste VIS-002; nenhum status histórico vira verdade atual automaticamente. Se merge/readback passar, #51 tem **0 paths exclusivos** em relação à main, mas ainda contém **11 blobs canônicos modificados** e histórico divergido; fica HOLD, não `SAFE_TO_DELETE`. As outras sete branches HOLD e a branch operacional permanecem, sem exclusão.
