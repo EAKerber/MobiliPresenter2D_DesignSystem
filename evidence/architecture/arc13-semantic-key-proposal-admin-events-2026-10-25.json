@@ -1,0 +1,208 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/admin/admin.js:renderEvents",
+    "occurrences": 13,
+    "uniqueProposedKeys": 13
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "Direct DOM rendering in one Admin consumer scope. Dynamic values are recorded as parameters; all proposed copy remains source-display text until content review.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "Asset source paths and catalog labels are dynamic data, not proposed as translated UI copy.",
+    "Event target and module labels may come from runtime/catalog data; this proposal covers only literals classified in renderEvents."
+  ],
+  "entries": [
+    {
+      "proposedKey": "admin.events.dimensionAdjustmentHeading",
+      "text": "Ajuste de dimensão",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1099
+        }
+      ],
+      "owner": "Admin event editor",
+      "consumer": "renderEvents",
+      "sink": "eventsList generated rule editor",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.events.legacyDepthHeading",
+      "text": "Ajuste legado de profundidade",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1099
+        }
+      ],
+      "owner": "Admin event editor",
+      "consumer": "renderEvents",
+      "sink": "eventsList generated rule editor",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.events.stateChangeHeading",
+      "text": "Ativar ou desativar item",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1099
+        }
+      ],
+      "owner": "Admin event editor",
+      "consumer": "renderEvents",
+      "sink": "eventsList generated rule editor",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.events.setDimensionAction",
+      "text": "Alterar dimensão de módulo",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1101
+        }
+      ],
+      "owner": "Admin event editor",
+      "consumer": "renderEvents",
+      "sink": "eventsList generated rule editor",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.events.setEnabledAction",
+      "text": "Ativar ou desativar módulo ou serviço",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1101
+        }
+      ],
+      "owner": "Admin event editor",
+      "consumer": "renderEvents",
+      "sink": "eventsList generated rule editor",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.events.fixedDepthAction",
+      "text": "Profundidade fixa do Módulo 07",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1101
+        }
+      ],
+      "owner": "Admin event editor",
+      "consumer": "renderEvents",
+      "sink": "eventsList generated rule editor",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.events.triggerLabel",
+      "text": "Quando este item",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1102
+        }
+      ],
+      "owner": "Admin event editor",
+      "consumer": "renderEvents",
+      "sink": "eventsList generated rule editor",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.events.legacyDepthTargetLabel",
+      "text": "Aplicar ao Módulo 07 · Profundidade em mm",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1105
+        }
+      ],
+      "owner": "Admin event editor",
+      "consumer": "renderEvents",
+      "sink": "eventsList generated rule editor",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.events.targetLabel",
+      "text": "Aplicar a",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1108
+        }
+      ],
+      "owner": "Admin event editor",
+      "consumer": "renderEvents",
+      "sink": "eventsList generated rule editor",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.events.stateLabel",
+      "text": "Definir estado",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1109
+        }
+      ],
+      "owner": "Admin event editor",
+      "consumer": "renderEvents",
+      "sink": "eventsList generated rule editor",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.events.moduleTargetLabel",
+      "text": "Aplicar ao módulo",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1112
+        }
+      ],
+      "owner": "Admin event editor",
+      "consumer": "renderEvents",
+      "sink": "eventsList generated rule editor",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.events.valueMmLabel",
+      "text": "Valor em mm",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1114
+        }
+      ],
+      "owner": "Admin event editor",
+      "consumer": "renderEvents",
+      "sink": "eventsList generated rule editor",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.events.removeEventAction",
+      "text": "Remover evento",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 1117
+        }
+      ],
+      "owner": "Admin event editor",
+      "consumer": "renderEvents",
+      "sink": "eventsList generated rule editor",
+      "parameterContract": []
+    }
+  ]
+}

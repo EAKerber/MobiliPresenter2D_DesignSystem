@@ -1,0 +1,122 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/app.js: renderCurrentValue and renderSummary",
+    "sourceLiteralOccurrences": 3,
+    "uniqueProposedKeys": 5
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "existingProposalKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "Map each fixed text node separately while preserving the existing HTML structure and the distinction between renderCurrentValue and renderSummary. Dynamic estimate.label and monetary values remain outside these fixed-text proposals.",
+  "limitations": [
+    "Documentary proposal only; no runtime migration, canonical index update or decisions.json change is authorized by this proposal.",
+    "Keep span, strong and small elements in code. Resolve text values as text nodes/textContent during a future extraction; do not translate or interpolate HTML markup.",
+    "The same raw source identity at app/app.js:1607 and app/app.js:1661 represents separate consumers and receives distinct keys under the approved convention."
+  ],
+  "entries": [
+    {
+      "proposedKey": "configurator.pricing.currentValue.estimateLabel",
+      "text": "Estimativa",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1603,
+          "currentText": "</strong><small>Estimativa</small>"
+        }
+      ],
+      "sourceLines": [
+        1603
+      ],
+      "owner": "Configurator current value",
+      "consumer": "renderCurrentValue",
+      "sink": "small estimate label in current value",
+      "parameterContract": [],
+      "textNode": "Estimativa"
+    },
+    {
+      "proposedKey": "configurator.pricing.currentValue.pendingPriceLabel",
+      "text": "Valor do conjunto",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1607,
+          "currentText": "<span>Valor do conjunto</span><strong>Em configuração</strong>"
+        }
+      ],
+      "sourceLines": [
+        1607
+      ],
+      "owner": "Configurator current value",
+      "consumer": "renderCurrentValue",
+      "sink": "span label in pending-price state",
+      "parameterContract": [],
+      "textNode": "Valor do conjunto"
+    },
+    {
+      "proposedKey": "configurator.pricing.currentValue.pendingPriceStatus",
+      "text": "Em configuração",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1607,
+          "currentText": "<span>Valor do conjunto</span><strong>Em configuração</strong>"
+        }
+      ],
+      "sourceLines": [
+        1607
+      ],
+      "owner": "Configurator current value",
+      "consumer": "renderCurrentValue",
+      "sink": "strong status in pending-price state",
+      "parameterContract": [],
+      "textNode": "Em configuração"
+    },
+    {
+      "proposedKey": "configurator.summary.pendingPriceLabel",
+      "text": "Valor do conjunto",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1661,
+          "currentText": "<span>Valor do conjunto</span><strong>Em configuração</strong>"
+        }
+      ],
+      "sourceLines": [
+        1661
+      ],
+      "owner": "Configurator pricing summary",
+      "consumer": "renderSummary",
+      "sink": "span label in pending-price state",
+      "parameterContract": [],
+      "textNode": "Valor do conjunto"
+    },
+    {
+      "proposedKey": "configurator.summary.pendingPriceStatus",
+      "text": "Em configuração",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1661,
+          "currentText": "<span>Valor do conjunto</span><strong>Em configuração</strong>"
+        }
+      ],
+      "sourceLines": [
+        1661
+      ],
+      "owner": "Configurator pricing summary",
+      "consumer": "renderSummary",
+      "sink": "strong status in pending-price state",
+      "parameterContract": [],
+      "textNode": "Em configuração"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/admin/admin.js:renderObjectAssets",
+    "occurrences": 10,
+    "uniqueProposedKeys": 10
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "Direct DOM rendering in one Admin consumer scope. Dynamic values are recorded as parameters; all proposed copy remains source-display text until content review.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "Asset source paths and catalog labels are dynamic data, not proposed as translated UI copy.",
+    "Event target and module labels may come from runtime/catalog data; this proposal covers only literals classified in renderEvents."
+  ],
+  "entries": [
+    {
+      "proposedKey": "admin.objectAssets.objectHeading",
+      "text": "${label} · arquivos da cena",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 815
+        }
+      ],
+      "owner": "Admin object asset editor",
+      "consumer": "renderObjectAssets",
+      "sink": "asset editor DOM heading, labels, preview, or note",
+      "parameterContract": [
+        "label"
+      ]
+    },
+    {
+      "proposedKey": "admin.objectAssets.sceneImageLabel",
+      "text": "Imagem da cena",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 818
+        }
+      ],
+      "owner": "Admin object asset editor",
+      "consumer": "renderObjectAssets",
+      "sink": "asset editor DOM heading, labels, preview, or note",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.objectAssets.detailImageLabel",
+      "text": "Imagem dos detalhes",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 818
+        }
+      ],
+      "owner": "Admin object asset editor",
+      "consumer": "renderObjectAssets",
+      "sink": "asset editor DOM heading, labels, preview, or note",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.objectAssets.maskLabel",
+      "text": "Máscara de acabamento",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 818
+        }
+      ],
+      "owner": "Admin object asset editor",
+      "consumer": "renderObjectAssets",
+      "sink": "asset editor DOM heading, labels, preview, or note",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.objectAssets.defaultAssetOption",
+      "text": "Usar o padrão / sem máscara",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 821
+        }
+      ],
+      "owner": "Admin object asset editor",
+      "consumer": "renderObjectAssets",
+      "sink": "asset editor DOM heading, labels, preview, or note",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.objectAssets.previewAlt",
+      "text": "${title} · ${label}",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 827
+        }
+      ],
+      "owner": "Admin object asset editor",
+      "consumer": "renderObjectAssets",
+      "sink": "asset editor DOM heading, labels, preview, or note",
+      "parameterContract": [
+        "title",
+        "label"
+      ]
+    },
+    {
+      "proposedKey": "admin.objectAssets.previewUnavailable",
+      "text": "Prévia indisponível",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 828
+        }
+      ],
+      "owner": "Admin object asset editor",
+      "consumer": "renderObjectAssets",
+      "sink": "asset editor DOM heading, labels, preview, or note",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.objectAssets.defaultMaskPreview",
+      "text": "Sem máscara · usar o recorte padrão",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 829
+        }
+      ],
+      "owner": "Admin object asset editor",
+      "consumer": "renderObjectAssets",
+      "sink": "asset editor DOM heading, labels, preview, or note",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.objectAssets.sceneAssetRestriction",
+      "text": "A lista contém apenas arquivos já presentes na cena. O painel não carrega arquivos novos nem permite caminhos externos.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 832
+        }
+      ],
+      "owner": "Admin object asset editor",
+      "consumer": "renderObjectAssets",
+      "sink": "asset editor DOM heading, labels, preview, or note",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.objectAssets.sceneLayerUnavailable",
+      "text": "Este item não possui camada visual própria na cena. Configure cores e texturas na biblioteca de materiais.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 832
+        }
+      ],
+      "owner": "Admin object asset editor",
+      "consumer": "renderObjectAssets",
+      "sink": "asset editor DOM heading, labels, preview, or note",
+      "parameterContract": []
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/app.js:updateSelection",
+    "reviewedOccurrences": 13,
+    "proposedOccurrences": 12,
+    "uniqueProposedKeys": 12,
+    "deferredContentOccurrences": 1
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "All proposed strings are written to the module detail UI or its live selection hint within updateSelection. The product title remains a named template parameter. Two static price descriptions remain separate because they have different copy and no current localized type parameter.",
+  "limitations": [
+    "Proposal only; does not update index or product.",
+    "The configurationNote fragment is deferred: its owner is product data/content and the source fragment includes punctuation plus dynamic content.",
+    "Visual approval and translation extraction remain pending."
+  ],
+  "entries": [
+    {
+      "proposedKey": "configurator.moduleDetail.selectionHint",
+      "text": "Selecione um módulo na cena para abrir sua ficha.",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1385,
+      "owner": "Configurator module detail panel",
+      "consumer": "Selection hint, title announcement, close action, price section, technical facts or availability notice rendered by updateSelection",
+      "parameters": [],
+      "sourceLine": "      viewerHint.textContent = \"Selecione um módulo na cena para abrir sua ficha.\";",
+      "review": "Proposal only. Confirm the display context and parameter contract before assigning the key in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.selectedItemAnnouncement",
+      "text": "Ficha selecionada: ${product.title}",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1392,
+      "owner": "Configurator module detail panel",
+      "consumer": "Selection hint, title announcement, close action, price section, technical facts or availability notice rendered by updateSelection",
+      "parameters": [
+        {
+          "name": "productTitle",
+          "expression": "product.title"
+        }
+      ],
+      "sourceLine": "    viewerHint.textContent = `Ficha selecionada: ${product.title}`;",
+      "review": "Proposal only. Confirm the display context and parameter contract before assigning the key in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.closeAction",
+      "text": "Fechar detalhes do módulo",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1419,
+      "owner": "Configurator module detail panel",
+      "consumer": "Selection hint, title announcement, close action, price section, technical facts or availability notice rendered by updateSelection",
+      "parameters": [],
+      "sourceLine": "    close.setAttribute(\"aria-label\", \"Fechar detalhes do módulo\");",
+      "review": "Proposal only. Confirm the display context and parameter contract before assigning the key in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.priceLabel",
+      "text": "Valor atual na simulação",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1430,
+      "owner": "Configurator module detail panel",
+      "consumer": "Selection hint, title announcement, close action, price section, technical facts or availability notice rendered by updateSelection",
+      "parameters": [],
+      "sourceLine": "    priceLabel.textContent = \"Valor atual na simulação\";",
+      "review": "Proposal only. Confirm the display context and parameter contract before assigning the key in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.panelLocalPriceDescription",
+      "text": "Valor local do painel. Pedra e serviços aparecem uma única vez no resumo.",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1436,
+      "owner": "Configurator module detail panel",
+      "consumer": "Selection hint, title announcement, close action, price section, technical facts or availability notice rendered by updateSelection",
+      "parameters": [],
+      "sourceLine": "        ? \"Valor local do painel. Pedra e serviços aparecem uma única vez no resumo.\"",
+      "review": "Proposal only. Confirm the display context and parameter contract before assigning the key in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.moduleLocalPriceDescription",
+      "text": "Valor local do módulo. Pedra e serviços aparecem uma única vez no resumo.",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1437,
+      "owner": "Configurator module detail panel",
+      "consumer": "Selection hint, title announcement, close action, price section, technical facts or availability notice rendered by updateSelection",
+      "parameters": [],
+      "sourceLine": "        : \"Valor local do módulo. Pedra e serviços aparecem uma única vez no resumo.\";",
+      "review": "Proposal only. Confirm the display context and parameter contract before assigning the key in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.pricePending",
+      "text": "Em configuração",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1440,
+      "owner": "Configurator module detail panel",
+      "consumer": "Selection hint, title announcement, close action, price section, technical facts or availability notice rendered by updateSelection",
+      "parameters": [],
+      "sourceLine": "      priceValue.textContent = \"Em configuração\";",
+      "review": "Proposal only. Confirm the display context and parameter contract before assigning the key in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.pricePendingDescription",
+      "text": "O valor aparece quando a tabela de trabalho estiver completa.",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1441,
+      "owner": "Configurator module detail panel",
+      "consumer": "Selection hint, title announcement, close action, price section, technical facts or availability notice rendered by updateSelection",
+      "parameters": [],
+      "sourceLine": "      priceDescription.textContent = \"O valor aparece quando a tabela de trabalho estiver completa.\";",
+      "review": "Proposal only. Confirm the display context and parameter contract before assigning the key in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.dimensionsHeading",
+      "text": "Medidas nominais",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1461,
+      "owner": "Configurator module detail panel",
+      "consumer": "Selection hint, title announcement, close action, price section, technical facts or availability notice rendered by updateSelection",
+      "parameters": [],
+      "sourceLine": "    technicalHeading.textContent = \"Medidas nominais\";",
+      "review": "Proposal only. Confirm the display context and parameter contract before assigning the key in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.highlightsHeading",
+      "text": "Destaques",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1480,
+      "owner": "Configurator module detail panel",
+      "consumer": "Selection hint, title announcement, close action, price section, technical facts or availability notice rendered by updateSelection",
+      "parameters": [],
+      "sourceLine": "    benefitsHeading.textContent = \"Destaques\";",
+      "review": "Proposal only. Confirm the display context and parameter contract before assigning the key in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.includedComponentsHeading",
+      "text": "Componentes inclusos",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1486,
+      "owner": "Configurator module detail panel",
+      "consumer": "Selection hint, title announcement, close action, price section, technical facts or availability notice rendered by updateSelection",
+      "parameters": [],
+      "sourceLine": "    componentsHeading.textContent = \"Componentes inclusos\";",
+      "review": "Proposal only. Confirm the display context and parameter contract before assigning the key in the canonical index."
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.requirementUnavailable",
+      "text": "Indisponível enquanto o módulo estrutural necessário estiver fora da composição.",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "line": 1493,
+      "owner": "Configurator module detail panel",
+      "consumer": "Selection hint, title announcement, close action, price section, technical facts or availability notice rendered by updateSelection",
+      "parameters": [],
+      "sourceLine": "      requirements.textContent = \"Indisponível enquanto o módulo estrutural necessário estiver fora da composição.\";",
+      "review": "Proposal only. Confirm the display context and parameter contract before assigning the key in the canonical index."
+    }
+  ],
+  "deferred": [
+    {
+      "file": "app/app.js",
+      "line": 1456,
+      "text": " · ${product.configurationNote}",
+      "sourceLine": "    if (product.configurationNote) dimensions.textContent += ` · ${product.configurationNote}`;",
+      "reason": "Product-provided configurationNote content plus a punctuation fragment; determine content ownership and message boundary before assigning a UI key."
+    }
+  ]
+}

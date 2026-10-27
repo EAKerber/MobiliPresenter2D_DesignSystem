@@ -1,0 +1,86 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "sourceBlobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+  "scope": {
+    "consumer": "app/app.js: stone selection, service override status, and dimension adjustment feedback",
+    "sourceLiteralOccurrences": 3,
+    "uniqueProposedKeys": 3
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "These three messages have fixed wording and distinct, directly identified user-facing consumers. Dimension label and formatted value remain parameters; the stone label remains catalog-owned.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "The dimensional parameter is already formatted by the current dimension formatter; number/unit localization and catalog ownership need confirmation during extraction.",
+    "Other pluralizable messages, enum fallbacks, and catalog-authored notes remain outside this batch."
+  ],
+  "entries": [
+    {
+      "proposedKey": "configurator.stones.selectedAnnouncement",
+      "text": "{stoneLabel} aplicado ao conjunto.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 2501,
+          "currentText": " aplicado ao conjunto."
+        }
+      ],
+      "sourceLines": [
+        2501
+      ],
+      "owner": "Configurator stone package selection",
+      "consumer": "setStonePackage",
+      "sink": "configuration live announcement",
+      "parameterContract": [
+        "stone.label"
+      ]
+    },
+    {
+      "proposedKey": "configurator.services.eventControlledTitle",
+      "text": "Controlado por um evento da configuração.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 823,
+          "currentText": "Controlado por um evento da configuração."
+        }
+      ],
+      "sourceLines": [
+        823
+      ],
+      "owner": "Configurator service checklist",
+      "consumer": "renderServiceChecklist",
+      "sink": "checkbox title when an event overrides service control",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "configurator.dimensions.adjustedAnnouncement",
+      "text": "{dimensionLabel} ajustada para {dimensionValue} mm",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 886,
+          "currentText": "${labels[dimension]} ajustada para ${formatDimension(valueMm)} mm"
+        }
+      ],
+      "sourceLines": [
+        886
+      ],
+      "owner": "Configurator product dimensions",
+      "consumer": "productForCurrentConfiguration",
+      "sink": "configuration live announcement",
+      "parameterContract": [
+        "dimensionLabel (labels[dimension])",
+        "dimensionValue (formatDimension(valueMm))"
+      ]
+    }
+  ]
+}

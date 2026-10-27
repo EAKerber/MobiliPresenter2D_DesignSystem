@@ -62,3 +62,7 @@ Trinta lotes vinculados ao master não são contextualmente redundantes apesar d
 ## D04 — 69 traces e dois mapas (27/10/2026; pendente de gate)
 
 Mais 71 fontes históricas do head #51: 69 MDs `*consumer-trace-*` e dois índices de escopo/contexto `arc13-unkeyed-consumer-*-map`. Identificam regras de autorização, price breakdown, estados de erro e ARIA não capturados por inventário lexical. [Manifesto](DS_ARC13_CONSUMER_TRACE_BLOBS_2026-10-27.json) · [riscos](DS_ARC13_CONSUMER_TRACE_PRESERVATION_2026-10-27.md). Após merge: 151→80 exclusivos. Permanecem 32 outras fontes ARC13, 3 propostas VIS-002, 45 notas runtime. Não existe autorização de descarte de histórico divergente.
+
+## D04 — encaminhamento das 35 fontes arquiteturais remanescentes (27/10/2026)
+
+32 fontes ARC-13 (chaves **ainda candidatas**) e 3 VIS-002 (uma proposta de foco Viewer autorizada somente para preview, demais não canônicas) copiados por SHA exato. [Manifesto](DS_D04_ARCHITECTURE_CANDIDATES_BLOBS_2026-10-27.json), [relatório de limites](DS_D04_ARCHITECTURE_CANDIDATES_2026-10-27.md). Após merge e readback, #51 terá **45** caminhos exclusivos restantes: exclusivamente relatórios `evidence/runtime/*.md`. Histórico de PRs/ref não muda.

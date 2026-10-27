@@ -1,0 +1,109 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "sourceBlobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+  "scope": {
+    "consumer": "app/app.js: event-driven dimension feedback and local finish accessibility",
+    "sourceLiteralOccurrences": 4,
+    "uniqueProposedKeys": 4
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "The messages have direct runtime consumers and explicit dynamic parameters. The event-derived dimension note remains separate from the catalog-authored product dimensions string.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "The changes parameter is the already-composed semicolon-separated dimension adjustment text; translation extraction must preserve its order and formatting contract.",
+    "Product titles, finish labels, and formatter output remain caller-provided parameters."
+  ],
+  "entries": [
+    {
+      "proposedKey": "configurator.dimensions.adjustmentAnnouncement",
+      "text": "{dimensionLabel} ajustada para {formattedValue} mm",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 886,
+          "currentText": "${labels[dimension]} ajustada para ${formatDimension(valueMm)} mm"
+        }
+      ],
+      "sourceLines": [
+        886
+      ],
+      "owner": "Configurator dimension event feedback",
+      "consumer": "productForCurrentConfiguration",
+      "sink": "configurationNote construction input and announcement context",
+      "parameterContract": [
+        "dimensionLabel (labels[dimension])",
+        "formattedValue (formatDimension(valueMm))"
+      ]
+    },
+    {
+      "proposedKey": "configurator.dimensions.ruleAdjustmentNote",
+      "text": "{changes} pela regra de configuração.",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 895,
+          "currentText": "${changes[0].toLocaleUpperCase(\"pt-BR\")}${changes.slice(1)} pela regra de configuração."
+        }
+      ],
+      "sourceLines": [
+        895
+      ],
+      "owner": "Configurator dimension event feedback",
+      "consumer": "productForCurrentConfiguration",
+      "sink": "product.configurationNote",
+      "parameterContract": [
+        "changes (dimension adjustment messages joined with semicolon and initial uppercase)"
+      ]
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.dimensionAdjustmentNote",
+      "text": " · {configurationNote}",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1456,
+          "currentText": " · ${product.configurationNote}"
+        }
+      ],
+      "sourceLines": [
+        1456
+      ],
+      "owner": "Configurator module detail",
+      "consumer": "updateSelection",
+      "sink": "module dimension summary suffix",
+      "parameterContract": [
+        "configurationNote (runtime-generated event note)"
+      ]
+    },
+    {
+      "proposedKey": "configurator.localFinishes.applyToModuleAriaLabel",
+      "text": "Aplicar {finishLabel} somente em {productTitle}",
+      "sourceOccurrences": [
+        {
+          "file": "app/app.js",
+          "line": 1364,
+          "currentText": "Aplicar ${finish.publicLabel} somente em ${product.title}"
+        }
+      ],
+      "sourceLines": [
+        1364
+      ],
+      "owner": "Configurator local finish control",
+      "consumer": "createLocalFinishControl",
+      "sink": "finish swatch button aria-label",
+      "parameterContract": [
+        "finish.publicLabel",
+        "product.title"
+      ]
+    }
+  ]
+}

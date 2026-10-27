@@ -1,0 +1,295 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/admin/admin.js: syncPasswordReveal, appendInitialStateControl, appendNominalDimensionControls, renderFinishes",
+    "occurrences": 20,
+    "uniqueProposedKeys": 18
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "Each proposed string is tied to a direct attribute or text-node sink. Repeated strings in one lexical consumer share a key only when text, owner, sink and parameter contract match.",
+  "limitations": [
+    "Proposal only; no product, canonical index, or decisions.json change.",
+    "Dynamic item labels, finish names and axis labels are parameters.",
+    "There are several distinct literals on the same source line; coverage must count file, line and text rather than only file:line."
+  ],
+  "entries": [
+    {
+      "proposedKey": "admin.auth.passwordReveal.showAccessible",
+      "text": "Mostrar senha",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 102
+        }
+      ],
+      "owner": "Admin authentication controls",
+      "consumer": "syncPasswordReveal",
+      "sink": "password reveal button attributes/text",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.auth.passwordReveal.hideAccessible",
+      "text": "Ocultar senha",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 102
+        }
+      ],
+      "owner": "Admin authentication controls",
+      "consumer": "syncPasswordReveal",
+      "sink": "password reveal button attributes/text",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.auth.passwordReveal.showButton",
+      "text": "Mostrar",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 106
+        }
+      ],
+      "owner": "Admin authentication controls",
+      "consumer": "syncPasswordReveal",
+      "sink": "password reveal button attributes/text",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.auth.passwordReveal.hideButton",
+      "text": "Ocultar",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 106
+        }
+      ],
+      "owner": "Admin authentication controls",
+      "consumer": "syncPasswordReveal",
+      "sink": "password reveal button attributes/text",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchy.initialState.activeAria",
+      "text": "${item.label}: ativo inicialmente",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 241
+        },
+        {
+          "file": "app/admin/admin.js",
+          "line": 263
+        }
+      ],
+      "owner": "Admin hierarchy editor",
+      "consumer": "appendInitialStateControl",
+      "sink": "hierarchy item initial-state checkbox labels",
+      "parameterContract": [
+        "item.label"
+      ]
+    },
+    {
+      "proposedKey": "admin.hierarchy.initialState.activeToggle",
+      "text": "Iniciar ativo",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 244
+        },
+        {
+          "file": "app/admin/admin.js",
+          "line": 266
+        }
+      ],
+      "owner": "Admin hierarchy editor",
+      "consumer": "appendInitialStateControl",
+      "sink": "hierarchy item initial-state checkbox labels",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchy.initialState.configuratorVisibility",
+      "text": "Iniciar visível no configurador",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 244
+        }
+      ],
+      "owner": "Admin hierarchy editor",
+      "consumer": "appendInitialStateControl",
+      "sink": "hierarchy item initial-state checkbox labels",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchy.initialState.viewerVisibilityAria",
+      "text": "${item.label}: visível inicialmente no viewer",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 251
+        }
+      ],
+      "owner": "Admin hierarchy editor",
+      "consumer": "appendInitialStateControl",
+      "sink": "hierarchy item initial-state checkbox labels",
+      "parameterContract": [
+        "item.label"
+      ]
+    },
+    {
+      "proposedKey": "admin.hierarchy.initialState.viewerVisibility",
+      "text": "Iniciar visível no viewer",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 254
+        }
+      ],
+      "owner": "Admin hierarchy editor",
+      "consumer": "appendInitialStateControl",
+      "sink": "hierarchy item initial-state checkbox labels",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchy.nominalDimensions.legend",
+      "text": "Medidas nominais (mm)",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 277
+        }
+      ],
+      "owner": "Admin hierarchy editor",
+      "consumer": "appendNominalDimensionControls",
+      "sink": "nominal dimension fieldset labels and aria names",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchy.nominalDimensions.geometryNote",
+      "text": "Atualiza as cotas e vistas técnicas; não altera a geometria da cena.",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 281
+        }
+      ],
+      "owner": "Admin hierarchy editor",
+      "consumer": "appendNominalDimensionControls",
+      "sink": "nominal dimension fieldset labels and aria names",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchy.nominalDimensions.axisHeight",
+      "text": "Altura",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 283
+        }
+      ],
+      "owner": "Admin hierarchy editor",
+      "consumer": "appendNominalDimensionControls",
+      "sink": "nominal dimension fieldset labels and aria names",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchy.nominalDimensions.axisWidth",
+      "text": "Largura",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 283
+        }
+      ],
+      "owner": "Admin hierarchy editor",
+      "consumer": "appendNominalDimensionControls",
+      "sink": "nominal dimension fieldset labels and aria names",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.hierarchy.nominalDimensions.axisAria",
+      "text": "${label}: ${axisLabel} nominal em milímetros",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 296
+        }
+      ],
+      "owner": "Admin hierarchy editor",
+      "consumer": "appendNominalDimensionControls",
+      "sink": "nominal dimension fieldset labels and aria names",
+      "parameterContract": [
+        "label",
+        "axisLabel"
+      ]
+    },
+    {
+      "proposedKey": "admin.finishes.availabilityToggle",
+      "text": "Disponível para clientes",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 860
+        }
+      ],
+      "owner": "Admin finishes editor",
+      "consumer": "renderFinishes",
+      "sink": "finish availability and scope controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.finishes.globalScope",
+      "text": "Global · conjunto todo",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 866
+        }
+      ],
+      "owner": "Admin finishes editor",
+      "consumer": "renderFinishes",
+      "sink": "finish availability and scope controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.finishes.localScope",
+      "text": "Local · módulo individual",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 866
+        }
+      ],
+      "owner": "Admin finishes editor",
+      "consumer": "renderFinishes",
+      "sink": "finish availability and scope controls",
+      "parameterContract": []
+    },
+    {
+      "proposedKey": "admin.finishes.moduleScopeAria",
+      "text": "Módulos que aceitam ${source.label}",
+      "sourceOccurrences": [
+        {
+          "file": "app/admin/admin.js",
+          "line": 877
+        }
+      ],
+      "owner": "Admin finishes editor",
+      "consumer": "renderFinishes",
+      "sink": "finish availability and scope controls",
+      "parameterContract": [
+        "source.label"
+      ]
+    }
+  ]
+}

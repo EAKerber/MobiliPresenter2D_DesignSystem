@@ -1,0 +1,269 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "sourceOccurrences": 19,
+    "proposedMessages": 13,
+    "deferredMessages": 5,
+    "collisionCount": 0
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "The two functions have explicit DOM consumers. Complete UI messages and labels are proposed with dynamic values parameterized. Fragment-only and content-owned strings are held back rather than assigned unstable keys.",
+  "limitations": [
+    "Proposal only; no source or canonical index changes.",
+    "Current concatenation means dynamic message template extraction would require a product-code migration.",
+    "Plural and list formatters are not part of this audit.",
+    "The static HTML pair needs two message boundaries."
+  ],
+  "entries": [
+    {
+      "proposedKey": "configurator.summary.finishAdjustment",
+      "template": "acabamento +{formattedAmount}",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "sourceLines": [
+        1625
+      ],
+      "owner": "Configurator pricing summary or module detail",
+      "consumer": "Exact renderSummary/createCommercialItemPriceBreakdown sink, as identified by source line",
+      "parameters": [
+        {
+          "name": "formattedAmount",
+          "source": "formatCurrency(itemEstimate.finishCents)",
+          "format": "currency string produced by the existing formatter"
+        }
+      ],
+      "review": "Candidate only. Confirm terminology, formatted parameter type and full message boundary before assigning to the index."
+    },
+    {
+      "proposedKey": "configurator.summary.handleAllocation",
+      "template": "puxador rateado +{formattedAmount}",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "sourceLines": [
+        1626
+      ],
+      "owner": "Configurator pricing summary or module detail",
+      "consumer": "Exact renderSummary/createCommercialItemPriceBreakdown sink, as identified by source line",
+      "parameters": [
+        {
+          "name": "formattedAmount",
+          "source": "formatCurrency(itemEstimate.handleCents)",
+          "format": "currency string produced by the existing formatter"
+        }
+      ],
+      "review": "Candidate only. Confirm terminology, formatted parameter type and full message boundary before assigning to the index."
+    },
+    {
+      "proposedKey": "configurator.summary.cooktopStoneAdjustment",
+      "template": "pedra de cooktop +{formattedAmount}",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "sourceLines": [
+        1627
+      ],
+      "owner": "Configurator pricing summary or module detail",
+      "consumer": "Exact renderSummary/createCommercialItemPriceBreakdown sink, as identified by source line",
+      "parameters": [
+        {
+          "name": "formattedAmount",
+          "source": "formatCurrency(itemEstimate.localCents)",
+          "format": "currency string produced by the existing formatter"
+        }
+      ],
+      "review": "Candidate only. Confirm terminology, formatted parameter type and full message boundary before assigning to the index."
+    },
+    {
+      "proposedKey": "configurator.summary.emptyModules",
+      "template": "Nenhum módulo incluído.",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "sourceLines": [
+        1633
+      ],
+      "owner": "Configurator pricing summary or module detail",
+      "consumer": "Exact renderSummary/createCommercialItemPriceBreakdown sink, as identified by source line",
+      "parameters": [],
+      "review": "Candidate only. Confirm terminology, formatted parameter type and full message boundary before assigning to the index."
+    },
+    {
+      "proposedKey": "configurator.summary.globalFinishLabel",
+      "template": "Cor global",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "sourceLines": [
+        1651
+      ],
+      "owner": "Configurator pricing summary or module detail",
+      "consumer": "Exact renderSummary/createCommercialItemPriceBreakdown sink, as identified by source line",
+      "parameters": [],
+      "review": "Candidate only. Confirm terminology, formatted parameter type and full message boundary before assigning to the index."
+    },
+    {
+      "proposedKey": "configurator.summary.finishAllocationNote",
+      "template": "{finishLabel} aplicada aos módulos elegíveis.",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "sourceLines": [
+        1651
+      ],
+      "owner": "Configurator pricing summary or module detail",
+      "consumer": "Exact renderSummary/createCommercialItemPriceBreakdown sink, as identified by source line",
+      "parameters": [
+        {
+          "name": "finishLabel",
+          "source": "selectedFrontFinishLabel()",
+          "format": "catalog-provided label"
+        }
+      ],
+      "review": "Candidate only. Confirm terminology, formatted parameter type and full message boundary before assigning to the index."
+    },
+    {
+      "proposedKey": "configurator.summary.globalHandleLabel",
+      "template": "Puxador global",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "sourceLines": [
+        1652
+      ],
+      "owner": "Configurator pricing summary or module detail",
+      "consumer": "Exact renderSummary/createCommercialItemPriceBreakdown sink, as identified by source line",
+      "parameters": [],
+      "review": "Candidate only. Confirm terminology, formatted parameter type and full message boundary before assigning to the index."
+    },
+    {
+      "proposedKey": "configurator.summary.handleAllocationNote",
+      "template": "{handleLabel} rateado nas frentes dos módulos incluídos.",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "sourceLines": [
+        1652
+      ],
+      "owner": "Configurator pricing summary or module detail",
+      "consumer": "Exact renderSummary/createCommercialItemPriceBreakdown sink, as identified by source line",
+      "parameters": [
+        {
+          "name": "handleLabel",
+          "source": "selectedHandle().label",
+          "format": "catalog-provided label"
+        }
+      ],
+      "review": "Candidate only. Confirm terminology, formatted parameter type and full message boundary before assigning to the index."
+    },
+    {
+      "proposedKey": "configurator.summary.globalImpactNote",
+      "template": "Impacto global aplicado uma única vez à composição.",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "sourceLines": [
+        1655
+      ],
+      "owner": "Configurator pricing summary or module detail",
+      "consumer": "Exact renderSummary/createCommercialItemPriceBreakdown sink, as identified by source line",
+      "parameters": [],
+      "review": "Candidate only. Confirm terminology, formatted parameter type and full message boundary before assigning to the index."
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.priceBreakdownBaseAmount",
+      "template": "Valor-base do módulo.",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "sourceLines": [
+        937
+      ],
+      "owner": "Configurator pricing summary or module detail",
+      "consumer": "Exact renderSummary/createCommercialItemPriceBreakdown sink, as identified by source line",
+      "parameters": [],
+      "review": "Candidate only. Confirm terminology, formatted parameter type and full message boundary before assigning to the index."
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.finishPercentageNote",
+      "template": "{finishLabel} · adicional percentual do módulo.",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "sourceLines": [
+        943
+      ],
+      "owner": "Configurator pricing summary or module detail",
+      "consumer": "Exact renderSummary/createCommercialItemPriceBreakdown sink, as identified by source line",
+      "parameters": [
+        {
+          "name": "finishLabel",
+          "source": "selectedFrontFinishLabel(product)",
+          "format": "catalog-provided label"
+        }
+      ],
+      "review": "Candidate only. Confirm terminology, formatted parameter type and full message boundary before assigning to the index."
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.noApplicableFronts",
+      "template": "Sem frentes aplicáveis.",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "sourceLines": [
+        951
+      ],
+      "owner": "Configurator pricing summary or module detail",
+      "consumer": "Exact renderSummary/createCommercialItemPriceBreakdown sink, as identified by source line",
+      "parameters": [],
+      "review": "Candidate only. Confirm terminology, formatted parameter type and full message boundary before assigning to the index."
+    },
+    {
+      "proposedKey": "configurator.moduleDetail.stoneRequired",
+      "template": "Obrigatória neste módulo.",
+      "file": "app/app.js",
+      "blobSha": "805494f5ff90bc6aa80bfc4279a240a70e84f8b6",
+      "sourceLines": [
+        955
+      ],
+      "owner": "Configurator pricing summary or module detail",
+      "consumer": "Exact renderSummary/createCommercialItemPriceBreakdown sink, as identified by source line",
+      "parameters": [],
+      "review": "Candidate only. Confirm terminology, formatted parameter type and full message boundary before assigning to the index."
+    }
+  ],
+  "deferred": [
+    {
+      "file": "app/app.js",
+      "line": 1639,
+      "text": "As cores podem ser globais ou escolhidas por módulo, conforme as opções publicadas. Pedra e serviços entram uma única vez no conjunto; cada ficha mostra somente o valor local do módulo.",
+      "reason": "Long explanatory product copy; keep deferred until content ownership and localization policy are assigned."
+    },
+    {
+      "file": "app/app.js",
+      "line": 1650,
+      "text": " incluído(s).",
+      "reason": "Count fragment requires a complete pluralized message contract, not a suffix-only key."
+    },
+    {
+      "file": "app/app.js",
+      "line": 1653,
+      "text": "Inclusa no Módulo 02.",
+      "reason": "Specific pricing/product assertion; confirm source-of-truth ownership before translating."
+    },
+    {
+      "file": "app/app.js",
+      "line": 1661,
+      "text": "<span>Valor do conjunto</span><strong>Em configuração</strong>",
+      "reason": "One HTML literal contains two messages. Split into DOM nodes and give each message its own source boundary before key assignment."
+    },
+    {
+      "file": "app/app.js",
+      "line": 950,
+      "text": "Cota de {frontCount} frentes: {formattedAllocations}.",
+      "sourceFragments": [
+        "Cota de ",
+        " frentes: "
+      ],
+      "reason": "The current sentence is assembled from fragments and an amount list; define plural/list formatting and a full template before key assignment."
+    }
+  ]
+}

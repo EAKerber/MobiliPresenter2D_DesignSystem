@@ -1,0 +1,237 @@
+{
+  "schema": "DSD04ArchitectureCandidateRetention/1",
+  "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "sourcePR": 51,
+  "sourceHead": "28062602a4ddcd1bee090742fe2587fe3837175d",
+  "baselineMain": "383c72131f988657b04172422b6340339b1b82e9",
+  "originalSourceProduct": "5ccb2a8dde6dd16e136f03387dc833aab828c5cf",
+  "status": "HISTORICAL_EVIDENCE_NOT_CANONICAL",
+  "inventory": {
+    "files": 35,
+    "arc13Other": 32,
+    "vis002Candidates": 3,
+    "arc13ProposalJson": 28,
+    "bytes": 369166,
+    "beforeExclusive": 80,
+    "expectedAfterExclusive": 45
+  },
+  "items": [
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-admin-events-2026-10-25.json",
+      "sha": "e5d36565f90644e7547d4bd2c9e833d2a6183e44",
+      "bytes": 6245,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-admin-hierarchy-auth-finishes-2026-10-25.json",
+      "sha": "0661f8aea556dab5a91dc5c6db33a5fddf9b4116",
+      "bytes": 9188,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-admin-hierarchy-material-dependency-pager-2026-10-25.json",
+      "sha": "d68493bc908af4037a1c5c5212969a1d725abef2",
+      "bytes": 12807,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-admin-interactions-auth-2026-10-25.json",
+      "sha": "8d46b35f8069d700e9b17d3248fffc17dc3ca305",
+      "bytes": 6870,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-admin-loading-auth-2026-10-25.json",
+      "sha": "f2c18b2a5aef63f70d185dd8eef08399644ae630",
+      "bytes": 6534,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-admin-materials-2026-10-25.json",
+      "sha": "e322d68e294c3480ba5199ab71a412334ae08b04",
+      "bytes": 8433,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-admin-object-assets-2026-10-25.json",
+      "sha": "89beef80c7e10486f4151cc3ae4e086dd502fad1",
+      "bytes": 5723,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-admin-objects-2026-10-25.json",
+      "sha": "88bfdc06f57c590a1e0b83fdf0561724225c0c9e",
+      "bytes": 3978,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-admin-pricing-2026-10-25.json",
+      "sha": "ece823dfcb07ecda4019ea370222bffa21d1cbe2",
+      "bytes": 4521,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-admin-pricing-basis-fallback-2026-10-25.json",
+      "sha": "af8705713405207e66369cb958c59446904e653d",
+      "bytes": 2046,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-admin-pricing-creation-recovery-2026-10-25.json",
+      "sha": "edd29d58190aac81b1f764c9574d88e678309ad0",
+      "bytes": 7011,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-admin-remaining-controls-2026-10-25.json",
+      "sha": "a285ce4d7b5a936379fc332c06d7042990d77632",
+      "bytes": 7920,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-admin-sinks-2026-10-24.json",
+      "sha": "f09e09b5710cd5322678a1eafc7b5b2a08653990",
+      "bytes": 2666,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-admin-stages-2026-10-25.json",
+      "sha": "3953f7265ba7df13f384648acb943e2b5417d33c",
+      "bytes": 9016,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-configuration-batch-2026-10-25.json",
+      "sha": "3aae0af6f9be02a8c842d09405162280a7e8c77b",
+      "bytes": 55858,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-configurator-custom-stage-and-module-controls-2026-10-25.json",
+      "sha": "79766c5bb69a03e5cdc55eeef38fc0a099dba845",
+      "bytes": 6900,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-configurator-dimension-feedback-and-local-finish-2026-10-25.json",
+      "sha": "d27b988b6f7626fe3d8e5f66fd89f919306ec691",
+      "bytes": 4094,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-configurator-finish-and-stone-controls-2026-10-25.json",
+      "sha": "1f6d65571c4c5f043dabe9f9cefc0ca56e52bd89",
+      "bytes": 3350,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-configurator-handle-controls-2026-10-25.json",
+      "sha": "54b14af07334313f79665cde188d38855200ed58",
+      "bytes": 4744,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-configurator-html-text-nodes-2026-10-25.json",
+      "sha": "a1f433ec77b4f11d0a7a3de85ca38a1e85318391",
+      "bytes": 4434,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-configurator-mobile-scene-and-feedback-2026-10-25.json",
+      "sha": "caf20161d02f674b54dd834ca8e19d3e116b7483",
+      "bytes": 13584,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-configurator-module-and-accessory-controls-2026-10-25.json",
+      "sha": "ae7d6bfba26e1b4c83c6fddf6010badf4cfbef92",
+      "bytes": 5485,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-configurator-pricing-2026-10-25.json",
+      "sha": "8d3a651a5389cafaec856a53e06e742501dbef1a",
+      "bytes": 11731,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-configurator-stage-and-detail-messages-2026-10-25.json",
+      "sha": "eff2614232159c73f5c2d7aa959b542af086eeb4",
+      "bytes": 4119,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-configurator-stone-no-additional-2026-10-25.json",
+      "sha": "0fe8f1ba2bffc257c24ff7d018031a1785796fdf",
+      "bytes": 1955,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-configurator-stone-service-dimension-2026-10-25.json",
+      "sha": "23605269b66cd46544c92500cca42cfdc36a57fc",
+      "bytes": 3295,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-core-modules-2026-10-25.json",
+      "sha": "9c463bd4e7647a082f5b72a4757d3e8471bddfc6",
+      "bytes": 106715,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-cross-batch-audit-2026-10-25.md",
+      "sha": "20a49654e61d27b180e26f32ad5b92be908af91d",
+      "bytes": 2719,
+      "classification": "ARC13_AUDIT_OR_DECISION_SCOPE_RECORD"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-proposal-module-detail-2026-10-25.json",
+      "sha": "b618614a29b83a9c2f741fca02d7bc4dc49dd3fe",
+      "bytes": 10516,
+      "classification": "ARC13_CANDIDATE_PROPOSAL"
+    },
+    {
+      "path": "evidence/architecture/arc13-semantic-key-residual-review-2026-10-25.md",
+      "sha": "9837c2a0c823412df79972c76800254a2fe0df47",
+      "bytes": 5945,
+      "classification": "ARC13_AUDIT_OR_DECISION_SCOPE_RECORD"
+    },
+    {
+      "path": "evidence/architecture/arc13-unkeyed-code-literal-reclassification-2026-10-25.md",
+      "sha": "46cf5bd3c9287e554658af7e6447698ca202307a",
+      "bytes": 6621,
+      "classification": "ARC13_AUDIT_OR_DECISION_SCOPE_RECORD"
+    },
+    {
+      "path": "evidence/architecture/arc13-unkeyed-direct-sink-audit-2026-10-25.md",
+      "sha": "55ac083ac3f3335a157673f7899461565c001bf8",
+      "bytes": 8326,
+      "classification": "ARC13_AUDIT_OR_DECISION_SCOPE_RECORD"
+    },
+    {
+      "path": "evidence/architecture/vis002-economy-dark-surface-focus-candidate-2026-10-24.md",
+      "sha": "1d19f1b46b0a9645e5d02790912a88f340d49043",
+      "bytes": 2305,
+      "classification": "VIS002_CONTEXTUAL_PROPOSAL_OR_PREVIEW_EVIDENCE"
+    },
+    {
+      "path": "evidence/architecture/vis002-focus-ring-source-map-proposal-2026-10-24.md",
+      "sha": "cc54ecae707765304e403898ba55748f0fc95607",
+      "bytes": 10403,
+      "classification": "VIS002_CONTEXTUAL_PROPOSAL_OR_PREVIEW_EVIDENCE"
+    },
+    {
+      "path": "evidence/architecture/vis002-viewer-hotspot-focus-contrast-layer-proposal-2026-10-25.md",
+      "sha": "5a9cd02a7336dc9e80773ad90f1144a10f2e4f58",
+      "bytes": 3109,
+      "classification": "VIS002_CONTEXTUAL_PROPOSAL_OR_PREVIEW_EVIDENCE"
+    }
+  ],
+  "nonPromotionRules": [
+    "ARC-13 semantic key naming convention was approved, but not individual proposed keys, owner/consumer selection or catalog/runtime migration",
+    "VIS-002 economy-focus dark-surface candidate explicitly not approved",
+    "VIS-002 viewer-hotspot focus keyline option A was authorized for product PR #242 preview-only, not merge/production/global tokens",
+    "Historical note fields and PR statuses must not override current decisions.json",
+    "No source code or workflow activation in this batch"
+  ]
+}

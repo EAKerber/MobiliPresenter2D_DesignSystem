@@ -1,0 +1,151 @@
+{
+  "schema": "M2DArc13SemanticKeyProposal/1",
+  "createdAt": "2026-10-25",
+  "status": "candidate-for-contextual-review-not-canonical",
+  "approvedConvention": "Preserve existing namespace; use stable semantic camelCase suffixes; keep dynamic values as parameters; share only when owner, consumer and parameter contract match.",
+  "productHead": "5ccb2a8dde6dd16e136f03387dc833aab828c5",
+  "sourceIndex": "evidence/architecture/arc13-runtime-js-candidates-main-2026-10-24.json",
+  "sourceIndexBlobSha": "1954dfd9a4fe6194812b4fd336281eed39f64ecf",
+  "scope": {
+    "consumer": "app/admin/admin.js:renderMaterials",
+    "occurrences": 10,
+    "uniqueProposedKeys": 10
+  },
+  "collisionAudit": {
+    "existingIndexKeyCollisions": 0,
+    "withinBatchDuplicateKeys": 0
+  },
+  "rationale": "Every entry is an explicit form/option/accessible-label sink in the same Admin material editor. The material name remains a dynamic parameter in image alt text.",
+  "limitations": [
+    "Proposal only; no product or canonical index change.",
+    "The leading space in the checkbox text follows the DOM text node separator and should be preserved or normalized deliberately during extraction.",
+    "Admin remains a distinct owner from Configurator even where labels are textually identical."
+  ],
+  "entries": [
+    {
+      "proposedKey": "admin.materials.nameLabel",
+      "text": "Nome",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 956,
+      "owner": "Admin material editor",
+      "consumer": "Material form label, option, image alt, disclosure summary or remove action rendered by renderMaterials",
+      "parameters": [],
+      "sourceLine": "    card.append(chip, title, makeField(\"Nome\", material.label, \"materialLabel\"));",
+      "review": "Proposal only; review exact whitespace and accessible name before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.materials.baseColorLabel",
+      "text": "Cor base",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 957,
+      "owner": "Admin material editor",
+      "consumer": "Material form label, option, image alt, disclosure summary or remove action rendered by renderMaterials",
+      "parameters": [],
+      "sourceLine": "    const colorLabel = document.createElement(\"label\"); colorLabel.className = \"data-field\"; colorLabel.append(document.createTextNode(\"Cor base\"));",
+      "review": "Proposal only; review exact whitespace and accessible name before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.materials.noBaseColorOption",
+      "text": " Sem cor/tinta base",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 961,
+      "owner": "Admin material editor",
+      "consumer": "Material form label, option, image alt, disclosure summary or remove action rendered by renderMaterials",
+      "parameters": [],
+      "sourceLine": "    noColorLabel.append(noColor, document.createTextNode(\" Sem cor/tinta base\")); card.append(noColorLabel);",
+      "review": "Proposal only; review exact whitespace and accessible name before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.materials.kindLabel",
+      "text": "Tipo de material",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 962,
+      "owner": "Admin material editor",
+      "consumer": "Material form label, option, image alt, disclosure summary or remove action rendered by renderMaterials",
+      "parameters": [],
+      "sourceLine": "    const kindLabel = document.createElement(\"label\"); kindLabel.className = \"data-field\"; kindLabel.append(document.createTextNode(\"Tipo de material\"));",
+      "review": "Proposal only; review exact whitespace and accessible name before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.materials.solidColorOption",
+      "text": "Cor sólida",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 964,
+      "owner": "Admin material editor",
+      "consumer": "Material form label, option, image alt, disclosure summary or remove action rendered by renderMaterials",
+      "parameters": [],
+      "sourceLine": "    [[\"color\", \"Cor sólida\"], [\"texture\", \"Textura\"]].forEach(([value, text]) => { const option = document.createElement(\"option\"); option.value = value; option.textContent = text; kind.append(option); });",
+      "review": "Proposal only; review exact whitespace and accessible name before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.materials.existingTextureLabel",
+      "text": "Textura (arquivo existente)",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 966,
+      "owner": "Admin material editor",
+      "consumer": "Material form label, option, image alt, disclosure summary or remove action rendered by renderMaterials",
+      "parameters": [],
+      "sourceLine": "    const assetLabel = document.createElement(\"label\"); assetLabel.className = \"data-field\"; assetLabel.append(document.createTextNode(\"Textura (arquivo existente)\"));",
+      "review": "Proposal only; review exact whitespace and accessible name before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.materials.colorOnlyOption",
+      "text": "Somente cor",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 968,
+      "owner": "Admin material editor",
+      "consumer": "Material form label, option, image alt, disclosure summary or remove action rendered by renderMaterials",
+      "parameters": [],
+      "sourceLine": "    const noTexture = document.createElement(\"option\"); noTexture.value = \"\"; noTexture.textContent = \"Somente cor\"; assetSelect.append(noTexture);",
+      "review": "Proposal only; review exact whitespace and accessible name before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.materials.texturePreviewAlt",
+      "text": "Textura ${material.label}",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 971,
+      "owner": "Admin material editor",
+      "consumer": "Material form label, option, image alt, disclosure summary or remove action rendered by renderMaterials",
+      "parameters": [
+        {
+          "name": "materialLabel",
+          "expression": "material.label"
+        }
+      ],
+      "sourceLine": "    if (material.textureAsset) { const thumb = document.createElement(\"img\"); thumb.className = \"material-texture-preview\"; thumb.src = material.textureAsset; thumb.alt = `Textura ${material.label}`; thumb.loading = \"lazy\"; card.append(thumb); }",
+      "review": "Proposal only; review exact whitespace and accessible name before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.materials.targetsDisclosure",
+      "text": "Válido para…",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 973,
+      "owner": "Admin material editor",
+      "consumer": "Material form label, option, image alt, disclosure summary or remove action rendered by renderMaterials",
+      "parameters": [],
+      "sourceLine": "    const summary = document.createElement(\"summary\"); summary.textContent = \"Válido para…\"; targetSelect.append(summary);",
+      "review": "Proposal only; review exact whitespace and accessible name before canonical assignment."
+    },
+    {
+      "proposedKey": "admin.materials.removeAction",
+      "text": "Remover material",
+      "file": "app/admin/admin.js",
+      "blobSha": "79925345e43096df77bef54fe257e483f922edd8",
+      "line": 983,
+      "owner": "Admin material editor",
+      "consumer": "Material form label, option, image alt, disclosure summary or remove action rendered by renderMaterials",
+      "parameters": [],
+      "sourceLine": "    const remove = document.createElement(\"button\"); remove.type = \"button\"; remove.className = \"button button--secondary rule-remove\"; remove.textContent = \"Remover material\"; remove.dataset.removeMaterial = material.id;",
+      "review": "Proposal only; review exact whitespace and accessible name before canonical assignment."
+    }
+  ]
+}
