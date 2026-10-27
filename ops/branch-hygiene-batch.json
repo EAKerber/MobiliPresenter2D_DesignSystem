@@ -1,12 +1,18 @@
 {
   "schemaVersion": "BranchHygieneBatch 0.1",
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "wave": "DS-HYG-P12-2026-10-26",
-  "purpose": "Retire superseded SHA-exact operational hygiene ref after all PRs using it were closed/merged; head ancestor of current main, no unique tree content.",
+  "wave": "DS-HYG-P13-2026-10-27",
+  "purpose": "Retire two small divergent HOLD refs only after full PROTECTED_ARCHIVE_TAG_EXACT_COMMIT readback, SHA leases and gated CI. Retain all eight protected tags permanently.",
   "branches": [
     {
-      "branch": "maintenance/ds-product-hygiene-batch01-20261026",
-      "sha": "740c194fdfe15b945cc2abf67566705d6c5b1834"
+      "branch": "docs/reconcile-approved-focus-record",
+      "sha": "430f4e1c7b376ae08e1788bd3aa365a32f2b76e2",
+      "protectedArchiveTag": "refs/tags/ds-history/2026-10-27/docs--reconcile-approved-focus-record-430f4e1c7b37"
+    },
+    {
+      "branch": "audit/access-confirmation-runtime-20261020",
+      "sha": "ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37",
+      "protectedArchiveTag": "refs/tags/ds-history/2026-10-27/audit--access-confirmation-runtime-20261020-ae58f2199e9b"
     }
   ]
 }
