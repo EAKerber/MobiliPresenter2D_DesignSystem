@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "DSHistoricalDAGRetentionProposal/0.1",
+  "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+  "controlBranch": "main",
+  "status": "PROPOSAL_ONLY_NEVER_AUTHORIZE_DELETE",
+  "tagNamespace": "refs/tags/ds-history/2026-10-27/",
+  "tagStyle": "lightweight-commit-ref-exact-SHA",
+  "headSnapshotMain": "8d50d9167f1e85616f7e2f00389a534e1d879888",
+  "sourceReadback": "docs/DS_HOLD_FINAL_HEAD_CONTENT_READBACK_2026-10-27.json",
+  "candidates": [
+    {
+      "branch": "architecture/dom-css-consolidation-20261020",
+      "sha": "8e7d857528c9ea14fa45c3f58b57c07c7036bca0",
+      "tag": "refs/tags/ds-history/2026-10-27/architecture--dom-css-consolidation-20261020-8e7d857528c9"
+    },
+    {
+      "branch": "audit/access-confirmation-runtime-20261020",
+      "sha": "ae58f2199e9b3be5ba4ea313c86e7d26dd60ff37",
+      "tag": "refs/tags/ds-history/2026-10-27/audit--access-confirmation-runtime-20261020-ae58f2199e9b"
+    },
+    {
+      "branch": "audit/approved-contrast-runtime-20261021",
+      "sha": "e848e079071f4b2ce788e18a10a2284e6a24ff7a",
+      "tag": "refs/tags/ds-history/2026-10-27/audit--approved-contrast-runtime-20261021-e848e079071f"
+    },
+    {
+      "branch": "audit/auth-session-flow-2026-10-19",
+      "sha": "360d2e6d93d93ab74036149b518f22c01d57ecb0",
+      "tag": "refs/tags/ds-history/2026-10-27/audit--auth-session-flow-2026-10-19-360d2e6d93d9"
+    },
+    {
+      "branch": "docs/current-handover-20261024",
+      "sha": "28062602a4ddcd1bee090742fe2587fe3837175d",
+      "tag": "refs/tags/ds-history/2026-10-27/docs--current-handover-20261024-28062602a4dd"
+    },
+    {
+      "branch": "docs/handover-reconcile-20261023",
+      "sha": "96093786ed8fb182c604182c37a42681cba8d6c9",
+      "tag": "refs/tags/ds-history/2026-10-27/docs--handover-reconcile-20261023-96093786ed8f"
+    },
+    {
+      "branch": "docs/reconcile-approved-focus-record",
+      "sha": "430f4e1c7b376ae08e1788bd3aa365a32f2b76e2",
+      "tag": "refs/tags/ds-history/2026-10-27/docs--reconcile-approved-focus-record-430f4e1c7b37"
+    },
+    {
+      "branch": "proposal/vis002-semantic-state-colors-2026-10-19",
+      "sha": "a924c2be0e8b75d90e4faa570a8a9f55f0b6f812",
+      "tag": "refs/tags/ds-history/2026-10-27/proposal--vis002-semantic-state-colors-2026-10-19-a924c2be0e8b"
+    }
+  ],
+  "gates": [
+    "Verify main HEAD and all branch refs SHA against new observation before any archive",
+    "Only lightweight Git tag at original commit SHA; fail if tag exists at different SHA; never force update",
+    "Independently read back remote tags and prove exact SHA and commit object type; no tag creation by this proposal",
+    "Enforce immutable tag-name ruleset before even considering branch deletion; as observed 27-Oct rulesets list was empty",
+    "Retirement only by separately reviewed versioned exact-SHA batch and validated tool, not by this manifest",
+    "Terminal operational branch needs separate verified merge-second-parent mechanism; this proposal does not enable deletion"
+  ],
+  "risk": "No tags exist yet; 8 HOLD branches still preserve intermediate DAGs; disabling old preserveBranches or using ours merges is forbidden."
+}
