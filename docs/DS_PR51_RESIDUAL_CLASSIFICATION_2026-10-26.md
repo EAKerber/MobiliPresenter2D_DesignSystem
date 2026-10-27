@@ -24,3 +24,21 @@
 **Cálculo após integração do lote de 3 imagens (condicional ao merge):** exclusividades desta fonte caem de 221 para 218, e diferenças de 232 para 229, desde que nenhum dos heads tenha mudado. Os outros **218** caminhos permanecem HOLD. Nenhuma branch foi declarada elegível à exclusão por este recorte.
 
 **Provenance gate:** imagens copiadas por referência ao próprio Git Blob SHA do commit `28062602a4ddcd1bee090742fe2587fe3837175d`; a ação de integração deve verificar SHA exato na main. Não reconstruir PNG/WebP, recodificar, nem usar print raster como substituto. D04=A, D01=A e D02=B continuam vigentes.
+
+## Atualização de destinação D04 — 27/10/2026 (após PRs #89–#91)
+
+Baseline vivo do Design System `main@6a4783b2f6217c689117b1183daceea00ef18f17`. Desde a fotografia deste arquivo, foram integradas [#89](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/89) (ownership estático + 6 consumer traces), [#90](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/90) (convenção ARC-13 aprovada em escopo restrito, Viewer e gate DS-05A) e [#91](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/91) (matrizes G0–G8, 8 rotas, 1.390 blocos CSS e issue DS-04). Todas foram seletivas e documentadas com hashes.
+
+O saldo de **193 caminhos exclusivos da #51** após #91 é:
+
+| Grupo remanescente | Arquivos | Tamanho aproximado | Disposição atual |
+|---|---:|---:|---|
+| `arc13-classified-*` | 38 | 1.777.887 B | HOLD: batches de classificação; avaliar cobertura/deduplicação vs fonte e versão antes de importar |
+| Outros `arc13-*` (fora consumer/classified) | 38 | 2.420.206 B | HOLD: propostas/índices de suporte, não migrar automaticamente para catálogo |
+| `*consumer-trace-*` | 69 | 143.278 B | HOLD: rastreios estáticos pontuais, selecionar por risco/owner |
+| Outros `evidence/architecture/` | 3 | 15.817 B | HOLD: propostas/casos restantes, não aprovações de produto |
+| `evidence/runtime/*.md` | 45 | 162.306 B | HOLD: snapshots de rotas, CI e previews, não status atual |
+
+**Observação sobre os tamanhos:** os tamanhos foram calculados no tree atual após PR #91, comparando o HEAD SHA imutável da #51 com a main. Os 3 restantes no grupo de outros arquivos de arquitetura são propostas de VIS-002 para superfícies/foco, não homologações.
+
+A PR [#51](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51) está **CLOSED, NOT MERGED**, desde `2026-10-27T03:14:18Z` pelo evento atribuído à conta `EAKerber`. A branch de origem ainda existe; D04 e `ops/branch-dispositions.json` seguem impondo **HOLD**. Encerrar PR não prova integridade de todos os dados remanescentes e não satisfaz a elegibilidade do executor de exclusão. A PR #39 permanece aberta; #39 tem 21 exclusivos (12 docs/ADRs, 7 arquivos de experimento, 2 workflows antigos). Nenhum workflow histórico novo foi ativado.
