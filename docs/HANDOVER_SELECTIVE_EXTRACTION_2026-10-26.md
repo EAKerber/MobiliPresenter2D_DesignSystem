@@ -86,3 +86,7 @@ Quatro documentos por Git Blob exato de #51, classificação e SHAs em [DS_D04_C
 ## D04 — seis contratos ARC-13 de baixo volume e controle negativo (27/10/2026)
 
 Preservar em main por SHA exata de #51 (não mergeada) 6 arquivos de 24–25/10: proposta do fluxo de salvamento Admin (39 itens), validações de pricing (27) e Admin (72), navegação privada (29), controle negativo de teclado (35 itens, 0 localizáveis) e proposta do carrossel (26). [Relatório](DS_ARC13_CONTRACT_REVIEW_2026-10-27.md) · [manifesto](DS_ARC13_CONTRACT_REVIEW_2026-10-27.json). Inventário não valida segurança nem aprova chaves; #51 193→187 exclusiva após merge.
+
+## ARC-13 — índices JS/HTML e exceções semânticas (27/10/2026)
+
+Após ler o master via Git Blob SHA, auditoria original-vs-batches em 36 vínculos: 27/29 JS PASS no multiconjunto de quatro campos; sete de sete HTML PASS; dois batches JS têm normalização/composição semântica e referências de linha não-bijetivas. [Relatório](DS_ARC13_MASTER_BATCH_RECONCILIATION_2026-10-27.md) · [manifesto com 36 SHAs](DS_ARC13_MASTER_BATCH_AUDIT_2026-10-27.json). Extrair sem transformação dois índices e dois batches excepcionais, mantendo 183 exclusivos na #51 apenas após readback. Os demais batches ainda preservam owners e parâmetros contextuais únicos; não descartar pela contagem lexical.
