@@ -10,6 +10,7 @@ import os
 import re
 import subprocess
 import urllib.request
+from datetime import datetime
 from pathlib import Path
 
 REPO = "EAKerber/MobiliPresenter2D_DesignSystem"
@@ -54,6 +55,19 @@ def remote_refs(kind, pattern=None):
     return refs
 
 
+def same_verified_ruleset_revision(raw):
+    # GitHub REST can serialize the same instant as UTC Z or local-offset
+    # timestamp, and can round fractional seconds. Reject updates outside
+    # the same UTC second; do not treat a masked bypass list as an empty list
+    # without this independent owner-confirmed revision pin.
+    try:
+        observed = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        approved = datetime.fromisoformat(OWNER_VERIFIED_RULE_UPDATED_AT)
+        return observed.tzinfo is not None and abs((observed - approved).total_seconds()) < 1
+    except (AttributeError, TypeError, ValueError):
+        return False
+
+
 def validate(manifest, branches, tags, rule, open_prs, main_sha):
     if (manifest.get("schemaVersion") != "DSHistoricalDAGRetentionProposal/0.1"
             or manifest.get("repository") != REPO
@@ -66,7 +80,7 @@ def validate(manifest, branches, tags, rule, open_prs, main_sha):
             or rule.get("enforcement") != "active"
             or rule.get("source") != REPO
             or rule.get("bypass_actors") not in ([], None)
-            or rule.get("updated_at") != OWNER_VERIFIED_RULE_UPDATED_AT
+            or not same_verified_ruleset_revision(rule.get("updated_at"))
             or rule.get("current_user_can_bypass") != "never"
             or rule.get("conditions", {}).get("ref_name") !=
             {"exclude": [], "include": [PATTERN]}
