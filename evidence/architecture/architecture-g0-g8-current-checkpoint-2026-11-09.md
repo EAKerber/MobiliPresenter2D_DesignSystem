@@ -76,7 +76,7 @@ As cadeias de pintura dos ancestrais não sinalizaram imagem, filter, opacity, b
 
 **Limite da captura:** `getComputedStyle`, tema resolvido, lista/ordem de folhas carregadas e fundo composto foram obtidos do DOM/CSSOM executado. A coleta de `matchingCssRules` retornou arrays vazios por um erro no coletor ao percorrer `CSSStyleRule`; portanto, a atribuição da regra ativa na tabela acima é reconciliação da fonte e ordem estática, não trace de regra vencedora em runtime. A versão corrigida do coletor está guardada como `capture-next-unverified.cjs`, mas ainda não foi executada neste checkpoint; a enumeração runtime das regras vencedoras segue pendente. O registro é local e pinado; não prova os bytes atualmente servidos pelo CDN, nem substitui revisão humana das capturas. Abrange somente esses três contextos, nesse viewport e nesses temas explícitos; não fecha #216, os demais sete contextos v0.3, toda a acessibilidade ou a análise separada de `/config/`.
 
-aberta até reconciliar seus critérios com a evidência/runtime atual e registrar a decisão de encerramento.
+A issue #216 permanece aberta até reconciliar seus critérios com a evidência/runtime atual e registrar a decisão de encerramento.
 
 ## Higiene de branches e limite de quantidade
 
