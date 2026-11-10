@@ -1,6 +1,6 @@
 # MobiliPresenter2D Design System
 
-> **HANDOVER CANÔNICO DE RETOMADA (26/10/2026):** [docs/HANDOVER_CURRENT.md](docs/HANDOVER_CURRENT.md) — estado Git/CI e 10 branches, aprovações, branches HOLD, ledger D04, regras de higiene e plano para o próximo chat. **Ler este arquivo primeiro**, revalidando HEAD e PRs na API antes de executar. O handover histórico do produto está referenciado ali; neste ciclo o foco é exclusivamente Design System.
+> **ESTADO ATUAL (09/11/2026):** [checkpoint G0–G8](evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md) reconcilia as fases, os HEADs, as issues e o subgate DS-05A; [handover canônico](docs/HANDOVER_CURRENT.md) preserva a governança e a história da higiene. Revalidar refs e PRs na API antes de cada ação.
 
 > **GOVERNANÇA ATUAL (26/10/2026):** [Higiene de branches — mecanismo, critérios, operação e HOLDs](docs/BRANCH_HYGIENE_OPERATIONS.md); [D01–D04 aprovadas](docs/APPROVALS_D01_D04_2026-10-26.md); [extração seletiva da PR #51](docs/HANDOVER_SELECTIVE_EXTRACTION_2026-10-26.md). `decisions.json` é a fonte de decisões; os documentos abaixo são checkpoints datados, não o estado atual automaticamente. **Objetivo: `main` única permanente, só após evidência de integração ou preservação do conteúdo exclusivo.**
 
