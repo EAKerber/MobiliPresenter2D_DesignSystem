@@ -29,7 +29,17 @@
 
 O material local de 2026-11-09 registra: regressão de oito fixtures PASS; inicialização real do Configurador em seis estados de `/config/` (390/1050/1366 CSS px × light/dark); 70–74 candidatos de texto por estado sem pares computáveis abaixo do limiar; 98 pares no total mantidos como **UNCERTAIN** por `backdrop-filter`. Um ajuste local dos números dos módulos em light está **não commitado** no checkout de auditoria.
 
-A fonte está em `work/MobiliPresenter2D-dev-static-1a69ff7/docs/design-system/DS05A-static-css-provenance-development-1a69ff76.md` no ambiente desta retomada. Esse checkout está sujo e o recibo/runner são locais: o subgate ainda precisa de reconciliação de hashes/artefatos e não constitui evidência reproduzível no repositório Design System. O escopo é somente o DOM inicial montado de `/config/`; não cobre Admin, teclado, foco, hover/seleção/erro/loading/dock, tema `auto`, 320/768 px, screenshot review ou dispositivo real. **DS-05A permanece INCOMPLETO/HOLD.** Não promover o ajuste local para produto nem inferir aprovação visual.
+A fonte está em `work/MobiliPresenter2D-dev-static-1a69ff7/docs/design-system/DS05A-static-css-provenance-development-1a69ff76.md` no ambiente desta retomada. O checkout está sujo. A identidade local foi conferida nesta retomada:
+
+| Artefato local | SHA-256 |
+|---|---|
+| Relatório de proveniência DS-05A | `7c639f7ac39658f06f931c5baa43222de6e24a8efb6c14056d2c4a1adfab6480` |
+| Recibo `runtime_cssom.json` (228.554 bytes) | `aad1f18832d988d13ed635216a91db2eeeb3f5f1cb8fce9bb004131828bb1291` |
+| Runner `theme_cssom_runtime_v1.cjs` | `27c923948a20e896c8fc59e013523b4baebacbd4e6450f19a738855fe78b48da` |
+| Teste de fixtures `test_cssom_v2.cjs` | `3b05d9a06e562816864ca94f9228d397d650f95d142c07ac4745f6810ef9501e` |
+| `app/ui-theme.css` local modificado | `5b11afd500f8545d723a87b22f586c2c8f42e4f9b4fc22f4e953e96da4ae0545` |
+
+Esses hashes identificam os objetos existentes no checkout; não comprovam por si só o método de geração, compatibilidade com o pin remoto ou revisão do patch. O runner, o recibo e a mudança de CSS continuam fora do repositório Design System; por isso o resultado ainda não é evidência reproduzível nele. O escopo é somente o DOM inicial montado de `/config/`; não cobre Admin, teclado, foco, hover/seleção/erro/loading/dock, tema `auto`, 320/768 px, screenshot review ou dispositivo real. **DS-05A permanece INCOMPLETO/HOLD.** Não promover o ajuste local para produto nem inferir aprovação visual.
 
 ## Higiene de branches e limite de quantidade
 
