@@ -265,8 +265,8 @@ As PRs [#114](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/11
 
 A documentação ainda contém fotografias datadas, que permanecem como histórico. O checkpoint vivo desta retomada está em [architecture-g0-g8-current-checkpoint-2026-11-09.md](../evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md).
 
-- Leitura live: Design System `main@79db735d6f05177b0c406e383d35832f3d72fdef`, 1 branch, 0 PRs abertas; workflow agendado de higiene #42655241742 SUCCESS. O ruleset de tags históricas segue ativo. Nenhuma ref foi eliminada nesta retomada.
+- Antes da PR #119, a leitura live encontrou Design System `main@79db735d6f05177b0c406e383d35832f3d72fdef`, 1 branch e 0 PRs; o workflow agendado de higiene #42655241742 terminou SUCCESS. Após abrir a PR #119, o estado é 2 branches e 1 PR aberta. O ruleset de tags históricas segue ativo. Nenhuma ref foi eliminada nesta retomada.
 - Produto, apenas para status/método: `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`, `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`, 2 branches e 0 PRs abertas. Issues #208/#216/#218/#232 abertas; #217/#224/#226 fechadas. Não houve alteração de produto, preview ou deploy nesta retomada.
-- O pedido explícito atual autoriza continuar o trabalho de arquitetura nos dois repositórios e usar o método de higiene do produto. Os limites brandos de branches (DS 2, produto 5) já são respeitados; nomes e quantidade não autorizam exclusões.
+- O pedido explícito atual autoriza continuar o trabalho de arquitetura nos dois repositórios e usar o método de higiene do produto. Os limites brandos de branches (DS 2, produto 5) são respeitados no estado pós-PR: DS 2 branches/1 PR; produto 2 branches/0 PRs. Nomes e quantidade não autorizam exclusões.
 - O subgate CSSOM local DS-05A está incompleto e sua fonte/runner/recibos não foram incorporados a este repositório. Preservar o checkout de auditoria e validar sua proveniência antes de promover qualquer resultado.
 - Próximo trabalho: reconciliação do subgate DS-05A e continuação G1/G2; G3–G7 permanecem parciais/pendentes e G8 não começou como release. Sem autorização de publicação neste checkpoint.
