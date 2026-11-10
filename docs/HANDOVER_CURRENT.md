@@ -1,9 +1,9 @@
 # HANDOVER CANÔNICO — MobiliPresenter2D Design System
 
-**Checkpoint verificado:** 26/10/2026, fuso `America/Sao_Paulo`.  
-**Destino:** próximo chat/agente sem acesso ao contexto corrente.  
-**Prioridade atual:** estabilizar, reconciliar e reduzir as branches do **Design System primeiro**. Não retomar trabalhos no repositório do produto até nova orientação do usuário.  
-**Este é o ponto de retomada permanente**; o README aponta para cá. Ler o GitHub em tempo real antes de assumir que números ou SHAs continuam atuais.
+**Snapshot histórico:** 26/10/2026, fuso `America/Sao_Paulo`.  
+**Destino:** recuperação histórica do trabalho daquele checkpoint.  
+**Prioridade registrada em 26/10:** estabilizar/reconciliar branches do Design System e não editar o produto até nova orientação. Essa restrição foi superada pela instrução explícita deste chat para continuar o plano de arquitetura nos dois repositórios.  
+**Retomada atual:** 09/11/2026 — consulte [checkpoint G0–G8](../evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md) e a seção “Retomada desta conversa” ao final deste arquivo. O usuário autorizou trabalho de arquitetura e uso do método Git do produto; esta autorização não inclui preview, deploy ou banco. O usuário também dispensou o runtime bootstrap neste chat. Revalidar HEADs e PRs na API antes de cada ação.
 
 ## Verificação posterior à PR #82 — snapshot de retomada (26/10/2026, São Paulo)
 
@@ -15,11 +15,11 @@
 
 Este bloco registra somente **documentação e leitura Git/Actions**. Não comprova conformidade funcional de login, contraste, produto ou publicação. O commit produzido por esta própria atualização virá depois do SHA de snapshot acima; obter o SHA efetivo na API ao retomar.
 
-## 0. Bootstrap indispensável
+## 0. Instruções de recuperação do snapshot de 26/10
 
 1. Consultar o SHA de `main`, inventário completo de branches, PRs abertas/fechadas relevantes e Actions no repositório [Design System](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem).
 2. Ler este arquivo, [guia operacional de higiene](BRANCH_HYGIENE_OPERATIONS.md), [D01–D04 homologadas](APPROVALS_D01_D04_2026-10-26.md), [ledger de extração D04](HANDOVER_SELECTIVE_EXTRACTION_2026-10-26.md), `decisions.json`, os manifests `dist/` e `FINDINGS_REGISTER.md`.
-3. O repositório do produto é [EAKerber/MobiliPresenter2D](https://github.com/EAKerber/MobiliPresenter2D); o [handover canônico do produto](https://github.com/EAKerber/MobiliPresenter2D/blob/main/docs/handoffs/HANDOVER-CURRENT-2026-10-26.md) descreve a área de produto. **Não editar, criar previews ou iniciar refatorações de produto** durante a etapa atual.
+3. Naquele snapshot, o repositório do produto era tratado apenas como referência e a edição estava fora do escopo. A autorização posterior de 09/11 permite trabalho de arquitetura no produto dentro do objetivo atual; continue sem preview, deploy ou banco sem autorização própria.
 4. Usar o conector GitHub, sem depender de `gh`. Antes de qualquer escrita: revisar conteúdo exclusivo, HEAD exato, proteções, relações com PR, dependências de workflows, gate e rollback. Atualizar este handover a cada checkpoint material.
 
 ## 1. Objetivo e decisões de governança
