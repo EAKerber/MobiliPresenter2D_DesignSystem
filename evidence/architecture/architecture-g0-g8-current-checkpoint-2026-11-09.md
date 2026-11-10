@@ -6,7 +6,7 @@
 
 ## Evidência verificada nesta retomada
 
-- Design System: `main@79db735d6f05177b0c406e383d35832f3d72fdef` (último commit observado: 2026-10-27), **1 branch remota** e **0 PRs abertas**.
+- Design System: `main@79db735d6f05177b0c406e383d35832f3d72fdef` (último commit observado: 2026-10-27). Na leitura anterior à criação desta PR havia **1 branch e 0 PRs**; após sua abertura, a observação live é **2 branches e 1 PR aberta (#119)**.
 - O workflow agendado [Branch hygiene #42655241742](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/42655241742) terminou em **success** em 2026-11-09. O endpoint de rulesets ainda lista ativo o ruleset #25953910 para `ds-history/2026-10-27/*`. O último readback documental confirma oito tags históricas protegidas; esta retomada não reenumerou individualmente seus objetos. Nenhuma branch foi removida nesta retomada.
 - Produto: `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`, `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`, **2 branches remotas** e **0 PRs abertas**. Foram lidos somente os refs e estados das issues necessários para atualizar o mapa; nenhum arquivo ou serviço do produto foi alterado.
 - Issues observadas no repositório do produto: **#208, #216, #218 e #232 abertas**; **#217, #224 e #226 encerradas**. Isso corrige fotografias mais antigas que ainda listavam #217/#224/#226 como pendentes. Fechamento de issue não equivale a auditoria ampla ou aceitação de release.
@@ -27,7 +27,7 @@
 
 ## UX-04 — foco após redesenho do puxador
 
-A varredura dos subdiretórios localizou o relatório de trabalho `docs/work/DEVELOPMENT_UX04_GEOMETRY_FOCUS_2026-10-28.md`. O gate dedicado mais recente verificado no GitHub é [#40802466253](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40802466253), **success** no SHA `65f2f3ec781b7c36e3198159b7a512f1d26c97a4`; ele cobriu geometria nos perfis V5, restauração de foco e a suíte completa de teclado. O HEAD remoto atual de `development` é `1a69ff76a5f36e3245a288773bb409aa662e4e62`; a leitura da fonte confirma a chamada de retorno ao foco com `section:handles`. [O run exato deste HEAD](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/42720598449) passou 124 cenários públicos NAV-004/005, que são outro gate. Não há readback do gate UX-04 nesse SHA, então a correção está presente, mas sua revalidação no HEAD atual permanece pendente. 
+A varredura dos subdiretórios localizou o relatório de trabalho `docs/work/DEVELOPMENT_UX04_GEOMETRY_FOCUS_2026-10-28.md`. O gate dedicado mais recente verificado no GitHub é [#40802466253](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/40802466253), **success** no SHA `65f2f3ec781b7c36e3198159b7a512f1d26c97a4`; ele cobriu geometria nos perfis V5, restauração de foco e a suíte completa de teclado. O HEAD remoto atual de `development` é `1a69ff76a5f36e3245a288773bb409aa662e4e62`; a leitura da fonte confirma a chamada de retorno ao foco com `section:handles`. [O run exato deste HEAD](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/42720598449) passou 124 cenários públicos NAV-004/005, que são outro gate. Não há readback do gate UX-04 nesse SHA, então a correção está presente, mas sua revalidação no HEAD atual permanece pendente.
 
 UX-04 é o foco do Configurador após redraw; a issue #218 é a geometria/contrato NAV-005 do cabeçalho público. São gates distintos e não devem ser tratados como resolvidos um pelo outro.
 
@@ -49,7 +49,7 @@ Esses hashes identificam os objetos existentes no checkout; não comprovam por s
 
 ## Higiene de branches e limite de quantidade
 
-Os limites leves informados pelo usuário são até 2 branches no Design System e até 5 no produto. A observação atual encontrou 1 e 2, respectivamente. Logo, nenhuma remoção é necessária para respeitar os limites. O procedimento do produto exige observação completa, plano com hash, reobservação, exclusão somente por SHA/lease quando elegível e readback integral. Nomes, idade, número de diretórios locais ou fechamento de PR não autorizam remoção. Os oito DAGs históricos do Design System estão sob tags protegidas conforme o último recibo; preservar essa retenção.
+Os limites leves informados pelo usuário são até 2 branches no Design System e até 5 no produto. Após abrir a PR #119, a observação atual encontrou **2 branches e 1 PR aberta** no Design System, e **2 branches e 0 PRs abertas** no produto. Ambos permanecem dentro dos limites; nenhuma remoção é necessária para respeitá-los. O procedimento do produto exige observação completa, plano com hash, reobservação, exclusão somente por SHA/lease quando elegível e readback integral. Nomes, idade, número de diretórios locais ou fechamento de PR não autorizam remoção. Os oito DAGs históricos do Design System estão sob tags protegidas conforme o último recibo; preservar essa retenção.
 
 ## Sequência de trabalho
 
