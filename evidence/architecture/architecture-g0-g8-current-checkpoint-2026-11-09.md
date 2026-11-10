@@ -47,7 +47,9 @@ A fonte está em `work/MobiliPresenter2D-dev-static-1a69ff7/docs/design-system/D
 | Teste de fixtures `test_cssom_v2.cjs` | `3b05d9a06e562816864ca94f9228d397d650f95d142c07ac4745f6810ef9501e` |
 | `app/ui-theme.css` local modificado | `5b11afd500f8545d723a87b22f586c2c8f42e4f9b4fc22f4e953e96da4ae0545` |
 
-Esses hashes identificam os objetos existentes no checkout; não comprovam por si só o método de geração, compatibilidade com o pin remoto ou revisão do patch. O runner, o recibo e a mudança de CSS continuam fora do repositório Design System; por isso o resultado ainda não é evidência reproduzível nele. O escopo é somente o DOM inicial montado de `/config/`; não cobre Admin, teclado, foco, hover/seleção/erro/loading/dock, tema `auto`, 320/768 px, screenshot review ou dispositivo real. **## G2/G3 — rastreio de VIS-002C v0.3 em main
+Esses hashes identificam os objetos existentes no checkout; não comprovam por si só o método de geração, compatibilidade com o pin remoto ou revisão do patch. O runner, o recibo e a mudança de CSS continuam fora do repositório Design System; por isso o resultado ainda não é evidência reproduzível nele. O escopo é somente o DOM inicial montado de `/config/`; não cobre Admin, teclado, foco, hover/seleção/erro/loading/dock, tema `auto`, 320/768 px, screenshot review ou dispositivo real. **DS-05A permanece INCOMPLETO/HOLD.** Não promover o ajuste local para produto nem inferir aprovação visual.
+
+## G2/G3 — rastreio de VIS-002C v0.3 em main
 
 O código está pinado em `MobiliPresenter2D/main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`; a integração v0.3 entrou pela PR [#241](https://github.com/EAKerber/MobiliPresenter2D/pull/241), merge commit `818f165bf0b11b53f5fbaba1417560066bf03637`.
 
