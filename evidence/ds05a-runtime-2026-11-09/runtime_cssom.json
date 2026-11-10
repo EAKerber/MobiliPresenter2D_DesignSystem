@@ -1,0 +1,574 @@
+{
+  "schema": "DS05A.RuntimeCSSOM.Configurator.1",
+  "createdAt": "2026-11-10T01:38:03.548Z",
+  "source": {
+    "checkout": "MobiliPresenter2D-dev-static-1a69ff7",
+    "route": "/config/",
+    "configuration": "synthetic projection generated from versioned local defaults; no remote database"
+  },
+  "method": "Real app HTML and JavaScript served from loopback; Chromium CSSOM after actual app initialization; transitions frozen for theme changes",
+  "states": [
+    {
+      "url": "/config/",
+      "theme": "light",
+      "width": 390,
+      "layoutProfile": "compact",
+      "publishedStatus": "validated",
+      "flowStages": 4,
+      "renderedModules": 7,
+      "renderedModuleButtons": 7,
+      "renderedHandles": 4,
+      "renderedFinishes": 6,
+      "visibleTextCandidates": 70,
+      "moduleNumbers": [
+        {
+          "text": "01",
+          "foreground": "rgb(34, 33, 31)",
+          "backgroundColor": "rgba(34, 33, 31, 0.08)",
+          "effectiveForeground": [
+            34,
+            33,
+            31,
+            1
+          ],
+          "effectiveBackground": [
+            231,
+            231,
+            231,
+            1
+          ],
+          "contrast": 13.02,
+          "threshold": 4.5,
+          "uncertain": false,
+          "uncertaintyFlags": [],
+          "box": {
+            "width": 32,
+            "height": 32
+          }
+        },
+        {
+          "text": "02",
+          "foreground": "rgb(34, 33, 31)",
+          "backgroundColor": "rgba(34, 33, 31, 0.08)",
+          "effectiveForeground": [
+            34,
+            33,
+            31,
+            1
+          ],
+          "effectiveBackground": [
+            231,
+            231,
+            231,
+            1
+          ],
+          "contrast": 13.02,
+          "threshold": 4.5,
+          "uncertain": false,
+          "uncertaintyFlags": [],
+          "box": {
+            "width": 32,
+            "height": 32
+          }
+        },
+        {
+          "text": "03",
+          "foreground": "rgb(34, 33, 31)",
+          "backgroundColor": "rgba(34, 33, 31, 0.08)",
+          "effectiveForeground": [
+            34,
+            33,
+            31,
+            1
+          ],
+          "effectiveBackground": [
+            231,
+            231,
+            231,
+            1
+          ],
+          "contrast": 13.02,
+          "threshold": 4.5,
+          "uncertain": false,
+          "uncertaintyFlags": [],
+          "box": {
+            "width": 32,
+            "height": 32
+          }
+        },
+        {
+          "text": "04",
+          "foreground": "rgb(34, 33, 31)",
+          "backgroundColor": "rgba(34, 33, 31, 0.08)",
+          "effectiveForeground": [
+            34,
+            33,
+            31,
+            1
+          ],
+          "effectiveBackground": [
+            231,
+            231,
+            231,
+            1
+          ],
+          "contrast": 13.02,
+          "threshold": 4.5,
+          "uncertain": false,
+          "uncertaintyFlags": [],
+          "box": {
+            "width": 32,
+            "height": 32
+          }
+        },
+        {
+          "text": "05",
+          "foreground": "rgb(34, 33, 31)",
+          "backgroundColor": "rgba(34, 33, 31, 0.08)",
+          "effectiveForeground": [
+            34,
+            33,
+            31,
+            1
+          ],
+          "effectiveBackground": [
+            231,
+            231,
+            231,
+            1
+          ],
+          "contrast": 13.02,
+          "threshold": 4.5,
+          "uncertain": false,
+          "uncertaintyFlags": [],
+          "box": {
+            "width": 32,
+            "height": 32
+          }
+        },
+        {
+          "text": "06",
+          "foreground": "rgb(34, 33, 31)",
+          "backgroundColor": "rgba(34, 33, 31, 0.08)",
+          "effectiveForeground": [
+            34,
+            33,
+            31,
+            1
+          ],
+          "effectiveBackground": [
+            231,
+            231,
+            231,
+            1
+          ],
+          "contrast": 13.02,
+          "threshold": 4.5,
+          "uncertain": false,
+          "uncertaintyFlags": [],
+          "box": {
+            "width": 32,
+            "height": 32
+          }
+        },
+        {
+          "text": "07",
+          "foreground": "rgb(34, 33, 31)",
+          "backgroundColor": "rgba(34, 33, 31, 0.08)",
+          "effectiveForeground": [
+            34,
+            33,
+            31,
+            1
+          ],
+          "effectiveBackground": [
+            231,
+            231,
+            231,
+            1
+          ],
+          "contrast": 13.02,
+          "threshold": 4.5,
+          "uncertain": false,
+          "uncertaintyFlags": [],
+          "box": {
+            "width": 32,
+            "height": 32
+          }
+        }
+      ],
+      "failures": [],
+      "uncertain": [
+        {
+          "path": "html > body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav > button.flow-step.is-active",
+          "id": null,
+          "text": "1Módulos",
+          "foreground": "rgb(34, 33, 31)",
+          "effectiveForeground": [
+            34,
+            33,
+            31,
+            1
+          ],
+          "effectiveBackground": [
+            243,
+            240,
+            236,
+            1
+          ],
+          "backgroundLayers": [
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock",
+              "color": "rgb(247, 245, 242)"
+            },
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav",
+              "color": "rgb(255, 255, 255)"
+            },
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav > button.flow-step.is-active",
+              "color": "rgba(139, 106, 64, 0.1)"
+            }
+          ],
+          "opacity": "1",
+          "opacityStack": [],
+          "fontSize": 12,
+          "threshold": 4.5,
+          "contrast": 14.18,
+          "fail": false,
+          "uncertain": true,
+          "uncertaintyFlags": [
+            "backdrop-filter"
+          ],
+          "visible": true
+        },
+        {
+          "path": "body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav > button.flow-step.is-active > span",
+          "id": null,
+          "text": "1",
+          "foreground": "rgb(34, 33, 31)",
+          "effectiveForeground": [
+            34,
+            33,
+            31,
+            1
+          ],
+          "effectiveBackground": [
+            243,
+            240,
+            236,
+            1
+          ],
+          "backgroundLayers": [
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock",
+              "color": "rgb(247, 245, 242)"
+            },
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav",
+              "color": "rgb(255, 255, 255)"
+            },
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav > button.flow-step.is-active",
+              "color": "rgba(139, 106, 64, 0.1)"
+            }
+          ],
+          "opacity": "1",
+          "opacityStack": [],
+          "fontSize": 10,
+          "threshold": 4.5,
+          "contrast": 14.18,
+          "fail": false,
+          "uncertain": true,
+          "uncertaintyFlags": [
+            "backdrop-filter"
+          ],
+          "visible": true
+        },
+        {
+          "path": "body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav > button.flow-step.is-active > span.flow-step__label",
+          "id": null,
+          "text": "Módulos",
+          "foreground": "rgb(34, 33, 31)",
+          "effectiveForeground": [
+            34,
+            33,
+            31,
+            1
+          ],
+          "effectiveBackground": [
+            243,
+            240,
+            236,
+            1
+          ],
+          "backgroundLayers": [
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock",
+              "color": "rgb(247, 245, 242)"
+            },
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav",
+              "color": "rgb(255, 255, 255)"
+            },
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav > button.flow-step.is-active",
+              "color": "rgba(139, 106, 64, 0.1)"
+            }
+          ],
+          "opacity": "1",
+          "opacityStack": [],
+          "fontSize": 16,
+          "threshold": 4.5,
+          "contrast": 14.18,
+          "fail": false,
+          "uncertain": true,
+          "uncertaintyFlags": [
+            "backdrop-filter"
+          ],
+          "visible": true
+        },
+        {
+          "path": "html > body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav > button.flow-step",
+          "id": null,
+          "text": "2Acabamentos",
+          "foreground": "rgb(112, 108, 102)",
+          "effectiveForeground": [
+            112,
+            108,
+            102,
+            1
+          ],
+          "effectiveBackground": [
+            255,
+            255,
+            255,
+            1
+          ],
+          "backgroundLayers": [
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock",
+              "color": "rgb(247, 245, 242)"
+            },
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav",
+              "color": "rgb(255, 255, 255)"
+            }
+          ],
+          "opacity": "1",
+          "opacityStack": [],
+          "fontSize": 12,
+          "threshold": 4.5,
+          "contrast": 5.22,
+          "fail": false,
+          "uncertain": true,
+          "uncertaintyFlags": [
+            "backdrop-filter"
+          ],
+          "visible": true
+        },
+        {
+          "path": "body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav > button.flow-step > span",
+          "id": null,
+          "text": "2",
+          "foreground": "rgb(112, 108, 102)",
+          "effectiveForeground": [
+            112,
+            108,
+            102,
+            1
+          ],
+          "effectiveBackground": [
+            255,
+            255,
+            255,
+            1
+          ],
+          "backgroundLayers": [
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock",
+              "color": "rgb(247, 245, 242)"
+            },
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav",
+              "color": "rgb(255, 255, 255)"
+            }
+          ],
+          "opacity": "1",
+          "opacityStack": [],
+          "fontSize": 10,
+          "threshold": 4.5,
+          "contrast": 5.22,
+          "fail": false,
+          "uncertain": true,
+          "uncertaintyFlags": [
+            "backdrop-filter"
+          ],
+          "visible": true
+        },
+        {
+          "path": "body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav > button.flow-step > span.flow-step__label",
+          "id": null,
+          "text": "Acabamentos",
+          "foreground": "rgb(112, 108, 102)",
+          "effectiveForeground": [
+            112,
+            108,
+            102,
+            1
+          ],
+          "effectiveBackground": [
+            255,
+            255,
+            255,
+            1
+          ],
+          "backgroundLayers": [
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock",
+              "color": "rgb(247, 245, 242)"
+            },
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav",
+              "color": "rgb(255, 255, 255)"
+            }
+          ],
+          "opacity": "1",
+          "opacityStack": [],
+          "fontSize": 16,
+          "threshold": 4.5,
+          "contrast": 5.22,
+          "fail": false,
+          "uncertain": true,
+          "uncertaintyFlags": [
+            "backdrop-filter"
+          ],
+          "visible": true
+        },
+        {
+          "path": "html > body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav > button.flow-step",
+          "id": null,
+          "text": "3Serviços",
+          "foreground": "rgb(112, 108, 102)",
+          "effectiveForeground": [
+            112,
+            108,
+            102,
+            1
+          ],
+          "effectiveBackground": [
+            255,
+            255,
+            255,
+            1
+          ],
+          "backgroundLayers": [
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock",
+              "color": "rgb(247, 245, 242)"
+            },
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav",
+              "color": "rgb(255, 255, 255)"
+            }
+          ],
+          "opacity": "1",
+          "opacityStack": [],
+          "fontSize": 12,
+          "threshold": 4.5,
+          "contrast": 5.22,
+          "fail": false,
+          "uncertain": true,
+          "uncertaintyFlags": [
+            "backdrop-filter"
+          ],
+          "visible": true
+        },
+        {
+          "path": "body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav > button.flow-step > span",
+          "id": null,
+          "text": "3",
+          "foreground": "rgb(112, 108, 102)",
+          "effectiveForeground": [
+            112,
+            108,
+            102,
+            1
+          ],
+          "effectiveBackground": [
+            255,
+            255,
+            255,
+            1
+          ],
+          "backgroundLayers": [
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock",
+              "color": "rgb(247, 245, 242)"
+            },
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav",
+              "color": "rgb(255, 255, 255)"
+            }
+          ],
+          "opacity": "1",
+          "opacityStack": [],
+          "fontSize": 10,
+          "threshold": 4.5,
+          "contrast": 5.22,
+          "fail": false,
+          "uncertain": true,
+          "uncertaintyFlags": [
+            "backdrop-filter"
+          ],
+          "visible": true
+        },
+        {
+          "path": "body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav > button.flow-step > span.flow-step__label",
+          "id": null,
+          "text": "Serviços",
+          "foreground": "rgb(112, 108, 102)",
+          "effectiveForeground": [
+            112,
+            108,
+            102,
+            1
+          ],
+          "effectiveBackground": [
+            255,
+            255,
+            255,
+            1
+          ],
+          "backgroundLayers": [
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock",
+              "color": "rgb(247, 245, 242)"
+            },
+            {
+              "path": "html > body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav",
+              "color": "rgb(255, 255, 255)"
+            }
+          ],
+          "opacity": "1",
+          "opacityStack": [],
+          "fontSize": 16,
+          "threshold": 4.5,
+          "contrast": 5.22,
+          "fail": false,
+          "uncertain": true,
+          "uncertaintyFlags": [
+            "backdrop-filter"
+          ],
+          "visible": true
+        },
+        {
+          "path": "html > body.has-mobile-scene-pin.has-bottom-dock > main.workspace > aside.controls > nav.flow-nav > button.flow-step",
+          "id": null,
+          "text": "4Resumo",
+          "foreground": "rgb(112, 108, 102)",
+          "effectiveForeground": [
+            112,
+            108,
+            102,
+ 
