@@ -1,4 +1,4 @@
-# Checkpoint atual da arquitetura G0–G8 — 2026-11-10
+# Checkpoint atual da arquitetura G0–G8 — 2026-11-11
 
 **Última atualização:** 2026-11-11 (BRT).
 
@@ -6,20 +6,23 @@
 
 **Plano de referência:** [Plano diretor G0–G8](../../docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md) · [reconciliação anterior](master-plan-g0-g8-current-crosswalk-2026-10-25.md) · [handover e governança](../../docs/HANDOVER_CURRENT.md).
 
-## Evidência verificada nesta retomada
+## Fotografia operacional live — 2026-11-11 (BRT)
 
-- Design System: `main@79db735d6f05177b0c406e383d35832f3d72fdef` (último commit observado: 2026-10-27). Na leitura anterior à criação desta PR havia **1 branch e 0 PRs**; após sua abertura, a observação live é **2 branches e 1 PR aberta (#119)**.
-- O workflow agendado [Branch hygiene #42655241742](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/42655241742) terminou em **success** em 2026-11-09. O endpoint de rulesets ainda lista ativo o ruleset #25953910 para `ds-history/2026-10-27/*`. O último readback documental confirma oito tags históricas protegidas; esta retomada não reenumerou individualmente seus objetos. Nenhuma branch foi removida nesta retomada.
-- Produto: `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`, `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`, **3 branches remotas** e **1 PR aberta (draft #269)**. Em 2026-11-10 foi criada a branch `codex/nav005-public-compact-main-20261110` a partir do `main` exato, com backport seletivo do cabeçalho público NAV-005; a PR #269 está aberta em draft, sem integração. `main` e `development` não foram alteradas; não houve deploy nem banco. A PR segue draft e ainda não há Deploy Preview disponível; a leitura Netlify mais recente mostrou apenas deploys `main/production`. Os recibos locais UX-04 e os arquivos de trabalho permanecem isolados.
-- Issues observadas no repositório do produto: **#208, #216, #218 e #232 abertas**; **#217, #224 e #226 encerradas**. Isso corrige fotografias mais antigas que ainda listavam #217/#224/#226 como pendentes. Fechamento de issue não equivale a auditoria ampla ou aceitação de release.
+Esta fotografia prevalece sobre contagens e heads de snapshots anteriores no arquivo. Os recibos datados abaixo continuam como histórico de evidência.
+
+- Design System: main@79db735d6f05177b0c406e383d35832f3d72fdef; duas refs (main e docs/architecture-status-20261109), no soft cap. A PR #119 segue aberta em draft.
+- Produto: main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95, development@1a69ff76a5f36e3245a288773bb409aa662e4e62; seis refs: main, development, #269, #270, #271 e #272. O soft cap 5 está excedido por uma ref temporária coberta pelo lote de higiene preparado na #272.
+- PRs produto: #269 aberta/draft em 2e202e4d7d36f29bfb62508bc15f40cdc18f130b, 12/12 Actions success e Deploy Preview pronto no mesmo commit; #271 aberta em 86c4945cb56c04df31954e2a02f66ca3e703dc67; #272 aberta em 5a49057b769096e04eda5b208f3d0944db1369fc; #270 encerrada sem merge.
+- #208, #216 e #218 continuam abertas. NAV-005/#218 e UX-04 são gates distintos; UX-04 ainda não foi executado no SHA atual de development porque seu workflow não está em main.
+- Nenhuma branch principal foi alterada nesta retomada. Não houve merge, remoção de ref, deploy de produção nem alteração de banco.
 
 ## Estado operacional das fases
 
 | Fase | Estado nesta retomada | Próximo gate verificável |
 |---|---|---|
 | **G0 — evidência e documentação** | **PASS como base de rastreabilidade; contínuo.** O handover local de 06/11 registra G0 PASS; esta retomada atualiza HEADs/issues live, mantendo os snapshots datados. | Continuar reconciliando mapas por domínio sem reescrever evidências históricas nem promovê-las automaticamente. |
-| **G1 — navegação e foco** | **PARCIAL.** A PR draft #269 está no head `2533a66376a016bcb8442e401de8933cb5a1edb4`, com workflow UX-04 de dispatch manual e preview hospedado pronto. Os 12 checks informados para esse head passaram; a inspeção pública do Preview foi pontual em desktop e 390 px, sem sobreposição visível no cabeçalho/menu. O workflow ainda não chegou a main; por isso não pode despachar UX-04 para development@1a69ff76a5f36e3245a288773bb409aa662e4e62 a partir da branch padrão. #218 permanece aberta; touch, zoom, foco e dispositivo/Safari-iPad reais ainda não estão fechados. | Integrar o workflow pelo processo de revisão apropriado; depois despachar UX-04 no SHA exato de development e terminar os critérios runtime de #218. |
-| **G2 — CSS e acessibilidade** | **EM ANDAMENTO.** #216 teve revisão CSSOM no Preview #271 anterior (head 6030eec) nos três seletores originais e na exceção `.study-band .eyebrow`, em light/dark. A candidata #271 foi atualizada para `86c4945` com `.viewer-card__footer { color: var(--muted) }`, alinhada ao `development`; o subgate local registrou #viewerHint em 1,00/4,05:1 no main e 5,22/4,88:1 no development (light/dark), mas o receipt não fixa a folha CSS carregada. A nova Deploy Preview está pronta; Actions ainda em andamento. O contexto isolado sem autenticação redireciona `/config/` para `/access/`, então ainda não há confirmação CSSOM hospedada da nova regra. #208/#216 abertas; permanecem 98 pares UNCERTAIN, a revisão visual integral e DS-05A. | Revisar o #viewerHint no head novo quando o estado/configuração for acessível; fechar os critérios restantes de #208/#216, `/config/` e DS-05A sem assumir que métricas locais fecham validação hospedada. |
+| **G1 — navegação e foco** | **PARCIAL.** A PR draft #269 está no head 2e202e4d7d36f29bfb62508bc15f40cdc18f130b; Preview do mesmo commit pronto e 12/12 Actions passaram. A matriz hospedada cobriu 486, 321/320, 291/290, 900/901 e 1366 CSS px; Enter/Space, Tab, Escape e foco visível foram observados em Chromium. Detalhes no adendo G1 abaixo. #218 permanece aberta para toque real, zoom de navegador e Safari/iPad; UX-04 segue gate separado e não foi executado no SHA atual de development. | Executar UX-04 no SHA exato de development quando o workflow chegar a main; completar a validação em dispositivo/toque/zoom e fechar apenas os critérios comprovados de #218. |
+| **G2 — CSS e acessibilidade** | **EM ANDAMENTO.** PR #271 está no head 86c4945cb56c04df31954e2a02f66ca3e703dc67; seus 8 Actions runs concluíram success e o Preview está pronto. O CSSOM de #216 no head anterior 6030eec cobre vencedores medidos, sem fechar a issue. A correção mais nova de #viewerHint ainda não foi confirmada em /config/, pois a configuração publicada falhou ao validar. #208/#216 seguem abertas, com 98 pares UNCERTAIN e DS-05A incompleto/HOLD. | Concluir #208/#216 com configuração válida e revisão visual; fazer A/B pareado, pin/hashes e cobertura de estados antes de considerar a regra experimental DS-05A. |
 | **G3 — ownership CSS/DOM** | **PARCIAL.** Além da matriz estática, foi observado no Preview #271 (`86c4945`) o controlador de tema nas rotas públicas `/`, `/how-it-works/` e `/about/`: modo `auto` acompanha `prefers-color-scheme`; Enter percorreu `auto→light→dark→auto`; `casa-ui-theme-mode-v1` persistiu entre navegações; a marca alternou entre os assets light/dark. A regra `ui-theme.css:61/73` produziu o mesmo controle 44×44 px no viewport 503×667 CSS px (DPR 1,5). A ordem das folhas e os slots continuam contextuais. É um slice de uma rota pública/viewport, não valida Viewer/Admin, touch, Safari nem equivalência ampla. | Ampliar por risco os estados/consumidores de tema e slots; manter separado controlador compartilhado de layout contextual. |
 | **G4 — foundations, tokens e acessibilidade compartilhável** | **HOLD.** Fonte de referência e decisões aprovadas não demonstram integração abrangente; o handover local de 06/11 mantém G4 em HOLD. | Retomar somente após resolver as incertezas visuais/runtime de G2/G3 e definir o consumidor autorizado. |
 | **G5 — famílias de componentes CSS** | **PARCIAL na candidata; HOLD na baseline.** O handover local de 06/11 mantém probes/famílias e incertezas sem consolidação homologada. | Fechar associação de probes e incertezas por família e obter comparação funcional/visual antes de compartilhar regras. |
@@ -35,13 +38,11 @@ Esta execução local usou Windows, Node 24.20.0 e Python 3.14.6 (o workflow usa
 
 UX-04 é o foco do Configurador após redraw; a issue #218 é a geometria/contrato NAV-005 do cabeçalho público. São gates distintos e não devem ser tratados como resolvidos um pelo outro. O G1 segue parcial até haver execução integral do workflow no runner Linux/Node 22, fechamento dos critérios específicos de #218 e cobertura de touch, zoom e dispositivo real.
 
-### Issue #218 / NAV-005 — crosswalk estático em main e development
+### Issue #218 / NAV-005 — crosswalk estático e candidato hospedado
 
-Leitura estática do produto pinado confirma que **main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95 ainda mantém candidatos para os critérios da #218**. Em `app/how-it-works/index.html:22`, o CTA do WhatsApp fica em `.header-actions`, fora de `#primaryNav`, que contém apenas os três links de navegação; `app/landing/header-menu.js` abre e fecha somente `#primaryNav`. `app/core/ui-theme.js` insere o controle antes de `.menu-toggle`, mas `app/ui-theme.css:72-75` o reduz a 44 px icon-only até 1150 px. A marca permanece em 160 px a 486 px (`app/landing/landing.css:158)); o CTA vira ícone fora do menu até 520 px (`landing.css:188-192`). A regra de largura mínima 320 px em `public-theme.css` e o recorte em `how-it-works.css` também deixam pendente a faixa estreita de duas linhas descrita na issue.
+A leitura estática pinada continua mostrando a divergência descrita em #218 em main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95. Em development@1a69ff76a5f36e3245a288773bb409aa662e4e62, a correção candidata permanece escopada ao shell público: rótulo do tema, marca responsiva, CTA dentro do menu compacto e reflow abaixo de 291 px.
 
-Em **development@1a69ff76a5f36e3245a288773bb409aa662e4e62**, a leitura estática indica uma correção escopada para o cabeçalho público: preserva o rótulo até o fallback compacto, reduz a marca até 30%, move o CTA para o menu em larguras compactas e permite duas linhas abaixo de ~291 px sem alterar os cabeçalhos privados/`viewer`. Permanece um candidato em ≤290 px: o CSS oculta o rótulo do tema enquanto o cabeçalho passa a duas linhas e a marca ainda só encolheu cerca de 9% a 290 px.
-
-Este crosswalk começou como leitura estática e não fecha #218 por si só. A PR draft [#269](https://github.com/EAKerber/MobiliPresenter2D/pull/269) usa a branch `codex/nav005-public-compact-main-20261110`, baseada em `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`; head atual `6195e90c012a45a7abf1b8db6de220be03dc9fb4`, com 17 arquivos alterados. No GitHub Actions, 13 de 15 checks estão em success e dois foram skipped: o browser de `Public routing before Clerk` e `Supabase Preview`. O gate dedicado [NAV-005 local-only](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/42938417264) passou 124 cenários em Chromium e WebKit. O job de layout responsivo que falhou uma vez em `webkit/701/light` passou na repetição isolada #130257485418 (24/24); o primeiro resultado não se reproduziu. A checagem estática de roteamento passou, mas nenhum navegador remoto executou porque o PR permanece draft. O usuário autorizou uma única revisão de preview; ela ainda não foi feita: o preview automático não apareceu e o Netlify não mostrou deploy da branch candidata. Sem preview, #218 permanece aberta. Esses gates não comprovam touch, zoom, Safari/iPad real, foco no cabeçalho ou equivalência visual hospedada; não considerar o candidato integrado nem o PR pronto para merge.
+A PR #269 seletivamente leva esse contrato ao produto, sem alterar Viewer/headers privados. Seu estado atual e as medições de Preview no head 2e202e4d7d36f29bfb62508bc15f40cdc18f130b estão registrados no adendo G1 no fim deste checkpoint. A inspeção é evidência de Preview, não prova de integração em main/development; #218 permanece aberta para os critérios ainda sem dispositivo real, toque e zoom de navegador. UX-04 continua independente.
 
 # VIS-002C cascade winner trace — 2026-11-10
 
@@ -133,20 +134,20 @@ Leitura estática de `MobiliPresenter2D/main@221b54b2a41ecc8c338d1bf2cf67280cf16
 
 Esta reconciliação não executou DOM/CSSOM para Admin, Access/manage, Viewer ou estados interativos; “parece atendido” não confirma contraste final, e os candidatos restantes precisam de verificação contextual. A issue #208 e os 98 pares UNCERTAIN de `/config/` seguem abertos como trilhas separadas dentro de G2.
 
-## Higiene de branches e limite de quantidade
+## Higiene de branches e limite de quantidade — estado live 2026-11-11
 
-Os limites leves informados pelo usuário são até 2 branches no Design System e até 5 no produto. Após abrir a PR #119, a observação atual encontrou **2 branches e 1 PR aberta** no Design System, e **3 branches e 1 PR aberta (#269, draft)** no produto. Ambos permanecem dentro dos limites; nenhuma remoção é necessária para respeitá-los. O procedimento do produto exige observação completa, plano com hash, reobservação, exclusão somente por SHA/lease quando elegível e readback integral. Nomes, idade, número de diretórios locais ou fechamento de PR não autorizam remoção. Os oito DAGs históricos do Design System estão sob tags protegidas conforme o último recibo; preservar essa retenção.
+Os limites leves são Design System ≤2 e produto ≤5. O Design System está em 2 refs (main + branch da #119). O produto está em 6 refs durante a preparação autorizada do lote da #272; a #272 fixa somente a branch encerrada #270 no SHA 219d9e672bf390a7af4b5815d50f9ea15f723913. O executor foi corrigido e a auditoria read-only passou, sem exclusões. A aplicação e a limpeza condicional da branch #272 ainda não ocorreram; requerem integração autorizada e readback. Não remover branches manualmente nem tocar nas branches #269/#271.
 
-## Sequência de trabalho
+## Sequência de trabalho — próximo percurso G0–G8
 
-1. Incorporar a fonte e os recibos do subgate DS-05A de modo reproduzível, preservando que o ajuste permanece local.
-2. Retomar G1/G2 com #218, #208, #216 e o gate DOM/runtime DS-05A, sem ampliar o escopo visual.
-3. Concluir ownership de G3 por rota/estado e selecionar um único piloto autorizado para G4/G5.
-4. Reavaliar a arquitetura declarativa G6 após evidência dos componentes e manter G7 como gate para jornadas protegidas/dispositivos.
-5. Atualizar este crosswalk com SHAs e resultados quando cada gate tiver evidência; não marcar G8 concluído sem validação integrada e autorização de release.
+1. G1: preservar o resultado hospedado de #218; fechar o workflow UX-04 em development e completar o recorte de touch/zoom/Safari-iPad que não é reproduzível no Chrome emulado.
+2. G2: continuar #208/#216 com CSSOM e revisão visual no estado/configuração válido; obter baseline pareada, hashes de CSS e cobertura de estados antes de adotar qualquer regra DS-05A.
+3. G3: completar ownership por consumidor, estado, tema e cascata; classificar igualdade, variante, homônimo, exceção ou incerteza.
+4. G4/G5: só extrair tokens/utilitários/famílias quando o contrato e o ganho forem demonstrados; zero extração é resultado válido se não houver duplicação equivalente.
+5. G6: manter composição declarativa experimental até haver segundo consumidor editorial com ownership claro; não criar framework genérico.
+6. G7/G8: fechar jornadas protegidas e plataforma/dispositivo; somente depois conduzir revisão integrada, aceitação e release autorizado.
 
-
-## Atualização operacional — 2026-11-11 (BRT)
+## Snapshot operacional anterior — 2026-11-11 (BRT; superseded)
 
 | Fase | Estado confirmado | Próximo gate verificável |
 |---|---|---|
@@ -225,3 +226,24 @@ Captura em Deploy Preview #271, head `86c4945cb56c04df31954e2a02f66ca3e703dc67`,
 ## Errata DS-05A — números dos módulos (2026-11-11, BRT)
 
 O recibo local `runtime_cssom.json` já continha a regra experimental `.module-number` (fundo `rgba(34,33,31,0.08)`). Logo 13,02:1 em light e 8,10:1 em dark descrevem apenas o estado após aplicar a regra; não existe par prepatch nem delta atribuído. O JSON não fixa o blob da folha CSS carregada. A candidata não é finding nomeado em #208, não teve revisão visual e permanece no checkout local. A descrição “corrigir o defeito” foi corrigida para “regra experimental” no relatório DS-05A local. Não copiar para refs do produto sem captura A/B repetível, hashes por braço, cobertura de estados e revisão visual/decisão de design.
+
+## G1 — revisão hospedada NAV-005 / #218 (2026-11-11, BRT)
+
+Pin: produto #269, codex/nav005-public-compact-main-20261110@2e202e4d7d36f29bfb62508bc15f40cdc18f130b, baseado em main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95. Deploy Preview #269 estava ready no mesmo commit (deploy 6af3fe0e739df32bb5500109); os 12 workflow runs de Actions desse SHA concluíram success. Chrome DevTools em emulação desktop CSS/DPR, reduced motion, sem dispositivo físico.
+
+| Contexto | Resultado observado |
+|---|---|
+| 486×590, light, How | Marca 145,8 px (9% menor que 160 px; limite exigido de redução ≤30% preservado); rótulo visível Auto; toggle tema imediatamente antes do menu, ambos dentro do header; ao abrir, links públicos e WhatsApp ficam no menu e dentro do viewport. |
+| 321×844, dark | Marca 112 px; Auto visível; header uma linha; controles dentro da área útil. |
+| 320×844, dark | Marca 112 px; scrollWidth=305 ≤ innerWidth=320; menu e CTA do WhatsApp visíveis ao abrir. |
+| 291×844, dark | Marca 112 px; header permanece em uma linha; menu/CTA dentro da área útil. |
+| 290×844, dark | Header muda para duas linhas (122,6 px); marca 145 px e controles na segunda linha; menu aberto inclui CTA sem overflow horizontal. |
+| 900/901×844, light | 900 usa header compacto com CTA no menu; 901 mantém header largo, nav e CTA em .header-actions. |
+| 1366×844, dark; /, /about/, /how-it-works/ | Mesma classe/geometry pública do cabeçalho; CTA largo na área de ações; sem overflow horizontal. |
+| 390×844, dark; /viewer/ | Continua viewer-header próprio, sem overflow horizontal; a regra pública não mudou o contrato do Viewer. |
+
+Em 486×590, Enter e Space abriram o menu e focaram Ambientes; Tab percorreu os links e chegou ao WhatsApp; Escape fechou e devolveu foco ao botão de menu. O foco visível mediu 2,67 px: marrom no tema claro e dourado no escuro. Os alvos de menu observados tinham 42–44 px de altura.
+
+Mudança aplicada ao candidato: app/landing/landing.css passou de clamp(112px, 36vw, 160px) para clamp(112px, 30vw, 160px) em .site-header--public .brand. Isso reduz a marca progressivamente até o mínimo 112 px (70% da largura-base de 160 px) antes do reflow; a exceção ≤290 px mantém o layout em duas linhas.
+
+Limites: revisão em Preview isolado/Chrome emulado, não em Safari/iPad ou dispositivo touch real; zoom de navegador 200% ainda não observado. Não fecha UX-04, que exige execução no SHA exato de development depois que o workflow estiver na branch padrão. #218 segue aberta até concluir esses critérios. Nenhuma integração, deploy de produção ou mudança em Viewer ocorreu.
