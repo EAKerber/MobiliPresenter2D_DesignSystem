@@ -3,7 +3,7 @@
 **Snapshot histórico:** 26/10/2026, fuso `America/Sao_Paulo`.  
 **Destino:** recuperação histórica do trabalho daquele checkpoint.  
 **Prioridade registrada em 26/10:** estabilizar/reconciliar branches do Design System e não editar o produto até nova orientação. Essa restrição foi superada pela instrução explícita deste chat para continuar o plano de arquitetura nos dois repositórios.  
-**Retomada atual:** 09/11/2026 — consulte [checkpoint G0–G8](../evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md) e a seção “Retomada desta conversa” ao final deste arquivo. O usuário autorizou trabalho de arquitetura e uso do método Git do produto; esta autorização não inclui preview, deploy ou banco. O usuário também dispensou o runtime bootstrap neste chat. Revalidar HEADs e PRs na API antes de cada ação.
+**Retomada atual:** 10/11/2026 — consulte [checkpoint G0–G8](../evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md) e a seção “Retomada desta conversa” ao final deste arquivo. O usuário autorizou trabalho de arquitetura, uso do método Git do produto e um preview hospedado moderado; não há autorização para deploy de produção nem operação de banco. O usuário também dispensou o runtime bootstrap neste chat. Revalidar HEADs e PRs na API antes de cada ação.
 
 ## Verificação posterior à PR #82 — snapshot de retomada (26/10/2026, São Paulo)
 
@@ -19,7 +19,7 @@ Este bloco registra somente **documentação e leitura Git/Actions**. Não compr
 
 1. Consultar o SHA de `main`, inventário completo de branches, PRs abertas/fechadas relevantes e Actions no repositório [Design System](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem).
 2. Ler este arquivo, [guia operacional de higiene](BRANCH_HYGIENE_OPERATIONS.md), [D01–D04 homologadas](APPROVALS_D01_D04_2026-10-26.md), [ledger de extração D04](HANDOVER_SELECTIVE_EXTRACTION_2026-10-26.md), `decisions.json`, os manifests `dist/` e `FINDINGS_REGISTER.md`.
-3. Naquele snapshot, o repositório do produto era tratado apenas como referência e a edição estava fora do escopo. A autorização posterior de 09/11 permite trabalho de arquitetura no produto dentro do objetivo atual; continue sem preview, deploy ou banco sem autorização própria.
+3. Naquele snapshot, o repositório do produto era tratado apenas como referência e a edição estava fora do escopo. A autorização posterior de 09/11 permite trabalho de arquitetura no produto. A autorização posterior de 10/11 inclui um preview hospedado moderado; deploy de produção e banco continuam sem autorização.
 4. Usar o conector GitHub, sem depender de `gh`. Antes de qualquer escrita: revisar conteúdo exclusivo, HEAD exato, proteções, relações com PR, dependências de workflows, gate e rollback. Atualizar este handover a cada checkpoint material.
 
 ## 1. Objetivo e decisões de governança
@@ -272,4 +272,15 @@ A fotografia detalhada das fases G0–G8 está em [checkpoint atual](../evidence
 - #216 continua aberta, mas o subgate da regra vencedora avançou: Chrome DevTools capturou os vencedores nos três seletores originais × light/dark em `main@221b54b`, e a razão CSSOM recalculada no viewport 766×608 coincidiu com o recibo anterior. O procedimento local `file://`, as folhas injetadas e limites estão em [evidence/architecture/vis002c-cascade-winner-trace-2026-11-10.md](../evidence/architecture/vis002c-cascade-winner-trace-2026-11-10.md). Não é preview nem prova do CDN; `.study-band .eyebrow`, os cinco consumidores adicionais, `/config/` e #208 permanecem fora/abertos. A tentativa do coletor Playwright ainda falha antes de navegar pelo perfil temporário do Edge (`-5`).
 - UX-04 continua sem Actions no SHA exato de `development`; o workflow de dispatch segue ausente da branch padrão `main`. Assim G1 permanece parcial, G2 em andamento, G3 parcial, G4/G6 em HOLD, G5 parcial/HOLD e G7/G8 pendentes. Nenhuma fase do plano geral pode ser considerada concluída por estes resultados.
 - Próximos passos: obter um único preview hospedado para revisar a candidata #269; terminar o crosswalk G2 para #208/#216, `/config/` e DS-05A; destravar o gate UX-04 no runner Linux/Node 22; continuar G3–G7 com ownership e evidência por domínio antes de qualquer migração compartilhada. Não promover para release sem revisão e validação integrada.
+
+## Retomada desta conversa — atualização de evidência 2026-11-10 (BRT)
+
+Esta atualização substitui os HEADs e limites da seção de retomada anterior; consulte o checkpoint G0–G8 acima para o estado por fase.
+
+- **Design System:** branch `docs/architecture-status-20261109`, PR #119 draft. O snapshot inicial desta atualização foi `fc5770fe7f917cc4375ca5cfe524fac996d78ab3`; após o commit documental, confirmar o head pelo readback da API. O inventário remoto observado permanece 2 branches/1 PR, dentro do soft cap DS≤2.
+- **Produto:** `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`, `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`; 3 branches e PR #269 draft, head `6195e90c012a45a7abf1b8db6de220be03dc9fb4`. Soft cap produto≤5 respeitado; não há branch remota a excluir apenas para cumprir o limite.
+- **G1:** a candidata #269 tem 13/15 checks em success, 2 skipped; NAV-005 local-only passou 124 cenários, e a repetição focada do job de layout passou 24/24. A validação hospedada segue pendente: a tentativa de transição temporária para ready não gerou Deploy Preview e foi revertida para draft. Nenhum deploy manual, merge ou publicação ocorreu.
+- **G2/G3:** o trace local foi ampliado aos dez seletores v0.3 (14 elementos) e à exceção `.study-band .eyebrow`, nas três rotas públicas, em light/dark. A inspeção por Chrome DevTools confirmou os winners e o DOM calculado. A fonte local `file://` e a carga direta das folhas limitam a inferência; não provaram HTTP/CDN, aceitação visual, comportamento global, nem ownership além desses contextos.
+- **Pendências de arquitetura:** #216 permanece aberta; #208, 98 pares UNCERTAIN de `/config/` e DS-05A permanecem separados e em aberto/HOLD. G3 não fecha ownership amplo; G4/G6 continuam HOLD, G5 parcial/HOLD, G7 pendente e G8 não iniciado como release.
+- **Próxima ação de maior retorno:** atualizar este trace/checkpoint/handover como um lote documental, mantendo uma só branch DS; depois continuar a evidência de G2 para #208, `/config/` e DS-05A. Gerar um preview hospedado para a candidata #269 assim que a via de Preview estiver acessível; agrupar correções relacionadas antes de outra rodada, sem tratar validação local como substituta.
 
