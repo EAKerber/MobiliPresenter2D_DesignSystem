@@ -163,3 +163,10 @@ Os limites leves informados pelo usuário são até 2 branches no Design System 
 **Higiene de branches:** reconsulta retornou 5 branches no produto (incluindo `main`, `development` e a branch retida de #270) e 2 no Design System. #269 e #271 são PRs abertas; #270 está fechada sem merge. Ambos os limites permanecem respeitados; nenhuma remoção é necessária.
 
 **Limites de validação:** inspeção do #269 foi visual e pontual no navegador do ChatGPT. As Actions medem os gates automatizados configurados para cada SHA; não comprovam UX-04 nem os critérios físicos/assistivos restantes. A tela de acesso do #271 reteve o gate válido; nenhuma autenticação foi tentada ou contornada.
+
+
+## Adendo — G3 ownership inicial e acesso administrativo (2026-11-11)
+
+O inventário [CSS ownership/risk](../../docs/architecture/CSS-OWNERSHIP-RISKS-2026-10-20.md) agora registra uma primeira classificação por família, baseada em `MobiliPresenter2D/main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`: `.visually-hidden` tem declaração igual em bundles de rota separados, mas ganho de extração não demonstrado; `.eyebrow` e `.button` são variantes/homônimos de domínio; `.scene-hotspot` é indeterminado e de alto risco; `.site-header` é shell público compartilhado com variação por página e #218 ainda aberto. Esta é evidência estática e documental; **G3 permanece parcial** até cobrir estados e consumidores restantes. Nenhuma mudança de CSS ou extração foi feita.
+
+O usuário informou que entrou como administrador. No host #269, `/admin` mostrou a sessão administrativa e `/config/` abriu o shell, mas depois exibiu erro de validação da configuração publicada; isto não confirma estados interativos nem visualização funcional. No host #271, `/admin` ainda exigiu entrada e `/config/` redirecionou ao acesso sem token válido. Não houve revisão visual autenticada do código G2 de #271. Os gates de G2/G7 seguem abertos.
