@@ -1,6 +1,6 @@
 # Checkpoint atual da arquitetura G0–G8 — 2026-11-10
 
-**Última atualização:** 2026-11-10 (BRT).
+**Última atualização:** 2026-11-11 (BRT).
 
 **Escopo:** reconciliação documental do plano de consolidação de Design System, CSS e componentes. Este checkpoint atualiza a fotografia operacional, não aprova mudanças visuais, migrações em lote, merge de código de produto ou publicação.
 
@@ -144,3 +144,22 @@ Os limites leves informados pelo usuário são até 2 branches no Design System 
 3. Concluir ownership de G3 por rota/estado e selecionar um único piloto autorizado para G4/G5.
 4. Reavaliar a arquitetura declarativa G6 após evidência dos componentes e manter G7 como gate para jornadas protegidas/dispositivos.
 5. Atualizar este crosswalk com SHAs e resultados quando cada gate tiver evidência; não marcar G8 concluído sem validação integrada e autorização de release.
+
+
+## Atualização operacional — 2026-11-11 (BRT)
+
+| Fase | Estado confirmado | Próximo gate verificável |
+|---|---|---|
+| **G0 — evidência e documentação** | **PASS como base de rastreabilidade; contínuo.** Este checkpoint e o handover foram atualizados a partir dos HEADs e Actions atuais. | Continuar por domínio, preservando evidências históricas e limites. |
+| **G1 — navegação e foco** | **PARCIAL.** PR #269 draft em `19bbf9d25e71c5fa94abc3ee12baff52747ec54c`; 12 verificações de Actions success. Deploy Preview `6af3e1508734d4fdfd61a482` revisado no navegador do ChatGPT em desktop e a 390 px; cabeçalho/menu sem sobreposição visível na inspeção. UX-04 não tem run Actions no SHA atual `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`; #218 continua aberta. | Rodar UX-04 em Linux/Node 22 no SHA atual e completar critérios #218 de toque, zoom, foco e dispositivo. A tela pública do Preview não substitui teste Safari/iPad. |
+| **G2 — contraste e tokens** | **EM ANDAMENTO.** PR #271, head `6030eec03e8dad0c91672744b59b9c63080ce835`, tem 8 verificações de Actions success. Preview `6af3e14b24bd296921873555` está ready; `/config/` redireciona ao gate de acesso sem token válido, então a revisão visual autenticada permanece bloqueada. #208 e #216 seguem abertas; 98 pares de `/config/` UNCERTAIN; DS-05A incompleto/HOLD. | Prosseguir com evidência alcançável e revisão autorizada das telas protegidas; não inferir aceitação visual autenticada a partir deste Preview. |
+| **G3 — ownership** | **PARCIAL.** A evidência VIS-002C permanece delimitada às rotas/estados medidos. | Concluir ownership por rota/estado. |
+| **G4 — tokens compartilhados** | **HOLD.** | Não extrair tokens amplamente antes dos gates G2/G3. |
+| **G5 — componentes** | **PARCIAL/HOLD.** | Selecionar piloto após ownership e critérios verificados. |
+| **G6 — arquitetura declarativa** | **HOLD.** | Reavaliar após evidência de componentes e propriedades. |
+| **G7 — jornadas protegidas/dispositivos** | **PENDENTE.** | Validar em contextos autorizados, incluindo dispositivos pertinentes. |
+| **G8 — integração/release** | **NÃO INICIADO como release.** Nenhum PR foi mesclado nem houve deploy de produção. | Gate integrado, revisão e autorização própria. |
+
+**Higiene de branches:** reconsulta retornou 5 branches no produto (incluindo `main`, `development` e a branch retida de #270) e 2 no Design System. #269 e #271 são PRs abertas; #270 está fechada sem merge. Ambos os limites permanecem respeitados; nenhuma remoção é necessária.
+
+**Limites de validação:** inspeção do #269 foi visual e pontual no navegador do ChatGPT. As Actions medem os gates automatizados configurados para cada SHA; não comprovam UX-04 nem os critérios físicos/assistivos restantes. A tela de acesso do #271 reteve o gate válido; nenhuma autenticação foi tentada ou contornada.

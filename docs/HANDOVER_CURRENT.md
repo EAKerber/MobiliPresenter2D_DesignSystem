@@ -3,7 +3,7 @@
 **Snapshot histórico:** 26/10/2026, fuso `America/Sao_Paulo`.  
 **Destino:** recuperação histórica do trabalho daquele checkpoint.  
 **Prioridade registrada em 26/10:** estabilizar/reconciliar branches do Design System e não editar o produto até nova orientação. Essa restrição foi superada pela instrução explícita deste chat para continuar o plano de arquitetura nos dois repositórios.  
-**Retomada atual:** 10/11/2026 — consulte [checkpoint G0–G8](../evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md) e a seção “Retomada desta conversa” ao final deste arquivo. O usuário autorizou trabalho de arquitetura, uso do método Git do produto e um preview hospedado moderado; não há autorização para deploy de produção nem operação de banco. O usuário também dispensou o runtime bootstrap neste chat. Revalidar HEADs e PRs na API antes de cada ação.
+**Retomada atual:** 11/11/2026 — consulte [checkpoint G0–G8](../evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md) e a seção “Retomada desta conversa” ao final deste arquivo. O usuário autorizou trabalho de arquitetura, uso do método Git do produto e um preview hospedado moderado; não há autorização para deploy de produção nem operação de banco. O usuário também dispensou o runtime bootstrap neste chat. Revalidar HEADs e PRs na API antes de cada ação.
 
 ## Verificação posterior à PR #82 — snapshot de retomada (26/10/2026, São Paulo)
 
@@ -284,3 +284,17 @@ Esta atualização substitui os HEADs e limites da seção de retomada anterior;
 - **Pendências de arquitetura:** #216 permanece aberta; #208, 98 pares UNCERTAIN de `/config/` e DS-05A permanecem separados e em aberto/HOLD. G3 não fecha ownership amplo; G4/G6 continuam HOLD, G5 parcial/HOLD, G7 pendente e G8 não iniciado como release.
 - **Próxima ação de maior retorno:** atualizar este trace/checkpoint/handover como um lote documental, mantendo uma só branch DS; depois continuar a evidência de G2 para #208, `/config/` e DS-05A. Gerar um preview hospedado para a candidata #269 assim que a via de Preview estiver acessível; agrupar correções relacionadas antes de outra rodada, sem tratar validação local como substituta.
 
+
+
+## Retomada desta conversa — atualização de evidência 2026-11-11 (BRT)
+
+Esta atualização substitui os estados operacionais anteriores de G1/G2 e confirma o acesso aos Previews pelo navegador do ChatGPT. A evidência não fecha critérios de release nem autoriza merge ou publicação.
+
+- **Design System:** PR #119 permanece draft em `docs/architecture-status-20261109`, head `bc6b4764612e5c4ea6317eaf035d371b89089b3e` antes desta atualização; 2 branches e 1 PR aberta, dentro do limite DS≤2.
+- **Produto:** `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`, `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`; 5 branches, dentro do limite produto≤5. #269 permanece draft no head `19bbf9d25e71c5fa94abc3ee12baff52747ec54c`; #271 está aberta e não draft no head `6030eec03e8dad0c91672744b59b9c63080ce835`. #270 foi encerrada sem merge como supersedida e sua branch permanece. Nenhuma branch foi removida.
+- **G1 / #269:** 12 verificações de Actions no SHA atual terminaram em success, incluindo NAV-005 local e o gate de fluxo responsivo. O Deploy Preview `6af3e1508734d4fdfd61a482` está ready em [deploy-preview-269](https://deploy-preview-269--mobilipresenter2d.netlify.app/how-it-works/). Pelo navegador do ChatGPT, a página pública foi revisada em desktop e a 390 px; o cabeçalho e o menu aberto mostraram os links e CTA sem sobreposição visível. Isso é uma inspeção visual pontual, não fecha os critérios de #218 para toque, zoom, foco, larguras/dispositivos ou Safari/iPad.
+- **G2 / #271:** 8 verificações de Actions no SHA atual terminaram em success. O Deploy Preview `6af3e14b24bd296921873555` está ready; a entrada `/config/` redirecionou para `/access/` e informou que não havia token válido. Não foi fornecido acesso válido e a barreira não foi contornada. Assim, o Configurador/Viewer internos e o fluxo autenticado ainda não tiveram revisão visual hospedada. #208 permanece aberta; o Preview não substitui a validação local nem fecha os demais critérios.
+- **UX-04:** o último run verde segue no SHA antigo `c7c2822d5b651ae0bcfcf0ac28c66cb61b645e98`; `development` continua em `1a69ff76a5f36e3245a288773bb409aa662e4e62`. O workflow tem `workflow_dispatch` em development, mas o arquivo não existe em `main`, por isso o Actions UI não oferece disparo para o SHA atual. G1 continua parcial até haver evidência Linux/Node 22 no SHA atual e conclusão de #218.
+- **G2 e fases seguintes:** #216 e #208 continuam abertas; 98 pares de `/config/` seguem UNCERTAIN e DS-05A continua incompleto/HOLD. G3 permanece parcial, G4/G6 em HOLD, G5 parcial/HOLD, G7 pendente e G8 não iniciado como release. Sem merge, deploy de produção ou operação de banco.
+
+Próximo passo: manter os dois PRs abertos para revisão apropriada; avançar o gate UX-04 no SHA atual e a evidência acessível de #208/#216 sem remover a barreira do Configurador. Agrupar correções relacionadas antes de outro ciclo de Preview.
