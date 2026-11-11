@@ -184,3 +184,8 @@ A sessão Admin abriu `/config/`, mas a validação da configuração publicada 
 No pin `MobiliPresenter2D/main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`, foi ampliada a matriz de ownership: o menu público estático de Landing/How/About usa `landing/header-menu.js` e layout `menu-open`; os menus de Admin e Access são montados pelo controlador de sessão `core/private-navigation.js`. Ambos compartilham tokens/tema, porém usam DOM, controladores, foco e estados de autorização distintos. O detalhamento, ordem das folhas e referências está no inventário CSS ownership. A conclusão é documental/estática: G3 continua parcial, sem promoção de CSS.
 
 **Correção operacional do Preview #271:** o login administrativo foi concluído no host exato. A rota `/admin` carregou a hierarquia; `/config/` autenticado continuou indisponível por falha de validação da configuração publicada. O Viewer e CTA de Access/manage tiveram revisão visual pontual conforme adendo anterior. Nenhuma configuração foi publicada/salva, convite enviado, ou branch removida.
+
+
+## Adendo — G3: marca e controle de tema (2026-11-11)
+
+A leitura estática do pin `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95` confirmou que `core/ui-theme.js` é o dono do modo auto/light/dark, da preferência local/sistema, dos assets de logo e do rótulo/slot do controle. A mesma lógica atende Landing/How/About, Viewer, Config, Admin e Access; os slots e as dimensões continuam contextuais. G3 permanece parcial: falta observar CSSOM/primeira pintura e interação em cada rota/tema, em especial nas telas privadas.

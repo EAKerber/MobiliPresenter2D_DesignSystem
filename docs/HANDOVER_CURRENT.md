@@ -327,3 +327,8 @@ A PR #119 foi ampliada no mesmo branch, sem abrir branch adicional. No pin `Mobi
 O checkpoint também foi corrigido: o login no Admin ocorreu no host #271; a hierarquia administrativa carregou, enquanto `/config/` autenticado falhou na validação da configuração publicada. A revisão limitada do Viewer e CTA de Access/manage permanece registrada. O viewport temporário foi restaurado e a aba do Admin ficou aberta para continuidade. Nenhum dado foi publicado, convite enviado ou alteração de CSS feita.
 
 **Branches:** Design System continua em 2/2 e produto em 5/5. Não removi a branch encerrada de #270: o procedimento do produto exige autorização por SHA e manifesto aprovado, e ela não bloqueia a execução no limite atual. A próxima proposta de limpeza deve apontar para a branch e SHA exatos, depois de revalidar proteção, conteúdo e relação com #271.
+
+
+## Continuação — G3 marca e tema (2026-11-11, BRT)
+
+Foi documentado no inventário de ownership que `core/ui-theme.js` centraliza a escolha auto/light/dark, a persistência, a troca de logo e a criação do toggle, enquanto públicos, Viewer e páginas privadas fornecem slots/geometrias próprios. A conclusão distingue contrato comportamental compartilhado de layout contextual; não sugere globalizar o CSS nem aprova token novo. G3 segue parcial, e G4 continua condicionado à evidência de runtime/custos do consumidor.
