@@ -170,3 +170,10 @@ Os limites leves informados pelo usuário são até 2 branches no Design System 
 O inventário [CSS ownership/risk](../../docs/architecture/CSS-OWNERSHIP-RISKS-2026-10-20.md) agora registra uma primeira classificação por família, baseada em `MobiliPresenter2D/main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`: `.visually-hidden` tem declaração igual em bundles de rota separados, mas ganho de extração não demonstrado; `.eyebrow` e `.button` são variantes/homônimos de domínio; `.scene-hotspot` é indeterminado e de alto risco; `.site-header` é shell público compartilhado com variação por página e #218 ainda aberto. Esta é evidência estática e documental; **G3 permanece parcial** até cobrir estados e consumidores restantes. Nenhuma mudança de CSS ou extração foi feita.
 
 O usuário informou que entrou como administrador. No host #269, `/admin` mostrou a sessão administrativa e `/config/` abriu o shell, mas depois exibiu erro de validação da configuração publicada; isto não confirma estados interativos nem visualização funcional. No host #271, `/admin` ainda exigiu entrada e `/config/` redirecionou ao acesso sem token válido. Não houve revisão visual autenticada do código G2 de #271. Os gates de G2/G7 seguem abertos.
+
+
+## Adendo — revisão G2 após login administrativo no host #271 (2026-11-11)
+
+O Viewer foi inspecionado no Preview exato #271 a 390×844 CSS px em tema escuro e claro. Os quatro pontos de navegação ficaram visíveis; o ativo e os inativos se distinguiram. Valores CSSOM dos pontos inativos: dark `rgb(196, 188, 178)`, light `rgb(112, 108, 102)`; 7×7 px. Na rota `/access/manage.html`, o CTA de tema escuro computou `rgb(41,39,35)` sobre `rgb(226,201,145)`, razão 9,23:1, e foi visualmente confirmado. A própria página informa falha ao carregar os acessos recentes.
+
+A sessão Admin abriu `/config/`, mas a validação da configuração publicada falhou e a tela ficou indisponível; títulos de seção e anel de acabamento ainda não têm revisão visual hospedada. Não houve envio de convite, mudança de dados ou publicação. Este subgate cobre apenas os pontos observados, não fecha #208 ou G2.
