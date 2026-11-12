@@ -1,7 +1,7 @@
 {
-  "schema": "g2-selected-finish-ring-receipt-v3",
+  "schema": "g2-selected-finish-ring-receipt-v4",
   "generatedAt": "2026-11-12T04:17:06.686Z",
-  "updatedAt": "2026-11-12T04:48:38.395Z",
+  "updatedAt": "2026-11-12T05:00:21.307Z",
   "productCommit": "221b54b2a41ecc8c338d1bf2cf67280cf165ce95",
   "source": "Clean detached checkout at product main 221b54b2a41ecc8c338d1bf2cf67280cf165ce95; local default Buyer V5 fixture; real Configurator app.js advances to the Finishes stage and clicks real base-light and shadow swatch buttons; browser requests served from local files through Playwright routing; no network service or external data.",
   "baselineStylesGitBlob": "d43e6fb5e66133d2389b5c39b165b76b13cfa868",
@@ -26,7 +26,8 @@
   ],
   "interactionStates": [
     "no-hover",
-    "hover"
+    "hover",
+    "focus-visible"
   ],
   "recaptureByState": {
     "no-hover": {
@@ -41,9 +42,22 @@
       "pointerStayedOnSelectedSwatch": true,
       "awaitedCondition": "selected.matches(':hover') && getComputedStyle(selected).transform === 'matrix(1.06, 0, 0, 1.06, 0, 0)'",
       "transitionStabilizationMs": 200
+    },
+    "focus-visible": {
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "pointerMovedTo": [
+        0,
+        0
+      ],
+      "keyboardNavigation": "focus adjacent swatch, then Tab/Shift+Tab to selected swatch",
+      "awaitedCondition": "selected.matches(':focus-visible') && getComputedStyle(selected).transform === 'none'",
+      "selectedStateAndAriaVerified": true
     }
   },
-  "rowCount": 32,
+  "rowCount": 40,
   "rows": [
     {
       "id": "baseline-light-390-shadow",
@@ -1708,6 +1722,438 @@
         }
       ],
       "interactionState": "hover"
+    },
+    {
+      "id": "baseline-light-390-shadow",
+      "arm": "baseline",
+      "theme": "light",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "focusVisible": true,
+        "hovered": false,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 711.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(110, 81, 46) solid 2px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-focus-visible-2026-11-12/baseline-light-390-shadow.png",
+      "screenshotSha256": "447a9ea3de0bd95dbe140329d6058872778f89c488bf78fea13e3b63769bdbc7",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "focus-visible"
+    },
+    {
+      "id": "baseline-light-390-base-light",
+      "arm": "baseline",
+      "theme": "light",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "focusVisible": true,
+        "hovered": false,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 655.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(110, 81, 46) solid 2px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-focus-visible-2026-11-12/baseline-light-390-base-light.png",
+      "screenshotSha256": "bc3f2918901048bb43fe0a83153c3f4fe378a05f35b48540528b551897dd8cc6",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "focus-visible"
+    },
+    {
+      "id": "candidate-light-390-shadow",
+      "arm": "candidate",
+      "theme": "light",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "focusVisible": true,
+        "hovered": false,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 711.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(110, 81, 46) solid 2px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-focus-visible-2026-11-12/candidate-light-390-shadow.png",
+      "screenshotSha256": "976b5154f9e4f3d5745b24c1daf1cbd6d356dad28d4c663bfe1903cc27cf0d99",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "focus-visible"
+    },
+    {
+      "id": "candidate-light-390-base-light",
+      "arm": "candidate",
+      "theme": "light",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "focusVisible": true,
+        "hovered": false,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 655.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(110, 81, 46) solid 2px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-focus-visible-2026-11-12/candidate-light-390-base-light.png",
+      "screenshotSha256": "d9bd8903122bf493463fe27c9b6709f9971b9a9f555b07fee4aecb8e85f79c88",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "focus-visible"
+    },
+    {
+      "id": "baseline-dark-390-shadow",
+      "arm": "baseline",
+      "theme": "dark",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "focusVisible": true,
+        "hovered": false,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 711.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(216, 188, 124) solid 2px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-focus-visible-2026-11-12/baseline-dark-390-shadow.png",
+      "screenshotSha256": "1770052ad560651e338eef59d44caba0c5d78c3222a3e24c8be9a9f0a45321a8",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "focus-visible"
+    },
+    {
+      "id": "baseline-dark-390-base-light",
+      "arm": "baseline",
+      "theme": "dark",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "focusVisible": true,
+        "hovered": false,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 655.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(216, 188, 124) solid 2px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-focus-visible-2026-11-12/baseline-dark-390-base-light.png",
+      "screenshotSha256": "7bf9ff906d82cb02e49997cc1a806e47b17930a14d974aefe2fa9f771b8d8235",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "focus-visible"
+    },
+    {
+      "id": "candidate-dark-390-shadow",
+      "arm": "candidate",
+      "theme": "dark",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "focusVisible": true,
+        "hovered": false,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 711.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(216, 188, 124) solid 2px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-focus-visible-2026-11-12/candidate-dark-390-shadow.png",
+      "screenshotSha256": "70796428b4aeee86967df77f6886ec7bbad80eec3ce35f13458ef52ef16ee099",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "focus-visible"
+    },
+    {
+      "id": "candidate-dark-390-base-light",
+      "arm": "candidate",
+      "theme": "dark",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "focusVisible": true,
+        "hovered": false,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 655.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(216, 188, 124) solid 2px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-focus-visible-2026-11-12/candidate-dark-390-base-light.png",
+      "screenshotSha256": "685759dc934c12867de9df2bbf6fd916d8f0c1d528af92e294cbb1dc4eb01cb7",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "focus-visible"
     }
   ]
 }
