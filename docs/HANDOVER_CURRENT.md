@@ -3,7 +3,7 @@
 **Snapshot histórico:** 26/10/2026, fuso `America/Sao_Paulo`.  
 **Destino:** recuperação histórica do trabalho daquele checkpoint.  
 **Prioridade registrada em 26/10:** estabilizar/reconciliar branches do Design System e não editar o produto até nova orientação. Essa restrição foi superada pela instrução explícita deste chat para continuar o plano de arquitetura nos dois repositórios.  
-**Retomada atual:** 12/11/2026 — consulte [checkpoint G0–G8](../evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md), a [recaptura CSSOM local do Admin](../evidence/architecture/g2-admin-initial-state-labels-cssom-2026-11-12.md) e a seção “Atualização de 12/11” ao final. O usuário pediu implementar o plano G0–G8, usar o método Git do produto, manter a documentação corrente e evitar crescimento descontrolado de refs. O Design System tem meta/soft cap de 2 refs; o produto tem soft cap de 5 durante trabalho ativo e meta de 2 quando estável (`main` + `development`). Ao chegar a 5, revisar se um hard cap é útil; 2 e 5 não são regras rígidas nem autorização para exclusão por contagem. Há autorização para trabalho de arquitetura e preview hospedado moderado; não há autorização para deploy de produção ou operação de banco. O usuário também dispensou o runtime bootstrap neste chat. Revalidar HEADs e PRs na API antes de cada ação.
+**Retomada atual (12/11/2026):** o escopo solicitado abrange a implementação integral do plano arquitetural ARC-01…ARC-16 e V0–V6, mantendo os gates G0–G8 e DS-05A como trilhas de validação relacionadas. Consulte o [checkpoint G0–G8](../evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md), a [recaptura CSSOM local do Admin](../evidence/architecture/g2-admin-initial-state-labels-cssom-2026-11-12.md) e a reconciliação do plano geral ao final deste handover. A execução segue o método Git do produto, mantém os documentos correntes e observa os soft caps de refs. O Design System tem meta/soft cap de 2 refs; o produto tem soft cap de 5 durante trabalho ativo e meta de 2 quando estável (`main` + `development`). Ao chegar a 5, revisar se um hard cap é útil; 2 e 5 não são regras rígidas nem autorização para exclusão por contagem. Há autorização para trabalho de arquitetura e preview hospedado moderado; não há autorização para deploy de produção ou operação de banco. O usuário também dispensou o runtime bootstrap neste chat. Revalidar HEADs e PRs na API antes de cada ação.
 
 ## Verificação posterior à PR #82 — snapshot de retomada (26/10/2026, São Paulo)
 
@@ -479,3 +479,33 @@ A cópia limpa destacada do Product `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce
 - Classificação `.swatch`: aparência do anel compartilhada dentro de `/config/`; escopos de seleção distintos por design; nenhum consumidor cross-route identificado. A linha runtime de G3 agora está coberta e não sugere extração. G3 como gate geral segue parcial; G2 hospedado continua pendente porque `/config/` rejeita a configuração publicada.
 
 Sem alteração do produto, banco, publicação, refs remotas ou `main` do Product.
+
+## Reconciliação live do plano arquitetural geral — 12/11/2026
+
+O objetivo corrente abrange ARC-01…ARC-16 e V0–V6; G0–G8 é outro plano de consolidação e verificação que continua sendo acompanhado. Este adendo compara as afirmações históricas com o Product main confirmado, sem reescrever evidência antiga.
+
+### Entregas arquiteturais já integradas
+
+- O Product main observado é 221b54b2a41ecc8c338d1bf2cf67280cf165ce95. A PR [#237](https://github.com/EAKerber/MobiliPresenter2D/pull/237) está merged; seu merge commit 5ccb2a8dde6dd16e136f03387dc833aab828c5cf e o commit de origem ARC-03C ff5c55c24ef42eb106e6dda6aa7698b00355270a são ancestrais desse main.
+- ARC-03C está implementado no build: scripts/compile-primary-pages.mjs gera as páginas a partir de architecture/pages e architecture/fragments; package.json inclui o gate/build; architecture/fragments/primary-header.routes.json declara BUILD_AUTHORITATIVE_ARC03C e exclui Viewer, Config, Admin e Access do escopo. A PR #237 integrou o controlador de navegação pública e preservou a variante Viewer NAV-005. O resultado é integração em main, não apenas uma prova isolada.
+- O arquivo de integração ARC-03C e o handover do produto de 22/10 ainda descrevem a etapa como isolada ou como próximo passo. Esses trechos agora são snapshots pré-integração; uma revisão documental focada no Product permanece pendente.
+
+### Entregas e gates ainda abertos
+
+- V0/ARC-13 ainda não tem inventário integral de strings localizáveis nem catálogo pt-BR consumido pelo runtime. O índice legado de 826 ocorrências em 26 fontes é uma lista de candidatas, não cobertura completa; a varredura precisa ser refeita sobre o Product main atual, cobrindo HTML, textos dinâmicos, atributos acessíveis, pluralização, parâmetros e exceções de dados V5.
+- V2/P-TOKEN: há pin e exportações versionadas, mas isso não prova ativação geral de tokens no CSS do produto. A origem e os consumidores precisam ser reconciliados com os pares visuais homologados; nenhuma paleta global deve ser ativada por inferência.
+- Os gates G0–G8 permanecem conforme o checkpoint de 12/11: G0 contínuo; G1 parcial; G2 em andamento; G3 parcial; G4/G6 HOLD; G5 parcial/HOLD; G7 pendente; G8 sem release. A conclusão de ARC-03C não fecha esses gates nem o plano geral.
+- G4/G5 de CSS compartilhado continuam condicionados à prova de ownership e equivalência por consumidor. A linha .swatch está coberta em G3, mas o inventário de ownership geral está parcial.
+- V6/G7/G8 ainda exigem cobertura funcional integrada por risco, evidência de dispositivo e autenticação quando cabível, revisão dos riscos residuais, aceitação e autorização de release. CI, preview e merge não se substituem entre si.
+
+### Próxima sequência de execução
+
+1. Reconciliar a documentação do Product com o main@221b54b, começando por ARC-03C já integrado e preservando a proveniência do snapshot de outubro.
+2. Completar V0/ARC-13 no Product main: scanner HTML/JavaScript, inventário classificável por origem/rota/consumidor/owner, validação de cobertura e exceções; depois iniciar substituições pt-BR em lotes reversíveis.
+3. Prosseguir G1–G3 nos gates ainda reproduzíveis; manter hospedado/PENDING o que depender da configuração publicada inválida, e classificar sem adivinhação os 98 pares com backdrop-filter.
+4. Só então avançar extrações V2/G4/G5 aprovadas por família, mantendo domínio V5, autorização e publicação independentes; avaliar V5/G6 apenas por consumidores reais e benefício medido.
+5. Fechar V6/G7/G8 com validação representativa e readback antes de propor release.
+
+### Refs e operações
+
+A consulta live de 12/11 mostra 2 refs no Design System (main e a branch da PR #119) e 7 no produto. A PR #272 prepara um lote exato para reduzir o produto de 7 para 5 após integração e readback; o lote ainda não foi aplicado. Nenhuma ref deve sair por contagem ou antiguidade. A documentação deste adendo é acrescentada à branch já existente da PR #119, sem criar ref; main, produto e dados publicados permanecem sem alteração nesta atualização.
