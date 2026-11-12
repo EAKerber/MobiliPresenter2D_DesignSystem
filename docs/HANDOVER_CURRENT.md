@@ -467,3 +467,15 @@ Classificação: **variante intencional dentro do Configurador, sem consumidor `
 A varredura do pin Product `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95` encontrou dois geradores dentro de `/config/`: `renderFinishControlsFromData()` cria os acabamentos globais em `#finishSwatches`, e `createLocalFinishControl()` cria acabamentos locais dentro de `moduleDetail`. Ambos usam `.swatch`, `.is-selected` e `aria-pressed`; os handlers e os domínios de seleção são separados. A rota carrega `styles.css` (`app/config/index.html:30`) antes de `ui-theme.css` (`:41`); a família inclui base/hover/selected/responsivo em `app/styles.css:349–367,692` e foco geral de botão em `:96–98`.
 
 Classificação: **variante intencional dentro do Configurador, sem consumidor `.swatch` em outra rota e sem candidato cross-route**. O pacote de 40 estados do anel cobre o consumidor global (`data-finish-id`) e confirma hover/foco/seleção nele; o consumidor local (`data-local-finish-id`) foi mapeado estaticamente, mas não recebeu captura runtime. A linha de G3 avança com a propriedade e a diferença de domínio documentadas; permanece parcial até revisar o swatch local. Não extrair CSS nem alterar produto.
+
+
+## Atualização G3 — runtime do acabamento local ao módulo (12/11/2026, BRT)
+
+A cópia limpa destacada do Product `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95` gerou um fixture Buyer V5 em memória: `base-light` permaneceu global; `cocoa` e `shadow` ficaram locais e habilitados para `module-01`. O validador e a projeção Buyer V5 aceitaram o fixture. O Playwright abriu `/config/`, selecionou o módulo e clicou os botões locais reais. Nenhuma configuração foi salva ou publicada; não houve API remota ou banco.
+
+- 8 capturas: baseline/candidata × light/dark × `cocoa`/`shadow`, em 390×900 CSS px, Chrome 156.0.8078.82 / DPR 1.
+- Em 8/8, o `aria-pressed` local acompanhou a seleção; o acabamento global permaneceu `base-light`. Borda, box-shadow e transform computados coincidiram entre swatch local e global na mesma página. Sem erro de página nem erro HTTP inesperado.
+- Relatório, recibo e PNGs: [evidência G3 do consumidor local](../evidence/architecture/g3-module-local-swatch-runtime-2026-11-12.md). Os 40 casos G2 anteriores continuam sendo estritamente a matriz global; as 8 capturas locais são separadas.
+- Classificação `.swatch`: aparência do anel compartilhada dentro de `/config/`; escopos de seleção distintos por design; nenhum consumidor cross-route identificado. A linha runtime de G3 agora está coberta e não sugere extração. G3 como gate geral segue parcial; G2 hospedado continua pendente porque `/config/` rejeita a configuração publicada.
+
+Sem alteração do produto, banco, publicação, refs remotas ou `main` do Product.
