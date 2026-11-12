@@ -7,7 +7,7 @@
 - Produto: `EAKerber/MobiliPresenter2D@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`, checkout detached limpo.
 - CSS base: `app/styles.css` Git blob `d43e6fb5e66133d2389b5c39b165b76b13cfa868`.
 - CSS candidata, idêntica ao blob em Product #271: `app/styles.css` Git blob `eb346a41ad91f6dc53875cb954e9018fdc1dd713`; SHA-256 `8dbe02cb5c03880ef86eff2e7d21b561bd377e184a7c8dc0fa6d8783683fb608`.
-- Fluxo real do Configurador: avançou para Acabamentos e clicou nos botões reais `.swatch[data-finish-id]` para `base-light` e `shadow`. Defaults do Buyer V5 foram projetados localmente.
+- Fluxo real do Configurador: avançou para Acabamentos e clicou nos botões reais `.swatch[data-finish-id]` para `base-light` e `shadow`. Defaults do Buyer V5 foram projetados localmente. Os 40 estados cobrem somente a seleção global em `#finishSwatches`; o `.swatch[data-local-finish-id]` gerado dentro de `moduleDetail` compartilha a folha/classe, mas tem escopo de seleção local e não está nesta matriz. A classificação G3 dos dois consumidores consta no [inventário de ownership](../../docs/architecture/CSS-OWNERSHIP-RISKS-2026-10-20.md).
 - Matriz pareada: base/candidata × light/dark × 390×900 e 1366×900 CSS px × Base clara/Carvão. São 16 capturas sem hover, 16 com hover e 8 com `:focus-visible` por teclado (40 PNGs no total). Chrome 156.0.8078.82, DPR 1; 390 px usa layout compact e 1366 px side-rail.
 - As requisições foram roteadas para arquivos locais. Sem Netlify, autenticação, banco ou serviço externo.
 - Captura sem hover: depois de cada seleção, o ponteiro foi movido para `(0,0)` e o CSSOM aguardado até `transform === "none"`.

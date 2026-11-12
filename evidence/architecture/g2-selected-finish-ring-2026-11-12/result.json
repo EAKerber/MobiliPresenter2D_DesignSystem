@@ -2155,5 +2155,12 @@
       ],
       "interactionState": "focus-visible"
     }
-  ]
+  ],
+  "coverageScope": {
+    "testedConsumer": "Configurator global composition finishes: #finishSwatches .swatch[data-finish-id]",
+    "knownRelatedConsumer": "Configurator module-detail local finishes: moduleDetail .swatch[data-local-finish-id]",
+    "relatedConsumerRuntimeCoverage": "not sampled in this 40-state matrix; local selection changes only the selected module",
+    "crossRouteSwatchConsumerFound": false,
+    "classification": "one route-local style family with two consumer contexts; no cross-route extraction candidate"
+  }
 }
