@@ -30,8 +30,16 @@ The pinned source blobs were:
 | Product `main`, dark | `#C4BCB2` | `#232321` | **8.384:1** | 4.5:1 — pass |
 | PR #271 candidate, light | `#403A34` | `#EAE7E2` | **9.092:1** | 4.5:1 — pass |
 
-The candidate uses the existing `--control-text` token and scopes it to `html[data-theme="light"] .hierarchy-item .initial-state-option`. It preserves the card background and dark-mode style. Product PR #271 remains open at `d699fb1911046dfbbc475fad9415f3ff3fca1cc8`. A follow-up API check on 2026-11-12 found all nine PR-triggered Actions workflow runs successful and the Netlify Deploy Preview check successful for that exact head. This confirms preview publication, not hosted visual/CSSOM review of the new Admin rule. The previously observed `/config/` configuration failure remains unresolved. Product `main` remains at `221b54b`.
+The candidate uses the existing `--control-text` token and scopes it to `html[data-theme="light"] .hierarchy-item .initial-state-option`. It preserves the card background and dark-mode style. Product PR #271 remains open at `d699fb1911046dfbbc475fad9415f3ff3fca1cc8`; all nine PR-triggered Actions runs and the Netlify Deploy Preview status succeeded for that head.
+
+## Authenticated hosted review — Preview #271 Admin (2026-11-12, BRT)
+
+The user authenticated in the exact Preview host. At viewport 634×652 CSS px / DPR 1.5, the real hierarchy showed 18 `.initial-state-option` labels. All 18 had visible layout boxes and enabled, already-checked checkboxes. No checkbox was changed and nothing was saved. The CSSOM resolved the candidate light label to `rgb(64,58,52)` (`#403A34`) over the unchanged composited background `rgb(234,231,226)` (`#EAE7E2`), **9.092:1**. Dark remained `rgb(196,188,178)` (`#C4BCB2`) over `rgb(35,35,33)` (`#232321`), **8.384:1**. The card surface, checkbox state, and dark result stayed unchanged. The theme was restored to dark after light/dark review. No page console warning/error was observed.
+
+The active Admin stylesheet is Product PR #271 `app/admin/admin.css`, Git blob `81b115d4a15409d5c46ba5590a19ef587d785a0f`; the candidate selector is the one above. Source order remains `admin.css` then `ui-theme.css` in `app/admin.html`, with labels created by `app/admin/admin.js`. Session screenshot SHA-256 values: light `3b3966d1f2ccf900d1cb74a7401de302bedde8ff249ecb7195fcac2457b6b536`; dark `c5e9357d940110aebc264479aac001286efcfc76e9bf83e7beadc148f2c477fa`. The image bytes were reviewed in-session and are not stored in this repository.
+
+This passes only the hosted Admin initial-state-label subgate. `/config/` still reports invalid published configuration; other labels, routes and states, focus/hover/disabled behavior, and remaining #208 criteria are outside this review. Product `main` remains at `221b54b`.
 
 ## Limits
 
-This is local runtime evidence from a generated Admin fixture, not an authenticated hosted capture. It covers the initial hierarchy state and theme pair for this label family; it does not cover focus/hover/disabled states, other routes, or the remaining #208 criteria. Keep #208 and G2 open until their broader structural, CSSOM, contrast, and hosted fixture requirements are satisfied.
+The combined local and hosted evidence covers only the initial hierarchy state and this label family in light/dark. It does not cover focus/hover/disabled states, other routes, or the remaining #208 criteria. Keep #208 and G2 open until the broader structural, CSSOM, contrast, and hosted-fixture requirements are satisfied.

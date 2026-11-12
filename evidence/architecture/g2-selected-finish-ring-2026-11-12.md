@@ -10,6 +10,7 @@
 - Fluxo real do Configurador: avançou para Acabamentos e clicou nos botões reais `.swatch[data-finish-id]` para `base-light` e `shadow`. Defaults do Buyer V5 foram projetados localmente.
 - Matriz pareada: base/candidata × light/dark × 390×900 e 1366×900 CSS px × Base clara/Carvão (16 capturas). Chrome 156.0.8078.82, DPR 1; 390 px usa layout compact e 1366 px side-rail.
 - As requisições foram roteadas para arquivos locais. Sem Netlify, autenticação, banco ou serviço externo.
+- Recaptura corretiva: depois de cada seleção real, o ponteiro foi movido para `(0,0)` e o CSSOM foi aguardado até `transform === "none"` antes de ler o estado e capturar PNG. Os 16 screenshots atualizados não exibem o scale de hover; a interação de hover continua fora da cobertura.
 
 ## CSSOM e observação visual
 
@@ -37,4 +38,4 @@ O [recibo JSON compacto](g2-selected-finish-ring-2026-11-12/result.json) registr
 
 ## Limites e próximo passo
 
-Houve um HTTP 404 da bundle privada `/core/private-navigation.bundle.js` em cada contexto, ausente no checkout local; não houve erro de página e o estado Buyer V5 foi validado. As capturas não cobrem foco/teclado, hover, zoom, Safari/iPad, configuração hospedada nem o restante de #208/#216. A rota hospedada `/config/` continua sem configuração publicada válida. O Admin de #271 ainda precisa de revisão autenticada no Preview. G2 permanece em andamento; nenhuma mudança de código foi integrada à Product `main`.
+Houve um HTTP 404 da bundle privada `/core/private-navigation.bundle.js` em cada contexto, ausente no checkout local; não houve erro de página e o estado Buyer V5 foi validado. As capturas não cobrem foco/teclado, a interação de hover, zoom, Safari/iPad, configuração hospedada nem o restante de #208/#216. A rota hospedada `/config/` continua sem configuração publicada válida, então a revisão hospedada do anel ainda não foi possível. O subgate de labels do Admin de #271 passou na revisão autenticada do Preview, conforme [recibo CSSOM do Admin](g2-admin-initial-state-labels-cssom-2026-11-12.md). G2 permanece em andamento; nenhuma mudança de código foi integrada à Product `main`.
