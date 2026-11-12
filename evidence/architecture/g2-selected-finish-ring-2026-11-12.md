@@ -1,6 +1,6 @@
 # G2 — A/B do anel de acabamento selecionado (2026-11-12, BRT)
 
-**Resultado do subgate local:** a regra candidata torna o acabamento selecionado mais fácil de identificar nas combinações claras/escuras observadas. Os 16 estados terminaram com a seleção real ativa, `aria-pressed="true"`, tema solicitado/resolvido coincidente e configuração Buyer V5 validada. Isto registra a evidência do anel; não fecha G2 nem os critérios amplos de #208/#216.
+**Resultado do subgate local:** a regra candidata torna o acabamento selecionado mais fácil de identificar nas combinações claras/escuras observadas. Os 32 estados (16 sem hover e 16 com hover) terminaram com a seleção real ativa, `aria-pressed="true"`, tema solicitado/resolvido coincidente e configuração Buyer V5 validada. Isto registra a evidência do anel; não fecha G2 nem os critérios amplos de #208/#216.
 
 ## Identidade e método
 
@@ -8,9 +8,10 @@
 - CSS base: `app/styles.css` Git blob `d43e6fb5e66133d2389b5c39b165b76b13cfa868`.
 - CSS candidata, idêntica ao blob em Product #271: `app/styles.css` Git blob `eb346a41ad91f6dc53875cb954e9018fdc1dd713`; SHA-256 `8dbe02cb5c03880ef86eff2e7d21b561bd377e184a7c8dc0fa6d8783683fb608`.
 - Fluxo real do Configurador: avançou para Acabamentos e clicou nos botões reais `.swatch[data-finish-id]` para `base-light` e `shadow`. Defaults do Buyer V5 foram projetados localmente.
-- Matriz pareada: base/candidata × light/dark × 390×900 e 1366×900 CSS px × Base clara/Carvão (16 capturas). Chrome 156.0.8078.82, DPR 1; 390 px usa layout compact e 1366 px side-rail.
+- Matriz pareada: base/candidata × light/dark × 390×900 e 1366×900 CSS px × Base clara/Carvão. São 16 capturas sem hover e 16 capturas com o swatch selecionado em hover (32 PNGs). Chrome 156.0.8078.82, DPR 1; 390 px usa layout compact e 1366 px side-rail.
 - As requisições foram roteadas para arquivos locais. Sem Netlify, autenticação, banco ou serviço externo.
-- Recaptura corretiva: depois de cada seleção real, o ponteiro foi movido para `(0,0)` e o CSSOM foi aguardado até `transform === "none"` antes de ler o estado e capturar PNG. Os 16 screenshots atualizados não exibem o scale de hover; a interação de hover continua fora da cobertura.
+- Captura sem hover: depois de cada seleção, o ponteiro foi movido para `(0,0)` e o CSSOM aguardado até `transform === "none"`.
+- Captura hover: o ponteiro permaneceu sobre o swatch selecionado; a captura aguardou `:hover` e a transformação final `matrix(1.06, 0, 0, 1.06, 0, 0)`, mais 200 ms de estabilização. O estado ativo e `aria-pressed` foram rechecados para cada captura.
 
 ## CSSOM e observação visual
 
@@ -21,7 +22,7 @@
 
 Na captura mobile, o swatch Carvão ficou mais nítido sobre a superfície clara e Base clara ganhou contorno identificável no tema escuro. A dupla borda branca/escura também preserva o contraste interno do Carvão no tema escuro; o anel exterior escuro se mistura à superfície escura, sem remover o anel branco. O estado ativo foi confirmado pelo DOM em todos os casos, e não inferido apenas pelo CSS.
 
-### Capturas por viewport, tema e acabamento
+### Capturas sem hover por viewport, tema e acabamento
 
 | Viewport | Tema | Acabamento | Base | Candidata |
 |---:|---|---|---|---|
@@ -34,8 +35,24 @@ Na captura mobile, o swatch Carvão ficou mais nítido sobre a superfície clara
 | 1366×900 | dark | Base clara | [PNG](g2-selected-finish-ring-2026-11-12%2Fbaseline-dark-1366-base-light.png) | [PNG](g2-selected-finish-ring-2026-11-12%2Fcandidate-dark-1366-base-light.png) |
 | 1366×900 | dark | Carvão | [PNG](g2-selected-finish-ring-2026-11-12%2Fbaseline-dark-1366-shadow.png) | [PNG](g2-selected-finish-ring-2026-11-12%2Fcandidate-dark-1366-shadow.png) |
 
-O [recibo JSON compacto](g2-selected-finish-ring-2026-11-12/result.json) registra CSSOM, tema, estado acessível, SHA-256 de cada screenshot e erros HTTP por caso.
+### Capturas com hover no swatch selecionado
+
+Em 16/16 casos, base e candidata computaram o mesmo transform de hover e mantiveram o item selecionado. A diferença de ring continua no `box-shadow` registrado acima; a transformação amplia a caixa visível para cerca de 46,64×46,64 px nos swatches mobile (CSS layout base 44×44 px).
+
+| Viewport | Tema | Acabamento | Base em hover | Candidata em hover |
+|---:|---|---|---|---|
+| 390×900 | light | Base clara | [PNG](g2-selected-finish-ring-hover-2026-11-12%2Fbaseline-light-390-base-light.png) | [PNG](g2-selected-finish-ring-hover-2026-11-12%2Fcandidate-light-390-base-light.png) |
+| 390×900 | light | Carvão | [PNG](g2-selected-finish-ring-hover-2026-11-12%2Fbaseline-light-390-shadow.png) | [PNG](g2-selected-finish-ring-hover-2026-11-12%2Fcandidate-light-390-shadow.png) |
+| 390×900 | dark | Base clara | [PNG](g2-selected-finish-ring-hover-2026-11-12%2Fbaseline-dark-390-base-light.png) | [PNG](g2-selected-finish-ring-hover-2026-11-12%2Fcandidate-dark-390-base-light.png) |
+| 390×900 | dark | Carvão | [PNG](g2-selected-finish-ring-hover-2026-11-12%2Fbaseline-dark-390-shadow.png) | [PNG](g2-selected-finish-ring-hover-2026-11-12%2Fcandidate-dark-390-shadow.png) |
+| 1366×900 | light | Base clara | [PNG](g2-selected-finish-ring-hover-2026-11-12%2Fbaseline-light-1366-base-light.png) | [PNG](g2-selected-finish-ring-hover-2026-11-12%2Fcandidate-light-1366-base-light.png) |
+| 1366×900 | light | Carvão | [PNG](g2-selected-finish-ring-hover-2026-11-12%2Fbaseline-light-1366-shadow.png) | [PNG](g2-selected-finish-ring-hover-2026-11-12%2Fcandidate-light-1366-shadow.png) |
+| 1366×900 | dark | Base clara | [PNG](g2-selected-finish-ring-hover-2026-11-12%2Fbaseline-dark-1366-base-light.png) | [PNG](g2-selected-finish-ring-hover-2026-11-12%2Fcandidate-dark-1366-base-light.png) |
+| 1366×900 | dark | Carvão | [PNG](g2-selected-finish-ring-hover-2026-11-12%2Fbaseline-dark-1366-shadow.png) | [PNG](g2-selected-finish-ring-hover-2026-11-12%2Fcandidate-dark-1366-shadow.png) |
+
+
+O [recibo JSON](g2-selected-finish-ring-2026-11-12/result.json) contém os 32 estados, CSSOM, tema, interação, seleção acessível, SHA-256 de cada PNG e erros HTTP por caso.
 
 ## Limites e próximo passo
 
-Houve um HTTP 404 da bundle privada `/core/private-navigation.bundle.js` em cada contexto, ausente no checkout local; não houve erro de página e o estado Buyer V5 foi validado. As capturas não cobrem foco/teclado, a interação de hover, zoom, Safari/iPad, configuração hospedada nem o restante de #208/#216. A rota hospedada `/config/` continua sem configuração publicada válida, então a revisão hospedada do anel ainda não foi possível. O subgate de labels do Admin de #271 passou na revisão autenticada do Preview, conforme [recibo CSSOM do Admin](g2-admin-initial-state-labels-cssom-2026-11-12.md). G2 permanece em andamento; nenhuma mudança de código foi integrada à Product `main`.
+Houve um HTTP 404 da bundle privada `/core/private-navigation.bundle.js` em cada contexto, ausente no checkout local; não houve erro de página e o estado Buyer V5 foi validado. As capturas hover cobrem somente o swatch selecionado; não cobrem outras combinações de hover/foco, teclado, zoom ou Safari/iPad. Também não cobrem configuração hospedada nem o restante de #208/#216. A rota hospedada `/config/` continua sem configuração publicada válida, então a revisão hospedada do anel ainda não foi possível. O subgate de labels do Admin de #271 passou na revisão autenticada do Preview, conforme [recibo CSSOM do Admin](g2-admin-initial-state-labels-cssom-2026-11-12.md). G2 permanece em andamento; nenhuma mudança de código foi integrada à Product `main`.

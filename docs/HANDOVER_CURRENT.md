@@ -415,7 +415,7 @@ Esta seção prevalece sobre o snapshot anterior e preserva as entradas anterior
 
 ## Atualização de 12/11 — G2 Admin e refs live
 
-O recálculo local do Admin confirmou uma única lacuna de contraste clara para `.initial-state-option`: 4,229:1 no Product `main@221b54b`, com o dark em 8,384:1. O ajuste scoped em #271 mediu 9,092:1 usando o token já existente; consulte o [recibo completo](../evidence/architecture/g2-admin-initial-state-labels-cssom-2026-11-12.md). #271 está aberta no head `d699fb1911046dfbbc475fad9415f3ff3fca1cc8`; os 9 workflows da PR e o status Netlify Deploy Preview passaram. A revisão visual/CSSOM hospedada do Admin ainda depende de autenticação, e `/config/` segue sem configuração publicada válida. Nada foi integrado à `main`.
+O recálculo local do Admin confirmou uma única lacuna de contraste clara para `.initial-state-option`: 4,229:1 no Product `main@221b54b`, com o dark em 8,384:1. O ajuste scoped em #271 mediu 9,092:1 usando o token já existente; consulte o [recibo completo](../evidence/architecture/g2-admin-initial-state-labels-cssom-2026-11-12.md). #271 está aberta no head `d699fb1911046dfbbc475fad9415f3ff3fca1cc8`; os 9 workflows da PR e o status Netlify Deploy Preview passaram. **Na data desta entrada**, a revisão visual/CSSOM do Admin ainda dependia de autenticação; essa pendência foi superada pela revisão descrita na atualização posterior abaixo. `/config/` segue sem configuração publicada válida. Nada foi integrado à `main`.
 
 Inventário conferido pela API: Produto tem **7 refs** (soft cap 5 excedido por 2; revisar, sem exclusão automática); Design System tem **2 refs**, dentro da meta. A #272 não foi integrada e nenhuma ref foi excluída. A regra vigente continua: Product target 2 quando estável; DS soft target 2; ao chegar a 5, avaliar se um hard cap é útil.
 
@@ -431,7 +431,7 @@ No checkout detached limpo do Product `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`
 
 O CSSOM candidato computou borda `#292723` e anéis `0 0 0 2px #fff, 0 0 0 4px #292723`; a base usa borda branca e anel branco translúcido. As capturas mobile mostram contorno mais visível para Base clara no escuro e Carvão no claro. Relatório, recibo e capturas: [G2 selected ring](../evidence/architecture/g2-selected-finish-ring-2026-11-12.md). Um 404 esperado da bundle privada ausente ocorreu por contexto, sem exceção de página.
 
-O subgate de seleção local avançou; G2 permanece em andamento. A configuração publicada de `/config/` continua inválida, e a nova regra do Admin de #271 ainda aguarda revisão autenticada no Preview. #208/#216, 98 pares UNCERTAIN, DS-05A, teclado/foco, zoom e validação Safari/iPad permanecem fora desta evidência. Nenhuma mudança foi integrada à Product `main`.
+O subgate de seleção local avançou; G2 permanece em andamento. A configuração publicada de `/config/` continua inválida, e, **na data desta entrada**, a nova regra do Admin de #271 ainda aguardava revisão autenticada; veja a atualização posterior abaixo. #208/#216, 98 pares UNCERTAIN, DS-05A, teclado/foco, zoom e validação Safari/iPad permanecem fora desta evidência. Nenhuma mudança foi integrada à Product `main`.
 
 
 ## Atualização após revisão autenticada do Admin e correção das capturas G2 — 12/11/2026 BRT
@@ -441,3 +441,10 @@ O usuário autenticou no Preview exato da Product #271. A leitura do Admin em 63
 O primeiro lote do anel exibia transform de hover em 15/16 linhas. Ele foi substituído por 16 PNGs recapturados com o ponteiro em `(0,0)` e `transform:none` confirmado antes de cada captura; os hashes dos bytes conferem com o recibo compacto. A seleção real, `aria-pressed=true`, configuração Buyer V5 e tema são válidos em 16/16. O relatório [G2 selected ring](../evidence/architecture/g2-selected-finish-ring-2026-11-12.md) e o JSON delimitam esta evidência: A/B local sem hover, não cobre a interação hover/foco, e não substitui review hospedado. `/config/` segue sem configuração válida, mantendo o ring hospedado pendente e G2 em andamento. 
 
 Product `main` continua em `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`; DS `main` continua em `79db735d6f05177b0c406e383d35832f3d72fdef`. O ramo DS existente da #119 está em `1f832fc1b2cc8fd2f3ccbf892ab8f9cea43fea15` antes desta atualização; o Branch hygiene run #81 passou nesse SHA. Inventário live: 7 refs no Produto (acima do soft cap 5) e 2 no DS. Nenhuma branch foi criada ou apagada, nenhum PR foi integrado, e não houve alteração de runtime/deploy/DB.
+
+
+## Adendo G2 — estado hover do anel e coerência do handover (12/11/2026 BRT)
+
+A mesma matriz local foi rodada com o ponteiro sobre o swatch selecionado. Em 16/16 casos, `:hover` permaneceu ativo após estabilização de 200 ms, o transform computado foi `matrix(1.06, 0, 0, 1.06, 0, 0)`, a seleção real persistiu com `aria-pressed=true`, e o Buyer V5/tema permaneceram válidos. O box-shadow base continuou branco translúcido; o candidato conservou o par branco/`#292723`. Não houve exceção de página; o 404 por contexto da bundle privada ausente foi o único erro HTTP. O [relatório e recibo combinado](../evidence/architecture/g2-selected-finish-ring-2026-11-12.md) reúnem 16 capturas sem hover + 16 com hover. Isto não equivale a cobertura geral de hover/foco nem a revisão hospedada do anel; `/config/` continua inválido.
+
+O subgate do Admin segue aprovado com autenticação, sem interação nas checkboxes. Para eliminar a contradição entre as notas datadas de 12/11, as entradas anteriores que dizem que a revisão do Admin aguardava autenticação são agora explicitamente históricas e apontam para a atualização que registra a conclusão.
