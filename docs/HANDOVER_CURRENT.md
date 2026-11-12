@@ -455,18 +455,18 @@ O subgate do Admin segue aprovado com autenticação, sem interação nas checkb
 Com a mesma fixture Buyer V5 local, foram comparados baseline/candidata, light/dark e Base clara/Carvão em 390×900 CSS px: oito capturas. O ponteiro ficou fora dos swatches; Tab/Shift+Tab levou foco ao botão selecionado. Em 8/8, `:focus-visible` foi verdadeiro, `:hover` falso, `transform:none`, a seleção persistiu e `aria-pressed=true`. O outline computado foi `rgb(110,81,46) solid 2px` em light e `rgb(216,188,124) solid 2px` em dark; o `box-shadow` do anel permaneceu específico de base/candidata. A revisão visual das capturas mobile não mostrou clipping. Sem exceções de página; apenas o 404 esperado por contexto da bundle privada ausente. O [relatório e recibo combinados](../evidence/architecture/g2-selected-finish-ring-2026-11-12.md) agora reúnem 40 estados: 16 no-hover, 16 hover e 8 focus-visible. Este recorte não cobre a navegação completa por teclado, outros controles, zoom, Safari/iPad ou o ring hospedado; `/config/` segue inválido.
 
 
-## Adendo G3 — ownership de `.swatch` no Configurador (12/11/2026 BRT)
+## Snapshot G3 — ownership de `.swatch` no Configurador (12/11/2026 BRT, pré-captura local; superado pelo adendo final)
 
 A varredura do pin Product `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95` encontrou dois geradores dentro de `/config/`: `renderFinishControlsFromData()` cria os acabamentos globais em `#finishSwatches`, e `createLocalFinishControl()` cria acabamentos locais dentro de `moduleDetail`. Ambos usam `.swatch`, `.is-selected` e `aria-pressed`; os handlers e os domínios de seleção são separados. A rota carrega `styles.css` (`app/config/index.html:30`) antes de `ui-theme.css` (`:41`); a família inclui base/hover/selected/responsivo em `app/styles.css:349–367,692` e foco geral de botão em `:96–98`.
 
-Classificação: **variante intencional dentro do Configurador, sem consumidor `.swatch` em outra rota e sem candidato cross-route**. O pacote de 40 estados do anel cobre o consumidor global (`data-finish-id`) e confirma hover/foco/seleção nele; o consumidor local (`data-local-finish-id`) foi mapeado estaticamente, mas não recebeu captura runtime. A linha de G3 avança com a propriedade e a diferença de domínio documentadas; permanece parcial até revisar o swatch local. Não extrair CSS nem alterar produto.
+**Snapshot pré-captura, superado pelo adendo final desta página:** a matriz de 40 estados do anel cobria então somente o consumidor global (`data-finish-id`). O consumidor local (`data-local-finish-id`) estava mapeado estaticamente e ainda não tinha prova runtime naquele ponto. A captura posterior de 8 casos abaixo completa a linha `.swatch`; G3 como gate geral permanece parcial. Não extrair CSS nem alterar produto.
 
 
-## Adendo G3 — ownership de `.swatch` no Configurador (12/11/2026 BRT)
+## Snapshot G3 — ownership de `.swatch` no Configurador (12/11/2026 BRT, pré-captura local; superado pelo adendo final)
 
 A varredura do pin Product `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95` encontrou dois geradores dentro de `/config/`: `renderFinishControlsFromData()` cria os acabamentos globais em `#finishSwatches`, e `createLocalFinishControl()` cria acabamentos locais dentro de `moduleDetail`. Ambos usam `.swatch`, `.is-selected` e `aria-pressed`; os handlers e os domínios de seleção são separados. A rota carrega `styles.css` (`app/config/index.html:30`) antes de `ui-theme.css` (`:41`); a família inclui base/hover/selected/responsivo em `app/styles.css:349–367,692` e foco geral de botão em `:96–98`.
 
-Classificação: **variante intencional dentro do Configurador, sem consumidor `.swatch` em outra rota e sem candidato cross-route**. O pacote de 40 estados do anel cobre o consumidor global (`data-finish-id`) e confirma hover/foco/seleção nele; o consumidor local (`data-local-finish-id`) foi mapeado estaticamente, mas não recebeu captura runtime. A linha de G3 avança com a propriedade e a diferença de domínio documentadas; permanece parcial até revisar o swatch local. Não extrair CSS nem alterar produto.
+**Snapshot pré-captura, superado pelo adendo final desta página:** a matriz de 40 estados do anel cobria então somente o consumidor global (`data-finish-id`). O consumidor local (`data-local-finish-id`) estava mapeado estaticamente e ainda não tinha prova runtime naquele ponto. A captura posterior de 8 casos abaixo completa a linha `.swatch`; G3 como gate geral permanece parcial. Não extrair CSS nem alterar produto.
 
 
 ## Atualização G3 — runtime do acabamento local ao módulo (12/11/2026, BRT)
