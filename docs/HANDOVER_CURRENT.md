@@ -3,7 +3,7 @@
 **Snapshot histórico:** 26/10/2026, fuso `America/Sao_Paulo`.  
 **Destino:** recuperação histórica do trabalho daquele checkpoint.  
 **Prioridade registrada em 26/10:** estabilizar/reconciliar branches do Design System e não editar o produto até nova orientação. Essa restrição foi superada pela instrução explícita deste chat para continuar o plano de arquitetura nos dois repositórios.  
-**Retomada atual:** 11/11/2026 — consulte [checkpoint G0–G8](../evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md) e a última seção “Retomada desta conversa” ao final. O usuário pediu implementar o plano G0–G8, usar o método Git do produto, manter a documentação corrente e evitar crescimento de refs; meta de estabilidade: 2 refs em cada repositório; ao chegar a 5 refs, revisar o crescimento e considerar se um limite rígido é necessário. O número não autoriza exclusão por contagem. Há autorização para trabalho de arquitetura e preview hospedado moderado; não há autorização para deploy de produção ou operação de banco. O usuário também dispensou o runtime bootstrap neste chat. Revalidar HEADs e PRs na API antes de cada ação.
+**Retomada atual:** 11/11/2026 — consulte [checkpoint G0–G8](../evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md) e a última seção “Retomada desta conversa” ao final. O usuário pediu implementar o plano G0–G8, usar o método Git do produto, manter a documentação corrente e evitar crescimento descontrolado de refs. O Design System tem meta/soft cap de 2 refs; o produto tem soft cap de 5 durante trabalho ativo e meta de 2 quando estável (`main` + `development`). Ao chegar a 5, revisar se um hard cap é útil; 2 e 5 não são regras rígidas nem autorização para exclusão por contagem. Há autorização para trabalho de arquitetura e preview hospedado moderado; não há autorização para deploy de produção ou operação de banco. O usuário também dispensou o runtime bootstrap neste chat. Revalidar HEADs e PRs na API antes de cada ação.
 
 ## Verificação posterior à PR #82 — snapshot de retomada (26/10/2026, São Paulo)
 
@@ -401,3 +401,14 @@ A captura em produto main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95 percorreu /, 
 As requisições às bundles e APIs privadas não foram preenchidas: 28 respostas 404, incluindo /api/buyer-configuration. O shell estático e o controlador foram observados; menu/sessão autenticados, configuração publicada, foco/hover, tela tátil, Safari/iPad e revisão visual não foram validados. Duas imagens de marca nos cards de comparação mobile de /how-it-works/ ainda informavam complete=false, com naturalWidth=380; esse detalhe está registrado no recibo.
 
 Veja [relatório G3](../evidence/architecture/g3-theme-controller-slots-recapture-2026-11-11.md) e seu recibo JSON. G3 permanece parcial; os slots de marca/controle continuam contextuais. Nenhum código do produto foi alterado.
+
+
+## Retomada live — main estável e política de refs (2026-11-12, BRT)
+
+Esta seção prevalece sobre o snapshot anterior e preserva as entradas anteriores como histórico.
+
+- **Política:** Design System — meta/soft cap de 2 refs, sem hard rule; produto — soft cap de 5 durante trabalho ativo, com alvo de 2 refs (`main` + `development`) quando estável. Ao chegar a 5, reavaliar crescimento e considerar hard cap; a contagem não autoriza apagar refs.
+- **Main e hotfix:** produto `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`; #273 está Draft no head `016b33f9315620ee09b28c4e2c9ba5752b858471`, baseada exatamente nesse SHA, 8 commits à frente e 0 atrás, com 11 workflows aprovados e Preview pronto. O conteúdo da #273 permanece fora da `main`; a revisão visual final da PR ainda está pendente. #269, #271 e #272 também permanecem sem merge.
+- **Refs:** Produto tem 7 refs, acima do soft cap de 5. A #272 prepara a remoção exata da branch obsoleta #270 e a limpeza condicional da própria branch de higiene após integração, com queda prevista de 7 para 5; a PR não foi integrada e nenhuma ref foi removida. Design System tem 2 refs: `main` e a branch da #119; a #119 continua Draft no head `398ffe8477dec453be6e4d63f374f7dba7aacc65`.
+- **G0–G8:** G0 contínuo; G1 parcial; G2 em andamento; G3 parcial; G4/G6 HOLD; G5 parcial/HOLD; G7 pendente (#232/fixture autorizada); G8 não iniciado. Os gates de arquitetura continuam independentes da revisão do hotfix.
+- **Proteção:** GitHub informa que as regras de proteção das branches `main` estão desativadas nos dois repositórios. Nenhuma regra foi alterada neste trabalho; a estabilidade observada é processual.
