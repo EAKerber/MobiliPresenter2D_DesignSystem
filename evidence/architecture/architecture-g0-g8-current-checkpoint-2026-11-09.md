@@ -10,12 +10,11 @@
 
 Esta fotografia prevalece sobre contagens e heads de snapshots anteriores no arquivo. Os recibos datados abaixo continuam como histórico de evidência.
 
-- Design System: main@79db735d6f05177b0c406e383d35832f3d72fdef; duas refs (main e docs/architecture-status-20261109), no soft cap. A PR #119 segue aberta em draft.
-- Produto: main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95, development@1a69ff76a5f36e3245a288773bb409aa662e4e62; seis refs: main, development, #269, #270, #271 e #272. O soft cap 5 está excedido por uma ref temporária coberta pelo lote de higiene preparado na #272.
-- PRs produto: #269 aberta/draft em `2e202e4d7d36f29bfb62508bc15f40cdc18f130b`, 12/12 Actions success e Deploy Preview pronto; #271 aberta em `86c4945cb56c04df31954e2a02f66ca3e703dc67`, 8/8 Actions runs success e Deploy Preview pronto; #272 aberta/mergeável em `5ebe09b8b0fe8c868ed9f26da8b41bb5c4af1326`, 3/3 Actions runs success e Deploy Preview pronto, sem review humana registrada; #270 encerrada sem merge.
-- #208, #216 e #218 continuam abertas. NAV-005/#218 e UX-04 são gates distintos; UX-04 ainda não foi executado no SHA atual de development porque seu workflow não está em main.
-- Nenhuma branch principal foi alterada nesta retomada. Não houve merge, remoção de ref, deploy de produção nem alteração de banco.
-
+- Design System: `main@79db735d6f05177b0c406e383d35832f3d72fdef`; 2 refs remotas (`main` + `docs/architecture-status-20261109`), na meta de estabilidade atual. O ponto para revisar a necessidade de limite rígido é 5 refs; ainda não foi atingido neste repositório. PR #119 continua Draft no ramo documental existente; o head pai desta atualização era `00a5a9574dd1d34b8f501c4b157469f72a668a37`. Esse head tinha 0 status entries e 0 check runs; consultar novamente o head após este commit.
+- Produto: `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`, `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`; 7 refs (`main`, `development` e cinco branches de trabalho #269–#273). O ponto 5 para avaliar um hard cap está excedido por 2, então o crescimento requer revisão; 5 não é uma regra automática de exclusão. #273 está aberta em Draft, baseada exatamente em `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95` e cinco commits à frente; o diff segue isolado na PR e não vazou para `main`. #270 está fechada sem merge. A PR #272 prepara o lote exato #270 e a limpeza condicional da própria branch após integração; segue sem merge/apply/readback.
+- PRs produto: #269 Draft (`2e202e4d7d36f29bfb62508bc15f40cdc18f130b`; 14 success, 2 skipped, 2 neutral; Preview ready); #271 aberta (`86c4945cb56c04df31954e2a02f66ca3e703dc67`; 10 success, 1 skipped, 2 neutral; Preview ready); #272 aberta (`5ebe09b8b0fe8c868ed9f26da8b41bb5c4af1326`; 4 success, 3 skipped, 2 neutral; Preview ready, sem review humana observada); #273 Draft (`0d666c6db586ba5f4a2622d2684bbef122c208e7`; Preview ready; 12 success, 2 failure, 1 skipped, 2 neutral). Na #273, falharam `scoped-raster` (18 pixels fora dos limites de texto em Chromium 390 px) e o job `browser` no fluxo de navegação dinâmica 700/701 e 1050/1051; não marcar CI como verde.
+- #208, #216, #218 e #232 continuam abertas. NAV-005/#218 e UX-04 são gates distintos; UX-04 ainda não foi executado no SHA atual de development porque seu workflow não chegou a `main`.
+- Nenhuma branch de produto foi removida ou integrada nesta fotografia; `main`/`development` não avançaram. Sem merge, deploy de produção ou operação de banco.
 ## Estado operacional das fases
 
 | Fase | Estado nesta retomada | Próximo gate verificável |
@@ -136,7 +135,7 @@ Esta reconciliação não executou DOM/CSSOM para Admin, Access/manage, Viewer o
 
 ## Higiene de branches e limite de quantidade — estado live 2026-11-11
 
-Os limites leves são Design System ≤2 e produto ≤5. O Design System está em 2 refs (main + branch da #119). O produto continua em 6 refs: main, development, #269, #270, #271 e #272, excedendo o soft cap por uma ref. A #272 fixa somente a branch encerrada #270 no SHA `219d9e672bf390a7af4b5815d50f9ea15f723913`. Seu head atual é `5ebe09b8b0fe8c868ed9f26da8b41bb5c4af1326`; os 3 workflow runs de Actions e o Deploy Preview estão success. A concorrência do executor foi serializada; não houve exclusão. A #272 não tem review humana registrada. Apply e cleanup seguem pendentes de integração autorizada e readback; #269/#271 permanecem intocadas.
+A meta quando estável é 2 refs por repositório; 5 refs é o gatilho para revisar o crescimento e considerar se um limite rígido é necessário. Nenhum número autoriza exclusão por contagem. Design System está na meta com 2 refs: `main` e branch ativa da #119. Produto está em 7: `main`, `development` e branches #269–#273, com #270 fechada sem merge; a revisão do inventário está atrasada em relação ao gatilho 5. A #272 prepara somente a retirada da ref fechada #270@`219d9e672bf390a7af4b5815d50f9ea15f723913` e a limpeza condicional da própria branch após integração; segue sem merge/apply/readback. Isso reduziria 7→5, ainda com branches ativas. A PR #273 está Draft, baseada no SHA atual de `main`, e suas mudanças permanecem isoladas; suas duas falhas de CI continuam registradas no bloco live acima.
 
 ## Sequência de trabalho — próximo percurso G0–G8
 
@@ -208,7 +207,7 @@ Issue #216 lista #675F55 como par aprovado para os três textos claros; o previe
 
 ## Higiene do produto — lote exato #270 preparado (2026-11-11, BRT)
 
-O usuário autorizou preparar o lote para codex/ds04-208-css-contrast-20261111@219d9e672bf390a7af4b5815d50f9ea15f723913, head da PR #270 encerrada sem merge e sucedida por #271. A PR [#272](https://github.com/EAKerber/MobiliPresenter2D/pull/272) está aberta/mergeável em `5ebe09b8b0fe8c868ed9f26da8b41bb5c4af1326`; os 3 workflow runs de Actions e o Deploy Preview estão success. A alteração final serializou o workflow de higiene; a auditoria permanece read-only e sem exclusões. Nenhuma review humana foi registrada. São seis refs no produto (soft cap 5 excedido por uma). Não houve merge nem remoção; o apply do #270 só ocorre após integração autorizada da #272, e exige readback PASS. A branch temporária #272 também só é removida pelo cleanup condicional após evento de PR merged e revalidação exata. Não considerar o lote executado antes dos recibos/readback.
+No momento em que o lote foi preparado, antes da abertura da PR #273, havia 6 refs no produto. A PR #273 elevou o inventário live para 7; ver a fotografia atual no início deste checkpoint. O usuário autorizou preparar o lote exato para codex/ds04-208-css-contrast-20261111@219d9e672bf390a7af4b5815d50f9ea15f723913, head da PR #270 encerrada sem merge e sucedida por #271. A PR [#272](https://github.com/EAKerber/MobiliPresenter2D/pull/272) permanece aberta/mergeável em `5ebe09b8b0fe8c868ed9f26da8b41bb5c4af1326`; os 3 workflow runs Actions e o Deploy Preview passaram, sem review humana observada. Não houve merge nem remoção; o apply do #270 requer integração da #272 e readback PASS. A branch temporária #272 só será removida pelo cleanup condicional após evento de PR merged e revalidação exata. Não considerar o lote executado antes dos recibos/readback.
 
 
 
