@@ -418,3 +418,8 @@ Esta seção prevalece sobre o snapshot anterior e preserva as entradas anterior
 O recálculo local do Admin confirmou uma única lacuna de contraste clara para `.initial-state-option`: 4,229:1 no Product `main@221b54b`, com o dark em 8,384:1. O ajuste scoped em #271 mediu 9,092:1 usando o token já existente; consulte o [recibo completo](../evidence/architecture/g2-admin-initial-state-labels-cssom-2026-11-12.md). #271 está aberta no head `d699fb1911046dfbbc475fad9415f3ff3fca1cc8`, aguardando Actions e Deploy Preview; nada foi integrado à `main`.
 
 Inventário conferido pela API: Produto tem **7 refs** (soft cap 5 excedido por 2; revisar, sem exclusão automática); Design System tem **2 refs**, dentro da meta. A #272 não foi integrada e nenhuma ref foi excluída. A regra vigente continua: Product target 2 quando estável; DS soft target 2; ao chegar a 5, avaliar se um hard cap é útil.
+
+
+## Revalidação do Preview da Product #271 (2026-11-12, BRT)
+
+Para o head exato `d699fb1911046dfbbc475fad9415f3ff3fca1cc8`, a API confirmou nove workflows de PR com `success` e status do Netlify Deploy Preview com `success`. A publicação está pronta, mas não foi feita revisão visual/CSSOM hospedada da nova regra do Admin nesta revalidação; `/config/` ainda falha ao validar a configuração publicada. Product `main` permanece em `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. Nenhum merge, remoção de refs, deploy de produção ou operação de banco ocorreu.

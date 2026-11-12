@@ -30,7 +30,7 @@ The pinned source blobs were:
 | Product `main`, dark | `#C4BCB2` | `#232321` | **8.384:1** | 4.5:1 — pass |
 | PR #271 candidate, light | `#403A34` | `#EAE7E2` | **9.092:1** | 4.5:1 — pass |
 
-The candidate uses the existing `--control-text` token and scopes it to `html[data-theme="light"] .hierarchy-item .initial-state-option`. It preserves the card background and dark-mode style. Product PR #271 is open at `d699fb1911046dfbbc475fad9415f3ff3fca1cc8`; the new Actions checks and Deploy Preview rebuild were pending when this note was written. `main` remains at `221b54b`.
+The candidate uses the existing `--control-text` token and scopes it to `html[data-theme="light"] .hierarchy-item .initial-state-option`. It preserves the card background and dark-mode style. Product PR #271 remains open at `d699fb1911046dfbbc475fad9415f3ff3fca1cc8`. A follow-up API check on 2026-11-12 found all nine PR-triggered Actions workflow runs successful and the Netlify Deploy Preview check successful for that exact head. This confirms preview publication, not hosted visual/CSSOM review of the new Admin rule. The previously observed `/config/` configuration failure remains unresolved. Product `main` remains at `221b54b`.
 
 ## Limits
 
