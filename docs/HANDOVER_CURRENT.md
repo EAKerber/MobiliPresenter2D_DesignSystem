@@ -415,7 +415,7 @@ Esta seção prevalece sobre o snapshot anterior e preserva as entradas anterior
 
 ## Atualização de 12/11 — G2 Admin e refs live
 
-O recálculo local do Admin confirmou uma única lacuna de contraste clara para `.initial-state-option`: 4,229:1 no Product `main@221b54b`, com o dark em 8,384:1. O ajuste scoped em #271 mediu 9,092:1 usando o token já existente; consulte o [recibo completo](../evidence/architecture/g2-admin-initial-state-labels-cssom-2026-11-12.md). #271 está aberta no head `d699fb1911046dfbbc475fad9415f3ff3fca1cc8`, aguardando Actions e Deploy Preview; nada foi integrado à `main`.
+O recálculo local do Admin confirmou uma única lacuna de contraste clara para `.initial-state-option`: 4,229:1 no Product `main@221b54b`, com o dark em 8,384:1. O ajuste scoped em #271 mediu 9,092:1 usando o token já existente; consulte o [recibo completo](../evidence/architecture/g2-admin-initial-state-labels-cssom-2026-11-12.md). #271 está aberta no head `d699fb1911046dfbbc475fad9415f3ff3fca1cc8`; os 9 workflows da PR e o status Netlify Deploy Preview passaram. A revisão visual/CSSOM hospedada do Admin ainda depende de autenticação, e `/config/` segue sem configuração publicada válida. Nada foi integrado à `main`.
 
 Inventário conferido pela API: Produto tem **7 refs** (soft cap 5 excedido por 2; revisar, sem exclusão automática); Design System tem **2 refs**, dentro da meta. A #272 não foi integrada e nenhuma ref foi excluída. A regra vigente continua: Product target 2 quando estável; DS soft target 2; ao chegar a 5, avaliar se um hard cap é útil.
 
@@ -423,3 +423,12 @@ Inventário conferido pela API: Produto tem **7 refs** (soft cap 5 excedido por 
 ## Revalidação do Preview da Product #271 (2026-11-12, BRT)
 
 Para o head exato `d699fb1911046dfbbc475fad9415f3ff3fca1cc8`, a API confirmou nove workflows de PR com `success` e status do Netlify Deploy Preview com `success`. A publicação está pronta, mas não foi feita revisão visual/CSSOM hospedada da nova regra do Admin nesta revalidação; `/config/` ainda falha ao validar a configuração publicada. Product `main` permanece em `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. Nenhum merge, remoção de refs, deploy de produção ou operação de banco ocorreu.
+
+
+## Continuação G2 — anel de acabamento selecionado (2026-11-12, BRT)
+
+No checkout detached limpo do Product `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`, a comparação base/candidata usou os blobs CSS `d43e6fb5e66133d2389b5c39b165b76b13cfa868` e `eb346a41ad91f6dc53875cb954e9018fdc1dd713`. O fluxo real avançou para Acabamentos e selecionou Base clara e Carvão. Chrome 156.0.8078.82 / DPR 1, 390×900 e 1366×900, temas light/dark: 16 capturas no total. Os 16 casos tiveram configuração Buyer V5 validada, estado selecionado real, `aria-pressed=true` e tema solicitado/documento/API coincidentes.
+
+O CSSOM candidato computou borda `#292723` e anéis `0 0 0 2px #fff, 0 0 0 4px #292723`; a base usa borda branca e anel branco translúcido. As capturas mobile mostram contorno mais visível para Base clara no escuro e Carvão no claro. Relatório, recibo e capturas: [G2 selected ring](../evidence/architecture/g2-selected-finish-ring-2026-11-12.md). Um 404 esperado da bundle privada ausente ocorreu por contexto, sem exceção de página.
+
+O subgate de seleção local avançou; G2 permanece em andamento. A configuração publicada de `/config/` continua inválida, e a nova regra do Admin de #271 ainda aguarda revisão autenticada no Preview. #208/#216, 98 pares UNCERTAIN, DS-05A, teclado/foco, zoom e validação Safari/iPad permanecem fora desta evidência. Nenhuma mudança foi integrada à Product `main`.
