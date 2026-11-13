@@ -509,3 +509,16 @@ O objetivo corrente abrange ARC-01…ARC-16 e V0–V6; G0–G8 é outro plano de
 ### Refs e operações
 
 A consulta live de 12/11 mostra 2 refs no Design System (main e a branch da PR #119) e 7 no produto. A PR #272 prepara um lote exato para reduzir o produto de 7 para 5 após integração e readback; o lote ainda não foi aplicado. Nenhuma ref deve sair por contagem ou antiguidade. A documentação deste adendo é acrescentada à branch já existente da PR #119, sem criar ref; main, produto e dados publicados permanecem sem alteração nesta atualização.
+
+## Retomada ARC-13 — revisão de fontes e inventário por ocorrência — 12/11/2026, BRT
+
+Este adendo substitui a contagem anterior de 988 ocorrências como estado atual. O Product segue em `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`; a ferramenta e o relatório permanecem locais no branch `work/arc13-ui-inventory-20261112`, agora em `04945d6`. Não há PR de inventário nem ref remota do Product; `app/` continua inalterado.
+
+- O scanner passou de 388 para 396 sinks JavaScript ao incluir atribuições compostas a texto e propriedades textuais em `Object.assign`; são 600 ocorrências HTML + 396 sinks JS = 996 registros, 159 valores JS estáticos e 237 dinâmicos/mistos.
+- Agrupamento exato: 759 ocorrências com valor estático correspondem a 584 valores distintos; 65 grupos repetidos somam 175 ocorrências além da primeira. Há também 48 referências HTML. Esses valores incluem símbolos, marca e referências; continuam impróprios como estimativa de chaves ou esforço de tradução.
+- A revisão manual cobriu 546 registros públicos, 280 de Admin/Acesso e 230 do Configurador; os recortes compartilham módulos de runtime e não são aditivos. O relatório permanece `candidate-unreviewed`; zero erros de parser, owners ou rotas não demonstram cobertura lexical.
+- As fontes ainda ausentes incluem a tabela de explicações de Como funciona, labels da navegação compartilhada, mapas/opções/mensagens de erro do Admin e textos em módulos de dados de Landing/Viewer. O próximo trabalho é inventariá-las como fontes com provenance separada dos sinks, e só depois fechar a classificação e planejar o primeiro lote pt-BR.
+- O usuário apontou dois checks diferentes no Admin. O check por item (“Iniciar ativo”) e o controle de disponibilidade da etapa (“Ativa/Inativa”) têm responsabilidades distintas. Em `admin.css`, o primeiro não declara `accent-color` e herda o azul padrão do navegador; o segundo usa `var(--accent)`. Manter variantes semânticas faz sentido, mas a hierarquia visual ainda precisa de decisão baseada no contexto.
+
+O recibo local detalhado está em `docs/architecture/arc13-source-review-2026-11-12.md` na branch local indicada. Nenhuma alteração de runtime, catálogo de mensagens, preview, deploy, banco, merge ou ref remota foi feita nesta retomada. A higiene continua em 7 refs no Product (duas acima do soft cap de 5) e 2 no Design System; a PR #272 continua preparada, não integrada.
+
