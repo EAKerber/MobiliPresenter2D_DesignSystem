@@ -522,3 +522,15 @@ Este adendo substitui a contagem anterior de 988 ocorrências como estado atual.
 
 O recibo local detalhado está em `docs/architecture/arc13-source-review-2026-11-12.md` na branch local indicada. Nenhuma alteração de runtime, catálogo de mensagens, preview, deploy, banco, merge ou ref remota foi feita nesta retomada. A higiene continua em 7 refs no Product (duas acima do soft cap de 5) e 2 no Design System; a PR #272 continua preparada, não integrada.
 
+
+## Retomada ARC-13 — fontes de texto, testes e controles do Admin (12/11/2026 BRT)
+
+O Product continua ancorado em `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. O trabalho ARC-13 permanece isolado na branch local `work/arc13-ui-inventory-20261112`, agora em `fb92edb0b3c3a63b9a1be530d530c584` (commit `fb92edb`); não foi criado um ref remoto nem PR do Product.
+
+- A ferramenta local passou a schema 3 e preserva duas listas diferentes: **1.011 ocorrências candidatas de sink** (600 HTML + 411 JavaScript) e **143 literais de origem JavaScript** em `sourceEntries`. As fontes não são somadas aos sinks. Há 167 sinks JS estáticos e 244 dinâmicos/mistos; 22 exclusões; 66 arquivos com hash; zero erros de análise, owners não atribuídos ou rotas JS não atribuídas. Tudo segue `unreviewed`.
+- Entre as 143 fontes, 89 têm consumidor ativo documentado, 7 labels de vista são passados ao renderizador mas não usados, 2 campos da Landing não têm consumidor ativo e 45 mensagens de `Error` ainda precisam de rastreio antes de classificar como texto de usuário ou diagnóstico. A cobertura inclui tabelas de Como funciona/navegação/tema, textos da Landing e do Viewer e opções fixas do Admin. Dados editáveis do V5 e conteúdo comercial continuam fora de uma classificação automática.
+- O número anterior “988 candidatos” era 600 sinks HTML + 388 sinks JavaScript; não representa 988 testes nem 988 mensagens únicas. A cobertura adicionada aumentou o número de sítios reconhecidos sem alterar o código do produto. Os recortes manuais 546/280/230 pertencem ao snapshot de 996 sinks; compartilham módulos e precisam ser reconciliados antes de virar porcentagem de cobertura.
+- A validação padrão do Configurador encadeia 19 scripts Node e 2 validadores de assets. Nenhuma suíte foi executada nesta etapa e não houve auditoria de sobreposição entre asserções; quantidade e nomes de arquivos, sozinhos, não demonstram redundância.
+- Os dois checks mostrados no Admin têm funções diferentes: checkbox por item para estado inicial, e toggle de disponibilidade da etapa. O primeiro não declara `accent-color` em `initial-state-option`; o segundo usa `var(--accent)` em `.switch`. A diferença de cor é explicada pelo CSS, mas a intenção de hierarquia visual continua sem decisão. Nenhum checkbox foi alterado.
+
+A revisão detalhada está no checkout local do Product em `docs/architecture/arc13-source-review-2026-11-12.md`. A geração do relatório foi concluída e `git diff --check` passou; a suíte de testes não foi executada. `app/`, runtime, configuração publicada, refs remotas, merges e deploys permaneceram sem alteração. Ref count verificada nesta retomada: Product 7 (2 acima do soft cap 5), Design System 2.
