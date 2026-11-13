@@ -290,3 +290,16 @@ A API confirmou nove workflows de PR e o status `netlify/mobilipresenter2d/deplo
 O subgate visual/CSSOM hospedado dos labels do Admin na Product #271 passou: 18 labels `.initial-state-option` visíveis no Preview autenticado, todos habilitados e já marcados; sem interação ou salvamento. O candidato mediu 9,092:1 no tema claro; o resultado escuro permaneceu 8,384:1. O recibo registra seletores, cascata, dimensões, hashes das capturas e limitações. O valor de `/config/` continua inválido, portanto este resultado não revisa o ring hospedado nem fecha #208/G2.
 
 As 16 capturas no-hover do anel foram substituídas por PNGs com `transform:none`; uma segunda matriz adicionou 16 capturas hover, também sem perda da seleção; a terceira acrescentou 8 estados `:focus-visible` mobile por Tab/Shift+Tab. Nos 40 casos, seleção real, `aria-pressed=true`, Buyer V5 e tema corresponderam; não houve erro de página. Os hashes dos PNGs foram conferidos. A evidência cobre hover/foco somente no swatch selecionado; navegação completa por teclado, zoom e Safari/iPad continuam pendentes.
+
+
+## ARC-13 — estado atual do inventário de fontes (12/11/2026 BRT)
+
+Product main permanece em `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`; o scanner local está em `work/arc13-ui-inventory-20261112@ca897cb38960e6b10dd40c7574320810fd7c0516`, sem ref remota/PR.
+
+- Relatório: 1.012 sinks candidatos (600 HTML + 412 JS; 167 estáticos, 245 dinâmicos/mistos) e 310 fontes separadas (277 ativas, 7 sem uso após passagem ao renderer, 2 sem consumidor, 24 Error sem fluxo resolvido); 68 fontes ligadas a sinks, 70 relações; 22 exclusões; zero erros de parse/owner/rota.
+- Foram mapeados campos selecionados de defaults/configuração, catálogo, cena, PriceBook e quatro rótulos compactos CSS `attr()`. Todos seguem sem classificação final; conteúdo V5/comercial permanece separado de UI fixa.
+- Os dois checkboxes do Admin mantêm papéis diferentes; o primeiro herda accent do navegador, o toggle de disponibilidade usa `--accent`. Sem decisão de normalização e sem alteração do produto.
+- Inventário foi gerado e o diff-check não encontrou erro de whitespace; nenhuma suíte foi executada. `app/`, Product main, dados publicados, deploy e banco sem alteração.
+- Refs verificadas: Product 7 (inclui #272 preparada, não integrada), Design System 2. Sem exclusão neste checkpoint.
+- O UX-04 manual segue sem corrida Linux/Node 22 no SHA atual: o workflow está em development, não em main, e a UI não oferece Run workflow. A evidência local prévia no pin continua distinta de Actions/cross-platform; G1 permanece parcial.
+
