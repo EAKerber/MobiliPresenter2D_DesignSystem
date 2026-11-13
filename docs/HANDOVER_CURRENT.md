@@ -492,7 +492,7 @@ O objetivo corrente abrange ARC-01…ARC-16 e V0–V6; G0–G8 é outro plano de
 
 ### Entregas e gates ainda abertos
 
-- V0/ARC-13 ainda não tem inventário integral de strings localizáveis nem catálogo pt-BR consumido pelo runtime. O índice legado de 826 ocorrências em 26 fontes é uma lista de candidatas, não cobertura completa; a varredura precisa ser refeita sobre o Product main atual, cobrindo HTML, textos dinâmicos, atributos acessíveis, pluralização, parâmetros e exceções de dados V5.
+- V0/ARC-13 ainda não tem inventário integral nem catálogo pt-BR consumido pelo runtime. O índice legado de 826 ocorrências em 26 fontes continua como histórico de candidatas. Um scanner local sobre Product `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95` está pronto no branch local `work/arc13-ui-inventory-20261112` (HEAD `c7262cf`, commits locais; sem publicação/PR e com `app/` inalterado). Ele gera um candidato limitado e não classificado com 988 ocorrências (600 HTML, 388 sinks JS; 154 estáticas e 234 dinâmicas/mistas), 17 exclusões explícitas, zero erros de análise e zero lacunas de rota. Símbolos e pontuação dinâmica permanecem para revisão contextual. Isso ainda não prova cobertura integral nem rastreia todas as origens de dados; classificação, origem/owner e reconciliação das lacunas precedem qualquer catálogo de runtime.
 - V2/P-TOKEN: há pin e exportações versionadas, mas isso não prova ativação geral de tokens no CSS do produto. A origem e os consumidores precisam ser reconciliados com os pares visuais homologados; nenhuma paleta global deve ser ativada por inferência.
 - Os gates G0–G8 permanecem conforme o checkpoint de 12/11: G0 contínuo; G1 parcial; G2 em andamento; G3 parcial; G4/G6 HOLD; G5 parcial/HOLD; G7 pendente; G8 sem release. A conclusão de ARC-03C não fecha esses gates nem o plano geral.
 - G4/G5 de CSS compartilhado continuam condicionados à prova de ownership e equivalência por consumidor. A linha .swatch está coberta em G3, mas o inventário de ownership geral está parcial.
@@ -501,7 +501,7 @@ O objetivo corrente abrange ARC-01…ARC-16 e V0–V6; G0–G8 é outro plano de
 ### Próxima sequência de execução
 
 1. Reconciliar a documentação do Product com o main@221b54b, começando por ARC-03C já integrado e preservando a proveniência do snapshot de outubro.
-2. Completar V0/ARC-13 no Product main: scanner HTML/JavaScript, inventário classificável por origem/rota/consumidor/owner, validação de cobertura e exceções; depois iniciar substituições pt-BR em lotes reversíveis.
+2. Revisar o candidato local V0/ARC-13 já gerado: classificar as 988 ocorrências e 17 exclusões por origem/rota/consumidor/owner, completar a auditoria de sinks e lacunas e reconciliar o resultado com o contrato ARC-13. Só depois planejar substituições pt-BR em lotes reversíveis. Publicar a branch do produto após a higiene autorizada reduzir as refs; não criar catálogo ou alterar runtime antes da revisão.
 3. Prosseguir G1–G3 nos gates ainda reproduzíveis; manter hospedado/PENDING o que depender da configuração publicada inválida, e classificar sem adivinhação os 98 pares com backdrop-filter.
 4. Só então avançar extrações V2/G4/G5 aprovadas por família, mantendo domínio V5, autorização e publicação independentes; avaliar V5/G6 apenas por consumidores reais e benefício medido.
 5. Fechar V6/G7/G8 com validação representativa e readback antes de propor release.
