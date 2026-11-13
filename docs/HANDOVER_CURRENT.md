@@ -534,3 +534,22 @@ O Product continua ancorado em `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. 
 - Os dois checks mostrados no Admin têm funções diferentes: checkbox por item para estado inicial, e toggle de disponibilidade da etapa. O primeiro não declara `accent-color` em `initial-state-option`; o segundo usa `var(--accent)` em `.switch`. A diferença de cor é explicada pelo CSS, mas a intenção de hierarquia visual continua sem decisão. Nenhum checkbox foi alterado.
 
 A revisão detalhada está no checkout local do Product em `docs/architecture/arc13-source-review-2026-11-12.md`. A geração do relatório foi concluída e `git diff --check` passou; a suíte de testes não foi executada. `app/`, runtime, configuração publicada, refs remotas, merges e deploys permaneceram sem alteração. Ref count verificada nesta retomada: Product 7 (2 acima do soft cap 5), Design System 2.
+
+
+## Retomada ARC-13 — inventário ampliado de fontes (12/11/2026 BRT)
+
+Esta atualização substitui somente as contagens da entrada anterior; os snapshots datados continuam como histórico. O Product permanece em `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. O scanner e o relatório estão na branch local `work/arc13-ui-inventory-20261112@ca897cb38960e6b10dd40c7574320810fd7c0516`; não há ref remoto nem PR de Product para este lote.
+
+- O relatório separado por proveniência contém **1.012 sinks candidatos** (600 HTML + 412 JavaScript; 167 JS estáticos e 245 dinâmicos/mistos) e **310 fontes JavaScript** (277 ativas, 7 passadas ao renderer mas não usadas, 2 sem consumidor e 24 mensagens de Error sem fluxo resolvido). Há 68 fontes com referências delimitadas a sinks (70 relações); 22 exclusões e zero erros de parser, owners ausentes ou rotas JS sem atribuição.
+- A cobertura adicionou campos selecionados de defaults do Configurador, catálogo, cena e PriceBook, além dos quatro rótulos compactos que alimentam `data-compact-label` e CSS `attr()`. São pistas de domínio/consumidor, não classificação de tradução. Todos os registros continuam `unreviewed`; não há catálogo pt-BR no runtime.
+- A análise dos dois checkboxes do Admin mantém variantes semânticas separadas: estado inicial do item (accent padrão do navegador) e disponibilidade da etapa (token `--accent`). A intenção da diferença de ênfase segue sem decisão; nenhum controle foi alterado.
+- A geração local do inventário concluiu com zero erros de parse e `git diff --check` sem erro de whitespace. Nenhuma suíte de testes foi executada; `app/`, Product main, conteúdo publicado, banco, deploy e merge permaneceram inalterados.
+- A contagem live de refs continua em **7 no Product** e **2 no Design System**. Product mantém `main`, `development` e cinco branches de trabalho; #272 segue aberta e não integrada, com o lote exato de #270 e limpeza condicional preparados. Nenhuma ref foi removida. A PR #119 continua Draft na branch documental existente; esta atualização não cria ref.
+- G0 contínuo; G1 parcial; G2 em andamento; G3 parcial; G4/G6 HOLD; G5 parcial/HOLD; G7 pendente; G8 sem release. O workflow UX-04 tem arquivo em `development` e a execução local no SHA exato já foi registrada, mas o arquivo não existe em Product `main`; a página do Actions não expõe Run workflow. Não houve execução Linux/Node 22 neste SHA nem novo push para provocá-la.
+
+### Próxima sequência
+
+1. Revisar e classificar fontes por domínio e consumidor, reconciliando os recortes manuais antigos antes de calcular cobertura.
+2. Manter G1 marcado parcial até existir execução Linux/Node 22 no SHA apropriado e fechar os critérios de dispositivo/toque/zoom; não criar branch ou empurrar commit só para disparar Actions.
+3. Prosseguir o ownership G3 por família e estados. Não extrair CSS, globalizar tokens ou consolidar componentes antes das provas e decisões visuais aplicáveis.
+4. Tratar #272 como preparado, não executado; o hardening da limpeza exige integração autorizada e readback exato.
