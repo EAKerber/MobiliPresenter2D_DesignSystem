@@ -1,0 +1,5 @@
+--- a/app/ui-theme.css
++++ b/app/ui-theme.css
+@@ -212,1 +212,2 @@
+ html[data-theme="light"] .module-card__inspect:hover { background: rgb(34 33 31 / 7%); }
++html[data-theme="light"] .module-number { background: rgb(34 33 31 / 8%); color: var(--text); }

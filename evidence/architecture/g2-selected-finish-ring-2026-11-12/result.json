@@ -1,0 +1,2166 @@
+{
+  "schema": "g2-selected-finish-ring-receipt-v4",
+  "generatedAt": "2026-11-12T04:17:06.686Z",
+  "updatedAt": "2026-11-12T05:00:21.307Z",
+  "productCommit": "221b54b2a41ecc8c338d1bf2cf67280cf165ce95",
+  "source": "Clean detached checkout at product main 221b54b2a41ecc8c338d1bf2cf67280cf165ce95; local default Buyer V5 fixture; real Configurator app.js advances to the Finishes stage and clicks real base-light and shadow swatch buttons; browser requests served from local files through Playwright routing; no network service or external data.",
+  "baselineStylesGitBlob": "d43e6fb5e66133d2389b5c39b165b76b13cfa868",
+  "candidateStylesGitBlob": "eb346a41ad91f6dc53875cb954e9018fdc1dd713",
+  "candidateStylesSha256": "8dbe02cb5c03880ef86eff2e7d21b561bd377e184a7c8dc0fa6d8783683fb608",
+  "deviceScaleFactor": 1,
+  "arms": [
+    "baseline",
+    "candidate"
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "viewports": [
+    390,
+    1366
+  ],
+  "selectedFinishIds": [
+    "shadow",
+    "base-light"
+  ],
+  "interactionStates": [
+    "no-hover",
+    "hover",
+    "focus-visible"
+  ],
+  "recaptureByState": {
+    "no-hover": {
+      "pointerMovedTo": [
+        0,
+        0
+      ],
+      "awaitedCondition": "getComputedStyle(selected).transform === \"none\"",
+      "selectedHoverScaleAbsent": true
+    },
+    "hover": {
+      "pointerStayedOnSelectedSwatch": true,
+      "awaitedCondition": "selected.matches(':hover') && getComputedStyle(selected).transform === 'matrix(1.06, 0, 0, 1.06, 0, 0)'",
+      "transitionStabilizationMs": 200
+    },
+    "focus-visible": {
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "pointerMovedTo": [
+        0,
+        0
+      ],
+      "keyboardNavigation": "focus adjacent swatch, then Tab/Shift+Tab to selected swatch",
+      "awaitedCondition": "selected.matches(':focus-visible') && getComputedStyle(selected).transform === 'none'",
+      "selectedStateAndAriaVerified": true
+    }
+  },
+  "rowCount": 40,
+  "rows": [
+    {
+      "id": "baseline-light-390-shadow",
+      "arm": "baseline",
+      "theme": "light",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 711.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(34, 33, 31) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-2026-11-12/baseline-light-390-shadow.png",
+      "screenshotSha256": "53248e86970527ee5f95bdb47817a296b5739f2878a5a89d396c3a195f36fee6",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "no-hover"
+    },
+    {
+      "id": "baseline-light-390-base-light",
+      "arm": "baseline",
+      "theme": "light",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 655.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(34, 33, 31) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-2026-11-12/baseline-light-390-base-light.png",
+      "screenshotSha256": "3a8d31efbf3d2d302bcb7f7f5ff01e1c779347e394198559d2c5f654c27112ff",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "no-hover"
+    },
+    {
+      "id": "candidate-light-390-shadow",
+      "arm": "candidate",
+      "theme": "light",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 711.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(34, 33, 31) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-2026-11-12/candidate-light-390-shadow.png",
+      "screenshotSha256": "4fc4fe0f3273306bebe282c207600aff72f01d44829c31758ba27a7d82eb55ef",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "no-hover"
+    },
+    {
+      "id": "candidate-light-390-base-light",
+      "arm": "candidate",
+      "theme": "light",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 655.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(34, 33, 31) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-2026-11-12/candidate-light-390-base-light.png",
+      "screenshotSha256": "f4be027209c794baa74e94f103b50bdb78a243fad5b42355414541600375cd13",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "no-hover"
+    },
+    {
+      "id": "baseline-dark-390-shadow",
+      "arm": "baseline",
+      "theme": "dark",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 711.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(244, 241, 235) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-2026-11-12/baseline-dark-390-shadow.png",
+      "screenshotSha256": "1a077faf2f9d187e408e92ec88f2a7e2a4b5a5f1461146d4c4d937cce5ae6748",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "no-hover"
+    },
+    {
+      "id": "baseline-dark-390-base-light",
+      "arm": "baseline",
+      "theme": "dark",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 655.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(244, 241, 235) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-2026-11-12/baseline-dark-390-base-light.png",
+      "screenshotSha256": "9deed0ecd7d2d127045ac06a23de44e1c217ea86eb021d8b47a28da429c2ab8e",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "no-hover"
+    },
+    {
+      "id": "candidate-dark-390-shadow",
+      "arm": "candidate",
+      "theme": "dark",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 711.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(244, 241, 235) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-2026-11-12/candidate-dark-390-shadow.png",
+      "screenshotSha256": "41260ad93aa6e848c8b2b3345f143b75fa5e3bcadb916957a7c9d670544a4ab6",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "no-hover"
+    },
+    {
+      "id": "candidate-dark-390-base-light",
+      "arm": "candidate",
+      "theme": "dark",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 655.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(244, 241, 235) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-2026-11-12/candidate-dark-390-base-light.png",
+      "screenshotSha256": "171898fa7772affaa99b879e4ff03f137c553446e19f42a5a18a58f0fca67595",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "no-hover"
+    },
+    {
+      "id": "baseline-light-1366-shadow",
+      "arm": "baseline",
+      "theme": "light",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "side-rail",
+        "selectedRect": {
+          "x": 1242,
+          "y": 312.234375,
+          "width": 36,
+          "height": 36
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(34, 33, 31) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-2026-11-12/baseline-light-1366-shadow.png",
+      "screenshotSha256": "305f669f3026b9dc53b78bf7688a8b45bcb9c0b619de786685839ae229e08ad1",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "no-hover"
+    },
+    {
+      "id": "baseline-light-1366-base-light",
+      "arm": "baseline",
+      "theme": "light",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "side-rail",
+        "selectedRect": {
+          "x": 1022,
+          "y": 312.234375,
+          "width": 36,
+          "height": 36
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(34, 33, 31) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-2026-11-12/baseline-light-1366-base-light.png",
+      "screenshotSha256": "7f3a66b83fbfd26367e3803f5192064656abb9b5d076f8a1925d3233b25c29f5",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "no-hover"
+    },
+    {
+      "id": "candidate-light-1366-shadow",
+      "arm": "candidate",
+      "theme": "light",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "side-rail",
+        "selectedRect": {
+          "x": 1242,
+          "y": 308.234375,
+          "width": 36,
+          "height": 36
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(34, 33, 31) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-2026-11-12/candidate-light-1366-shadow.png",
+      "screenshotSha256": "3bc32c66000fa415f3d0770dc165ce46ff80c07d796bf6ffa0098c514b0ef6d6",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "no-hover"
+    },
+    {
+      "id": "candidate-light-1366-base-light",
+      "arm": "candidate",
+      "theme": "light",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "side-rail",
+        "selectedRect": {
+          "x": 1022,
+          "y": 308.234375,
+          "width": 36,
+          "height": 36
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(34, 33, 31) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-2026-11-12/candidate-light-1366-base-light.png",
+      "screenshotSha256": "479e4b2e5357b62e3ac35bb60c5198c490a346d64534b60d81e92a6c53c8a805",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "no-hover"
+    },
+    {
+      "id": "baseline-dark-1366-shadow",
+      "arm": "baseline",
+      "theme": "dark",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "side-rail",
+        "selectedRect": {
+          "x": 1242,
+          "y": 308.234375,
+          "width": 36,
+          "height": 36
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(244, 241, 235) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-2026-11-12/baseline-dark-1366-shadow.png",
+      "screenshotSha256": "c7e994e6b040469eeb94b6c25d27d6d3ea1c8484e84167de8a25583f2101aa4d",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "no-hover"
+    },
+    {
+      "id": "baseline-dark-1366-base-light",
+      "arm": "baseline",
+      "theme": "dark",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "side-rail",
+        "selectedRect": {
+          "x": 1022,
+          "y": 308.234375,
+          "width": 36,
+          "height": 36
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(244, 241, 235) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-2026-11-12/baseline-dark-1366-base-light.png",
+      "screenshotSha256": "744cf49799b99335854534ddb3def24893c9d7ab94ef281572c19e5297f1d74c",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "no-hover"
+    },
+    {
+      "id": "candidate-dark-1366-shadow",
+      "arm": "candidate",
+      "theme": "dark",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "side-rail",
+        "selectedRect": {
+          "x": 1242,
+          "y": 308.234375,
+          "width": 36,
+          "height": 36
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(244, 241, 235) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-2026-11-12/candidate-dark-1366-shadow.png",
+      "screenshotSha256": "e16231da732e151f81b7ebcca9b43f402b90a2e4e4ef95f5bed43b96b4ab5266",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "no-hover"
+    },
+    {
+      "id": "candidate-dark-1366-base-light",
+      "arm": "candidate",
+      "theme": "dark",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "side-rail",
+        "selectedRect": {
+          "x": 1022,
+          "y": 308.234375,
+          "width": 36,
+          "height": 36
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(244, 241, 235) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-2026-11-12/candidate-dark-1366-base-light.png",
+      "screenshotSha256": "71ed9e6e81fc4093f051cc3225c55415ed0f6c3f789b16b0c2f2c843cab6b9dd",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "no-hover"
+    },
+    {
+      "id": "baseline-light-390-shadow",
+      "arm": "baseline",
+      "theme": "light",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 42.68000030517578,
+          "y": 709.8987426757812,
+          "width": 46.63999938964844,
+          "height": 46.6400146484375
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "matrix(1.06, 0, 0, 1.06, 0, 0)",
+          "outline": "rgb(34, 33, 31) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-hover-2026-11-12/baseline-light-390-shadow.png",
+      "screenshotSha256": "ff890eeea38c6efdc718353df8b855ac105591eba931feb9b757c57e6f330e7c",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "hover"
+    },
+    {
+      "id": "baseline-light-390-base-light",
+      "arm": "baseline",
+      "theme": "light",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 42.68000030517578,
+          "y": 653.8987426757812,
+          "width": 46.63999938964844,
+          "height": 46.6400146484375
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "matrix(1.06, 0, 0, 1.06, 0, 0)",
+          "outline": "rgb(34, 33, 31) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-hover-2026-11-12/baseline-light-390-base-light.png",
+      "screenshotSha256": "92320fe9a92faa2b53b77959d725c1cf419c7b90b101e9dd36732e1c98fc185e",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "hover"
+    },
+    {
+      "id": "candidate-light-390-shadow",
+      "arm": "candidate",
+      "theme": "light",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 42.68000030517578,
+          "y": 709.8987426757812,
+          "width": 46.63999938964844,
+          "height": 46.6400146484375
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "matrix(1.06, 0, 0, 1.06, 0, 0)",
+          "outline": "rgb(34, 33, 31) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-hover-2026-11-12/candidate-light-390-shadow.png",
+      "screenshotSha256": "a16416bb5635e8de07692eccda106d0749e7c5a4eda826741cd9478ab3a16731",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "hover"
+    },
+    {
+      "id": "candidate-light-390-base-light",
+      "arm": "candidate",
+      "theme": "light",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 42.68000030517578,
+          "y": 653.8987426757812,
+          "width": 46.63999938964844,
+          "height": 46.6400146484375
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "matrix(1.06, 0, 0, 1.06, 0, 0)",
+          "outline": "rgb(34, 33, 31) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-hover-2026-11-12/candidate-light-390-base-light.png",
+      "screenshotSha256": "72b334dc870712b3e5ab167044657b394c445c0aea5037140fe8e4f0b1256fc1",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "hover"
+    },
+    {
+      "id": "baseline-dark-390-shadow",
+      "arm": "baseline",
+      "theme": "dark",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 42.68000030517578,
+          "y": 709.8987426757812,
+          "width": 46.63999938964844,
+          "height": 46.6400146484375
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "matrix(1.06, 0, 0, 1.06, 0, 0)",
+          "outline": "rgb(244, 241, 235) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-hover-2026-11-12/baseline-dark-390-shadow.png",
+      "screenshotSha256": "966bafb2d7ce8fc9f64a8e315337f7212543afe618bce6de1389beec63ca0793",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "hover"
+    },
+    {
+      "id": "baseline-dark-390-base-light",
+      "arm": "baseline",
+      "theme": "dark",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 42.68000030517578,
+          "y": 653.8987426757812,
+          "width": 46.63999938964844,
+          "height": 46.6400146484375
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "matrix(1.06, 0, 0, 1.06, 0, 0)",
+          "outline": "rgb(244, 241, 235) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-hover-2026-11-12/baseline-dark-390-base-light.png",
+      "screenshotSha256": "772c28182ff32584095c5cf6106bc235c95baaa21f19422be8610d1dc51a5977",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "hover"
+    },
+    {
+      "id": "candidate-dark-390-shadow",
+      "arm": "candidate",
+      "theme": "dark",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 42.68000030517578,
+          "y": 709.8987426757812,
+          "width": 46.63999938964844,
+          "height": 46.6400146484375
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "matrix(1.06, 0, 0, 1.06, 0, 0)",
+          "outline": "rgb(244, 241, 235) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-hover-2026-11-12/candidate-dark-390-shadow.png",
+      "screenshotSha256": "608546d43c045185ff2e394c76a4a73b75b70d11bc0596be38767cb6807c14b5",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "hover"
+    },
+    {
+      "id": "candidate-dark-390-base-light",
+      "arm": "candidate",
+      "theme": "dark",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 42.68000030517578,
+          "y": 653.8987426757812,
+          "width": 46.63999938964844,
+          "height": 46.6400146484375
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "matrix(1.06, 0, 0, 1.06, 0, 0)",
+          "outline": "rgb(244, 241, 235) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-hover-2026-11-12/candidate-dark-390-base-light.png",
+      "screenshotSha256": "e55e54b891cf5d3fdc561364c1cf995f16e10bc451773625ce460f0e0483940e",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "hover"
+    },
+    {
+      "id": "baseline-light-1366-shadow",
+      "arm": "baseline",
+      "theme": "light",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "side-rail",
+        "selectedRect": {
+          "x": 1240.9200439453125,
+          "y": 311.1543884277344,
+          "width": 38.159912109375,
+          "height": 38.15997314453125
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "matrix(1.06, 0, 0, 1.06, 0, 0)",
+          "outline": "rgb(34, 33, 31) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-hover-2026-11-12/baseline-light-1366-shadow.png",
+      "screenshotSha256": "ec42275b8ce85acfb824613f170ca1e173b357a9021cf63615b60ffdd3865f1b",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "hover"
+    },
+    {
+      "id": "baseline-light-1366-base-light",
+      "arm": "baseline",
+      "theme": "light",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "side-rail",
+        "selectedRect": {
+          "x": 1020.9199829101562,
+          "y": 311.1543884277344,
+          "width": 38.15997314453125,
+          "height": 38.15997314453125
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "matrix(1.06, 0, 0, 1.06, 0, 0)",
+          "outline": "rgb(34, 33, 31) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-hover-2026-11-12/baseline-light-1366-base-light.png",
+      "screenshotSha256": "a56aaa8b52c2db09104a2ad80e4260d9333f0b585b773d0e346e3eaedb7bd47d",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "hover"
+    },
+    {
+      "id": "candidate-light-1366-shadow",
+      "arm": "candidate",
+      "theme": "light",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "side-rail",
+        "selectedRect": {
+          "x": 1240.9200439453125,
+          "y": 311.1543884277344,
+          "width": 38.159912109375,
+          "height": 38.15997314453125
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "matrix(1.06, 0, 0, 1.06, 0, 0)",
+          "outline": "rgb(34, 33, 31) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-hover-2026-11-12/candidate-light-1366-shadow.png",
+      "screenshotSha256": "a5ee1da48e037a3f1c1a6afb2fa4d5fad0daa2de20601a070bbbd4b5f77236da",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "hover"
+    },
+    {
+      "id": "candidate-light-1366-base-light",
+      "arm": "candidate",
+      "theme": "light",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "side-rail",
+        "selectedRect": {
+          "x": 1020.9199829101562,
+          "y": 311.1543884277344,
+          "width": 38.15997314453125,
+          "height": 38.15997314453125
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "matrix(1.06, 0, 0, 1.06, 0, 0)",
+          "outline": "rgb(34, 33, 31) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-hover-2026-11-12/candidate-light-1366-base-light.png",
+      "screenshotSha256": "44c812cf116d4fcbe77cb4b34bc29620424de29df3214db23c5f62c2faad4285",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "hover"
+    },
+    {
+      "id": "baseline-dark-1366-shadow",
+      "arm": "baseline",
+      "theme": "dark",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "side-rail",
+        "selectedRect": {
+          "x": 1240.9200439453125,
+          "y": 311.1543884277344,
+          "width": 38.159912109375,
+          "height": 38.15997314453125
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "matrix(1.06, 0, 0, 1.06, 0, 0)",
+          "outline": "rgb(244, 241, 235) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-hover-2026-11-12/baseline-dark-1366-shadow.png",
+      "screenshotSha256": "8a211a288b53f182f7a68f59200273252729ed331ebc93ef74b62fabb6087885",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "hover"
+    },
+    {
+      "id": "baseline-dark-1366-base-light",
+      "arm": "baseline",
+      "theme": "dark",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "side-rail",
+        "selectedRect": {
+          "x": 1020.9199829101562,
+          "y": 311.1543884277344,
+          "width": 38.15997314453125,
+          "height": 38.15997314453125
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "matrix(1.06, 0, 0, 1.06, 0, 0)",
+          "outline": "rgb(244, 241, 235) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-hover-2026-11-12/baseline-dark-1366-base-light.png",
+      "screenshotSha256": "04d84bf6df13e38e67645d6ca732271737ef056decc2375192dce213b02cd7b7",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "hover"
+    },
+    {
+      "id": "candidate-dark-1366-shadow",
+      "arm": "candidate",
+      "theme": "dark",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "side-rail",
+        "selectedRect": {
+          "x": 1240.9200439453125,
+          "y": 307.1543884277344,
+          "width": 38.159912109375,
+          "height": 38.15997314453125
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "matrix(1.06, 0, 0, 1.06, 0, 0)",
+          "outline": "rgb(244, 241, 235) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-hover-2026-11-12/candidate-dark-1366-shadow.png",
+      "screenshotSha256": "02df2d3fa6d16a2dab16d312c639fca5fe6725dd4fc3384cd3af96e7a2d6d5dd",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "hover"
+    },
+    {
+      "id": "candidate-dark-1366-base-light",
+      "arm": "candidate",
+      "theme": "dark",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "side-rail",
+        "selectedRect": {
+          "x": 1020.9199829101562,
+          "y": 307.1543884277344,
+          "width": 38.15997314453125,
+          "height": 38.15997314453125
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "matrix(1.06, 0, 0, 1.06, 0, 0)",
+          "outline": "rgb(244, 241, 235) none 3px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-hover-2026-11-12/candidate-dark-1366-base-light.png",
+      "screenshotSha256": "0a375d0a55fe979a9b73a3105afe184d015b1678f46476c0b70c36770ae5db81",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "hover"
+    },
+    {
+      "id": "baseline-light-390-shadow",
+      "arm": "baseline",
+      "theme": "light",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "focusVisible": true,
+        "hovered": false,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 711.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(110, 81, 46) solid 2px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-focus-visible-2026-11-12/baseline-light-390-shadow.png",
+      "screenshotSha256": "447a9ea3de0bd95dbe140329d6058872778f89c488bf78fea13e3b63769bdbc7",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "focus-visible"
+    },
+    {
+      "id": "baseline-light-390-base-light",
+      "arm": "baseline",
+      "theme": "light",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "focusVisible": true,
+        "hovered": false,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 655.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(110, 81, 46) solid 2px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-focus-visible-2026-11-12/baseline-light-390-base-light.png",
+      "screenshotSha256": "bc3f2918901048bb43fe0a83153c3f4fe378a05f35b48540528b551897dd8cc6",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "focus-visible"
+    },
+    {
+      "id": "candidate-light-390-shadow",
+      "arm": "candidate",
+      "theme": "light",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "focusVisible": true,
+        "hovered": false,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 711.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(110, 81, 46) solid 2px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-focus-visible-2026-11-12/candidate-light-390-shadow.png",
+      "screenshotSha256": "976b5154f9e4f3d5745b24c1daf1cbd6d356dad28d4c663bfe1903cc27cf0d99",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "focus-visible"
+    },
+    {
+      "id": "candidate-light-390-base-light",
+      "arm": "candidate",
+      "theme": "light",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "focusVisible": true,
+        "hovered": false,
+        "ariaPressed": "true",
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "colorScheme": "light",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 655.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(110, 81, 46) solid 2px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-focus-visible-2026-11-12/candidate-light-390-base-light.png",
+      "screenshotSha256": "d9bd8903122bf493463fe27c9b6709f9971b9a9f555b07fee4aecb8e85f79c88",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "focus-visible"
+    },
+    {
+      "id": "baseline-dark-390-shadow",
+      "arm": "baseline",
+      "theme": "dark",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "focusVisible": true,
+        "hovered": false,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 711.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(216, 188, 124) solid 2px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-focus-visible-2026-11-12/baseline-dark-390-shadow.png",
+      "screenshotSha256": "1770052ad560651e338eef59d44caba0c5d78c3222a3e24c8be9a9f0a45321a8",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "focus-visible"
+    },
+    {
+      "id": "baseline-dark-390-base-light",
+      "arm": "baseline",
+      "theme": "dark",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "focusVisible": true,
+        "hovered": false,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 655.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(216, 188, 124) solid 2px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-focus-visible-2026-11-12/baseline-dark-390-base-light.png",
+      "screenshotSha256": "7bf9ff906d82cb02e49997cc1a806e47b17930a14d974aefe2fa9f771b8d8235",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "focus-visible"
+    },
+    {
+      "id": "candidate-dark-390-shadow",
+      "arm": "candidate",
+      "theme": "dark",
+      "finishId": "shadow",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "focusVisible": true,
+        "hovered": false,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 711.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(216, 188, 124) solid 2px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-focus-visible-2026-11-12/candidate-dark-390-shadow.png",
+      "screenshotSha256": "70796428b4aeee86967df77f6886ec7bbad80eec3ce35f13458ef52ef16ee099",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "focus-visible"
+    },
+    {
+      "id": "candidate-dark-390-base-light",
+      "arm": "candidate",
+      "theme": "dark",
+      "finishId": "base-light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "state": {
+        "selectedFinishId": "base-light",
+        "selectedClass": true,
+        "focusVisible": true,
+        "hovered": false,
+        "ariaPressed": "true",
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "colorScheme": "dark",
+        "configStatus": "validated",
+        "layoutProfile": "compact",
+        "selectedRect": {
+          "x": 44,
+          "y": 655.21875,
+          "width": 44,
+          "height": 44
+        },
+        "selectedStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "backgroundColor": "rgb(250, 249, 246)",
+          "backgroundImage": "url(\"http://g2-local.test/assets/materials/mdf-base.webp\")",
+          "backgroundBlendMode": "luminosity",
+          "backgroundSize": "160px 160px",
+          "transform": "none",
+          "outline": "rgb(216, 188, 124) solid 2px"
+        }
+      },
+      "screenshot": "g2-selected-finish-ring-focus-visible-2026-11-12/candidate-dark-390-base-light.png",
+      "screenshotSha256": "685759dc934c12867de9df2bbf6fd916d8f0c1d528af92e294cbb1dc4eb01cb7",
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g2-local.test/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ],
+      "interactionState": "focus-visible"
+    }
+  ],
+  "coverageScope": {
+    "testedConsumer": "Configurator global composition finishes: #finishSwatches .swatch[data-finish-id]",
+    "knownRelatedConsumer": "Configurator module-detail local finishes: moduleDetail .swatch[data-local-finish-id]",
+    "relatedConsumerRuntimeCoverage": "not sampled in this 40-state matrix; local selection changes only the selected module",
+    "crossRouteSwatchConsumerFound": false,
+    "classification": "one route-local style family with two consumer contexts; no cross-route extraction candidate"
+  }
+}

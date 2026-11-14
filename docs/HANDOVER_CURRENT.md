@@ -1,9 +1,27 @@
 # HANDOVER CANÔNICO — MobiliPresenter2D Design System
 
-**Checkpoint verificado:** 26/10/2026, fuso `America/Sao_Paulo`.  
-**Destino:** próximo chat/agente sem acesso ao contexto corrente.  
-**Prioridade atual:** estabilizar, reconciliar e reduzir as branches do **Design System primeiro**. Não retomar trabalhos no repositório do produto até nova orientação do usuário.  
-**Este é o ponto de retomada permanente**; o README aponta para cá. Ler o GitHub em tempo real antes de assumir que números ou SHAs continuam atuais.
+**Snapshot histórico:** 26/10/2026, fuso `America/Sao_Paulo`.  
+**Destino:** recuperação histórica do trabalho daquele checkpoint.  
+**Prioridade registrada em 26/10:** estabilizar/reconciliar branches do Design System e não editar o produto até nova orientação. Essa restrição foi superada pela instrução explícita deste chat para continuar o plano de arquitetura nos dois repositórios.  
+**Retomada atual (14/11/2026):** o escopo solicitado abrange a implementação integral do plano arquitetural ARC-01…ARC-16 e V0–V6, mantendo os gates G0–G8 e DS-05A como trilhas de validação relacionadas. Consulte o [checkpoint G0–G8](../evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md), a [recaptura CSSOM local do Admin](../evidence/architecture/g2-admin-initial-state-labels-cssom-2026-11-12.md), a [baseline CSSOM dos CTAs públicos](../evidence/architecture/g3-public-button-runtime-baseline-2026-11-14.md) e a reconciliação do plano geral ao final deste handover. A execução segue o método Git do produto, mantém os documentos correntes e observa os soft caps de refs. O Design System tem meta/soft cap de 2 refs; o produto tem soft cap de 5 durante trabalho ativo e meta de 2 quando estável (`main` + `development`). Ao chegar a 5, revisar se um hard cap é útil; 2 e 5 não são regras rígidas nem autorização para exclusão por contagem. Há autorização para trabalho de arquitetura e preview hospedado moderado; não há autorização para deploy de produção ou operação de banco. O usuário também dispensou o runtime bootstrap neste chat. Revalidar HEADs e PRs na API antes de cada ação.
+
+## Checkpoint de execução e estimativa de avanço — 13/11/2026
+
+Não havia uma métrica formal que permitisse dizer “X% concluído”. Para orientação, a leitura conjunta dos critérios de saída V0–V6 coloca o programa em **aproximadamente 30%, com faixa razoável de 25–35%**. É uma estimativa grosseira de entregáveis, não uma medição de horas nem uma previsão de data; as fases não têm pesos iguais e várias continuam abertas.
+
+| Fase | Estado observado | Evidência e trabalho ainda aberto |
+|---|---|---|
+| V0 — atualizar autoridades | Parcial | Heads e estado operacional reconciliados; a camada humana cobre 1.012/1.012 IDs de sink e 359/359 fontes JavaScript atualmente inventariadas. O campo técnico `displayAxes` foi incluído; cobertura lexical/runtime ampla, política de localização e decisões de owner continuam abertas. |
+| V1 — estabilizar e medir | Parcial | Há baselines e inspeções por rota/tema/estado; ainda faltam gates de runtime, dispositivos e achados G1/G2/G7. |
+| V2 — tokens/versionamento | Parcial | Exportação/versionamento e integrações seletivas existem; cobertura dos consumidores, equivalência visual e rollback por família não estão completos. |
+| V3 — componentes básicos | Parcial inicial | Há incrementos de componente e fragmentos estáticos integrados, mas os contratos não foram migrados e fechados em todas as rotas/superfícies. |
+| V4 — composição/localização | Inicial | O compilador build-time foi integrado e a extração foi ampliada; a revisão integral e o catálogo pt-BR consumido pelo runtime ainda não existem. |
+| V5 — ferramentas derivadas | Parcial / sem gate final | Os contratos existentes do Configurador/Viewer devem ser preservados; consolidação ampla e prova de projeções/componentes derivados continuam abertas. |
+| V6 — homologação/release | Não iniciado como encerramento do programa | Existem previews e gates isolados; o pacote integral de conformidade, exceções, rollback e release ainda não foi homologado. |
+
+Os “1.012” são ocorrências candidatas de texto, não testes nem textos únicos. A revisão manual classificou 55/55 fontes built-in `Error`/`TypeError`: 34 fluxos chegam a saídas fixas, um caso Admin liga condicionalmente a uma mensagem visível, e 20 casos permanecem sem ligação automática segura. O scanner registra 47 referências de fallback e 19 respostas JSON intermediárias; esse grupo não tem fluxos pendentes. A camada humana cobre 1.012/1.012 sinks e 359/359 fontes classificadas na lista atual; isso não equivale a cobertura lexical completa nem a um catálogo de runtime. O total inclui 285 fontes ativas, 143 de conteúdo de domínio e 94 fontes com 96 relações a sinks. Há 749 ocorrências candidatas e 699 nomes de chave apenas propostos; três grupos de reutilização precisam de ajuste semântico/editorial. `displayAxes` agora está inventariado como dado técnico de catálogo; regra de eixos, unidades e separadores seguem pendentes para novos locales. O Common Sense Judge separou sete famílias de controles do Admin: estado inicial de entidade, seleção de serviço, visibilidade inicial no Viewer, disponibilidade de etapa, disponibilidade para clientes, associação/propriedade e publicação de preços em rascunho. O texto “Iniciar ativo” pode identificar objeto ou serviço, então a captura sozinha não decide o subtipo. Pendências P1/P2 incluem nomes acessíveis, expectativa de publicação, feedback da última opção, hierarquia/accent visual e o foco de 3 px do controle de preços. Nenhuma alteração de UI foi feita.
+
+As fases concluídas podem acelerar lotes repetitivos quando uma decisão e uma ferramenta já estão estáveis, mas não tornam automaticamente mais rápido o trabalho restante. A cobertura ampla de localização, a classificação semântica e os gates por consumidor ainda têm bastante trabalho incerto. Portanto, a estimativa de calendário seria especulativa hoje; após medir alguns lotes de revisão/migração com escopo semelhante, será possível estimar throughput com utilidade melhor.
 
 ## Verificação posterior à PR #82 — snapshot de retomada (26/10/2026, São Paulo)
 
@@ -15,11 +33,11 @@
 
 Este bloco registra somente **documentação e leitura Git/Actions**. Não comprova conformidade funcional de login, contraste, produto ou publicação. O commit produzido por esta própria atualização virá depois do SHA de snapshot acima; obter o SHA efetivo na API ao retomar.
 
-## 0. Bootstrap indispensável
+## 0. Instruções de recuperação do snapshot de 26/10
 
 1. Consultar o SHA de `main`, inventário completo de branches, PRs abertas/fechadas relevantes e Actions no repositório [Design System](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem).
 2. Ler este arquivo, [guia operacional de higiene](BRANCH_HYGIENE_OPERATIONS.md), [D01–D04 homologadas](APPROVALS_D01_D04_2026-10-26.md), [ledger de extração D04](HANDOVER_SELECTIVE_EXTRACTION_2026-10-26.md), `decisions.json`, os manifests `dist/` e `FINDINGS_REGISTER.md`.
-3. O repositório do produto é [EAKerber/MobiliPresenter2D](https://github.com/EAKerber/MobiliPresenter2D); o [handover canônico do produto](https://github.com/EAKerber/MobiliPresenter2D/blob/main/docs/handoffs/HANDOVER-CURRENT-2026-10-26.md) descreve a área de produto. **Não editar, criar previews ou iniciar refatorações de produto** durante a etapa atual.
+3. Naquele snapshot, o repositório do produto era tratado apenas como referência e a edição estava fora do escopo. A autorização posterior de 09/11 permite trabalho de arquitetura no produto. A autorização posterior de 10/11 inclui um preview hospedado moderado; deploy de produção e banco continuam sem autorização.
 4. Usar o conector GitHub, sem depender de `gh`. Antes de qualquer escrita: revisar conteúdo exclusivo, HEAD exato, proteções, relações com PR, dependências de workflows, gate e rollback. Atualizar este handover a cada checkpoint material.
 
 ## 1. Objetivo e decisões de governança
@@ -259,3 +277,342 @@ As PRs [#114](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/11
 ## Design System: higiene de branches concluída (27/10/2026, pós-PR #118)
 
 **Estado confirmado:** repositório possui **somente a branch `main`**, **0 PRs abertas**, **8/8 tags históricas leves protegidas** em `ds-history/2026-10-27/*` (ruleset #25953910 Active/sem bypass). Os 8 HOLDs antigos foram retirados pelos lotes auditados P13–P16 (#114–#117), com [applies #40511965874](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40511965874), [#40512535633](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40512535633), [#40513316115](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40513316115) e [#40514015814](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40514015814) PASS. A branch operacional foi eliminada pela [PR #118](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/118), gate de segundo pai `e08ef913bf673702bacdf96a06e0b7e97e609c6e` do merge commit real `d22f87b803b07c1995f11d61b6c41e3fefe5cdb5`, [Actions #40515276768](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40515276768) **PASS/readback**, recibo artifact `12738896985`; [Actions observacional #40515276681](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40515276681) PASS. Scripts P16 e terminal são **consumidos, não reexecutar**; `terminalBranches` é ledger histórico, não lista de refs vivas. Nenhuma alteração/deploy no repo de produto. [Handover detalhado](HANDOVER_DAG_HYGIENE_2026-10-27.md) contém os gates e links. Este checkpoint foi escrito diretamente na `main` para não recriar branches; reler o HEAD ao retomar.
+
+
+## Retomada desta conversa — atualização 2026-11-10
+
+A fotografia detalhada das fases G0–G8 está em [checkpoint atual](../evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md). Os registros datados anteriores permanecem como histórico; este adendo é o estado operacional mais recente verificado.
+
+- **Design System:** `main@79db735d6f05177b0c406e383d35832f3d72fdef`; PR #119 segue draft na branch `docs/architecture-status-20261109`, head `f100a815606646460898f58da426730c68a2631d` no início desta atualização. Há 2 branches remotas e 1 PR; o limite brando DS≤2 é respeitado. Nenhuma branch foi excluída.
+- **Produto:** `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`, `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`; 3 branches e PR draft #269, head `6195e90c012a45a7abf1b8db6de220be03dc9fb4`. Limite brando produto≤5 respeitado. Issues #208/#216/#218/#232 permanecem abertas; #217/#224/#226 fechadas.
+- No head atual de #269, **13/15 checks passaram; dois foram skipped**. NAV-005 local-only passou 124 cenários. O job de layout responsivo, que falhou uma vez no WebKit ao voltar de 701 px para 1366 px, passou na única repetição isolada com 24/24; não se identificou causa raiz para a primeira falha. Public routing passou na parte estática, mas não executou browser remoto enquanto o PR está draft. Nenhum Deploy Preview da branch foi encontrado no Netlify; nenhum deploy manual foi realizado.
+- O usuário autorizou um preview em moderação. Ele permanece pendente por não haver preview automático do PR draft. O PR continua draft; não foi alterado para pronto para revisão, não houve merge nem publicação.
+- #216 continua aberta, mas o subgate da regra vencedora avançou: Chrome DevTools capturou os vencedores nos três seletores originais × light/dark em `main@221b54b`, e a razão CSSOM recalculada no viewport 766×608 coincidiu com o recibo anterior. O procedimento local `file://`, as folhas injetadas e limites estão em [evidence/architecture/vis002c-cascade-winner-trace-2026-11-10.md](../evidence/architecture/vis002c-cascade-winner-trace-2026-11-10.md). Não é preview nem prova do CDN; `.study-band .eyebrow`, os cinco consumidores adicionais, `/config/` e #208 permanecem fora/abertos. A tentativa do coletor Playwright ainda falha antes de navegar pelo perfil temporário do Edge (`-5`).
+- UX-04 continua sem Actions no SHA exato de `development`; o workflow de dispatch segue ausente da branch padrão `main`. Assim G1 permanece parcial, G2 em andamento, G3 parcial, G4/G6 em HOLD, G5 parcial/HOLD e G7/G8 pendentes. Nenhuma fase do plano geral pode ser considerada concluída por estes resultados.
+- Próximos passos: obter um único preview hospedado para revisar a candidata #269; terminar o crosswalk G2 para #208/#216, `/config/` e DS-05A; destravar o gate UX-04 no runner Linux/Node 22; continuar G3–G7 com ownership e evidência por domínio antes de qualquer migração compartilhada. Não promover para release sem revisão e validação integrada.
+
+## Retomada desta conversa — atualização de evidência 2026-11-10 (BRT)
+
+Esta atualização substitui os HEADs e limites da seção de retomada anterior; consulte o checkpoint G0–G8 acima para o estado por fase.
+
+- **Design System:** branch `docs/architecture-status-20261109`, PR #119 draft. O snapshot inicial desta atualização foi `fc5770fe7f917cc4375ca5cfe524fac996d78ab3`; após o commit documental, confirmar o head pelo readback da API. O inventário remoto observado permanece 2 branches/1 PR, dentro do soft cap DS≤2.
+- **Produto:** `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`, `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`; 3 branches e PR #269 draft, head `6195e90c012a45a7abf1b8db6de220be03dc9fb4`. Soft cap produto≤5 respeitado; não há branch remota a excluir apenas para cumprir o limite.
+- **G1:** a candidata #269 tem 13/15 checks em success, 2 skipped; NAV-005 local-only passou 124 cenários, e a repetição focada do job de layout passou 24/24. A validação hospedada segue pendente: a tentativa de transição temporária para ready não gerou Deploy Preview e foi revertida para draft. Nenhum deploy manual, merge ou publicação ocorreu.
+- **G2/G3:** o trace local foi ampliado aos dez seletores v0.3 (14 elementos) e à exceção `.study-band .eyebrow`, nas três rotas públicas, em light/dark. A inspeção por Chrome DevTools confirmou os winners e o DOM calculado. A fonte local `file://` e a carga direta das folhas limitam a inferência; não provaram HTTP/CDN, aceitação visual, comportamento global, nem ownership além desses contextos.
+- **Pendências de arquitetura:** #216 permanece aberta; #208, 98 pares UNCERTAIN de `/config/` e DS-05A permanecem separados e em aberto/HOLD. G3 não fecha ownership amplo; G4/G6 continuam HOLD, G5 parcial/HOLD, G7 pendente e G8 não iniciado como release.
+- **Próxima ação de maior retorno:** atualizar este trace/checkpoint/handover como um lote documental, mantendo uma só branch DS; depois continuar a evidência de G2 para #208, `/config/` e DS-05A. Gerar um preview hospedado para a candidata #269 assim que a via de Preview estiver acessível; agrupar correções relacionadas antes de outra rodada, sem tratar validação local como substituta.
+
+
+
+## Retomada desta conversa — atualização de evidência 2026-11-11 (BRT)
+
+Esta atualização substitui os estados operacionais anteriores de G1/G2 e confirma o acesso aos Previews pelo navegador do ChatGPT. A evidência não fecha critérios de release nem autoriza merge ou publicação.
+
+- **Design System:** PR #119 permanece draft em `docs/architecture-status-20261109`, head `bc6b4764612e5c4ea6317eaf035d371b89089b3e` antes desta atualização; 2 branches e 1 PR aberta, dentro do limite DS≤2.
+- **Produto:** `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`, `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`; 5 branches, dentro do limite produto≤5. #269 permanece draft no head `19bbf9d25e71c5fa94abc3ee12baff52747ec54c`; #271 está aberta e não draft no head `6030eec03e8dad0c91672744b59b9c63080ce835`. #270 foi encerrada sem merge como supersedida e sua branch permanece. Nenhuma branch foi removida.
+- **G1 / #269:** 12 verificações de Actions no SHA atual terminaram em success, incluindo NAV-005 local e o gate de fluxo responsivo. O Deploy Preview `6af3e1508734d4fdfd61a482` está ready em [deploy-preview-269](https://deploy-preview-269--mobilipresenter2d.netlify.app/how-it-works/). Pelo navegador do ChatGPT, a página pública foi revisada em desktop e a 390 px; o cabeçalho e o menu aberto mostraram os links e CTA sem sobreposição visível. Isso é uma inspeção visual pontual, não fecha os critérios de #218 para toque, zoom, foco, larguras/dispositivos ou Safari/iPad.
+- **G2 / #271:** 8 verificações de Actions no SHA atual terminaram em success. O Deploy Preview `6af3e14b24bd296921873555` está ready; a entrada `/config/` redirecionou para `/access/` e informou que não havia token válido. Não foi fornecido acesso válido e a barreira não foi contornada. Assim, o Configurador/Viewer internos e o fluxo autenticado ainda não tiveram revisão visual hospedada. #208 permanece aberta; o Preview não substitui a validação local nem fecha os demais critérios.
+- **UX-04:** o último run verde segue no SHA antigo `c7c2822d5b651ae0bcfcf0ac28c66cb61b645e98`; `development` continua em `1a69ff76a5f36e3245a288773bb409aa662e4e62`. O workflow tem `workflow_dispatch` em development, mas o arquivo não existe em `main`, por isso o Actions UI não oferece disparo para o SHA atual. G1 continua parcial até haver evidência Linux/Node 22 no SHA atual e conclusão de #218.
+- **G2 e fases seguintes:** #216 e #208 continuam abertas; 98 pares de `/config/` seguem UNCERTAIN e DS-05A continua incompleto/HOLD. G3 permanece parcial, G4/G6 em HOLD, G5 parcial/HOLD, G7 pendente e G8 não iniciado como release. Sem merge, deploy de produção ou operação de banco.
+
+Próximo passo: manter os dois PRs abertos para revisão apropriada; avançar o gate UX-04 no SHA atual e a evidência acessível de #208/#216 sem remover a barreira do Configurador. Agrupar correções relacionadas antes de outro ciclo de Preview.
+
+
+## Retomada desta conversa — avanço G3 e sessão de Preview (2026-11-11, BRT)
+
+- **G3:** foi adicionada uma auditoria inicial no [inventário de riscos/ownership CSS](architecture/CSS-OWNERSHIP-RISKS-2026-10-20.md), pinada em `MobiliPresenter2D/main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. Ela classifica `.visually-hidden` como candidato de contrato igual com ganho ainda não demonstrado; `.eyebrow` e `.button` como variantes/homônimos contextuais; `.scene-hotspot` como indeterminado/alto risco; e `.site-header` como shell público com variante de página, ainda dependente de G1/#218. Não autoriza extração G4.
+- **G4:** permanece HOLD. O candidato `.visually-hidden` aparece em bundles diferentes e não co-carregados; mover a regra para `ui-theme.css` pode aumentar bytes em rotas sem consumidor. Falta medir bytes/cache, CSSOM, árvore acessível e impressão.
+- **Admin/preview:** o usuário informou login administrativo. No Preview #269, a rota `/admin` abriu o editor autenticado. A rota `/config/` abriu o shell, mas depois exibiu “Não foi possível validar a configuração publicada. O configurador está temporariamente indisponível.” Portanto não houve revisão visual válida de módulos/estados nesse Preview. No host #271, `/admin` ainda mostrou formulário de login e `/config/` redirecionou para `/access/` sem token válido; a sessão do host #269 não deu acesso ao #271. Nenhuma credencial foi copiada e nenhum dado/configuração foi alterado.
+- **Estado:** PR #269 continua draft; PR #271 continua aberta sem draft; PR #119 continua draft. As branches permanecem no limite 5/5 produto e 2/2 Design System. G0 segue contínuo, G1/G2 parciais/em andamento e G3 parcial; G4–G8 sem mudança de status.
+- **Próximo avanço independente:** continuar a matriz G3 no PR #119 e a reconciliação local DS-05A; para revisar o head G2 #271 visualmente, a sessão deve estar autenticada nesse mesmo host e o configurador precisa ter uma configuração publicada validável. Não criar branches extras nem considerar erros de carregamento como validação de contraste.
+
+
+## Retomada desta conversa — revisão G2 autenticada do Preview #271 (2026-11-11, BRT)
+
+O usuário informou login administrativo e orientou entrar pelo Admin. Com essa sessão no host exato do Preview #271 (`deploy-preview-271--mobilipresenter2d.netlify.app`), foi possível abrir o Viewer e a página de gerenciamento:
+
+- **Viewer / pontos mobile:** revisão visual no viewport 390×844 CSS px em tema escuro e claro. Os quatro pontos estavam presentes; o ativo permaneceu acentuado e os três inativos ficaram visualmente distintos. CSSOM: dark inativo `rgb(196, 188, 178)`, light inativo `rgb(112, 108, 102)`; os pontos são 7×7 px. Isto valida somente a apresentação dos pontos nestes dois temas/um viewport, não a navegação completa nem contraste não textual em todos os fundos.
+- **Access/manage CTA:** a página autenticada renderizou “Enviar link de acesso”. No tema escuro, CSSOM computou foreground `rgb(41, 39, 35)` sobre `rgb(226, 201, 145)`, razão `9.23:1`. Revisão visual confirmada. O painel de acessos recentes reportou falha de configuração do serviço. Não foi preenchido destinatário nem enviado convite.
+- **Configurador:** o acesso Admin no host #271 permitiu abrir `/config/`, mas o shell depois reportou “Não foi possível validar a configuração publicada. O configurador está temporariamente indisponível.” O estado inicial anterior ao erro não foi usado como evidência. Títulos de seção e anel de acabamento selecionado seguem **sem revisão visual hospedada**. Nenhuma configuração foi publicada ou salva.
+- **Efeito em G2:** dois dos quatro pontos visuais alterados em #271 têm evidência hospedada pontual (pontos do Viewer e CTA de acesso); Configurador (títulos/anel) permanece pendente. #208 segue aberta. A lista de acessos falha no Preview e não foi tratada como regressão da mudança CSS sem diagnóstico do serviço.
+- **Sessão/preview:** login foi concluído no host do #271 por ação do usuário; não houve cópia de credenciais ou token. O viewport temporário será restaurado após a revisão.
+
+
+## Continuação — matriz G3 de navegação (2026-11-11, BRT)
+
+A PR #119 foi ampliada no mesmo branch, sem abrir branch adicional. No pin `MobiliPresenter2D/main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`, a matriz agora documenta separadamente: menu público estático das páginas Landing/How/About; menu privado gerado por `core/private-navigation.js` para Admin/Access e dependente de sessão/papel; folhas e ordem declaradas; estados `aria-expanded`, `aria-current`, `hidden`, foco, Escape, pointer fora, hover e loading/autorização. A conclusão atual é que não há contrato comum entre as famílias para extrair: o público mantém shell/controlador próprios; Admin e Access compartilham o contrato privado, mas com conteúdo condicionado por sessão. **G3 segue parcial** porque faltam runtime/CSSOM/screenshot por estado e os focos restantes (marca/ícone/slots, estados adicionais).
+
+O checkpoint também foi corrigido: o login no Admin ocorreu no host #271; a hierarquia administrativa carregou, enquanto `/config/` autenticado falhou na validação da configuração publicada. A revisão limitada do Viewer e CTA de Access/manage permanece registrada. O viewport temporário foi restaurado e a aba do Admin ficou aberta para continuidade. Nenhum dado foi publicado, convite enviado ou alteração de CSS feita.
+
+**Branches:** Design System continua em 2/2 e produto em 5/5. Não removi a branch encerrada de #270: o procedimento do produto exige autorização por SHA e manifesto aprovado, e ela não bloqueia a execução no limite atual. A próxima proposta de limpeza deve apontar para a branch e SHA exatos, depois de revalidar proteção, conteúdo e relação com #271.
+
+
+## Continuação — G3 marca e tema (2026-11-11, BRT)
+
+Foi documentado no inventário de ownership que `core/ui-theme.js` centraliza a escolha auto/light/dark, a persistência, a troca de logo e a criação do toggle, enquanto públicos, Viewer e páginas privadas fornecem slots/geometrias próprios. A conclusão distingue contrato comportamental compartilhado de layout contextual; não sugere globalizar o CSS nem aprova token novo. G3 segue parcial, e G4 continua condicionado à evidência de runtime/custos do consumidor.
+
+
+## Continuação — UX-04 dispatch e higiene exata (2026-11-11, BRT)
+
+A PR de navegação #269 recebeu o workflow `.github/workflows/development-ux04-geometry.yml`, copiado byte a byte do pin `development@1a69ff76a5f36e3245a288773bb409aa662e4e62` (blob `96703ca3ae3c195153f10742134dca7aa69b0faf`). A mudança desde o head visualmente revisado só adiciona esse workflow; a árvore de aplicação permanece idêntica. No head #269 `2533a66376a016bcb8442e401de8933cb5a1edb4`, 12/12 checks Actions concluíram com sucesso. A PR permanece draft e sem merge; o workflow ainda não está em `main`, logo não foi possível despachar UX-04 no SHA corrente de development. Após a integração pelo fluxo de revisão, reobservar `development` e despachar seu SHA exato.
+
+**Candidato de higiene produto #270:** PR fechada sem merge, branch `codex/ds04-208-css-contrast-20261111@219d9e672bf390a7af4b5815d50f9ea15f723913`, sem proteção. A branch `codex/ds04-208-preview-batch-20261111@6030eec03e8dad0c91672744b59b9c63080ce835` (PR #271 aberta) está dois commits adiante, sem diferenças de árvore; a mudança de #270 está retida na linha de commits de #271. O ref #270 pode ser candidato depois de aprovação exata, mas a política vigente exige `ops/branch-dispositions.json` e `ops/branch-hygiene-batch.json` integrados na main, revisão do plano com hash, aplicação via workflow e readback. Não apaguei diretamente. Produto segue com 5 refs (5/5); DS com 2 (2/2). Um PR de higiene dedicado exigiria branch temporária acima do soft cap, então aguarda-se decisão do usuário sobre autorizar a remoção deste SHA exato e permitir esse lote temporário.
+
+
+## Rechecagem do executor de higiene do produto — 2026-11-11
+
+A auditoria do código em `main` confirmou um bloqueio adicional para o candidato #270. `tools/branch_hygiene_plan.py` inclui evidência `explicit-terminal-disposition` e marca o ref como `delete-candidate` quando `terminalBranches` fixa SHA e `allowDelete=true`. Porém `select_bounded_batch()` aceita somente `ancestor-of-control` ou uma prova `squashMerge` ligada a PR mesclada; a evidência de disposição terminal não satisfaz o seletor. A PR #270 está closed/unmerged e sua branch não é ancestral de main, então o workflow atual rejeitaria o lote mesmo com SHA autorizado. A branch aberta #271 tem árvore idêntica, mas não serve como prova de squash da #270. **Não contornar** com exclusão direta; corrigir o seletor e adicionar cobertura negativa/positiva no processo canônico antes de qualquer aplicação. A autorização exata por `codex/ds04-208-css-contrast-20261111@219d9e672bf390a7af4b5815d50f9ea15f723913` e qualquer branch temporária acima do soft cap ainda precisam de concordância do usuário.
+
+
+## Atualização operacional — preview G2 e lote de higiene #270 (2026-11-11, BRT)
+
+Esta seção prevalece sobre os snapshots anteriores para os estados explicitamente atualizados abaixo. As fotografias históricas permanecem preservadas.
+
+- **Refs/PRs:** Produto main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95, development@1a69ff76a5f36e3245a288773bb409aa662e4e62, seis branches remotas: main, development, #269, #270, #271 e #272. O limite brando produto≤5 está excedido em uma branch temporária, conforme lote aprovado; não remover refs antes do gate. Design System segue com 2 branches e PR #119 draft.
+- **Higiene #270:** usuário autorizou preparar o lote exato. PR [#272](https://github.com/EAKerber/MobiliPresenter2D/pull/272) está aberta e pronta para revisão, head 5a49057b769096e04eda5b208f3d0944db1369fc. Ela corrige a seleção da disposição terminal e fixa somente codex/ds04-208-css-contrast-20261111@219d9e672bf390a7af4b5815d50f9ea15f723913 (PR #270 encerrada, sucedida pela #271). A auditoria do lote passou sem deletar refs; checks de branch hygiene e preview terminaram em sucesso. O merge da #272 acionará o apply e a limpeza condicional da branch head da PR; nada foi integrado e #270 continua presente. Readback pós-apply ainda é obrigatório; resultado esperado: 5 branches, sujeito a novas verificações de identidade/proteção/inventário no runner.
+- **G2/#216 no Preview #271:** revisão CSSOM no Preview público https://deploy-preview-271--mobilipresenter2d.netlify.app, commit 6030eec03e8dad0c91672744b59b9c63080ce835, viewport 503×667 CSS px, temas light/dark. Em /, .hero-description, e /how-it-works/, .how-hero-note, o tema claro computou #292723 sobre #F0EDE8 (12,77:1) e o escuro #C4BCB2 sobre #20211F (8,61:1). Em /about/, .about-scale p:not(.eyebrow) correspondeu a 3 parágrafos com os mesmos valores. A exceção .study-band .eyebrow computou #70522F sobre #E8E3DC (5,60:1) em light e #D8BC7C sobre #20211F (8,78:1) em dark. Elementos visíveis e regras vencedoras confirmadas no CSSOM. A cor clara #292723 vem do token explícito desta candidata e não é o par histórico #675F55; excede o mínimo, mas a equivalência visual não foi homologada por isso. Esta checagem não é screenshot/revisão visual da página completa, nem cobre os cinco consumidores adicionais, Configurador, #208 ou DS-05A. #216 permanece aberta; G2 segue em andamento.
+- **G1–G8:** sem mudança global: G0 contínuo; G1 parcial (UX-04 no runner Linux/Node 22 e critérios restantes de #218 pendentes); G2 em andamento; G3 parcial; G4/G6 HOLD; G5 parcial/HOLD; G7 pendente; G8 não iniciado como release. Nenhum merge, deploy de produção ou operação de banco ocorreu.
+
+
+## Atualização de evidência — G3 runtime, DS-05A e #viewerHint (2026-11-11, BRT)
+
+- **G3 tema:** no Deploy Preview #271 head `86c4945cb56c04df31954e2a02f66ca3e703dc67`, Chrome 156, viewport 503×667 CSS px/DPR 1,5, modo `auto` acompanhou a preferência light/dark. Landing/How/About usaram a mesma classe de controle e botão 44×44 px; Enter percorreu auto/light/dark/auto, rótulos acessíveis mudaram, logo light/dark alternou e `casa-ui-theme-mode-v1` persistiu ao navegar entre rotas. CSSOM mostra regra em `ui-theme.css:61/73`; folhas/shell de página seguem contextuais. Slice público e uma largura, sem touch ou Safari/iPad.
+- **G2 #viewerHint:** PR #271 head `86c4945` agora inclui a regra de development `.viewer-card__footer { color: var(--muted) }`. O subgate local reporta 1,00/4,05:1 em main e 5,22/4,88:1 em development (light/dark), mas o receipt não identifica a folha CSS por hash. Checks estão em execução e o Deploy Preview foi marcado pronto. No contexto isolado da auditoria, `/config/` redirecionou a `/access/`; não houve confirmação CSSOM hospedada da nova regra.
+- **Errata DS-05A:** o JSON de runtime foi capturado com a regra experimental `.module-number` já presente. 13,02:1/8,10:1 são medições pós-patch sem braço anterior; não provam melhora nem defeito original. O recibo não fixa o CSS blob, a regra não é probe nomeado em #208 e falta revisão visual. A redação local foi corrigida e a regra não foi levada ao produto. Próxima decisão exigiria A/B isolado, pin/hash de cada folha, cobertura de estados e revisão visual.
+- **Repos/limites:** #271 segue aberta; #272 segue sem merge/apply; produto 6 refs, Design System 2. Sem remoção de branch, publicação de produção ou alteração de dados.
+
+## Retomada — avanço G1 NAV-005 e percurso arquitetural (2026-11-11, BRT)
+
+Esta seção prevalece sobre os snapshots operacionais anteriores. O checkpoint completo e a matriz de medidas estão em [architecture G0–G8 current checkpoint](../evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md).
+
+- PR produto #269 está aberta/draft no head 2e202e4d7d36f29bfb62508bc15f40cdc18f130b, com Deploy Preview pronto e 12/12 Actions success. A regra .site-header--public .brand foi ajustada de 36vw para 30vw dentro do limite de marca definido em #218.
+- No Preview, a revisão cobriu 486; 321/320; 291/290; 900/901; três rotas públicas a 1366; Viewer a 390; menu/CTA e teclado Enter/Space, Tab, Escape, foco claro/escuro. G1 avançou, mas #218 segue aberta para touch/dispositivo real, zoom de navegador e Safari/iPad. UX-04 é separado e ainda depende de seu workflow chegar à branch padrão antes do dispatch em development.
+- Produto mantém 6 refs (cap 5 excedido em uma): #270 fechada sem merge, #269/#271/#272 abertas. O lote exato da #270 está preparado na #272, sem apply/deleção. Design System mantém 2 refs (cap atingido), PR #119 aberta/draft. Não criar refs novas; seguir Git Data + expected-SHA lease pelo método do produto.
+- G0 contínuo; G1 parcial; G2 em andamento (#208/#216 e DS-05A sem fechamento); G3 parcial; G4/G6 HOLD; G5 parcial/HOLD; G7 pendente; G8 sem release.
+- Próxima sequência: completar os gates G1 que exigem dispositivo/zoom; resolver G2 com configuração válida, comparação A/B e CSS blobs exatos; terminar ownership por rota/estado em G3. Só então avaliar extrações reversíveis G4/G5; preservar zero extração onde não houver equivalência/ganho. G6 continua experimental até haver segundo consumidor editorial. G7/G8 requerem jornadas protegidas, validação integrada, revisão e autorização apropriadas.
+- A regra experimental .module-number continua sem adoção: o recibo DS-05A é pós-patch, sem braço prepatch. Não extrapolar os valores observados.
+- Sem merge de PR, remoção de refs, publicação ou alteração de dados nesta retomada.
+
+## Retomada live — plano G0–G8 e higiene de refs (2026-11-11, BRT)
+
+Esta seção prevalece sobre os snapshots operacionais anteriores; eles permanecem como histórico.
+
+- **Design System:** remoto `EAKerber/MobiliPresenter2D_DesignSystem`, `main@79db735d6f05177b0c406e383d35832f3d72fdef`, 2 refs (`main` + branch da #119), na meta de estabilidade; o gatilho para avaliar um limite rígido é 5. PR #119 segue Draft.
+- **Produto:** `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`, `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`, 7 refs. O gatilho 5 foi excedido por 2 e exige revisão do crescimento, mas não é autorização de exclusão. #273 está aberta em Draft, com base exatamente no SHA atual de `main` e cinco commits à frente; suas mudanças estão isoladas na PR. #272 prepara remoção exata de #270 e limpeza condicional de sua branch após integração, reduzindo 7→5; não houve merge nem exclusão.
+- **Proteção de `main`:** comparação GitHub confirmou `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95` e #273 Draft aberta nesse mesmo base SHA, com 5 commits à frente, 0 atrás e 10 arquivos no diff. #269/#271/#272 também estão abertas e sem merge. O conteúdo transitório da #273 não está em `main`.
+- **G0–G8:** G0 contínuo; G1 parcial (UX-04 runner Linux/Node 22 e critérios touch/zoom/Safari/iPad de #218 pendentes); G2 em andamento (#208/#216, 98 pares UNCERTAIN, configuração de Preview inválida e DS-05A incompleto/HOLD); G3 parcial, com recaptura local de 28 casos em 7 rotas, 2 viewports e 2 temas; tema e seleção de assets concordaram, mas bundles/APIs privadas sem fixture retornaram 404; G4 HOLD; G5 parcial/HOLD; G6 HOLD; G7 pendente (#232 e fixture autorizada); G8 release não iniciado, sem autorização de produção.
+- **CI da #273:** head `0d666c6db586ba5f4a2622d2684bbef122c208e7`, Preview pronto. Os gates `scoped-raster` e `browser` falham: raster Chromium 390 px acusa 18 pixels fora dos limites autorizados de texto ([#43123581900](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43123581900)); Chromium passa em 390, 700, 701, 1050, 1051 e 1366 px em light/dark, mas WebKit falha em 390 px/light (`expected compact`, `actual side-rail`), sem observação dos demais casos WebKit ([#43123581593](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43123581593)). CI não está verde.
+- **Progresso desta retomada:** recapturar G2 localmente e ampliar G3 para 28 casos; ambos seguem parciais por configuração publicada inválida, 98 pares UNCERTAIN e cobertura privada/plataforma ainda ausentes. Meta estável: 2 refs. Ao atingir 5, revisar crescimento e considerar um hard cap; 7 refs do produto exige revisão, sem excluir por contagem. Usar branches existentes #119/#272, sem nova ref. Sem merge, exclusão, deploy de produção ou operação de banco.
+## Continuação G2 — recaptura local do Configurador (2026-11-11, BRT)
+
+A captura antiga tinha uma linha candidata escura cujo CSSOM não correspondia à aparência do screenshot; ela não foi usada como evidência. A reprodução mais recente fixa o tema antes da navegação e registra o tema solicitado, `data-theme`, `CASA_UI_THEME.getResolved()` e SHA-256 por screenshot. O conflito antigo não se repetiu, sem atribuir causa raiz.
+
+O pacote [G2 recapture](../evidence/architecture/g2-configurator-recapture-2026-11-11.md), com oito imagens e recibo JSON, fixa produto `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`, CSS base `d43e6fb5e66133d2389b5c39b165b76b13cfa868`, candidata #271 `eb346a41ad91f6dc53875cb954e9018fdc1dd713`, Edge `157.0.4341.46`, DPR 1 e 390×900/1366×900 nos dois temas. Todos os oito estados validaram o Buyer V5 local e tiveram os três indicadores de tema coincidentes. Um único 404 da bundle de navegação privada ocorreu em cada carregamento; não houve exceção de página. Esta evidência é local e não cobre autenticação/navegação privada nem substitui a validação hospedada.
+
+G2 continua em andamento: configuração publicada inválida no Preview; anel de acabamento selecionado ainda sem captura deste lote; #208/#216, 98 pares UNCERTAIN e DS-05A permanecem pendentes. A documentação e o pacote foram adicionados à branch já existente da PR #119; nenhuma nova branch, mudança no produto, merge, deploy de produção ou operação de banco foi feita nesta continuação.
+
+
+## Continuação G3 — recaptura local de tema e marca (2026-11-11, BRT)
+
+A captura em produto main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95 percorreu /, /how-it-works/, /about/, /viewer/, /config/, /admin.html e /access/manage.html em 390×900/1366×900 CSS px e light/dark: 28 casos. A preferência, tema raiz e API concordaram; os src de todos os assets de marca corresponderam ao tema e os logos de cabeçalho carregaram. Os controles completaram duas transições e não houve exceções JavaScript de página.
+
+As requisições às bundles e APIs privadas não foram preenchidas: 28 respostas 404, incluindo /api/buyer-configuration. O shell estático e o controlador foram observados; menu/sessão autenticados, configuração publicada, foco/hover, tela tátil, Safari/iPad e revisão visual não foram validados. Duas imagens de marca nos cards de comparação mobile de /how-it-works/ ainda informavam complete=false, com naturalWidth=380; esse detalhe está registrado no recibo.
+
+Veja [relatório G3](../evidence/architecture/g3-theme-controller-slots-recapture-2026-11-11.md) e seu recibo JSON. G3 permanece parcial; os slots de marca/controle continuam contextuais. Nenhum código do produto foi alterado.
+
+
+## Retomada live — main estável e política de refs (2026-11-12, BRT)
+
+Esta seção prevalece sobre o snapshot anterior e preserva as entradas anteriores como histórico.
+
+- **Política:** Design System — meta/soft cap de 2 refs, sem hard rule; produto — soft cap de 5 durante trabalho ativo, com alvo de 2 refs (`main` + `development`) quando estável. Ao chegar a 5, reavaliar crescimento e considerar hard cap; a contagem não autoriza apagar refs.
+- **Main e hotfix:** produto `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`; #273 está Draft no head `016b33f9315620ee09b28c4e2c9ba5752b858471`, baseada exatamente nesse SHA, 8 commits à frente e 0 atrás, com 11 workflows aprovados e Preview pronto. O conteúdo da #273 permanece fora da `main`; a revisão visual final da PR ainda está pendente. #269, #271 e #272 também permanecem sem merge.
+- **Refs:** Produto tem 7 refs, acima do soft cap de 5. A #272 prepara a remoção exata da branch obsoleta #270 e a limpeza condicional da própria branch de higiene após integração, com queda prevista de 7 para 5; a PR não foi integrada e nenhuma ref foi removida. Design System tem 2 refs: `main` e a branch documental da #119, que continua Draft.
+- **G0–G8:** G0 contínuo; G1 parcial; G2 em andamento; G3 parcial; G4/G6 HOLD; G5 parcial/HOLD; G7 pendente (#232/fixture autorizada); G8 não iniciado. Os gates de arquitetura continuam independentes da revisão do hotfix.
+- **Proteção:** GitHub informa que as regras de proteção das branches `main` estão desativadas nos dois repositórios. Nenhuma regra foi alterada neste trabalho; a estabilidade observada é processual.
+
+## Atualização de 12/11 — G2 Admin e refs live
+
+O recálculo local do Admin confirmou uma única lacuna de contraste clara para `.initial-state-option`: 4,229:1 no Product `main@221b54b`, com o dark em 8,384:1. O ajuste scoped em #271 mediu 9,092:1 usando o token já existente; consulte o [recibo completo](../evidence/architecture/g2-admin-initial-state-labels-cssom-2026-11-12.md). #271 está aberta no head `d699fb1911046dfbbc475fad9415f3ff3fca1cc8`; os 9 workflows da PR e o status Netlify Deploy Preview passaram. **Na data desta entrada**, a revisão visual/CSSOM do Admin ainda dependia de autenticação; essa pendência foi superada pela revisão descrita na atualização posterior abaixo. `/config/` segue sem configuração publicada válida. Nada foi integrado à `main`.
+
+Inventário conferido pela API: Produto tem **7 refs** (soft cap 5 excedido por 2; revisar, sem exclusão automática); Design System tem **2 refs**, dentro da meta. A #272 não foi integrada e nenhuma ref foi excluída. A regra vigente continua: Product target 2 quando estável; DS soft target 2; ao chegar a 5, avaliar se um hard cap é útil.
+
+
+## Revalidação do Preview da Product #271 (2026-11-12, BRT)
+
+Para o head exato `d699fb1911046dfbbc475fad9415f3ff3fca1cc8`, a API confirmou nove workflows de PR com `success` e status do Netlify Deploy Preview com `success`. A publicação está pronta, mas não foi feita revisão visual/CSSOM hospedada da nova regra do Admin nesta revalidação; `/config/` ainda falha ao validar a configuração publicada. Product `main` permanece em `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. Nenhum merge, remoção de refs, deploy de produção ou operação de banco ocorreu.
+
+
+## Continuação G2 — anel de acabamento selecionado (2026-11-12, BRT)
+
+No checkout detached limpo do Product `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`, a comparação base/candidata usou os blobs CSS `d43e6fb5e66133d2389b5c39b165b76b13cfa868` e `eb346a41ad91f6dc53875cb954e9018fdc1dd713`. O fluxo real avançou para Acabamentos e selecionou Base clara e Carvão. Chrome 156.0.8078.82 / DPR 1, 390×900 e 1366×900, temas light/dark: 16 capturas no total. Os 16 casos tiveram configuração Buyer V5 validada, estado selecionado real, `aria-pressed=true` e tema solicitado/documento/API coincidentes.
+
+O CSSOM candidato computou borda `#292723` e anéis `0 0 0 2px #fff, 0 0 0 4px #292723`; a base usa borda branca e anel branco translúcido. As capturas mobile mostram contorno mais visível para Base clara no escuro e Carvão no claro. Relatório, recibo e capturas: [G2 selected ring](../evidence/architecture/g2-selected-finish-ring-2026-11-12.md). Um 404 esperado da bundle privada ausente ocorreu por contexto, sem exceção de página.
+
+O subgate de seleção local avançou; G2 permanece em andamento. A configuração publicada de `/config/` continua inválida, e, **na data desta entrada**, a nova regra do Admin de #271 ainda aguardava revisão autenticada; veja a atualização posterior abaixo. #208/#216, 98 pares UNCERTAIN, DS-05A, teclado/foco, zoom e validação Safari/iPad permanecem fora desta evidência. Nenhuma mudança foi integrada à Product `main`.
+
+
+## Atualização após revisão autenticada do Admin e correção das capturas G2 — 12/11/2026 BRT
+
+O usuário autenticou no Preview exato da Product #271. A leitura do Admin em 634×652 CSS px / DPR 1,5 encontrou 18 labels `.initial-state-option` com caixas visíveis; as checkboxes estavam habilitadas e marcadas, e não foram alteradas. No CSSOM, light ficou em `#403A34` sobre `#EAE7E2` (9,092:1), dark permaneceu `#C4BCB2` sobre `#232321` (8,384:1). Nenhuma configuração foi salva. Os hashes das capturas de sessão e fonte da regra estão no [recibo Admin](../evidence/architecture/g2-admin-initial-state-labels-cssom-2026-11-12.md). Isso passa só o subgate de labels.
+
+O primeiro lote do anel exibia transform de hover em 15/16 linhas. Ele foi substituído por 16 PNGs recapturados com o ponteiro em `(0,0)` e `transform:none` confirmado antes de cada captura; os hashes dos bytes conferem com o recibo compacto. A seleção real, `aria-pressed=true`, configuração Buyer V5 e tema são válidos em 16/16. **Este parágrafo registra o snapshot anterior ao recapture hover/foco:** naquela etapa, o relatório e o JSON cobriam somente o A/B sem hover; a cobertura foi ampliada nos adendos subsequentes. `/config/` continua sem configuração válida, então a revisão hospedada do ring segue pendente e G2 em andamento. 
+
+Product `main` continua em `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`; DS `main` continua em `79db735d6f05177b0c406e383d35832f3d72fdef`. O ramo DS existente da #119 está em `1f832fc1b2cc8fd2f3ccbf892ab8f9cea43fea15` antes desta atualização; o Branch hygiene run #81 passou nesse SHA. Inventário live: 7 refs no Produto (acima do soft cap 5) e 2 no DS. Nenhuma branch foi criada ou apagada, nenhum PR foi integrado, e não houve alteração de runtime/deploy/DB.
+
+
+## Adendo G2 — estado hover do anel e coerência do handover (12/11/2026 BRT)
+
+A mesma matriz local foi rodada com o ponteiro sobre o swatch selecionado. Em 16/16 casos, `:hover` permaneceu ativo após estabilização de 200 ms, o transform computado foi `matrix(1.06, 0, 0, 1.06, 0, 0)`, a seleção real persistiu com `aria-pressed=true`, e o Buyer V5/tema permaneceram válidos. O box-shadow base continuou branco translúcido; o candidato conservou o par branco/`#292723`. Não houve exceção de página; o 404 por contexto da bundle privada ausente foi o único erro HTTP. **Snapshot anterior à matriz de foco visível:** naquele ponto, o relatório e o recibo reuniam 16 capturas sem hover + 16 com hover; a seção posterior amplia o pacote para 40 estados. Isto não equivale a cobertura geral de hover/foco nem a revisão hospedada do anel; `/config/` continua inválido.
+
+O subgate do Admin segue aprovado com autenticação, sem interação nas checkboxes. Para eliminar a contradição entre as notas datadas de 12/11, as entradas anteriores que dizem que a revisão do Admin aguardava autenticação são agora explicitamente históricas e apontam para a atualização que registra a conclusão.
+
+
+## Adendo G2 — foco visível por teclado no swatch selecionado (12/11/2026 BRT)
+
+Com a mesma fixture Buyer V5 local, foram comparados baseline/candidata, light/dark e Base clara/Carvão em 390×900 CSS px: oito capturas. O ponteiro ficou fora dos swatches; Tab/Shift+Tab levou foco ao botão selecionado. Em 8/8, `:focus-visible` foi verdadeiro, `:hover` falso, `transform:none`, a seleção persistiu e `aria-pressed=true`. O outline computado foi `rgb(110,81,46) solid 2px` em light e `rgb(216,188,124) solid 2px` em dark; o `box-shadow` do anel permaneceu específico de base/candidata. A revisão visual das capturas mobile não mostrou clipping. Sem exceções de página; apenas o 404 esperado por contexto da bundle privada ausente. O [relatório e recibo combinados](../evidence/architecture/g2-selected-finish-ring-2026-11-12.md) agora reúnem 40 estados: 16 no-hover, 16 hover e 8 focus-visible. Este recorte não cobre a navegação completa por teclado, outros controles, zoom, Safari/iPad ou o ring hospedado; `/config/` segue inválido.
+
+
+## Snapshot G3 — ownership de `.swatch` no Configurador (12/11/2026 BRT, pré-captura local; superado pelo adendo final)
+
+A varredura do pin Product `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95` encontrou dois geradores dentro de `/config/`: `renderFinishControlsFromData()` cria os acabamentos globais em `#finishSwatches`, e `createLocalFinishControl()` cria acabamentos locais dentro de `moduleDetail`. Ambos usam `.swatch`, `.is-selected` e `aria-pressed`; os handlers e os domínios de seleção são separados. A rota carrega `styles.css` (`app/config/index.html:30`) antes de `ui-theme.css` (`:41`); a família inclui base/hover/selected/responsivo em `app/styles.css:349–367,692` e foco geral de botão em `:96–98`.
+
+**Snapshot pré-captura, superado pelo adendo final desta página:** a matriz de 40 estados do anel cobria então somente o consumidor global (`data-finish-id`). O consumidor local (`data-local-finish-id`) estava mapeado estaticamente e ainda não tinha prova runtime naquele ponto. A captura posterior de 8 casos abaixo completa a linha `.swatch`; G3 como gate geral permanece parcial. Não extrair CSS nem alterar produto.
+
+
+## Snapshot G3 — ownership de `.swatch` no Configurador (12/11/2026 BRT, pré-captura local; superado pelo adendo final)
+
+A varredura do pin Product `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95` encontrou dois geradores dentro de `/config/`: `renderFinishControlsFromData()` cria os acabamentos globais em `#finishSwatches`, e `createLocalFinishControl()` cria acabamentos locais dentro de `moduleDetail`. Ambos usam `.swatch`, `.is-selected` e `aria-pressed`; os handlers e os domínios de seleção são separados. A rota carrega `styles.css` (`app/config/index.html:30`) antes de `ui-theme.css` (`:41`); a família inclui base/hover/selected/responsivo em `app/styles.css:349–367,692` e foco geral de botão em `:96–98`.
+
+**Snapshot pré-captura, superado pelo adendo final desta página:** a matriz de 40 estados do anel cobria então somente o consumidor global (`data-finish-id`). O consumidor local (`data-local-finish-id`) estava mapeado estaticamente e ainda não tinha prova runtime naquele ponto. A captura posterior de 8 casos abaixo completa a linha `.swatch`; G3 como gate geral permanece parcial. Não extrair CSS nem alterar produto.
+
+
+## Atualização G3 — runtime do acabamento local ao módulo (12/11/2026, BRT)
+
+A cópia limpa destacada do Product `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95` gerou um fixture Buyer V5 em memória: `base-light` permaneceu global; `cocoa` e `shadow` ficaram locais e habilitados para `module-01`. O validador e a projeção Buyer V5 aceitaram o fixture. O Playwright abriu `/config/`, selecionou o módulo e clicou os botões locais reais. Nenhuma configuração foi salva ou publicada; não houve API remota ou banco.
+
+- 8 capturas: baseline/candidata × light/dark × `cocoa`/`shadow`, em 390×900 CSS px, Chrome 156.0.8078.82 / DPR 1.
+- Em 8/8, o `aria-pressed` local acompanhou a seleção; o acabamento global permaneceu `base-light`. Borda, box-shadow e transform computados coincidiram entre swatch local e global na mesma página. Sem erro de página nem erro HTTP inesperado.
+- Relatório, recibo e PNGs: [evidência G3 do consumidor local](../evidence/architecture/g3-module-local-swatch-runtime-2026-11-12.md). Os 40 casos G2 anteriores continuam sendo estritamente a matriz global; as 8 capturas locais são separadas.
+- Classificação `.swatch`: aparência do anel compartilhada dentro de `/config/`; escopos de seleção distintos por design; nenhum consumidor cross-route identificado. A linha runtime de G3 agora está coberta e não sugere extração. G3 como gate geral segue parcial; G2 hospedado continua pendente porque `/config/` rejeita a configuração publicada.
+
+Sem alteração do produto, banco, publicação, refs remotas ou `main` do Product.
+
+## Reconciliação live do plano arquitetural geral — 12/11/2026
+
+O objetivo corrente abrange ARC-01…ARC-16 e V0–V6; G0–G8 é outro plano de consolidação e verificação que continua sendo acompanhado. Este adendo compara as afirmações históricas com o Product main confirmado, sem reescrever evidência antiga.
+
+### Entregas arquiteturais já integradas
+
+- O Product main observado é 221b54b2a41ecc8c338d1bf2cf67280cf165ce95. A PR [#237](https://github.com/EAKerber/MobiliPresenter2D/pull/237) está merged; seu merge commit 5ccb2a8dde6dd16e136f03387dc833aab828c5cf e o commit de origem ARC-03C ff5c55c24ef42eb106e6dda6aa7698b00355270a são ancestrais desse main.
+- ARC-03C está implementado no build: scripts/compile-primary-pages.mjs gera as páginas a partir de architecture/pages e architecture/fragments; package.json inclui o gate/build; architecture/fragments/primary-header.routes.json declara BUILD_AUTHORITATIVE_ARC03C e exclui Viewer, Config, Admin e Access do escopo. A PR #237 integrou o controlador de navegação pública e preservou a variante Viewer NAV-005. O resultado é integração em main, não apenas uma prova isolada.
+- O arquivo de integração ARC-03C e o handover do produto de 22/10 ainda descrevem a etapa como isolada ou como próximo passo. Esses trechos agora são snapshots pré-integração; uma revisão documental focada no Product permanece pendente.
+
+### Entregas e gates ainda abertos
+
+- V0/ARC-13 ainda não tem inventário integral nem catálogo pt-BR consumido pelo runtime. O índice legado de 826 ocorrências em 26 fontes continua como histórico de candidatas. Um scanner local sobre Product `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95` está pronto no branch local `work/arc13-ui-inventory-20261112` (HEAD `c7262cf`, commits locais; sem publicação/PR e com `app/` inalterado). Ele gera um candidato limitado e não classificado com 988 ocorrências (600 HTML, 388 sinks JS; 154 estáticas e 234 dinâmicas/mistas), 17 exclusões explícitas, zero erros de análise e zero lacunas de rota. Símbolos e pontuação dinâmica permanecem para revisão contextual. Isso ainda não prova cobertura integral nem rastreia todas as origens de dados; classificação, origem/owner e reconciliação das lacunas precedem qualquer catálogo de runtime.
+- V2/P-TOKEN: há pin e exportações versionadas, mas isso não prova ativação geral de tokens no CSS do produto. A origem e os consumidores precisam ser reconciliados com os pares visuais homologados; nenhuma paleta global deve ser ativada por inferência.
+- Os gates G0–G8 permanecem conforme o checkpoint de 12/11: G0 contínuo; G1 parcial; G2 em andamento; G3 parcial; G4/G6 HOLD; G5 parcial/HOLD; G7 pendente; G8 sem release. A conclusão de ARC-03C não fecha esses gates nem o plano geral.
+- G4/G5 de CSS compartilhado continuam condicionados à prova de ownership e equivalência por consumidor. A linha .swatch está coberta em G3, mas o inventário de ownership geral está parcial.
+- V6/G7/G8 ainda exigem cobertura funcional integrada por risco, evidência de dispositivo e autenticação quando cabível, revisão dos riscos residuais, aceitação e autorização de release. CI, preview e merge não se substituem entre si.
+
+### Próxima sequência de execução
+
+1. Reconciliar a documentação do Product com o main@221b54b, começando por ARC-03C já integrado e preservando a proveniência do snapshot de outubro.
+2. Revisar o candidato local V0/ARC-13 já gerado: classificar as 988 ocorrências e 17 exclusões por origem/rota/consumidor/owner, completar a auditoria de sinks e lacunas e reconciliar o resultado com o contrato ARC-13. Só depois planejar substituições pt-BR em lotes reversíveis. Publicar a branch do produto após a higiene autorizada reduzir as refs; não criar catálogo ou alterar runtime antes da revisão.
+3. Prosseguir G1–G3 nos gates ainda reproduzíveis; manter hospedado/PENDING o que depender da configuração publicada inválida, e classificar sem adivinhação os 98 pares com backdrop-filter.
+4. Só então avançar extrações V2/G4/G5 aprovadas por família, mantendo domínio V5, autorização e publicação independentes; avaliar V5/G6 apenas por consumidores reais e benefício medido.
+5. Fechar V6/G7/G8 com validação representativa e readback antes de propor release.
+
+### Refs e operações
+
+A consulta live de 12/11 mostra 2 refs no Design System (main e a branch da PR #119) e 7 no produto. A PR #272 prepara um lote exato para reduzir o produto de 7 para 5 após integração e readback; o lote ainda não foi aplicado. Nenhuma ref deve sair por contagem ou antiguidade. A documentação deste adendo é acrescentada à branch já existente da PR #119, sem criar ref; main, produto e dados publicados permanecem sem alteração nesta atualização.
+
+## Retomada ARC-13 — revisão de fontes e inventário por ocorrência — 12/11/2026, BRT
+
+Este adendo substitui a contagem anterior de 988 ocorrências como estado atual. O Product segue em `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`; a ferramenta e o relatório permanecem locais no branch `work/arc13-ui-inventory-20261112`, agora em `04945d6`. Não há PR de inventário nem ref remota do Product; `app/` continua inalterado.
+
+- O scanner passou de 388 para 396 sinks JavaScript ao incluir atribuições compostas a texto e propriedades textuais em `Object.assign`; são 600 ocorrências HTML + 396 sinks JS = 996 registros, 159 valores JS estáticos e 237 dinâmicos/mistos.
+- Agrupamento exato: 759 ocorrências com valor estático correspondem a 584 valores distintos; 65 grupos repetidos somam 175 ocorrências além da primeira. Há também 48 referências HTML. Esses valores incluem símbolos, marca e referências; continuam impróprios como estimativa de chaves ou esforço de tradução.
+- A revisão manual cobriu 546 registros públicos, 280 de Admin/Acesso e 230 do Configurador; os recortes compartilham módulos de runtime e não são aditivos. O relatório permanece `candidate-unreviewed`; zero erros de parser, owners ou rotas não demonstram cobertura lexical.
+- As fontes ainda ausentes incluem a tabela de explicações de Como funciona, labels da navegação compartilhada, mapas/opções/mensagens de erro do Admin e textos em módulos de dados de Landing/Viewer. O próximo trabalho é inventariá-las como fontes com provenance separada dos sinks, e só depois fechar a classificação e planejar o primeiro lote pt-BR.
+- O usuário apontou dois checks diferentes no Admin. O check por item (“Iniciar ativo”) e o controle de disponibilidade da etapa (“Ativa/Inativa”) têm responsabilidades distintas. Em `admin.css`, o primeiro não declara `accent-color` e herda o azul padrão do navegador; o segundo usa `var(--accent)`. Manter variantes semânticas faz sentido, mas a hierarquia visual ainda precisa de decisão baseada no contexto.
+
+O recibo local detalhado está em `docs/architecture/arc13-source-review-2026-11-12.md` na branch local indicada. Nenhuma alteração de runtime, catálogo de mensagens, preview, deploy, banco, merge ou ref remota foi feita nesta retomada. A higiene continua em 7 refs no Product (duas acima do soft cap de 5) e 2 no Design System; a PR #272 continua preparada, não integrada.
+
+
+## Retomada ARC-13 — fontes de texto, testes e controles do Admin (12/11/2026 BRT)
+
+O Product continua ancorado em `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. O trabalho ARC-13 permanece isolado na branch local `work/arc13-ui-inventory-20261112`, agora em `fb92edbc84fda44d19a68eed4fedb8326090c8d3` (commit `fb92edb`); não foi criado um ref remoto nem PR do Product.
+
+- A ferramenta local passou a schema 3 e preserva duas listas diferentes: **1.011 ocorrências candidatas de sink** (600 HTML + 411 JavaScript) e **143 literais de origem JavaScript** em `sourceEntries`. As fontes não são somadas aos sinks. Há 167 sinks JS estáticos e 244 dinâmicos/mistos; 22 exclusões; 66 arquivos com hash; zero erros de análise, owners não atribuídos ou rotas JS não atribuídas. Tudo segue `unreviewed`.
+- Entre as 143 fontes, 89 têm consumidor ativo documentado, 7 labels de vista são passados ao renderizador mas não usados, 2 campos da Landing não têm consumidor ativo e 45 mensagens de `Error` ainda precisam de rastreio antes de classificar como texto de usuário ou diagnóstico. A cobertura inclui tabelas de Como funciona/navegação/tema, textos da Landing e do Viewer e opções fixas do Admin. Dados editáveis do V5 e conteúdo comercial continuam fora de uma classificação automática.
+- O número anterior “988 candidatos” era 600 sinks HTML + 388 sinks JavaScript; não representa 988 testes nem 988 mensagens únicas. A cobertura adicionada aumentou o número de sítios reconhecidos sem alterar o código do produto. Os recortes manuais 546/280/230 pertencem ao snapshot de 996 sinks; compartilham módulos e precisam ser reconciliados antes de virar porcentagem de cobertura.
+- A validação padrão do Configurador encadeia 19 scripts Node e 2 validadores de assets. Nenhuma suíte foi executada nesta etapa e não houve auditoria de sobreposição entre asserções; quantidade e nomes de arquivos, sozinhos, não demonstram redundância.
+- Os dois checks mostrados no Admin têm funções diferentes: checkbox por item para estado inicial, e toggle de disponibilidade da etapa. O primeiro não declara `accent-color` em `initial-state-option`; o segundo usa `var(--accent)` em `.switch`. A diferença de cor é explicada pelo CSS, mas a intenção de hierarquia visual continua sem decisão. Nenhum checkbox foi alterado.
+
+A revisão detalhada está no checkout local do Product em `docs/architecture/arc13-source-review-2026-11-12.md`. A geração do relatório foi concluída e `git diff --check` passou; a suíte de testes não foi executada. `app/`, runtime, configuração publicada, refs remotas, merges e deploys permaneceram sem alteração. Ref count verificada nesta retomada: Product 7 (2 acima do soft cap 5), Design System 2.
+
+
+## Retomada ARC-13 — inventário ampliado de fontes (12/11/2026 BRT)
+
+Esta atualização substitui somente as contagens da entrada anterior; os snapshots datados continuam como histórico. O Product permanece em `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. O scanner e o relatório estão na branch local `work/arc13-ui-inventory-20261112@ca897cb38960e6b10dd40c7574320810fd7c0516`; não há ref remoto nem PR de Product para este lote.
+
+- O relatório separado por proveniência contém **1.012 sinks candidatos** (600 HTML + 412 JavaScript; 167 JS estáticos e 245 dinâmicos/mistos) e **310 fontes JavaScript** (277 ativas, 7 passadas ao renderer mas não usadas, 2 sem consumidor e 24 mensagens de Error sem fluxo resolvido). Há 68 fontes com referências delimitadas a sinks (70 relações); 22 exclusões e zero erros de parser, owners ausentes ou rotas JS sem atribuição.
+- A cobertura adicionou campos selecionados de defaults do Configurador, catálogo, cena e PriceBook, além dos quatro rótulos compactos que alimentam `data-compact-label` e CSS `attr()`. São pistas de domínio/consumidor, não classificação de tradução. Todos os registros continuam `unreviewed`; não há catálogo pt-BR no runtime.
+- A análise dos dois checkboxes do Admin mantém variantes semânticas separadas: estado inicial do item (accent padrão do navegador) e disponibilidade da etapa (token `--accent`). A intenção da diferença de ênfase segue sem decisão; nenhum controle foi alterado.
+- A geração local do inventário concluiu com zero erros de parse e `git diff --check` sem erro de whitespace. Nenhuma suíte de testes foi executada; `app/`, Product main, conteúdo publicado, banco, deploy e merge permaneceram inalterados.
+- A contagem live de refs continua em **7 no Product** e **2 no Design System**. Product mantém `main`, `development` e cinco branches de trabalho; #272 segue aberta e não integrada, com o lote exato de #270 e limpeza condicional preparados. Nenhuma ref foi removida. A PR #119 continua Draft na branch documental existente; esta atualização não cria ref.
+- G0 contínuo; G1 parcial; G2 em andamento; G3 parcial; G4/G6 HOLD; G5 parcial/HOLD; G7 pendente; G8 sem release. O workflow UX-04 tem arquivo em `development` e a execução local no SHA exato já foi registrada, mas o arquivo não existe em Product `main`; a página do Actions não expõe Run workflow. Não houve execução Linux/Node 22 neste SHA nem novo push para provocá-la.
+
+### Próxima sequência
+
+1. Revisar e classificar fontes por domínio e consumidor, reconciliando os recortes manuais antigos antes de calcular cobertura.
+2. Manter G1 marcado parcial até existir execução Linux/Node 22 no SHA apropriado e fechar os critérios de dispositivo/toque/zoom; não criar branch ou empurrar commit só para disparar Actions.
+3. Prosseguir o ownership G3 por família e estados. Não extrair CSS, globalizar tokens ou consolidar componentes antes das provas e decisões visuais aplicáveis.
+4. Tratar #272 como preparado, não executado; o hardening da limpeza exige integração autorizada e readback exato.
+
+## Reconciliação live do plano arquitetural — 13/11/2026
+
+- **Produto live:** `main@bb3e3a34ee771db1efe6d8dcfe8cbde96c6a40c7`, `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`, 5 refs. A #272 foi integrada e removeu somente as refs exatas do lote de higiene; o merge não alterou `app/`. As PRs #269, #271 e #273 permanecem abertas; revalidar comparação e base antes de integrar.
+- **Design System live:** `main@79db735d6f05177b0c406e383d35832f3d72fdef`; 2 refs e PR #119 Draft na branch documental existente. Este lote atualiza a mesma PR e não cria uma ref.
+- **ARC-13 local:** `work/arc13-ui-inventory-20261112@3b97542482ff9c1bdb2ad45aabf777f97991e60f`, limpo, 17 commits à frente do Product `main@bb3e3a3`, sem ref remota nem PR. O relatório `architecture/arc13/ui-text-candidates.json` tem SHA-256 `8765873a096fe95167e4fba74838258e47428fab0e12d16af9b6c92a3e34a51e`, com 1.012 sinks e 359 fontes. Quatro recibos cobrem exatamente 1.012/1.012 IDs de sink e três recibos cobrem 359/359 IDs de fonte. O parecer reconcilia 27 valores literais compartilhados (65 sinks), sem grupo de sink com classificação conflitante nem colisão entre nomes de chave propostos. As fontes são 110 `ui_copy`, 27 `editorial_copy`, 143 `domain_content`, 4 comerciais, 65 diagnósticos, 1 mensagem de sistema, 7 passadas mas não usadas e 2 sem consumidor.
+- **Lacuna de catálogo e locale:** `displayAxes` foi incluído como dado técnico de catálogo e seu consumidor de resumo está ligado ao sink do Configurador. A cobertura desse campo está fechada; ordem dos eixos, unidade, separador, sinal de multiplicação e localização para novos locales continuam decisões de owner. O inventário segue limitado e não afirma cobertura lexical/runtime completa.
+- **Controles do Admin — Common Sense Judge:** sete contratos foram separados apesar da primitiva comum. Estado inicial de entidade usa visibilidade no Configurador; serviço registra seleção inicial; Viewer tem visibilidade própria; etapa altera `stage.enabled`; acabamento e puxador compartilham “Disponível para clientes”, mas mantêm regras diferentes; checkboxes de associação/propriedade não são toggles gerais; publicação de preços muda apenas o rascunho. O literal “Iniciar ativo” ocorre tanto no ramo de objeto quanto no de serviço, então o screenshot não identifica o subtipo sem o contexto do item. A diferença azul nativo/marca vem do CSS, mas não prova hierarquia deliberada.
+- **Pendências do inventário:** P1 — alinhar nomes acessíveis de módulo/objeto/etapa à função observada e decidir se “Disponível para clientes” deve esclarecer que o rascunho só vale após publicação. P2 — decidir feedback para a regra de última opção; accent e hierarquia entre famílias, incluindo o accent ausente em “Sem cor/tinta base”; e a exceção de foco de 3 px no controle de preços. Antes de aprovar mudança visual, falta revisar claro/escuro, teclado/foco, marcado/desmarcado, disabled por motivo, leitor de tela e contraste computado. O julgamento é estático e não aprova mudanças no produto.
+- **Progresso arquitetural:** segue estimado em cerca de 30% (faixa 25–35%), sem métrica formal nem previsão de calendário. A classificação de fontes do inventário avançou; ARC-13 permanece parcial porque cobertura lexical, políticas/owners e gates de consumidores seguem abertos.
+- **Validação deste lote:** o gerador ARC-13 foi executado; contagens e os IDs de fonte/sink foram reconciliados, os JSONs foram analisados e `git diff --check` passou. Nenhuma suíte foi executada. O commit Product `3b97542` contém somente documentação, inventário e scanner; nenhum arquivo `app/` mudou. Sem merge, deploy de produção, operação de banco, alteração de ref remota ou mudança em código de runtime.
+
+## Continuação G3 — ownership estático de `.visually-hidden` — 13/11/2026
+
+No Product `main@bb3e3a34ee771db1efe6d8dcfe8cbde96c6a40c7`, confirmei duas regras idênticas de `.visually-hidden` em `admin/admin.css:157` e `styles.css:853`, consumidas respectivamente pelo `<strong>` estático no header Admin e pelo `<h1>` do Configurador. As rotas carregam folhas diferentes e nunca co-carregam essas regras; ambas carregam `ui-theme.css` depois, sem override da classe. A declaração não usa tokens, variantes de tema, breakpoint ou estado. `.sr-only` mantém outro contrato no Configurador e não foi agrupado.
+
+**Resultado:** classificação G3 estática concluída para esta família; sem extração G4, pois não há benefício de payload/cache medido e uma regra no stylesheet de tema afetaria mais rotas. O relatório registra os limites (sem CSSOM, leitor de tela, impressão ou waterfall) e os blobs-fonte em [g3-visually-hidden-source-refresh-2026-11-13.md](../evidence/architecture/g3-visually-hidden-source-refresh-2026-11-13.md). G3 geral continua parcial. As matrizes estáticas de marca/logo e dos controles do Admin estão registradas no adendo subsequente; pendências de runtime e decisões de design permanecem abertas. Nenhum código do Produto, teste ou ref remota foi alterado nesta etapa.
+
+## Continuação G3 — slots de marca e estados de checkbox — 13/11/2026
+
+O inventário estático de marca distingue o mecanismo de seleção de variantes claro/escuro dos slots de shell público, Viewer, cabeçalhos privados, splash, comparação e rodapé. O hero da Home é raster independente: a correção do logo inventado pertence à arte, e a composição de vídeo no telefone deve seguir separada do slot de cabeçalho. A auditoria está em [g3-brand-logo-slots-static-audit-2026-11-13.md](../evidence/architecture/g3-brand-logo-slots-static-audit-2026-11-13.md).
+
+O julgamento dos controles do Admin preserva os contratos de estado inicial, visibilidade, disponibilidade, associação e publicação como distintos. Só “Disponível para clientes” pode compartilhar texto/chave nos dois usos observados. A diferença de accent entre .initial-state-option e .switch fica como decisão de design; os nomes acessíveis e a exceção de foco de preços também precisam de revisão. O relatório [g3-admin-control-state-judgment-2026-11-13.md](../evidence/architecture/g3-admin-control-state-judgment-2026-11-13.md) registra decisões pendentes sem alterar a interface. Fonte do Produto: ref local origin/main@bb3e3a3; não verificada contra remoto nesta passagem.
+
+**Estado:** G3 permanece parcial; estas duas famílias têm classificação estática suficiente para orientar o inventário, não para aprovar mudança visual, acessibilidade em runtime ou extração G4. Sem testes, código de Produto ou novas refs remotas.
+
+## Continuação G3 — matriz de componentes e estados por shell — 13/11/2026
+
+A leitura estática no Product main@bb3e3a34ee771db1efe6d8dcfe8cbde96c6a40c7 classifica .button como homônimo por shell, .eyebrow como rótulo contextual, .scene-hotspot como contrato DOM/JS comum com skins separadas e status/erro por fluxo. As regras de foco/desabilitado foram mapeadas por dono sem afirmar equivalência visual. A matriz e o plano de validação runtime estão em [g3-control-families-static-matrix-2026-11-13.md](../evidence/architecture/g3-control-families-static-matrix-2026-11-13.md).
+
+**Estado:** subgates de ownership estático avançaram para estas famílias. G3 geral permanece parcial e G4/G5 seguem sem autorização de extração. As pendências agora são específicas: revisão de botão por shell/estado, foco/empilhamento de hotspot em cenas reais e leitura/contraste de mensagens em fluxos representativos. Nenhum código de produto foi alterado e nenhuma suíte foi executada.
+
+
+## Continuação G3 — baseline CSSOM dos CTAs públicos — 14/11/2026
+
+A baseline local observou CTAs da Home, Sobre e Como funciona em claro/escuro e desktop/mobile (12 combinações, 32 elementos), mais hover e foco visível para quatro famílias representativas (16 estados). O cabeçalho reduz de 176×42 px para 38×38 px mantendo `aria-label`. As variantes preenchidas mantêm tratamentos por shell/classe; o link textual da Home permanece distinto. Na Home, a animação concluída `public-reveal` mantém a propriedade `transform` e neutraliza a elevação de 2 px pedida pelo hover; em Sobre a elevação ocorre. Isto gera uma pendência P2 de intenção, não um bug confirmado. A fonte do foco declara 3 px; o Chromium desta coleta calculou 2,66667 px após estabilização.
+
+A [baseline](../evidence/architecture/g3-public-button-runtime-baseline-2026-11-14.md) e seu [recibo JSON](../evidence/architecture/g3-public-button-runtime-baseline-2026-11-14.json) registram fontes, folhas/ordem CSS, medidas, métodos e limites. A captura PNG do DevTools expirou; não há imagem anexada. A página local usou Product main `bb3e3a3` (mesma árvore `app` no checkout `db908e5`). Sem Deploy Preview, leitor de tela, Tab real, Safari/iPad, alteração UI ou suíte de aplicação. G3 permanece parcial e não há aprovação de extração CSS.
+
+
+## Revisão de senso comum — estados de controles Admin — 14/11/2026
+
+Uma revisora independente comparou os contratos e conferiu o Product em `work/arc13-ui-inventory-20261112@db908e5`. “Iniciar ativo” permanece ambíguo na imagem: o texto é usado tanto para visibilidade inicial de objeto quanto para seleção inicial de serviço. “Ativa” é produzido pelo controle de disponibilidade de etapa, embora a captura não mostre o cartão. A cor diferente vem das regras de CSS; não há evidência suficiente para dizer que a hierarquia visual foi intencional.
+
+O inventário mantém sete contratos, compartilha apenas a casca/copy que a função permite e conserva pendentes seis decisões: copy/nome acessível por tipo e efeito; nome acessível de etapa em estado marcado; indicação da publicação para “Disponível para clientes”; accent/hierarquia para checks discretos e “Sem cor/tinta base”; feedback para a última opção; exceção de foco 3 px no controle de preço. A revisão detalhada no Product local (`docs/architecture/arc13/reviews/2026-11-14/admin-control-common-sense-review.md`) registra IDs, responsáveis e validação necessária. Nenhuma UI foi alterada e nenhum teste foi executado.

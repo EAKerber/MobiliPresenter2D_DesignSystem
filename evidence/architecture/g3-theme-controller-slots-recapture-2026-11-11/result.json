@@ -1,0 +1,3630 @@
+{
+  "generatedAt": "2026-11-12T01:27:50.351Z",
+  "productCommit": "221b54b2a41ecc8c338d1bf2cf67280cf165ce95",
+  "method": "Clean detached source checkout; local files routed through Playwright; theme mode set before navigation; CSSOM/DOM slot, visible brand asset and two real button transitions recorded; no remote services.",
+  "browser": "Microsoft Edge 157.0.4341.46",
+  "dpr": 1,
+  "widths": [
+    390,
+    1366
+  ],
+  "routes": [
+    "/",
+    "/how-it-works/",
+    "/about/",
+    "/viewer/",
+    "/config/",
+    "/admin.html",
+    "/access/manage.html"
+  ],
+  "rows": [
+    {
+      "id": "--390-light",
+      "route": "/",
+      "width": 390,
+      "theme": "light",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/",
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css?v=gold-system-r1",
+          "http://g3-main.local/landing/landing.css?v=gold-system-r1",
+          "http://g3-main.local/ui-theme.css?v=ds01-theme-v1"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Claro. Ativar Escuro.",
+          "title": "Tema: Claro (próximo: Escuro)",
+          "mode": "light",
+          "parent": "html > body > header.site-header > div.header-actions",
+          "parentClass": "header-actions",
+          "rect": {
+            "x": 285,
+            "y": 13.1,
+            "width": 44,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(34, 33, 31)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-light-splash-1548.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-splash-1548.png",
+            "expectedSrc": "/branding/logo-light-splash-1548.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 1548,
+            "parent": "html > body > div#introSplash > div.intro-mark",
+            "rect": {
+              "x": 81.9,
+              "y": 354,
+              "width": 226.3,
+              "height": 80.8
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > header.site-header > a.brand",
+            "rect": {
+              "x": 14,
+              "y": 10,
+              "width": 140.4,
+              "height": 50.2
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > footer#quem-somos",
+            "rect": {
+              "x": 112,
+              "y": 2404.4,
+              "width": 166,
+              "height": 59.4
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-light-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+          "expectedSrc": "/branding/logo-light-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 14,
+            "y": 10,
+            "width": 140.4,
+            "height": 50.2
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "fill"
+        },
+        "privateHeader": false,
+        "publicHeader": true,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "dark",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-splash-1548.png",
+            "/branding/logo-dark-380.png",
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "dark"
+        },
+        {
+          "mode": "auto",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-splash-1548.png",
+            "/branding/logo-light-380.png",
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "auto"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "id": "--390-dark",
+      "route": "/",
+      "width": 390,
+      "theme": "dark",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/",
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css?v=gold-system-r1",
+          "http://g3-main.local/landing/landing.css?v=gold-system-r1",
+          "http://g3-main.local/ui-theme.css?v=ds01-theme-v1"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Escuro. Ativar Automático.",
+          "title": "Tema: Escuro (próximo: Automático)",
+          "mode": "dark",
+          "parent": "html > body > header.site-header > div.header-actions",
+          "parentClass": "header-actions",
+          "rect": {
+            "x": 285,
+            "y": 13.1,
+            "width": 44,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(244, 241, 235)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-dark-splash-1548.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-splash-1548.png",
+            "expectedSrc": "/branding/logo-dark-splash-1548.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 1548,
+            "parent": "html > body > div#introSplash > div.intro-mark",
+            "rect": {
+              "x": 81.9,
+              "y": 354,
+              "width": 226.3,
+              "height": 80.8
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > header.site-header > a.brand",
+            "rect": {
+              "x": 14,
+              "y": 10,
+              "width": 140.4,
+              "height": 50.2
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > footer#quem-somos",
+            "rect": {
+              "x": 112,
+              "y": 2404.4,
+              "width": 166,
+              "height": 59.4
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-dark-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+          "expectedSrc": "/branding/logo-dark-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 14,
+            "y": 10,
+            "width": 140.4,
+            "height": 50.2
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "fill"
+        },
+        "privateHeader": false,
+        "publicHeader": true,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "auto",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-splash-1548.png",
+            "/branding/logo-dark-380.png",
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "auto"
+        },
+        {
+          "mode": "light",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-splash-1548.png",
+            "/branding/logo-light-380.png",
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "light"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "id": "--1366-light",
+      "route": "/",
+      "width": 1366,
+      "theme": "light",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/",
+        "viewport": {
+          "width": 1366,
+          "height": 900
+        },
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css?v=gold-system-r1",
+          "http://g3-main.local/landing/landing.css?v=gold-system-r1",
+          "http://g3-main.local/ui-theme.css?v=ds01-theme-v1"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Claro. Ativar Escuro.",
+          "title": "Tema: Claro (próximo: Escuro)",
+          "mode": "light",
+          "parent": "html > body > header.site-header > div.header-actions",
+          "parentClass": "header-actions",
+          "rect": {
+            "x": 1250.6,
+            "y": 22,
+            "width": 72.4,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(34, 33, 31)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-light-splash-1548.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-splash-1548.png",
+            "expectedSrc": "/branding/logo-light-splash-1548.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 1548,
+            "parent": "html > body > div#introSplash > div.intro-mark",
+            "rect": {
+              "x": 313.1,
+              "y": 285.5,
+              "width": 739.8,
+              "height": 264.3
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > header.site-header > a.brand",
+            "rect": {
+              "x": 43,
+              "y": 10,
+              "width": 190,
+              "height": 68
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > footer#quem-somos",
+            "rect": {
+              "x": 67,
+              "y": 2187.3,
+              "width": 166,
+              "height": 59.4
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-light-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+          "expectedSrc": "/branding/logo-light-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 43,
+            "y": 10,
+            "width": 190,
+            "height": 68
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "fill"
+        },
+        "privateHeader": false,
+        "publicHeader": true,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "dark",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-splash-1548.png",
+            "/branding/logo-dark-380.png",
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "dark"
+        },
+        {
+          "mode": "auto",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-splash-1548.png",
+            "/branding/logo-light-380.png",
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "auto"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "id": "--1366-dark",
+      "route": "/",
+      "width": 1366,
+      "theme": "dark",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/",
+        "viewport": {
+          "width": 1366,
+          "height": 900
+        },
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css?v=gold-system-r1",
+          "http://g3-main.local/landing/landing.css?v=gold-system-r1",
+          "http://g3-main.local/ui-theme.css?v=ds01-theme-v1"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Escuro. Ativar Automático.",
+          "title": "Tema: Escuro (próximo: Automático)",
+          "mode": "dark",
+          "parent": "html > body > header.site-header > div.header-actions",
+          "parentClass": "header-actions",
+          "rect": {
+            "x": 1243.5,
+            "y": 22,
+            "width": 79.5,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(244, 241, 235)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-dark-splash-1548.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-splash-1548.png",
+            "expectedSrc": "/branding/logo-dark-splash-1548.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 1548,
+            "parent": "html > body > div#introSplash > div.intro-mark",
+            "rect": {
+              "x": 316.6,
+              "y": 287.7,
+              "width": 732.8,
+              "height": 261.8
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > header.site-header > a.brand",
+            "rect": {
+              "x": 43,
+              "y": 10,
+              "width": 190,
+              "height": 68
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > footer#quem-somos",
+            "rect": {
+              "x": 67,
+              "y": 2187.3,
+              "width": 166,
+              "height": 59.4
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-dark-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+          "expectedSrc": "/branding/logo-dark-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 43,
+            "y": 10,
+            "width": 190,
+            "height": 68
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "fill"
+        },
+        "privateHeader": false,
+        "publicHeader": true,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "auto",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-splash-1548.png",
+            "/branding/logo-dark-380.png",
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "auto"
+        },
+        {
+          "mode": "light",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-splash-1548.png",
+            "/branding/logo-light-380.png",
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "light"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "id": "-how-it-works--390-light",
+      "route": "/how-it-works/",
+      "width": 390,
+      "theme": "light",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/how-it-works/",
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css?v=gold-system-r1",
+          "http://g3-main.local/landing/landing.css?v=gold-system-r1",
+          "http://g3-main.local/how-it-works/how-it-works.css",
+          "http://g3-main.local/ui-theme.css?v=ds01-theme-v1"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Claro. Ativar Escuro.",
+          "title": "Tema: Claro (próximo: Escuro)",
+          "mode": "light",
+          "parent": "html > body.how-page > header.site-header > div.header-actions",
+          "parentClass": "header-actions",
+          "rect": {
+            "x": 285,
+            "y": 13.1,
+            "width": 44,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(34, 33, 31)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.how-page > header.site-header > a.brand",
+            "rect": {
+              "x": 14,
+              "y": 10,
+              "width": 140.4,
+              "height": 50.2
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": false,
+            "naturalWidth": 380,
+            "parent": "html > body.how-page > main > section.section.comparison-section > div.comparison-grid > article.comparison-card.comparison-card-featured",
+            "rect": {
+              "x": 19,
+              "y": 4785.8,
+              "width": 380,
+              "height": 136
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.how-page > footer.site-footer",
+            "rect": {
+              "x": 112,
+              "y": 14597.6,
+              "width": 166,
+              "height": 59.4
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-light-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+          "expectedSrc": "/branding/logo-light-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 14,
+            "y": 10,
+            "width": 140.4,
+            "height": 50.2
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "fill"
+        },
+        "privateHeader": false,
+        "publicHeader": true,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "dark",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png",
+            "/branding/logo-dark-380.png",
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "dark"
+        },
+        {
+          "mode": "auto",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png",
+            "/branding/logo-light-380.png",
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "auto"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "id": "-how-it-works--390-dark",
+      "route": "/how-it-works/",
+      "width": 390,
+      "theme": "dark",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/how-it-works/",
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css?v=gold-system-r1",
+          "http://g3-main.local/landing/landing.css?v=gold-system-r1",
+          "http://g3-main.local/how-it-works/how-it-works.css",
+          "http://g3-main.local/ui-theme.css?v=ds01-theme-v1"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Escuro. Ativar Automático.",
+          "title": "Tema: Escuro (próximo: Automático)",
+          "mode": "dark",
+          "parent": "html > body.how-page > header.site-header > div.header-actions",
+          "parentClass": "header-actions",
+          "rect": {
+            "x": 285,
+            "y": 13.1,
+            "width": 44,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(244, 241, 235)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.how-page > header.site-header > a.brand",
+            "rect": {
+              "x": 14,
+              "y": 10,
+              "width": 140.4,
+              "height": 50.2
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": false,
+            "naturalWidth": 380,
+            "parent": "html > body.how-page > main > section.section.comparison-section > div.comparison-grid > article.comparison-card.comparison-card-featured",
+            "rect": {
+              "x": 19,
+              "y": 4785.8,
+              "width": 380,
+              "height": 136
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.how-page > footer.site-footer",
+            "rect": {
+              "x": 112,
+              "y": 14597.6,
+              "width": 166,
+              "height": 59.4
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-dark-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+          "expectedSrc": "/branding/logo-dark-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 14,
+            "y": 10,
+            "width": 140.4,
+            "height": 50.2
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "fill"
+        },
+        "privateHeader": false,
+        "publicHeader": true,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "auto",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png",
+            "/branding/logo-dark-380.png",
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "auto"
+        },
+        {
+          "mode": "light",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png",
+            "/branding/logo-light-380.png",
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "light"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "id": "-how-it-works--1366-light",
+      "route": "/how-it-works/",
+      "width": 1366,
+      "theme": "light",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/how-it-works/",
+        "viewport": {
+          "width": 1366,
+          "height": 900
+        },
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css?v=gold-system-r1",
+          "http://g3-main.local/landing/landing.css?v=gold-system-r1",
+          "http://g3-main.local/how-it-works/how-it-works.css",
+          "http://g3-main.local/ui-theme.css?v=ds01-theme-v1"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Claro. Ativar Escuro.",
+          "title": "Tema: Claro (próximo: Escuro)",
+          "mode": "light",
+          "parent": "html > body.how-page > header.site-header > div.header-actions",
+          "parentClass": "header-actions",
+          "rect": {
+            "x": 1250.6,
+            "y": 22,
+            "width": 72.4,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(34, 33, 31)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.how-page > header.site-header > a.brand",
+            "rect": {
+              "x": 43,
+              "y": 10,
+              "width": 190,
+              "height": 68
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.how-page > main > section.section.comparison-section > div.comparison-grid > article.comparison-card.comparison-card-featured",
+            "rect": {
+              "x": 894.7,
+              "y": 2636.1,
+              "width": 380,
+              "height": 136
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.how-page > footer.site-footer",
+            "rect": {
+              "x": 67,
+              "y": 9576.9,
+              "width": 166,
+              "height": 59.4
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-light-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+          "expectedSrc": "/branding/logo-light-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 43,
+            "y": 10,
+            "width": 190,
+            "height": 68
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "fill"
+        },
+        "privateHeader": false,
+        "publicHeader": true,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "dark",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png",
+            "/branding/logo-dark-380.png",
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "dark"
+        },
+        {
+          "mode": "auto",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png",
+            "/branding/logo-light-380.png",
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "auto"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "id": "-how-it-works--1366-dark",
+      "route": "/how-it-works/",
+      "width": 1366,
+      "theme": "dark",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/how-it-works/",
+        "viewport": {
+          "width": 1366,
+          "height": 900
+        },
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css?v=gold-system-r1",
+          "http://g3-main.local/landing/landing.css?v=gold-system-r1",
+          "http://g3-main.local/how-it-works/how-it-works.css",
+          "http://g3-main.local/ui-theme.css?v=ds01-theme-v1"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Escuro. Ativar Automático.",
+          "title": "Tema: Escuro (próximo: Automático)",
+          "mode": "dark",
+          "parent": "html > body.how-page > header.site-header > div.header-actions",
+          "parentClass": "header-actions",
+          "rect": {
+            "x": 1243.5,
+            "y": 22,
+            "width": 79.5,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(244, 241, 235)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.how-page > header.site-header > a.brand",
+            "rect": {
+              "x": 43,
+              "y": 10,
+              "width": 190,
+              "height": 68
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.how-page > main > section.section.comparison-section > div.comparison-grid > article.comparison-card.comparison-card-featured",
+            "rect": {
+              "x": 894.7,
+              "y": 2636.1,
+              "width": 380,
+              "height": 136
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.how-page > footer.site-footer",
+            "rect": {
+              "x": 67,
+              "y": 9576.9,
+              "width": 166,
+              "height": 59.4
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-dark-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+          "expectedSrc": "/branding/logo-dark-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 43,
+            "y": 10,
+            "width": 190,
+            "height": 68
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "fill"
+        },
+        "privateHeader": false,
+        "publicHeader": true,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "auto",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png",
+            "/branding/logo-dark-380.png",
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "auto"
+        },
+        {
+          "mode": "light",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png",
+            "/branding/logo-light-380.png",
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "light"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "id": "-about--390-light",
+      "route": "/about/",
+      "width": 390,
+      "theme": "light",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/about/",
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css",
+          "http://g3-main.local/landing/landing.css",
+          "http://g3-main.local/about/about.css",
+          "http://g3-main.local/ui-theme.css?v=ds01-theme-v1"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Claro. Ativar Escuro.",
+          "title": "Tema: Claro (próximo: Escuro)",
+          "mode": "light",
+          "parent": "html > body > header.site-header > div.header-actions",
+          "parentClass": "header-actions",
+          "rect": {
+            "x": 285,
+            "y": 13.1,
+            "width": 44,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(34, 33, 31)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > header.site-header > a.brand",
+            "rect": {
+              "x": 14,
+              "y": 10,
+              "width": 140.4,
+              "height": 50.2
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > footer.site-footer",
+            "rect": {
+              "x": 112,
+              "y": 3664.4,
+              "width": 166,
+              "height": 59.4
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-light-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+          "expectedSrc": "/branding/logo-light-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 14,
+            "y": 10,
+            "width": 140.4,
+            "height": 50.2
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "fill"
+        },
+        "privateHeader": false,
+        "publicHeader": true,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "dark",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png",
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "dark"
+        },
+        {
+          "mode": "auto",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png",
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "auto"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "id": "-about--390-dark",
+      "route": "/about/",
+      "width": 390,
+      "theme": "dark",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/about/",
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css",
+          "http://g3-main.local/landing/landing.css",
+          "http://g3-main.local/about/about.css",
+          "http://g3-main.local/ui-theme.css?v=ds01-theme-v1"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Escuro. Ativar Automático.",
+          "title": "Tema: Escuro (próximo: Automático)",
+          "mode": "dark",
+          "parent": "html > body > header.site-header > div.header-actions",
+          "parentClass": "header-actions",
+          "rect": {
+            "x": 285,
+            "y": 13.1,
+            "width": 44,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(244, 241, 235)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > header.site-header > a.brand",
+            "rect": {
+              "x": 14,
+              "y": 10,
+              "width": 140.4,
+              "height": 50.2
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > footer.site-footer",
+            "rect": {
+              "x": 112,
+              "y": 3664.4,
+              "width": 166,
+              "height": 59.4
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-dark-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+          "expectedSrc": "/branding/logo-dark-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 14,
+            "y": 10,
+            "width": 140.4,
+            "height": 50.2
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "fill"
+        },
+        "privateHeader": false,
+        "publicHeader": true,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "auto",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png",
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "auto"
+        },
+        {
+          "mode": "light",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png",
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "light"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "id": "-about--1366-light",
+      "route": "/about/",
+      "width": 1366,
+      "theme": "light",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/about/",
+        "viewport": {
+          "width": 1366,
+          "height": 900
+        },
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css",
+          "http://g3-main.local/landing/landing.css",
+          "http://g3-main.local/about/about.css",
+          "http://g3-main.local/ui-theme.css?v=ds01-theme-v1"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Claro. Ativar Escuro.",
+          "title": "Tema: Claro (próximo: Escuro)",
+          "mode": "light",
+          "parent": "html > body > header.site-header > div.header-actions",
+          "parentClass": "header-actions",
+          "rect": {
+            "x": 1250.6,
+            "y": 22,
+            "width": 72.4,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(34, 33, 31)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > header.site-header > a.brand",
+            "rect": {
+              "x": 43,
+              "y": 10,
+              "width": 190,
+              "height": 68
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > footer.site-footer",
+            "rect": {
+              "x": 67,
+              "y": 3398.2,
+              "width": 166,
+              "height": 59.4
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-light-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+          "expectedSrc": "/branding/logo-light-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 43,
+            "y": 10,
+            "width": 190,
+            "height": 68
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "fill"
+        },
+        "privateHeader": false,
+        "publicHeader": true,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "dark",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png",
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "dark"
+        },
+        {
+          "mode": "auto",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png",
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "auto"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "id": "-about--1366-dark",
+      "route": "/about/",
+      "width": 1366,
+      "theme": "dark",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/about/",
+        "viewport": {
+          "width": 1366,
+          "height": 900
+        },
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css",
+          "http://g3-main.local/landing/landing.css",
+          "http://g3-main.local/about/about.css",
+          "http://g3-main.local/ui-theme.css?v=ds01-theme-v1"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Escuro. Ativar Automático.",
+          "title": "Tema: Escuro (próximo: Automático)",
+          "mode": "dark",
+          "parent": "html > body > header.site-header > div.header-actions",
+          "parentClass": "header-actions",
+          "rect": {
+            "x": 1243.5,
+            "y": 22,
+            "width": 79.5,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(244, 241, 235)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > header.site-header > a.brand",
+            "rect": {
+              "x": 43,
+              "y": 10,
+              "width": 190,
+              "height": 68
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          },
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > footer.site-footer",
+            "rect": {
+              "x": 67,
+              "y": 3398.2,
+              "width": 166,
+              "height": 59.4
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "fill"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-dark-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+          "expectedSrc": "/branding/logo-dark-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 43,
+            "y": 10,
+            "width": 190,
+            "height": 68
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "fill"
+        },
+        "privateHeader": false,
+        "publicHeader": true,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "auto",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png",
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "auto"
+        },
+        {
+          "mode": "light",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png",
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "light"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "id": "-viewer--390-light",
+      "route": "/viewer/",
+      "width": 390,
+      "theme": "light",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/viewer/",
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css?v=gold-system-r1",
+          "http://g3-main.local/viewer/viewer.css?v=viewer-scene-error-v1",
+          "http://g3-main.local/ui-theme.css?v=ds01-theme-v1"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Claro. Ativar Escuro.",
+          "title": "Tema: Claro (próximo: Escuro)",
+          "mode": "light",
+          "parent": "html > body > header.viewer-header > div.viewer-header__actions.header-actions",
+          "parentClass": "viewer-header__actions header-actions",
+          "rect": {
+            "x": 252.6,
+            "y": 10,
+            "width": 71.4,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(34, 33, 31)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > header.viewer-header > div.viewer-header__context > a.viewer-brand",
+            "rect": {
+              "x": 14,
+              "y": 10.5,
+              "width": 120,
+              "height": 42.9
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "contain"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-light-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+          "expectedSrc": "/branding/logo-light-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 14,
+            "y": 10.5,
+            "width": 120,
+            "height": 42.9
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "contain"
+        },
+        "privateHeader": false,
+        "publicHeader": false,
+        "viewerHeader": true
+      },
+      "transition": [
+        {
+          "mode": "dark",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "dark"
+        },
+        {
+          "mode": "auto",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "auto"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g3-main.local/api/public-modules"
+        }
+      ]
+    },
+    {
+      "id": "-viewer--390-dark",
+      "route": "/viewer/",
+      "width": 390,
+      "theme": "dark",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/viewer/",
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css?v=gold-system-r1",
+          "http://g3-main.local/viewer/viewer.css?v=viewer-scene-error-v1",
+          "http://g3-main.local/ui-theme.css?v=ds01-theme-v1"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Escuro. Ativar Automático.",
+          "title": "Tema: Escuro (próximo: Automático)",
+          "mode": "dark",
+          "parent": "html > body > header.viewer-header > div.viewer-header__actions.header-actions",
+          "parentClass": "viewer-header__actions header-actions",
+          "rect": {
+            "x": 245.3,
+            "y": 10,
+            "width": 78.8,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(244, 241, 235)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > header.viewer-header > div.viewer-header__context > a.viewer-brand",
+            "rect": {
+              "x": 14,
+              "y": 10.5,
+              "width": 120,
+              "height": 42.9
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "contain"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-dark-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+          "expectedSrc": "/branding/logo-dark-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 14,
+            "y": 10.5,
+            "width": 120,
+            "height": 42.9
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "contain"
+        },
+        "privateHeader": false,
+        "publicHeader": false,
+        "viewerHeader": true
+      },
+      "transition": [
+        {
+          "mode": "auto",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "auto"
+        },
+        {
+          "mode": "light",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "light"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g3-main.local/api/public-modules"
+        }
+      ]
+    },
+    {
+      "id": "-viewer--1366-light",
+      "route": "/viewer/",
+      "width": 1366,
+      "theme": "light",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/viewer/",
+        "viewport": {
+          "width": 1366,
+          "height": 900
+        },
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css?v=gold-system-r1",
+          "http://g3-main.local/viewer/viewer.css?v=viewer-scene-error-v1",
+          "http://g3-main.local/ui-theme.css?v=ds01-theme-v1"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Claro. Ativar Escuro.",
+          "title": "Tema: Claro (próximo: Escuro)",
+          "mode": "light",
+          "parent": "html > body > header.viewer-header > div.viewer-header__actions.header-actions",
+          "parentClass": "viewer-header__actions header-actions",
+          "rect": {
+            "x": 1220.6,
+            "y": 16.6,
+            "width": 71.4,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(34, 33, 31)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > header.viewer-header > div.viewer-header__context > a.viewer-brand",
+            "rect": {
+              "x": 22,
+              "y": 10,
+              "width": 160,
+              "height": 57.3
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "contain"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-light-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+          "expectedSrc": "/branding/logo-light-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 22,
+            "y": 10,
+            "width": 160,
+            "height": 57.3
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "contain"
+        },
+        "privateHeader": false,
+        "publicHeader": false,
+        "viewerHeader": true
+      },
+      "transition": [
+        {
+          "mode": "dark",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "dark"
+        },
+        {
+          "mode": "auto",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "auto"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g3-main.local/api/public-modules"
+        }
+      ]
+    },
+    {
+      "id": "-viewer--1366-dark",
+      "route": "/viewer/",
+      "width": 1366,
+      "theme": "dark",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/viewer/",
+        "viewport": {
+          "width": 1366,
+          "height": 900
+        },
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css?v=gold-system-r1",
+          "http://g3-main.local/viewer/viewer.css?v=viewer-scene-error-v1",
+          "http://g3-main.local/ui-theme.css?v=ds01-theme-v1"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Escuro. Ativar Automático.",
+          "title": "Tema: Escuro (próximo: Automático)",
+          "mode": "dark",
+          "parent": "html > body > header.viewer-header > div.viewer-header__actions.header-actions",
+          "parentClass": "viewer-header__actions header-actions",
+          "rect": {
+            "x": 1213.3,
+            "y": 16.6,
+            "width": 78.8,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(244, 241, 235)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > header.viewer-header > div.viewer-header__context > a.viewer-brand",
+            "rect": {
+              "x": 22,
+              "y": 10,
+              "width": 160,
+              "height": 57.3
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "contain"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-dark-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+          "expectedSrc": "/branding/logo-dark-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 22,
+            "y": 10,
+            "width": 160,
+            "height": 57.3
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "contain"
+        },
+        "privateHeader": false,
+        "publicHeader": false,
+        "viewerHeader": true
+      },
+      "transition": [
+        {
+          "mode": "auto",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "auto"
+        },
+        {
+          "mode": "light",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "light"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g3-main.local/api/public-modules"
+        }
+      ]
+    },
+    {
+      "id": "-config--390-light",
+      "route": "/config/",
+      "width": 390,
+      "theme": "light",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/config/",
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "stylesheets": [
+          "http://g3-main.local/styles.css?v=runtime-v40",
+          "inline",
+          "http://g3-main.local/ui-theme.css?v=private-header-nav005-v2",
+          "inline"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Claro. Ativar Escuro.",
+          "title": "Tema: Claro (próximo: Escuro)",
+          "mode": "light",
+          "parent": "html > body.has-mobile-scene-pin.has-bottom-dock > header.topbar.private-header > div.topbar__inner > div.topbar__actions.private-header__actions",
+          "parentClass": "topbar__actions private-header__actions",
+          "rect": {
+            "x": 238.6,
+            "y": 65.2,
+            "width": 71.4,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(34, 33, 31)",
+          "background": "rgb(240, 237, 232)",
+          "border": "rgb(199, 183, 162)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.has-mobile-scene-pin.has-bottom-dock > header.topbar.private-header > div.topbar__inner > div.brand.private-header__brand",
+            "rect": {
+              "x": 28,
+              "y": 10,
+              "width": 132,
+              "height": 47.2
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "contain"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-light-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+          "expectedSrc": "/branding/logo-light-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 28,
+            "y": 10,
+            "width": 132,
+            "height": 47.2
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "contain"
+        },
+        "privateHeader": true,
+        "publicHeader": false,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "dark",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "dark"
+        },
+        {
+          "mode": "auto",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "auto"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Configuração publicada inválida: Error: published configuration unavailable or unauthorized\n    at http://g3-main.local/app.js?v=runtime-v40:2552:15"
+      ],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g3-main.local/core/private-navigation.bundle.js?v=private-header-v1"
+        },
+        {
+          "status": 404,
+          "url": "http://g3-main.local/api/buyer-configuration"
+        }
+      ]
+    },
+    {
+      "id": "-config--390-dark",
+      "route": "/config/",
+      "width": 390,
+      "theme": "dark",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/config/",
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "stylesheets": [
+          "http://g3-main.local/styles.css?v=runtime-v40",
+          "inline",
+          "http://g3-main.local/ui-theme.css?v=private-header-nav005-v2",
+          "inline"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Escuro. Ativar Automático.",
+          "title": "Tema: Escuro (próximo: Automático)",
+          "mode": "dark",
+          "parent": "html > body.has-mobile-scene-pin.has-bottom-dock > header.topbar.private-header > div.topbar__inner > div.topbar__actions.private-header__actions",
+          "parentClass": "topbar__actions private-header__actions",
+          "rect": {
+            "x": 231.3,
+            "y": 65.2,
+            "width": 78.8,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(244, 241, 235)",
+          "background": "rgb(32, 33, 31)",
+          "border": "rgb(123, 118, 108)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.has-mobile-scene-pin.has-bottom-dock > header.topbar.private-header > div.topbar__inner > div.brand.private-header__brand",
+            "rect": {
+              "x": 28,
+              "y": 10,
+              "width": 132,
+              "height": 47.2
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "contain"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-dark-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+          "expectedSrc": "/branding/logo-dark-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 28,
+            "y": 10,
+            "width": 132,
+            "height": 47.2
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "contain"
+        },
+        "privateHeader": true,
+        "publicHeader": false,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "auto",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "auto"
+        },
+        {
+          "mode": "light",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "light"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Configuração publicada inválida: Error: published configuration unavailable or unauthorized\n    at http://g3-main.local/app.js?v=runtime-v40:2552:15"
+      ],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g3-main.local/core/private-navigation.bundle.js?v=private-header-v1"
+        },
+        {
+          "status": 404,
+          "url": "http://g3-main.local/api/buyer-configuration"
+        }
+      ]
+    },
+    {
+      "id": "-config--1366-light",
+      "route": "/config/",
+      "width": 1366,
+      "theme": "light",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/config/",
+        "viewport": {
+          "width": 1366,
+          "height": 900
+        },
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "stylesheets": [
+          "http://g3-main.local/styles.css?v=runtime-v40",
+          "inline",
+          "http://g3-main.local/ui-theme.css?v=private-header-nav005-v2",
+          "inline"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Claro. Ativar Escuro.",
+          "title": "Tema: Claro (próximo: Escuro)",
+          "mode": "light",
+          "parent": "html > body.has-bottom-dock > header.topbar.private-header > div.topbar__inner > div.topbar__actions.private-header__actions",
+          "parentClass": "topbar__actions private-header__actions",
+          "rect": {
+            "x": 1218.6,
+            "y": 16.6,
+            "width": 79.4,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(34, 33, 31)",
+          "background": "rgb(240, 237, 232)",
+          "border": "rgb(199, 183, 162)",
+          "minWidth": "40px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.has-bottom-dock > header.topbar.private-header > div.topbar__inner > div.brand.private-header__brand",
+            "rect": {
+              "x": 16,
+              "y": 10,
+              "width": 160,
+              "height": 57.3
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "contain"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-light-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+          "expectedSrc": "/branding/logo-light-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 16,
+            "y": 10,
+            "width": 160,
+            "height": 57.3
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "contain"
+        },
+        "privateHeader": true,
+        "publicHeader": false,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "dark",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "dark"
+        },
+        {
+          "mode": "auto",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "auto"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Configuração publicada inválida: Error: published configuration unavailable or unauthorized\n    at http://g3-main.local/app.js?v=runtime-v40:2552:15"
+      ],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g3-main.local/core/private-navigation.bundle.js?v=private-header-v1"
+        },
+        {
+          "status": 404,
+          "url": "http://g3-main.local/api/buyer-configuration"
+        }
+      ]
+    },
+    {
+      "id": "-config--1366-dark",
+      "route": "/config/",
+      "width": 1366,
+      "theme": "dark",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/config/",
+        "viewport": {
+          "width": 1366,
+          "height": 900
+        },
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "stylesheets": [
+          "http://g3-main.local/styles.css?v=runtime-v40",
+          "inline",
+          "http://g3-main.local/ui-theme.css?v=private-header-nav005-v2",
+          "inline"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Escuro. Ativar Automático.",
+          "title": "Tema: Escuro (próximo: Automático)",
+          "mode": "dark",
+          "parent": "html > body.has-bottom-dock > header.topbar.private-header > div.topbar__inner > div.topbar__actions.private-header__actions",
+          "parentClass": "topbar__actions private-header__actions",
+          "rect": {
+            "x": 1211.3,
+            "y": 16.6,
+            "width": 86.8,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(244, 241, 235)",
+          "background": "rgb(32, 33, 31)",
+          "border": "rgb(123, 118, 108)",
+          "minWidth": "40px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.has-bottom-dock > header.topbar.private-header > div.topbar__inner > div.brand.private-header__brand",
+            "rect": {
+              "x": 16,
+              "y": 10,
+              "width": 160,
+              "height": 57.3
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "contain"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-dark-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+          "expectedSrc": "/branding/logo-dark-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 16,
+            "y": 10,
+            "width": 160,
+            "height": 57.3
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "contain"
+        },
+        "privateHeader": true,
+        "publicHeader": false,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "auto",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "auto"
+        },
+        {
+          "mode": "light",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "light"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Configuração publicada inválida: Error: published configuration unavailable or unauthorized\n    at http://g3-main.local/app.js?v=runtime-v40:2552:15"
+      ],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g3-main.local/core/private-navigation.bundle.js?v=private-header-v1"
+        },
+        {
+          "status": 404,
+          "url": "http://g3-main.local/api/buyer-configuration"
+        }
+      ]
+    },
+    {
+      "id": "-admin-html-390-light",
+      "route": "/admin.html",
+      "width": 390,
+      "theme": "light",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/admin.html",
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "stylesheets": [
+          "http://g3-main.local/admin/admin.css?v=viewer-price-main-v1",
+          "http://g3-main.local/ui-theme.css?v=private-header-nav005-v2"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Claro. Ativar Escuro.",
+          "title": "Tema: Claro (próximo: Escuro)",
+          "mode": "light",
+          "parent": "html > body > header.admin-topbar.private-header > div.admin-topbar__actions.private-header__actions",
+          "parentClass": "admin-topbar__actions private-header__actions",
+          "rect": {
+            "x": 252.6,
+            "y": 10.6,
+            "width": 71.4,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(34, 33, 31)",
+          "background": "rgb(240, 237, 232)",
+          "border": "rgb(199, 183, 162)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > header.admin-topbar.private-header > a.brand.private-header__brand",
+            "rect": {
+              "x": 14,
+              "y": 9,
+              "width": 132,
+              "height": 47.2
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "contain"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-light-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+          "expectedSrc": "/branding/logo-light-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 14,
+            "y": 9,
+            "width": 132,
+            "height": 47.2
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "contain"
+        },
+        "privateHeader": true,
+        "publicHeader": false,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "dark",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "dark"
+        },
+        {
+          "mode": "auto",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "auto"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g3-main.local/core/private-navigation.bundle.js?v=private-header-v1"
+        },
+        {
+          "status": 404,
+          "url": "http://g3-main.local/admin/admin.bundle.js?v=viewer-price-main-ux230-v2"
+        }
+      ]
+    },
+    {
+      "id": "-admin-html-390-dark",
+      "route": "/admin.html",
+      "width": 390,
+      "theme": "dark",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/admin.html",
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "stylesheets": [
+          "http://g3-main.local/admin/admin.css?v=viewer-price-main-v1",
+          "http://g3-main.local/ui-theme.css?v=private-header-nav005-v2"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Escuro. Ativar Automático.",
+          "title": "Tema: Escuro (próximo: Automático)",
+          "mode": "dark",
+          "parent": "html > body > header.admin-topbar.private-header > div.admin-topbar__actions.private-header__actions",
+          "parentClass": "admin-topbar__actions private-header__actions",
+          "rect": {
+            "x": 245.3,
+            "y": 10.6,
+            "width": 78.8,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(244, 241, 235)",
+          "background": "rgb(32, 33, 31)",
+          "border": "rgb(123, 118, 108)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > header.admin-topbar.private-header > a.brand.private-header__brand",
+            "rect": {
+              "x": 14,
+              "y": 9,
+              "width": 132,
+              "height": 47.2
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "contain"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-dark-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+          "expectedSrc": "/branding/logo-dark-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 14,
+            "y": 9,
+            "width": 132,
+            "height": 47.2
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "contain"
+        },
+        "privateHeader": true,
+        "publicHeader": false,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "auto",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "auto"
+        },
+        {
+          "mode": "light",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "light"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g3-main.local/core/private-navigation.bundle.js?v=private-header-v1"
+        },
+        {
+          "status": 404,
+          "url": "http://g3-main.local/admin/admin.bundle.js?v=viewer-price-main-ux230-v2"
+        }
+      ]
+    },
+    {
+      "id": "-admin-html-1366-light",
+      "route": "/admin.html",
+      "width": 1366,
+      "theme": "light",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/admin.html",
+        "viewport": {
+          "width": 1366,
+          "height": 900
+        },
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "stylesheets": [
+          "http://g3-main.local/admin/admin.css?v=viewer-price-main-v1",
+          "http://g3-main.local/ui-theme.css?v=private-header-nav005-v2"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Claro. Ativar Escuro.",
+          "title": "Tema: Claro (próximo: Escuro)",
+          "mode": "light",
+          "parent": "html > body > header.admin-topbar.private-header > div.admin-topbar__actions.private-header__actions",
+          "parentClass": "admin-topbar__actions private-header__actions",
+          "rect": {
+            "x": 1218.6,
+            "y": 16.6,
+            "width": 79.4,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(34, 33, 31)",
+          "background": "rgb(240, 237, 232)",
+          "border": "rgb(199, 183, 162)",
+          "minWidth": "40px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > header.admin-topbar.private-header > a.brand.private-header__brand",
+            "rect": {
+              "x": 16,
+              "y": 10,
+              "width": 160,
+              "height": 57.3
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "contain"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-light-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+          "expectedSrc": "/branding/logo-light-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 16,
+            "y": 10,
+            "width": 160,
+            "height": 57.3
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "contain"
+        },
+        "privateHeader": true,
+        "publicHeader": false,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "dark",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "dark"
+        },
+        {
+          "mode": "auto",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "auto"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g3-main.local/admin/admin.bundle.js?v=viewer-price-main-ux230-v2"
+        },
+        {
+          "status": 404,
+          "url": "http://g3-main.local/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ]
+    },
+    {
+      "id": "-admin-html-1366-dark",
+      "route": "/admin.html",
+      "width": 1366,
+      "theme": "dark",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/admin.html",
+        "viewport": {
+          "width": 1366,
+          "height": 900
+        },
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "stylesheets": [
+          "http://g3-main.local/admin/admin.css?v=viewer-price-main-v1",
+          "http://g3-main.local/ui-theme.css?v=private-header-nav005-v2"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Escuro. Ativar Automático.",
+          "title": "Tema: Escuro (próximo: Automático)",
+          "mode": "dark",
+          "parent": "html > body > header.admin-topbar.private-header > div.admin-topbar__actions.private-header__actions",
+          "parentClass": "admin-topbar__actions private-header__actions",
+          "rect": {
+            "x": 1211.3,
+            "y": 16.6,
+            "width": 86.8,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(244, 241, 235)",
+          "background": "rgb(32, 33, 31)",
+          "border": "rgb(123, 118, 108)",
+          "minWidth": "40px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body > header.admin-topbar.private-header > a.brand.private-header__brand",
+            "rect": {
+              "x": 16,
+              "y": 10,
+              "width": 160,
+              "height": 57.3
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "contain"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-dark-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+          "expectedSrc": "/branding/logo-dark-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 16,
+            "y": 10,
+            "width": 160,
+            "height": 57.3
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "contain"
+        },
+        "privateHeader": true,
+        "publicHeader": false,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "auto",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "auto"
+        },
+        {
+          "mode": "light",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "light"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g3-main.local/core/private-navigation.bundle.js?v=private-header-v1"
+        },
+        {
+          "status": 404,
+          "url": "http://g3-main.local/admin/admin.bundle.js?v=viewer-price-main-ux230-v2"
+        }
+      ]
+    },
+    {
+      "id": "-access-manage-html-390-light",
+      "route": "/access/manage.html",
+      "width": 390,
+      "theme": "light",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/access/manage.html",
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css",
+          "inline",
+          "http://g3-main.local/ui-theme.css?v=private-header-nav005-v2"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Claro. Ativar Escuro.",
+          "title": "Tema: Claro (próximo: Escuro)",
+          "mode": "light",
+          "parent": "html > body.access-page > header.private-header.access-private-header > div.admin-topbar__actions.private-header__actions",
+          "parentClass": "admin-topbar__actions private-header__actions",
+          "rect": {
+            "x": 252.6,
+            "y": 10.2,
+            "width": 71.4,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(34, 33, 31)",
+          "background": "rgb(240, 237, 232)",
+          "border": "rgb(199, 183, 162)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.access-page > header.private-header.access-private-header > a.private-header__brand",
+            "rect": {
+              "x": 14,
+              "y": 9,
+              "width": 129.4,
+              "height": 46.3
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "contain"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-light-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+          "expectedSrc": "/branding/logo-light-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 14,
+            "y": 9,
+            "width": 129.4,
+            "height": 46.3
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "contain"
+        },
+        "privateHeader": true,
+        "publicHeader": false,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "dark",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "dark"
+        },
+        {
+          "mode": "auto",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "auto"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g3-main.local/core/private-navigation.bundle.js?v=private-header-v1"
+        },
+        {
+          "status": 404,
+          "url": "http://g3-main.local/access/manage.bundle.js"
+        }
+      ]
+    },
+    {
+      "id": "-access-manage-html-390-dark",
+      "route": "/access/manage.html",
+      "width": 390,
+      "theme": "dark",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/access/manage.html",
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css",
+          "inline",
+          "http://g3-main.local/ui-theme.css?v=private-header-nav005-v2"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Escuro. Ativar Automático.",
+          "title": "Tema: Escuro (próximo: Automático)",
+          "mode": "dark",
+          "parent": "html > body.access-page > header.private-header.access-private-header > div.admin-topbar__actions.private-header__actions",
+          "parentClass": "admin-topbar__actions private-header__actions",
+          "rect": {
+            "x": 245.3,
+            "y": 9.4,
+            "width": 78.8,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(244, 241, 235)",
+          "background": "rgb(32, 33, 31)",
+          "border": "rgb(123, 118, 108)",
+          "minWidth": "44px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.access-page > header.private-header.access-private-header > a.private-header__brand",
+            "rect": {
+              "x": 14,
+              "y": 9,
+              "width": 125.1,
+              "height": 44.8
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "contain"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-dark-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+          "expectedSrc": "/branding/logo-dark-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 14,
+            "y": 9,
+            "width": 125.1,
+            "height": 44.8
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "contain"
+        },
+        "privateHeader": true,
+        "publicHeader": false,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "auto",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "auto"
+        },
+        {
+          "mode": "light",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "light"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g3-main.local/core/private-navigation.bundle.js?v=private-header-v1"
+        },
+        {
+          "status": 404,
+          "url": "http://g3-main.local/access/manage.bundle.js"
+        }
+      ]
+    },
+    {
+      "id": "-access-manage-html-1366-light",
+      "route": "/access/manage.html",
+      "width": 1366,
+      "theme": "light",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/access/manage.html",
+        "viewport": {
+          "width": 1366,
+          "height": 900
+        },
+        "requestedTheme": "light",
+        "rootTheme": "light",
+        "rootThemeMode": "light",
+        "themeApiMode": "light",
+        "themeApiResolved": "light",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css",
+          "inline",
+          "http://g3-main.local/ui-theme.css?v=private-header-nav005-v2"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Claro. Ativar Escuro.",
+          "title": "Tema: Claro (próximo: Escuro)",
+          "mode": "light",
+          "parent": "html > body.access-page > header.private-header.access-private-header > div.admin-topbar__actions.private-header__actions",
+          "parentClass": "admin-topbar__actions private-header__actions",
+          "rect": {
+            "x": 1218.6,
+            "y": 16.6,
+            "width": 79.4,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(34, 33, 31)",
+          "background": "rgb(240, 237, 232)",
+          "border": "rgb(199, 183, 162)",
+          "minWidth": "40px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-light-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+            "expectedSrc": "/branding/logo-light-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.access-page > header.private-header.access-private-header > a.private-header__brand",
+            "rect": {
+              "x": 16,
+              "y": 10,
+              "width": 160,
+              "height": 57.3
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "contain"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-light-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-light-380.png",
+          "expectedSrc": "/branding/logo-light-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 16,
+            "y": 10,
+            "width": 160,
+            "height": 57.3
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "contain"
+        },
+        "privateHeader": true,
+        "publicHeader": false,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "dark",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "dark"
+        },
+        {
+          "mode": "auto",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "auto"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g3-main.local/access/manage.bundle.js"
+        },
+        {
+          "status": 404,
+          "url": "http://g3-main.local/core/private-navigation.bundle.js?v=private-header-v1"
+        }
+      ]
+    },
+    {
+      "id": "-access-manage-html-1366-dark",
+      "route": "/access/manage.html",
+      "width": 1366,
+      "theme": "dark",
+      "browserVersion": "157.0.4341.46",
+      "initial": {
+        "route": "/access/manage.html",
+        "viewport": {
+          "width": 1366,
+          "height": 900
+        },
+        "requestedTheme": "dark",
+        "rootTheme": "dark",
+        "rootThemeMode": "dark",
+        "themeApiMode": "dark",
+        "themeApiResolved": "dark",
+        "stylesheets": [
+          "http://g3-main.local/public-theme.css",
+          "inline",
+          "http://g3-main.local/ui-theme.css?v=private-header-nav005-v2"
+        ],
+        "themeButton": {
+          "exists": true,
+          "ariaLabel": "Tema atual: Escuro. Ativar Automático.",
+          "title": "Tema: Escuro (próximo: Automático)",
+          "mode": "dark",
+          "parent": "html > body.access-page > header.private-header.access-private-header > div.admin-topbar__actions.private-header__actions",
+          "parentClass": "admin-topbar__actions private-header__actions",
+          "rect": {
+            "x": 1211.3,
+            "y": 16.6,
+            "width": 86.8,
+            "height": 44
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "color": "rgb(244, 241, 235)",
+          "background": "rgb(32, 33, 31)",
+          "border": "rgb(123, 118, 108)",
+          "minWidth": "40px",
+          "minHeight": "44px"
+        },
+        "brandImages": [
+          {
+            "src": "/branding/logo-dark-380.png",
+            "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+            "expectedSrc": "/branding/logo-dark-380.png",
+            "sourceMatchesTheme": true,
+            "complete": true,
+            "naturalWidth": 380,
+            "parent": "html > body.access-page > header.private-header.access-private-header > a.private-header__brand",
+            "rect": {
+              "x": 16,
+              "y": 10,
+              "width": 160,
+              "height": 57.3
+            },
+            "display": "block",
+            "visibility": "visible",
+            "objectFit": "contain"
+          }
+        ],
+        "headerBrand": {
+          "src": "/branding/logo-dark-380.png",
+          "currentSrc": "http://g3-main.local/branding/logo-dark-380.png",
+          "expectedSrc": "/branding/logo-dark-380.png",
+          "sourceMatchesTheme": true,
+          "complete": true,
+          "naturalWidth": 380,
+          "rect": {
+            "x": 16,
+            "y": 10,
+            "width": 160,
+            "height": 57.3
+          },
+          "display": "block",
+          "visibility": "visible",
+          "objectFit": "contain"
+        },
+        "privateHeader": true,
+        "publicHeader": false,
+        "viewerHeader": false
+      },
+      "transition": [
+        {
+          "mode": "auto",
+          "resolved": "dark",
+          "rootTheme": "dark",
+          "brandSrcs": [
+            "/branding/logo-dark-380.png"
+          ],
+          "stored": "auto"
+        },
+        {
+          "mode": "light",
+          "resolved": "light",
+          "rootTheme": "light",
+          "brandSrcs": [
+            "/branding/logo-light-380.png"
+          ],
+          "stored": "light"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "httpErrors": [
+        {
+          "status": 404,
+          "url": "http://g3-main.local/core/private-navigation.bundle.js?v=private-header-v1"
+        },
+        {
+          "status": 404,
+          "url": "http://g3-main.local/access/manage.bundle.js"
+        }
+      ]
+    }
+  ]
+}

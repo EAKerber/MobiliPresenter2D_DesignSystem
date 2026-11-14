@@ -1,0 +1,2134 @@
+{
+  "schema": "DS-G3-public-button-runtime-baseline/1",
+  "capturedDate": "2026-11-14",
+  "productSource": {
+    "repository": "EAKerber/MobiliPresenter2D",
+    "referenceBranch": "main",
+    "referenceCommit": "bb3e3a34ee771db1efe6d8dcfe8cbde96c6a40c7",
+    "appTreeSha": "fb4cdea0f1c7ea317e9d85fcd01df89144d3b294",
+    "checkedOutBranch": "work/arc13-ui-inventory-20261112",
+    "checkedOutCommit": "4c02f5405805d1a1bfc6a8547eaf3c9c228bf053",
+    "checkedOutAppTreeSha": "fb4cdea0f1c7ea317e9d85fcd01df89144d3b294",
+    "appTreeMatchesMain": true,
+    "files": {
+      "app/index.html": "75f3351ae256d2e5ad45c204af14087cde774104",
+      "app/about/index.html": "5124d3d930073fdfad1a8602cca999ea3413cd5e",
+      "app/how-it-works/index.html": "956df72c85671e02fda3460900311e15956b85b1",
+      "app/landing/landing.css": "edccb171404061ff9fd36f503231c09316f24a8a",
+      "app/public-theme.css": "b8122a6a02cd1be67e2bedf9a0ce3b55dbc47b40",
+      "app/ui-theme.css": "3114bbfe0a67cbdc53757f5f50a0d035559767a6"
+    }
+  },
+  "browser": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "deviceScaleFactor": 1,
+    "sourceMode": "actual Product HTML and CSS over an HTTP server bound only to 127.0.0.1",
+    "viewportProfiles": {
+      "desktop": {
+        "width": 1366,
+        "height": 900,
+        "mobile": false,
+        "touch": false
+      },
+      "mobile": {
+        "width": 390,
+        "height": 844,
+        "mobile": true,
+        "touch": true
+      }
+    },
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "reducedMotion": "reduce",
+    "themeApplication": "set html[data-theme] directly after emulation to select the existing theme CSS; the UI theme control itself was not operated",
+    "baseStateStabilization": "cancel CSS animations before measuring base target styles",
+    "hoverState": "browser pointer hover, then 350 ms stabilization",
+    "focusVisibleState": "HTMLElement.focus({focusVisible:true}), verified matches(':focus-visible'), then 550 ms stabilization",
+    "stylesheetRuleCounts": "Recorded from loaded same-origin CSSOM for each route."
+  },
+  "scope": {
+    "routes": [
+      "/",
+      "/about/",
+      "/how-it-works/"
+    ],
+    "targetCountPerRoute": {
+      "/": 3,
+      "/about/": 2,
+      "/how-it-works/": 3
+    },
+    "baseCombinationCount": 12,
+    "baseTargetObservations": 32,
+    "interactionObservations": 16,
+    "targets": [
+      {
+        "route": "/",
+        "selector": "header .header-cta",
+        "semanticRole": "link",
+        "source": "app/index.html:22"
+      },
+      {
+        "route": "/",
+        "selector": "main .hero-copy > a.button-dark",
+        "semanticRole": "link",
+        "source": "app/index.html:32"
+      },
+      {
+        "route": "/",
+        "selector": "main .story-section > a",
+        "semanticRole": "link",
+        "source": "app/index.html:49"
+      },
+      {
+        "route": "/about/",
+        "selector": "header .header-cta",
+        "semanticRole": "link",
+        "source": "app/about/index.html:13"
+      },
+      {
+        "route": "/about/",
+        "selector": "main .about-closing__actions > a.button-copper",
+        "semanticRole": "link",
+        "source": "app/about/index.html:24"
+      },
+      {
+        "route": "/how-it-works/",
+        "selector": "header .header-cta",
+        "semanticRole": "link",
+        "source": "app/how-it-works/index.html:22"
+      },
+      {
+        "route": "/how-it-works/",
+        "selector": "main .how-hero-copy > a.button-copper",
+        "semanticRole": "link",
+        "source": "app/how-it-works/index.html:31"
+      },
+      {
+        "route": "/how-it-works/",
+        "selector": "main .closing-copy > a.button-copper",
+        "semanticRole": "link",
+        "source": "app/how-it-works/index.html:234"
+      }
+    ],
+    "excluded": "About text link, menu toggle, viewer action, YouTube link and unrelated page controls; disabled does not apply because all targets are anchors."
+  },
+  "stylesheetOwners": {
+    "commonHeaderCTA": "app/landing/landing.css:32-34",
+    "filledButtonBase": "app/landing/landing.css:57-58",
+    "darkButton": "app/landing/landing.css:59-60",
+    "copperButton": "app/landing/landing.css:34,61",
+    "homeStoryLink": "app/landing/landing.css:128-131",
+    "focusBase": "app/public-theme.css:23",
+    "themeOverrides": "app/ui-theme.css:105-114",
+    "responsiveHeaderCTA": "app/landing/landing.css:156-161,188-191"
+  },
+  "interactionStates": [
+    {
+      "route": "/",
+      "family": "header-cta",
+      "theme": "light",
+      "state": "hover",
+      "matchesHover": true,
+      "matchesFocusVisible": false,
+      "background": "rgb(110, 81, 46)",
+      "color": "rgb(255, 255, 255)",
+      "transform": "none",
+      "textDecorationLine": "none",
+      "outlineColor": "rgb(255, 255, 255)",
+      "outlineStyle": "none",
+      "outlineWidth": "2.66667px",
+      "outlineOffset": "0px"
+    },
+    {
+      "route": "/",
+      "family": "button-dark",
+      "theme": "light",
+      "state": "hover",
+      "matchesHover": true,
+      "matchesFocusVisible": false,
+      "background": "rgb(8, 8, 8)",
+      "color": "rgb(255, 255, 255)",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "textDecorationLine": "none",
+      "outlineColor": "rgb(255, 255, 255)",
+      "outlineStyle": "none",
+      "outlineWidth": "2.66667px",
+      "outlineOffset": "0px"
+    },
+    {
+      "route": "/",
+      "family": "story-text-link",
+      "theme": "light",
+      "state": "hover",
+      "matchesHover": true,
+      "matchesFocusVisible": false,
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(110, 81, 46)",
+      "transform": "none",
+      "textDecorationLine": "none",
+      "outlineColor": "rgb(110, 81, 46)",
+      "outlineStyle": "none",
+      "outlineWidth": "2.66667px",
+      "outlineOffset": "0px"
+    },
+    {
+      "theme": "light",
+      "family": "header-cta",
+      "state": "focus-visible",
+      "matchesHover": false,
+      "matchesFocus": true,
+      "matchesFocusVisible": true,
+      "background": "rgb(139, 106, 64)",
+      "color": "rgb(255, 255, 255)",
+      "transform": "none",
+      "textDecorationLine": "none",
+      "outlineColor": "rgb(110, 81, 46)",
+      "outlineStyle": "solid",
+      "outlineWidth": "2.66667px",
+      "outlineOffset": "2.66667px"
+    },
+    {
+      "theme": "light",
+      "family": "button-dark",
+      "state": "focus-visible",
+      "matchesHover": false,
+      "matchesFocus": true,
+      "matchesFocusVisible": true,
+      "background": "rgb(34, 33, 31)",
+      "color": "rgb(255, 255, 255)",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "textDecorationLine": "none",
+      "outlineColor": "rgb(110, 81, 46)",
+      "outlineStyle": "solid",
+      "outlineWidth": "2.66667px",
+      "outlineOffset": "2.66667px"
+    },
+    {
+      "theme": "light",
+      "family": "story-text-link",
+      "state": "focus-visible",
+      "matchesHover": false,
+      "matchesFocus": true,
+      "matchesFocusVisible": true,
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(110, 81, 46)",
+      "transform": "none",
+      "textDecorationLine": "none",
+      "outlineColor": "rgb(110, 81, 46)",
+      "outlineStyle": "solid",
+      "outlineWidth": "2.66667px",
+      "outlineOffset": "2.66667px"
+    },
+    {
+      "route": "/about/",
+      "family": "button-copper",
+      "theme": "light",
+      "state": "hover",
+      "matchesHover": true,
+      "matchesFocusVisible": false,
+      "background": "rgb(110, 81, 46)",
+      "color": "rgb(255, 255, 255)",
+      "transform": "matrix(1, 0, 0, 1, 0, -2)",
+      "textDecorationLine": "none",
+      "outlineColor": "rgb(255, 255, 255)",
+      "outlineStyle": "none",
+      "outlineWidth": "2.66667px",
+      "outlineOffset": "0px"
+    },
+    {
+      "theme": "light",
+      "family": "button-copper",
+      "state": "focus-visible",
+      "matchesHover": false,
+      "matchesFocus": true,
+      "matchesFocusVisible": true,
+      "background": "rgb(139, 106, 64)",
+      "color": "rgb(255, 255, 255)",
+      "transform": "none",
+      "textDecorationLine": "none",
+      "outlineColor": "rgb(110, 81, 46)",
+      "outlineStyle": "solid",
+      "outlineWidth": "2.66667px",
+      "outlineOffset": "2.66667px"
+    },
+    {
+      "route": "/",
+      "family": "header-cta",
+      "theme": "dark",
+      "state": "hover",
+      "matchesHover": true,
+      "matchesFocusVisible": false,
+      "background": "rgb(110, 81, 46)",
+      "color": "rgb(255, 255, 255)",
+      "transform": "none",
+      "textDecorationLine": "none",
+      "outlineColor": "rgb(255, 255, 255)",
+      "outlineStyle": "none",
+      "outlineWidth": "2.66667px",
+      "outlineOffset": "0px"
+    },
+    {
+      "route": "/",
+      "family": "button-dark",
+      "theme": "dark",
+      "state": "hover",
+      "matchesHover": true,
+      "matchesFocusVisible": false,
+      "background": "rgb(139, 106, 64)",
+      "color": "rgb(249, 242, 233)",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "textDecorationLine": "none",
+      "outlineColor": "rgb(249, 242, 233)",
+      "outlineStyle": "none",
+      "outlineWidth": "2.66667px",
+      "outlineOffset": "0px"
+    },
+    {
+      "route": "/",
+      "family": "story-text-link",
+      "theme": "dark",
+      "state": "hover",
+      "matchesHover": true,
+      "matchesFocusVisible": false,
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(226, 201, 145)",
+      "transform": "none",
+      "textDecorationLine": "none",
+      "outlineColor": "rgb(226, 201, 145)",
+      "outlineStyle": "none",
+      "outlineWidth": "2.66667px",
+      "outlineOffset": "0px"
+    },
+    {
+      "theme": "dark",
+      "family": "header-cta",
+      "state": "focus-visible",
+      "matchesHover": false,
+      "matchesFocus": true,
+      "matchesFocusVisible": true,
+      "background": "rgb(139, 106, 64)",
+      "color": "rgb(255, 255, 255)",
+      "transform": "none",
+      "textDecorationLine": "none",
+      "outlineColor": "rgb(216, 188, 124)",
+      "outlineStyle": "solid",
+      "outlineWidth": "2.66667px",
+      "outlineOffset": "2.66667px"
+    },
+    {
+      "theme": "dark",
+      "family": "button-dark",
+      "state": "focus-visible",
+      "matchesHover": false,
+      "matchesFocus": true,
+      "matchesFocusVisible": true,
+      "background": "rgb(110, 81, 46)",
+      "color": "rgb(249, 242, 233)",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "textDecorationLine": "none",
+      "outlineColor": "rgb(216, 188, 124)",
+      "outlineStyle": "solid",
+      "outlineWidth": "2.66667px",
+      "outlineOffset": "2.66667px"
+    },
+    {
+      "theme": "dark",
+      "family": "story-text-link",
+      "state": "focus-visible",
+      "matchesHover": false,
+      "matchesFocus": true,
+      "matchesFocusVisible": true,
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(226, 201, 145)",
+      "transform": "none",
+      "textDecorationLine": "none",
+      "outlineColor": "rgb(226, 201, 145)",
+      "outlineStyle": "solid",
+      "outlineWidth": "2.66667px",
+      "outlineOffset": "2.66667px"
+    },
+    {
+      "route": "/about/",
+      "family": "button-copper",
+      "theme": "dark",
+      "state": "hover",
+      "matchesHover": true,
+      "matchesFocusVisible": false,
+      "background": "rgb(110, 81, 46)",
+      "color": "rgb(255, 255, 255)",
+      "transform": "matrix(1, 0, 0, 1, 0, -2)",
+      "textDecorationLine": "none",
+      "outlineColor": "rgb(255, 255, 255)",
+      "outlineStyle": "none",
+      "outlineWidth": "2.66667px",
+      "outlineOffset": "0px"
+    },
+    {
+      "theme": "dark",
+      "family": "button-copper",
+      "state": "focus-visible",
+      "matchesHover": false,
+      "matchesFocus": true,
+      "matchesFocusVisible": true,
+      "background": "rgb(139, 106, 64)",
+      "color": "rgb(255, 255, 255)",
+      "transform": "none",
+      "textDecorationLine": "none",
+      "outlineColor": "rgb(216, 188, 124)",
+      "outlineStyle": "solid",
+      "outlineWidth": "2.66667px",
+      "outlineOffset": "2.66667px"
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "classification": "shared-selector / responsive variant",
+      "observation": "The same .header-cta is used on all three routes. At 1366 px it renders 176×42 px; at 390 px it renders 38×38 px and its text spans are hidden, leaving the WhatsApp icon. The element retains aria-label 'Fale conosco pelo WhatsApp'. Light and dark background are #8b6a40."
+    },
+    {
+      "id": "F2",
+      "classification": "shared-button-family / style variant",
+      "observation": "Home hero uses .button.button-dark; About and How-it-works CTAs use .button.button-copper. Both share base sizing, typography, radius 3 px and keyboard focus treatment; backgrounds and dark-theme colors vary by class."
+    },
+    {
+      "id": "F3",
+      "classification": "contextual interaction variant / owner decision pending",
+      "observation": "On the Home hero, hover changes the button background but computed transform remains identity, although .button:hover specifies translateY(-2px). DevTools shows the finished .hero-copy > * public-reveal animation with fill both still owning transform. The same .button hover on About moves -2 px. The current behavior is context-dependent."
+    },
+    {
+      "id": "F4",
+      "classification": "text-link variant",
+      "observation": "The Home story CTA is a plain text link with transparent background, normal-size text, weight 750 and no underline. Its hover state leaves the text color unchanged; focus-visible displays the theme-colored outline."
+    },
+    {
+      "id": "F5",
+      "classification": "focus",
+      "observation": "The authored public outline is 3 px with 3 px offset; light/dark theme overrides set #6e512e/#d8bc7c. In this Chromium session the computed values read 2.66667 px after stabilization; this report preserves the measured value and source declarations."
+    }
+  ],
+  "pendingDecisions": [
+    {
+      "priority": "P2",
+      "question": "Should the Home hero button's hover lift compose with the finished reveal animation, or is its color-only hover behavior the intended result?"
+    },
+    {
+      "priority": "P2",
+      "question": "Should the plain story text link remain visually distinct from the filled buttons, given its separate size, treatment and hover behavior?"
+    }
+  ],
+  "limitations": [
+    "Static local state only; not a production or Deploy Preview capture.",
+    "No authenticated/private route, screen-reader, Tab-order, physical device, Safari/iPad or cross-platform validation.",
+    "The theme CSS states were selected by setting html[data-theme] in the browser; the theme switch control was not exercised.",
+    "Focus styling was forced with FocusOptions and match-checked; this validates the :focus-visible CSS state, not keyboard traversal.",
+    "All targets are links, so a disabled state was not applicable.",
+    "Page.captureScreenshot timed out in Chrome DevTools. No PNG is attached; computed CSSOM JSON is the capture artifact.",
+    "No Product UI files were modified and no application tests were run."
+  ],
+  "outcome": "G3 public-button ownership subgate has a CSSOM baseline; G3 remains partial, no visual design or extraction is approved.",
+  "basePageStates": [
+    {
+      "route": "/",
+      "theme": "light",
+      "viewport": {
+        "width": 1366,
+        "height": 900,
+        "mobile": false,
+        "touch": false
+      },
+      "reducedMotion": true,
+      "stylesheets": [
+        {
+          "path": "/public-theme.css",
+          "ruleCount": 17
+        },
+        {
+          "path": "/landing/landing.css",
+          "ruleCount": 125
+        },
+        {
+          "path": "/ui-theme.css",
+          "ruleCount": 142
+        }
+      ],
+      "targets": [
+        {
+          "selector": "header .header-cta",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Fale conosco pelo WhatsApp",
+          "href": "https://wa.me/",
+          "classes": "header-cta",
+          "rendered": true,
+          "bounds": {
+            "width": 176,
+            "height": 42
+          },
+          "computed": {
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "9px",
+            "padding": "12px 16px",
+            "minHeight": "auto",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "12.16px",
+            "fontWeight": "800",
+            "letterSpacing": "0.4864px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .hero-copy > .button-dark",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Conheça nossos ambientes →",
+          "href": "/#ambientes",
+          "classes": "button button-dark",
+          "rendered": true,
+          "bounds": {
+            "width": 260,
+            "height": 46
+          },
+          "computed": {
+            "display": "inline-flex",
+            "alignItems": "center",
+            "gap": "18px",
+            "padding": "13px 17px",
+            "minHeight": "46px",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "3px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(34, 33, 31)",
+            "fontSize": "11.84px",
+            "fontWeight": "800",
+            "letterSpacing": "0.592px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "transform 1e-05s, background 1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .story-section > a",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Encontre seu ambiente →",
+          "href": "/#ambientes",
+          "classes": "",
+          "rendered": true,
+          "bounds": {
+            "width": 190,
+            "height": 21
+          },
+          "computed": {
+            "display": "inline",
+            "alignItems": "normal",
+            "gap": "normal",
+            "padding": "0px",
+            "minHeight": "0px",
+            "border": "0px none rgb(110, 81, 46)",
+            "borderRadius": "0px",
+            "color": "rgb(110, 81, 46)",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "750",
+            "letterSpacing": "normal",
+            "textTransform": "none",
+            "textDecorationLine": "none",
+            "transition": "1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(110, 81, 46)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    {
+      "route": "/about/",
+      "theme": "light",
+      "viewport": {
+        "width": 1366,
+        "height": 900,
+        "mobile": false,
+        "touch": false
+      },
+      "reducedMotion": true,
+      "stylesheets": [
+        {
+          "path": "/public-theme.css",
+          "ruleCount": 17
+        },
+        {
+          "path": "/landing/landing.css",
+          "ruleCount": 125
+        },
+        {
+          "path": "/about/about.css",
+          "ruleCount": 36
+        },
+        {
+          "path": "/ui-theme.css",
+          "ruleCount": 142
+        }
+      ],
+      "targets": [
+        {
+          "selector": "header .header-cta",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Fale conosco pelo WhatsApp",
+          "href": "https://wa.me/",
+          "classes": "header-cta",
+          "rendered": true,
+          "bounds": {
+            "width": 176,
+            "height": 42
+          },
+          "computed": {
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "9px",
+            "padding": "12px 16px",
+            "minHeight": "auto",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "12.16px",
+            "fontWeight": "800",
+            "letterSpacing": "0.4864px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .about-closing__actions > .button-copper",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Veja como funciona →",
+          "href": "/how-it-works/",
+          "classes": "button button-copper",
+          "rendered": true,
+          "bounds": {
+            "width": 211,
+            "height": 46
+          },
+          "computed": {
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "18px",
+            "padding": "13px 17px",
+            "minHeight": "46px",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "3px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "11.84px",
+            "fontWeight": "800",
+            "letterSpacing": "0.592px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "transform 1e-05s, background 1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    {
+      "route": "/how-it-works/",
+      "theme": "light",
+      "viewport": {
+        "width": 1366,
+        "height": 900,
+        "mobile": false,
+        "touch": false
+      },
+      "reducedMotion": true,
+      "stylesheets": [
+        {
+          "path": "/public-theme.css",
+          "ruleCount": 17
+        },
+        {
+          "path": "/landing/landing.css",
+          "ruleCount": 125
+        },
+        {
+          "path": "/how-it-works/how-it-works.css",
+          "ruleCount": 200
+        },
+        {
+          "path": "/ui-theme.css",
+          "ruleCount": 142
+        }
+      ],
+      "targets": [
+        {
+          "selector": "header .header-cta",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Fale conosco pelo WhatsApp",
+          "href": "https://wa.me/",
+          "classes": "header-cta",
+          "rendered": true,
+          "bounds": {
+            "width": 176,
+            "height": 42
+          },
+          "computed": {
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "9px",
+            "padding": "12px 16px",
+            "minHeight": "auto",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "12.16px",
+            "fontWeight": "800",
+            "letterSpacing": "0.4864px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .how-hero-copy > .button-copper",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Veja como funciona ↓",
+          "href": "#passos",
+          "classes": "button button-copper",
+          "rendered": true,
+          "bounds": {
+            "width": 206,
+            "height": 46
+          },
+          "computed": {
+            "display": "inline-flex",
+            "alignItems": "center",
+            "gap": "18px",
+            "padding": "13px 17px",
+            "minHeight": "46px",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "3px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "11.84px",
+            "fontWeight": "800",
+            "letterSpacing": "0.592px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "transform 1e-05s, background 1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .closing-copy > .button-copper",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Conheça os ambientes →",
+          "href": "../#ambientes",
+          "classes": "button button-copper",
+          "rendered": true,
+          "bounds": {
+            "width": 225,
+            "height": 46
+          },
+          "computed": {
+            "display": "inline-flex",
+            "alignItems": "center",
+            "gap": "18px",
+            "padding": "13px 17px",
+            "minHeight": "46px",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "3px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "11.84px",
+            "fontWeight": "800",
+            "letterSpacing": "0.592px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "transform 1e-05s, background 1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "mobile": true,
+        "touch": true
+      },
+      "reducedMotion": true,
+      "stylesheets": [
+        {
+          "path": "/public-theme.css",
+          "ruleCount": 17
+        },
+        {
+          "path": "/landing/landing.css",
+          "ruleCount": 125
+        },
+        {
+          "path": "/ui-theme.css",
+          "ruleCount": 142
+        }
+      ],
+      "targets": [
+        {
+          "selector": "header .header-cta",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Fale conosco pelo WhatsApp",
+          "href": "https://wa.me/",
+          "classes": "header-cta",
+          "rendered": true,
+          "bounds": {
+            "width": 38,
+            "height": 38
+          },
+          "computed": {
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "6px",
+            "padding": "0px",
+            "minHeight": "auto",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "9.28px",
+            "fontWeight": "800",
+            "letterSpacing": "0.3712px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .hero-copy > .button-dark",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Conheça nossos ambientes →",
+          "href": "/#ambientes",
+          "classes": "button button-dark",
+          "rendered": true,
+          "bounds": {
+            "width": 260,
+            "height": 46
+          },
+          "computed": {
+            "display": "inline-flex",
+            "alignItems": "center",
+            "gap": "18px",
+            "padding": "13px 17px",
+            "minHeight": "46px",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "3px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(34, 33, 31)",
+            "fontSize": "11.84px",
+            "fontWeight": "800",
+            "letterSpacing": "0.592px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "transform 1e-05s, background 1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .story-section > a",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Encontre seu ambiente →",
+          "href": "/#ambientes",
+          "classes": "",
+          "rendered": true,
+          "bounds": {
+            "width": 190,
+            "height": 21
+          },
+          "computed": {
+            "display": "inline",
+            "alignItems": "normal",
+            "gap": "normal",
+            "padding": "0px",
+            "minHeight": "0px",
+            "border": "0px none rgb(110, 81, 46)",
+            "borderRadius": "0px",
+            "color": "rgb(110, 81, 46)",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "750",
+            "letterSpacing": "normal",
+            "textTransform": "none",
+            "textDecorationLine": "none",
+            "transition": "1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(110, 81, 46)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    {
+      "route": "/about/",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "mobile": true,
+        "touch": true
+      },
+      "reducedMotion": true,
+      "stylesheets": [
+        {
+          "path": "/public-theme.css",
+          "ruleCount": 17
+        },
+        {
+          "path": "/landing/landing.css",
+          "ruleCount": 125
+        },
+        {
+          "path": "/about/about.css",
+          "ruleCount": 36
+        },
+        {
+          "path": "/ui-theme.css",
+          "ruleCount": 142
+        }
+      ],
+      "targets": [
+        {
+          "selector": "header .header-cta",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Fale conosco pelo WhatsApp",
+          "href": "https://wa.me/",
+          "classes": "header-cta",
+          "rendered": true,
+          "bounds": {
+            "width": 38,
+            "height": 38
+          },
+          "computed": {
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "6px",
+            "padding": "0px",
+            "minHeight": "auto",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "9.28px",
+            "fontWeight": "800",
+            "letterSpacing": "0.3712px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .about-closing__actions > .button-copper",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Veja como funciona →",
+          "href": "/how-it-works/",
+          "classes": "button button-copper",
+          "rendered": true,
+          "bounds": {
+            "width": 211,
+            "height": 46
+          },
+          "computed": {
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "18px",
+            "padding": "13px 17px",
+            "minHeight": "46px",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "3px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "11.84px",
+            "fontWeight": "800",
+            "letterSpacing": "0.592px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "transform 1e-05s, background 1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    {
+      "route": "/how-it-works/",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "mobile": true,
+        "touch": true
+      },
+      "reducedMotion": true,
+      "stylesheets": [
+        {
+          "path": "/public-theme.css",
+          "ruleCount": 17
+        },
+        {
+          "path": "/landing/landing.css",
+          "ruleCount": 125
+        },
+        {
+          "path": "/how-it-works/how-it-works.css",
+          "ruleCount": 200
+        },
+        {
+          "path": "/ui-theme.css",
+          "ruleCount": 142
+        }
+      ],
+      "targets": [
+        {
+          "selector": "header .header-cta",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Fale conosco pelo WhatsApp",
+          "href": "https://wa.me/",
+          "classes": "header-cta",
+          "rendered": true,
+          "bounds": {
+            "width": 38,
+            "height": 38
+          },
+          "computed": {
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "6px",
+            "padding": "0px",
+            "minHeight": "auto",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "9.28px",
+            "fontWeight": "800",
+            "letterSpacing": "0.3712px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .how-hero-copy > .button-copper",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Veja como funciona ↓",
+          "href": "#passos",
+          "classes": "button button-copper",
+          "rendered": true,
+          "bounds": {
+            "width": 206,
+            "height": 46
+          },
+          "computed": {
+            "display": "inline-flex",
+            "alignItems": "center",
+            "gap": "18px",
+            "padding": "13px 17px",
+            "minHeight": "46px",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "3px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "11.84px",
+            "fontWeight": "800",
+            "letterSpacing": "0.592px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "transform 1e-05s, background 1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .closing-copy > .button-copper",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Conheça os ambientes →",
+          "href": "../#ambientes",
+          "classes": "button button-copper",
+          "rendered": true,
+          "bounds": {
+            "width": 225,
+            "height": 46
+          },
+          "computed": {
+            "display": "inline-flex",
+            "alignItems": "center",
+            "gap": "18px",
+            "padding": "13px 17px",
+            "minHeight": "46px",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "3px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "11.84px",
+            "fontWeight": "800",
+            "letterSpacing": "0.592px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "transform 1e-05s, background 1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "theme": "dark",
+      "viewport": {
+        "width": 1366,
+        "height": 900,
+        "mobile": false,
+        "touch": false
+      },
+      "reducedMotion": true,
+      "stylesheets": [
+        {
+          "path": "/public-theme.css",
+          "ruleCount": 17
+        },
+        {
+          "path": "/landing/landing.css",
+          "ruleCount": 125
+        },
+        {
+          "path": "/ui-theme.css",
+          "ruleCount": 142
+        }
+      ],
+      "targets": [
+        {
+          "selector": "header .header-cta",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Fale conosco pelo WhatsApp",
+          "href": "https://wa.me/",
+          "classes": "header-cta",
+          "rendered": true,
+          "bounds": {
+            "width": 176,
+            "height": 42
+          },
+          "computed": {
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "9px",
+            "padding": "12px 16px",
+            "minHeight": "auto",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "12.16px",
+            "fontWeight": "800",
+            "letterSpacing": "0.4864px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .hero-copy > .button-dark",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Conheça nossos ambientes →",
+          "href": "/#ambientes",
+          "classes": "button button-dark",
+          "rendered": true,
+          "bounds": {
+            "width": 260,
+            "height": 46
+          },
+          "computed": {
+            "display": "inline-flex",
+            "alignItems": "center",
+            "gap": "18px",
+            "padding": "13px 17px",
+            "minHeight": "46px",
+            "border": "0px none rgb(249, 242, 233)",
+            "borderRadius": "3px",
+            "color": "rgb(249, 242, 233)",
+            "background": "rgb(110, 81, 46)",
+            "fontSize": "11.84px",
+            "fontWeight": "800",
+            "letterSpacing": "0.592px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "transform 1e-05s, background 1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(249, 242, 233)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .story-section > a",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Encontre seu ambiente →",
+          "href": "/#ambientes",
+          "classes": "",
+          "rendered": true,
+          "bounds": {
+            "width": 190,
+            "height": 21
+          },
+          "computed": {
+            "display": "inline",
+            "alignItems": "normal",
+            "gap": "normal",
+            "padding": "0px",
+            "minHeight": "0px",
+            "border": "0px none rgb(226, 201, 145)",
+            "borderRadius": "0px",
+            "color": "rgb(226, 201, 145)",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "750",
+            "letterSpacing": "normal",
+            "textTransform": "none",
+            "textDecorationLine": "none",
+            "transition": "1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(226, 201, 145)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    {
+      "route": "/about/",
+      "theme": "dark",
+      "viewport": {
+        "width": 1366,
+        "height": 900,
+        "mobile": false,
+        "touch": false
+      },
+      "reducedMotion": true,
+      "stylesheets": [
+        {
+          "path": "/public-theme.css",
+          "ruleCount": 17
+        },
+        {
+          "path": "/landing/landing.css",
+          "ruleCount": 125
+        },
+        {
+          "path": "/about/about.css",
+          "ruleCount": 36
+        },
+        {
+          "path": "/ui-theme.css",
+          "ruleCount": 142
+        }
+      ],
+      "targets": [
+        {
+          "selector": "header .header-cta",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Fale conosco pelo WhatsApp",
+          "href": "https://wa.me/",
+          "classes": "header-cta",
+          "rendered": true,
+          "bounds": {
+            "width": 176,
+            "height": 42
+          },
+          "computed": {
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "9px",
+            "padding": "12px 16px",
+            "minHeight": "auto",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "12.16px",
+            "fontWeight": "800",
+            "letterSpacing": "0.4864px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .about-closing__actions > .button-copper",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Veja como funciona →",
+          "href": "/how-it-works/",
+          "classes": "button button-copper",
+          "rendered": true,
+          "bounds": {
+            "width": 211,
+            "height": 46
+          },
+          "computed": {
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "18px",
+            "padding": "13px 17px",
+            "minHeight": "46px",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "3px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "11.84px",
+            "fontWeight": "800",
+            "letterSpacing": "0.592px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "transform 1e-05s, background 1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    {
+      "route": "/how-it-works/",
+      "theme": "dark",
+      "viewport": {
+        "width": 1366,
+        "height": 900,
+        "mobile": false,
+        "touch": false
+      },
+      "reducedMotion": true,
+      "stylesheets": [
+        {
+          "path": "/public-theme.css",
+          "ruleCount": 17
+        },
+        {
+          "path": "/landing/landing.css",
+          "ruleCount": 125
+        },
+        {
+          "path": "/how-it-works/how-it-works.css",
+          "ruleCount": 200
+        },
+        {
+          "path": "/ui-theme.css",
+          "ruleCount": 142
+        }
+      ],
+      "targets": [
+        {
+          "selector": "header .header-cta",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Fale conosco pelo WhatsApp",
+          "href": "https://wa.me/",
+          "classes": "header-cta",
+          "rendered": true,
+          "bounds": {
+            "width": 176,
+            "height": 42
+          },
+          "computed": {
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "9px",
+            "padding": "12px 16px",
+            "minHeight": "auto",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "12.16px",
+            "fontWeight": "800",
+            "letterSpacing": "0.4864px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .how-hero-copy > .button-copper",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Veja como funciona ↓",
+          "href": "#passos",
+          "classes": "button button-copper",
+          "rendered": true,
+          "bounds": {
+            "width": 206,
+            "height": 46
+          },
+          "computed": {
+            "display": "inline-flex",
+            "alignItems": "center",
+            "gap": "18px",
+            "padding": "13px 17px",
+            "minHeight": "46px",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "3px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "11.84px",
+            "fontWeight": "800",
+            "letterSpacing": "0.592px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "transform 1e-05s, background 1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .closing-copy > .button-copper",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Conheça os ambientes →",
+          "href": "../#ambientes",
+          "classes": "button button-copper",
+          "rendered": true,
+          "bounds": {
+            "width": 225,
+            "height": 46
+          },
+          "computed": {
+            "display": "inline-flex",
+            "alignItems": "center",
+            "gap": "18px",
+            "padding": "13px 17px",
+            "minHeight": "46px",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "3px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "11.84px",
+            "fontWeight": "800",
+            "letterSpacing": "0.592px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "transform 1e-05s, background 1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "mobile": true,
+        "touch": true
+      },
+      "reducedMotion": true,
+      "stylesheets": [
+        {
+          "path": "/public-theme.css",
+          "ruleCount": 17
+        },
+        {
+          "path": "/landing/landing.css",
+          "ruleCount": 125
+        },
+        {
+          "path": "/ui-theme.css",
+          "ruleCount": 142
+        }
+      ],
+      "targets": [
+        {
+          "selector": "header .header-cta",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Fale conosco pelo WhatsApp",
+          "href": "https://wa.me/",
+          "classes": "header-cta",
+          "rendered": true,
+          "bounds": {
+            "width": 38,
+            "height": 38
+          },
+          "computed": {
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "6px",
+            "padding": "0px",
+            "minHeight": "auto",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "9.28px",
+            "fontWeight": "800",
+            "letterSpacing": "0.3712px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .hero-copy > .button-dark",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Conheça nossos ambientes →",
+          "href": "/#ambientes",
+          "classes": "button button-dark",
+          "rendered": true,
+          "bounds": {
+            "width": 260,
+            "height": 46
+          },
+          "computed": {
+            "display": "inline-flex",
+            "alignItems": "center",
+            "gap": "18px",
+            "padding": "13px 17px",
+            "minHeight": "46px",
+            "border": "0px none rgb(249, 242, 233)",
+            "borderRadius": "3px",
+            "color": "rgb(249, 242, 233)",
+            "background": "rgb(110, 81, 46)",
+            "fontSize": "11.84px",
+            "fontWeight": "800",
+            "letterSpacing": "0.592px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "transform 1e-05s, background 1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(249, 242, 233)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .story-section > a",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Encontre seu ambiente →",
+          "href": "/#ambientes",
+          "classes": "",
+          "rendered": true,
+          "bounds": {
+            "width": 190,
+            "height": 21
+          },
+          "computed": {
+            "display": "inline",
+            "alignItems": "normal",
+            "gap": "normal",
+            "padding": "0px",
+            "minHeight": "0px",
+            "border": "0px none rgb(226, 201, 145)",
+            "borderRadius": "0px",
+            "color": "rgb(226, 201, 145)",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "750",
+            "letterSpacing": "normal",
+            "textTransform": "none",
+            "textDecorationLine": "none",
+            "transition": "1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(226, 201, 145)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    {
+      "route": "/about/",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "mobile": true,
+        "touch": true
+      },
+      "reducedMotion": true,
+      "stylesheets": [
+        {
+          "path": "/public-theme.css",
+          "ruleCount": 17
+        },
+        {
+          "path": "/landing/landing.css",
+          "ruleCount": 125
+        },
+        {
+          "path": "/about/about.css",
+          "ruleCount": 36
+        },
+        {
+          "path": "/ui-theme.css",
+          "ruleCount": 142
+        }
+      ],
+      "targets": [
+        {
+          "selector": "header .header-cta",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Fale conosco pelo WhatsApp",
+          "href": "https://wa.me/",
+          "classes": "header-cta",
+          "rendered": true,
+          "bounds": {
+            "width": 38,
+            "height": 38
+          },
+          "computed": {
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "6px",
+            "padding": "0px",
+            "minHeight": "auto",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "9.28px",
+            "fontWeight": "800",
+            "letterSpacing": "0.3712px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .about-closing__actions > .button-copper",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Veja como funciona →",
+          "href": "/how-it-works/",
+          "classes": "button button-copper",
+          "rendered": true,
+          "bounds": {
+            "width": 211,
+            "height": 46
+          },
+          "computed": {
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "18px",
+            "padding": "13px 17px",
+            "minHeight": "46px",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "3px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "11.84px",
+            "fontWeight": "800",
+            "letterSpacing": "0.592px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "transform 1e-05s, background 1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    {
+      "route": "/how-it-works/",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "mobile": true,
+        "touch": true
+      },
+      "reducedMotion": true,
+      "stylesheets": [
+        {
+          "path": "/public-theme.css",
+          "ruleCount": 17
+        },
+        {
+          "path": "/landing/landing.css",
+          "ruleCount": 125
+        },
+        {
+          "path": "/how-it-works/how-it-works.css",
+          "ruleCount": 200
+        },
+        {
+          "path": "/ui-theme.css",
+          "ruleCount": 142
+        }
+      ],
+      "targets": [
+        {
+          "selector": "header .header-cta",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Fale conosco pelo WhatsApp",
+          "href": "https://wa.me/",
+          "classes": "header-cta",
+          "rendered": true,
+          "bounds": {
+            "width": 38,
+            "height": 38
+          },
+          "computed": {
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "6px",
+            "padding": "0px",
+            "minHeight": "auto",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "9.28px",
+            "fontWeight": "800",
+            "letterSpacing": "0.3712px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .how-hero-copy > .button-copper",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Veja como funciona ↓",
+          "href": "#passos",
+          "classes": "button button-copper",
+          "rendered": true,
+          "bounds": {
+            "width": 206,
+            "height": 46
+          },
+          "computed": {
+            "display": "inline-flex",
+            "alignItems": "center",
+            "gap": "18px",
+            "padding": "13px 17px",
+            "minHeight": "46px",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "3px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "11.84px",
+            "fontWeight": "800",
+            "letterSpacing": "0.592px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "transform 1e-05s, background 1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        },
+        {
+          "selector": "main .closing-copy > .button-copper",
+          "element": "a",
+          "role": "link",
+          "accessibleName": "Conheça os ambientes →",
+          "href": "../#ambientes",
+          "classes": "button button-copper",
+          "rendered": true,
+          "bounds": {
+            "width": 225,
+            "height": 46
+          },
+          "computed": {
+            "display": "inline-flex",
+            "alignItems": "center",
+            "gap": "18px",
+            "padding": "13px 17px",
+            "minHeight": "46px",
+            "border": "0px none rgb(255, 255, 255)",
+            "borderRadius": "3px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(139, 106, 64)",
+            "fontSize": "11.84px",
+            "fontWeight": "800",
+            "letterSpacing": "0.592px",
+            "textTransform": "uppercase",
+            "textDecorationLine": "none",
+            "transition": "transform 1e-05s, background 1e-05s",
+            "transform": "none",
+            "outlineColor": "rgb(255, 255, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "2.66667px",
+            "outlineOffset": "0px",
+            "cursor": "pointer"
+          },
+          "state": {
+            "hover": false,
+            "focus": false,
+            "focusVisible": false,
+            "disabled": false
+          }
+        }
+      ]
+    }
+  ]
+}

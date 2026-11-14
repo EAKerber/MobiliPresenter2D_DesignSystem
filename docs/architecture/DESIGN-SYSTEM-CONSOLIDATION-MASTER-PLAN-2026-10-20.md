@@ -1,7 +1,7 @@
 # Plano diretor — consolidação de Design System, CSS e componentes do MobiliPresenter2D
 
 **Revisão:** 2026-10-20 / 0.1 — plano operacional e técnico, não homologação visual nem autorização para publicar.  
-**Ponto de entrada recomendado:** este arquivo → [etapa atual](CSS-READINESS-AND-CURRENT-GATE-2026-10-20.md) → [matriz de riscos e ownership](CSS-OWNERSHIP-RISKS-2026-10-20.md).  
+**Ponto de entrada recomendado:** [checkpoint live G0–G8](../../evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md) → este plano diretor (referência técnica datada, não fotografia live) → [matriz de riscos e ownership](CSS-OWNERSHIP-RISKS-2026-10-20.md).  
 **Produto tomado como fonte:** [EAKerber/MobiliPresenter2D @ 1878ae1](https://github.com/EAKerber/MobiliPresenter2D/tree/1878ae1057ce7c6190e0c8cb08a1f3baadd49463), `main` observada em 2026-10-20.  
 **Design System:** [EAKerber/MobiliPresenter2D_DesignSystem PR #39](https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/39), branch `architecture/dom-css-consolidation-20261020` (draft).  
 **Autoridades:** `decisions.json` (decisões homologadas/direções); `FINDINGS_REGISTER.md` (achados datados); `DECISION_APPLICATION_MAP.md` (mapa datado); ADRs UI-001…005 (decisões técnicas experimentais); snapshots/CI (evidência, não homologação).
