@@ -2,7 +2,7 @@
 
 ## Fonte e alcance
 
-Fonte de produto: EAKerber/MobiliPresenter2D em main@bb3e3a34ee771db1efe6d8dcfe8cbde96c6a40c7, conforme a ref local origin/main observada no checkout de inventário ARC-13 (work/arc13-ui-inventory-20261112@015e2ca0503d9fb1941991d27506238d4072e3af). Os blobs de app/admin/admin.js e app/admin/admin.css do checkout correspondem a essa ref local. A branch local main estava defasada; esta evidência não afirma frescor remoto.
+Fonte de produto: EAKerber/MobiliPresenter2D em `main@bb3e3a34ee771db1efe6d8dcfe8cbde96c6a40c7`. A revisão ARC-13 atual está no branch local `work/arc13-ui-inventory-20261112@3b97542482ff9c1bdb2ad45aabf777f97991e60f`; os arquivos `app/admin/admin.js` e `app/admin/admin.css` correspondem aos blobs de `origin/main` local; os dois commits mais recentes desse branch alteraram somente inventário/documentação. O inventário associado tem SHA-256 `8765873a096fe95167e4fba74838258e47428fab0e12d16af9b6c92a3e34a51e`.
 
 Revisão estática de geradores DOM, estado/modelo, listeners e regras CSS. As capturas fornecidas pelo usuário servem como observação visual, mas não estabelecem o CSS computado nem intenção de design. Não houve alteração de produto nem validação runtime.
 
@@ -27,15 +27,19 @@ Revisão estática de geradores DOM, estado/modelo, listeners e regras CSS. As c
 
 ## Decisões pendentes para o inventário
 
-1. **Hierarquia visual:** decidir se o estado inicial por item deve herdar o accent da marca. Avaliar também 10 px versus 12 px. Manter a decisão aberta até revisão de design; não normalizar por semelhança do elemento.
-2. **Nome acessível do módulo:** alinhar “visível no configurador” com o aria-label, que hoje diz “ativo inicialmente”. O rótulo de objeto e seu efeito devem ser confirmados separadamente.
-3. **Nome acessível da etapa:** decidir se “Ativar etapa …” é o nome desejado quando o checkbox já comunica checked/unchecked e o texto muda entre Ativa/Inativa.
-4. **Foco de preço:** confirmar a exceção de 3 px em relação ao foco geral de 2 px.
-5. **Copy reaproveitável:** os dois usos de “Disponível para clientes” podem compartilhar uma chave; não compartilhar seus estados ou regras de domínio.
-6. **Matriz runtime:** confirmar tema claro/escuro, foco de teclado, desabilitado, CSS computado e anúncio acessível nos consumidores representativos antes de aprovar qualquer alteração visual.
+O Common Sense Judge fez uma leitura estática complementar em 13/11/2026 no Product ARC-13 HEAD `3b97542482ff9c1bdb2ad45aabf777f97991e60f`. Ela confirma as sete famílias da tabela e refina os itens em aberto:
 
-As decisões listadas de design/acessibilidade são pendências do inventário, não autorização para mudar o produto. A distinção de função estática é suficiente para classificar ownership sem bloquear ARC-13. Esta leitura suplementa o inventário lexical: ele enumera sinks e propostas de copy, mas não cobre sozinho as transições ou estados completos.
+1. **P1 — nomes acessíveis:** alinhar o nome do módulo à visibilidade real; decidir o rótulo de objeto, já que “Iniciar ativo” representa visibilidade; decidir se “Ativar etapa …” deve descrever disponibilidade atual quando o estado está marcado.
+2. **P1 — rascunho versus disponibilidade pública:** acabamentos e puxadores alteram o rascunho e só chegam aos clientes depois de “Publicar configuração”. Decidir se o rótulo/contexto atual comunica essa transição.
+3. **P2 — última opção:** confirmar se acabamento e puxador devem usar a mesma defesa/feedback ao tentar retirar a última opção. Hoje acabamento fica bloqueado preventivamente; puxador reverte a tentativa e mostra mensagem.
+4. **P2 — hierarquia e accent:** decidir se o estado inicial por item deve manter accent nativo e 10 px ou seguir accent da marca; avaliar a saliência por família. “Sem cor/tinta base” não tem accent explícito.
+5. **P2 — foco de preço:** confirmar se o foco de 3 px do controle de publicação é exceção intencional ao contorno geral de 2 px.
+6. **Copy compartilhada:** os dois rótulos “Disponível para clientes” podem compartilhar chave de texto; isso não unifica estado, validação ou persistência.
+7. **Antes de qualquer ajuste visual:** revisar Admin autenticado em claro/escuro, teclado e focus-visible, checked/unchecked, disabled por motivo, nomes/estados com leitor de tela e contraste CSS computado. Essa matriz ainda não foi executada.
 
+Os dois exemplos do usuário compartilham checkbox nativo, mas não a função. Além disso, “Iniciar ativo” é usado tanto pelo ramo de objeto quanto pelo de serviço (`admin.js:244,266`); sem o item/contexto visível, a captura não distingue esses subtipos. Os sinks candidatos correspondentes são `852e7699499e4703` e `7ef47d84204a2578`; “Ativa” continua ligado ao sink de disponibilidade da etapa `372ab0a32af69fc6`.
+
+Essas são pendências do inventário, não autorização para alterar produto. A revisão permanece estática, sem CSSOM, browser, leitor de tela ou aprovação de copy. As atualizações e os mesmos IDs estão reconciliados no juiz ARC-13 local; o histórico de IDs está na seção seguinte.
 
 ## Relação com os candidatos do inventário ARC-13
 
