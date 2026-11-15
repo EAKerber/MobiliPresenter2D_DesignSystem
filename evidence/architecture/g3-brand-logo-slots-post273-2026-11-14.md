@@ -30,3 +30,8 @@ A baseline CSSOM de CTAs públicos de 14/11 é um recibo local distinto, em árv
 A análise pós-#273 identificou `aria-label` aplicado ao contêiner genérico dos links secundários do hero. A PR [#275](https://github.com/EAKerber/MobiliPresenter2D/pull/275) propõe `role="group"`, com fonte canônica, HTML gerado e manifest sincronizados. A WAI-ARIA 1.2 define `generic` como um contêiner sem nome e não permite nomeá-lo por `aria-label`; um `group` nomeado é apropriado aos dois links relacionados. A proposta ainda não foi integrada e não tem validação com leitor de tela; G3 permanece parcial.
 
 **Resultado:** propriedade atual do hero reconciliada para G3; G3 permanece parcial. Nenhuma mudança de runtime, design token ou CSS compartilhado é autorizada por este recibo.
+
+
+## Acompanhamento visual — PR #275, 15/11/2026
+
+A PR [#275](https://github.com/EAKerber/MobiliPresenter2D/pull/275) foi ampliada para remover as faixas de margem na arte do hero. A nova composição expande o ambiente, reduz o celular dentro da moldura e deixa o display limpo para o player real; o alinhamento do overlay foi atualizado. O head atual é `63782416578015b77e531f45d1dcf6a1b5f5a214`; o Deploy Preview está READY em [abrir preview](https://6af92098c6143a04fda931c0--mobilipresenter2d.netlify.app/). A PR continua Draft, sem integração ou publicação. A revisão visual no navegador permanece pendente; não foram executados testes nem leitor de tela.
