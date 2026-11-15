@@ -36,7 +36,7 @@ Nenhuma disposição do owner foi alterada: os dez registros continuam com `owne
 
 ## Delta posterior na Draft #275
 
-O head atual da Draft #275 (`12cc3b480ab86c8897a4ff84057676ccb99c847d`) acrescenta ou alterna rótulos de controles da Home, incluindo “Controles do vídeo”, “Reproduzir o vídeo”, “Pausar o vídeo”, “Tela cheia” e “Sair da tela cheia”. Esses valores não pertencem ao conjunto de dez sinks do snapshot #274. Se #275 for integrada, recapturar o inventário ARC-13 no novo head antes de tratar qualquer um deles como coberto, criar chaves ou extrair runtime. A PR continua Draft e esses valores não receberam disposição neste parecer.
+O head atual da Draft #275 (`0800cf5555452dbf21969c2ac94862cd546381b5`) mantém e alterna os rótulos de controles da Home, incluindo “Controles do vídeo”, “Reproduzir o vídeo”, “Pausar o vídeo”, “Tela cheia” e “Sair da tela cheia”. Esses valores não pertencem ao conjunto de dez sinks do snapshot #274. O commit mais recente corrige o cálculo responsivo da escala sem alterar esses rótulos. Se #275 for integrada, recapturar o inventário ARC-13 no novo head antes de tratar qualquer um deles como coberto, criar chaves ou extrair runtime. A PR continua Draft e esses valores não receberam disposição neste parecer.
 
 ## Resultado
 
