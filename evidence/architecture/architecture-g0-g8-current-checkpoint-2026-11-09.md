@@ -6,16 +6,16 @@
 
 **Plano de referência:** [Plano diretor G0–G8](../../docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md) · [reconciliação anterior](master-plan-g0-g8-current-crosswalk-2026-10-25.md) · [handover e governança](../../docs/HANDOVER_CURRENT.md).
 
-## Estado live após abertura da PR #275 — 14/11/2026 (BRT)
+## Estado live após atualização da PR #275 — 15/11/2026 (BRT)
 
-- **Produto:** `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`, `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`, 6 refs. Além de `main` e `development`, permanecem `codex/ds04-208-preview-batch-20261111@d699fb1`, `codex/nav005-public-compact-main-20261110@2e202e4`, `docs/arc13-post-273-reconciliation-20261114@7a9af032` e `fix/home-hero-group-a11y-20261114@409204e8`.
-- **PRs do Produto:** #273 foi integrada no squash `46a52e76`; sua branch integrada está ausente das refs remotas. #269 continua Draft e #271 aberta sobre a base antiga `221b54b`, com `mergeable=false`. #274 continua Draft em `main@46a52e76` → `7a9af032995accede00870481d79bc663f58bf1a`, com 39 arquivos documentais/tooling e sem `app/**`. #275 é Draft em `main@46a52e76` → `409204e8f77bd35dcaf50ee4f2f62e2936b604d7`, com três arquivos: fonte canônica, HTML gerado e manifest de hashes.
+- **Produto:** `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`, `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`, 6 refs. Além de `main` e `development`, permanecem `codex/ds04-208-preview-batch-20261111@d699fb1`, `codex/nav005-public-compact-main-20261110@2e202e4`, `docs/arc13-post-273-reconciliation-20261114@7a9af032` e `fix/home-hero-group-a11y-20261114@63782416`.
+- **PRs do Produto:** #273 foi integrada no squash `46a52e76`; sua branch integrada está ausente das refs remotas. #269 continua Draft e #271 aberta sobre a base antiga `221b54b`, com `mergeable=false`. #274 continua Draft em `main@46a52e76` → `7a9af032995accede00870481d79bc663f58bf1a`, com 39 arquivos documentais/tooling e sem `app/**`. #275 é Draft em `main@46a52e76` → `63782416578015b77e531f45d1dcf6a1b5f5a214`, com seis arquivos: fonte canônica, HTML publicado, arte expandida do hero, CSS/JS de alinhamento e manifest. O Deploy Preview do head atual está READY para revisão visual.
 - **Inventário ARC-13:** SHA-256 `b3739e5ff57005600665cc6c1a04fbe986649b8f8e8e9b80a6fb09b2d3adf178`, 1.021 sinks e 359 fontes. O crosswalk aponta 977 IDs de sink sem mudança, 34 IDs remapeados por posição (28 únicos e seis em três grupos de fingerprints repetidas), 1 texto alternativo alterado e 9 sinks novos. As dez ocorrências alteradas/novas aguardam decisão. Fontes: 343 IDs sem mudança, 15 remapeamentos únicos e uma relação de erro/fallback revalidada manualmente como diagnóstico.
-- **Proveniência ARC-03C:** 419 sinks HTML mapeados — 386 para páginas, 33 para o header compartilhado, zero sem origem. `compile-primary-pages.mjs --check` e a geração do inventário passaram para o lote documental #274; não executei testes nem preview para #275.
+- **Proveniência ARC-03C:** 419 sinks HTML mapeados — 386 para páginas, 33 para o header compartilhado, zero sem origem. `compile-primary-pages.mjs --check` e a geração do inventário passaram para o lote documental #274; não executei testes; o Deploy Preview do head atual está READY para revisão visual.
 - **Design System:** `main@79db735d6f05177b0c406e383d35832f3d72fdef`, 2 refs. PR #119 segue Draft na branch documental existente; esta atualização reutiliza essa branch.
 - **Política de refs:** a branch integrada da #273 está ausente; a #275 eleva temporariamente o Produto de 5 para 6 refs. Cinco é um gatilho para revisar crescimento, não hard cap nem autorização para exclusão por contagem. A meta segue 2 quando estável.
 - **Estimativa:** a faixa de ~30% (25–35%) permanece como leitura datada de 13/11; não foi recalculada. A integração pública #273, o inventário ARC-13 e a correção proposta #275 não encerram gates arquiteturais G0–G8 nem etapas V0–V6.
-- **Estado de integração:** #274, #275 e #119 continuam Draft. Nenhuma PR deste lote foi integrada; não houve deploy de produção nem novo preview.
+- **Estado de integração:** #274, #275 e #119 continuam Draft. Nenhuma PR deste lote foi integrada nem publicada em produção; o Deploy Preview da #275 está READY.
 
 ## Snapshot operacional anterior — após PRs #273 e #274, antes da #275 (14/11/2026 BRT)
 
