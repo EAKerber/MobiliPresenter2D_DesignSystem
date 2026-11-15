@@ -5,11 +5,11 @@
 **Método:** leitura dos contratos, comandos, gatilhos e áreas cobertas; classificação por risco/assertion/rota/estado, não por quantidade de arquivos.  
 **Execução:** nenhuma suíte foi executada nesta revisão ARC-15. Nenhum teste ou workflow foi alterado no pin `Product main@46a52e76`; branches de PR, inclusive #275, ficam fora deste inventário.
 
-## Parecer do Common Sense Judge
+## Parecer Common Sense Judge
 
-**Não há evidência para remover um teste inteiro.** Há repetições exatas de invocação que podem compartilhar a definição do job como trabalho de CI, mas cada SHA/integração ainda precisa receber sua própria execução e status; os workflows também têm garantias adicionais diferentes. Há também verificações parcialmente sobrepostas e um conjunto de arquivos sem invocação automática encontrada. Esses últimos são “sem alocação confirmada”, não obsoletos.
+**Não há evidência para remover um teste inteiro.** Há repetições exatas de invocação que podem compartilhar a definição do job como trabalho de CI, mas cada SHA/integração ainda precisa receber sua própria execução e status; os workflows também têm garantias adicionais diferentes. Há verificações parcialmente sobrepostas. Os oito arquivos sem chamada localizada agora têm parecer individual abaixo; a classificação técnica reduz a ambiguidade, mas não substitui a decisão do owner.
 
-O inventário deve permanecer como primeira passada: não faz uma comparação linha a linha de cada assertion de todos os workflows e não prova que todas as verificações manuais sejam redundantes ou ativas.
+O inventário continua como primeira passada: não faz comparação linha a linha de cada assertion de todos os workflows e não prova que toda verificação manual seja redundante ou ativa.
 
 ## Contagem localizada
 
@@ -79,15 +79,29 @@ A busca nos 21 workflows e em `app/package.json` não encontrou chamada explíci
 - `tests/test_stone_surface_masks.py`
 - `tests/validate-exposed-side-pixels.py`
 
-Classificação atual: **destino não confirmado**. Podem ser manuais, históricos ou precisar de gate; não há evidência suficiente para excluí-los.
+A busca não encontrou invocação explícita; o parecer separa destinos prováveis e a decisão concreta ainda pendente para cada família. Nenhuma das oito foi classificada como obsoleta.
 
 Há quatro discrepâncias concretas entre gatilhos e comandos:
 
 1. `candidate-assets.yml` observa `tests/**` como path trigger, mas sua lista explícita de unittest não executa os cinco testes Python de máscaras/stone/exposed-side listados acima. O trigger faz o workflow iniciar, mas não transforma esses arquivos em verificações executadas.
 2. `arc03c-static-page-build-gate.yml` tem gatilho push limitado a branches históricas, sem `pull_request` ou `main`. O path filter inclui `tests/public-header-controller-gate.mjs`, porém o comando executa `tests/arc03c-published-pages-browser-differential.mjs`, não o controller gate. O controller é executado no workflow P-COMP.
-3. `public-routing-before-clerk.yml` observa `tests/public-*.cjs`, o que inclui `tests/public-pages-integrated.cjs`, mas o workflow executa `tests/public-cutover-contract.cjs`, outros contratos públicos e `tests/public-pages-smoke.cjs`; não executa `public-pages-integrated.cjs`. O arquivo segue sem destino confirmado.
+3. `public-routing-before-clerk.yml` observa `tests/public-*.cjs`, o que inclui `tests/public-pages-integrated.cjs`, mas o workflow executa `tests/public-cutover-contract.cjs`, outros contratos públicos e `tests/public-pages-smoke.cjs`; não executa `public-pages-integrated.cjs`; a fixture da PR #180 não equivale a uma fixture reutilizável de gate.
 4. `viewer-base-price-contract-gate.yml` executa testes unitários e browser, mas está em `push` para `main`/branch de integração e `workflow_dispatch`; não há trigger de PR.
 
+## Parecer por arquivo sem invocação localizada
+
+| Arquivo | Evidência examinada | Leitura do juiz | Pendência concreta do owner |
+|---|---|---|---|
+| `tests/public-pages-integrated.cjs` | E2E real em Deploy Preview, dependente da seed/fixture da PR #180 (módulo e conteúdo fixos); o filtro `public-*.cjs` só o faz acordar, não o executa. | Replay histórico/de integração, preso à fixture; não é gate genérico reutilizável no estado atual. | Recriar fixture estável para replay ou preservar como evidência histórica/manual. |
+| `tests/ui-theme-contract.cjs` | Node + VM; cobre sete shells, bootstrap/CSS, marca, navegação, controle de 44 px, estados de tema/storage e hashes dos logos. | Contrato estático plausivelmente ativo e barato, mas acoplado a seletores, literais e hashes. | Confirmar quais valores/seletores continuam normativos e decidir paths de execução. |
+| `tests/exposed-sides-glass.cjs` | Browser local `file://`; 256 combinações de sete módulos e serviço global; captura estados e confere z-order, ARIA e erros JS. | Cobertura distinta de testes de pixels; candidato a regressão browser/visual. | Definir captura para revisão manual ou gate automático por paths. |
+| `tests/test_mask_semantics.py` | Compara alpha bounds com dados técnicos e bytes da máscara inline com PNG canônico. | Candidato a gate de semântica de máscara/manifest/inline mask. | Selecionar os paths que devem acordá-lo e confirmar invocação explícita. |
+| `tests/test_stone_backing.py` | Replay determinístico de geração com donor corrompido fora da máscara; valida hash, zero diffs e oito estados; `semanticReview=PENDING`. | Útil como replay técnico, sem aprovação semântica final. | Preservar a revisão humana pendente; decidir trigger/invocação por família stone. |
+| `tests/test_stone_cleanplate.py` | Valida hashes de cleanplate/composição, roundtrip zero e superfícies aceitas. | Candidato a gate da família cleanplate. | Selecionar paths e fluxo de atualização quando os artefatos mudarem. |
+| `tests/test_stone_surface_masks.py` | Confere landmarks, máscaras disjuntas dentro da alpha, determinismo e pontes que exigem ambos os hosts. | Candidato a gate de stone masks; contrato diferente da revisão semântica do backing. | Selecionar paths e preservar os dois hosts necessários. |
+| `tests/validate-exposed-side-pixels.py` | Pixel smoke de bounds e pontos de vidro, hood e pedras. | Sobreposição parcial com outros checks; cobre pixels de integração específicos que não são totalmente substituídos por eles. | Selecionar paths para pixels/famílias e manter pontos ao atualizar arte. |
+
+**Decisões agrupadas:** (1) destino do E2E preso à fixture #180; (2) valores normativos e paths de `ui-theme-contract`; (3) revisão manual versus gate para o browser glass; (4) triggers por família para os cinco checks Python e preservação explícita de `semanticReview=PENDING`. Recomendação do juiz não remove, adiciona, executa nem aprova mudanças na suíte.
 ## Decisões e pendências
 
 A consulta de branch protection do Produto não pôde ser lida nesta sessão (HTTP 403 da integração). O conjunto de required checks permanece **UNKNOWN**; sucesso de workflow, isoladamente, não prova que um check seja obrigatório.
@@ -97,8 +111,8 @@ A consulta de branch protection do Produto não pôde ser lida nesta sessão (HT
 | Excluir testes por alta contagem ou semelhança de nomes | **Não recomendado.** Nenhum teste foi provado redundante no nível do contrato. |
 | Consolidar execuções idênticas de `npm test` | Candidato de CI: compartilhar a definição do job, mantendo uma execução e status válidos para cada SHA aplicável. Antes, confirmar required checks e preservar as garantias extras de cada workflow. |
 | Consolidar `public-cutover-contract.cjs` | Candidata a workflow reutilizável; executar separadamente para cada head e preservar os três gates de integração específicos e seus status. |
-| Resolver os oito arquivos sem invocação | Owner deve classificar cada um como gate manual, histórico ou contrato que precisa alocação. Sem exclusão até essa disposição. |
+| Resolver as oito classificações | O parecer técnico recomenda destinos por arquivo; o owner ainda decide fixture #180, valores normativos de tema, revisão/capturas do glass e paths dos cinco checks Python. Sem exclusão até a disposição. |
 | Alinhar path filters, comandos e PR trigger | Decisão do owner sobre intenção de ARC03C, candidate assets, public-routing e viewer-base-price; depois corrigir os pares divergentes. |
-| Fechar ARC-15 | A matriz comando→risco/estado→âncoras dos 21 comandos está documentada; falta a matriz integral por assertion/rota/estado, a decisão dos oito itens não alocados e a confirmação dos required checks. |
+| Fechar ARC-15 | Matriz de comandos e parecer individual dos oito itens documentados; faltam matriz integral por assertion/rota/estado, as quatro decisões agrupadas e confirmação dos required checks. |
 
-**Resultado desta passada:** nenhum teste/workflow foi removido, adicionado ou executado no pin `Product main@46a52e76`. A matriz de comandos e os quatro desalinhamentos trigger→invocação estão documentados; as verificações sem destino, a matriz integral de assertions e as decisões do owner permanecem abertas. Nenhuma redução ou consolidação foi autorizada.
+**Resultado desta passada:** nenhum teste/workflow foi removido, adicionado ou executado no pin `Product main@46a52e76`. A matriz de comandos, quatro desalinhamentos trigger→invocação e parecer individual dos oito itens estão documentados. Permanecem abertas a matriz integral de assertions, as quatro decisões agrupadas do owner e required checks (UNKNOWN/403). Nenhuma redução ou consolidação foi autorizada.
