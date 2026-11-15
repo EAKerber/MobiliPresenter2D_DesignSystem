@@ -7,7 +7,7 @@
 
 ## Parecer do Common Sense Judge
 
-**Não há evidência para remover um teste inteiro.** Há repetições exatas de invocação que podem ser consolidadas como trabalho de CI, mas os workflows que as chamam têm garantias adicionais diferentes. Há também verificações parcialmente sobrepostas e um conjunto de arquivos sem invocação automática encontrada. Esses últimos são “sem alocação confirmada”, não obsoletos.
+**Não há evidência para remover um teste inteiro.** Há repetições exatas de invocação que podem compartilhar a definição do job como trabalho de CI, mas cada SHA/integração ainda precisa receber sua própria execução e status; os workflows também têm garantias adicionais diferentes. Há também verificações parcialmente sobrepostas e um conjunto de arquivos sem invocação automática encontrada. Esses últimos são “sem alocação confirmada”, não obsoletos.
 
 O inventário deve permanecer como primeira passada: não faz uma comparação linha a linha de cada assertion de todos os workflows e não prova que todas as verificações manuais sejam redundantes ou ativas.
 
@@ -21,8 +21,8 @@ Há 21 workflows YAML no pin analisado. Os comandos variam: alguns executam a su
 
 | Contrato/comando repetido | Invocações observadas | Parecer |
 |---|---|---|
-| `npm test` da pasta `app` | `.github/workflows/app-build-purity.yml`, `candidate-assets.yml` e `variant-fidelity.yml` chamam o mesmo script em eventos de PR. `module02-fidelity.yml` também o chama, mas só por execução manual. | Repetição exata do comando; cada workflow acrescenta um contrato próprio (pureza de build, validação de entrada de assets ou fidelidade de variantes). Candidato a consolidar a execução comum, mantendo cada gate adicional. Não remover nem enfraquecer nenhum gate antes de conferir os nomes de status exigidos. |
-| `tests/public-cutover-contract.cjs` | `p-comp-01-public-menu-gate.yml`, `public-routing-before-clerk.yml` e `ux-auth-viewer-integration-gate.yml`. | A mesma assertion está repetida em três integrações. Candidato a uma única execução reutilizável/status comum; os respectivos testes de integração permanecem separados. |
+| `npm test` da pasta `app` | `.github/workflows/app-build-purity.yml`, `candidate-assets.yml` e `variant-fidelity.yml` chamam o mesmo script em eventos de PR. `module02-fidelity.yml` também o chama, mas só por execução manual. | Repetição exata do comando; cada workflow acrescenta um contrato próprio (pureza de build, validação de entrada de assets ou fidelidade de variantes). Candidato a compartilhar a definição da execução via workflow reutilizável, executado para cada SHA aplicável. Manter cada gate adicional e status obrigatório; não remover nem enfraquecer checks. |
+| `tests/public-cutover-contract.cjs` | `p-comp-01-public-menu-gate.yml`, `public-routing-before-clerk.yml` e `ux-auth-viewer-integration-gate.yml`. | A mesma assertion está repetida em três integrações. Candidata a compartilhar uma definição via workflow reutilizável, executada separadamente para cada head/integração; nunca reutilizar o status de uma branch em outra. Os testes de integração permanecem separados. |
 | `node app/tools/test-core.js` | `summary-pricing-browser.yml`; o mesmo teste também é um dos 19 scripts de `app/npm test`. | Repetição parcial/subconjunto, dentro de um browser gate que verifica preço/resumo/persistência. Não elimina o gate de browser. |
 | `npm test` em `module02-fidelity.yml` | Workflow de `workflow_dispatch`, usado para replay/manual. | Não é repetição de execução de PR em cada mudança; manter como ferramenta operacional até o owner classificar seu uso. |
 
@@ -33,7 +33,7 @@ Há 21 workflows YAML no pin analisado. Os comandos variam: alguns executam a su
 | ARC03C e P-COMP do header público | Rotas públicas, temas, viewports e navegadores têm interseções. | `arc03c-published-pages-browser-differential.mjs` compara contra snapshot histórico com raster. `public-header-controller-gate.mjs` mede contra a implementação corrente, inclui Viewer, instância compartilhada e interação funcional do menu. |
 | Fluxo, teclado e responsividade | Navegação por etapas e fechamento de detalhes; Escape aparece em mais de uma jornada. | `flow-layout-browser.cjs` cobre layout, política e seleção; `keyboard-browser.cjs` cobre teclado/foco/scroll; `nav-flow-responsive-crossbrowser.cjs` cobre perfis e limites de viewport. A interseção não substitui os contratos próprios. |
 | Administração hierárquica, persistência e save V5 | Usam o mesmo harness/endpoints simulados do Admin. | Estrutura/opções, cancelamento e leitura após escrita, migração/reparo V3, edição nativa V5 e tratamento de resposta rejeitada são assertions diferentes. |
-| Pedra/acabamento e resumo/preço | Percorrem superfícies próximas do Viewer. | Canvas, ordem de composição e reparo de legado diferem de subtotal/total, cobrança única, sincronização do resumo e persistência. |
+| Pedra/acabamento e resumo/preço | Percorrem superfícies do Configurador/fluxo V5. | Canvas, ordem de composição e reparo de legado diferem de subtotal/total, cobrança única, sincronização do resumo e persistência. |
 | Viewer com preço base e overview editorial | Mesma rota Viewer. | Contrato de dados/fail-closed e toggle ON/OFF não é o mesmo que conteúdo editorial, benefícios, dimensões e layout sem preço. |
 | Fallback de imagem, projeção pública e smoke | Leitura da página pública. | Teste unitário de recuperação, geometria/acessibilidade no browser, DTO fail-closed, smoke de preview e leitura GET-only de produção validam camadas distintas. |
 | Assets de candidato | Oito testes Python compartilham entrada e dados de revisão. | Canvas/RGBA, hash/ROI, alpha fora da região aprovada, ordem de composição, proveniência, delta vazio/mismatch e direção de geometria são propriedades independentes; a decisão humana continua `PENDING`. |
@@ -64,8 +64,8 @@ Há duas discrepâncias concretas entre gatilhos e comandos:
 | Disposição | Estado |
 |---|---|
 | Excluir testes por alta contagem ou semelhança de nomes | **Não recomendado.** Nenhum teste foi provado redundante no nível do contrato. |
-| Consolidar execuções idênticas de `npm test` | Candidato de CI. Antes, confirmar branch protection/required checks e preservar as garantias extra de cada workflow. |
-| Consolidar `public-cutover-contract.cjs` | Candidato de status reutilizável; preservar os três gates de integração específicos. |
+| Consolidar execuções idênticas de `npm test` | Candidato de CI: compartilhar a definição do job, mantendo uma execução e status válidos para cada SHA aplicável. Antes, confirmar required checks e preservar as garantias extras de cada workflow. |
+| Consolidar `public-cutover-contract.cjs` | Candidata a workflow reutilizável; executar separadamente para cada head e preservar os três gates de integração específicos e seus status. |
 | Resolver os oito arquivos sem invocação | Owner deve classificar cada um como gate manual, histórico ou contrato que precisa alocação. Sem exclusão até essa disposição. |
 | Alinhar path filters, comandos e PR trigger | Decisão do owner sobre intenção de ARC03C, candidate assets e viewer-base-price; depois corrigir os pares divergentes. |
 | Fechar ARC-15 | Ainda falta matriz assertion→risco→rota/estado para todos os contratos e decisão dos itens não alocados. |
