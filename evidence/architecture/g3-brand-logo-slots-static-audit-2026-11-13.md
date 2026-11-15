@@ -22,6 +22,16 @@ O que se repete com clareza é a **seleção do ativo de marca por tema** em app
 
 **G3 estático:** a matriz de ownership está classificada para as superfícies acima. **G4:** nenhuma extração de layout de logo é indicada por esta evidência. Preservar os slots separados até demonstrar equivalência por consumidor e custo/benefício de mudança.
 
+## Atualização após a PR #273 integrada — 14/11/2026
+
+**Base atual do Produto:** `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`. A implementação veio da PR [#273](https://github.com/EAKerber/MobiliPresenter2D/pull/273), head revisado `6799d3177bf931f087f2bf451a6d6dbf5b4d5f6f`, integrada por squash em `46a52e76`.
+
+A revisão visual registrada no Deploy Preview da PR cobriu desktop e celular. O hero mantém a arte do ambiente e do aparelho como imagem estática de fundo; o vídeo preenche a tela do telefone sem o cabeçalho fictício. O telefone e a composição completa aparecem menores, preservando proporção: redução documentada de 12% em desktop, 16% em telas intermediárias e 20% em celular. O player só é ativado após escolha de reprodução; o controle de tela cheia fica sobreposto. A miniatura segue a imagem padrão do YouTube e não garante o primeiro quadro decodificado do vídeo. “Como funciona” conserva seu vídeo e normaliza as imagens dos cards comparativos em molduras comuns.
+
+**Ownership G3 atualizado:** (1) arte raster do ambiente/aparelho, (2) superfície do vídeo e seus controles dentro da tela ilustrada e (3) logos/cabeçalhos pertencem a slots diferentes. O slot da marca do cabeçalho não fornece lettering à arte do hero. A nota de 13/11 de que o lettering incorreto ainda precisava de correção era correta naquele snapshot e está agora **superada** pela integração da #273. A baseline CSSOM de CTAs de 14/11 continua sendo uma coleta local pinada em árvore anterior; ela não passa a representar o estado pós-#273. Esta revisão do preview complementa a baseline, sem convertê-la em medição CSSOM, screenshot arquivado ou evidência de dispositivo físico.
+
+O corpo da PR registrou 11/11 checks, compilação canônica sincronizada e ausência de rolagem horizontal. Esta atualização apenas reconcilia propriedade/proveniência; G3 continua parcial e não aprova extração de CSS compartilhado.
+
 ## Limites
 
 Não foi medido CSSOM, tamanho computado em temas/telas, clipping, proporção do ativo, performance de transferência ou comportamento de dispositivo. A matriz não autoriza substituir qualquer imagem; apenas mostra que o hero raster não é o logo do cabeçalho. A revisão visual da arte e do vídeo no hero permanece tarefa própria.

@@ -11,10 +11,16 @@
 - **PRs do Produto:** #273 foi integrada em `main` (squash `46a52e76`) e sua branch foi removida. #269 continua Draft e #271 aberta; ambas apontam para a base antiga `221b54b` e a API atual reporta `mergeable=false`. #274 é Draft, `main@46a52e76` → `57dbbe5`, com 38 arquivos de tooling, inventário e documentação; nenhum `app/**` está no diff.
 - **Inventário ARC-13:** SHA-256 `b3739e5ff57005600665cc6c1a04fbe986649b8f8e8e9b80a6fb09b2d3adf178`, 1.021 sinks e 359 fontes. O crosswalk aponta 977 IDs de sink sem mudança, 34 IDs remapeados por posição (28 únicos e seis em três grupos de fingerprints repetidas), 1 texto alternativo alterado e 9 sinks novos. As dez ocorrências alteradas/novas aguardam decisão. Fontes: 343 IDs sem mudança, 15 remapeamentos únicos e uma relação de erro/fallback revalidada manualmente como diagnóstico.
 - **Proveniência ARC-03C:** 419 sinks HTML mapeados — 386 para páginas, 33 para o header compartilhado, zero sem origem. `compile-primary-pages.mjs --check` e a geração do inventário passaram. A suíte de aplicação, preview e deploy não foram executados para #274.
-- **Design System:** `main@79db735d6f05177b0c406e383d35832f3d72fdef`, 2 refs; PR #119 segue Draft em `docs/architecture-status-20261109@2012f692`. O corpo da PR e este checkpoint passam a apontar para o Product PR #274.
+- **Design System:** `main@79db735d6f05177b0c406e383d35832f3d72fdef`, 2 refs; PR #119 segue Draft na branch documental existente. Este lote acrescenta evidência G3 pós-#273 sem alterar runtime.
 - **Política de refs:** cinco refs no Produto atingem o ponto de revisão combinado, mas não são hard cap nem autorização para exclusão por contagem. O alvo segue sendo 2 quando estável. A abertura da #274 deixa temporariamente o Produto em 5.
 - **Estimativa:** a faixa de ~30% (25–35%) permanece como leitura datada de 13/11; não foi recalculada. O merge público #273 e a atualização do inventário não fecham, por si, gates arquiteturais G0–G8 nem etapas V0–V6.
 - **Estado de integração:** #274 e #119 continuam Draft. Não houve merge desta atualização, alteração de produção ou nova execução de preview.
+
+## G3 — reconciliação do hero após a PR #273 — 14/11/2026 (BRT)
+
+O Product `main@46a52e76` integra a revisão visual feita no Deploy Preview da PR [#273](https://github.com/EAKerber/MobiliPresenter2D/pull/273), no head `6799d3177bf931f087f2bf451a6d6dbf5b4d5f6f). O aparelho/ambiente permanece arte raster; o vídeo passa a preencher a tela ilustrada, sem cabeçalho inventado; o conjunto foi reduzido mantendo sua proporção (12% desktop, 16% intermediário, 20% celular). O vídeo só carrega ao reproduzir e a tela cheia fica sobreposta. A miniatura padrão do YouTube pode diferir do primeiro quadro decodificado. A página Como funciona mantém o vídeo e apresenta os comparativos com imagens normalizadas. O recibo [G3 pós-#273](../evidence/architecture/g3-brand-logo-slots-post273-2026-11-14.md) separa arte, player e slots de marca. A afirmação de 13/11 de que o lettering ainda precisava ser corrigido é histórica/superada.
+
+A revisão é evidência visual do Preview no head da PR, registrada antes do squash. A baseline CSSOM local de CTAs continua pinada na árvore anterior e não foi reexecutada sobre `main@46a52e76`; os dois recibos têm escopos distintos. Não houve nova coleta de dispositivo físico, leitor de tela ou CSSOM nesta atualização. **G3 permanece parcial e nenhuma extração compartilhada está aprovada.**
 
 ## Checkpoint de execução e estimativa de avanço — 13/11/2026
 
@@ -510,6 +516,9 @@ A cópia limpa destacada do Product `main@221b54b2a41ecc8c338d1bf2cf67280cf165ce
 Sem alteração do produto, banco, publicação, refs remotas ou `main` do Product.
 
 ## Reconciliação live do plano arquitetural geral — 12/11/2026
+
+**Snapshot histórico, superado pela revalidação live de 14/11 registrada no topo deste handover.** Os números, HEADs e próximos passos abaixo descrevem apenas o estado de 12/11; preservar como recibo, sem usar a sequência antiga como instrução corrente.
+
 
 O objetivo corrente abrange ARC-01…ARC-16 e V0–V6; G0–G8 é outro plano de consolidação e verificação que continua sendo acompanhado. Este adendo compara as afirmações históricas com o Product main confirmado, sem reescrever evidência antiga.
 

@@ -10,7 +10,7 @@
 
 Esta seção substitui apenas a fotografia operacional anterior. Os recibos datados abaixo seguem como evidência histórica.
 
-- **Design System:** `main@79db735d6f05177b0c406e383d35832f3d72fdef`; 2 refs, dentro da meta/soft cap. PR #119 permanece Draft no head `2012f6928065e63b000c19c0c317611d237e68ef`, sem alteração de runtime.
+- **Design System:** `main@79db735d6f05177b0c406e383d35832f3d72fdef`; 2 refs, dentro da meta/soft cap. PR #119 permanece Draft na branch documental existente; este lote atualiza a proveniência G3 sem alterar runtime.
 - **Produto:** `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`, `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`; 5 refs: `main`, `development`, `codex/ds04-208-preview-batch-20261111`, `codex/nav005-public-compact-main-20261110` e `docs/arc13-post-273-reconciliation-20261114`. A PR #273 foi integrada em `main`; a ref `fix/home-hero-media-and-comparisons-20261111@6799d317` foi removida após confirmação do usuário. A #274 ocupa a quinta ref e é Draft.
 - **PRs do Produto:** #269 segue Draft e #271 aberta, ambas baseadas em `221b54b` (base anterior) e atualmente com `mergeable=false`; a comparação dessas PRs precisa ser refeita antes de qualquer integração. #273 está merged no squash `46a52e76`. #274 está aberta como Draft, `46a52e76` → `57dbbe5e724c41b074ac9ce901ac5270a5b33d94`, com 38 arquivos e sem `app/**` no diff.
 - **Inventário ARC-13 em revisão:** SHA-256 `b3739e5ff57005600665cc6c1a04fbe986649b8f8e8e9b80a6fb09b2d3adf178`; 1.021 sinks, 359 fontes. 977 IDs de sink permanecem iguais; 34 remapeamentos por posição (28 fingerprints únicas e 3 grupos ambíguos), um alt mudou e nove sinks são novos. O crosswalk mantém as dez ocorrências alteradas/novas pendentes. Fontes: 343 IDs permanecem iguais, 15 remapeamentos únicos e um fluxo de erro/fallback foi revisado manualmente.
@@ -18,6 +18,10 @@ Esta seção substitui apenas a fotografia operacional anterior. Os recibos data
 - **G0–G8 e ARC-01…ARC-16/V0–V6:** estados e HOLDs permanecem como registrados abaixo; a integração visual #273 e a evidência do inventário não encerram gates de acessibilidade, contraste, localização ou release.
 - **Progresso:** a estimativa ~30% (faixa 25–35%) continua datada de 13/11, sem recalcular nem inferir calendário.
 - **Operações:** compilador e inventário passaram localmente para #274; suíte de aplicação, preview e deploy não foram executados. Não houve merge do #274/#119, deploy, mudança de regra de branch ou operação de banco. Cinco refs no Produto acionam revisão de crescimento, não exclusão automática; a meta quando estável segue 2.
+
+## G3 — composição do hero após a PR #273 — 14/11/2026
+
+O Product `main@46a52e76` agora contém a composição revisada no Preview #273: telefone ilustrado menor, vídeo na tela sem cabeçalho fictício e controle de tela cheia sobreposto. A revisão documentada cobriu desktop e celular; `/how-it-works/` mantém o vídeo e usa enquadramento normalizado nos cards comparativos. O diagnóstico de 13/11 sobre lettering incorreto fica histórico/superado. Arte raster, vídeo/controles e logos do shell são slots distintos; nenhum CSS compartilhado foi extraído. Ver [recibo G3 pós-#273](g3-brand-logo-slots-post273-2026-11-14.md). **G3 permanece parcial:** esta evidência não substitui CSSOM, dispositivo real, leitor de tela nem validação dos shells/estados restantes.
 
 ## Estado operacional das fases
 
