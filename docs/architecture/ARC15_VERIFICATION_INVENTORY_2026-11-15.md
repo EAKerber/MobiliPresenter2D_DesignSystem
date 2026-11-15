@@ -3,7 +3,7 @@
 **Estado:** primeira passada concluída; auditoria integral de assertions e decisão de redução continuam pendentes.  
 **Fonte:** `EAKerber/MobiliPresenter2D` `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`.  
 **Método:** leitura dos contratos, comandos, gatilhos e áreas cobertas; classificação por risco/assertion/rota/estado, não por quantidade de arquivos.  
-**Execução:** nenhuma suíte foi executada nesta revisão. Nenhum teste ou workflow foi alterado.
+**Execução:** nenhuma suíte foi executada nesta revisão ARC-15. Nenhum teste ou workflow foi alterado no pin `Product main@46a52e76`; branches de PR, inclusive #275, ficam fora deste inventário.
 
 ## Parecer do Common Sense Judge
 
@@ -16,6 +16,34 @@ O inventário deve permanecer como primeira passada: não faz uma comparação l
 O script `app/package.json → scripts.test` contém 19 scripts Node e chama ainda dois validadores Python: `tools/validate-assets.py` e `tools/validate-r5a-pixelperfect.py`. São 21 comandos encadeados na suíte da pasta `app`, não 21 workflows nem a contagem de todos os testes do repositório.
 
 Há 21 workflows YAML no pin analisado. Os comandos variam: alguns executam a suíte completa, outros executam unitários, browser gates, validators ou verificações de produção. A contagem de arquivos não mede repetição de assertions.
+
+## Matriz comando → risco/estado → âncoras
+
+Escopo: os 21 comandos encadeados por `app/package.json → scripts.test` no Product `main@46a52e76`. As âncoras apontam para `app/tools/` e resumem a superfície/estado principal; não substituem a revisão de cada assertion. Workflows e branches de PR são avaliados separadamente.
+
+| Comando (cwd `app/`) | Risco e estado/superfície | Âncoras |
+|---|---|---|
+| `node tools/test-access-policy.mjs` | Fronteiras de autorização: admin/staff/buyer, sessão temporária, grants e páginas/configurador internos. | `app/tools/test-access-policy.mjs:22–42` |
+| `node tools/test-item-capabilities.js` | Compatibilidade entre tipo de item, etapa e ação disponível (seleção/toggle/ação). | `app/tools/test-item-capabilities.js:18–57` |
+| `node tools/test-layout-profiles.js` | Seleção dos perfis responsivos compacto/empilhado/lateral e limites de largura. | `app/tools/test-layout-profiles.js:8–34` |
+| `node tools/test-presentation-contract.js` | Combinações suportadas entre presentation, behavior e componente. | `app/tools/test-presentation-contract.js:11–172` |
+| `node tools/test-flow-model.js` | Ordem e normalização de etapas/grupos/seções/itens; proteção contra mutação do fluxo. | `app/tools/test-flow-model.js:29–209` |
+| `node tools/test-administration-v5.js` | Migração/validação do Admin v5, política de apresentação e preço tipado, sem autoridade legada paralela. | `app/tools/test-administration-v5.js:34–402` |
+| `node tools/test-published-configuration.js` | Leitura simulada de `published` e normalização de documentos v3/v5. | `app/tools/test-published-configuration.js:22–81` |
+| `node tools/test-published-buyer-projection.js` | Projeção buyer v3/v5 preserva hierarquia/etapas e expõe somente preço permitido. | `app/tools/test-published-buyer-projection.js:27–87` |
+| `node tools/test-v5-publication-migration.js` | Preflight, ETag/`onlyIfMatch`, falhas, quantidade de writes e readback na migração v3→v5. | `app/tools/test-v5-publication-migration.js:23–131` |
+| `node tools/test-v5-normal-save.js` | Concorrência no save v5, rejeição sem write e confirmação por revision/readback. | `app/tools/test-v5-normal-save.js:20–108` |
+| `node tools/test-postv5-new-material-roundtrip.js` | Novo material: forma, grupo/acabamento/preço, projeção buyer, save/readback e módulo sem registro. | `app/tools/test-postv5-new-material-roundtrip.js:36–104` |
+| `node tools/test-v5-offline-rehearsal.js` | Ensaio local de migração, assinatura/digest, um write exato e inspeção posterior. | `app/tools/test-v5-offline-rehearsal.js:40–162` |
+| `node tools/test-v5-publication-inspection.js` | Preflight somente leitura de ETag/revision/digest, blob ausente, JSON inválido e estados de bloqueio. | `app/tools/test-v5-publication-inspection.js:22–92` |
+| `node tools/test-v5-endpoint-safety.js` | Endpoint simulado: anônimo 401, staff 403, admin 200; isolamento preview/produção, cache privado, migração aposentada e sem downgrade. | `app/tools/test-v5-endpoint-safety.js:3–216` |
+| `node tools/test-legacy-stage-repair.js` | Planejador puro de handles; aceita delta exato e rejeita delta, ordem ou owner inesperados. | `app/tools/test-legacy-stage-repair.js:16–39` |
+| `node tools/test-flow-layout.js` | Grupos, spans, componentes e IDs semânticos no layout do fluxo. | `app/tools/test-flow-layout.js:32–208` |
+| `node tools/test-hierarchy-administration.js` | Administração hierárquica v4, validação de groups/sections e ausência de autoridade flat paralela. | `app/tools/test-hierarchy-administration.js:29–187` |
+| `node tools/test-hierarchy-editor.js` | Reordenação, divisão, mescla e movimento de grupos/seções sem mutar a origem. | `app/tools/test-hierarchy-editor.js:32–160` |
+| `node tools/test-core.js` | Integração ampla: cena/seleção, DOM/CSS, configuração/preço/validação, estimativas, projeção buyer, markup/layout responsivo, dock/PiP/hotspots. | `app/tools/test-core.js:44–54, 64–92, 95–420, 541–720, 722–988` |
+| `python3 tools/validate-assets.py` | Metadados SHA/canvas/alphaBounds, suporte de máscaras, ownership do módulo 02, bridge e composição golden. | `app/tools/validate-assets.py:27–172` |
+| `python3 tools/validate-r5a-pixelperfect.py` | Reconstrução byte-exata, invariantes RGB/alpha da variante/máscara e igualdade de pixels na composição final. | `app/tools/validate-r5a-pixelperfect.py:11–103` |
 
 ## Repetições exatas encontradas
 
@@ -40,7 +68,7 @@ Há 21 workflows YAML no pin analisado. Os comandos variam: alguns executam a su
 
 ## Verificações sem invocação automática localizada
 
-A busca nos 21 workflows e em `app/package.json` não encontrou chamada explícita para:
+A busca nos 21 workflows e em `app/package.json` não encontrou chamada explícita para os oito arquivos abaixo. Em particular, path filter correspondente não conta como chamada:
 
 - `tests/public-pages-integrated.cjs`
 - `tests/ui-theme-contract.cjs`
@@ -53,13 +81,16 @@ A busca nos 21 workflows e em `app/package.json` não encontrou chamada explíci
 
 Classificação atual: **destino não confirmado**. Podem ser manuais, históricos ou precisar de gate; não há evidência suficiente para excluí-los.
 
-Há duas discrepâncias concretas entre gatilhos e comandos:
+Há quatro discrepâncias concretas entre gatilhos e comandos:
 
 1. `candidate-assets.yml` observa `tests/**` como path trigger, mas sua lista explícita de unittest não executa os cinco testes Python de máscaras/stone/exposed-side listados acima. O trigger faz o workflow iniciar, mas não transforma esses arquivos em verificações executadas.
-2. `arc03c-static-page-build-gate.yml` tem gatilho push limitado a branches históricas, sem `pull_request` ou `main`. O path filter inclui `tests/public-header-controller-gate.mjs`, porém o comando do workflow executa `tests/arc03c-published-pages-browser-differential.mjs`, não o controller gate. O controller é executado no workflow P-COMP.
-3. `viewer-base-price-contract-gate.yml` executa testes unitários e browser, mas está em `push` para `main`/branch de integração e `workflow_dispatch`; não há trigger de PR.
+2. `arc03c-static-page-build-gate.yml` tem gatilho push limitado a branches históricas, sem `pull_request` ou `main`. O path filter inclui `tests/public-header-controller-gate.mjs`, porém o comando executa `tests/arc03c-published-pages-browser-differential.mjs`, não o controller gate. O controller é executado no workflow P-COMP.
+3. `public-routing-before-clerk.yml` observa `tests/public-*.cjs`, o que inclui `tests/public-pages-integrated.cjs`, mas o workflow executa `tests/public-cutover-contract.cjs`, outros contratos públicos e `tests/public-pages-smoke.cjs`; não executa `public-pages-integrated.cjs`. O arquivo segue sem destino confirmado.
+4. `viewer-base-price-contract-gate.yml` executa testes unitários e browser, mas está em `push` para `main`/branch de integração e `workflow_dispatch`; não há trigger de PR.
 
 ## Decisões e pendências
+
+A consulta de branch protection do Produto não pôde ser lida nesta sessão (HTTP 403 da integração). O conjunto de required checks permanece **UNKNOWN**; sucesso de workflow, isoladamente, não prova que um check seja obrigatório.
 
 | Disposição | Estado |
 |---|---|
@@ -67,7 +98,7 @@ Há duas discrepâncias concretas entre gatilhos e comandos:
 | Consolidar execuções idênticas de `npm test` | Candidato de CI: compartilhar a definição do job, mantendo uma execução e status válidos para cada SHA aplicável. Antes, confirmar required checks e preservar as garantias extras de cada workflow. |
 | Consolidar `public-cutover-contract.cjs` | Candidata a workflow reutilizável; executar separadamente para cada head e preservar os três gates de integração específicos e seus status. |
 | Resolver os oito arquivos sem invocação | Owner deve classificar cada um como gate manual, histórico ou contrato que precisa alocação. Sem exclusão até essa disposição. |
-| Alinhar path filters, comandos e PR trigger | Decisão do owner sobre intenção de ARC03C, candidate assets e viewer-base-price; depois corrigir os pares divergentes. |
-| Fechar ARC-15 | Ainda falta matriz assertion→risco→rota/estado para todos os contratos e decisão dos itens não alocados. |
+| Alinhar path filters, comandos e PR trigger | Decisão do owner sobre intenção de ARC03C, candidate assets, public-routing e viewer-base-price; depois corrigir os pares divergentes. |
+| Fechar ARC-15 | A matriz comando→risco/estado→âncoras dos 21 comandos está documentada; falta a matriz integral por assertion/rota/estado, a decisão dos oito itens não alocados e a confirmação dos required checks. |
 
-**Resultado desta passada:** nenhum teste foi removido ou adicionado. O inventário separa repetição de execução, interseção de domínio e lacuna de alocação; as próximas mudanças são decisões de CI/owner, não uma redução automática da suíte.
+**Resultado desta passada:** nenhum teste/workflow foi removido, adicionado ou executado no pin `Product main@46a52e76`. A matriz de comandos e os quatro desalinhamentos trigger→invocação estão documentados; as verificações sem destino, a matriz integral de assertions e as decisões do owner permanecem abertas. Nenhuma redução ou consolidação foi autorizada.
