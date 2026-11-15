@@ -12,7 +12,7 @@
 | Product `development` | `1a69ff76a5f36e3245a288773bb409aa662e4e62` | Base de UX-04 e material DS-05A; divergente de `main`. |
 | Product #269 | `2e202e4d7d36f29bfb62508bc15f40cdc18f130b` | Draft; base antiga `221b54b…`; `mergeable=false`. |
 | Product #271 | `d699fb1911046dfbbc475fad9415f3ff3fca1cc8` | Aberta; base antiga `221b54b…`; revalidar contra `main` atual antes de integrar. |
-| Product #274 | `282fc11688227a1b8d9c9bc10b0edc23b22d694b` | Draft; reconciliação ARC-13 pós-#273; 39 caminhos, sem `app/**`. CI atual: asset gates passa; build de páginas falha por drift no manifesto (fim `1534` vs `1513`); status Netlify falha, sem preview READY. |
+| Product #274 | `68441080f1ba29f546e6f97926e487a945f7fa2f` | Draft; reconciliação ARC-13 pós-#273; 39 caminhos, sem `app/**`. O compilador e o manifesto agora normalizam CRLF antes dos offsets; 2/2 workflows Actions passam e o Deploy Preview está READY. |
 | Product #275 | `49cf98a3600bc13c4131a62775cf881599418bbe` | Draft; 7 caminhos; Preview READY e revisado no SHA atual. 10/11 Actions passam; o gate raster VIS-002C falha no WebKit 390 px (39.542 pixels fora dos limites de texto); sem integração. |
 | Design System `main` | `79db735d6f05177b0c406e383d35832f3d72fdef` | Base atual. |
 | Design System #119 | `95ad578661154dd95a287bc3e588a901edbd253f` | Draft documental; branch existente; 86 caminhos; a atualização preserva as 2 refs. |
