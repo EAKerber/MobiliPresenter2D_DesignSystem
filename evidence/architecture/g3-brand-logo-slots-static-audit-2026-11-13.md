@@ -32,6 +32,10 @@ A revisão visual registrada no Deploy Preview da PR cobriu desktop e celular. O
 
 O corpo da PR registrou 11/11 checks, compilação canônica sincronizada e ausência de rolagem horizontal. Esta atualização apenas reconcilia propriedade/proveniência; G3 continua parcial e não aprova extração de CSS compartilhado.
 
+## Follow-up de semântica do grupo de links — PR #275 Draft
+
+A triagem pós-#273 identificou `aria-label` no `div` genérico dos links secundários do hero. A PR [#275](https://github.com/EAKerber/MobiliPresenter2D/pull/275) propõe `role="group"` e sincroniza a fonte, a saída gerada e o manifest. Ainda não foi integrada nem validada com leitor de tela; G3 permanece parcial.
+
 ## Limites
 
-Não foi medido CSSOM, tamanho computado em temas/telas, clipping, proporção do ativo, performance de transferência ou comportamento de dispositivo. A matriz não autoriza substituir qualquer imagem; apenas mostra que o hero raster não é o logo do cabeçalho. A revisão visual da arte e do vídeo no hero permanece tarefa própria.
+Não foi medido CSSOM, tamanho computado em temas/telas, clipping, proporção do ativo, performance de transferência ou comportamento de dispositivo. A matriz não autoriza substituir qualquer imagem; apenas mostra que o hero raster não é o logo do cabeçalho. A revisão visual da arte e do vídeo está registrada no adendo pós-#273; esta auditoria estática não mede CSSOM, clipping ou comportamento em dispositivo físico.

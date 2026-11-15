@@ -25,4 +25,8 @@ A revisão substitui somente o diagnóstico estático de 13/11 de que o letterin
 
 A baseline CSSOM de CTAs públicos de 14/11 é um recibo local distinto, em árvore anterior à #273. Ela continua útil para seu escopo histórico, mas não demonstra o estado pós-#273 do hero/CTA. Não houve CSSOM pós-merge, screenshot arquivado por esta atualização, leitor de tela ou teste em dispositivo físico/Safari.
 
+## Follow-up de semântica — PR #275 Draft
+
+A análise pós-#273 identificou `aria-label` aplicado ao contêiner genérico dos links secundários do hero. A PR [#275](https://github.com/EAKerber/MobiliPresenter2D/pull/275) propõe `role="group"`, com fonte canônica, HTML gerado e manifest sincronizados. A WAI-ARIA 1.2 define `generic` como um contêiner sem nome e não permite nomeá-lo por `aria-label`; um `group` nomeado é apropriado aos dois links relacionados. A proposta ainda não foi integrada e não tem validação com leitor de tela; G3 permanece parcial.
+
 **Resultado:** propriedade atual do hero reconciliada para G3; G3 permanece parcial. Nenhuma mudança de runtime, design token ou CSS compartilhado é autorizada por este recibo.

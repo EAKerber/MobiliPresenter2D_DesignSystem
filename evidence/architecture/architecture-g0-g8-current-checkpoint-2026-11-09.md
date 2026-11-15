@@ -6,7 +6,18 @@
 
 **Plano de referência:** [Plano diretor G0–G8](../../docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md) · [reconciliação anterior](master-plan-g0-g8-current-crosswalk-2026-10-25.md) · [handover e governança](../../docs/HANDOVER_CURRENT.md).
 
-## Fotografia operacional live — revalidada após PR #273 e #274 (14/11/2026 BRT)
+## Estado live após abertura da PR #275 — 14/11/2026 (BRT)
+
+- **Produto:** `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`, `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`, 6 refs. Além de `main` e `development`, permanecem `codex/ds04-208-preview-batch-20261111@d699fb1`, `codex/nav005-public-compact-main-20261110@2e202e4`, `docs/arc13-post-273-reconciliation-20261114@7a9af032` e `fix/home-hero-group-a11y-20261114@409204e8`.
+- **PRs do Produto:** #273 foi integrada no squash `46a52e76`; sua branch integrada está ausente das refs remotas. #269 continua Draft e #271 aberta sobre a base antiga `221b54b`, com `mergeable=false`. #274 continua Draft em `main@46a52e76` → `7a9af032995accede00870481d79bc663f58bf1a`, com 39 arquivos documentais/tooling e sem `app/**`. #275 é Draft em `main@46a52e76` → `409204e8f77bd35dcaf50ee4f2f62e2936b604d7`, com três arquivos: fonte canônica, HTML gerado e manifest de hashes.
+- **Inventário ARC-13:** SHA-256 `b3739e5ff57005600665cc6c1a04fbe986649b8f8e8e9b80a6fb09b2d3adf178`, 1.021 sinks e 359 fontes. O crosswalk aponta 977 IDs de sink sem mudança, 34 IDs remapeados por posição (28 únicos e seis em três grupos de fingerprints repetidas), 1 texto alternativo alterado e 9 sinks novos. As dez ocorrências alteradas/novas aguardam decisão. Fontes: 343 IDs sem mudança, 15 remapeamentos únicos e uma relação de erro/fallback revalidada manualmente como diagnóstico.
+- **Proveniência ARC-03C:** 419 sinks HTML mapeados — 386 para páginas, 33 para o header compartilhado, zero sem origem. `compile-primary-pages.mjs --check` e a geração do inventário passaram para o lote documental #274; não executei testes nem preview para #275.
+- **Design System:** `main@79db735d6f05177b0c406e383d35832f3d72fdef`, 2 refs. PR #119 segue Draft na branch documental existente; esta atualização reutiliza essa branch.
+- **Política de refs:** a branch integrada da #273 está ausente; a #275 eleva temporariamente o Produto de 5 para 6 refs. Cinco é um gatilho para revisar crescimento, não hard cap nem autorização para exclusão por contagem. A meta segue 2 quando estável.
+- **Estimativa:** a faixa de ~30% (25–35%) permanece como leitura datada de 13/11; não foi recalculada. A integração pública #273, o inventário ARC-13 e a correção proposta #275 não encerram gates arquiteturais G0–G8 nem etapas V0–V6.
+- **Estado de integração:** #274, #275 e #119 continuam Draft. Nenhuma PR deste lote foi integrada; não houve deploy de produção nem novo preview.
+
+## Snapshot operacional anterior — após PRs #273 e #274, antes da #275 (14/11/2026 BRT)
 
 Esta seção substitui apenas a fotografia operacional anterior. Os recibos datados abaixo seguem como evidência histórica.
 
@@ -22,6 +33,10 @@ Esta seção substitui apenas a fotografia operacional anterior. Os recibos data
 ## G3 — composição do hero após a PR #273 — 14/11/2026
 
 O Product `main@46a52e76` agora contém a composição revisada no Preview #273: telefone ilustrado menor, vídeo na tela sem cabeçalho fictício e controle de tela cheia sobreposto. A revisão documentada cobriu desktop e celular; `/how-it-works/` mantém o vídeo e usa enquadramento normalizado nos cards comparativos. O diagnóstico de 13/11 sobre lettering incorreto fica histórico/superado. Arte raster, vídeo/controles e logos do shell são slots distintos; nenhum CSS compartilhado foi extraído. Ver [recibo G3 pós-#273](g3-brand-logo-slots-post273-2026-11-14.md). **G3 permanece parcial:** esta evidência não substitui CSSOM, dispositivo real, leitor de tela nem validação dos shells/estados restantes.
+
+### Follow-up de semântica acessível
+
+O `aria-label` no `div` genérico dos links do hero segue incorreto no Product `main@46a52e76`. A PR [#275](https://github.com/EAKerber/MobiliPresenter2D/pull/275) propõe `role="group"` e atualiza fonte, saída e manifest, mas permanece Draft, sem leitor de tela e fora de `main`. G3 continua parcial.
 
 ## Estado operacional das fases
 
