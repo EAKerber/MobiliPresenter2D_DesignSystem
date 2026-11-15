@@ -1,15 +1,15 @@
 # ARC-15 — Inventário de verificações do Produto
 
-**Estado:** primeira passada concluída; auditoria integral de assertions e decisão de redução continuam pendentes.  
+**Estado:** primeira passada de comandos, workflows e overlaps confirmados concluída; matriz integral assertion→risco→rota/estado e decisões do owner continuam pendentes.  
 **Fonte:** `EAKerber/MobiliPresenter2D` `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`.  
 **Método:** leitura dos contratos, comandos, gatilhos e áreas cobertas; classificação por risco/assertion/rota/estado, não por quantidade de arquivos.  
 **Execução:** nenhuma suíte foi executada nesta revisão ARC-15. Nenhum teste ou workflow foi alterado no pin `Product main@46a52e76`; branches de PR, inclusive #275, ficam fora deste inventário.
 
 ## Parecer Common Sense Judge
 
-**Não há evidência para remover um teste inteiro.** Há repetições exatas de invocação que podem compartilhar a definição do job como trabalho de CI, mas cada SHA/integração ainda precisa receber sua própria execução e status; os workflows também têm garantias adicionais diferentes. Há verificações parcialmente sobrepostas. Os oito arquivos sem chamada localizada agora têm parecer individual abaixo; a classificação técnica reduz a ambiguidade, mas não substitui a decisão do owner.
+**Não há base para remover um teste ou workflow inteiro.** A leitura encontrou reexecuções do mesmo arquivo/comando em workflows distintos e alguns trechos de assertions repetidos, mas cada integração/commit ainda precisa receber sua própria execução e status. Nos pares de assertions, os testes mantêm garantias exclusivas; a sobreposição serve para avaliar eventual compartilhamento de implementação, não para concluir redundância. Os oito arquivos sem chamada localizada têm parecer individual abaixo; sua classificação técnica não substitui a decisão do owner.
 
-O inventário continua como primeira passada: não faz comparação linha a linha de cada assertion de todos os workflows e não prova que toda verificação manual seja redundante ou ativa.
+O mapa agora cobre os comandos dos 21 workflows e o conteúdo dos 21 comandos de `app/npm test`, com pares de overlap identificados. Ainda não é um crosswalk integral de cada assertion por rota e estado; `test-core.js` é o principal limite semântico por seu escopo amplo. A ausência de um par exato confirmado não prova inexistência de overlap.
 
 ## Contagem localizada
 
@@ -45,26 +45,37 @@ Escopo: os 21 comandos encadeados por `app/package.json → scripts.test` no Pro
 | `python3 tools/validate-assets.py` | Metadados SHA/canvas/alphaBounds, suporte de máscaras, ownership do módulo 02, bridge e composição golden. | `app/tools/validate-assets.py:27–172` |
 | `python3 tools/validate-r5a-pixelperfect.py` | Reconstrução byte-exata, invariantes RGB/alpha da variante/máscara e igualdade de pixels na composição final. | `app/tools/validate-r5a-pixelperfect.py:11–103` |
 
-## Repetições exatas encontradas
+## Repetições exatas de invocação
 
-| Contrato/comando repetido | Invocações observadas | Parecer |
+Repetir a chamada em workflows diferentes não significa que um resultado de CI possa ser reutilizado: cada SHA e cada integração precisa receber status próprio, e os workflows podem acrescentar contratos distintos.
+
+| Arquivo/comando chamado | Workflows e localizações observadas | Leitura |
 |---|---|---|
-| `npm test` da pasta `app` | `.github/workflows/app-build-purity.yml`, `candidate-assets.yml` e `variant-fidelity.yml` chamam o mesmo script em eventos de PR. `module02-fidelity.yml` também o chama, mas só por execução manual. | Repetição exata do comando; cada workflow acrescenta um contrato próprio (pureza de build, validação de entrada de assets ou fidelidade de variantes). Candidato a compartilhar a definição da execução via workflow reutilizável, executado para cada SHA aplicável. Manter cada gate adicional e status obrigatório; não remover nem enfraquecer checks. |
-| `tests/public-cutover-contract.cjs` | `p-comp-01-public-menu-gate.yml`, `public-routing-before-clerk.yml` e `ux-auth-viewer-integration-gate.yml`. | A mesma assertion está repetida em três integrações. Candidata a compartilhar uma definição via workflow reutilizável, executada separadamente para cada head/integração; nunca reutilizar o status de uma branch em outra. Os testes de integração permanecem separados. |
-| `node app/tools/test-core.js` | `summary-pricing-browser.yml`; o mesmo teste também é um dos 19 scripts de `app/npm test`. | Repetição parcial/subconjunto, dentro de um browser gate que verifica preço/resumo/persistência. Não elimina o gate de browser. |
-| `npm test` em `module02-fidelity.yml` | Workflow de `workflow_dispatch`, usado para replay/manual. | Não é repetição de execução de PR em cada mudança; manter como ferramenta operacional até o owner classificar seu uso. |
+| `npm test` em `app/` | `app-build-purity.yml:44–46`, `candidate-assets.yml:52–54`, `module02-fidelity.yml:34–36`, `variant-fidelity.yml:38–40` | Mesma cadeia de 21 comandos. Os quatro workflows executam em contextos distintos; `module02-fidelity` é manual e mantém replay de baseline. Os outros acrescentam verificações próprias. |
+| `tests/public-cutover-contract.cjs` | `p-comp-01-public-menu-gate.yml:41–47`, `public-routing-before-clerk.yml:39–45`, `ux-auth-viewer-integration-gate.yml:41–48` | Mesma fonte de assertions em três gates de integração. Pode-se avaliar compartilhar a definição do job, mantendo execução/status por head e as verificações próprias de cada workflow. |
+| `tests/viewer-secondary-header-browser-gate.mjs` | `p-comp-01-public-menu-gate.yml:60–63`, `ux-auth-viewer-integration-gate.yml:61–66` | Mesmo browser gate em fluxos diferentes; cada fluxo mantém seus outros contratos. |
+| `app/tools/test-public-modules-endpoint.js` | `public-routing-before-clerk.yml:39–45`, `viewer-base-price-contract-gate.yml:27–28` | Mesmo teste de endpoint chamado em gates com eventos e verificações adicionais diferentes. |
+| `app/tools/test-core.js` | Incluído em `app/npm test` e chamado diretamente em `summary-pricing-browser.yml:38–45` | O browser gate acrescenta fluxo de browser; a chamada direta repete a execução do script, não elimina o gate. |
+| `test-administration-v5.js`, `test-v5-normal-save.js`, `test-v5-endpoint-safety.js` | Incluídos em `app/npm test`; chamados diretamente por `viewer-base-price-contract-gate.yml:27–28` | Subset da suíte repetido no gate de preço, que acrescenta publicação, build e browser. |
+| `tests/test_branch_hygiene_plan.py` | Chamada direta em `branch-hygiene.yml:35–39`; incluída pela descoberta `test_branch_hygiene_*.py` de `branch-hygiene-bounded.yml:42–45` | A mesma unidade de plano é executada em dois workflows. O bounded também cobre limpeza pós-merge; a lista completa incluída pelo glob não foi confirmada. |
+| `tools/validate-baseline.py` | `module02-fidelity.yml:32–33`; também chamado por `tools/check-r0-contract.py:35–36` quando o manifesto está `READY` | Repetição condicional da validação de baseline; o estado efetivo do manifesto neste parecer é UNKNOWN. |
 
-## Sobreposição parcial com garantias distintas
+## Assertions repetidas ou parcialmente repetidas
 
-| Família | Área compartilhada | Garantia que continua exclusiva |
+| Par verificado | Repetição encontrada | Garantias próprias que permanecem |
 |---|---|---|
-| ARC03C e P-COMP do header público | Rotas públicas, temas, viewports e navegadores têm interseções. | `arc03c-published-pages-browser-differential.mjs` compara contra snapshot histórico com raster. `public-header-controller-gate.mjs` mede contra a implementação corrente, inclui Viewer, instância compartilhada e interação funcional do menu. |
-| Fluxo, teclado e responsividade | Navegação por etapas e fechamento de detalhes; Escape aparece em mais de uma jornada. | `flow-layout-browser.cjs` cobre layout, política e seleção; `keyboard-browser.cjs` cobre teclado/foco/scroll; `nav-flow-responsive-crossbrowser.cjs` cobre perfis e limites de viewport. A interseção não substitui os contratos próprios. |
-| Administração hierárquica, persistência e save V5 | Usam o mesmo harness/endpoints simulados do Admin. | Estrutura/opções, cancelamento e leitura após escrita, migração/reparo V3, edição nativa V5 e tratamento de resposta rejeitada são assertions diferentes. |
-| Pedra/acabamento e resumo/preço | Percorrem superfícies do Configurador/fluxo V5. | Canvas, ordem de composição e reparo de legado diferem de subtotal/total, cobrança única, sincronização do resumo e persistência. |
-| Viewer com preço base e overview editorial | Mesma rota Viewer. | Contrato de dados/fail-closed e toggle ON/OFF não é o mesmo que conteúdo editorial, benefícios, dimensões e layout sem preço. |
-| Fallback de imagem, projeção pública e smoke | Leitura da página pública. | Teste unitário de recuperação, geometria/acessibilidade no browser, DTO fail-closed, smoke de preview e leitura GET-only de produção validam camadas distintas. |
-| Assets de candidato | Oito testes Python compartilham entrada e dados de revisão. | Canvas/RGBA, hash/ROI, alpha fora da região aprovada, ordem de composição, proveniência, delta vazio/mismatch e direção de geometria são propriedades independentes; a decisão humana continua `PENDING`. |
+| `app/tools/test-administration-v5.js:278–280` ↔ `test-hierarchy-administration.js:184–186` | Três source guards iguais para schemas, `hierarchy_publication_required` e `persist-handles-all`. | O restante dos contratos V5/V4 difere; `app/tools/test-hierarchy-administration.js:187` ainda verifica `legacyStageRepair.verifyHandlesOnlyDelta`. Manter ambos os testes. |
+| `app/tools/test-administration-v5.js:193` ↔ `app/tools/test-hierarchy-administration.js:93` | A mesma invariável preserva a linha de preço em duas projeções. | Os caminhos de projeção V5 e V4 continuam distintos; é uma assertion compartilhada em cenários diferentes. |
+| `app/tools/validate-assets.py:61–67,142–151` ↔ `app/tools/validate-r5a-pixelperfect.py:36–63,65–76,89–95` | Reconstrução da máscara do módulo 02 e comparação do golden PNG. | Os validadores usam fontes diferentes para ordem da composição; o R5A também prova reconstrução byte-exacta, imutabilidade RGB/alpha e semântica da máscara. Não remover nenhum arquivo por este overlap parcial. |
+| `flow-layout-browser.cjs:143` ↔ `mobile-pip-main-browser.cjs:179` | A ordem dos slots do dock é verificada em ambos. | Os viewports, geometria do dock e a interação PiP mantêm provas próprias. |
+| `test_gap_parallelism_gate.py` ↔ `test_perspective_editorial_gate.py` | Regras semânticas próximas, como rejeitar direção invertida. | Schemas, referências e inputs são diferentes; não é fixture nem assertion idêntica. O pixel test mede arte real e preserva garantia própria. |
+| Projeção pública, endpoint, Preview e produção read-only | Schema/allowlist e rejeição de entradas inválidas têm interseções parciais em testes unitários, função com stores simulados, probes do Preview e GET de produção. | Camada/alvo distintos. Sem base para remover uma camada. |
+| Fallback de imagem, menus, fluxo de pedra/preço e runtime do rodapé | Alguns estados/ações aparecem em testes puros e browser. | Browser acrescenta geometria, acessibilidade, canvas ou interação; as saídas verificadas diferem. |
+| `app/tools/validate-assets.py` e validadores de arte | Máscara, golden, provenance e alguns dados de entrada são compartilhados. | Inventory/hash/canvas/alpha bounds/front masks/seam bridge e invariantes R5A específicas preservam cobertura distinta. |
+
+## Repetição de precondições e infraestrutura
+
+Fixtures V5 válidas, preflight `ok`, e protocolo dos mocks Blob (`key="published"` e consistência strong) aparecem em vários testes; são precondições e boilerplate dos test doubles, não equivalência dos cenários de migração, leitura, save, projeção e segurança. Também há repetição de build/`pages:check` em workflows públicos; isso é infraestrutura repetida, enquanto os browsers de foco, diferencial do header, preço e tokens verificam contratos diferentes.
 
 ## Verificações sem invocação automática localizada
 
@@ -109,10 +120,10 @@ A consulta de branch protection do Produto não pôde ser lida nesta sessão (HT
 | Disposição | Estado |
 |---|---|
 | Excluir testes por alta contagem ou semelhança de nomes | **Não recomendado.** Nenhum teste foi provado redundante no nível do contrato. |
-| Consolidar execuções idênticas de `npm test` | Candidato de CI: compartilhar a definição do job, mantendo uma execução e status válidos para cada SHA aplicável. Antes, confirmar required checks e preservar as garantias extras de cada workflow. |
+| Consolidar chamadas repetidas de testes | Candidato de CI: compartilhar definições de job para `npm test`, `public-cutover-contract.cjs` e outros arquivos chamados em mais de um workflow. Executar e publicar status em cada SHA aplicável; preservar as garantias adicionais e required checks de cada fluxo. |
 | Consolidar `public-cutover-contract.cjs` | Candidata a workflow reutilizável; executar separadamente para cada head e preservar os três gates de integração específicos e seus status. |
 | Resolver as oito classificações | O parecer técnico recomenda destinos por arquivo; o owner ainda decide fixture #180, valores normativos de tema, revisão/capturas do glass e paths dos cinco checks Python. Sem exclusão até a disposição. |
 | Alinhar path filters, comandos e PR trigger | Decisão do owner sobre intenção de ARC03C, candidate assets, public-routing e viewer-base-price; depois corrigir os pares divergentes. |
 | Fechar ARC-15 | Matriz de comandos e parecer individual dos oito itens documentados; faltam matriz integral por assertion/rota/estado, as quatro decisões agrupadas e confirmação dos required checks. |
 
-**Resultado desta passada:** nenhum teste/workflow foi removido, adicionado ou executado no pin `Product main@46a52e76`. A matriz de comandos, quatro desalinhamentos trigger→invocação e parecer individual dos oito itens estão documentados. Permanecem abertas a matriz integral de assertions, as quatro decisões agrupadas do owner e required checks (UNKNOWN/403). Nenhuma redução ou consolidação foi autorizada.
+**Resultado desta passada:** todos os 21 workflows e os 21 comandos da suíte `app` foram mapeados sem executar suítes. Foram documentadas as invocações repetidas, os overlaps exatos/parciais de assertions e quatro desalinhamentos trigger→invocação. Não há prova de que um teste ou workflow inteiro seja removível. Permanecem abertas a matriz integral assertion→risco→rota/estado, as quatro decisões agrupadas do owner e required checks (UNKNOWN/403). Nenhuma redução, consolidação ou mudança de teste/workflow foi autorizada.
