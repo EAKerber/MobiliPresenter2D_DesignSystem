@@ -95,3 +95,17 @@ ARC-01…ARC-16 implementados conforme contrato, todos os consumidores no escopo
 ## Regras de atualização
 
 Revalidar branches/PRs e o SHA de Product/Design System antes de cada ação remota. Atualizar o status e as referências neste arquivo somente com prova nova; não apagar snapshots históricos. Para cada novo lote, registrar entrada, output esperado, pin, owner, riscos, resultado, limitações e rollback. Não executar testes até pedido explícito de teste/verificação.
+## Comparação atual de CSS entre Product main e development
+
+A comparação foi refeita em pins completos: Product `main@46a52e76a0eeae4bed4b567b12da5311ed90b475` contra `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`. O merge-base é `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`; os refs divergem em 434 commits à frente e 2 atrás. O diff completo tem 300 caminhos, dos quais 13 são `.css`; somente quatro estão em `app/**`, os demais pertencem a fixtures/evidências/documentação.
+
+| Folha de runtime | Blob main | Blob development | Diferenças relevantes observadas |
+|---|---|---|---|
+| `app/how-it-works/how-it-works.css` | `e70439be98b0fc7a705fd541f62e4844f6323472` | `0dff501eb14df78081f35d81ae1eca17abca85ba` | Main mantém o player com `min-width:200px`, link explícito ao YouTube e botão próprio de tela cheia; development tem embed simplificado de 290px e largura mobile `65vw`, além de regra estreita para até 290px. |
+| `app/landing/landing.css` | `8df2c39d1993a6e6b4da8bb4dcd2289c7f50eb79` | `3e307c155a406f91337b2e54534e0362d2c21636` | Main contém o scale de `.hero-image-frame` (`.88`, `.84`, `.80`) e overlay/controles de vídeo; development não escala o frame e não contém esse overlay, mas tem regras responsivas próprias para o cabeçalho público. O scale em `main@46a52e76` corresponde à margem bege do screenshot. A #275 remove o scale, usa `lifestyle-phone-expanded.svg` (blob `a80ec334db00e0909a2ac317de528b3459578fcc`) e mantém a imagem preenchendo o frame. |
+| `app/styles.css` | `d43e6fb5e66133d2389b5c39b165b76b13cfa868` | `d1ac2b5701f215de56ff8f7c12b1d5e7dcbe47a8` | Um valor de cor literal em `main` passa a `var(--muted)` em development. Reidentificar seletor e contexto antes de inferir equivalência de contraste. |
+| `app/ui-theme.css` | `3114bbfe0a67cbdc53757f5f50a0d035559767a6` | `36137b4264aa5b12999b286284cda227923a606a` | Development muda os seletores do toggle para distinguir header público/privado e usa `--ui-theme-focus` nos dois temas; `main` mantém seletores genéricos e cores de foco literais. O patch candidato `.module-number` segue apenas no checkout local modificado, não está nesses dois blobs remotos. |
+
+**Decisão do gate.** Não tratar `main` e `development` como snapshots CSS equivalentes e não aplicar o relatório antigo `2babbeb → 1a69ff76` como comparação corrente. O subgate `.module-number` ainda pode ser delimitado somente a `development`, mas o gate geral DS-05A precisa dizer isso explicitamente e piná-lo; sua prova candidata deve registrar CSSOM e captura de ambos os braços. A PR #275 tem Preview READY no SHA `63782416578015b77e531f45d1dcf6a1b5f5a214`; o estado do deploy comprova build/publicação da prévia, não revisão visual final.
+
+**Limite desta comparação:** são diferenças de fonte e blob entre dois commits, não uma prova de CSSOM, contraste, interação ou equivalência visual. Não houve alteração nesses refs nem execução de testes nesta atualização.
