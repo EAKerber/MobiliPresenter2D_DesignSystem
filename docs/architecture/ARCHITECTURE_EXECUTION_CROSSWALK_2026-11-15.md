@@ -94,7 +94,7 @@ ARC-01…ARC-16 implementados conforme contrato, todos os consumidores no escopo
 
 ## Regras de atualização
 
-Revalidar branches/PRs e o SHA de Product/Design System antes de cada ação remota. Atualizar o status e as referências neste arquivo somente com prova nova; não apagar snapshots históricos. Para cada novo lote, registrar entrada, output esperado, pin, owner, riscos, resultado, limitações e rollback. Não executar testes até pedido explícito de teste/verificação.
+Revalidar branches/PRs e o SHA de Product/Design System antes de cada ação remota. Atualizar o status e as referências neste arquivo somente com prova nova; não apagar snapshots históricos. Para cada novo lote, registrar entrada, output esperado, pin, owner, riscos, resultado, limitações e rollback. Registrar método e limites de validação por lote; cada gate avança somente com as evidências que seu contrato exige.
 ## Comparação atual de CSS entre Product main e development
 
 A comparação foi refeita em pins completos: Product `main@46a52e76a0eeae4bed4b567b12da5311ed90b475` contra `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`. O merge-base é `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`; os refs divergem em 434 commits à frente e 2 atrás. O diff completo tem 300 caminhos, dos quais 13 são `.css`; somente quatro estão em `app/**`, os demais pertencem a fixtures/evidências/documentação.
