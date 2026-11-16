@@ -1,7 +1,7 @@
 # DS-05A — comparação de proveniência CSS do Produto
 
 **Data:** 15/11/2026 (BRT)  
-**Tipo de evidência:** comparação estática de fontes Git; não é captura CSSOM nem aprovação visual.
+**Tipo de evidência:** comparação estática de fontes Git e capturas CSSOM locais pareadas; não é validação hospedada nem aprovação visual.
 
 ## Pins consultados
 
@@ -38,17 +38,34 @@ Esta leitura compara blobs e patches dos dois commits. Não mede estilos computa
 
 O checkout local de desenvolvimento mantém alterações não commitadas e não é baseline; a regra candidata `.module-number` não pertence aos quatro blobs de runtime acima. Preserve esse trabalho local sem promovê-lo. A divergência de 434/2 também não autoriza mesclar `development` integralmente em `main`.
 
-## Captura local do candidato `.module-number` em development
+## Capturas locais pareadas do candidato .module-number — main e development
 
-Em 15/11/2026, o runner local `work/_ds05a-cssom-paired-local/scripts/ds05a-runtime-cssom-v2.cjs` mediu o DOM real de `/config/` em uma projeção sintética local, sem banco ou origem externa.
+Em 15/11/2026 (BRT), o mesmo runner comparou a regra candidata, injetada em memória, contra seis estados de cada árvore Product. O DOM real de /config/ foi inicializado com uma projeção local sintética baseada em defaults versionados; não foi usado banco nem origem externa. O app foi servido localmente pelo runner via interceptação CDP, com requisições externas bloqueadas.
 
-- O Product canônico foi `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`; a árvore `app/` `6b5f66dab510221ebef216a3b0613fec904d10d7` e a folha `app/ui-theme.css` `36137b4264aa5b12999b286284cda227923a606a` correspondem ao pin. O checkout auxiliar é sintético (`ab9aafd5a55fe6483eccd50431292ef7ef040d51`), não tem a mesma identidade de commit.
-- A regra candidata, injetada somente em memória e apenas no tema claro, foi `html[data-theme="light"] .module-number { background: rgb(34 33 31 / 8%); color: var(--text); }` (SHA-256 `88a531048d52807c5a0dca73f1887463d22daa4d6d70d4e926bbf118c4ad8407`).
-- Seis pares foram capturados em 390, 1050 e 1366 px, claro/escuro. Os sete números dos módulos mudaram em cada largura clara; a ferramenta calculou 1,43:1 no baseline e 13,02:1 com a candidata. Nos três controles escuros, nenhum badge mudou. Foram salvas seis capturas.
-- Runner SHA-256 `ab2a1e2dc68ffe19b4689a264214454c0a3dc135715bba2820cfcc5ed86ce359`; Node `v24.20.0`; Chrome `156.0.8078.82`. O recibo local `work/_ds05a-cssom-capture-20261115-4/runtime_cssom.json` tem SHA-256 `ced933e3eb696459ded4f668bed3d73a493fb7998b6870a62660632d012f8208`.
+A regra candidata foi idêntica nos dois pins e não foi gravada nos arquivos:
 
-É uma medição restrita ao pin development e a essa candidata. Não compara a árvore app de main, não altera CSS, não confirma comportamento publicado ou conformidade universal, e não fecha DS-05A/G2. A configuração hospedada de `/config/` continua HOLD.
+    html[data-theme="light"] .module-number { background: rgb(34 33 31 / 8%); color: var(--text); }
 
-## Próximo gate
+SHA-256 da regra: 88a531048d52807c5a0dca73f1887463d22daa4d6d70d4e926bbf118c4ad8407.
 
-Repetir a medição contra o pin canônico atual `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`, mantendo fixture, candidato, dimensões e captura iguais; então comparar os pares main/development. Preparar a cópia main a partir do commit exato, registrar a identidade e os blobs completos, e manter o resultado isolado de qualquer mudança de runtime. O erro hospedado de `/config/` segue sem solução e requer validação autorizada própria.
+| Product pin | Identidade do checkout auxiliar | Árvore app/ verificada | Blob app/ui-theme.css | Recibo local (SHA-256) |
+|---|---|---|---|---|
+| development@1a69ff76a5f36e3245a288773bb409aa662e4e62 | Commit sintético ab9aafd5a55fe6483eccd50431292ef7ef040d51 | 6b5f66dab510221ebef216a3b0613fec904d10d7, igual ao pin | 36137b4264aa5b12999b286284cda227923a606a | work/_ds05a-cssom-capture-20261115-4/runtime_cssom.json — ced933e3eb696459ded4f668bed3d73a493fb7998b6870a62660632d012f8208 |
+| main@46a52e76a0eeae4bed4b567b12da5311ed90b475 | Commit sintético 04b2331f4059f6d61b81122b3e4f40f96cb06d0f | 2e388a350f610e30cb24aab15bb61debd81a8941, igual ao pin | 3114bbfe0a67cbdc53757f5f50a0d035559767a6 | work/_ds05a-main-capture-46a52e76-20261115/runtime_cssom.json — 79e6ebb51ec5a8365f208ee16d4a8c6fdc0d0c942b67dded6cc2a88e136966db |
+
+O snapshot local de main foi montado a partir da árvore de development, substituindo os 15 blobs diferentes em app/; cada blob foi conferido com o SHA retornado pela API do GitHub, e a árvore final conferiu exatamente com main. Portanto, os commits auxiliares são sintéticos, mas o conteúdo medido de app/ corresponde aos pins canônicos.
+
+O mesmo runner (ds05a-runtime-cssom-v2.cjs, SHA-256 ab2a1e2dc68ffe19b4689a264214454c0a3dc135715bba2820cfcc5ed86ce359), Node v24.20.0 e Chrome 156.0.8078.82 capturou 390, 1050 e 1366 px nos temas claro e escuro em cada pin: seis estados pareados por árvore. Em cada estado havia sete badges de módulo.
+
+| Árvore | Badge claro: baseline → candidata | Controle escuro | Resultado |
+|---|---:|---:|---|
+| development | 1,43:1 → 13,02:1 | 8,10:1, sem alteração | Os sete badges mudaram nas três larguras claras; nenhum badge mudou no tema escuro. |
+| main | 1,43:1 → 13,02:1 | 8,10:1, sem alteração | Mesmo efeito nos badges; o candidato não altera o controle escuro. |
+
+A comparação das seis baselines encontrou a mesma contagem e os mesmos valores de contraste para os sete números nas duas árvores. Também revelou uma diferença fora da candidata: #viewerHint passou pelo cálculo local como 5,22:1 no claro e 4,88:1 no escuro em development; em main, como 1,00:1 e 4,05:1, respectivamente. Depois de aplicar a candidata, essa falha separada de #viewerHint continua nos seis estados de main; a regra .module-number não a toca. Essa observação requer triagem própria e não foi corrigida neste lote.
+
+Cada recibo guarda seis capturas claras (baseline/candidata em três larguras), com tamanho e SHA-256 de cada PNG. Os recibos e as imagens permanecem nos diretórios locais citados acima; não foram adicionados ao PR. Ambos os recibos registram seis estados baseline e seis candidate, seis pares, efeito apenas claro e controle negativo escuro inalterado.
+
+## Limites e próximo passo
+
+Isto mede somente os seletores e estados alcançados pela projeção sintética local. Não valida a configuração publicada, o Preview ou todas as superfícies; não é uma revisão visual completa nem prova universal de conformidade WCAG. Nenhum CSS do Produto foi alterado e nenhum gate DS-05A/G2 foi fechado. A configuração hospedada de /config/ permanece HOLD. A candidata .module-number continua restrita a este componente e aguardando revisão separada; a nova observação de #viewerHint também não autoriza uma correção automática.
