@@ -38,4 +38,17 @@ Esta leitura compara blobs e patches dos dois commits. Não mede estilos computa
 
 O checkout local de desenvolvimento mantém alterações não commitadas e não é baseline; a regra candidata `.module-number` não pertence aos quatro blobs de runtime acima. Preserve esse trabalho local sem promovê-lo. A divergência de 434/2 também não autoriza mesclar `development` integralmente em `main`.
 
-O próximo subgate DS-05A é preparar cópias limpas e detached dos dois pins, carregar a mesma fixture sintética local em cada uma, e registrar CSSOM e capturas pareadas no Chromium real. Incluir os estados e seletores do Configurador necessários ao escopo, hashes dos quatro blobs, dimensões/tema e resultado por par. A falha hospedada de `/config/` no Preview #271 continua HOLD; a fixture local não substitui sua validação nem prova dados publicados. Até concluir esse gate, não extrair tokens, não promover `.module-number` e não declarar G2 aprovado.
+## Captura local do candidato `.module-number` em development
+
+Em 15/11/2026, o runner local `work/_ds05a-cssom-paired-local/scripts/ds05a-runtime-cssom-v2.cjs` mediu o DOM real de `/config/` em uma projeção sintética local, sem banco ou origem externa.
+
+- O Product canônico foi `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`; a árvore `app/` `6b5f66dab510221ebef216a3b0613fec904d10d7` e a folha `app/ui-theme.css` `36137b4264aa5b12999b286284cda227923a606a` correspondem ao pin. O checkout auxiliar é sintético (`ab9aafd5a55fe6483eccd50431292ef7ef040d51`), não tem a mesma identidade de commit.
+- A regra candidata, injetada somente em memória e apenas no tema claro, foi `html[data-theme="light"] .module-number { background: rgb(34 33 31 / 8%); color: var(--text); }` (SHA-256 `88a531048d52807c5a0dca73f1887463d22daa4d6d70d4e926bbf118c4ad8407`).
+- Seis pares foram capturados em 390, 1050 e 1366 px, claro/escuro. Os sete números dos módulos mudaram em cada largura clara; a ferramenta calculou 1,43:1 no baseline e 13,02:1 com a candidata. Nos três controles escuros, nenhum badge mudou. Foram salvas seis capturas.
+- Runner SHA-256 `ab2a1e2dc68ffe19b4689a264214454c0a3dc135715bba2820cfcc5ed86ce359`; Node `v24.20.0`; Chrome `156.0.8078.82`. O recibo local `work/_ds05a-cssom-capture-20261115-4/runtime_cssom.json` tem SHA-256 `ced933e3eb696459ded4f668bed3d73a493fb7998b6870a62660632d012f8208`.
+
+É uma medição restrita ao pin development e a essa candidata. Não compara a árvore app de main, não altera CSS, não confirma comportamento publicado ou conformidade universal, e não fecha DS-05A/G2. A configuração hospedada de `/config/` continua HOLD.
+
+## Próximo gate
+
+Repetir a medição contra o pin canônico atual `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`, mantendo fixture, candidato, dimensões e captura iguais; então comparar os pares main/development. Preparar a cópia main a partir do commit exato, registrar a identidade e os blobs completos, e manter o resultado isolado de qualquer mudança de runtime. O erro hospedado de `/config/` segue sem solução e requer validação autorizada própria.
