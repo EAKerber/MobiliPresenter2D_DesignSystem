@@ -17,7 +17,7 @@ O compare completo contém 300 caminhos. Treze arquivos `.css` diferem; quatro s
 |---|---|---|---:|---|
 | `app/how-it-works/how-it-works.css` | `e70439be98b0fc7a705fd541f62e4844f6323472` | `0dff501eb14df78081f35d81ae1eca17abca85ba` | +6 / −0 | Regra estreita até 290 px para padding e tamanho do título. |
 | `app/landing/landing.css` | `8df2c39d1993a6e6b4da8bb4dcd2289c7f50eb79` | `3e307c155a406f91337b2e54534e0362d2c21636` | +24 / −7 | Escopos de header público, CTA do menu e larguras estreitas. |
-| `app/styles.css` | `d43e6fb5e66133d2389b5c39b165b76b13cfa868` | `d1ac2b5701f215de56ff8f7c12b1d5e7dcbe47a8` | +1 / −1 | Cor do rodapé do viewer troca literal RGBA por `var(--muted)`. |
+| `app/styles.css` | `d43e6fb5e66133d2389b5c39b165b76b13cfa868` | `d1ac2b5701f215de56ff8f7c12b1d5e7dcbe47a8` | +1 / −1 | `.viewer-card__footer` fixa `rgba(255, 255, 255, 0.42)` em main e usa `var(--muted)` em development; essa diferença coincide com as leituras CSSOM de `#viewerHint`. |
 | `app/ui-theme.css` | `3114bbfe0a67cbdc53757f5f50a0d035559767a6` | `36137b4264aa5b12999b286284cda227923a606a` | +10 / −4 | Toggle distingue header público/privado; foco usa `--ui-theme-focus`. |
 
 Os nove caminhos não runtime são:
@@ -62,7 +62,7 @@ O mesmo runner (ds05a-runtime-cssom-v2.cjs, SHA-256 ab2a1e2dc68ffe19b4689a264214
 | development | 1,43:1 → 13,02:1 | 8,10:1, sem alteração | Os sete badges mudaram nas três larguras claras; nenhum badge mudou no tema escuro. |
 | main | 1,43:1 → 13,02:1 | 8,10:1, sem alteração | Mesmo efeito nos badges; o candidato não altera o controle escuro. |
 
-A comparação das seis baselines encontrou a mesma contagem e os mesmos valores de contraste para os sete números nas duas árvores. Também revelou uma diferença fora da candidata: #viewerHint passou pelo cálculo local como 5,22:1 no claro e 4,88:1 no escuro em development; em main, como 1,00:1 e 4,05:1, respectivamente. Depois de aplicar a candidata, essa falha separada de #viewerHint continua nos seis estados de main; a regra .module-number não a toca. Essa observação requer triagem própria e não foi corrigida neste lote.
+A comparação das seis baselines encontrou a mesma contagem e os mesmos valores de contraste para os sete números nas duas árvores. Também revelou uma diferença fora da candidata: #viewerHint passou pelo cálculo local como 5,22:1 no claro e 4,88:1 no escuro em development; em main, como 1,00:1 e 4,05:1, respectivamente. Isso coincide com a declaração de origem: em app/styles.css, .viewer-card__footer usa rgba(255, 255, 255, 0.42) em main e var(--muted) em development. No tema claro, --muted resolve para #706c66; no escuro, para rgba(255, 255, 255, 0.48). Depois de aplicar a candidata, essa falha separada de #viewerHint continua nos seis estados de main; a regra .module-number não a toca. Essa observação requer triagem própria e não foi corrigida neste lote.
 
 Cada recibo guarda seis capturas claras (baseline/candidata em três larguras), com tamanho e SHA-256 de cada PNG. Os recibos e as imagens permanecem nos diretórios locais citados acima; não foram adicionados ao PR. Ambos os recibos registram seis estados baseline e seis candidate, seis pares, efeito apenas claro e controle negativo escuro inalterado.
 
