@@ -1,10 +1,21 @@
-# Crosswalk operacional de execução arquitetural — 15/11/2026
+# Crosswalk operacional de execução arquitetural — baseline 15/11 com overlay live 16/11/2026
 
 **Finalidade.** Este documento amplia o roteiro em uma ponte executável entre decisões ARC-01…ARC-16, fases V0–V6, gates G0–G8, código, evidências, bloqueios e saídas. Complementa, sem substituir, o [contrato arquitetural](../ARCHITECTURE_DECISIONS_ARC01_ARC16_AND_EXECUTION_2026-10-21.md), o [plano diretor histórico](DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md), o [handover corrente](../HANDOVER_CURRENT.md) e os recibos citados. A comparação estática de CSS do Produto tem recibo próprio: [DS-05A source provenance](../../evidence/architecture/ds05a-current-product-css-provenance-2026-11-15.md).
 
-**Leitura de status.** Decisão aprovada ≠ implementação; código integrado ≠ gate aprovado; PASS de subgate ≠ fechamento da fase; Deploy Preview READY ≠ revisão visual concluída; preview ≠ produção. Os rótulos de progresso e contagens abaixo são snapshots observados em 15/11/2026 BRT. A estimativa de ~30% (faixa 25–35%) é a estimativa datada de 13/11, sem métrica formal e não recalculada.
+**Leitura de status.** A tabela de âncoras logo abaixo é o snapshot de 15/11/2026 BRT; para estado atual, use o overlay de 16/11 e o recibo da publicação Product. Estimativa e tabela abaixo não são recalculadas automaticamente.
 
-## Âncoras vivas observadas
+## Overlay live — 16/11/2026 (BRT)
+
+- Product `main@64d934dabc7cfb8175dfe2f0a5d04fe1669a41ba` (`tree f7e1d4b492dadff91d85b969616618ae42cf1daf`) recebeu a PR #275 por squash. O deploy Netlify `6afa62020df61721601fe111` está READY para o mesmo SHA; 11 workflows do commit passaram, inclusive a leitura de produção. Evidência detalhada: [recibo da main após #275](../../evidence/architecture/product-main-post-275-readback-2026-11-16.md).
+- Product mantém 6 refs. #269 e #274 reportam não mergeáveis; #271 reporta mergeável, mas as três PRs abertas continuam baseadas em `main@46a52e76`, portanto precisam de reconciliação. O inventário ARC-13 da #274 não inclui o conteúdo integrado da #275.
+- A branch `fix/home-hero-group-a11y-20261114@3481ade561deddf561de57225cf8a65491b34654` tem a mesma árvore que main após squash, mas não é ancestral; não está protegida e nenhuma PR aberta a usa. É candidata para revisão de higiene 6→5, não autorização de remoção. Requer aprovação específica para esse nome e SHA.
+- O Inventário ARC-15 de 15/11 é um snapshot de Product main46. A [matriz focada de configuração publicada/API](ARC15_ASSERTION_MATRIX_PUBLISHED_CONFIG_2026-11-16.md) usa main64 e separa cobertura de mocks, serviços puros e guards estáticos. A matriz integral e required checks continuam pendentes/UNKNOWN.
+- O recibo DS-05A de 15/11 permanece histórico para CSSOM; o adendo identifica a árvore main64 e não afirma que as capturas antigas tenham sido repetidas. A configuração hospedada em `/config/` e os 98 pares `UNCERTAIN` mantêm G2/DS-05A em HOLD.
+- Design System main continua `79db735d6f05177b0c406e383d35832f3d72fdef`, com 2 refs; #119 permanece Draft na branch existente. Este lote só atualiza documentação da arquitetura.
+
+## Âncoras (snapshot de 15/11/2026; histórico)
+
+### Tabela de âncoras — snapshot de 15/11/2026
 
 | Repositório/ref | SHA observado | Estado relevante |
 |---|---|---|
@@ -77,16 +88,16 @@ Refs remotas: Produto 6 (gatilho de revisão 5 excedido enquanto #275 está ativ
 | G7 — hardening cross-platform/auth | Pendente, #232/fixture. | Fixture autorizada no head exato; fluxos de acesso e estados de erro documentados sem ampliar acesso. |
 | G8 — aceitação/release | Não iniciado. | Aprovação, gates e readback separados; produção requer autorização explícita própria. |
 
-## Ordem operacional recomendada
+## Ordem operacional recomendada — atualização 16/11/2026
 
-1. Manter este crosswalk e o handover sincronizados com os SHAs observados; tratar snapshots anteriores como história.
-2. Revisão autenticada da #271 concluída em Admin, `/access/manage` e Viewer móvel; o `/config/` exato continua bloqueado pela validação da configuração publicada, sem gravação. Manter a PR sem integração até haver fixture/configuração validável autorizada. Na #269, UX-04 manual segue separado e pendente.
-3. Fechar o lote ARC-13 em #274 por ID e owner; manter texto, chave, origem e conteúdo de domínio distintos.
-4. Comparação estática Product `main@46a52e76` ↔ `development@1a69ff76` concluída; divergência 434/2, 13 CSS distintos e quatro folhas runtime (+41/−12), detalhados no [recibo](../../evidence/architecture/ds05a-current-product-css-provenance-2026-11-15.md). O mesmo recibo registra o probe CSSOM local pareado; não confundir medição sintética com equivalência visual ou validação hospedada.
-5. Os probes `.module-number` estão pareados nas árvores `app/` exatas de ambos os pins. Próximo, triar a diferença independente de `#viewerHint` em main e manter `/config/` hospedado em HOLD até haver configuração validável; nenhum resultado local autoriza promover CSS.
-6. Avançar G2/G3 por consumidor e risco; não extrair CSS/tokens enquanto os gates de proveniência, ownership e contraste estiverem HOLD.
-7. Não reduzir nem acrescentar lotes de testes antes do mapa de assertions e riscos; a atualização documental não executa uma suíte.
-8. Não remover refs: há zero candidatos remotos seguros. Rever o ponto de crescimento do Product depois que PRs ativas tiverem destino; soft cap não é regra de exclusão.
+1. Reconciliar #269 e #271 com Product `main@64d934d` preservando seus contratos e gates próprios; reobservar mergeability, preview e checks em cada SHA.
+2. Atualizar ARC-13 da #274 após a integração #275; manter os 1.021 sinks e decisões existentes como baseline main46 até concluir o delta atual.
+3. Completar ARC-15 a partir da matriz focada em main64: fechar a matriz integral por assertion→risco→rota/estado, decidir os quatro grupos pendentes e obter a lista de required checks; o 403 mantém esses checks UNKNOWN.
+4. Prosseguir G2/DS-05A sem reaproveitar CSSOM antigo como evidência de main64; resolver a configuração hospedada de `/config/` e os 98 pares `UNCERTAIN` antes de qualquer extração CSS.
+5. Avançar G3 por componente, estados e dispositivos; a integração do hero em main confirma apenas o recorte de geometria/visual já revisado, não encerra G3.
+6. Avaliar as 6 refs do Product conforme a política; a branch #275 é candidata a revisão 6→5, mas só excluir após autorização por branch/SHA exatos e plano/readback.
+7. Manter #119 Draft; esta atualização documental não integra a PR do Design System nem declara fases concluídas.
+
 
 ## Critério de conclusão do programa
 
@@ -95,9 +106,9 @@ ARC-01…ARC-16 implementados conforme contrato, todos os consumidores no escopo
 ## Regras de atualização
 
 Revalidar branches/PRs e o SHA de Product/Design System antes de cada ação remota. Atualizar o status e as referências neste arquivo somente com prova nova; não apagar snapshots históricos. Para cada novo lote, registrar entrada, output esperado, pin, owner, riscos, resultado, limitações e rollback. Registrar método e limites de validação por lote; cada gate avança somente com as evidências que seu contrato exige.
-## Comparação atual de CSS entre Product main e development
+## Comparação CSS observada em 15/11 — Product main46 ↔ development
 
-A comparação foi refeita em pins completos: Product `main@46a52e76a0eeae4bed4b567b12da5311ed90b475` contra `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`. O merge-base é `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`; os refs divergem em 434 commits à frente e 2 atrás. O diff completo tem 300 caminhos, dos quais 13 são `.css`; somente quatro estão em `app/**`, os demais pertencem a fixtures/evidências/documentação.
+O conteúdo abaixo é o snapshot anterior main46/development de 15/11, não o estado CSS completo da main publicada após #275. A reconciliação posterior está no [adendo DS-05A](../../evidence/architecture/ds05a-current-product-css-provenance-2026-11-15.md). A comparação foi refeita em pins completos: Product `main@46a52e76a0eeae4bed4b567b12da5311ed90b475` contra `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`. O merge-base é `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`; os refs divergem em 434 commits à frente e 2 atrás. O diff completo tem 300 caminhos, dos quais 13 são `.css`; somente quatro estão em `app/**`, os demais pertencem a fixtures/evidências/documentação.
 
 | Folha de runtime | Blob main | Blob development | Diferenças relevantes observadas |
 |---|---|---|---|

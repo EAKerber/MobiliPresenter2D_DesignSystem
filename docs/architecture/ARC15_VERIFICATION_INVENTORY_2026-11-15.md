@@ -1,9 +1,11 @@
 # ARC-15 — Inventário de verificações do Produto
 
-**Estado:** primeira passada de comandos, workflows e overlaps confirmados concluída; matriz integral assertion→risco→rota/estado e decisões do owner continuam pendentes.  
-**Fonte:** `EAKerber/MobiliPresenter2D` `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`.  
+**Estado:** primeira passada documental e de overlaps, com baseline em Product main46, concluída; a matriz integral assertion→risco→rota/estado e decisões do owner continuam pendentes. Um recorte pós-publicação em main64 está no [incremento focado de configuração publicada/API](ARC15_ASSERTION_MATRIX_PUBLISHED_CONFIG_2026-11-16.md).
+**Fonte:** primeira passada em `EAKerber/MobiliPresenter2D` `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`; não representa o inventário pós-#275.
 **Método:** leitura dos contratos, comandos, gatilhos e áreas cobertas; classificação por risco/assertion/rota/estado, não por quantidade de arquivos.  
-**Execução:** nenhuma suíte foi executada nesta revisão ARC-15. Nenhum teste ou workflow foi alterado no pin `Product main@46a52e76`; branches de PR, inclusive #275, ficam fora deste inventário.
+**Execução:** nenhuma suíte foi executada na primeira passada ou na reconciliação de 16/11. Nenhum teste ou workflow foi alterado; branches de PR ficaram fora da baseline main46.
+
+**Reconciliação pós-#275:** a baseline acima permanece pinada em main46. Um recorte independente e não executado de configuração publicada, API, leitor buyer e workflows foi documentado em [matriz ARC-15 main64](ARC15_ASSERTION_MATRIX_PUBLISHED_CONFIG_2026-11-16.md). Esse incremento não atualiza a contagem nem a matriz integral dos 21 workflows/21 comandos.
 
 ## Parecer Common Sense Judge
 

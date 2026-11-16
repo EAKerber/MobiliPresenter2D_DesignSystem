@@ -69,3 +69,18 @@ Cada recibo guarda seis capturas claras (baseline/candidata em três larguras), 
 ## Limites e próximo passo
 
 Isto mede somente os seletores e estados alcançados pela projeção sintética local. Não valida a configuração publicada, o Preview ou todas as superfícies; não é uma revisão visual completa nem prova universal de conformidade WCAG. Nenhum CSS do Produto foi alterado e nenhum gate DS-05A/G2 foi fechado. A configuração hospedada de /config/ permanece HOLD. A candidata .module-number continua restrita a este componente e aguardando revisão separada; a nova observação de #viewerHint também não autoriza uma correção automática.
+
+## Readback de CSS após publicação da #275 — 16/11/2026
+
+A #275 foi incorporada ao Product main por squash em `64d934dabc7cfb8175dfe2f0a5d04fe1669a41ba`. A árvore atual da main é `f7e1d4b492dadff91d85b969616618ae42cf1daf`; development permanece em `1a69ff76a5f36e3245a288773bb409aa662e4e62`, árvore `6dff4a40f1f10db8e783e3da7604c6e0144d3e10`. As duas árvores foram comparadas por path/blob: 13 CSS ainda diferem, quatro são folhas runtime e nove são referências/fixtures/snapshots não-runtime.
+
+| Folha runtime | Product main@64d934d | Product development@1a69ff76 | Observação |
+|---|---|---|---|
+| `app/how-it-works/how-it-works.css` | `e70439be98b0fc7a705fd541f62e4844f6323472` | `0dff501eb14df78081f35d81ae1eca17abca85ba` | Igual ao blob de main46 documentado acima. |
+| `app/landing/landing.css` | `2fd79249fc7e21f798f48906614db73860eab41c` | `3e307c155a406f91337b2e54534e0362d2c21636` | Alterado pela integração #275; o diff de linhas divulgado acima pertence ao par main46/development e não é carregado para este novo pin. |
+| `app/styles.css` | `d43e6fb5e66133d2389b5c39b165b76b13cfa868` | `d1ac2b5701f215de56ff8f7c12b1d5e7dcbe47a8` | Igual ao blob de main46; diferença de `#viewerHint` continua fora do patch da Home. |
+| `app/ui-theme.css` | `3114bbfe0a67cbdc53757f5f50a0d035559767a6` | `36137b4264aa5b12999b286284cda227923a606a` | Igual ao blob de main46; candidata `.module-number` não mudou na integração #275. |
+
+Os outros nove caminhos continuam presentes somente no lado development e foram listados acima. A publicação altera a proveniência de `app/landing/landing.css`, portanto as capturas CSSOM de 15/11 não são promovidas como capturas da árvore completa main64. O seletor `.module-number` e a declaração de origem de `#viewerHint` mantêm os mesmos blobs, mas o relatório não repetiu renderização, CSSOM ou contraste no novo SHA.
+
+A main foi publicada no deploy Netlify `6afa62020df61721601fe111`, estado `ready`, commit `64d934dabc7cfb8175dfe2f0a5d04fe1669a41ba`. Isso confirma deployment e readback do commit, não validação hospedada de `/config/`. G2/DS-05A permanecem em HOLD; nenhum CSS Product foi alterado por este lote documental.
