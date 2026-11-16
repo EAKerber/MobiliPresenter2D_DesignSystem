@@ -4,14 +4,14 @@
 
 **Leitura de status.** A tabela de âncoras logo abaixo é o snapshot de 15/11/2026 BRT; para estado atual, use o overlay de 16/11 e o recibo da publicação Product. Estimativa e tabela abaixo não são recalculadas automaticamente.
 
-## Overlay live — 16/11/2026 (BRT)
+## Overlay live — 16/11/2026 (BRT), após PR #277
 
-- Product `main@64d934dabc7cfb8175dfe2f0a5d04fe1669a41ba` (`tree f7e1d4b492dadff91d85b969616618ae42cf1daf`) recebeu a PR #275 por squash. O deploy Netlify `6afa62020df61721601fe111` está READY para o mesmo SHA; 11 workflows do commit passaram, inclusive a leitura de produção. Evidência detalhada: [recibo da main após #275](../../evidence/architecture/product-main-post-275-readback-2026-11-16.md).
-- Product mantém 6 refs. #269 e #274 reportam não mergeáveis; #271 reporta mergeável, mas as três PRs abertas continuam baseadas em `main@46a52e76`, portanto precisam de reconciliação. O inventário ARC-13 da #274 não inclui o conteúdo integrado da #275.
-- A branch `fix/home-hero-group-a11y-20261114@3481ade561deddf561de57225cf8a65491b34654` tem a mesma árvore que main após squash, mas não é ancestral; não está protegida e nenhuma PR aberta a usa. É candidata para revisão de higiene 6→5, não autorização de remoção. Requer aprovação específica para esse nome e SHA.
-- O Inventário ARC-15 de 15/11 é um snapshot de Product main46. A [matriz focada de configuração publicada/API](ARC15_ASSERTION_MATRIX_PUBLISHED_CONFIG_2026-11-16.md) usa main64 e separa cobertura de mocks, serviços puros e guards estáticos. A matriz integral e required checks continuam pendentes/UNKNOWN.
-- O recibo DS-05A de 15/11 permanece histórico para CSSOM; o adendo identifica a árvore main64 e não afirma que as capturas antigas tenham sido repetidas. A configuração hospedada em `/config/` e os 98 pares `UNCERTAIN` mantêm G2/DS-05A em HOLD.
-- Design System main continua `79db735d6f05177b0c406e383d35832f3d72fdef`, com 2 refs; #119 permanece Draft na branch existente. Este lote só atualiza documentação da arquitetura.
+- Product `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9` (`tree 439fb0fc9a3295f9e45486198e9de83fca8376ee`) recebeu #277 por squash. O deploy Netlify `6afa7bee50b552356a973df4` está READY no mesmo commit; os 11 workflows da PR passaram. O [recibo post-#277](../../evidence/architecture/product-main-post-277-readback-2026-11-16.md) registra preview, produção e limites de interação.
+- O controle próprio de tela cheia fica sobreposto ao vídeo nas páginas inicial e “Como funciona”; entrada e saída foram exercitadas no Preview #277. G3 continua parcial.
+- Product tem 6 refs, incluindo a branch integrada `fix/how-video-fullscreen-control-20261116@1d1f68a`. 5 é gatilho para revisão, não hard cap nem autorização para remoção. #269/#274 são Draft/não mergeáveis; #271 está aberta/sem Draft e reporta mergeável. Todas continuam baseadas em `main@46a52e76` e requerem reconciliação.
+- ARC-13 da #274 e primeira passada ARC-15 são snapshots main46; ARC-13 precisa considerar mudanças das #275 e #277. A matriz ARC-15 focada usa main64 e segue parcial; required checks permanecem UNKNOWN.
+- DS-05A atualizou proveniência de fonte para main64, mas CSSOM não foi recapturado em `efc40584c3f3ca940cf6cbca408f8fda31e3e1c9`. `/config/` hospedado e 98 pares `UNCERTAIN` mantêm G2 em HOLD.
+- Design System mantém `main@79db735d6f05177b0c406e383d35832f3d72fdef`, 2 refs, #119 Draft. Esta branch documental continua sem alterar runtime; não integra #119 nem declara fase/gate concluído.
 
 ## Âncoras (snapshot de 15/11/2026; histórico)
 
@@ -90,16 +90,15 @@ Refs remotas: Produto 6 (gatilho de revisão 5 excedido enquanto #275 está ativ
 
 ## Ordem operacional recomendada — atualização 16/11/2026
 
-1. Reconciliar #269 e #271 com Product `main@64d934d` preservando seus contratos e gates próprios; reobservar mergeability, preview e checks em cada SHA.
-2. Atualizar ARC-13 da #274 após a integração #275; manter os 1.021 sinks e decisões existentes como baseline main46 até concluir o delta atual.
-3. Completar ARC-15 a partir da matriz focada em main64: fechar a matriz integral por assertion→risco→rota/estado, decidir os quatro grupos pendentes e obter a lista de required checks; o 403 mantém esses checks UNKNOWN.
-4. Prosseguir G2/DS-05A sem reaproveitar CSSOM antigo como evidência de main64; resolver a configuração hospedada de `/config/` e os 98 pares `UNCERTAIN` antes de qualquer extração CSS.
-5. Avançar G3 por componente, estados e dispositivos; a integração do hero em main confirma apenas o recorte de geometria/visual já revisado, não encerra G3.
-6. Avaliar as 6 refs do Product conforme a política; a branch #275 é candidata a revisão 6→5, mas só excluir após autorização por branch/SHA exatos e plano/readback.
+1. Reconciliar #269 e #271 com Product `main@efc40584`, preservando contratos e gates; reobservar mergeability, preview e checks em cada SHA.
+2. Atualizar ARC-13 da #274 sobre a main corrente. Preservar os 1.021 sinks/decisões da main46 como baseline histórica e revisar os deltas de #275/#277, incluindo nomes e estados acessíveis do controle de tela cheia.
+3. Completar ARC-15 a partir da matriz focada em main64: fechar assertion→risco→rota/estado, resolver quatro grupos do owner e obter required checks; 403 mantém esses checks UNKNOWN. Os 11 workflows verdes da #277 não substituem essa matriz.
+4. Prosseguir G2/DS-05A sem usar CSSOM antigo como evidência de `efc40584`; atualizar a comparação/fonte e capturas no pin exato quando apropriado. Resolver a configuração hospedada de `/config/` e 98 pares `UNCERTAIN` antes de extração CSS.
+5. Avançar G3 por componente, estado e dispositivo. A tela cheia foi exercitada nas duas páginas da prévia e publicada, mas isso não fecha o gate G3.
+6. Revisar as 6 refs Product conforme a política; 5 dispara revisão, não exclusão. Preservar a branch integrada da #277 até um lote específico comprovar elegibilidade e readback.
 7. Manter #119 Draft; esta atualização documental não integra a PR do Design System nem declara fases concluídas.
 
-
-## Critério de conclusão do programa
+## Critério de conclusão do programa## Critério de conclusão do programa
 
 ARC-01…ARC-16 implementados conforme contrato, todos os consumidores no escopo cobertos ou com exceção aprovada e owner; V0–V6 concluídos; G0–G8 com PASS/HOLD/fora de escopo justificado em pins exatos; equivalência/benefício demonstrados por lote; localização e fallback fechados; duplicações reais removidas ou justificadas; rollback e readback registrados. Nenhum item isolado, PR merged, preview, porcentagem estimada ou contagem de testes satisfaz por si só esse critério. Produção continua fora da autorização vigente.
 
