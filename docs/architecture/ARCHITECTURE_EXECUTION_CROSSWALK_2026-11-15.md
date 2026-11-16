@@ -8,8 +8,8 @@
 
 - Product `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9` (`tree 439fb0fc9a3295f9e45486198e9de83fca8376ee`) recebeu #277 por squash. O deploy Netlify `6afa7bee50b552356a973df4` está READY no mesmo commit; os 11 workflows da PR passaram. O [recibo post-#277](../../evidence/architecture/product-main-post-277-readback-2026-11-16.md) registra preview, produção e limites de interação.
 - O controle próprio de tela cheia fica sobreposto ao vídeo nas páginas inicial e “Como funciona”; entrada e saída foram exercitadas no Preview #277. G3 continua parcial.
-- Product tem 6 refs, incluindo a branch integrada `fix/how-video-fullscreen-control-20261116@1d1f68a`. 5 é gatilho para revisão, não hard cap nem autorização para remoção. #269/#274 são Draft/não mergeáveis; #271 está aberta/sem Draft e reporta mergeável. Todas continuam baseadas em `main@46a52e76` e requerem reconciliação.
-- ARC-13 da #274 e primeira passada ARC-15 são snapshots main46; ARC-13 precisa considerar mudanças das #275 e #277. A matriz ARC-15 focada usa main64 e segue parcial; required checks permanecem UNKNOWN.
+- Product tem 5 refs: `main`, `development`, as branches #269/#271 e a branch documental #274. A branch integrada da #277 foi removida após autorização exata, prova de tree idêntica e readback; veja o [recibo de higiene](../../evidence/architecture/product-branch-hygiene-post-277-2026-11-16.md). O soft cap de 5 foi alcançado, sem hard cap. #269/#274 são Draft/não mergeáveis; #271 está aberta/sem Draft e reporta mergeável. Todas continuam baseadas em `main@46a52e76` e requerem reconciliação.
+- ARC-13 da #274 e primeira passada/matriz integral ARC-15 são snapshots main46; ARC-13 precisa considerar mudanças das #275 e #277. Uma revisão limitada do gate geométrico em main atual agora está documentada no [inventário ARC-15](ARC15_VERIFICATION_INVENTORY_2026-11-15.md): quatro larguras passaram em browser local, mas a calibração DOM não prova encaixe por pixels, iframe YouTube nem controles fullscreen. A matriz ARC-15 focada usa main64 e segue parcial; required checks permanecem UNKNOWN.
 - DS-05A atualizou proveniência de fonte para main64, mas CSSOM não foi recapturado em `efc40584c3f3ca940cf6cbca408f8fda31e3e1c9`. `/config/` hospedado e 98 pares `UNCERTAIN` mantêm G2 em HOLD.
 - Design System mantém `main@79db735d6f05177b0c406e383d35832f3d72fdef`, 2 refs, #119 Draft. Esta branch documental continua sem alterar runtime; não integra #119 nem declara fase/gate concluído.
 
@@ -91,12 +91,14 @@ Refs remotas: Produto 6 (gatilho de revisão 5 excedido enquanto #275 está ativ
 ## Ordem operacional recomendada — atualização 16/11/2026
 
 1. Reconciliar #269 e #271 com Product `main@efc40584`, preservando contratos e gates; reobservar mergeability, preview e checks em cada SHA.
-2. Atualizar ARC-13 da #274 sobre a main corrente. Preservar os 1.021 sinks/decisões da main46 como baseline histórica e revisar os deltas de #275/#277, incluindo nomes e estados acessíveis do controle de tela cheia.
-3. Completar ARC-15 a partir da matriz focada em main64: fechar assertion→risco→rota/estado, resolver quatro grupos do owner e obter required checks; 403 mantém esses checks UNKNOWN. Os 11 workflows verdes da #277 não substituem essa matriz.
-4. Prosseguir G2/DS-05A sem usar CSSOM antigo como evidência de `efc40584`; atualizar a comparação/fonte e capturas no pin exato quando apropriado. Resolver a configuração hospedada de `/config/` e 98 pares `UNCERTAIN` antes de extração CSS.
-5. Avançar G3 por componente, estado e dispositivo. A tela cheia foi exercitada nas duas páginas da prévia e publicada, mas isso não fecha o gate G3.
-6. Revisar as 6 refs Product conforme a política; 5 dispara revisão, não exclusão. Preservar a branch integrada da #277 até um lote específico comprovar elegibilidade e readback.
+2. Atualizar ARC-13 da #274 sobre a main corrente. Preservar os 1.021 sinks/decisões da main46 como baseline histórica e revisar os deltas de #275/#277, incluindo nomes e estados acessíveis do controle fullscreen.
+3. Completar ARC-15 a partir da matriz focada em main64: fechar assertion→risco→rota/estado, resolver quatro grupos do owner e obter required checks; 403 mantém esses checks UNKNOWN. A revisão do gate geométrico revela que ele não cobre pixels ou fullscreen; não substituir essa lacuna por uma simples contagem de testes.
+4. Prosseguir G2/DS-05A sem usar CSSOM antigo como evidência de `efc40584`; atualizar comparação/fonte e capturas no pin exato quando apropriado. Resolver a configuração hospedada de `/config/` e 98 pares `UNCERTAIN` antes de extração CSS.
+5. Avançar G3 por componente, estado e dispositivo. O controle fullscreen foi exercitado nas duas páginas da prévia e publicado, mas isso não fecha o gate G3.
+6. Product tem 5 refs e atingiu o soft cap. Reavaliar antes de criar outra ref; não excluir por contagem. A branch integrada da #277 foi removida com autorização específica e readback.
 7. Manter #119 Draft; esta atualização documental não integra a PR do Design System nem declara fases concluídas.
+
+
 
 ## Critério de conclusão do programa## Critério de conclusão do programa
 

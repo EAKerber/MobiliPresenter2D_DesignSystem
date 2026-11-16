@@ -1,5 +1,7 @@
 # Product main readback after PR #277 — 16/11/2026 (BRT)
 
+**Nota temporal:** este recibo registra o estado imediatamente após a integração da #277, quando sua branch ainda estava presente. Ela foi removida depois com autorização específica; a leitura atual de 5 refs está no [recibo de higiene posterior](product-branch-hygiene-post-277-2026-11-16.md). O commit e o tree da `main` permaneceram inalterados.
+
 ## Escopo e fonte
 
 Este recibo registra a revisão read-only da integração e publicação do controle de tela cheia nas páginas inicial e “Como funciona”. A alteração é de interface e comportamento do player; não altera dados, configuração publicada ou CSS do Design System.
