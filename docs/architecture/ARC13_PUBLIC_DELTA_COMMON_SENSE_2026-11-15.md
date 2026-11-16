@@ -41,3 +41,18 @@ O head atual da Draft #275 (`80d6024901f8a0827ce2f3e67bbe83f793e65f42`) mantém 
 ## Resultado
 
 O parecer recomenda classificações, mas não altera `ownerDisposition`, inventário, chaves ou código. Nenhum sink foi removido, nenhuma chave foi criada e nenhum teste foi executado.
+
+## Adendo — reconciliação de inventário após #277 (16/11/2026)
+
+O relatório ARC-13 atualizado está em Product #274, head `dc3e55f4b930e241d0c921eb95055c8a97429543`, sobre `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9`. Seu JSON válido tem SHA-256 `abce38889ad6d78c634fadad5d6f0c63fd9706ac3e0c13bcdf13f78010caeb9e`: 1.026 sinks, 360 fontes JavaScript, 420 ocorrências HTML mapeadas e zero ocorrências sem owner/rota. O crosswalk pós-#277 preserva o snapshot de 15/11 e registra os remapeamentos por posição, os registros novos/removidos e a fonte dinâmica de estados do controle. O JSON antigo versionado na revisão de 15/11 tinha um marcador literal de truncamento e não passava parse estrito; a comparação usa a referência válida reconstruída do código exato, com SHA-256 `4e5c81e286cbab81b3b6a69ad7fe899d4e10c940df629aed34a090ed6e38a819`.
+
+### Disposição de conteúdo e semântica
+
+- **Home, alt da arte:** agora “Cozinha planejada com uma mão segurando um celular” (`dcd455a9fecf63aa`). O resultado visual foi aprovado pela pessoa decisora, mas isso não confirma que a descrição textual seja factual nem que seja o melhor alt. Manter a confirmação de conteúdo pendente; nenhuma chave é inferida.
+- **Tela cheia nas duas páginas:** os nomes acessíveis e tooltips foram normalizados para “Abrir vídeo em tela cheia”; o estado imersivo atualiza `aria-label` e `title` para “Sair da tela cheia”. Esses quatro pontos de escrita são anotados como suplemento porque o scanner não expõe os valores condicionais em `sourceEntries`; não os somar novamente como sinks. A classe do controle e o estado `aria-pressed` não são copy.
+- **Home, “Mais informações”:** `role="group"` agora fornece semântica compatível com nomeação no markup. Isso resolve a incompatibilidade anterior do `div` genérico no nível estático; revisão com tecnologia assistiva, chave e extração continuam pendentes.
+- **Home, “Saiba mais” → `/about/`:** mantém a autorização explícita somente para texto e destino. Ela não aprova compartilhamento de chave nem extração.
+- **Erro de player do YouTube:** “Não foi possível carregar o player do YouTube.” é lançado e descartado pelo fluxo de fallback, não apresentado ao usuário; classificar como diagnóstico, sem propor localização com base apenas no texto literal.
+- **Fallback de imagem:** o diagnóstico “Imagem indisponível” mudou de origem/ID na árvore atual e não deve ser tratado como texto visível sem uma nova ligação a sink consumidor.
+
+O adendo substitui apenas o status live do antigo delta pós-#273. As classificações do snapshot main46 e as aprovações textuais mantêm a proveniência original. Não houve alteração em `ownerDisposition`, aprovação de catálogo, alteração do runtime ou validação assistiva nesta atualização. Evidência detalhada: [reconciliação](https://github.com/EAKerber/MobiliPresenter2D/blob/dc3e55f4b930e241d0c921eb95055c8a97429543/docs/architecture/arc13/inventory-reconciliation-post-277-2026-11-16.md) e [crosswalk](https://github.com/EAKerber/MobiliPresenter2D/blob/dc3e55f4b930e241d0c921eb95055c8a97429543/docs/architecture/arc13/inventory-crosswalk-post-277-2026-11-16.json).
