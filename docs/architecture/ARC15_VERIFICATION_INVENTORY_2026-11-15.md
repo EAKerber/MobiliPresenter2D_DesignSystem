@@ -6,6 +6,7 @@
 **Execução:** nenhuma suíte foi executada na primeira passada ou na reconciliação de 16/11. Nenhum teste ou workflow foi alterado; branches de PR ficaram fora da baseline main46.
 
 **Reconciliação pós-#275:** a baseline acima permanece pinada em main46. Um recorte independente e não executado de configuração publicada, API, leitor buyer e workflows foi documentado em [matriz ARC-15 main64](ARC15_ASSERTION_MATRIX_PUBLISHED_CONFIG_2026-11-16.md). Esse incremento não atualiza a contagem nem a matriz integral dos 21 workflows/21 comandos.
+**Incremento de triagem — gate de teclado pós-#277 (16/11/2026):** a PR #269 levou à revisão da falha de Tab em `/config/`. Antes da instrumentação, a asserção e o código do Configurador eram iguais na `main` e na candidata; o CSS da PR atua apenas no header público. O gate usa V5 loopback derivado dos defaults, com checkbox do primeiro módulo habilitado. A falha em `6651342` ocorreu uma vez e o rerun do mesmo SHA passou. No head `8c77350b`, 12/12 Actions passaram após o teste confirmar o foco inicial e manter a expectativa original de Tab para o botão de inspeção. Classificação provisória: falha intermitente/diagnóstico insuficiente do gate, sem evidência de regressão funcional. Este caso é evidência de PR, não altera a matriz de assertions pinada em main46 nem a contagem dos 21 comandos/workflows.
 
 ## Parecer Common Sense Judge
 
