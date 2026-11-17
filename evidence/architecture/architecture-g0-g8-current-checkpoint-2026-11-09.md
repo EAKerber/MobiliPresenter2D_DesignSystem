@@ -1,12 +1,25 @@
-# Checkpoint atual da arquitetura G0–G8 — 2026-11-14
+# Checkpoint atual da arquitetura G0–G8 — 2026-11-16
 
-**Última atualização:** 2026-11-14 (BRT).
+**Última atualização:** 2026-11-16 (BRT).
 
 **Escopo:** reconciliação documental do plano de consolidação de Design System, CSS e componentes. Este checkpoint atualiza a fotografia operacional, não aprova mudanças visuais, migrações em lote, merge de código de produto ou publicação.
 
 **Plano de referência:** [Plano diretor G0–G8](../../docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md) · [reconciliação anterior](master-plan-g0-g8-current-crosswalk-2026-10-25.md) · [handover e governança](../../docs/HANDOVER_CURRENT.md).
 
-## Estado live após atualização da PR #275 — 15/11/2026 (BRT)
+## Estado live — 16/11/2026 (BRT)
+
+- **Product:** `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9` (HEAD confirmado) inclui vídeo e controles próprios de saída da tela cheia nas páginas inicial e Como funciona. Deploy `6afa7bee50b552356a973df4` está READY. A pessoa decisora aprovou a apresentação e os controles; isso não decide texto alternativo nem extração.
+- **Refs:** Product tem 7 branches — `main`, `development` e as cinco refs ativas #269/#271/#274/#278/#279. Está duas acima do soft cap 5; não é hard cap e não há ref livre elegível para retirada neste snapshot. Design System tem 2 refs — `main` e a branch documental da #119.
+- **PRs do Product:** #269 Draft, head `28b1e2ef` (18 caminhos), Preview success e 12/12 Actions; o teste de foco inicial passou e o rerun do SHA anterior passou após uma falha isolada. #271 aberta, 9/9 Actions e Preview success. #274 Draft documental ARC-13, head `72ae7c8a`; Preview e checks relevantes passam. #278 Draft de teste, head `69b98cbd`, browser e asset gates passam. #279 Draft de um workflow, head `ffa288d1`, Preview READY; não houve dispatch. Nenhuma dessas PRs foi integrada neste lote.
+- **ARC-13:** #274 documenta 1.026 sinks, 360 fontes JS, 420 ocorrências HTML mapeadas e zero sem owner/rota. Aprovação visual cobre apenas a apresentação/controles de vídeo nas duas páginas; alt da Home, revisão assistiva, chaves e extração seguem pendentes.
+- **ARC-15:** baseline principal continua pinada em Product main46. Revisão estática acrescentou três pares de overlap e julgou os oito arquivos sem invocação localizada; os checks V5 usados por quatro gates foram classificados como infraestrutura compartilhada. Não há teste comprovadamente redundante. Nenhum teste foi removido, alterado ou executado. A matriz integral, quatro escolhas do owner e required checks (UNKNOWN/403) continuam pendentes.
+- **G1/G2/G3:** G1 segue parcial: UX-04 não está em `main` e não foi despachado. G2 permanece em HOLD para `/config/`, CSSOM atual, #208/#216, 98 pares UNCERTAIN e DS-05A. G3 permanece parcial: a aprovação do vídeo e a checagem de pixels do #278 não cobrem todos os estados, tecnologias assistivas ou dispositivo real.
+- **G4–G8:** G4 HOLD; G5 parcial/HOLD; G6 HOLD; G7 pendente; G8 não iniciado. A estimativa geral permanece no último registro datado de 13/11 (~30%, faixa 25–35%); este overlay não a recalcula.
+- **Design System:** `main@79db735d6f05177b0c406e383d35832f3d72fdef`; PR #119 continua Draft. O lote corrente é documental e não integra código nem despacha workflows.
+
+> O bloco de 15/11 abaixo é um snapshot histórico e está superado por este overlay. A proveniência e os registros antigos permanecem preservados.
+
+## Snapshot operacional de 15/11/2026 (BRT; superseded)
 
 - **Produto:** `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`, `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`, 6 refs. Além de `main` e `development`, permanecem `codex/ds04-208-preview-batch-20261111@d699fb1`, `codex/nav005-public-compact-main-20261110@2e202e4`, `docs/arc13-post-273-reconciliation-20261114@282fc116` e `fix/home-hero-group-a11y-20261114@49cf98a`.
 - **PRs do Produto:** #273 foi integrada no squash `46a52e76`; sua branch integrada está ausente das refs remotas. #269 continua Draft e #271 aberta sobre a base antiga `221b54b`, com `mergeable=false`. #274 continua Draft em `main@46a52e76` → `68441080f1ba29f546e6f97926e487a945f7fa2f`, com 39 arquivos documentais/tooling e sem `app/**`; após normalizar CRLF, 2/2 workflows Actions passam e o Deploy Preview está READY. #275 é Draft em `main@46a52e76` → `49cf98a3600bc13c4131a62775cf881599418bbe`, com 7 arquivos de fonte canônica/publicada, arte, vídeo e manifesto; a prévia está READY e revisada, e 10/11 Actions passam. `VIS-002C P-TOKEN v0.3` falha no WebKit 390 px com 39.542 pixels fora dos limites de texto autorizados.
