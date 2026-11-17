@@ -143,13 +143,24 @@ O run PR [#43799448351](https://github.com/EAKerber/MobiliPresenter2D/actions/ru
 
 **Parecer do ARC-15:** manter esta verificação como gate de geometria responsiva; classificá-la como parcialmente sobreposta ao browser/artefato visual, não redundante. Para fechar a lacuna, uma assertion focada deve conferir bounds/visibilidade dos controles próprios nas duas páginas e a transição de estado fullscreen; a confirmação do encaixe arte→visor continua exigindo julgamento visual ou uma referência de pixels aprovada. Nenhum teste foi removido, executado ou alterado neste lote documental. Esta revisão não recalcula as contagens/21 comandos da suíte `app` e não fecha a matriz integral assertion→risco→rota/estado.
 
-## Revalidação live de gates — 16/11/2026
+## Revalidação live — gate de teclado e limites de cobertura (16/11/2026)
 
-Product `main` está em `efc40584c3f3ca940cf6cbca408f8fda31e3e1c9`. A PR #269 foi reconciliada sobre esse SHA (`6651342c40e4eebb266c8c1570a4a8006086dce9`) e tem preview READY; NAV-005 e Flow layout passam. O workflow `Keyboard browser (local V5; protected preview separately gated)` falhou no próprio passo de navegador, apontando `tests/keyboard-browser.cjs:126`: “Tab moves from inclusion checkbox to the sibling module inspection body” (`false !== true`), na rota local `/config/`.
+Product `main` permanece em `efc40584c3f3ca940cf6cbca408f8fda31e3e1c9`. A PR #269 foi reconciliada sobre essa base; o head atual é `8c77350ba5de38711722fb5af024b90c2f1bd7f9`, com Preview success e 12/12 workflows Actions verdes. A PR permanece Draft.
 
-O diff #269 não altera `app/config/**` nem `tests/keyboard-browser.cjs`; a única alteração relevante em `app/ui-theme.css` restringe a compactação do controle de tema para headers não públicos, preservando o seletor anterior nesse shell. Isso torna uma regressão introduzida por #269 menos provável, mas **não prova** o resultado da mesma asserção na base. A pendência permanece aberta: reproduzir na base e na candidata antes de classificar como falha preexistente ou regressão. Não suprimir a assertion nem usar o status “mergeable” do GitHub como substituto do gate técnico.
+**Diagnóstico do teclado.** O workflow usa fixture V5 local derivada dos defaults. O primeiro módulo `module-01` está habilitado; o DOM posiciona o checkbox imediatamente antes do botão de inspeção. A primeira tentativa no head anterior `6651342` falhou em `tests/keyboard-browser.cjs:126`, mas o rerun do mesmo SHA e job passou. O diff de runtime da PR não altera o Configurador; a mudança em `app/ui-theme.css` vale somente para o header público e não muda a rota `/config/`. A evidência não mostra regressão funcional da PR e classifica o sinal anterior como intermitente/insuficientemente diagnosticado.
 
-O workflow `development-ux04-geometry.yml` está em `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`, mas a consulta de conteúdo ao `main` atual retornou 404. Não há dispatch disponível para o SHA-alvo nesta situação; qualquer habilitação deve passar por mudança revisável em `main` e depois executar no SHA exato de `development`. A revisão documental desta passagem não executou testes.
+A mudança de teste em `8c77350` confirma que o checkbox está habilitado e que recebeu foco antes de Tab; mantém a expectativa original de foco no botão de inspeção e imprime o elemento ativo caso a asserção falhe. O gate passou no head exato. Nenhum runtime foi alterado nem a expectativa de navegação foi removida.
+
+**Fronteira dos gates de navegação.** Os dois fluxos abaixo compartilham padrões gerais de teclado/foco, mas cobrem superfícies e riscos diferentes:
+
+| Gate / fonte | Superfície e garantia principal | Relação |
+|---|---|---|
+| `tests/keyboard-browser.cjs` — Keyboard browser, V5 loopback | Configurador e Admin; atalhos de módulo, checkbox→inspeção, fechar/restaurar foco, navegação de etapas, rolagem e revelar senha. | Exclusivo para a configuração e estados locais V5; não cobre menu público. |
+| `tests/ci/public-navigation-semantic-browser.mjs` — NAV-005 public header browser | Header público e Viewer; abrir/fechar menu, sequência de foco e CTA, redimensionamento, skip link e cards econômicos em Chromium/WebKit. | Exclusivo para navegação pública e Viewer; não valida o foco checkbox→inspeção no Configurador. |
+
+Enter, Escape e padrões gerais de foco são interseções de implementação, não garantias duplicadas. Rotas, elementos, estados e fixtures diferem; não há base para unir ou remover qualquer um dos gates. A matriz de configuração publicada/API em `ARC15_ASSERTION_MATRIX_PUBLISHED_CONFIG_2026-11-16.md` trata autorização, armazenamento, publicação e projeção buyer, portanto permanece em domínio separado.
+
+O workflow `development-ux04-geometry.yml` está em `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`, mas não existe no Product `main`; não está disponível para dispatch no SHA-alvo. Uma cópia na PR não equivale a execução em development. A matriz integral ARC-15 continua pinada em main46, e required checks permanecem UNKNOWN; esta revalidação de PR não altera contagens nem encerra a matriz geral.
 
 ## Reavaliação independente da geometria do hero — 16/11/2026
 
