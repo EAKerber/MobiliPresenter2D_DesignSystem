@@ -1,6 +1,6 @@
 # ARC-15 — Inventário de verificações do Produto
 
-**Estado:** primeira passada documental e de overlaps, com baseline em Product main46, concluída; a matriz integral assertion→risco→rota/estado e decisões do owner continuam pendentes. Um recorte pós-publicação em main64 está no [incremento focado de configuração publicada/API](ARC15_ASSERTION_MATRIX_PUBLISHED_CONFIG_2026-11-16.md).
+**Estado:** primeira passada documental e triagem inicial de overlaps, com baseline em Product main46, concluídas; três pares adicionais e a fixture V5 compartilhada foram classificados em 16/11; a matriz integral assertion→risco→rota/estado e decisões do owner continuam pendentes. Um recorte pós-publicação em main64 está no [incremento focado de configuração publicada/API](ARC15_ASSERTION_MATRIX_PUBLISHED_CONFIG_2026-11-16.md).
 **Fonte:** primeira passada em `EAKerber/MobiliPresenter2D` `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`; não representa o inventário pós-#275.
 **Método:** leitura dos contratos, comandos, gatilhos e áreas cobertas; classificação por risco/assertion/rota/estado, não por quantidade de arquivos.  
 **Execução:** nenhuma suíte foi executada na primeira passada ou na reconciliação de 16/11. Nenhum teste ou workflow foi alterado; branches de PR ficaram fora da baseline main46.
@@ -76,9 +76,18 @@ Repetir a chamada em workflows diferentes não significa que um resultado de CI 
 | Fallback de imagem, menus, fluxo de pedra/preço e runtime do rodapé | Alguns estados/ações aparecem em testes puros e browser. | Browser acrescenta geometria, acessibilidade, canvas ou interação; as saídas verificadas diferem. |
 | `app/tools/validate-assets.py` e validadores de arte | Máscara, golden, provenance e alguns dados de entrada são compartilhados. | Inventory/hash/canvas/alpha bounds/front masks/seam bridge e invariantes R5A específicas preservam cobertura distinta. |
 
+| `app/tools/test-v5-normal-save.js:93–97` ↔ `app/tools/test-v5-publication-migration.js:96–99` | Ambos cenários verificam os mesmos quatro códigos de falha de CAS/ETag/readback: `source_etag_conflict`, `write_etag_missing`, `readback_etag_mismatch` e `readback_digest_mismatch`; os mocks também usam leitura strong e escrita condicional. | **Assertions compartilhadas, cenários distintos.** O save parte de V5 já publicado; a migração parte de V3 e exige digest/candidate. Mocks não comprovam o provider. Preservar ambos. |
+| `app/tools/test-core.js:512–528` ↔ `tests/summary-pricing-browser.cjs:77,96–112` | Ambos tratam contabilização global; o browser exige linha única de rodapé, total sincronizado e delta exato ao alternar o serviço. | **Overlap conceitual parcial, sem assertion equivalente.** Calculator puro e resumo/interação da UI mantêm garantias distintas; preservar ambos. |
+| `tests/flow-layout-browser.cjs:251–252,310` ↔ `tests/keyboard-browser.cjs:206–216` | Os dois comparam sections renderizadas com a ordem do flow normalizado; o gate de teclado também reordena o DOM antes de verificar a ordem semântica. | **Modelo compartilhado, contratos distintos.** Renderização/layout e descoberta/navegação por teclado são superfícies diferentes; preservar ambos. |
+
+**Triagem ARC-15 (16/11/2026):** âncoras verificadas por leitura estática de Product `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`. As três relações não provam redundância de arquivo; nenhuma suíte foi executada ou alterada, e as contagens do baseline permanecem 21 comandos e 21 workflows.
+
 ## Repetição de precondições e infraestrutura
 
 Fixtures V5 válidas, preflight `ok`, e protocolo dos mocks Blob (`key="published"` e consistência strong) aparecem em vários testes; são precondições e boilerplate dos test doubles, não equivalência dos cenários de migração, leitura, save, projeção e segurança. Também há repetição de build/`pages:check` em workflows públicos; isso é infraestrutura repetida, enquanto os browsers de foco, diferencial do header, preço e tokens verificam contratos diferentes.
+
+
+Além das precondições comuns, `tests/ci/prepare-local-v5-browser.sh` é chamado pelos workflows `flow-layout-browser.yml:55–64`, `keyboard-browser.yml:51–60`, `mobile-browser.yml:38–47` e `summary-pricing-browser.yml:46–55`. Ele inicia `tests/ci/local-buyer-config-server.mjs:21–29,45–48,65–67` para fixture V5/loopback. É infraestrutura compartilhada, não assertion duplicada nem prova de integração com Blob/Netlify.
 
 ## Verificações sem invocação automática localizada
 
@@ -145,7 +154,7 @@ O run PR [#43799448351](https://github.com/EAKerber/MobiliPresenter2D/actions/ru
 
 ## Revalidação live — gate de teclado e limites de cobertura (16/11/2026)
 
-Product `main` permanece em `efc40584c3f3ca940cf6cbca408f8fda31e3e1c9`. A PR #269 foi reconciliada sobre essa base; o head atual é `8c77350ba5de38711722fb5af024b90c2f1bd7f9`, com Preview success e 12/12 workflows Actions verdes. A PR permanece Draft.
+Product `main` permanece em `efc40584c3f3ca940cf6cbca408f8fda31e3e1c9`. A PR #269 foi reconciliada sobre essa base; o head atual é `28b1e2ef4f62b418110ba7694a59dee95969174b`, com 18 caminhos, Preview success e 12/12 workflows Actions verdes. A PR permanece Draft.
 
 **Diagnóstico do teclado.** O workflow usa fixture V5 local derivada dos defaults. O primeiro módulo `module-01` está habilitado; o DOM posiciona o checkbox imediatamente antes do botão de inspeção. A primeira tentativa no head anterior `6651342` falhou em `tests/keyboard-browser.cjs:126`, mas o rerun do mesmo SHA e job passou. O diff de runtime da PR não altera o Configurador; a mudança em `app/ui-theme.css` vale somente para o header público e não muda a rota `/config/`. A evidência não mostra regressão funcional da PR e classifica o sinal anterior como intermitente/insuficientemente diagnosticado.
 
