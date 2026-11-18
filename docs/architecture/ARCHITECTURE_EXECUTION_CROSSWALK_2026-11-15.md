@@ -1,10 +1,10 @@
-# Crosswalk operacional de execução arquitetural — baseline 15/11 com overlay live 16/11/2026
+# Crosswalk operacional de execução arquitetural — baseline 15/11 e snapshot operacional 16/11/2026
 
 **Finalidade.** Este documento amplia o roteiro em uma ponte executável entre decisões ARC-01…ARC-16, fases V0–V6, gates G0–G8, código, evidências, bloqueios e saídas. Complementa, sem substituir, o [contrato arquitetural](../ARCHITECTURE_DECISIONS_ARC01_ARC16_AND_EXECUTION_2026-10-21.md), o [plano diretor histórico](DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md), o [handover corrente](../HANDOVER_CURRENT.md) e os recibos citados. A comparação estática de CSS do Produto tem recibo próprio: [DS-05A source provenance](../../evidence/architecture/ds05a-current-product-css-provenance-2026-11-15.md).
 
-**Leitura de status.** A tabela de âncoras logo abaixo é o snapshot de 15/11/2026 BRT; para estado atual, use o overlay de 16/11 e o recibo da publicação Product. Estimativa e tabela abaixo não são recalculadas automaticamente.
+**Leitura de status (18/11/2026).** A tabela de âncoras abaixo é o snapshot de 15/11/2026 BRT; a seção de 16/11 registra o estado daquela data e não é recalculada automaticamente. Para o estado operacional vigente, use o [handover corrente](../HANDOVER_CURRENT.md) e os pins das PRs que ele referencia. Estimativas anteriores são datadas, não uma medida atual de conclusão.
 
-## Overlay live — 16/11/2026 (BRT), após inventário ARC-13 e reconciliação das PRs
+## Snapshot operacional — 16/11/2026 (BRT), após inventário ARC-13 e reconciliação das PRs
 
 - Product `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9` (`tree 439fb0fc9a3295f9e45486198e9de83fca8376ee`) recebeu #277 por squash. Deploy Netlify `6afa7bee50b552356a973df4` está READY no mesmo commit; os 11 workflows da PR passaram. O owner confirmou que o tratamento visual e controles nas páginas inicial e “Como funciona” agradaram a pessoa decisora. O [recibo pós-#277](../../evidence/architecture/product-main-post-277-readback-2026-11-16.md) registra a interação e os limites.
 - Product tem 7 refs, duas acima do soft cap 5: `main`, `development` e branches de #269/#271/#274/#278/#279. A #279 é a nova via de um arquivo para UX-04; a #278 permanece como teste de geometria. A branch integrada da #277 foi removida após autorização exata, prova de tree idêntica e readback; veja o [recibo de higiene](../../evidence/architecture/product-branch-hygiene-post-277-2026-11-16.md). Cinco é soft cap/gatilho de revisão, não hard cap; reavaliar após as duas PRs estabilizarem, sem exclusão por contagem.
