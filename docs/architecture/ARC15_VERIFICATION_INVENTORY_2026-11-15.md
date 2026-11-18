@@ -25,6 +25,25 @@ A leitura estática de Product `main@efc40584` confirmou que `ui-theme-contract.
 TST-015 segue pendente. Lote proposto: verificar pathname correto e ordem de carga, preservar assertions semânticas de tema e outras assertions que já cobrem Landing/Viewer, chamar o teste no workflow adequado e executar no SHA exato. Igualdade de query version só deve permanecer se for confirmada como contrato de release.
 
 Os cinco checks técnicos de máscara, pixels e stone também não são invocados por `candidate-assets.yml`. O workflow já acorda para `app/**`, `review-assets/**`, `tools/**` e `tests/**`; um passo agregado seria simples, porém herdaria esses triggers amplos. A decisão de wiring continua aberta para evitar nova branch/workflow sem comparar custo real, e qualquer CI verde mantém `semanticReview=PENDING` e `status=REVIEW`.
+## Atualização live pós-#281 — 18/11/2026 (BRT)
+
+Esta atualização acrescenta evidência de uma PR Draft; não muda a baseline histórica `main46`, as contagens de base ou qualquer estado semântico do runtime.
+
+### TST-015 — contrato de tema
+
+A PR Product [#281](https://github.com/EAKerber/MobiliPresenter2D/pull/281), head `b0119376bbeb08ec98e07abce9c3c3194376e7ec`, corrige a comparação incidental de query versions, exige atributos reais `src`/`href` e folha `rel="stylesheet"`, preserva ordem de carregamento e valida as oito páginas HTML que carregam o tema, inclusive a confirmação pública de acesso. Mantém os testes VM de modo automático, preferências explícitas, persistência, mudança do sistema e variante de logo; o contrato da ilustração agora corresponde ao frame normalizado atual. O script foi ligado ao `app/npm test`.
+
+No SHA exato, App build purity, Current variant fidelity, Current asset gates, Mobile browser, Summary pricing browser e Stone browser passaram; o Deploy Preview passou. O gate de tema verifica código e estado VM, mas não mede o alvo de toque no navegador nem exercita foco, duplicação e posição em todos os shells reais. **TST-015 continua `in_progress`**, não concluído.
+
+### Máscaras e custo de CI
+
+No mesmo head, `tests.test_mask_semantics` e `tests/validate-exposed-side-pixels.py` passaram no workflow existente `candidate-assets.yml`. O passo roda depois do upload do artefato para preservar a evidência anterior e agrega os dois resultados sem pular o segundo check se o primeiro falhar. Nenhum workflow novo foi criado. O artefato atual tem 49.335.991 bytes; os filtros amplos `app/**` e `tests/**` fazem mudanças do lote repetirem toda a suíte de assets. Registrar esse custo real no MD-004, sem concluir redundância só pela repetição.
+
+### Stone tests — fonte atual versus outputs pendentes
+
+Os testes `test_stone_backing`, `test_stone_cleanplate` e `test_stone_surface_masks` não foram ligados ao workflow. Seus checks de origem estão pinados em `d324eb0`; a main incorpora mudanças de fonte da PR #35, incluindo composição/bridges, overlays e camadas. A PR #35 sustenta a fonte atual como arte já corrigida, mas não aprova os novos derivados de stone backing, cleanplate e surface masks. Os metadados derivados continuam `status=REVIEW`, `semanticReview=PENDING` ou `runtimePromoted=false`. É necessário regenerar os outputs e revisar as diferenças visuais; alterar hashes isoladamente poderia converter drift em falso aceite. Nenhum hash, golden ou estado semântico foi atualizado neste lote.
+
+
 ## Parecer Common Sense Judge
 
 **Não há base para remover um teste ou workflow inteiro.** A leitura encontrou reexecuções do mesmo arquivo/comando em workflows distintos e alguns trechos de assertions repetidos, mas cada integração/commit ainda precisa receber sua própria execução e status. Nos pares de assertions, os testes mantêm garantias exclusivas; a sobreposição serve para avaliar eventual compartilhamento de implementação, não para concluir redundância. Os oito arquivos sem chamada localizada têm parecer individual abaixo; sua classificação técnica não substitui a decisão do owner.
