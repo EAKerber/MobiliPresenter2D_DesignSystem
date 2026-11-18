@@ -9,6 +9,22 @@
 **Reconciliação pós-#275:** a baseline acima permanece pinada em main46. Um recorte independente e não executado de configuração publicada, API, leitor buyer e workflows foi documentado em [matriz ARC-15 main64](ARC15_ASSERTION_MATRIX_PUBLISHED_CONFIG_2026-11-16.md). Esse incremento não atualiza a contagem nem a matriz integral dos 21 workflows/21 comandos.
 **Incremento de triagem — gate de teclado pós-#277 (16/11/2026):** a PR #269 levou à revisão da falha de Tab em `/config/`. Antes da instrumentação, a asserção e o código do Configurador eram iguais na `main` e na candidata; o CSS da PR atua apenas no header público. O gate usa V5 loopback derivado dos defaults, com checkbox do primeiro módulo habilitado. A falha em `6651342` ocorreu uma vez e o rerun do mesmo SHA passou. No head `8c77350b`, 12/12 Actions passaram após o teste confirmar o foco inicial e manter a expectativa original de Tab para o botão de inspeção. Classificação provisória: falha intermitente/diagnóstico insuficiente do gate, sem evidência de regressão funcional. Este caso é evidência de PR, não altera a matriz de assertions pinada em main46 nem a contagem dos 21 comandos/workflows.
 
+
+## Addendum live — 18/11/2026 (BRT)
+
+Esta atualização não altera a baseline histórica `main46` nem as contagens dos 21 workflows/21 comandos.
+
+### Replay de vidro
+
+A antiga pendência de corrigir a rota/fixture já foi atendida na PR #280, ainda Draft, head `bf685e22338597f47d240c616473085d86a22cb8`. O replay abre o Configurador `/config/` em loopback local; o Mobile Browser #802 passou 256 estados, conferiu quatro capturas e registrou zero erros. Os seis workflows associados ao head passaram. TST-007 continua `in_review`; GIT-017 continua aguardando integração e readback pós-merge. A faceta vertical translúcida no caso `module-05-off` fica como observação visual, sem baseline que a classifique como regressão ou aprovação estética.
+
+### Contrato de tema e cobertura
+
+A leitura estática de Product `main@efc40584` confirmou que `ui-theme-contract.cjs` exige os mesmos query versions de JS e CSS em todos os shells, embora Viewer use `viewer-nav005-p1` no JS e Config/Admin/Gerenciar acessos usem `private-header-nav005-v2` no CSS. Esses valores parecem cache-busters por shell; o teste ainda não foi executado e não há requisito demonstrado de igualdade de versão. Além disso, `tests/ui-theme-contract.cjs` não é invocado pelo `app/npm test`, apesar do workflow `candidate-assets.yml` ter triggers amplos.
+
+TST-015 segue pendente. Lote proposto: verificar pathname correto e ordem de carga, preservar assertions semânticas de tema e outras assertions que já cobrem Landing/Viewer, chamar o teste no workflow adequado e executar no SHA exato. Igualdade de query version só deve permanecer se for confirmada como contrato de release.
+
+Os cinco checks técnicos de máscara, pixels e stone também não são invocados por `candidate-assets.yml`. O workflow já acorda para `app/**`, `review-assets/**`, `tools/**` e `tests/**`; um passo agregado seria simples, porém herdaria esses triggers amplos. A decisão de wiring continua aberta para evitar nova branch/workflow sem comparar custo real, e qualquer CI verde mantém `semanticReview=PENDING` e `status=REVIEW`.
 ## Parecer Common Sense Judge
 
 **Não há base para remover um teste ou workflow inteiro.** A leitura encontrou reexecuções do mesmo arquivo/comando em workflows distintos e alguns trechos de assertions repetidos, mas cada integração/commit ainda precisa receber sua própria execução e status. Nos pares de assertions, os testes mantêm garantias exclusivas; a sobreposição serve para avaliar eventual compartilhamento de implementação, não para concluir redundância. Os oito arquivos sem chamada localizada têm parecer individual abaixo; sua classificação técnica não substitui a decisão do owner.
