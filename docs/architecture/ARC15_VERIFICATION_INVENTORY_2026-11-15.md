@@ -39,7 +39,27 @@ No SHA exato, App build purity, Current variant fidelity, Current asset gates, M
 
 No mesmo head, `tests.test_mask_semantics` e `tests/validate-exposed-side-pixels.py` passaram no workflow existente `candidate-assets.yml`. O passo roda depois do upload do artefato para preservar a evidência anterior e agrega os dois resultados sem pular o segundo check se o primeiro falhar. Nenhum workflow novo foi criado. O artefato atual tem 49.335.991 bytes. O filtro amplo faz o mesmo diff acordar workflows diferentes; isso é sobreposição de trigger, não prova de assertions redundantes.
 
-**MD-004 — recorte operacional observado em #280/#281 (sem alterar a baseline main46):** no SHA #280 `bf685e2`, Mobile browser (#44213833429) e Current asset gates (#44213833512) passaram dentro de seis workflows aprovados. No SHA #281 `7f107b2`, os jobs equivalentes (#44425086708 e #44425086716) também passaram; seis workflows e o Deploy Preview passaram. Ambos os workflows compartilham trigger para mudanças em `app/**`, mas cobrem camadas distintas: Mobile browser executa PiP/interações, geometria e, no alvo loopback local, o contrato de tema; Current asset gates executa unitários de assets, `app/npm test`, renderização/validadores de variantes e proveniência, além de máscara semântica/pixels laterais depois de preservar o artefato. O job de assets inclui unitários focais e `npm test`; não há evidência suficiente aqui para classificar assertions internas como redundantes. A duração em minutos permanece `UNKNOWN`: os dados de jobs disponíveis mostram passos/conclusões, sem tempos. Tamanho do artefato não é proxy de duração. Próximo critério MD-004: medir duração quando a fonte expuser timestamps, mapear dependências de cada path antes de estreitar triggers e preservar garantias distintas. Não remover teste por contagem.
+**MD-004 — recorte operacional observado em #280/#281 (sem alterar a baseline main46):** no SHA #280 `bf685e2`, Mobile browser (#44213833429) e Current asset gates (#44213833512) passaram dentro de seis workflows aprovados. No SHA #281 `7f107b2`, os jobs equivalentes (#44425086708 e #44425086716) também passaram; seis workflows e o Deploy Preview passaram. Ambos os workflows compartilham trigger para mudanças em `app/**`, mas cobrem camadas distintas: Mobile browser executa PiP/interações, geometria e, no alvo loopback local, o contrato de tema; Current asset gates executa unitários de assets, `app/npm test`, renderização/validadores de variantes e proveniência, além de máscara semântica/pixels laterais depois de preservar o artefato. O job de assets inclui unitários focais e `npm test`; não há evidência suficiente aqui para classificar assertions internas como redundantes. Tamanho do artefato não é proxy de duração.
+
+**Crosswalk parcial de fan-out (18/11):** `app/**` aciona seis workflows automáticos: app-build-purity, candidate-assets, mobile-browser, stone-browser, summary-pricing-browser e variant-fidelity. Três executam `app/npm test` (app-build-purity, candidate-assets e variant-fidelity); module02-fidelity também o executa, mas é manual. Candidate-assets e variant-fidelity compartilham derivação/renderização do manifesto de variantes; summary-pricing-browser também chama `test-core.js` diretamente. A sobreposição de execução não demonstra redundância: os seis mantêm garantias distintas e nenhum teste foi removido.
+
+**Amostra de duração — Product #269 candidato, não baseline:** no head `8701bf488e0434e98b10defa7473b22cef72238a`, os 12 workflows concluíram com sucesso. A janela por workflow foi calculada por `jobs.started_at`→`jobs.completed_at` do endpoint de jobs do GitHub, do primeiro job iniciado ao último concluído, arredondada a 0,1 minuto; a amostra contém 14 jobs, envelope de 2,6 min, mediana de 0,8 min por workflow e 11,6 job-min agregados. Inclui setup/checkout/install e não equivale a custo faturado. A tabela registra tempo de parede por workflow:
+
+| Workflow | Minutos |
+|---|---:|
+| [Public routing before Clerk](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069540) | 0.1 |
+| [App build purity](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069464) | 0.3 |
+| [Summary pricing browser](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069446) | 0.5 |
+| [Current variant fidelity](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069475) | 0.5 |
+| [NAV-005 public header browser](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069731) | 1.7 |
+| [Stone browser](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069581) | 0.7 |
+| [Mobile browser](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069572) | 0.9 |
+| [Current asset gates](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069559) | 0.8 |
+| [About skip-link destination focus](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069433) | 0.6 |
+| [VIS-002C P-TOKEN v0.3 product pin](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069872) | 1.4 |
+| [Flow layout browser](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069437) | 1.7 |
+| [Keyboard browser](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069577) | 2.5 |
+A duração da baseline Product `main@efc40584` continua `UNKNOWN`; esta amostra de uma branch candidata não a substitui. Próximo critério MD-004: completar o crosswalk por job, comando, fixture, assertion e contrato, e repetir a medição na baseline quando houver execução compatível; mapear dependências de cada path antes de estreitar triggers. Não remover teste por contagem.
 
 ### Stone tests — fonte atual versus outputs pendentes
 
