@@ -20,11 +20,11 @@ A antiga pendência de corrigir a rota/fixture já foi atendida na PR #280, aind
 
 ### Contrato de tema e cobertura
 
-A leitura estática de Product `main@efc40584` confirmou que `ui-theme-contract.cjs` exige os mesmos query versions de JS e CSS em todos os shells, embora Viewer use `viewer-nav005-p1` no JS e Config/Admin/Gerenciar acessos usem `private-header-nav005-v2` no CSS. Esses valores parecem cache-busters por shell; o teste ainda não foi executado e não há requisito demonstrado de igualdade de versão. Além disso, `tests/ui-theme-contract.cjs` não é invocado pelo `app/npm test`, apesar do workflow `candidate-assets.yml` ter triggers amplos.
+**Registro da triagem inicial, superado pela execução da #281:** na Product `main@efc40584`, `ui-theme-contract.cjs` comparava as query versions de JS/CSS como se fossem iguais em todos os shells, sem requisito demonstrado. O teste ainda não havia sido executado; a #281 corrigiu a expectativa para permitir versões por shell e ligou o contrato estático ao gate de navegador existente. A evidência atual está na seção “Atualização live pós-#281” abaixo.
 
-TST-015 segue pendente. Lote proposto: verificar pathname correto e ordem de carga, preservar assertions semânticas de tema e outras assertions que já cobrem Landing/Viewer, chamar o teste no workflow adequado e executar no SHA exato. Igualdade de query version só deve permanecer se for confirmada como contrato de release.
+**Registro superado pela #281:** naquele ponto da triagem, TST-015 ainda estava pendente e o lote proposto era corrigir pathname/ordem de carga, preservar assertions únicas, conectar o teste e executá-lo no SHA exato. Esse lote foi concluído na Product #281, head `7f107b2566b61410e6f38d6477e4873015346f00`; a prova e seus limites estão documentados na seção “Atualização live pós-#281” abaixo.
 
-Os cinco checks técnicos de máscara, pixels e stone também não são invocados por `candidate-assets.yml`. O workflow já acorda para `app/**`, `review-assets/**`, `tools/**` e `tests/**`; um passo agregado seria simples, porém herdaria esses triggers amplos. A decisão de wiring continua aberta para evitar nova branch/workflow sem comparar custo real, e qualquer CI verde mantém `semanticReview=PENDING` e `status=REVIEW`.
+**Estado revisado após a #281:** o workflow existente `candidate-assets.yml` agora executa os checks de máscara semântica e pixels laterais, depois de preservar o artefato. Os três testes de pedra continuam fora do CI até replay e revisão visual dos derivados após o drift de fonte. Não foi criado workflow adicional; os filtros amplos ainda repetem a suíte de assets e seu custo deverá entrar na medição MD-004. CI verde continua sem alterar `semanticReview=PENDING` ou `status=REVIEW`.
 ## Atualização live pós-#281 — 18/11/2026 (BRT)
 
 Esta atualização acrescenta evidência de uma PR Draft; não muda a baseline histórica `main46`, as contagens de base ou qualquer estado semântico do runtime.
