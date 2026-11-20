@@ -6,9 +6,12 @@
 
 ## Estado corrente dos ports de trigger — 20/11/2026 (BRT)
 
-- Product #286: head `4680ddca92ea4cbab0366994e306d3288a4f1151`, base `development`; 9/9 workflows únicos concluídos com sucesso. O Flow passou no rerun depois do primeiro cancelamento durante instalação do browser.
-- Product #287: head `083d83d53f66442148eff2b1817a315aa5e418c5`, base exata `main@dc066f55619824626ea4752ecc0bafc67f9d9110`; About/skip-link, smoke de Production read-only e VIS-002C passaram. Viewer base-price e ARC-03C continuam sem dispatch manual, portanto a PR fica Draft.
-- Os resultados não foram integrados. O smoke de Production é observação do deploy corrente, não prova do código da PR. Nenhum teste foi removido.
+- Product `main@dc066f55619824626ea4752ecc0bafc67f9d9110`; `development@acf12c4170401ceb822526a613d89657e26c6310`.
+- #286 foi integrada por squash em development depois de 9/9 gates únicos verdes no head `4680ddca`. O readback confirma o merge como ponta de development; a consulta de Actions não encontrou runs no SHA do merge. O pacote altera somente filtros YAML.
+- #287 permanece Draft no head `30db98d728fc2cd4c578c1081053d0bf7b8b3e47`, base exata `main@dc066f55`. Três gates automáticos passaram. A execução Viewer price nesse head ainda falta: o workflow agora fixa Ubuntu 24.04 após o run no SHA anterior falhar em Ubuntu 26.04, no passo Playwright.
+- ARC-03C no head #287 passou build/fonte e falhou somente na comparação de browser contra baseline histórica `303468b4`, em `/about/320/light`: header atual `rgb(34, 33, 31)`, esperado `rgb(0, 0, 0)`. #287 não altera páginas/CSS; nenhuma asserção ou baseline foi alterada.
+- #274 continua Draft sobre base anterior; tem 15/15 classificações técnicas LOC-002 e quatro gates verdes, mas owners/destinos continuam pendentes. Nenhuma classificação implica aprovação editorial.
+- Nenhum teste foi removido. Required checks e associação de resultado a deployment permanecem `UNKNOWN`.
 
 | Workflow | Evento e alcance do filtro | Job / comandos principais | Fixture e contrato/assertion principal | Leitura do gatilho |
 |---|---|---|---|---|

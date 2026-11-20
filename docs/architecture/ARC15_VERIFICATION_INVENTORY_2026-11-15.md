@@ -10,26 +10,18 @@
 **Incremento de triagem — gate de teclado pós-#277 (16/11/2026):** a PR #269 levou à revisão da falha de Tab em `/config/`. Antes da instrumentação, a asserção e o código do Configurador eram iguais na `main` e na candidata; o CSS da PR atua apenas no header público. O gate usa V5 loopback derivado dos defaults, com checkbox do primeiro módulo habilitado. A falha em `6651342` ocorreu uma vez e o rerun do mesmo SHA passou. No head `8c77350b`, 12/12 Actions passaram após o teste confirmar o foco inicial e manter a expectativa original de Tab para o botão de inspeção. Classificação provisória: falha intermitente/diagnóstico insuficiente do gate, sem evidência de regressão funcional. Este caso é evidência de PR, não altera a matriz de assertions pinada em main46 nem a contagem dos 21 comandos/workflows.
 
 
-## Addendum live — execução dos gates #287 e estado LOC-002 — 20/11/2026 (BRT)
+## Addendum live — execução e integração de gates — 20/11/2026 (BRT)
 
-Esta atualização não altera a baseline histórica `main46`, a matriz dos 21 workflows/21 comandos, nem assertions existentes.
+Esta atualização preserva a baseline histórica `main46`, a matriz dos 21 workflows/21 comandos e as assertions existentes.
 
-- Product #274 permanece Draft, head `6e0ca09ff7bb9c6255cf7bed2af7964304a3bcb2`, sobre `main@efc40584` anterior. LOC-002 tem classes técnicas 15/15; owners `null` e destinos `hold`; quatro gates de aplicação passaram no head exato. Sem rebase ou integração.
-- Product #287 está Draft no head `30db98d728fc2cd4c578c1081053d0bf7b8b3e47`, base `main@dc066f55`. Os três gates automáticos passaram.
-- Viewer price falhou na tentativa anterior por incompatibilidade entre Playwright 1.56.0 e o runner Ubuntu 26.04, antes de executar testes. O workflow fixa agora Ubuntu 24.04; o rerun no novo head está pendente.
-- ARC-03C passou build/fonte e falhou a comparação visual contra a baseline imutável `303468b4` na cor do header de `/about/320/light`. A PR não altera app/CSS; não há evidência de regressão causada pelo candidato. Nenhuma assertion/baseline foi afrouxada.
-- O dispatch não aparece na Actions UI porque a versão na default branch não declara `workflow_dispatch`; o run do ARC foi iniciado por um push de escopo restrito, que confirmou a divergência baseline→main.
-- A amostra de duração permanece ~15,7 job-min para 12 gates únicos; mais 18,28 min da tentativa Flow cancelada antes dos testes = ~34,0 job-min observados. Não é comparação direta com a baseline histórica de 7,12 job-min e não sustenta remoção de testes. Required checks `UNKNOWN`.
-
-## Addendum live — estado de MD-004 e higiene — 20/11/2026 (BRT)
-
-Este registro atualiza o andamento sem alterar a baseline histórica `main46` nem a contagem histórica dos 21 workflows/21 comandos.
-
-- Product #286 está no head `4680ddca92ea4cbab0366994e306d3288a4f1151` (base `development@205cc833`): nove workflows ajustados, 85 caminhos adicionados e dois globs substituídos por listas explícitas. Os 9/9 gates únicos passaram. O primeiro Flow foi cancelado na instalação do browser; o rerun concluiu instalação, layout hierárquico, paridade V3/V5 e breakpoints com sucesso. A PR permanece aberta e não integrada.
-- Product #287 está no head `083d83d53f66442148eff2b1817a315aa5e418c5`, baseado em `main@dc066f55619824626ea4752ecc0bafc67f9d9110`. Os gates automáticos de About/skip-link, smoke read-only de Production e VIS-002C passaram. O teste de Production lê o deploy corrente e não valida o código candidato. Viewer base-price e ARC-03C exigem dispatch manual e ainda não têm execução; a PR permanece Draft.
-- A PR #286 não qualifica a `main`; a #287 não qualifica por completo até as duas execuções manuais. As alterações dos workflows mantêm jobs/assertions e não removem testes.
-- Inventário remoto observado: 13 branches e nove PRs abertas no Product; duas refs adicionais além de `main`/`development` e das nove heads abertas não aparecem ligadas a PR aberta na busca. O soft cap 5 requer revisão, não exclusão automática. Nenhuma ref foi removida.
-- **Próxima ação MD-004:** terminar os dois dispatches de #287, documentar seus SHAs/resultados e medir duração no pin atual contra a amostra existente. Não converter sucesso de workflow em check obrigatório ou prova de deployment.
+- Product `main@dc066f55`; `development@acf12c4170401ceb822526a613d89657e26c6310`. A PR #286 foi integrada em development por squash depois de 9/9 workflows únicos aprovados no head `4680ddca`. O readback confirma a ponta da branch; não há Actions run no SHA do merge, pois as mudanças são filtros de workflows.
+- Product #287 segue Draft no head `30db98d728fc2cd4c578c1081053d0bf7b8b3e47`, baseado na main atual. Os três gates automáticos passaram.
+- O Viewer price permanece sem resultado no head atual. O run anterior em Ubuntu 26.04 falhou dentro do passo Playwright; o workflow candidato agora fixa Ubuntu 24.04. A execução corrigida ainda não foi disparada.
+- ARC-03C passou build/fonte e falhou comparação de browser em `/about/320/light`: header atual `rgb(34, 33, 31)` contra baseline `303468b4` com `rgb(0, 0, 0)`. A PR não altera app/CSS; nenhuma assertion ou baseline foi afrouxada.
+- Product #274 segue Draft, head `6e0ca09f`, base antiga `efc40584`; 15/15 classificações técnicas LOC-002, todos os owners `null` e destinos `hold`; quatro gates passaram no head citado.
+- A amostra #286/#287 permanece ~15,7 job-min executados para 12 gates únicos, mais 18,28 min do Flow cancelado antes dos testes. É uma amostra não equivalente à baseline de 7,12 min e não sustenta remoção de testes. Required checks `UNKNOWN`.
+- O Product tem 13 refs observadas, acima do soft cap 5; nenhuma ref foi excluída por contagem. A lista de branches deve ser reavaliada com preservação de proveniência.
+- Próximo passo: concluir o run corrigido do Viewer e manter ARC-03C como divergência de baseline a reconciliar.
 
 ## Addendum live — 18/11/2026 (BRT)
 
