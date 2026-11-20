@@ -5,7 +5,7 @@
 - Pins atuais: Product `main@29e824e2f6c44af9c8f04fd9966ec3190f3637b8`; Product `development@be743fd98063b19be5ee0614add21b8c85fb4a85`.
 - Product main agora contém 22 arquivos de workflow. A matriz detalhada de 21 workflows/21 comandos abaixo continua sendo a baseline histórica pinada em `main46`; não deve ser lida como contagem atual.
 - A #279 foi integrada por squash em `main` e acrescentou somente `.github/workflows/development-ux04-geometry.yml`, blob `96703ca3ae3c195153f10742134dca7aa69b0faf`. O workflow já existe em `development@be743fd` com o mesmo blob e seus arquivos de teste/build estão presentes.
-- O workflow usa `workflow_dispatch`, `contents: read`, V5 local e Playwright; não pede secrets nem serviço hospedado. O dispatch ainda não ocorreu. A automação do navegador do ChatGPT/DevTools retornou `Transport closed`; portanto não existe run nem artefato a registrar.
+- O workflow usa `workflow_dispatch`, `contents: read`, V5 local e Playwright; não pede secrets nem serviço hospedado. Há uma execução histórica bem-sucedida (#41344513485, push em 2026-11-01, SHA `c7c2822d5b651ae0bcfcf0ac28c66cb61b645e98`, os dois jobs verdes), mas seus artefatos já não estão listados. Ela não valida `development@be743fd` — 11 commits e 44 arquivos depois, incluindo nove em `app/`; não há run no SHA atual. O dispatch do SHA atual segue pendente; a automação do navegador/DevTools retorna `Transport closed`.
 - Quando o dispatch for possível, selecionar `ref=development`, reler e confirmar o SHA de `development` imediatamente antes, e guardar o run e os artefatos. Esta entrada não altera a baseline histórica nem redefine required checks.
 
 
