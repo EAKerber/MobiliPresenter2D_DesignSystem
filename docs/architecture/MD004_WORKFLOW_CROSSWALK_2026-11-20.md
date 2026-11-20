@@ -1,10 +1,19 @@
-# MD-004 — crosswalk dos 21 workflows do Produto
+# MD-004 — crosswalk de workflows do Produto (baseline de 21)
 
-**Pin lido:** Product `main@dc066f55619824626ea4752ecc0bafc67f9d9110` (20/11/2026 BRT).  
+**Pin da baseline histórica (21 workflows):** Product `main@dc066f55619824626ea4752ecc0bafc67f9d9110` (20/11/2026 BRT).  
 **Método:** leitura estática de eventos e filtros, jobs, comandos, imports/fixtures e assertions chamadas. O crosswalk descreve o contrato pretendido do gate; não transforma um run verde em confirmação de check obrigatório, deploy no mesmo SHA ou comportamento hospedado.  
 **Execuções:** esta leitura não dispara workflows. Os resultados listados abaixo são execuções separadas nos heads candidatos de #286 e #287; não definem required checks nem provam deployment.
 
-## Estado corrente dos ports de trigger — 20/11/2026 (BRT)
+## Delta live após a #279 — 20/11/2026
+
+- Pins atuais: Product `main@29e824e2f6c44af9c8f04fd9966ec3190f3637b8`; `development@be743fd98063b19be5ee0614add21b8c85fb4a85`. A branch principal contém 22 workflows; a tabela dos 21 itens abaixo é a baseline histórica pinada em `main@dc066f55`.
+- A #279 foi integrada em `main` como o 22º workflow: `.github/workflows/development-ux04-geometry.yml`, blob `96703ca3ae3c195153f10742134dca7aa69b0faf`. O workflow também está em `development@be743fd` com o mesmo blob e os arquivos necessários ao gate.
+- **Evento e proteção:** `workflow_dispatch` e `push` apenas em `development` nos caminhos declarados; `permissions: contents: read`; sem secrets, serviços externos ou runtime do Produto.
+- **Jobs:** arquivo/autoridade/testes estáticos (`unittest`, flow layout/model, hierarchy e `pages:check`); depois browser V5 local com geometria UX-04 e regressão completa de teclado Chromium. Os artefatos são dois JSONs, retidos por 14 dias.
+- **Estado:** a execução histórica `41344513485` passou nos dois jobs em 2026-11-01 por `push` no SHA antigo `c7c2822d5b651ae0bcfcf0ac28c66cb61b645e98`; os artefatos não estão mais listados. Não há run no SHA atual `development@be743fd` (11 commits/44 arquivos depois, nove em `app/`). Portanto, esse sucesso histórico não fecha o gate no estado atual. O novo dispatch continua pendente; a automação do navegador retorna `Transport closed`. Revalidar o SHA live imediatamente antes de executar.
+- Nenhum teste foi removido. O delta não altera a baseline histórica dos 21 workflows nem define required checks.
+
+## Snapshot histórico dos ports de trigger — 20/11/2026, antes das integrações #278–#280
 
 - Product `main@dc066f55619824626ea4752ecc0bafc67f9d9110`; `development@acf12c4170401ceb822526a613d89657e26c6310`.
 - #286 foi integrada por squash em development depois de 9/9 gates únicos verdes no head `4680ddca`. O readback confirma o merge como ponta de development; a consulta de Actions não encontrou runs no SHA do merge. O pacote altera somente filtros YAML.
@@ -37,9 +46,11 @@
 | `stone-browser.yml` | PR, push em `main`, dispatch; `app/**`, teste e helpers. | `test-runtime-contracts.js`, fixture V5, `stone-browser.cjs`; Chromium. | Estado legado reparado, toggle pedra/MDF/rodapé, canvas/pixels e ocultação dos hosts. | Helper usa build/pages-check; #286 adiciona `package.json` e compilador ao filtro. |
 | `summary-pricing-browser.yml` | PR, push em `main`, dispatch; `app/**`, teste e helpers. | Guards de ownership, `test-core.js`, fixture V5 e `summary-pricing-browser.cjs`; Chromium. | Totais persistidos, subtotal, cobrança global única, remoção/ativação do rodapé e preço da pedra sincronizados. | Helper usa build/pages-check; #286 adiciona `package.json` e compilador ao filtro. |
 
+| `development-ux04-geometry.yml` | `push` apenas em `development` com filtros de arquivo; `workflow_dispatch`. | Unit tests de autoridade, flow/model/hierarchy, `pages:check`; depois build Buyer V5 local, Playwright geometry/focus e keyboard browser. | Fixture V5 local e browser Chromium; publica dois JSONs de resultado com retenção de 14 dias. | Delta live: 22º workflow em `main` após #279. Histórico: run `41344513485` passou em `c7c2822` (2026-11-01); artefatos não estão mais listados. Sem run no `development@be743fd` atual; repetir no SHA live. |
+
 ## Síntese
 
-- **21/21 workflows** têm agora um crosswalk compacto de evento/path → job/comando → fixture → garantia/contrato e disposição de trigger.
+- **21/21 workflows da baseline** têm crosswalk compacto de evento/path → job/comando → fixture → garantia/contrato e disposição de trigger. O novo 22º workflow está documentado separadamente como delta live.
 - **Sem conclusão de redundância por contagem.** Preparadores e comandos repetidos são infraestrutura compartilhada ou testes em camadas diferentes; nenhum teste foi removido.
 - **#286:** integrado por squash em `development@acf12c41` após 9/9 gates verdes no head da PR; não houve run de Actions no SHA de merge. **#287:** quatro gates verdes no head atual `26a2da33`; ARC-03C tem diagnóstico de baseline no head pai `30db98d7` e não faz parte da diff final.
 - #287 remove os triggers temporários e adiciona o Viewer PR gate para `main`; o fluxo ARC-03C permanece inalterado/dormente neste pacote. P-COMP e UX/auth seguem dormentes. Duração comparável e required checks seguem UNKNOWN.
