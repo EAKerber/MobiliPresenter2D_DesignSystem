@@ -51,10 +51,13 @@ A revisão estática encontrou uma lacuna concreta: `keyboard-browser.yml` não 
 
 **Estado:** o crosswalk corrente de 21 workflows está concluído no relatório [MD-004 workflow crosswalk — 20/11](architecture/MD004_WORKFLOW_CROSSWALK_2026-11-20.md). A auditoria de filtros também foi refeita contra a main `dc066f55`; oito correções mínimas estão prontas na PR #286 e ainda não foram integradas. MD-004 permanece `in_progress` para fechar as discrepâncias remanescentes identificadas no relatório e obter uma medição de duração comparável no pin atual. Nenhum teste foi removido.
 
+**Compatibilidade da base-alvo:** Product `development@205cc833` e `main@dc066f55` divergem. A comparação atual retorna merge-base `221b54b2`, 436 commits únicos à frente em development e sete commits de main que não estão em development; esse número inclui história não linear/squash e não equivale a 436 mudanças funcionais. A comparação por arquivo também mostra versões diferentes de alguns workflows e muitos artefatos históricos em development. Assim, os oito gates verdes da #286 qualificam apenas a base development. Não promovê-la como prova para main; uma portagem futura precisa comparar novamente com main e validar o head-alvo.
+
+
 ### Frentes restantes e próxima sequência
 
 - **LOC-002:** manter os 15 owners/destinos em `null`/`hold`. A revisão técnica não identifica quem responde pelo conteúdo, e inventar owners ou wording seria uma decisão editorial sem base. Se surgir um owner ou fonte factual, esse é um ponto para pergunta objetiva; a classificação e revisão assistiva podem continuar em paralelo.
-- **MD-004:** além da correção de CSS do Keyboard, o filtro amplo `tests/**` do `candidate-assets` foi trocado pelos oito módulos que o job executa, com gates aprovados em development e main. Completar o crosswalk dos 21 workflows/comandos e revisar os pares trigger→invocação restantes; não há base para remover testes.
+- **MD-004:** crosswalk 21/21 documentado. A #286 contém oito correções de gatilho verificadas apenas na base `development`; não prova promoção para `main`. Próxima fatia: gaps de build do skip-link, projeção pública, dados do contrato de preço e build do pin VIS-002C; revalidar cada base separadamente e manter intocados os gates presos a branches históricas até confirmar sua vigência.
 - **G2 / DS-05A e derivados de pedra:** preservados em HOLD enquanto faltarem configuração hospedada válida e a capacidade de replay por Pillow/DNS; não regravar hashes nem baselines.
 - **GIT-014 / integração:** concluída para o pacote documental da PR #119, com readback e retirada da branch. Para cada pacote seguinte, preservar PR, gate, preview e readback como estados separados.
 
