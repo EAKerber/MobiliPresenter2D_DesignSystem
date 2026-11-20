@@ -1,3 +1,22 @@
+## Ponteiro operacional live — 20/11/2026, após as integrações de baixo acoplamento
+
+**Pins lidos:** Product `main@29e824e2f6c44af9c8f04fd9966ec3190f3637b8`, Product `development@be743fd98063b19be5ee0614add21b8c85fb4a85`, Design System `main@b0fe6ce3440f59110a6459fa42ca131dc36020f3`.
+
+- Product `dc066f55` → `29e824e2` acrescentou somente cinco arquivos de workflow/teste: integrações squash #280 (`48f2326a`), #278 (`c1d45167`) e #279 (`29e824e2`). Nenhum arquivo de runtime do Produto mudou. O Mobile browser pós-merge da #278 passou em `44830835697`.
+- **#279 / UX-04:** o workflow manual está em `main`; `development@be743fd` contém o mesmo blob `96703ca3ae3c195153f10742134dca7aa69b0faf` e os arquivos chamados pelo gate. O dispatch ainda não ocorreu. A automação do navegador do ChatGPT e Chrome DevTools retornou `Transport closed`; não há resultado de execução a registrar. No dispatch, selecionar `ref=development`, reler o SHA live imediatamente antes e preservar o run/artefatos.
+- **#269 / NAV-005:** head `64cb6928fea347534ea03f7927b50f39ec30fc1e`, zero atrás da main atual, 19 caminhos. Os 12 workflows e o Deploy Preview passaram. Continua Draft até revisão visual do Preview nesse head.
+- **#271 / DS-04:** head `853b68c6f6ee531b27a0408e26a651f175a00eb7`, Preview success e dez gates reportados no head anterior. Está três commits atrás da main atual; a revisão hospedada autenticada do Admin não foi repetida no head corrente. Não promover a medição CSSOM local sintética como prova visual.
+- **#274 / ARC-13–LOC-002:** Draft no head `82cca3b5b5b9cdc91c84f7dc50167c965bd231a7`, 48 caminhos e cerca de 113 mil linhas adicionadas no compare anterior. O inventário tem 1.026 ocorrências candidatas a strings, não 1.026 testes. LOC-002 classifica 15 sinks com destino `catalog`; apenas “Saiba mais” está completo. Os outros 14 aguardam owner e decisões semânticas/editoriais/assistivas. Quatro gates e o Preview passaram no head; a main avançou três commits desde a base. Manter Draft e não inferir aprovação dos itens pendentes.
+- **#281 / tema e máscaras:** Draft no head `173cb426f623abd7010117f148a0e12ea1edab82`; seis gates e Preview passaram no head anterior. Está três commits atrás e toca `.github/workflows/mobile-browser.yml`, alterado desde então. Revisão hospedada autenticada dos shells privados ainda não foi comprovada; reconciliar o workflow com cuidado e repetir o bundle antes de promoção.
+- Product tem 13 refs: 4 branches de PRs abertas, `main`/`development` e 7 branches de PRs integradas ainda preservadas. Isto excede o soft cap 5 e pede triagem, mas não autoriza apagar refs; nenhuma foi removida. Design System tem 2 refs e nenhum PR aberto.
+- A branch DS `docs/md004-ds05a-paired-evidence-20261120` (`64673787`) tinha árvore byte-equivalente à main `b0fe6ce` antes desta atualização do handover; não havia diff de conteúdo próprio nem PR aberta.
+- O recibo DS-05A de `.module-number` continua candidato local: dados sintéticos, checkout medido `efc40584`, seis estados, sem revisão hospedada autenticada e sem capturas do tema escuro. Não comprova estado visual/contraste no Product live; manter HOLD para promoção.
+- O arquivo baixado em Downloads chamado Plano v0.9 e a cópia do Design System não são idênticos. A cópia da main preserva uma emenda operacional 5.5 sobre `development` como buffer, promoção seletiva e limites de publicação, mais uma nota curta no capítulo VIII. Nenhuma cópia foi sobrescrita.
+
+**Próxima ordem:** (1) dispatch UX-04 quando a interface do navegador estiver acessível; (2) revisar visualmente o Preview atual de #269, então decidir sua promoção; (3) reconciliar e revalidar #271/#281; (4) manter #274 isolada até resolver as responsabilidades e reduzir/reconciliar o pacote; (5) retomar DS-05A somente em checkout/runtime canônico, preservando a distinção entre candidato medido, aprovação visual e integração.
+
+---
+
 # HANDOVER CANÔNICO — MobiliPresenter2D Design System
 
 **Snapshot histórico:** 26/10/2026, fuso `America/Sao_Paulo`.  
