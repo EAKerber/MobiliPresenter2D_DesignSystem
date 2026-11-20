@@ -10,6 +10,19 @@
 **Incremento de triagem — gate de teclado pós-#277 (16/11/2026):** a PR #269 levou à revisão da falha de Tab em `/config/`. Antes da instrumentação, a asserção e o código do Configurador eram iguais na `main` e na candidata; o CSS da PR atua apenas no header público. O gate usa V5 loopback derivado dos defaults, com checkbox do primeiro módulo habilitado. A falha em `6651342` ocorreu uma vez e o rerun do mesmo SHA passou. No head `8c77350b`, 12/12 Actions passaram após o teste confirmar o foco inicial e manter a expectativa original de Tab para o botão de inspeção. Classificação provisória: falha intermitente/diagnóstico insuficiente do gate, sem evidência de regressão funcional. Este caso é evidência de PR, não altera a matriz de assertions pinada em main46 nem a contagem dos 21 comandos/workflows.
 
 
+## Addendum live — execução e integração de gates — 20/11/2026 (BRT)
+
+Esta atualização preserva a baseline histórica `main46`, a matriz dos 21 workflows/21 comandos e as assertions existentes.
+
+- Product `main@dc066f55`; `development@acf12c4170401ceb822526a613d89657e26c6310`. A PR #286 foi integrada em development por squash depois de 9/9 workflows únicos aprovados no head `4680ddca`. O readback confirma a ponta da branch; não há Actions run no SHA do merge, pois as mudanças são filtros de workflows.
+- Product #287 segue Draft no head `a92404e484ebfe852695b2cb716602fecccd45ae`, baseado na main atual. Três gates automáticos e Viewer price passaram; o run `44803712089` concluiu testes Node, build e Playwright em Ubuntu 24.04. Preview está READY.
+- O Viewer price passou no head atual depois que o workflow fixou Ubuntu 24.04; o run exato executou Playwright cross-engine.
+- ARC-03C foi executado no head pai `30db98d7`: build/fonte passaram e a comparação de browser divergiu da baseline `303468b4` em `/about/320/light` (`rgb(34, 33, 31)` atual vs. `rgb(0, 0, 0)`). O delta até `a92404e4` é só o filtro do workflow Viewer; app/CSS não mudaram. Nenhuma assertion ou baseline foi afrouxada.
+- Product #274 segue Draft, head `6e0ca09f`, base antiga `efc40584`; 15/15 classificações técnicas LOC-002, todos os owners `null` e destinos `hold`; quatro gates passaram no head citado.
+- A amostra #286/#287 permanece ~15,7 job-min executados para 12 gates únicos, mais 18,28 min do Flow cancelado antes dos testes. É uma amostra não equivalente à baseline de 7,12 min e não sustenta remoção de testes. Required checks `UNKNOWN`.
+- O Product tem 13 refs observadas, acima do soft cap 5; nenhuma ref foi excluída por contagem. A lista de branches deve ser reavaliada com preservação de proveniência.
+- Próximo passo: reconciliar a baseline histórica do ARC-03C sem enfraquecer assertions e retirar os triggers temporários de branch antes de qualquer integração de #287.
+
 ## Addendum live — 18/11/2026 (BRT)
 
 Esta atualização não altera a baseline histórica `main46` nem as contagens dos 21 workflows/21 comandos.
@@ -369,3 +382,13 @@ A revisão dos oito módulos confirmou a lista completa do comando, sem imports 
 A PR [#284](https://github.com/EAKerber/MobiliPresenter2D/pull/284) passou no gate [Current asset gates](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44773413014) no head `7a4be85c87c78bc854710ded9e4476abd76ebb67` e integrou por squash na development `205cc83363e3ace1a0ba7d8b2b44c96c62e1d857`. A promoção seletiva [#285](https://github.com/EAKerber/MobiliPresenter2D/pull/285) passou no head `a65206834488be570a5d2e137c6e0581995ba5b5`; depois do merge, o gate [Current asset gates](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44774445854) e o [plan](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44774445852) passaram na main `dc066f55619824626ea4752ecc0bafc67f9d9110`. O check externo “Supabase Preview” aparecia `in_progress` no readback; não houve mudança Supabase, e esse estado não foi contado como evidência nem como falha.
 
 **Estado:** este recorte resolve uma discrepância trigger→invocação e preserva o custo/garantia dos comandos. MD-004 continua em andamento até concluir o crosswalk integral e revisar os outros gatilhos.
+
+## Addendum live — auditoria e crosswalk MD-004 — 20/11/2026 (BRT)
+
+A baseline histórica de 21 workflows/21 comandos segue pinada em `main46`. A auditoria live de triggers compara Product `main@dc066f55619824626ea4752ecc0bafc67f9d9110` e `development@205cc83363e3ace1a0ba7d8b2b44c96c62e1d857`; o crosswalk evento → job → comando → fixture → assertion → contrato está em [MD004_WORKFLOW_CROSSWALK_2026-11-20.md](MD004_WORKFLOW_CROSSWALK_2026-11-20.md). Required checks continuam `UNKNOWN`.
+
+A PR [#286](https://github.com/EAKerber/MobiliPresenter2D/pull/286) segue aberta e sem integração, agora no head `4680ddca92ea4cbab0366994e306d3288a4f1151`, base `development`: nove workflows YAML, 85 inclusões de caminhos e dois globs amplos substituídos. Oito dos nove gates únicos passaram no último readback; Flow layout (`44789052605`) continuava na instalação de tooling de browser, sem falha registrada. A PR não qualifica `main`.
+
+As duas precisões adicionadas ao lote não removem testes: o filtro de roteamento usa três testes no evento PR e dois no push; o filtro de PR de higiene geral lista os três scripts Python compilados pelo job. Nenhum evento histórico foi reativado e nenhum teste foi removido.
+
+**Estado:** crosswalk 21/21 concluído documentalmente; MD-004 permanece em andamento para o port seletivo das lacunas remanescentes à `main` — build do skip-link, dependência da projeção no smoke, fontes de preço/catálogo/cena e build do pin VIS-002C — e para uma medição de duração comparável ao pin atual. P-COMP e UX/auth continuam dormentes; ARC03C permanece dispatch-only porque as branches antigas não existem. A revisão dos overlaps não encontrou base para remover testes.
