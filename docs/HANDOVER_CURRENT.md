@@ -4,13 +4,13 @@
 **Destino:** recuperação histórica do trabalho daquele checkpoint.  
 **Prioridade registrada em 26/10:** estabilizar/reconciliar branches do Design System e não editar o produto até nova orientação. Essa restrição foi superada pela instrução explícita deste chat para continuar o plano de arquitetura nos dois repositórios.  
 
-## Ponteiro operacional — 19/11/2026 (BRT)
+## Ponteiro operacional — 20/11/2026 (BRT)
 
-- Product `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9`; #274 continua Draft no head `a9c39c8220bcbccefea4cf74e666445d35ccf1d9`. Buyer boundary, ARC-13 determinism/provenance, asset gates, foco do skip link e Deploy Preview passaram neste head. Nenhuma alteração foi integrada à `main`.
-- Design System `main@79db735d6f05177b0c406e383d35832f3d72fdef`; #119 continua aberta e Draft na branch `docs/architecture-status-20261109`. Esta retomada acrescenta o recibo GIT-018 e atualiza este ponteiro. O check documental do head corrente da PR é a referência executável; consultar a seção Checks antes de considerar o preflight validado.
+- Product `main@803c32f7c0d4a7ba86367d6290f740747b667340` contém a promoção seletiva da correção de gatilho do browser de teclado pela PR #283. A mudança toca somente `.github/workflows/keyboard-browser.yml`; o browser passou na PR e novamente após o merge. #274 continua Draft em `a9c39c8220bcbccefea4cf74e666445d35ccf1d9`; seus gates foram executados antes dessa atualização de base. Revalidar seu head contra a main corrente antes de qualquer integração; nenhum texto ou conteúdo foi aprovado por essa correção.
+- Design System `main` contém a integração por squash da PR #119 em `9f29e3fb8810b33bdda0904826b0e55fc7019506`. A PR está merged; o readback confirmou o handover, o plano v0.9 com baseline rotulada, o README, os 95 caminhos e o recibo GIT-018. A branch fonte `docs/architecture-status-20261109@12b954f86e5bfc29aa6d340193604dc470b78111` foi removida após preservação da proveniência na PR. O Design System mantém apenas a branch `main`.
 - Os blocos datados abaixo de 18/11 e anteriores permanecem snapshots históricos. Para o estado corrente, use este bloco e a continuidade de 19/11 abaixo.
 
-## Continuidade do plano v0.9 — 19/11/2026 (BRT)
+## Continuidade do plano v0.9 — 20/11/2026 (BRT)
 
 ### ARC-13 / DOM-001
 
@@ -24,14 +24,24 @@ Dos 245 destinos GitHub únicos, 244 foram resolvidos pelo conector; ele não ex
 
 O scanner original que produziu o total anterior não estava versionado nem identificado. O recibo registra a extração reproduzível, as linhas e URLs exatas, o método de cada consulta e os limites. A resolução local de links (244 destinos para 152 arquivos e um diretório) e das 15 âncoras permanece registrada no snapshot anterior; ainda não foi repetida nesta passagem.
 
-**Estado:** GIT-018 segue `in_progress`; não marcar a validação externa como total nem decidir integração. O diff da #119 passou a 95 caminhos (29 Markdown, 56 imagens, 7 dados, 2 scripts e 1 patch CSS), sem alterar runtime do Produto ou arquivos de aprovação.
+**Estado:** GIT-018 está concluído como pacote documental, integrado por squash na Design System `main` pela PR #119. A validação tem os limites acima — um artefato antigo não encontrado e três aliases de Preview sem status HTTP confirmado. O readback confirmou os 95 caminhos (29 Markdown, 56 imagens, 7 dados, 2 scripts e 1 patch CSS), sem runtime do Produto ou arquivos de aprovação.
+
+### MD-004 / baseline atual e correção de gatilho — 20/11/2026 (BRT)
+
+A amostra foi calculada sobre Product `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9`, antes da promoção deste pacote, em 19/11 (BRT): 12 execuções concluídas com sucesso, 11 workflows YAML distintos, 13 registros de job (12 executados e um pulado). Somente jobs executados entram nos 7,12 job-min. A duração de parede mediana por execução foi 0,46 min; o maior caso foi Flow layout browser, 2,33 min ([run #43799881708](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799881708)). Considerando apenas os 11 eventos de push, houve 11 YAMLs, 12 registros (11 executados e um pulado), 6,95 job-min e mediana de 0,55 min. Esta é uma observação pontual, não custo faturado nem medida de confiabilidade.
+
+Os cinco gates browser locais V5 tiveram um job cada nesta amostra: [Stone](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799881735) 0,55 min; [Summary pricing](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799881753) 0,60; [Mobile](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799881714) 0,67; [Keyboard](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799881895) 0,82; [Flow layout](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799881708) 2,33. A soma de tempo de job foi 4,97 min; seus contratos são distintos. Não há evidência para remover testes.
+
+A revisão estática encontrou uma lacuna concreta: `keyboard-browser.yml` não observava `app/styles.css` em nenhum dos dois filtros (`push` e `pull_request`), embora o browser meça limites de foco e estilos computados de controles e shells. A PR [#282](https://github.com/EAKerber/MobiliPresenter2D/pull/282) adicionou o caminho em ambos os filtros, passou no run [#44658895285](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44658895285) e foi integrada à `development` em `ba45522eb25f9624acc7f262dbfe82f06bd82af0`. A promoção seletiva independente [#283](https://github.com/EAKerber/MobiliPresenter2D/pull/283), baseada na main anterior `efc40584`, passou no run [#44659520682](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44659520682), foi integrada por squash em `803c32f7c0d4a7ba86367d6290f740747b667340`, e o gate pós-merge [#44659752678](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44659752678) passou. Não foram alterados runtime, assertions ou topologia de workflows.
+
+**Estado:** o subproblema de trigger para CSS do teclado está concluído; MD-004 permanece em andamento até fechar o crosswalk workflow → job → comando → fixture → assertion → contrato e revisar os outros gatilhos divergentes. Nenhum teste foi removido.
 
 ### Frentes restantes e próxima sequência
 
 - **LOC-002:** manter os 15 owners/destinos em `null`/`hold`. A revisão técnica não identifica quem responde pelo conteúdo, e inventar owners ou wording seria uma decisão editorial sem base. Se surgir um owner ou fonte factual, esse é um ponto para pergunta objetiva; a classificação e revisão assistiva podem continuar em paralelo.
-- **MD-004:** completar o crosswalk workflow → job → comando → fixture → assertion → contrato e medir a baseline comparável do Product `main`. A amostra da #269 não substitui a baseline nem demonstra que testes sejam redundantes.
+- **MD-004:** a baseline atual foi medida e a lacuna do filtro de CSS do Keyboard foi corrigida em main. Completar o crosswalk workflow → job → comando → fixture → assertion → contrato e rever os demais pares trigger→invocação.
 - **G2 / DS-05A e derivados de pedra:** preservados em HOLD enquanto faltarem configuração hospedada válida e a capacidade de replay por Pillow/DNS; não regravar hashes nem baselines.
-- **GIT-014 / integração:** o candidato documental está melhor provado, mas a integração/readback da `main` ainda não ocorreu. Concluir o preflight remanescente e manter as PRs Draft; não confundir gate, preview e integração.
+- **GIT-014 / integração:** concluída para o pacote documental da PR #119, com readback e retirada da branch. Para cada pacote seguinte, preservar PR, gate, preview e readback como estados separados.
 
 **Snapshot operacional preservado (18/11/2026, BRT):** Product `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9` e Design System `main@79db735d6f05177b0c406e383d35832f3d72fdef` continuam sem mudança. Product #269 está Draft em `8701bf488e0434e98b10defa7473b22cef72238a`; os 12 workflows de Actions passaram, incluindo o gate NAV-005 com integridade ARC-03C e 124 cenários de browser, e o Deploy Preview está READY. A #119 permanece Draft; seu último head validado antes deste handover era `7bab42bce4832a2cfab828759bad8aab1eb2466c`, com `plan` aprovado no run #44435258931. Esta atualização dispara nova execução documental. As sete PRs do Product seguem abertas contra `main`; nenhuma foi integrada nesta retomada.
 
@@ -45,7 +55,7 @@ O scanner original que produziu o total anterior não estava versionado nem iden
 | #280 | replay de vidro | Draft — `bf685e22338597f47d240c616473085d86a22cb8` |
 | #281 | tema e gates de assets | Draft — `7f107b2566b61410e6f38d6477e4873015346f00` |
 
-Os sete Deploy Previews estão em success/READY; os checks aplicáveis estão verdes, com resultados neutral/skipped conforme os workflows. O Product mantém 9 refs (sete PRs, `development` e `main`); o Design System mantém 2 (`main` e #119). A contagem não autoriza descartar PR ativa e não há órfãs identificadas.
+Os sete Deploy Previews estão em success/READY; os checks aplicáveis estão verdes, com resultados neutral/skipped conforme os workflows. O Product mantém 9 refs: sete branches ligadas a PRs abertas, `development` e `main`. As branches integradas das PRs #282 e #283 foram retiradas após readback. O Design System mantém 1 ref (`main`); a branch da #119 foi retirada após integração e preservação. O soft cap do Product segue como gatilho de revisão, não hard cap nem autorização para descartar PR ativa.
 
 
 ## Continuidade do plano v0.9 — 18/11/2026 (BRT)

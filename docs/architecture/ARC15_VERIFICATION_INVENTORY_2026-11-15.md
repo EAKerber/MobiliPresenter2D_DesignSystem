@@ -1,6 +1,6 @@
 # ARC-15 — Inventário de verificações do Produto
 
-**Estado:** primeira passada e parecer Common Sense Judge dos oito itens sem invocação localizada concluídos sobre a baseline Product main46; três overlaps adicionais classificados; quatro grupos de decisão do owner e matriz integral assertion→risco→rota/estado ainda pendentes.
+**Estado:** primeira passada e parecer Common Sense Judge dos oito itens sem invocação localizada concluídos sobre a baseline Product main46; três overlaps adicionais classificados. MD-004 tem agora uma amostra da main atual e uma lacuna concreta de trigger do Keyboard corrigida; o crosswalk integral assertion→risco→rota/estado e as demais discrepâncias continuam pendentes.
 **Fonte:** primeira passada em `EAKerber/MobiliPresenter2D` `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`; não representa o inventário pós-#275.
 **Revalidação live (16/11/2026):** Product `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9` foi conferida. Os oito artefatos revistos e `candidate-assets.yml` têm blobs idênticos entre essa main e `main46`, então os pareceres continuam aplicáveis sem mover a baseline histórica.
 **Método:** leitura dos contratos, comandos, gatilhos e áreas cobertas; classificação por risco/assertion/rota/estado, não por quantidade de arquivos.  
@@ -314,3 +314,28 @@ Histórico corretivo: o head `889a8068` passou, mas a quarta captura não corres
 Leitura manual do artefato #802: o manifesto e as quatro imagens concordam nos estados nomeados. Os sete IDs esperados aparecem no modelo; em cada captura, a seleção coincide com as camadas `.layer-group` visíveis e o vidro permanece renderizado. As quatro imagens são coerentes com `glass-all`, `glass-module-02-off`, `glass-module-05-off` e `glass-modules-02-05-on`. A terceira captura tem uma faceta vertical translúcida estreita junto à composição; sem comparação com baseline visual/pixel, fica registrada como observação para eventual revisão do renderer, não como regressão confirmada nem como aprovação estética.
 
 Limites e pendências: a fixture é V5 local, anônima e baseada nos defaults versionados; não valida configuração publicada, autenticação, Production ou pixels contra uma referência. A fixture permanece viva entre etapas do job; a auditoria confirmou que o runner descartável encerra o processo ao fim do job e não há evidência de vazamento entre jobs. Teardown explícito nos cinco workflows consumidores continua como melhoria de higiene de TST-006, que tem escopo mais amplo e permanece em andamento; isso não bloqueia TST-007. A PR #280 continua Draft até integração e readback conforme GIT-017. O head acionou seis workflows e todos passaram; essa observação alimenta a auditoria de triggers de TST-004/MD-004, sem por si só provar duplicação ou justificar remoção de gate.
+
+
+## Addendum live — 20/11/2026 (BRT)
+
+A contagem base de 21 workflows e 21 comandos continua sendo a baseline histórica `main46`; a medição operacional abaixo é uma amostra independente da Product `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9` coletada em 19/11 (BRT), antes da promoção da correção de trigger. Ela não atualiza o denominador histórico nem prova redundância.
+
+| Medida | Resultado observado |
+|---|---:|
+| Execuções concluídas, todas success | 12 |
+| Workflows YAML distintos | 11 |
+| Registros de job | 13 |
+| Jobs executados / pulados | 12 / 1 |
+| Tempo agregado de jobs executados | 7,12 job-min |
+| Mediana de tempo de parede por execução | 0,46 min |
+| Maior tempo de parede | 2,33 min — Flow layout browser |
+
+O job pulado de `Public routing before Clerk` tem timestamps inconsistentes (início posterior à conclusão) e foi excluído do tempo agregado. O recorte de push contém 11 execuções, 11 YAMLs, 12 registros (11 jobs executados e um pulado), 6,95 job-min e mediana de 0,55 min. Esses tempos não são custo faturado.
+
+Os cinco browser gates locais V5 tiveram um job cada: Stone 0,55 min; Summary pricing 0,60; Mobile 0,67; Keyboard 0,82; Flow layout 2,33. O total de 4,97 job-min descreve esta amostra; as assertions continuam cobrindo contratos diferentes.
+
+### Correção de alcançabilidade do gate de teclado
+
+No workflow `keyboard-browser.yml`, os filtros de `push` e `pull_request` não incluíam `app/styles.css`. O teste verifica bounds de foco no viewport e estilos computados de controles/shells; mudanças CSS poderiam alterar essas garantias sem acordar o gate. O caminho foi adicionado aos dois filtros, sem alterar teste ou runtime. A #282 passou no head `14277da630e50dd1cc3bccf7db60a12fb6919fda` e integrou-se à development em `ba45522eb25f9624acc7f262dbfe82f06bd82af0`; a promoção seletiva #283 passou no head `3eb61eafd2f527f1e9b6e625e3ebbd82d1abff42`, integrou-se à main em `803c32f7c0d4a7ba86367d6290f740747b667340`, e o gate pós-merge passou. PRs e refs estão linkadas no handover atualizado.
+
+**Estado MD-004:** este subproblema está fechado. O crosswalk integral dos 21 workflows/comandos e a auditoria das demais discrepâncias de trigger continuam em andamento; nenhum teste foi removido ou consolidado.
