@@ -1,0 +1,912 @@
+{
+  "generatedAt": "2026-11-12T05:31:08.036Z",
+  "source": "Clean detached checkout at product main 221b54b2a41ecc8c338d1bf2cf67280cf165ce95; Buyer V5 projection with an in-memory-only local-finish fixture; real Configurator app.js opens module-01 and clicks both local-finish controls; no authenticated service, database, save, or publish operation.",
+  "productCommit": "221b54b2a41ecc8c338d1bf2cf67280cf165ce95",
+  "baselineStylesGitBlob": "d43e6fb5e66133d2389b5c39b165b76b13cfa868",
+  "candidateStylesGitBlob": "eb346a41ad91f6dc53875cb954e9018fdc1dd713",
+  "candidateStylesSha256": "8dbe02cb5c03880ef86eff2e7d21b561bd377e184a7c8dc0fa6d8783683fb608",
+  "browserVersion": "156.0.8078.82",
+  "fixture": {
+    "moduleId": "module-01",
+    "globalFinish": "base-light",
+    "localFinishIds": [
+      "cocoa",
+      "shadow"
+    ],
+    "statuses": "published",
+    "scope": "local",
+    "enabled": true
+  },
+  "arms": [
+    "baseline",
+    "candidate"
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "viewports": [
+    390
+  ],
+  "invariants": {
+    "localSelectionUpdatesAriaPressed": true,
+    "globalSelectionRemainsBaseLight": true,
+    "configurationWasNotSavedOrPublished": true
+  },
+  "unexpectedHttpErrors": [],
+  "pageErrors": [],
+  "rows": [
+    {
+      "id": "baseline-light-cocoa",
+      "arm": "baseline",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "selectedFinishId": "cocoa",
+      "state": {
+        "selectedFinishId": "cocoa",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "localButtons": [
+          {
+            "id": "cocoa",
+            "selected": true,
+            "ariaPressed": "true",
+            "label": "Aplicar Avelã somente em Aéreo da lavanderia"
+          },
+          {
+            "id": "shadow",
+            "selected": false,
+            "ariaPressed": "false",
+            "label": "Aplicar Carvão somente em Aéreo da lavanderia"
+          }
+        ],
+        "globalFinishId": "base-light",
+        "globalAriaPressed": "true",
+        "globalSelectionUnchanged": true,
+        "globalStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "transform": "none"
+        },
+        "globalOutline": "rgb(34, 33, 31) none 3px",
+        "sameSelectedRingAsGlobalConsumer": true,
+        "theme": "light",
+        "themeMode": "light",
+        "localRect": {
+          "x": 48,
+          "y": 397.03125,
+          "width": 44,
+          "height": 44
+        },
+        "localStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "transform": "none",
+          "outline": "rgb(40, 36, 31) none 3px",
+          "backgroundColor": "rgb(141, 129, 120)",
+          "backgroundImage": "url(\"http://g3-local.test/assets/materials/mdf-warm.webp\")",
+          "backgroundSize": "160px 160px"
+        },
+        "wrapperStyle": {
+          "display": "grid",
+          "gap": "8px",
+          "margin": "0px",
+          "padding": "10px 0px",
+          "border": "",
+          "color": "rgb(40, 36, 31)"
+        },
+        "matchedRules": [
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "*",
+            "cssText": "box-sizing: border-box;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button, input",
+            "cssText": "font: inherit;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button, label, input",
+            "cssText": "-webkit-tap-highlight-color: transparent;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button",
+            "cssText": "color: inherit;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": ".swatch",
+            "cssText": "position: relative; width: 36px; height: 36px; flex: 0 0 auto; border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 50%; padding: 0px; background-color: var(--swatch); background-image: var(--swatch-texture, none); background-size: var(--swatch-size, auto); background-position: center center; background-repeat: repeat; background-blend-mode: luminosity; cursor: pointer; transition: transform 150ms, border-color 150ms;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": ".swatch.is-selected",
+            "cssText": "border-color: rgb(255, 255, 255); box-shadow: rgba(255, 255, 255, 0.12) 0px 0px 0px 2px;"
+          }
+        ],
+        "stylesheets": [
+          "http://g3-local.test/styles.css?v=runtime-v40",
+          "inline",
+          "http://g3-local.test/ui-theme.css?v=private-header-nav005-v2",
+          "inline"
+        ]
+      },
+      "screenshot": "baseline-light-cocoa.png",
+      "screenshotSha256": "be482afa727b7062eae45c4819d60749b0de4a33d8b21d5ef46aa4ff81d0750c"
+    },
+    {
+      "id": "baseline-light-shadow",
+      "arm": "baseline",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "selectedFinishId": "shadow",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "localButtons": [
+          {
+            "id": "cocoa",
+            "selected": false,
+            "ariaPressed": "false",
+            "label": "Aplicar Avelã somente em Aéreo da lavanderia"
+          },
+          {
+            "id": "shadow",
+            "selected": true,
+            "ariaPressed": "true",
+            "label": "Aplicar Carvão somente em Aéreo da lavanderia"
+          }
+        ],
+        "globalFinishId": "base-light",
+        "globalAriaPressed": "true",
+        "globalSelectionUnchanged": true,
+        "globalStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "transform": "none"
+        },
+        "globalOutline": "rgb(34, 33, 31) none 3px",
+        "sameSelectedRingAsGlobalConsumer": true,
+        "theme": "light",
+        "themeMode": "light",
+        "localRect": {
+          "x": 100,
+          "y": 409.53125,
+          "width": 44,
+          "height": 44
+        },
+        "localStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "transform": "none",
+          "outline": "rgb(40, 36, 31) none 3px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g3-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundSize": "160px 160px"
+        },
+        "wrapperStyle": {
+          "display": "grid",
+          "gap": "8px",
+          "margin": "0px",
+          "padding": "10px 0px",
+          "border": "",
+          "color": "rgb(40, 36, 31)"
+        },
+        "matchedRules": [
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "*",
+            "cssText": "box-sizing: border-box;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button, input",
+            "cssText": "font: inherit;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button, label, input",
+            "cssText": "-webkit-tap-highlight-color: transparent;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button",
+            "cssText": "color: inherit;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": ".swatch",
+            "cssText": "position: relative; width: 36px; height: 36px; flex: 0 0 auto; border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 50%; padding: 0px; background-color: var(--swatch); background-image: var(--swatch-texture, none); background-size: var(--swatch-size, auto); background-position: center center; background-repeat: repeat; background-blend-mode: luminosity; cursor: pointer; transition: transform 150ms, border-color 150ms;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": ".swatch.is-selected",
+            "cssText": "border-color: rgb(255, 255, 255); box-shadow: rgba(255, 255, 255, 0.12) 0px 0px 0px 2px;"
+          }
+        ],
+        "stylesheets": [
+          "http://g3-local.test/styles.css?v=runtime-v40",
+          "inline",
+          "http://g3-local.test/ui-theme.css?v=private-header-nav005-v2",
+          "inline"
+        ]
+      },
+      "screenshot": "baseline-light-shadow.png",
+      "screenshotSha256": "86de393a9a961519cdd6bdde43c206c7a675f6f10b12b24b49d3732d1fdcb7a4"
+    },
+    {
+      "id": "candidate-light-cocoa",
+      "arm": "candidate",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "selectedFinishId": "cocoa",
+      "state": {
+        "selectedFinishId": "cocoa",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "localButtons": [
+          {
+            "id": "cocoa",
+            "selected": true,
+            "ariaPressed": "true",
+            "label": "Aplicar Avelã somente em Aéreo da lavanderia"
+          },
+          {
+            "id": "shadow",
+            "selected": false,
+            "ariaPressed": "false",
+            "label": "Aplicar Carvão somente em Aéreo da lavanderia"
+          }
+        ],
+        "globalFinishId": "base-light",
+        "globalAriaPressed": "true",
+        "globalSelectionUnchanged": true,
+        "globalStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "transform": "none"
+        },
+        "globalOutline": "rgb(34, 33, 31) none 3px",
+        "sameSelectedRingAsGlobalConsumer": true,
+        "theme": "light",
+        "themeMode": "light",
+        "localRect": {
+          "x": 48,
+          "y": 397.03125,
+          "width": 44,
+          "height": 44
+        },
+        "localStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "transform": "none",
+          "outline": "rgb(40, 36, 31) none 3px",
+          "backgroundColor": "rgb(141, 129, 120)",
+          "backgroundImage": "url(\"http://g3-local.test/assets/materials/mdf-warm.webp\")",
+          "backgroundSize": "160px 160px"
+        },
+        "wrapperStyle": {
+          "display": "grid",
+          "gap": "8px",
+          "margin": "0px",
+          "padding": "10px 0px",
+          "border": "",
+          "color": "rgb(40, 36, 31)"
+        },
+        "matchedRules": [
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "*",
+            "cssText": "box-sizing: border-box;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button, input",
+            "cssText": "font: inherit;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button, label, input",
+            "cssText": "-webkit-tap-highlight-color: transparent;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button",
+            "cssText": "color: inherit;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": ".swatch",
+            "cssText": "position: relative; width: 36px; height: 36px; flex: 0 0 auto; border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 50%; padding: 0px; background-color: var(--swatch); background-image: var(--swatch-texture, none); background-size: var(--swatch-size, auto); background-position: center center; background-repeat: repeat; background-blend-mode: luminosity; cursor: pointer; transition: transform 150ms, border-color 150ms;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": ".swatch.is-selected",
+            "cssText": "border-color: rgb(41, 39, 35); box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px;"
+          }
+        ],
+        "stylesheets": [
+          "http://g3-local.test/styles.css?v=runtime-v40",
+          "inline",
+          "http://g3-local.test/ui-theme.css?v=private-header-nav005-v2",
+          "inline"
+        ]
+      },
+      "screenshot": "candidate-light-cocoa.png",
+      "screenshotSha256": "bbbbd6c84d425e19c352baf73f564b5a35d0a6d7baf008c6f1b433476e247dd1"
+    },
+    {
+      "id": "candidate-light-shadow",
+      "arm": "candidate",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "selectedFinishId": "shadow",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "localButtons": [
+          {
+            "id": "cocoa",
+            "selected": false,
+            "ariaPressed": "false",
+            "label": "Aplicar Avelã somente em Aéreo da lavanderia"
+          },
+          {
+            "id": "shadow",
+            "selected": true,
+            "ariaPressed": "true",
+            "label": "Aplicar Carvão somente em Aéreo da lavanderia"
+          }
+        ],
+        "globalFinishId": "base-light",
+        "globalAriaPressed": "true",
+        "globalSelectionUnchanged": true,
+        "globalStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "transform": "none"
+        },
+        "globalOutline": "rgb(34, 33, 31) none 3px",
+        "sameSelectedRingAsGlobalConsumer": true,
+        "theme": "light",
+        "themeMode": "light",
+        "localRect": {
+          "x": 100,
+          "y": 409.53125,
+          "width": 44,
+          "height": 44
+        },
+        "localStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "transform": "none",
+          "outline": "rgb(40, 36, 31) none 3px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g3-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundSize": "160px 160px"
+        },
+        "wrapperStyle": {
+          "display": "grid",
+          "gap": "8px",
+          "margin": "0px",
+          "padding": "10px 0px",
+          "border": "",
+          "color": "rgb(40, 36, 31)"
+        },
+        "matchedRules": [
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "*",
+            "cssText": "box-sizing: border-box;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button, input",
+            "cssText": "font: inherit;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button, label, input",
+            "cssText": "-webkit-tap-highlight-color: transparent;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button",
+            "cssText": "color: inherit;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": ".swatch",
+            "cssText": "position: relative; width: 36px; height: 36px; flex: 0 0 auto; border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 50%; padding: 0px; background-color: var(--swatch); background-image: var(--swatch-texture, none); background-size: var(--swatch-size, auto); background-position: center center; background-repeat: repeat; background-blend-mode: luminosity; cursor: pointer; transition: transform 150ms, border-color 150ms;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": ".swatch.is-selected",
+            "cssText": "border-color: rgb(41, 39, 35); box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px;"
+          }
+        ],
+        "stylesheets": [
+          "http://g3-local.test/styles.css?v=runtime-v40",
+          "inline",
+          "http://g3-local.test/ui-theme.css?v=private-header-nav005-v2",
+          "inline"
+        ]
+      },
+      "screenshot": "candidate-light-shadow.png",
+      "screenshotSha256": "dba8d2a5796b3c6459a8d4aacc734334bb38205f5e5ff1888ea90926ef3fc879"
+    },
+    {
+      "id": "baseline-dark-cocoa",
+      "arm": "baseline",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "selectedFinishId": "cocoa",
+      "state": {
+        "selectedFinishId": "cocoa",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "localButtons": [
+          {
+            "id": "cocoa",
+            "selected": true,
+            "ariaPressed": "true",
+            "label": "Aplicar Avelã somente em Aéreo da lavanderia"
+          },
+          {
+            "id": "shadow",
+            "selected": false,
+            "ariaPressed": "false",
+            "label": "Aplicar Carvão somente em Aéreo da lavanderia"
+          }
+        ],
+        "globalFinishId": "base-light",
+        "globalAriaPressed": "true",
+        "globalSelectionUnchanged": true,
+        "globalStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "transform": "none"
+        },
+        "globalOutline": "rgb(244, 241, 235) none 3px",
+        "sameSelectedRingAsGlobalConsumer": true,
+        "theme": "dark",
+        "themeMode": "dark",
+        "localRect": {
+          "x": 48,
+          "y": 397.03125,
+          "width": 44,
+          "height": 44
+        },
+        "localStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "transform": "none",
+          "outline": "rgb(40, 36, 31) none 3px",
+          "backgroundColor": "rgb(141, 129, 120)",
+          "backgroundImage": "url(\"http://g3-local.test/assets/materials/mdf-warm.webp\")",
+          "backgroundSize": "160px 160px"
+        },
+        "wrapperStyle": {
+          "display": "grid",
+          "gap": "8px",
+          "margin": "0px",
+          "padding": "10px 0px",
+          "border": "",
+          "color": "rgb(40, 36, 31)"
+        },
+        "matchedRules": [
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "*",
+            "cssText": "box-sizing: border-box;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button, input",
+            "cssText": "font: inherit;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button, label, input",
+            "cssText": "-webkit-tap-highlight-color: transparent;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button",
+            "cssText": "color: inherit;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": ".swatch",
+            "cssText": "position: relative; width: 36px; height: 36px; flex: 0 0 auto; border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 50%; padding: 0px; background-color: var(--swatch); background-image: var(--swatch-texture, none); background-size: var(--swatch-size, auto); background-position: center center; background-repeat: repeat; background-blend-mode: luminosity; cursor: pointer; transition: transform 150ms, border-color 150ms;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": ".swatch.is-selected",
+            "cssText": "border-color: rgb(255, 255, 255); box-shadow: rgba(255, 255, 255, 0.12) 0px 0px 0px 2px;"
+          }
+        ],
+        "stylesheets": [
+          "http://g3-local.test/styles.css?v=runtime-v40",
+          "inline",
+          "http://g3-local.test/ui-theme.css?v=private-header-nav005-v2",
+          "inline"
+        ]
+      },
+      "screenshot": "baseline-dark-cocoa.png",
+      "screenshotSha256": "be482afa727b7062eae45c4819d60749b0de4a33d8b21d5ef46aa4ff81d0750c"
+    },
+    {
+      "id": "baseline-dark-shadow",
+      "arm": "baseline",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "selectedFinishId": "shadow",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "localButtons": [
+          {
+            "id": "cocoa",
+            "selected": false,
+            "ariaPressed": "false",
+            "label": "Aplicar Avelã somente em Aéreo da lavanderia"
+          },
+          {
+            "id": "shadow",
+            "selected": true,
+            "ariaPressed": "true",
+            "label": "Aplicar Carvão somente em Aéreo da lavanderia"
+          }
+        ],
+        "globalFinishId": "base-light",
+        "globalAriaPressed": "true",
+        "globalSelectionUnchanged": true,
+        "globalStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "transform": "none"
+        },
+        "globalOutline": "rgb(244, 241, 235) none 3px",
+        "sameSelectedRingAsGlobalConsumer": true,
+        "theme": "dark",
+        "themeMode": "dark",
+        "localRect": {
+          "x": 100,
+          "y": 409.53125,
+          "width": 44,
+          "height": 44
+        },
+        "localStyle": {
+          "borderColor": "rgb(255, 255, 255)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgba(255, 255, 255, 0.12) 0px 0px 0px 2px",
+          "transform": "none",
+          "outline": "rgb(40, 36, 31) none 3px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g3-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundSize": "160px 160px"
+        },
+        "wrapperStyle": {
+          "display": "grid",
+          "gap": "8px",
+          "margin": "0px",
+          "padding": "10px 0px",
+          "border": "",
+          "color": "rgb(40, 36, 31)"
+        },
+        "matchedRules": [
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "*",
+            "cssText": "box-sizing: border-box;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button, input",
+            "cssText": "font: inherit;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button, label, input",
+            "cssText": "-webkit-tap-highlight-color: transparent;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button",
+            "cssText": "color: inherit;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": ".swatch",
+            "cssText": "position: relative; width: 36px; height: 36px; flex: 0 0 auto; border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 50%; padding: 0px; background-color: var(--swatch); background-image: var(--swatch-texture, none); background-size: var(--swatch-size, auto); background-position: center center; background-repeat: repeat; background-blend-mode: luminosity; cursor: pointer; transition: transform 150ms, border-color 150ms;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": ".swatch.is-selected",
+            "cssText": "border-color: rgb(255, 255, 255); box-shadow: rgba(255, 255, 255, 0.12) 0px 0px 0px 2px;"
+          }
+        ],
+        "stylesheets": [
+          "http://g3-local.test/styles.css?v=runtime-v40",
+          "inline",
+          "http://g3-local.test/ui-theme.css?v=private-header-nav005-v2",
+          "inline"
+        ]
+      },
+      "screenshot": "baseline-dark-shadow.png",
+      "screenshotSha256": "86de393a9a961519cdd6bdde43c206c7a675f6f10b12b24b49d3732d1fdcb7a4"
+    },
+    {
+      "id": "candidate-dark-cocoa",
+      "arm": "candidate",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "selectedFinishId": "cocoa",
+      "state": {
+        "selectedFinishId": "cocoa",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "localButtons": [
+          {
+            "id": "cocoa",
+            "selected": true,
+            "ariaPressed": "true",
+            "label": "Aplicar Avelã somente em Aéreo da lavanderia"
+          },
+          {
+            "id": "shadow",
+            "selected": false,
+            "ariaPressed": "false",
+            "label": "Aplicar Carvão somente em Aéreo da lavanderia"
+          }
+        ],
+        "globalFinishId": "base-light",
+        "globalAriaPressed": "true",
+        "globalSelectionUnchanged": true,
+        "globalStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "transform": "none"
+        },
+        "globalOutline": "rgb(244, 241, 235) none 3px",
+        "sameSelectedRingAsGlobalConsumer": true,
+        "theme": "dark",
+        "themeMode": "dark",
+        "localRect": {
+          "x": 48,
+          "y": 397.03125,
+          "width": 44,
+          "height": 44
+        },
+        "localStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "transform": "none",
+          "outline": "rgb(40, 36, 31) none 3px",
+          "backgroundColor": "rgb(141, 129, 120)",
+          "backgroundImage": "url(\"http://g3-local.test/assets/materials/mdf-warm.webp\")",
+          "backgroundSize": "160px 160px"
+        },
+        "wrapperStyle": {
+          "display": "grid",
+          "gap": "8px",
+          "margin": "0px",
+          "padding": "10px 0px",
+          "border": "",
+          "color": "rgb(40, 36, 31)"
+        },
+        "matchedRules": [
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "*",
+            "cssText": "box-sizing: border-box;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button, input",
+            "cssText": "font: inherit;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button, label, input",
+            "cssText": "-webkit-tap-highlight-color: transparent;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button",
+            "cssText": "color: inherit;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": ".swatch",
+            "cssText": "position: relative; width: 36px; height: 36px; flex: 0 0 auto; border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 50%; padding: 0px; background-color: var(--swatch); background-image: var(--swatch-texture, none); background-size: var(--swatch-size, auto); background-position: center center; background-repeat: repeat; background-blend-mode: luminosity; cursor: pointer; transition: transform 150ms, border-color 150ms;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": ".swatch.is-selected",
+            "cssText": "border-color: rgb(41, 39, 35); box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px;"
+          }
+        ],
+        "stylesheets": [
+          "http://g3-local.test/styles.css?v=runtime-v40",
+          "inline",
+          "http://g3-local.test/ui-theme.css?v=private-header-nav005-v2",
+          "inline"
+        ]
+      },
+      "screenshot": "candidate-dark-cocoa.png",
+      "screenshotSha256": "bbbbd6c84d425e19c352baf73f564b5a35d0a6d7baf008c6f1b433476e247dd1"
+    },
+    {
+      "id": "candidate-dark-shadow",
+      "arm": "candidate",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "browserVersion": "156.0.8078.82",
+      "selectedFinishId": "shadow",
+      "state": {
+        "selectedFinishId": "shadow",
+        "selectedClass": true,
+        "ariaPressed": "true",
+        "localButtons": [
+          {
+            "id": "cocoa",
+            "selected": false,
+            "ariaPressed": "false",
+            "label": "Aplicar Avelã somente em Aéreo da lavanderia"
+          },
+          {
+            "id": "shadow",
+            "selected": true,
+            "ariaPressed": "true",
+            "label": "Aplicar Carvão somente em Aéreo da lavanderia"
+          }
+        ],
+        "globalFinishId": "base-light",
+        "globalAriaPressed": "true",
+        "globalSelectionUnchanged": true,
+        "globalStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "transform": "none"
+        },
+        "globalOutline": "rgb(244, 241, 235) none 3px",
+        "sameSelectedRingAsGlobalConsumer": true,
+        "theme": "dark",
+        "themeMode": "dark",
+        "localRect": {
+          "x": 100,
+          "y": 409.53125,
+          "width": 44,
+          "height": 44
+        },
+        "localStyle": {
+          "borderColor": "rgb(41, 39, 35)",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px",
+          "transform": "none",
+          "outline": "rgb(40, 36, 31) none 3px",
+          "backgroundColor": "rgb(48, 49, 47)",
+          "backgroundImage": "url(\"http://g3-local.test/assets/materials/mdf-dark.webp\")",
+          "backgroundSize": "160px 160px"
+        },
+        "wrapperStyle": {
+          "display": "grid",
+          "gap": "8px",
+          "margin": "0px",
+          "padding": "10px 0px",
+          "border": "",
+          "color": "rgb(40, 36, 31)"
+        },
+        "matchedRules": [
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "*",
+            "cssText": "box-sizing: border-box;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button, input",
+            "cssText": "font: inherit;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button, label, input",
+            "cssText": "-webkit-tap-highlight-color: transparent;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": "button",
+            "cssText": "color: inherit;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": ".swatch",
+            "cssText": "position: relative; width: 36px; height: 36px; flex: 0 0 auto; border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 50%; padding: 0px; background-color: var(--swatch); background-image: var(--swatch-texture, none); background-size: var(--swatch-size, auto); background-position: center center; background-repeat: repeat; background-blend-mode: luminosity; cursor: pointer; transition: transform 150ms, border-color 150ms;"
+          },
+          {
+            "href": "http://g3-local.test/styles.css?v=runtime-v40",
+            "selector": ".swatch.is-selected",
+            "cssText": "border-color: rgb(41, 39, 35); box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(41, 39, 35) 0px 0px 0px 4px;"
+          }
+        ],
+        "stylesheets": [
+          "http://g3-local.test/styles.css?v=runtime-v40",
+          "inline",
+          "http://g3-local.test/ui-theme.css?v=private-header-nav005-v2",
+          "inline"
+        ]
+      },
+      "screenshot": "candidate-dark-shadow.png",
+      "screenshotSha256": "dba8d2a5796b3c6459a8d4aacc734334bb38205f5e5ff1888ea90926ef3fc879"
+    }
+  ]
+}
