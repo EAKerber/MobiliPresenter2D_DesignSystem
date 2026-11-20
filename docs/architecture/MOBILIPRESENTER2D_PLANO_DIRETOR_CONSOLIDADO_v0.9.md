@@ -9971,7 +9971,7 @@ Teste de oclusão executável e integrado, com fixture correta, teardown e resul
 **Prioridade:** P0/P1 documental  
 **Dependências:** GIT-002, TST-002/004 na parte documental  
 **Bundle:** BT-GIT-16  
-**Head observado:** `c4cff5e0b707ed728618f8ce1c60310eeca23fad`
+**Baseline de entrada do plano (17/11/2026; não é pin vigente):** head observado `c4cff5e0b707ed728618f8ce1c60310eeca23fad`; o diff observado então continha 93 arquivos. O estado atual da PR, a contagem revisada e os resultados GIT-018 estão no [handover operacional de 19/11](../HANDOVER_CURRENT.md).
 
 #### Objetivo
 
@@ -9980,7 +9980,7 @@ Consolidar na `main` do Design System as evidências e matrizes atuais sem impor
 #### Procedimento
 
 1. Fixar base e head.
-2. Inventariar os 93 arquivos.
+2. Conferir os caminhos no head corrente da #119; 93 é a contagem da baseline de 17/11, e a lista viva fica no handover.
 3. Separar documentos de evidências brutas.
 4. Identificar referências ao Produto.
 5. Identificar SHAs históricos.
