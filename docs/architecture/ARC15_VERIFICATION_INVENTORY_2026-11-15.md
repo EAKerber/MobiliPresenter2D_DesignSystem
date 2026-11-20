@@ -10,6 +10,16 @@
 **Incremento de triagem — gate de teclado pós-#277 (16/11/2026):** a PR #269 levou à revisão da falha de Tab em `/config/`. Antes da instrumentação, a asserção e o código do Configurador eram iguais na `main` e na candidata; o CSS da PR atua apenas no header público. O gate usa V5 loopback derivado dos defaults, com checkbox do primeiro módulo habilitado. A falha em `6651342` ocorreu uma vez e o rerun do mesmo SHA passou. No head `8c77350b`, 12/12 Actions passaram após o teste confirmar o foco inicial e manter a expectativa original de Tab para o botão de inspeção. Classificação provisória: falha intermitente/diagnóstico insuficiente do gate, sem evidência de regressão funcional. Este caso é evidência de PR, não altera a matriz de assertions pinada em main46 nem a contagem dos 21 comandos/workflows.
 
 
+## Addendum live — estado de MD-004 e higiene — 20/11/2026 (BRT)
+
+Este registro atualiza o andamento sem alterar a baseline histórica `main46` nem a contagem histórica dos 21 workflows/21 comandos.
+
+- Product #286 está no head `4680ddca92ea4cbab0366994e306d3288a4f1151` (base `development@205cc833`): nove workflows ajustados, 85 caminhos adicionados e dois globs substituídos por listas explícitas. Os 9/9 gates únicos passaram. O primeiro Flow foi cancelado na instalação do browser; o rerun concluiu instalação, layout hierárquico, paridade V3/V5 e breakpoints com sucesso. A PR permanece aberta e não integrada.
+- Product #287 está no head `083d83d53f66442148eff2b1817a315aa5e418c5`, baseado em `main@dc066f55619824626ea4752ecc0bafc67f9d9110`. Os gates automáticos de About/skip-link, smoke read-only de Production e VIS-002C passaram. O teste de Production lê o deploy corrente e não valida o código candidato. Viewer base-price e ARC-03C exigem dispatch manual e ainda não têm execução; a PR permanece Draft.
+- A PR #286 não qualifica a `main`; a #287 não qualifica por completo até as duas execuções manuais. As alterações dos workflows mantêm jobs/assertions e não removem testes.
+- Inventário remoto observado: 13 branches e nove PRs abertas no Product; duas refs adicionais além de `main`/`development` e das nove heads abertas não aparecem ligadas a PR aberta na busca. O soft cap 5 requer revisão, não exclusão automática. Nenhuma ref foi removida.
+- **Próxima ação MD-004:** terminar os dois dispatches de #287, documentar seus SHAs/resultados e medir duração no pin atual contra a amostra existente. Não converter sucesso de workflow em check obrigatório ou prova de deployment.
+
 ## Addendum live — 18/11/2026 (BRT)
 
 Esta atualização não altera a baseline histórica `main46` nem as contagens dos 21 workflows/21 comandos.
