@@ -1,5 +1,14 @@
 # ARC-15 — Inventário de verificações do Produto
 
+## Delta live pós-#279 — 20/11/2026
+
+- Pins atuais: Product `main@29e824e2f6c44af9c8f04fd9966ec3190f3637b8`; Product `development@be743fd98063b19be5ee0614add21b8c85fb4a85`.
+- Product main agora contém 22 arquivos de workflow. A matriz detalhada de 21 workflows/21 comandos abaixo continua sendo a baseline histórica pinada em `main46`; não deve ser lida como contagem atual.
+- A #279 foi integrada por squash em `main` e acrescentou somente `.github/workflows/development-ux04-geometry.yml`, blob `96703ca3ae3c195153f10742134dca7aa69b0faf`. O workflow já existe em `development@be743fd` com o mesmo blob e seus arquivos de teste/build estão presentes.
+- O workflow usa `workflow_dispatch`, `contents: read`, V5 local e Playwright; não pede secrets nem serviço hospedado. O dispatch ainda não ocorreu. A automação do navegador do ChatGPT/DevTools retornou `Transport closed`; portanto não existe run nem artefato a registrar.
+- Quando o dispatch for possível, selecionar `ref=development`, reler e confirmar o SHA de `development` imediatamente antes, e guardar o run e os artefatos. Esta entrada não altera a baseline histórica nem redefine required checks.
+
+
 **Estado:** primeira passada e parecer Common Sense Judge dos oito itens sem invocação localizada concluídos sobre a baseline Product main46; três overlaps adicionais classificados. MD-004 tem agora uma amostra da main atual e uma lacuna concreta de trigger do Keyboard corrigida; o crosswalk integral assertion→risco→rota/estado e as demais discrepâncias continuam pendentes.
 **Fonte:** primeira passada em `EAKerber/MobiliPresenter2D` `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`; não representa o inventário pós-#275.
 **Revalidação live (16/11/2026):** Product `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9` foi conferida. Os oito artefatos revistos e `candidate-assets.yml` têm blobs idênticos entre essa main e `main46`, então os pareceres continuam aplicáveis sem mover a baseline histórica.
@@ -306,7 +315,7 @@ A mudança de teste em `8c77350` confirma que o checkbox está habilitado e que 
 
 Enter, Escape e padrões gerais de foco são interseções de implementação, não garantias duplicadas. Rotas, elementos, estados e fixtures diferem; não há base para unir ou remover qualquer um dos gates. A matriz de configuração publicada/API em `ARC15_ASSERTION_MATRIX_PUBLISHED_CONFIG_2026-11-16.md` trata autorização, armazenamento, publicação e projeção buyer, portanto permanece em domínio separado.
 
-O workflow `development-ux04-geometry.yml` está em `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`, mas ainda não existe no Product `main`. A PR Draft isolada [#279](https://github.com/EAKerber/MobiliPresenter2D/pull/279), head `ffa288d181f0c53148e5a6b9ba69d3d8a5631651`, adiciona somente o arquivo original (blob `96703ca3ae3c195153f10742134dca7aa69b0faf`) e não executa o gate. Após eventual integração e autorização, revalidar o SHA de development imediatamente antes do dispatch. Product está em 7 refs, duas acima do soft cap 5; a branch #279 foi criada após avaliar a separação de escopo e não deve ser removida por contagem. A matriz integral ARC-15 continua pinada em main46, e required checks permanecem UNKNOWN; esta revalidação de PR não altera as contagens dos 21 comandos nem encerra a matriz geral.
+**Snapshot histórico pré-merge da #279:** o workflow existia em `development@1a69ff76a5f36e3245a288773bb409aa662e4e62`; naquele momento a PR Draft adicionava somente o arquivo original e não executava o gate. A recomendação histórica era revalidar o SHA de development imediatamente antes do dispatch. Esse snapshot não representa o estado corrente pós-merge. A matriz integral ARC-15 continua pinada em main46 e required checks permanecem UNKNOWN.
 
 ## Reavaliação independente da geometria do hero — 16/11/2026
 
