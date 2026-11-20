@@ -1,0 +1,3699 @@
+{
+  "schemaVersion": 1,
+  "title": "GIT-018 external-link validation",
+  "generatedAt": "2026-11-19 (America/Sao_Paulo)",
+  "target": {
+    "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
+    "pullRequest": 119,
+    "head": "f2ee002722cb39838b429b272ca2097d45ef7501",
+    "sourceFiles": 29
+  },
+  "extraction": {
+    "scope": "Markdown inline link destinations in the 29 changed .md files at the pinned PR head.",
+    "method": "Line-based extraction of ](destination), stripping surrounding angle brackets and optional title; duplicate destinations were deduplicated only for probes and mapped back to every occurrence.",
+    "limitations": [
+      "This is not a full CommonMark parser; reference-style links and autolinks may not be included.",
+      "GitHub connector success means the resource resolved through its API mapping, not that a browser HTTP status was captured.",
+      "Web crawler inaccessible is inconclusive, not a 404.",
+      "Fragments were not separately checked against DOM ids."
+    ]
+  },
+  "counts": {
+    "allInlineDestinations": 612,
+    "localFileDestinations": 244,
+    "localAnchors": 15,
+    "externalOccurrences": 353,
+    "uniqueExternalTargets": 256,
+    "uniqueGitHubTargets": 245,
+    "githubResolved": 244,
+    "github404AfterRetry": 1,
+    "nonGitHubUniqueTargets": 11,
+    "nonGitHubContentOpened": 4,
+    "nonGitHubCrawlerInaccessible": 7,
+    "providerResourceConfirmationsWithinInaccessible": 4
+  },
+  "classification": {
+    "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448351/artifacts/14195552207": "The artifact link returns 404 twice; the parent workflow run itself exists and passed. Treat the artifact as unavailable, not as evidence that the run failed.",
+    "https://deploy-preview-269--mobilipresenter2d.netlify.app/how-it-works/": "Not opened by crawler; no HTTP status. Unknown.",
+    "https://deploy-preview-273--mobilipresenter2d.netlify.app/": "Not opened by crawler; no HTTP status. Unknown.",
+    "https://deploy-preview-277--mobilipresenter2d.netlify.app/": "Not opened by crawler; no HTTP status. Unknown."
+  },
+  "targetChecks": [
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/274",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/39",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/41",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/64",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pulls?q=is%3Apr+is%3Amerged+DS-HYG",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/74",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/65",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40415693021",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40415848947",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/66",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416068259",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416176289",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/67",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416400765",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416499528",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/68",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416656057",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416836782",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/69",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417012867",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417109760",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/70",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417329963",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417432448",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/71",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417594199",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417800017",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/72",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417953084",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40418058996",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/73",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40418234061",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40418380389",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/75",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40419192192",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40419285353",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/77",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40423355239",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40423479233",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/78",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/79",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/80",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40424786709",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40424863430",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40452178002",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44425086708",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/277",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/280",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/273",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/275",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/82",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40428162828",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/81",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40425292755",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/42",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/37",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/46",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/23",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/56",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/tree/main",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/docs/handoffs/HANDOVER-CURRENT-2026-10-26.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40435400023",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/83",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40438390030",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/84",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/85",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40440191356",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40440478801",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/89",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/90",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/91",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40443041873",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/93",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40443734932",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/94",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40444036554",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/95",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40444401507",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/101",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40448667631",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/102",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/103",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/105",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40452100882",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40452100814",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40452414779",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40500797873",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40500797879",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/114",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40511965874",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/115",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40512535633",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/116",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40513316115",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/117",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40514015814",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/118",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40515276768",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40515276681",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://deploy-preview-269--mobilipresenter2d.netlify.app/how-it-works/",
+      "result": "unverified_web_crawler_inaccessible",
+      "detail": "The web crawler could not open this preview URL; no HTTP status was exposed, so this is not classified as broken.",
+      "method": "web open"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/272",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43123581900",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43123581593",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/237",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39697470826",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/45",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/224",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/47",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/docs/arc13-post-273-reconciliation-20261114/docs/architecture/arc13/sink-triage-post-273-2026-11-14.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://www.w3.org/TR/wai-aria-1.2/#generic",
+      "result": "content_opened_by_web_crawler",
+      "detail": "Page content was returned; HTTP status code and fragment target were not separately exposed.",
+      "method": "web open"
+    },
+    {
+      "url": "https://www.w3.org/TR/wai-aria-1.2/#group",
+      "result": "content_opened_by_web_crawler",
+      "detail": "Page content was returned; HTTP status code and fragment target were not separately exposed.",
+      "method": "web open"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/72ae7c8a7e3a8c89645d91d91482d66c1eb4d764/docs/architecture/arc13/inventory-reconciliation-post-277-2026-11-16.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/72ae7c8a7e3a8c89645d91d91482d66c1eb4d764/docs/architecture/arc13/inventory-crosswalk-post-277-2026-11-16.json",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/281",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069540",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069464",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069446",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069475",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069731",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069581",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069572",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069559",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069433",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069872",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069437",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069577",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/about-skip-link-focus.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/admin-hierarchy-browser.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/app-build-purity.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/arc03c-static-page-build-gate.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/branch-hygiene-bounded.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/branch-hygiene.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/candidate-assets.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/flow-layout-browser.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/keyboard-browser.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/mobile-browser.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/module02-fidelity.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/p-comp-01-public-menu-gate.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/public-production-readonly.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/public-routing-before-clerk.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/r0-contract.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/stone-browser.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/summary-pricing-browser.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/ux-auth-viewer-integration-gate.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/variant-fidelity.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/viewer-base-price-contract-gate.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/vis002c-v03-product-pin.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/tests/home-hero-phone-geometry-browser.cjs",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448351",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448351/artifacts/14195552207",
+      "result": "not_found_404_after_retry",
+      "detail": "GitHub API returned 404 on two attempts for this artifact. Parent workflow run 43799448351 exists and concluded success; artifact availability is not established.",
+      "method": "GitHub connector GET/API resolution; retry count 2"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/279",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/278",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/119",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/218",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/208",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/216",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/217",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/269",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/tree/1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39506584577",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39508130387",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/main/docs/ARCHITECTURE_DECISIONS_ARC01_ARC16_AND_EXECUTION_2026-10-21.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/main/docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/docs/architecture/ARCHITECTURE_EXECUTION_CROSSWALK_2026-11-15.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/docs/arc13-post-273-reconciliation-20261114/docs/architecture/arc13/inventory-reconciliation-post-277-2026-11-16.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/232",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/main/docs/ARCHITECTURE_VANILLA_COMPONENTS_AND_DOMAIN_DATA_2026-10-21.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/scripts/compile-primary-pages.mjs",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/landing/header-menu.js",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/ui-theme.js",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/scene-component.js",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/public-module-projection.js",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/271",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/main/scripts/export-approved-palette.mjs",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/main/dist/approved-palette-reference.manifest.json",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/design-system/pins/vis-002/v0.1.0/PIN.json",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/main/docs/VIS002C_CONTEXTUAL_MAPPING_V0_3_0.json",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/design-system/pins/vis-002/context-v0.3.0/PIN.json",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/.github/workflows/development-public-contrast-semantic.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/tests/vis002c-v03-scoped-raster.mjs",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/evidence/architecture/ds05a-current-product-css-provenance-2026-11-15.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/architecture/fragments/primary-header.fragment.html",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/private-navigation.js",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/presentation-contract.js",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/tests/viewer-secondary-header-browser-gate.mjs",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/tests/public-header-controller-gate.mjs",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/tests/how-accordion-grid-browser-gate.mjs",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/evidence/architecture/g3-control-families-static-matrix-2026-11-13.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/docs/architecture/ui-adr-004-cross-page-reuse-gate-2026-10-20.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/docs/architecture/dom-js-component-ownership-2026-10-20.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/administration-v5.js",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/published-buyer-projection.js",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/published-configuration.js",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/v5-normal-save.js",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/flow-model.js",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/flow-layout.js",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/pricing-contract.js",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/pricing.js",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/netlify/functions/configuration.mjs",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/netlify/functions/buyer-configuration.mjs",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/netlify/functions/public-modules.mjs",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/docs/architecture/viewer-base-price-publication-main-2026-10-21.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/tests/viewer-base-price-publication.test.cjs",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/tests/viewer-base-price-browser-gate.mjs",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/docs/architecture/ARC15_ASSERTION_MATRIX_PUBLISHED_CONFIG_2026-11-16.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/docs/architecture/ci-authority-contract-2026-10-05.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/.github/workflows/app-build-purity.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/.github/workflows/candidate-assets.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/.github/workflows/arc03c-static-page-build-gate.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/.github/workflows/p-comp-01-public-menu-gate.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/.github/workflows/viewer-base-price-contract-gate.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/.github/workflows/keyboard-browser.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/.github/workflows/flow-layout-browser.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tests/ci/local-buyer-config-server.mjs",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tests/ci/prepare-local-v5-browser.sh",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tests/ui-theme-contract.cjs",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tests/arc03c-source-authority.test.mjs",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tests/exposed-sides-glass.cjs",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tests/home-hero-phone-geometry-browser.cjs",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/main/docs/APPROVALS_D01_D04_2026-10-26.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/docs/handoffs/HANDOVER_DEVELOPMENT_2026-10-27.md",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tools/branch_hygiene_observe.py",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tools/branch_hygiene_plan.py",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tools/branch_hygiene_apply.py",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tools/branch_hygiene_merged_pr_cleanup.py",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/.github/workflows/branch-hygiene-bounded.yml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/ops/branch-hygiene-batch.json",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/ops/branch-dispositions.json",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/netlify.toml",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://docs.netlify.com/deploy/deploy-types/deploy-previews/",
+      "result": "content_opened_by_web_crawler",
+      "detail": "Page content was returned; HTTP status code and fragment target were not separately exposed.",
+      "method": "web open"
+    },
+    {
+      "url": "https://docs.netlify.com/build/configure-builds/stop-or-activate-builds/",
+      "result": "content_opened_by_web_crawler",
+      "detail": "Page content was returned; HTTP status code and fragment target were not separately exposed.",
+      "method": "web open"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/41344513485",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/42720598449",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/241",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://deploy-preview-273--mobilipresenter2d.netlify.app/",
+      "result": "unverified_web_crawler_inaccessible",
+      "detail": "The web crawler could not open this preview URL; no HTTP status was exposed, so this is not classified as broken.",
+      "method": "web open"
+    },
+    {
+      "url": "https://6af92098c6143a04fda931c0--mobilipresenter2d.netlify.app/",
+      "result": "ready_deploy_confirmed_by_provider",
+      "detail": "Netlify API resolved deploy 6af92098c6143a04fda931c0 as ready, context deploy-preview, review #275; its recorded deploy SSL URL is deploy-preview-275--mobilipresenter2d.netlify.app. Exact URL request was not returned by the web crawler.",
+      "method": "Netlify deploy lookup"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/commit/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448699",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448367",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448359",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448353",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448384",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448417",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448443",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448453",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448357",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448375",
+      "result": "resolved_by_github_api",
+      "detail": "GitHub connector returned the target resource; raw HTTP status is not exposed.",
+      "method": "GitHub connector GET/API resolution"
+    },
+    {
+      "url": "https://deploy-preview-277--mobilipresenter2d.netlify.app/",
+      "result": "unverified_web_crawler_inaccessible",
+      "detail": "The web crawler could not open this preview URL; no HTTP status was exposed, so this is not classified as broken.",
+      "method": "web open"
+    },
+    {
+      "url": "https://app.netlify.com/sites/mobilipresenter2d/deploys/6afa7bee50b552356a973df4",
+      "result": "ready_deploy_confirmed_by_provider",
+      "detail": "Netlify API resolved deployment 6afa7bee50b552356a973df4 as ready production for commit efc40584; the exact app page was not returned by the web crawler.",
+      "method": "Netlify deploy lookup"
+    },
+    {
+      "url": "https://casaemmodulos.casa/",
+      "result": "ready_deploy_alias_confirmed_by_provider",
+      "detail": "Netlify reports the current production deploy as ready with casaemmodulos.casa as its alias; direct page fetch was not returned by the web crawler.",
+      "method": "Netlify deploy lookup"
+    },
+    {
+      "url": "https://casaemmodulos.casa/how-it-works/",
+      "result": "site_ready_route_not_fetched",
+      "detail": "Netlify reports the current production deploy as ready with casaemmodulos.casa as its alias; the specific /how-it-works/ path was not fetched.",
+      "method": "Netlify deploy lookup"
+    }
+  ],
+  "externalOccurrences": [
+    {
+      "path": "README.md",
+      "line": 5,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/274",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 52,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/39",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 52,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/41",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 52,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 60,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/64",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 60,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pulls?q=is%3Apr+is%3Amerged+DS-HYG",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 60,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/74",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 64,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/65",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 64,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40415693021",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 64,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40415848947",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 65,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/66",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 65,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416068259",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 65,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416176289",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 66,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/67",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 66,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416400765",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 66,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416499528",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 67,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/68",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 67,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416656057",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 67,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40416836782",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 68,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/69",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 68,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417012867",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 68,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417109760",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 69,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/70",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 69,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417329963",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 69,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417432448",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 70,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/71",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 70,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417594199",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 70,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417800017",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 71,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/72",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 71,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40417953084",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 71,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40418058996",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 72,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/73",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 72,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40418234061",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 72,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40418380389",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 73,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/75",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 73,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40419192192",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 73,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40419285353",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 98,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/77",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 98,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40423355239",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 98,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40423479233",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 99,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/78",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 100,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/79",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 100,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/41",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 101,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/80",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 101,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40424786709",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 101,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40424863430",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/BRANCH_HYGIENE_OPERATIONS.md",
+      "line": 112,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40452178002",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 25,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44425086708",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 34,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/277",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 38,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/274",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 49,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/280",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 78,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/273",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 84,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/275",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 106,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/82",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 106,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/39",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 106,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 106,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40428162828",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 110,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/80",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 110,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/81",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 110,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/82",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 116,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 138,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/81",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 140,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/39",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 140,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 142,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40425292755",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 143,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/80",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 143,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40424786709",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 143,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40424863430",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 151,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/64",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 160,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/77",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 160,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40423479233",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 160,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/80",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 160,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40424863430",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 172,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/39",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 173,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/51",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 174,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/41",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 175,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/42",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 176,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/37",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 177,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/46",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 179,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/23",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 187,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/56",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 191,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/78",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 191,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/79",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 217,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/tree/main",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 221,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pulls?q=is%3Apr+is%3Amerged+DS-HYG",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 222,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/docs/handoffs/HANDOVER-CURRENT-2026-10-26.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 229,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40435400023",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 237,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/83",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 237,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40438390030",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 243,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/84",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 247,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/85",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 247,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40440191356",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 251,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40440478801",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 271,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/89",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 271,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/90",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 271,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/91",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 271,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40443041873",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 283,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/93",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 283,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40443734932",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 287,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/39",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 287,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/93",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 287,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/94",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 287,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40444036554",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 293,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/93",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 293,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/94",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 293,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/39",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 294,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/95",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 295,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40444401507",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 322,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/101",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 330,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40448667631",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 330,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/102",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 330,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/103",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 338,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/105",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 338,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40452100882",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 338,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40452100814",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 338,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40452178002",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 342,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40452414779",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 347,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40500797873",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 347,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40500797879",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 352,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/114",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 352,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40511965874",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 352,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/115",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 352,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40512535633",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 352,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/116",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 352,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40513316115",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 352,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/117",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 352,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40514015814",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 352,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/118",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 357,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40511965874",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 357,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40512535633",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 357,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40513316115",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 357,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40514015814",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 357,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/118",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 357,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40515276768",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 357,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/actions/runs/40515276681",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 391,
+      "url": "https://deploy-preview-269--mobilipresenter2d.netlify.app/how-it-works/",
+      "result": "unverified_web_crawler_inaccessible"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 450,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/272",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 482,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43123581900",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 482,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43123581593",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/HANDOVER_CURRENT.md",
+      "line": 588,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/237",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/ROADMAP_AND_CURRENT_STAGE_2026-10-21.md",
+      "line": 7,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/237",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/ROADMAP_AND_CURRENT_STAGE_2026-10-21.md",
+      "line": 33,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39697470826",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/ROADMAP_AND_CURRENT_STAGE_2026-10-21.md",
+      "line": 50,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/ROADMAP_AND_CURRENT_STAGE_2026-10-21.md",
+      "line": 60,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/45",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/ROADMAP_AND_CURRENT_STAGE_2026-10-21.md",
+      "line": 60,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/224",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/ROADMAP_AND_CURRENT_STAGE_2026-10-21.md",
+      "line": 62,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/47",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC13_PUBLIC_DELTA_COMMON_SENSE_2026-11-15.md",
+      "line": 12,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/docs/arc13-post-273-reconciliation-20261114/docs/architecture/arc13/sink-triage-post-273-2026-11-14.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC13_PUBLIC_DELTA_COMMON_SENSE_2026-11-15.md",
+      "line": 12,
+      "url": "https://www.w3.org/TR/wai-aria-1.2/#generic",
+      "result": "content_opened_by_web_crawler"
+    },
+    {
+      "path": "docs/architecture/ARC13_PUBLIC_DELTA_COMMON_SENSE_2026-11-15.md",
+      "line": 12,
+      "url": "https://www.w3.org/TR/wai-aria-1.2/#group",
+      "result": "content_opened_by_web_crawler"
+    },
+    {
+      "path": "docs/architecture/ARC13_PUBLIC_DELTA_COMMON_SENSE_2026-11-15.md",
+      "line": 59,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/72ae7c8a7e3a8c89645d91d91482d66c1eb4d764/docs/architecture/arc13/inventory-reconciliation-post-277-2026-11-16.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC13_PUBLIC_DELTA_COMMON_SENSE_2026-11-15.md",
+      "line": 59,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/72ae7c8a7e3a8c89645d91d91482d66c1eb4d764/docs/architecture/arc13/inventory-crosswalk-post-277-2026-11-16.json",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 34,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/281",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 36,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44425086708",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 50,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069540",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 51,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069464",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 52,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069446",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 53,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069475",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 54,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069731",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 55,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069581",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 56,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069572",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 57,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069559",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 58,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069433",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 59,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069872",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 60,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069437",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 61,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44437069577",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 87,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/about-skip-link-focus.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 88,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/admin-hierarchy-browser.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 89,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/app-build-purity.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 90,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/arc03c-static-page-build-gate.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 91,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/branch-hygiene-bounded.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 92,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/branch-hygiene.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 93,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/candidate-assets.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 94,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/flow-layout-browser.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 95,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/keyboard-browser.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 96,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/mobile-browser.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 97,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/module02-fidelity.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 98,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/p-comp-01-public-menu-gate.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 99,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/public-production-readonly.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 100,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/public-routing-before-clerk.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 101,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/r0-contract.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 102,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/stone-browser.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 103,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/summary-pricing-browser.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 104,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/ux-auth-viewer-integration-gate.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 105,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/variant-fidelity.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 106,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/viewer-base-price-contract-gate.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 107,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/vis002c-v03-product-pin.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 235,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/277",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 259,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/tests/home-hero-phone-geometry-browser.cjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 259,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9/.github/workflows/mobile-browser.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 261,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448351",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 261,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448351/artifacts/14195552207",
+      "result": "not_found_404_after_retry"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 286,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/279",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 294,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/278",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "line": 300,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/280",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARCHITECTURE_EXECUTION_CROSSWALK_2026-11-15.md",
+      "line": 30,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/119",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/ARCHITECTURE_EXECUTION_CROSSWALK_2026-11-15.md",
+      "line": 43,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44425086708",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/CSS-OWNERSHIP-RISKS-2026-10-20.md",
+      "line": 56,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/218",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/CSS-OWNERSHIP-RISKS-2026-10-20.md",
+      "line": 57,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/208",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/CSS-OWNERSHIP-RISKS-2026-10-20.md",
+      "line": 58,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/216",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/CSS-OWNERSHIP-RISKS-2026-10-20.md",
+      "line": 58,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/217",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/CSS-OWNERSHIP-RISKS-2026-10-20.md",
+      "line": 147,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/269",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/CSS-OWNERSHIP-RISKS-2026-10-20.md",
+      "line": 147,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/218",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md",
+      "line": 5,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/tree/1878ae1057ce7c6190e0c8cb08a1f3baadd49463",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md",
+      "line": 6,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/39",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md",
+      "line": 48,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39506584577",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md",
+      "line": 49,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/39508130387",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md",
+      "line": 76,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/218",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md",
+      "line": 77,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/208",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md",
+      "line": 78,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/216",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md",
+      "line": 78,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/217",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 675,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/main/docs/ARCHITECTURE_DECISIONS_ARC01_ARC16_AND_EXECUTION_2026-10-21.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 676,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/main/docs/architecture/DESIGN-SYSTEM-CONSOLIDATION-MASTER-PLAN-2026-10-20.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 677,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/docs/architecture/ARCHITECTURE_EXECUTION_CROSSWALK_2026-11-15.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 678,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 679,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/docs/arc13-post-273-reconciliation-20261114/docs/architecture/arc13/inventory-reconciliation-post-277-2026-11-16.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 680,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 681,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/280",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 682,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/232",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 1784,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/main/docs/ARCHITECTURE_DECISIONS_ARC01_ARC16_AND_EXECUTION_2026-10-21.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 1785,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/main/docs/ARCHITECTURE_VANILLA_COMPONENTS_AND_DOMAIN_DATA_2026-10-21.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 1786,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/scripts/compile-primary-pages.mjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 1787,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/landing/header-menu.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 1788,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/ui-theme.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 1789,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/scene-component.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 1790,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/public-module-projection.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 1791,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/docs/architecture/ARCHITECTURE_EXECUTION_CROSSWALK_2026-11-15.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 1887,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/271",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 3039,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/main/scripts/export-approved-palette.mjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 3040,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/main/dist/approved-palette-reference.manifest.json",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 3041,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/design-system/pins/vis-002/v0.1.0/PIN.json",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 3042,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/main/docs/VIS002C_CONTEXTUAL_MAPPING_V0_3_0.json",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 3043,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/design-system/pins/vis-002/context-v0.3.0/PIN.json",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 3044,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/.github/workflows/development-public-contrast-semantic.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 3045,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/tests/vis002c-v03-scoped-raster.mjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 3046,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/evidence/architecture/ds05a-current-product-css-provenance-2026-11-15.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 3047,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/271",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 3048,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/208",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 3049,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/issues/216",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 4870,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/scripts/compile-primary-pages.mjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 4871,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/architecture/fragments/primary-header.fragment.html",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 4872,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/landing/header-menu.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 4873,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/ui-theme.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 4874,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/private-navigation.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 4875,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/scene-component.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 4876,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/presentation-contract.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 4877,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/269",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 4878,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/tests/viewer-secondary-header-browser-gate.mjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 4879,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/tests/public-header-controller-gate.mjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 4880,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/tests/how-accordion-grid-browser-gate.mjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 4881,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/evidence/architecture/g3-control-families-static-matrix-2026-11-13.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 4882,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/docs/architecture/ui-adr-004-cross-page-reuse-gate-2026-10-20.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 4883,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/docs/architecture/dom-js-component-ownership-2026-10-20.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 5035,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/274",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6706,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/administration-v5.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6707,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/published-buyer-projection.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6708,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/public-module-projection.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6709,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/published-configuration.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6710,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/v5-normal-save.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6711,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/flow-model.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6712,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/flow-layout.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6713,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/pricing-contract.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6714,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/app/core/pricing.js",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6718,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/netlify/functions/configuration.mjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6719,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/netlify/functions/buyer-configuration.mjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6720,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/netlify/functions/public-modules.mjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6724,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/docs/architecture/viewer-base-price-publication-main-2026-10-21.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6725,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/tests/viewer-base-price-publication.test.cjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6726,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/tests/viewer-base-price-browser-gate.mjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6727,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/main/docs/ARCHITECTURE_DECISIONS_ARC01_ARC16_AND_EXECUTION_2026-10-21.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6728,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/docs/arc13-post-273-reconciliation-20261114/docs/architecture/arc13/inventory-reconciliation-post-277-2026-11-16.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6729,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/docs/architecture/ARC15_ASSERTION_MATRIX_PUBLISHED_CONFIG_2026-11-16.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 6876,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/280",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 7786,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/278",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8840,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8841,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/docs/architecture/ARC15_ASSERTION_MATRIX_PUBLISHED_CONFIG_2026-11-16.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8842,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/docs/architecture/ci-authority-contract-2026-10-05.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8843,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/docs/architecture/ARCHITECTURE_EXECUTION_CROSSWALK_2026-11-15.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8847,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/.github/workflows/app-build-purity.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8848,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/.github/workflows/candidate-assets.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8849,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/.github/workflows/arc03c-static-page-build-gate.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8850,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/.github/workflows/p-comp-01-public-menu-gate.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8851,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/.github/workflows/viewer-base-price-contract-gate.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8852,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/.github/workflows/keyboard-browser.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8853,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/.github/workflows/flow-layout-browser.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8854,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tests/ci/local-buyer-config-server.mjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8855,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tests/ci/prepare-local-v5-browser.sh",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8859,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/280",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8860,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/278",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8861,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/279",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8862,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tests/ui-theme-contract.cjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8863,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tests/arc03c-source-authority.test.mjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8864,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tests/exposed-sides-glass.cjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 8865,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tests/home-hero-phone-geometry-browser.cjs",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10943,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10944,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10945,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/main/docs/APPROVALS_D01_D04_2026-10-26.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10946,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/docs/handoffs/HANDOVER_DEVELOPMENT_2026-10-27.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10947,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/docs/architecture/ARCHITECTURE_EXECUTION_CROSSWALK_2026-11-15.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10951,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/269",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10952,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/271",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10953,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/274",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10954,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/278",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10955,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/279",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10956,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/280",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10957,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/pull/119",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10961,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tools/branch_hygiene_observe.py",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10962,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tools/branch_hygiene_plan.py",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10963,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tools/branch_hygiene_apply.py",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10964,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/tools/branch_hygiene_merged_pr_cleanup.py",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10965,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/.github/workflows/branch-hygiene-bounded.yml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10966,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/ops/branch-hygiene-batch.json",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10967,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/ops/branch-dispositions.json",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10971,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/netlify.toml",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 10972,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/main/docs/architecture/ci-authority-contract-2026-10-05.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 12387,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 12388,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 12389,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/main/docs/APPROVALS_D01_D04_2026-10-26.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 12390,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/docs/architecture/ARCHITECTURE_EXECUTION_CROSSWALK_2026-11-15.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 12391,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/blob/development/docs/handoffs/HANDOVER_DEVELOPMENT_2026-10-27.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 12392,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D_DesignSystem/blob/docs/architecture-status-20261109/docs/architecture/ARC15_VERIFICATION_INVENTORY_2026-11-15.md",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 12393,
+      "url": "https://docs.netlify.com/deploy/deploy-types/deploy-previews/",
+      "result": "content_opened_by_web_crawler"
+    },
+    {
+      "path": "docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md",
+      "line": 12394,
+      "url": "https://docs.netlify.com/build/configure-builds/stop-or-activate-builds/",
+      "result": "content_opened_by_web_crawler"
+    },
+    {
+      "path": "evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md",
+      "line": 60,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/275",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md",
+      "line": 78,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/41344513485",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md",
+      "line": 78,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/42720598449",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md",
+      "line": 141,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/241",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md",
+      "line": 254,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/272",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/architecture-g0-g8-current-checkpoint-2026-11-09.md",
+      "line": 323,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/271",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/g3-brand-logo-slots-post273-2026-11-14.md",
+      "line": 6,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/273",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/g3-brand-logo-slots-post273-2026-11-14.md",
+      "line": 7,
+      "url": "https://deploy-preview-273--mobilipresenter2d.netlify.app/",
+      "result": "unverified_web_crawler_inaccessible"
+    },
+    {
+      "path": "evidence/architecture/g3-brand-logo-slots-post273-2026-11-14.md",
+      "line": 30,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/275",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/g3-brand-logo-slots-post273-2026-11-14.md",
+      "line": 37,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/275",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/g3-brand-logo-slots-post273-2026-11-14.md",
+      "line": 37,
+      "url": "https://6af92098c6143a04fda931c0--mobilipresenter2d.netlify.app/",
+      "result": "ready_deploy_confirmed_by_provider"
+    },
+    {
+      "path": "evidence/architecture/g3-brand-logo-slots-static-audit-2026-11-13.md",
+      "line": 27,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/273",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/g3-brand-logo-slots-static-audit-2026-11-13.md",
+      "line": 37,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/275",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/product-branch-hygiene-post-277-2026-11-16.md",
+      "line": 10,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/277",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/product-main-post-277-readback-2026-11-16.md",
+      "line": 9,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/pull/277",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/product-main-post-277-readback-2026-11-16.md",
+      "line": 9,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/commit/efc40584c3f3ca940cf6cbca408f8fda31e3e1c9",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/product-main-post-277-readback-2026-11-16.md",
+      "line": 16,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448351",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/product-main-post-277-readback-2026-11-16.md",
+      "line": 16,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448699",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/product-main-post-277-readback-2026-11-16.md",
+      "line": 16,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448367",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/product-main-post-277-readback-2026-11-16.md",
+      "line": 16,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448359",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/product-main-post-277-readback-2026-11-16.md",
+      "line": 16,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448353",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/product-main-post-277-readback-2026-11-16.md",
+      "line": 16,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448384",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/product-main-post-277-readback-2026-11-16.md",
+      "line": 16,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448417",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/product-main-post-277-readback-2026-11-16.md",
+      "line": 16,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448443",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/product-main-post-277-readback-2026-11-16.md",
+      "line": 16,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448453",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/product-main-post-277-readback-2026-11-16.md",
+      "line": 16,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448357",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/product-main-post-277-readback-2026-11-16.md",
+      "line": 16,
+      "url": "https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448375",
+      "result": "resolved_by_github_api"
+    },
+    {
+      "path": "evidence/architecture/product-main-post-277-readback-2026-11-16.md",
+      "line": 17,
+      "url": "https://deploy-preview-277--mobilipresenter2d.netlify.app/",
+      "result": "unverified_web_crawler_inaccessible"
+    },
+    {
+      "path": "evidence/architecture/product-main-post-277-readback-2026-11-16.md",
+      "line": 18,
+      "url": "https://app.netlify.com/sites/mobilipresenter2d/deploys/6afa7bee50b552356a973df4",
+      "result": "ready_deploy_confirmed_by_provider"
+    },
+    {
+      "path": "evidence/architecture/product-main-post-277-readback-2026-11-16.md",
+      "line": 18,
+      "url": "https://casaemmodulos.casa/",
+      "result": "ready_deploy_alias_confirmed_by_provider"
+    },
+    {
+      "path": "evidence/architecture/product-main-post-277-readback-2026-11-16.md",
+      "line": 19,
+      "url": "https://casaemmodulos.casa/how-it-works/",
+      "result": "site_ready_route_not_fetched"
+    }
+  ]
+}
