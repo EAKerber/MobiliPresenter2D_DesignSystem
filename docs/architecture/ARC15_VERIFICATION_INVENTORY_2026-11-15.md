@@ -15,13 +15,13 @@
 Esta atualização preserva a baseline histórica `main46`, a matriz dos 21 workflows/21 comandos e as assertions existentes.
 
 - Product `main@dc066f55`; `development@acf12c4170401ceb822526a613d89657e26c6310`. A PR #286 foi integrada em development por squash depois de 9/9 workflows únicos aprovados no head `4680ddca`. O readback confirma a ponta da branch; não há Actions run no SHA do merge, pois as mudanças são filtros de workflows.
-- Product #287 segue Draft no head `a92404e484ebfe852695b2cb716602fecccd45ae`, baseado na main atual. Três gates automáticos e Viewer price passaram; o run `44803712089` concluiu testes Node, build e Playwright em Ubuntu 24.04. Preview está READY.
-- O Viewer price passou no head atual depois que o workflow fixou Ubuntu 24.04; o run exato executou Playwright cross-engine.
-- ARC-03C foi executado no head pai `30db98d7`: build/fonte passaram e a comparação de browser divergiu da baseline `303468b4` em `/about/320/light` (`rgb(34, 33, 31)` atual vs. `rgb(0, 0, 0)`). O delta até `a92404e4` é só o filtro do workflow Viewer; app/CSS não mudaram. Nenhuma assertion ou baseline foi afrouxada.
+- Product #287 segue Draft no head `26a2da331445ca2901d2851c0d37976a871ea875`, base `main@dc066f55`. Quatro gates passaram no SHA exato e o Preview #287 está READY no mesmo SHA. O diff final contém quatro workflows; o gatilho temporário de branch foi removido.
+- Product #281 segue Draft no head `173cb426f623abd7010117f148a0e12ea1edab82`, reconciliada à `main@dc066f55`. Seis workflows e Preview #281 passaram no SHA exato. Revisão hospedada autenticada dos shells privados permanece sem comprovação.
+- ARC-03C não foi alterado pela #287 e não foi rerun no head atual. O diagnóstico no head pai `30db98d7` passou build/fonte e divergiu da baseline `303468b4` em `/about/320/light` (`rgb(34, 33, 31)` atual vs. `rgb(0, 0, 0)`). A comparação está fazendo o que foi programado; a validade da baseline visual antiga para o estado atual precisa de reconciliação, sem afrouxar assertions nem atualizá-la por conveniência.
 - Product #274 segue Draft, head `6e0ca09f`, base antiga `efc40584`; 15/15 classificações técnicas LOC-002, todos os owners `null` e destinos `hold`; quatro gates passaram no head citado.
 - A amostra #286/#287 permanece ~15,7 job-min executados para 12 gates únicos, mais 18,28 min do Flow cancelado antes dos testes. É uma amostra não equivalente à baseline de 7,12 min e não sustenta remoção de testes. Required checks `UNKNOWN`.
 - O Product tem 13 refs observadas, acima do soft cap 5; nenhuma ref foi excluída por contagem. A lista de branches deve ser reavaliada com preservação de proveniência.
-- Próximo passo: reconciliar a baseline histórica do ARC-03C sem enfraquecer assertions e retirar os triggers temporários de branch antes de qualquer integração de #287.
+- Próximos passos: obter revisão visual dos shells privados da #281; decidir a promoção da #287, que altera somente triggers de CI e teve 4/4 gates verdes; reconciliar baseline ARC-03C com autoridade visual, sem enfraquecer o contrato.
 
 ## Addendum live — 18/11/2026 (BRT)
 

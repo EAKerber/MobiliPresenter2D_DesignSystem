@@ -6,17 +6,17 @@
 
 ## Ponteiro operacional — 20/11/2026 (BRT)
 
-**Pins verificados:** Product `main@dc066f55619824626ea4752ecc0bafc67f9d9110`; Product `development@acf12c4170401ceb822526a613d89657e26c6310`; Design System `main@c9da1095829cabe63e9ae6618af48b6f3ee1fa1b` (base da PR #120: `2e7c1a86fb4fcaf03aac9605c613ae8a9878971a`).
+**Pins verificados antes desta atualização:** Product `main@dc066f55619824626ea4752ecc0bafc67f9d9110`; Product `development@acf12c4170401ceb822526a613d89657e26c6310`; Design System `main@c128424d8ad48a48d56a753a8fbdf0215113faaf` (PR #121 integrada; base documental com evidência em `c9da1095829cabe63e9ae6618af48b6f3ee1fa1b`).
 
 - **Product #286:** integrada por squash em `development`; a ponta atual de `development` é o commit `acf12c4170401ceb822526a613d89657e26c6310`. Os nove gates únicos passaram no head da PR `4680ddca92ea4cbab0366994e306d3288a4f1151`. A consulta live confirmou que não houve run no SHA do merge; os ajustes são somente de filtros de workflow.
-- **Product #287:** Draft, head `a92404e484ebfe852695b2cb716602fecccd45ae`, base `main@dc066f55`. Três gates automáticos e Viewer price passaram nesse head; o run `44803712089` concluiu Playwright Chromium/WebKit, testes Node e build em Ubuntu 24.04. O preview está READY. O ARC-03C foi diagnosticado no head pai `30db98d7` e divergiu da baseline antiga; o único delta até o atual é o filtro do workflow Viewer, sem mudança em páginas/CSS.
-- O ARC-03C foi executado no head pai `30db98d7`: build/fonte passaram e a comparação de browser divergiu da baseline `303468b4` em `/about/320/light` (`rgb(34, 33, 31)` atual vs. `rgb(0, 0, 0)`). O único delta até `a92404e4` é o filtro do workflow Viewer; app/CSS não mudaram. Não houve rerun do ARC-03C no head atual.
+- **Product #287:** Draft, head `26a2da331445ca2901d2851c0d37976a871ea875`, base `main@dc066f55`. Quatro gates passaram nesse head (`44808609053`, `44808609090`, `44808609186`, `44808609027`); o Deploy Preview #287 está READY no mesmo SHA. O diff contém quatro workflows, sem páginas/CSS/runtime.
+- ARC-03C foi restaurado exatamente ao estado de `main` e não faz parte do diff da #287. O diagnóstico separado no head pai `30db98d7` passou build/fonte e divergiu da baseline imutável `303468b4` em `/about/320/light` (`rgb(34, 33, 31)` atual vs. `rgb(0, 0, 0)`). Não houve rerun ARC no head atual; a baseline permanece sem alterações.
 - **Product #274:** Draft, head `6e0ca09ff7bb9c6255cf7bed2af7964304a3bcb2`, base antiga `efc40584`. LOC-002 classifica tecnicamente 15/15 registros; owners permanecem `null` e destinos `hold`. Quatro gates passaram no head citado; a aprovação semântica/editorial continua pendente.
-- **Product #281:** Draft, head `7f107b2566b61410e6f38d6477e4873015346f00`, ainda baseada na main antiga `efc40584`. Os seis workflows descritos na PR passaram nesse head; antes de integração, é necessário reconciliar a base e revalidar os gates aplicáveis.
-- O Product tem 13 branches remotas observadas, acima do soft cap 5. Isto aciona revisão, não exclusão automática; nenhuma branch foi removida nesta atualização. O Design System tem duas refs: `main` e a branch documental desta PR.
-- A PR #120, documental, foi integrada por squash à Design System `main` em `c9da1095829cabe63e9ae6618af48b6f3ee1fa1b`; ela não altera o runtime do Produto. Não foram executados testes locais nesta atualização, e não houve publicação do Produto. Required checks permanecem `UNKNOWN`.
+- **Product #281:** Draft, head `173cb426f623abd7010117f148a0e12ea1edab82`, reconciliada com `main@dc066f55`. Os seis workflows passaram no head exato; o Deploy Preview #281 está READY no mesmo SHA. A validação de navegador usa fixture local anônima; revisão hospedada autenticada dos shells privados ainda não foi comprovada.
+- O Product tem 13 branches remotas observadas, acima do soft cap 5. Isto aciona triagem, não exclusão automática; nenhuma branch foi removida nesta atualização. O Design System tem duas refs: `main` e uma branch documental ativa.
+- A PR #120, documental, foi integrada por squash em `c9da1095829cabe63e9ae6618af48b6f3ee1fa1b`; a correção do handover #121 foi integrada em `c128424d8ad48a48d56a753a8fbdf0215113faaf`. Nenhuma altera o runtime do Produto. Este lote de atualização documental não executou testes locais nem publicou o Produto. Required checks permanecem `UNKNOWN`.
 
-**Próximos passos:** reconciliar a baseline ARC-03C com a main vigente sem afrouxar o contrato, retirar triggers temporários de branch antes de qualquer integração para main e revalidar cada pacote contra sua branch de destino.
+**Próximos passos:** manter #287 Draft até revisão da mudança de CI; concluir a revisão visual dos shells privados da #281 antes de promoção; reconciliar a baseline ARC-03C sem afrouxar o contrato; fechar pendências editoriais LOC-002 quando houver owners/fontes. Nenhuma branch foi apagada por contagem.
 
 ## Continuidade do plano v0.9 — 20/11/2026 (BRT)
 
@@ -53,14 +53,14 @@ O crosswalk dos 21 workflows e 21 comandos está em [MD-004 workflow crosswalk �
 
 **Integração em development:** #286 passou 9/9 gates únicos no head da PR `4680ddca` e foi integrada por squash. O readback da branch confirma `development@acf12c4170401ceb822526a613d89657e26c6310`. Não há run de Actions associado ao SHA do merge; o pacote modifica somente arquivos de workflow.
 
-**Port seletivo para main:** #287 permanece Draft em `a92404e4`, base `main@dc066f55`; três gates automáticos e Viewer price passaram no head exato. ARC-03C foi diagnosticado no head pai `30db98d7`: build/fonte passaram, mas a comparação de browser divergiu da baseline antiga em `/about/320/light`. O único delta até o head atual é o workflow Viewer. Nenhuma asserção ou baseline foi afrouxada; #287 não foi integrada.
+**Port seletivo para main:** #287 permanece Draft em `26a2da33`, base `main@dc066f55`; os quatro gates relevantes e preview passaram no head exato. O diff é somente quatro workflows; ARC-03C foi retirado do diff e seu trigger temporário removido. A divergência no head pai `30db98d7` contra a baseline antiga continua como diagnóstico separado. Nenhuma asserção ou baseline foi afrouxada; #287 não foi integrada.
 
 Required checks permanecem `UNKNOWN`. Passar em workflow de PR não comprova deployment nem validação de comportamento hospedado.
 
 ### Frentes restantes e próxima sequência
 
 - **LOC-002:** manter os 15 owners/destinos em `null`/`hold`. A revisão técnica não identifica quem responde pelo conteúdo, e inventar owners ou wording seria uma decisão editorial sem base. Se surgir um owner ou fonte factual, esse é um ponto para pergunta objetiva; a classificação e revisão assistiva podem continuar em paralelo.
-- **MD-004:** crosswalk 21/21 concluído. #286 foi integrada em `development@acf12c41` após 9/9 gates verdes no head da PR. #287 tem 4/4 gates de aplicação verdes em `a92404e4`; o Viewer price passou após fixar Ubuntu 24.04. ARC-03C continua com divergência registrada contra a baseline histórica no head pai, sem alteração de app/CSS. Nenhum teste foi removido.
+- **MD-004:** crosswalk 21/21 concluído. #286 foi integrada em `development@acf12c41` após 9/9 gates verdes no head da PR. #287 tem 4/4 gates verdes em `26a2da33`; Viewer roda em PR para `main` e runner Ubuntu 24.04. Os filtros temporários foram retirados. ARC-03C segue como divergência registrada contra a baseline histórica no head pai, sem alteração de app/CSS. Nenhum teste foi removido.
 - **G2 / DS-05A e derivados de pedra:** preservados em HOLD enquanto faltarem configuração hospedada válida e a capacidade de replay por Pillow/DNS; não regravar hashes nem baselines.
 - **GIT-014 / integração:** concluída para o pacote documental da PR #119, com readback e retirada da branch. Para cada pacote seguinte, preservar PR, gate, preview e readback como estados separados.
 
@@ -74,7 +74,7 @@ Required checks permanecem `UNKNOWN`. Passar em workflow de PR não comprova dep
 | #278 | geometria do hero | Draft — `69b98cbd2466338574068898f7755e1f6f68b852` |
 | #279 | despacho UX-04 | Draft — `ffa288d181f0c53148e5a6b9ba69d3d8a5631651` |
 | #280 | replay de vidro | Draft — `bf685e22338597f47d240c616473085d86a22cb8` |
-| #281 | tema e gates de assets | Draft — `7f107b2566b61410e6f38d6477e4873015346f00` |
+| #281 | tema e gates de assets | Draft — `173cb426f623abd7010117f148a0e12ea1edab82` |
 
 Os sete Deploy Previews estão em success/READY; os checks aplicáveis estão verdes, com resultados neutral/skipped conforme os workflows. O Product mantém 9 refs: sete branches ligadas a PRs abertas, `development` e `main`. As branches integradas das PRs #282 e #283 foram retiradas após readback. O Design System mantém 1 ref (`main`); a branch da #119 foi retirada após integração e preservação. O soft cap do Product segue como gatilho de revisão, não hard cap nem autorização para descartar PR ativa.
 
