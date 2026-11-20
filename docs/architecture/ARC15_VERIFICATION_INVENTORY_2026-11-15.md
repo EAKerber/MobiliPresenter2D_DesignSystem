@@ -10,6 +10,16 @@
 **Incremento de triagem — gate de teclado pós-#277 (16/11/2026):** a PR #269 levou à revisão da falha de Tab em `/config/`. Antes da instrumentação, a asserção e o código do Configurador eram iguais na `main` e na candidata; o CSS da PR atua apenas no header público. O gate usa V5 loopback derivado dos defaults, com checkbox do primeiro módulo habilitado. A falha em `6651342` ocorreu uma vez e o rerun do mesmo SHA passou. No head `8c77350b`, 12/12 Actions passaram após o teste confirmar o foco inicial e manter a expectativa original de Tab para o botão de inspeção. Classificação provisória: falha intermitente/diagnóstico insuficiente do gate, sem evidência de regressão funcional. Este caso é evidência de PR, não altera a matriz de assertions pinada em main46 nem a contagem dos 21 comandos/workflows.
 
 
+## Addendum live — leitura após gates e classificação LOC-002 — 20/11/2026 (BRT)
+
+Esta leitura amplia o estado operacional sem alterar a baseline histórica `main46`, a contagem de 21 workflows/21 comandos ou os pareceres de assertions.
+
+- Product #274, head `6e0ca09ff7bb9c6255cf7bed2af7964304a3bcb2`, continua Draft e aberta sobre base antiga `main@efc40584`; não houve rebase nem integração. O overlay LOC-002 atribui classe técnica a 15/15 registros; os 15 owners permanecem `null`, os destinos `hold`, e wording/chaves/extração/qualidade assistiva seguem sem aprovação. ARC-13, configuração, skip-link e ativos passaram no head exato.
+- Product #286 concluiu 9/9 gates únicos. A primeira tentativa do Flow ficou 18,28 min na instalação do browser, foi cancelada antes dos testes e teve seus testes pulados; o rerun do job passou e levou 2,00 min.
+- A amostra concluída de 12 gates únicos entre #286/#287 soma ~15,7 job-min executados, excluindo skips e a tentativa cancelada. Incluindo a instalação cancelada, o total observado é ~34,0 job-min. Keyboard foi o maior gate concluído (7,53 min).
+- Os números incluem duas PRs e gates de camadas diferentes; não são comparáveis de forma direta com a baseline histórica de 7,12 job-min e não demonstram redundância. Nenhuma assertion/teste foi removido. Required checks continuam `UNKNOWN`.
+- Product #287 continua Draft, com 3/3 gates automáticos verdes. Viewer base-price e ARC-03C aguardam dispatch manual; ainda não há resultado, integração ou publicação.
+
 ## Addendum live — estado de MD-004 e higiene — 20/11/2026 (BRT)
 
 Este registro atualiza o andamento sem alterar a baseline histórica `main46` nem a contagem histórica dos 21 workflows/21 comandos.

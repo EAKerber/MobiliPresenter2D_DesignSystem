@@ -6,6 +6,15 @@
 
 ## Ponteiro operacional — 20/11/2026 (BRT)
 
+### Atualização live — LOC-002 e MD-004 — 20/11/2026 (BRT)
+
+- Product #274 segue Draft e aberta em `6e0ca09ff7bb9c6255cf7bed2af7964304a3bcb2`, base antiga `main@efc40584`; a main corrente é `dc066f55`. O overlay classifica 15/15 registros LOC-002; todos mantêm `contentOwner=null` e `destination=hold`. Os quatro gates de ARC-13, limites de configuração, foco do skip link e ativos passaram no head exato. Isso não aprova wording, chave, extração ou qualidade assistiva.
+- #286 concluiu 9/9 gates únicos no head de `development`; o Flow foi cancelado uma vez durante a instalação do browser (18,28 min, sem executar os testes) e passou no rerun (2,00 min).
+- Nos 12 gates únicos da #286/#287 já concluídos, os jobs executados somaram aproximadamente 15,7 job-min; excluindo skips e tentativa cancelada. A instalação cancelada acrescenta 18,28 job-min, total observado de aproximadamente 34,0 job-min. Keyboard foi o maior gate concluído (7,53 min).
+- Essa amostra mistura duas PRs, bases e gates diferentes; não é comparação equivalente com os 7,12 job-min da baseline histórica nem evidência de assertions redundantes. A leitura de overlap não encontrou base para remover testes. Required checks seguem `UNKNOWN`.
+- #287 tem 3/3 gates automáticos verdes. Viewer base-price e ARC-03C ainda aguardam dispatch manual depois da autenticação do GitHub no navegador. Sem integração ou publicação.
+
+
 - Product `main@dc066f55619824626ea4752ecc0bafc67f9d9110` e `development@205cc83363e3ace1a0ba7d8b2b44c96c62e1d857`.
 - A PR [#286](https://github.com/EAKerber/MobiliPresenter2D/pull/286) está aberta para revisão em `development`, head `4680ddca92ea4cbab0366994e306d3288a4f1151`: nove workflows YAML, 85 inclusões e dois globs amplos substituídos por listas por evento. Os nove gates únicos passaram; o primeiro Flow foi cancelado durante instalação do browser e o rerun do mesmo job passou layout, paridade e breakpoints ([run 44789052605](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44789052605)). A PR não foi integrada.
 - A PR [#287](https://github.com/EAKerber/MobiliPresenter2D/pull/287) está Draft e aberta para `main@dc066f55619824626ea4752ecc0bafc67f9d9110`, head `083d83d53f66442148eff2b1817a315aa5e418c5`. Os três gates automáticos passaram (About/skip-link, smoke somente-leitura de Production e pin VIS-002C). Contrato de preço do Viewer e ARC-03C aguardam dispatch manual; ainda não foram executados.
