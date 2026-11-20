@@ -7,7 +7,7 @@
 ## Ponteiro operacional — 19/11/2026 (BRT)
 
 - Product `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9`; #274 continua Draft no head `a9c39c8220bcbccefea4cf74e666445d35ccf1d9`. Buyer boundary, ARC-13 determinism/provenance, asset gates, foco do skip link e Deploy Preview passaram neste head. Nenhuma alteração foi integrada à `main`.
-- Design System `main@79db735d6f05177b0c406e383d35832f3d72fdef`; #119 continua aberta e Draft na branch `docs/architecture-status-20261109`. Esta retomada acrescenta o recibo GIT-018 e atualiza este ponteiro; aguardar o check documental no novo head antes de tratar o preflight como validado.
+- Design System `main@79db735d6f05177b0c406e383d35832f3d72fdef`; #119 continua aberta e Draft na branch `docs/architecture-status-20261109`. Esta retomada acrescenta o recibo GIT-018 e atualiza este ponteiro. O check documental do head corrente da PR é a referência executável; consultar a seção Checks antes de considerar o preflight validado.
 - Os blocos datados abaixo de 18/11 e anteriores permanecem snapshots históricos. Para o estado corrente, use este bloco e a continuidade de 19/11 abaixo.
 
 ## Continuidade do plano v0.9 — 19/11/2026 (BRT)
