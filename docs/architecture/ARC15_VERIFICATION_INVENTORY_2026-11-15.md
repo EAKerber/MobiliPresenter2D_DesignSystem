@@ -15,9 +15,9 @@
 Esta atualização preserva a baseline histórica `main46`, a matriz dos 21 workflows/21 comandos e as assertions existentes.
 
 - Product `main@dc066f55`; `development@acf12c4170401ceb822526a613d89657e26c6310`. A PR #286 foi integrada em development por squash depois de 9/9 workflows únicos aprovados no head `4680ddca`. O readback confirma a ponta da branch; não há Actions run no SHA do merge, pois as mudanças são filtros de workflows.
-- Product #287 segue Draft no head `30db98d728fc2cd4c578c1081053d0bf7b8b3e47`, baseado na main atual. Os três gates automáticos passaram.
-- O Viewer price permanece sem resultado no head atual. O run anterior em Ubuntu 26.04 falhou dentro do passo Playwright; o workflow candidato agora fixa Ubuntu 24.04. A execução corrigida ainda não foi disparada.
-- ARC-03C passou build/fonte e falhou comparação de browser em `/about/320/light`: header atual `rgb(34, 33, 31)` contra baseline `303468b4` com `rgb(0, 0, 0)`. A PR não altera app/CSS; nenhuma assertion ou baseline foi afrouxada.
+- Product #287 segue Draft no head `a92404e484ebfe852695b2cb716602fecccd45ae`, baseado na main atual. Três gates automáticos e Viewer price passaram; o run `44803712089` concluiu testes Node, build e Playwright em Ubuntu 24.04. Preview está READY.
+- O Viewer price passou no head atual depois que o workflow fixou Ubuntu 24.04; o run exato executou Playwright cross-engine.
+- ARC-03C foi executado no head pai `30db98d7`: build/fonte passaram e a comparação de browser divergiu da baseline `303468b4` em `/about/320/light` (`rgb(34, 33, 31)` atual vs. `rgb(0, 0, 0)`). O delta até `a92404e4` é só o filtro do workflow Viewer; app/CSS não mudaram. Nenhuma assertion ou baseline foi afrouxada.
 - Product #274 segue Draft, head `6e0ca09f`, base antiga `efc40584`; 15/15 classificações técnicas LOC-002, todos os owners `null` e destinos `hold`; quatro gates passaram no head citado.
 - A amostra #286/#287 permanece ~15,7 job-min executados para 12 gates únicos, mais 18,28 min do Flow cancelado antes dos testes. É uma amostra não equivalente à baseline de 7,12 min e não sustenta remoção de testes. Required checks `UNKNOWN`.
 - O Product tem 13 refs observadas, acima do soft cap 5; nenhuma ref foi excluída por contagem. A lista de branches deve ser reavaliada com preservação de proveniência.

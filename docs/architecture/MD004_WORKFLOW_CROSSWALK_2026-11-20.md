@@ -8,8 +8,8 @@
 
 - Product `main@dc066f55619824626ea4752ecc0bafc67f9d9110`; `development@acf12c4170401ceb822526a613d89657e26c6310`.
 - #286 foi integrada por squash em development depois de 9/9 gates únicos verdes no head `4680ddca`. O readback confirma o merge como ponta de development; a consulta de Actions não encontrou runs no SHA do merge. O pacote altera somente filtros YAML.
-- #287 permanece Draft no head `30db98d728fc2cd4c578c1081053d0bf7b8b3e47`, base exata `main@dc066f55`. Três gates automáticos passaram. A execução Viewer price nesse head ainda falta: o workflow agora fixa Ubuntu 24.04 após o run no SHA anterior falhar em Ubuntu 26.04, no passo Playwright.
-- ARC-03C no head #287 passou build/fonte e falhou somente na comparação de browser contra baseline histórica `303468b4`, em `/about/320/light`: header atual `rgb(34, 33, 31)`, esperado `rgb(0, 0, 0)`. #287 não altera páginas/CSS; nenhuma asserção ou baseline foi alterada.
+- #287 permanece Draft no head `a92404e484ebfe852695b2cb716602fecccd45ae`, base exata `main@dc066f55`. Três gates automáticos e o Viewer price passaram nesse head. O run `44803712089` confirmou testes Node, build e Playwright cross-engine com Ubuntu 24.04.
+- ARC-03C foi executado no head pai `30db98d728fc2cd4c578c1081053d0bf7b8b3e47`: build/fonte passaram; a comparação de browser divergiu da baseline histórica `303468b4` em `/about/320/light` (`rgb(34, 33, 31)` atual vs. `rgb(0, 0, 0)`). O delta até `a92404e4` é apenas o filtro do workflow Viewer; páginas/CSS não mudaram. Nenhuma asserção ou baseline foi alterada.
 - #274 continua Draft sobre base anterior; tem 15/15 classificações técnicas LOC-002 e quatro gates verdes, mas owners/destinos continuam pendentes. Nenhuma classificação implica aprovação editorial.
 - Nenhum teste foi removido. Required checks e associação de resultado a deployment permanecem `UNKNOWN`.
 
