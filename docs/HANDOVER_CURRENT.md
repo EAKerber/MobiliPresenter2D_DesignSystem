@@ -10,13 +10,13 @@
 
 - **Product #286:** integrada por squash em `development`; a ponta atual de `development` é o commit `acf12c4170401ceb822526a613d89657e26c6310`. Os nove gates únicos passaram no head da PR `4680ddca92ea4cbab0366994e306d3288a4f1151`. A consulta live confirmou que não houve run no SHA do merge; os ajustes são somente de filtros de workflow.
 - **Product #287:** Draft, head `a92404e484ebfe852695b2cb716602fecccd45ae`, base `main@dc066f55`. Três gates automáticos e Viewer price passaram nesse head; o run `44803712089` concluiu Playwright Chromium/WebKit, testes Node e build em Ubuntu 24.04. O preview está READY. O ARC-03C foi diagnosticado no head pai `30db98d7` e divergiu da baseline antiga; o único delta até o atual é o filtro do workflow Viewer, sem mudança em páginas/CSS.
-- O ARC-03C no head atual passou o build e as verificações de fonte, mas falhou a comparação de browser em `/about/320/light`: `rgb(34, 33, 31)` contra `rgb(0, 0, 0)` na baseline estática `303468b4`. A PR altera apenas workflows; isso não prova regressão do produto. Nenhuma assertion ou baseline foi afrouxada.
+- O ARC-03C foi executado no head pai `30db98d7`: build/fonte passaram e a comparação de browser divergiu da baseline `303468b4` em `/about/320/light` (`rgb(34, 33, 31)` atual vs. `rgb(0, 0, 0)`). O único delta até `a92404e4` é o filtro do workflow Viewer; app/CSS não mudaram. Não houve rerun do ARC-03C no head atual.
 - **Product #274:** Draft, head `6e0ca09ff7bb9c6255cf7bed2af7964304a3bcb2`, base antiga `efc40584`. LOC-002 classifica tecnicamente 15/15 registros; owners permanecem `null` e destinos `hold`. Quatro gates passaram no head citado; a aprovação semântica/editorial continua pendente.
 - **Product #281:** Draft, head `7f107b2566b61410e6f38d6477e4873015346f00`, ainda baseada na main antiga `efc40584`. Os seis workflows descritos na PR passaram nesse head; antes de integração, é necessário reconciliar a base e revalidar os gates aplicáveis.
 - O Product tem 13 branches remotas observadas, acima do soft cap 5. Isto aciona revisão, não exclusão automática; nenhuma branch foi removida nesta atualização. O Design System tem duas refs: `main` e a branch documental desta PR.
 - A PR #120 altera documentação/evidência, não o runtime. Não houve execução de testes locais, integração desta PR ou publicação. Required checks permanecem `UNKNOWN`.
 
-**Próximos passos:** concluir a execução corrigida do Viewer quando a automação do navegador voltar; tratar a divergência da baseline ARC-03C sem esconder o resultado; continuar revalidando pacotes contra sua branch de destino antes de integração.
+**Próximos passos:** reconciliar a baseline ARC-03C com a main vigente sem afrouxar o contrato, retirar triggers temporários de branch antes de qualquer integração para main e revalidar cada pacote contra sua branch de destino.
 
 ## Continuidade do plano v0.9 — 20/11/2026 (BRT)
 

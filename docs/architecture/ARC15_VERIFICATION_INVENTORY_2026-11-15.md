@@ -21,7 +21,7 @@ Esta atualização preserva a baseline histórica `main46`, a matriz dos 21 work
 - Product #274 segue Draft, head `6e0ca09f`, base antiga `efc40584`; 15/15 classificações técnicas LOC-002, todos os owners `null` e destinos `hold`; quatro gates passaram no head citado.
 - A amostra #286/#287 permanece ~15,7 job-min executados para 12 gates únicos, mais 18,28 min do Flow cancelado antes dos testes. É uma amostra não equivalente à baseline de 7,12 min e não sustenta remoção de testes. Required checks `UNKNOWN`.
 - O Product tem 13 refs observadas, acima do soft cap 5; nenhuma ref foi excluída por contagem. A lista de branches deve ser reavaliada com preservação de proveniência.
-- Próximo passo: concluir o run corrigido do Viewer e manter ARC-03C como divergência de baseline a reconciliar.
+- Próximo passo: reconciliar a baseline histórica do ARC-03C sem enfraquecer assertions e retirar os triggers temporários de branch antes de qualquer integração de #287.
 
 ## Addendum live — 18/11/2026 (BRT)
 
