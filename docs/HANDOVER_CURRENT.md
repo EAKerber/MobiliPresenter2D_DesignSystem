@@ -6,6 +6,14 @@
 
 ## Ponteiro operacional — 20/11/2026 (BRT)
 
+### Atualização live — gates #287 e LOC-002 — 20/11/2026 (BRT)
+
+- Product #274 segue Draft, head `6e0ca09ff7bb9c6255cf7bed2af7964304a3bcb2`, sobre base antiga `main@efc40584`. LOC-002 tem classes técnicas em 15/15; os 15 owners são `null` e destinos `hold`. ARC-13, limites de configuração, skip-link e ativos passaram no head exato. Sem rebase, aprovação de conteúdo ou integração.
+- Product #287 está Draft no head `30db98d728fc2cd4c578c1081053d0bf7b8b3e47`, base `main@dc066f55`. Os três gates automáticos passaram. A execução de Viewer price no head anterior falhou durante a instalação porque Ubuntu 26.04 não é compatível com Playwright 1.56.0; o runner foi fixado em Ubuntu 24.04, e a reexecução corrigida aguarda o controle do navegador.
+- ARC-03C foi executado no head atual. O build/fonte passou; a comparação visual falhou em `/about/320/light`, texto atual do header `rgb(34, 33, 31)` contra baseline estática `303468b4` com `rgb(0, 0, 0)`. Como o diff da PR contém apenas cinco workflows e nenhum app/CSS, o resultado identifica divergência entre a baseline antiga e a main corrente, sem evidência de regressão introduzida por #287. Nenhuma assertion ou baseline foi alterada.
+- A Actions UI não expõe dispatch do ARC-03C porque o arquivo da `main` ainda não tem `workflow_dispatch`. O gate foi executado por um push restrito à branch candidata e à mudança do próprio arquivo do workflow; esse recorte não amplia os demais eventos.
+- Medição atual de MD-004: 12 gates únicos #286/#287 somaram aproximadamente 15,7 job-min executados; a tentativa cancelada do Flow usou 18,28 min apenas instalando browser, elevando o total observado a ~34,0 job-min. Keyboard foi o maior gate concluído (7,53 min). A amostra combina PRs e gates diferentes e não demonstra redundância; nenhum teste foi removido. Required checks seguem `UNKNOWN`.
+
 ### Atualização live — LOC-002 e MD-004 — 20/11/2026 (BRT)
 
 - Product #274 segue Draft e aberta em `6e0ca09ff7bb9c6255cf7bed2af7964304a3bcb2`, base antiga `main@efc40584`; a main corrente é `dc066f55`. O overlay classifica 15/15 registros LOC-002; todos mantêm `contentOwner=null` e `destination=hold`. Os quatro gates de ARC-13, limites de configuração, foco do skip link e ativos passaram no head exato. Isso não aprova wording, chave, extração ou qualidade assistiva.
