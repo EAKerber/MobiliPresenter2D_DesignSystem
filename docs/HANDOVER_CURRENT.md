@@ -3,7 +3,37 @@
 **Snapshot histórico:** 26/10/2026, fuso `America/Sao_Paulo`.  
 **Destino:** recuperação histórica do trabalho daquele checkpoint.  
 **Prioridade registrada em 26/10:** estabilizar/reconciliar branches do Design System e não editar o produto até nova orientação. Essa restrição foi superada pela instrução explícita deste chat para continuar o plano de arquitetura nos dois repositórios.  
-**Retomada atual (18/11/2026, BRT):** Product `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9` e Design System `main@79db735d6f05177b0c406e383d35832f3d72fdef` continuam sem mudança. Product #269 está Draft em `8701bf488e0434e98b10defa7473b22cef72238a`; os 12 workflows de Actions passaram, incluindo o gate NAV-005 com integridade ARC-03C e 124 cenários de browser, e o Deploy Preview está READY. A #119 permanece Draft; seu último head validado antes deste handover era `7bab42bce4832a2cfab828759bad8aab1eb2466c`, com `plan` aprovado no run #44435258931. Esta atualização dispara nova execução documental. As sete PRs do Product seguem abertas contra `main`; nenhuma foi integrada nesta retomada.
+
+## Ponteiro operacional — 19/11/2026 (BRT)
+
+- Product `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9`; #274 continua Draft no head `a9c39c8220bcbccefea4cf74e666445d35ccf1d9`. Buyer boundary, ARC-13 determinism/provenance, asset gates, foco do skip link e Deploy Preview passaram neste head. Nenhuma alteração foi integrada à `main`.
+- Design System `main@79db735d6f05177b0c406e383d35832f3d72fdef`; #119 continua aberta e Draft na branch `docs/architecture-status-20261109`. Esta retomada acrescenta o recibo GIT-018 e atualiza este ponteiro; aguardar o check documental no novo head antes de tratar o preflight como validado.
+- Os blocos datados abaixo de 18/11 e anteriores permanecem snapshots históricos. Para o estado corrente, use este bloco e a continuidade de 19/11 abaixo.
+
+## Continuidade do plano v0.9 — 19/11/2026 (BRT)
+
+### ARC-13 / DOM-001
+
+O DoD documental de DOM-001 está satisfeito no candidato Product #274, head `a9c39c8220bcbccefea4cf74e666445d35ccf1d9`. O mapa associa autoridades, consumidores e verificações; a fronteira Buyer tem uma prova de CI que usa a política e leitura de cookie reais com provedores simulados; o gate ARC-13 regenera o JSON e confirma a proveniência das três páginas primárias. Passaram no head exato os [gates Buyer](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44445664910), [ARC-13](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44445665073), [ativos](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44445664757) e [foco do skip link](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44445664773). Isso não integra o candidato à `main`, não aprova conteúdo e não valida serviços hospedados.
+
+### GIT-018 / validação externa de links
+
+A leitura dos 29 Markdown alterados no SHA `f2ee002722cb39838b429b272ca2097d45ef7501` reproduziu 612 destinos inline: 244 arquivos locais, 15 âncoras e 353 ocorrências externas (256 URLs únicas). A contagem anterior 601/342 estava 11 URLs externos desatualizada. O relatório occurrence-level está em [git-018-external-link-check-2026-11-19.json](../evidence/architecture/git-018-external-link-check-2026-11-19.json).
+
+Dos 245 destinos GitHub únicos, 244 foram resolvidos pelo conector; ele não expõe o código HTTP bruto. Um link de artefato retornou 404 em duas tentativas; a execução pai [#43799448351](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/43799448351) ainda existe e terminou com sucesso, então apenas a disponibilidade do artefato está em dúvida. Entre os 11 destinos não-GitHub, quatro páginas de W3C/Netlify Docs abriram no rastreador, sem confirmação separada do status HTTP ou dos fragmentos. Sete previews/páginas não abriram pelo rastreador e permanecem inconclusivos; quatro desses têm evidência de recurso/deploy no Netlify (preview #275 pronto, deployment de produção pronto e domínio publicado), sem afirmar que cada rota foi buscada. Três aliases antigos de Preview seguem sem confirmação. “Não aberto pelo rastreador” não foi contado como link quebrado.
+
+O scanner original que produziu o total anterior não estava versionado nem identificado. O recibo registra a extração reproduzível, as linhas e URLs exatas, o método de cada consulta e os limites. A resolução local de links (244 destinos para 152 arquivos e um diretório) e das 15 âncoras permanece registrada no snapshot anterior; ainda não foi repetida nesta passagem.
+
+**Estado:** GIT-018 segue `in_progress`; não marcar a validação externa como total nem decidir integração. O diff da #119 passou a 95 caminhos (29 Markdown, 56 imagens, 7 dados, 2 scripts e 1 patch CSS), sem alterar runtime do Produto ou arquivos de aprovação.
+
+### Frentes restantes e próxima sequência
+
+- **LOC-002:** manter os 15 owners/destinos em `null`/`hold`. A revisão técnica não identifica quem responde pelo conteúdo, e inventar owners ou wording seria uma decisão editorial sem base. Se surgir um owner ou fonte factual, esse é um ponto para pergunta objetiva; a classificação e revisão assistiva podem continuar em paralelo.
+- **MD-004:** completar o crosswalk workflow → job → comando → fixture → assertion → contrato e medir a baseline comparável do Product `main`. A amostra da #269 não substitui a baseline nem demonstra que testes sejam redundantes.
+- **G2 / DS-05A e derivados de pedra:** preservados em HOLD enquanto faltarem configuração hospedada válida e a capacidade de replay por Pillow/DNS; não regravar hashes nem baselines.
+- **GIT-014 / integração:** o candidato documental está melhor provado, mas a integração/readback da `main` ainda não ocorreu. Concluir o preflight remanescente e manter as PRs Draft; não confundir gate, preview e integração.
+
+**Snapshot operacional preservado (18/11/2026, BRT):** Product `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9` e Design System `main@79db735d6f05177b0c406e383d35832f3d72fdef` continuam sem mudança. Product #269 está Draft em `8701bf488e0434e98b10defa7473b22cef72238a`; os 12 workflows de Actions passaram, incluindo o gate NAV-005 com integridade ARC-03C e 124 cenários de browser, e o Deploy Preview está READY. A #119 permanece Draft; seu último head validado antes deste handover era `7bab42bce4832a2cfab828759bad8aab1eb2466c`, com `plan` aprovado no run #44435258931. Esta atualização dispara nova execução documental. As sete PRs do Product seguem abertas contra `main`; nenhuma foi integrada nesta retomada.
 
 | PR | Frente | Estado/head revalidado |
 |---|---|---|
