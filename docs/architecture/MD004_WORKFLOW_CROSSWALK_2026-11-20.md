@@ -10,7 +10,7 @@
 - A #279 foi integrada em `main` como o 22º workflow: `.github/workflows/development-ux04-geometry.yml`, blob `96703ca3ae3c195153f10742134dca7aa69b0faf`. O workflow também está em `development@be743fd` com o mesmo blob e os arquivos necessários ao gate.
 - **Evento e proteção:** `workflow_dispatch` e `push` apenas em `development` nos caminhos declarados; `permissions: contents: read`; sem secrets, serviços externos ou runtime do Produto.
 - **Jobs:** arquivo/autoridade/testes estáticos (`unittest`, flow layout/model, hierarchy e `pages:check`); depois browser V5 local com geometria UX-04 e regressão completa de teclado Chromium. Os artefatos são dois JSONs, retidos por 14 dias.
-- **Estado:** o workflow foi integrado, mas não despachado. A automação do navegador retornou `Transport closed`; não há execução nem artefato a atribuir. Antes do primeiro dispatch, reler o SHA live de `development`, selecionar essa ref e registrar run/artefatos.
+- **Estado:** a execução histórica `41344513485` passou nos dois jobs em 2026-11-01 por `push` no SHA antigo `c7c2822d5b651ae0bcfcf0ac28c66cb61b645e98`; os artefatos não estão mais listados. Não há run no SHA atual `development@be743fd` (11 commits/44 arquivos depois, nove em `app/`). Portanto, esse sucesso histórico não fecha o gate no estado atual. O novo dispatch continua pendente; a automação do navegador retorna `Transport closed`. Revalidar o SHA live imediatamente antes de executar.
 - Nenhum teste foi removido. O delta não altera a baseline histórica dos 21 workflows nem define required checks.
 
 ## Snapshot histórico dos ports de trigger — 20/11/2026, antes das integrações #278–#280
@@ -46,7 +46,7 @@
 | `stone-browser.yml` | PR, push em `main`, dispatch; `app/**`, teste e helpers. | `test-runtime-contracts.js`, fixture V5, `stone-browser.cjs`; Chromium. | Estado legado reparado, toggle pedra/MDF/rodapé, canvas/pixels e ocultação dos hosts. | Helper usa build/pages-check; #286 adiciona `package.json` e compilador ao filtro. |
 | `summary-pricing-browser.yml` | PR, push em `main`, dispatch; `app/**`, teste e helpers. | Guards de ownership, `test-core.js`, fixture V5 e `summary-pricing-browser.cjs`; Chromium. | Totais persistidos, subtotal, cobrança global única, remoção/ativação do rodapé e preço da pedra sincronizados. | Helper usa build/pages-check; #286 adiciona `package.json` e compilador ao filtro. |
 
-| `development-ux04-geometry.yml` | `push` apenas em `development` com filtros de arquivo; `workflow_dispatch`. | Unit tests de autoridade, flow/model/hierarchy, `pages:check`; depois build Buyer V5 local, Playwright geometry/focus e keyboard browser. | Fixture V5 local e browser Chromium; publica dois JSONs de resultado com retenção de 14 dias. | Delta live: 22º workflow em `main` após #279. Ainda sem dispatch; primeiro run exige ref `development` e SHA relido. |
+| `development-ux04-geometry.yml` | `push` apenas em `development` com filtros de arquivo; `workflow_dispatch`. | Unit tests de autoridade, flow/model/hierarchy, `pages:check`; depois build Buyer V5 local, Playwright geometry/focus e keyboard browser. | Fixture V5 local e browser Chromium; publica dois JSONs de resultado com retenção de 14 dias. | Delta live: 22º workflow em `main` após #279. Histórico: run `41344513485` passou em `c7c2822` (2026-11-01); artefatos não estão mais listados. Sem run no `development@be743fd` atual; repetir no SHA live. |
 
 ## Síntese
 
