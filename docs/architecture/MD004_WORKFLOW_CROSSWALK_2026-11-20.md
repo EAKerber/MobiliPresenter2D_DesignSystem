@@ -4,13 +4,14 @@
 **Método:** leitura estática de eventos e filtros, jobs, comandos, imports/fixtures e assertions chamadas. O crosswalk descreve o contrato pretendido do gate; não transforma um run verde em confirmação de check obrigatório, deploy no mesmo SHA ou comportamento hospedado.  
 **Execuções:** esta leitura não dispara workflows. Os resultados listados abaixo são execuções separadas nos heads candidatos de #286 e #287; não definem required checks nem provam deployment.
 
-## Revalidação live — 21/11/2026
+## Revalidação live — 21/11/2026, atualização após #292
 
-- Product pins: main@5b29934150a8f939057fbd3ae14fd1c1511afd03, development@4850149342d013314635f4fa12b0599562d432b9. A tabela abaixo continua descrevendo a baseline histórica main@dc066f55; não é um inventário completo dos workflows atuais.
+- Product pins: main@5b29934150a8f939057fbd3ae14fd1c1511afd03, development@44c7cb6495540e4038717b26fb2b1e96b02571f4. A tabela abaixo continua descrevendo a baseline histórica main@dc066f55; não é um inventário completo dos workflows atuais.
 - #269, #271 e #281 estão integradas na main; Production está pronta no deploy 6b01d6e95f50b12695984d74, SHA 5b29934150a8f939057fbd3ae14fd1c1511afd03.
 - #291 (head 1f34543974ae64abd7d133baffab64f3a238953b) está pronta para revisão, ainda fora da main. Passaram ARC-13 (44934586742), Buyer (44934586734), assets (44934586750), NAV-005 (44934586866) e skip-link (44934586728); Deploy Preview READY. Nenhum run dessa PR atualiza a contagem da baseline da main.
-- #274 segue Draft na base antiga. #290 tenta apontar a main inteira para development, está mergeable=false, e não é seguro como veículo: compare exato indica 13 commits main-only contra 440 development-only. Required checks permanecem UNKNOWN.
-- UX-04 run 44838594398 é sucesso no SHA histórico development@be743fd; o development corrente está em 4850149. Não inferir validação do head atual.
+- #292 foi integrada em development@44c7cb6 após os gates ARC-13 e assets passarem no head exato da PR. A atualização do scanner e inventário não altera runtime público nem conta como gate pós-merge no SHA de integração.
+- #274 segue Draft na base antiga. #290 tenta apontar a main inteira para development, está mergeable=false, e não é seguro como veículo: compare exato indica 13 commits main-only contra 441 development-only. Required checks permanecem UNKNOWN.
+- UX-04 run 44838594398 é sucesso no SHA histórico development@be743fd; o development corrente está em 44c7cb6. Não inferir validação do head atual.
 
 **O delta UX-04 de 20/11 abaixo é um snapshot histórico.**
 

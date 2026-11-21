@@ -1,12 +1,13 @@
 # ARC-15 — Inventário de verificações do Produto
 
-## Revalidação live — 21/11/2026
+## Revalidação live — 21/11/2026, atualização após #292
 
-- Product pins: main@5b29934150a8f939057fbd3ae14fd1c1511afd03, development@4850149342d013314635f4fa12b0599562d432b9. A matriz tabular e a contagem de 21 workflows/21 comandos abaixo permanecem uma baseline histórica; uma enumeração integral da árvore atual ainda não foi realizada.
+- Product pins: main@5b29934150a8f939057fbd3ae14fd1c1511afd03, development@44c7cb6495540e4038717b26fb2b1e96b02571f4. A matriz tabular e a contagem de 21 workflows/21 comandos abaixo permanecem uma baseline histórica; uma enumeração integral da árvore atual ainda não foi realizada.
 - #269, #271 e #281 estão integradas na main; #281 está publicada no deploy Production pronto 6b01d6e95f50b12695984d74.
 - A proposta #291 (head 1f34543974ae64abd7d133baffab64f3a238953b) ainda não foi integrada. Seus gates ARC-13, autorização Buyer, assets, NAV-005 e foco de skip-link passaram; o Preview #291 está READY. Não contar seus dois workflows propostos como parte da main.
+- A #292 (head ed81efc06973aa78bc874537f2c3702560c9f79e) foi integrada por squash em development@44c7cb6 após ARC-13 e Current asset gates passarem no head exato. O buffer agora tem 1.012 candidatas unreviewed, com 411/411 ocorrências das páginas principais mapeadas; esse gate não altera a contagem histórica de workflows.
 - #274 continua Draft e obsoleta como port executável para a base atual; aguarda disposição após #291. #290 não é mergeável e não deve ser usado para reconciliação integral de main e development.
-- O UX-04 run 44838594398 passou em development@be743fd98063b19be5ee0614add21b8c85fb4a85; serve àquele SHA, enquanto development hoje está em 4850149. Ele não atualiza a matriz de workflows nem estabelece required checks.
+- O UX-04 run 44838594398 passou em development@be743fd98063b19be5ee0614add21b8c85fb4a85; serve àquele SHA, enquanto development hoje está em 44c7cb6. Ele não atualiza a matriz de workflows nem estabelece required checks.
 - Required checks e associação de gates a Production continuam UNKNOWN.
 
 **O delta UX-04 de 20/11 abaixo é um snapshot histórico.**
