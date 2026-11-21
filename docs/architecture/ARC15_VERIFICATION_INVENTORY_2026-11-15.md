@@ -1,6 +1,17 @@
 # ARC-15 — Inventário de verificações do Produto
 
-## Delta live pós-dispatch UX-04 — 20/11/2026
+## Revalidação live — 21/11/2026
+
+- Product pins: main@5b29934150a8f939057fbd3ae14fd1c1511afd03, development@4850149342d013314635f4fa12b0599562d432b9. A matriz tabular e a contagem de 21 workflows/21 comandos abaixo permanecem uma baseline histórica; uma enumeração integral da árvore atual ainda não foi realizada.
+- #269, #271 e #281 estão integradas na main; #281 está publicada no deploy Production pronto 6b01d6e95f50b12695984d74.
+- A proposta #291 (head 1f34543974ae64abd7d133baffab64f3a238953b) ainda não foi integrada. Seus gates ARC-13, autorização Buyer, assets, NAV-005 e foco de skip-link passaram; o Preview #291 está READY. Não contar seus dois workflows propostos como parte da main.
+- #274 continua Draft e obsoleta como port executável para a base atual; aguarda disposição após #291. #290 não é mergeável e não deve ser usado para reconciliação integral de main e development.
+- O UX-04 run 44838594398 passou em development@be743fd98063b19be5ee0614add21b8c85fb4a85; serve àquele SHA, enquanto development hoje está em 4850149. Ele não atualiza a matriz de workflows nem estabelece required checks.
+- Required checks e associação de gates a Production continuam UNKNOWN.
+
+**O delta UX-04 de 20/11 abaixo é um snapshot histórico.**
+
+### Snapshot de delta UX-04 — 20/11/2026
 
 - Pins atuais: Product `main@29e824e2f6c44af9c8f04fd9966ec3190f3637b8`; Product `development@be743fd98063b19be5ee0614add21b8c85fb4a85`.
 - Product main agora contém 22 arquivos de workflow. A matriz detalhada de 21 workflows/21 comandos abaixo continua sendo a baseline histórica pinada em `main46`; não deve ser lida como contagem atual.
@@ -9,7 +20,7 @@
 - Para futuras execuções, reler o SHA de `development` imediatamente antes do dispatch e preservar run/artefatos. Este resultado fecha somente o gate UX-04 no SHA citado; não altera a baseline histórica de 21 workflows nem define required checks.
 
 
-**Estado:** primeira passada e parecer Common Sense Judge dos oito itens sem invocação localizada concluídos sobre a baseline Product main46; três overlaps adicionais classificados. MD-004 tem agora uma amostra da main atual e uma lacuna concreta de trigger do Keyboard corrigida; o crosswalk integral assertion→risco→rota/estado e as demais discrepâncias continuam pendentes.
+**Estado da baseline histórica main46:** primeira passada e parecer Common Sense Judge dos oito itens sem invocação localizada concluídos sobre a baseline Product main46; três overlaps adicionais classificados. MD-004 tem agora uma amostra da main atual e uma lacuna concreta de trigger do Keyboard corrigida; o crosswalk integral assertion→risco→rota/estado e as demais discrepâncias continuam pendentes.
 **Fonte:** primeira passada em `EAKerber/MobiliPresenter2D` `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`; não representa o inventário pós-#275.
 **Revalidação live (16/11/2026):** Product `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9` foi conferida. Os oito artefatos revistos e `candidate-assets.yml` têm blobs idênticos entre essa main e `main46`, então os pareceres continuam aplicáveis sem mover a baseline histórica.
 **Método:** leitura dos contratos, comandos, gatilhos e áreas cobertas; classificação por risco/assertion/rota/estado, não por quantidade de arquivos.  
