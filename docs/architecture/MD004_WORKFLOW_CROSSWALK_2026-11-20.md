@@ -4,13 +4,13 @@
 **Método:** leitura estática de eventos e filtros, jobs, comandos, imports/fixtures e assertions chamadas. O crosswalk descreve o contrato pretendido do gate; não transforma um run verde em confirmação de check obrigatório, deploy no mesmo SHA ou comportamento hospedado.  
 **Execuções:** esta leitura não dispara workflows. Os resultados listados abaixo são execuções separadas nos heads candidatos de #286 e #287; não definem required checks nem provam deployment.
 
-## Delta live após a #279 — 20/11/2026
+## Delta live após o dispatch UX-04 — 20/11/2026
 
 - Pins atuais: Product `main@29e824e2f6c44af9c8f04fd9966ec3190f3637b8`; `development@be743fd98063b19be5ee0614add21b8c85fb4a85`. A branch principal contém 22 workflows; a tabela dos 21 itens abaixo é a baseline histórica pinada em `main@dc066f55`.
 - A #279 foi integrada em `main` como o 22º workflow: `.github/workflows/development-ux04-geometry.yml`, blob `96703ca3ae3c195153f10742134dca7aa69b0faf`. O workflow também está em `development@be743fd` com o mesmo blob e os arquivos necessários ao gate.
 - **Evento e proteção:** `workflow_dispatch` e `push` apenas em `development` nos caminhos declarados; `permissions: contents: read`; sem secrets, serviços externos ou runtime do Produto.
 - **Jobs:** arquivo/autoridade/testes estáticos (`unittest`, flow layout/model, hierarchy e `pages:check`); depois browser V5 local com geometria UX-04 e regressão completa de teclado Chromium. Os artefatos são dois JSONs, retidos por 14 dias.
-- **Estado:** a execução histórica `41344513485` passou nos dois jobs em 2026-11-01 por `push` no SHA antigo `c7c2822d5b651ae0bcfcf0ac28c66cb61b645e98`; os artefatos não estão mais listados. Não há run no SHA atual `development@be743fd` (11 commits/44 arquivos depois, nove em `app/`). Portanto, esse sucesso histórico não fecha o gate no estado atual. O novo dispatch continua pendente; a automação do navegador retorna `Transport closed`. Revalidar o SHA live imediatamente antes de executar.
+- **Estado atual:** o [run 44838594398](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/44838594398), disparado por `workflow_dispatch`, passou os dois jobs no SHA exato `development@be743fd98063b19be5ee0614add21b8c85fb4a85`. O artefato `development-ux04-geometry-focus-44838594398` (ID `14679149233`, 1.644 bytes, SHA-256 `ecb908825ae970d436b9bc995d9840a5416428edf82129f753345ac4421bf8f7`) está disponível até `2026-12-04T23:42:21Z`. O run usa V5 local; não prova preview hospedado nem configuração de checks obrigatórios.
 - Nenhum teste foi removido. O delta não altera a baseline histórica dos 21 workflows nem define required checks.
 
 ## Snapshot histórico dos ports de trigger — 20/11/2026, antes das integrações #278–#280

@@ -1,12 +1,12 @@
 # ARC-15 — Inventário de verificações do Produto
 
-## Delta live pós-#279 — 20/11/2026
+## Delta live pós-dispatch UX-04 — 20/11/2026
 
 - Pins atuais: Product `main@29e824e2f6c44af9c8f04fd9966ec3190f3637b8`; Product `development@be743fd98063b19be5ee0614add21b8c85fb4a85`.
 - Product main agora contém 22 arquivos de workflow. A matriz detalhada de 21 workflows/21 comandos abaixo continua sendo a baseline histórica pinada em `main46`; não deve ser lida como contagem atual.
 - A #279 foi integrada por squash em `main` e acrescentou somente `.github/workflows/development-ux04-geometry.yml`, blob `96703ca3ae3c195153f10742134dca7aa69b0faf`. O workflow já existe em `development@be743fd` com o mesmo blob e seus arquivos de teste/build estão presentes.
-- O workflow usa `workflow_dispatch`, `contents: read`, V5 local e Playwright; não pede secrets nem serviço hospedado. Há uma execução histórica bem-sucedida (#41344513485, push em 2026-11-01, SHA `c7c2822d5b651ae0bcfcf0ac28c66cb61b645e98`, os dois jobs verdes), mas seus artefatos já não estão listados. Ela não valida `development@be743fd` — 11 commits e 44 arquivos depois, incluindo nove em `app/`; não há run no SHA atual. O dispatch do SHA atual segue pendente; a automação do navegador/DevTools retorna `Transport closed`.
-- Quando o dispatch for possível, selecionar `ref=development`, reler e confirmar o SHA de `development` imediatamente antes, e guardar o run e os artefatos. Esta entrada não altera a baseline histórica nem redefine required checks.
+- O workflow usa `workflow_dispatch`, `contents: read`, fixture V5 local e Playwright; não pede secrets nem serviço hospedado. O run atual `44838594398` foi disparado manualmente em `development@be743fd98063b19be5ee0614add21b8c85fb4a85` e terminou `success`: `exact-archive-and-static-intent` e `live-local-browser` passaram. O artefato `development-ux04-geometry-focus-44838594398` (ID `14679149233`, 1.644 bytes, SHA-256 `ecb908825ae970d436b9bc995d9840a5416428edf82129f753345ac4421bf8f7`) expira em `2026-12-04T23:42:21Z`. A execução histórica `41344513485` em `c7c2822` permanece apenas como antecedente; o novo run é a prova vinculada ao SHA atual.
+- Para futuras execuções, reler o SHA de `development` imediatamente antes do dispatch e preservar run/artefatos. Este resultado fecha somente o gate UX-04 no SHA citado; não altera a baseline histórica de 21 workflows nem define required checks.
 
 
 **Estado:** primeira passada e parecer Common Sense Judge dos oito itens sem invocação localizada concluídos sobre a baseline Product main46; três overlaps adicionais classificados. MD-004 tem agora uma amostra da main atual e uma lacuna concreta de trigger do Keyboard corrigida; o crosswalk integral assertion→risco→rota/estado e as demais discrepâncias continuam pendentes.
