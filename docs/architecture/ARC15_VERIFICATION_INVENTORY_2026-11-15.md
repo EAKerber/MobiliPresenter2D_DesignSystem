@@ -1,3 +1,15 @@
+## Revalidação live — 22/11/2026 (BRT)
+
+- Pins: Product main@5b29934150a8f939057fbd3ae14fd1c1511afd03; development@9e352dbd2644e4e91c8fe533f92bf0a8827a840d; Design System main@43594dc5723bffd5acb42dad1cd8ee30bcd48778.
+- #271 e #281 permanecem integradas em main; Production segue no deploy 6b01d6e95f50b12695984d74.
+- #293 foi integrada em development após 14 checks verdes no head de PR. O pacote não recebeu Deploy Preview hospedado. A integração não altera a contagem histórica da baseline de 21 workflows.
+- #295 é uma correção de gates, não runtime: atualiza o pin de main e aguarda duas fases de layout após decode/eventos sintéticos no teste de fallback. Head atual 7d6f759337c67d0ffbb5733dfeaa294528708644; Current asset gates passou; workflow VIS-002C ainda estava em execução no último readback. Uma execução anterior falhou com mudança de altura 1246→734 px, evidência de estado inicial não assentado no WebKit; a nova execução deve confirmar o ajuste sem reduzir tolerância.
+- #291 continua pendente de autorização para main; #274 segue Draft e preserva 35 caminhos exclusivos para triagem. Required checks permanecem UNKNOWN.
+
+**Este addendum substitui somente os pins e estados operacionais acima; a matriz abaixo é baseline histórica, não inventário completo da árvore atual.**
+
+---
+
 # ARC-15 — Inventário de verificações do Produto
 
 ## Revalidação live — 21/11/2026, atualização após #292
