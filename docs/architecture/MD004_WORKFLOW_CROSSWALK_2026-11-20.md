@@ -1,3 +1,15 @@
+## Revalidação operacional live — 22/11/2026
+
+- Product pins: `main@5b29934150a8f939057fbd3ae14fd1c1511afd03`, `development@188f5074f60dc35df7aa8c673dbac4a2249813be`.
+- #271/#281 estão integradas em main e o deploy Production associado está ready.
+- #297 e #298 estão integradas em development; os gates seletivos passaram. Isso não estabelece que seus workflows sejam required checks.
+- PR #291: 12 checks sem falha e Deploy Preview READY, aguardando autorização explícita para main.
+- #274 continua Draft com artefatos históricos preservados. #290 segue inadequada para sincronização integral.
+- Compare entre branches: 13 commits main-only e 446 development-only a partir de `221b54b2`; não promover toda a árvore.
+- A tabela abaixo descreve uma baseline histórica, não cobertura atual completa. Required checks permanecem UNKNOWN.
+
+---
+
 ## Revalidação live — 22/11/2026 (BRT)
 
 - Pins: Product main@5b29934150a8f939057fbd3ae14fd1c1511afd03; development@9e352dbd2644e4e91c8fe533f92bf0a8827a840d. A matriz de 21 workflows abaixo continua sendo uma baseline histórica, não um inventário completo.

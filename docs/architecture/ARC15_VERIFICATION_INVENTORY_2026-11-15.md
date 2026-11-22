@@ -1,3 +1,16 @@
+## Revalidação operacional live — 22/11/2026
+
+- Product `main@5b29934150a8f939057fbd3ae14fd1c1511afd03`; `development@188f5074f60dc35df7aa8c673dbac4a2249813be`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
+- #271/#281 estão integradas na main; Production está ready no deploy `6b01d6e95f50b12695984d74`.
+- #297 integrou o porte seletivo do CSS da #271 e o inventário ARC-13 refeito para o HTML corrente. Os 13 gates da PR passaram; os gates pós-merge aplicáveis passaram em development.
+- #298 corrigiu a referência desatualizada da main no auditor NAV-005. O gate final passou após a integração, incluindo 48 cenários de header/navegação e 20 do Viewer.
+- #291 está pronta, com 12 check runs sem falha e Preview READY, mas ainda aguarda autorização explícita para alterar main.
+- #274 permanece Draft e seus documentos/revisões exclusivos foram preservados para triagem; #290 não é seguro para sincronização integral.
+- Product tem 13 refs, acima do soft cap 5; nenhuma ref foi excluída nesta rodada.
+- A matriz abaixo continua uma baseline histórica, não inventário completo da árvore atual. Required checks permanecem UNKNOWN.
+
+---
+
 ## Revalidação live — 22/11/2026 (BRT)
 
 - Pins: Product main@5b29934150a8f939057fbd3ae14fd1c1511afd03; development@9e352dbd2644e4e91c8fe533f92bf0a8827a840d; Design System main@43594dc5723bffd5acb42dad1cd8ee30bcd48778.

@@ -1,3 +1,20 @@
+## Estado live — 22/11/2026
+
+**Pins revalidados:** Product `main@5b29934150a8f939057fbd3ae14fd1c1511afd03`; Product `development@188f5074f60dc35df7aa8c673dbac4a2249813be`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
+
+- #271 e #281 estão integradas na `main`; a Production está pronta no deploy Netlify `6b01d6e95f50b12695984d74`, vinculada ao SHA `5b299341`.
+- #293, #295, #296, #297 e #298 foram incorporadas seletivamente ao buffer `development`. #297 levou os ajustes CSS da #271 e regenerou o inventário após a mudança de fonte. Os 13 gates da PR passaram; o gate ARC-13 pós-merge e os gates de browser/publicação passaram no SHA corrente ou no head exato registrado.
+- #298 atualizou a guarda de continuidade NAV-005 para distinguir a `main` corrente da referência histórica. A execução pós-merge `45055266232` passou, incluindo 48 cenários de navegação e 20 do Viewer.
+- #291 permanece pronta para revisão: head `1f34543974ae64abd7d133baffab64f3a238953b`, base `main@5b299341`, 12 check runs sem falha e Deploy Preview READY. A integração na `main` aguarda autorização explícita.
+- #274 continua Draft: preserva documentação e revisões úteis, mas o inventário está vinculado a snapshot anterior. Seus artefatos exclusivos seguem preservados para triagem; não integrar o pacote inteiro.
+- #290 continua não mergeável como sincronização integral. Compare atual: 13 commits exclusivos na `main`, 446 em `development`, base comum `221b54b2`.
+- O Product tem 13 branches, acima do soft cap 5. Não foram removidas refs nesta rodada; a triagem de branches integradas continua necessária e depende de autorização para alvos exatos.
+- A matriz de 21 workflows abaixo é histórica; a associação atual de required checks permanece UNKNOWN.
+
+**Próxima ordem:** (1) aguardar autorização para #291; (2) após eventual integração, verificar o SHA e o deploy de Production; (3) triar #274 e as branches integradas, preservando proveniência; (4) continuar a promoção seletiva sem sincronizar a árvore divergente inteira.
+
+---
+
 ## Revalidação operacional live — 22/11/2026 (BRT)
 
 **Pins:** Product main@5b29934150a8f939057fbd3ae14fd1c1511afd03; Product development@9e352dbd2644e4e91c8fe533f92bf0a8827a840d; Design System main@43594dc5723bffd5acb42dad1cd8ee30bcd48778.
