@@ -1,3 +1,12 @@
+## Revalidação live — 22/11/2026 (BRT)
+
+- Pins: Product main@5b29934150a8f939057fbd3ae14fd1c1511afd03; development@9e352dbd2644e4e91c8fe533f92bf0a8827a840d. A matriz de 21 workflows abaixo continua sendo uma baseline histórica, não um inventário completo.
+- #293 está integrada em development após 14 checks verdes no head exato da PR. Nenhum Deploy Preview foi produzido para o alvo development; a integração não é prova de revisão visual hospedada nem de Production.
+- #295 mantém o foco em dois gates: pin de main e assentamento do layout do fallback antes da comparação geométrica. O head 7d6f759337c67d0ffbb5733dfeaa294528708644 tinha Current asset gates verde; o workflow VIS-002C continuava em andamento no último readback. Não há evidência de required checks.
+- #291 aguarda autorização para main; #274 segue Draft, com 35 caminhos exclusivos preservados para triagem. Não promover a árvore inteira de development à main.
+
+---
+
 # MD-004 — crosswalk de workflows do Produto (baseline de 21)
 
 **Pin da baseline histórica (21 workflows):** Product `main@dc066f55619824626ea4752ecc0bafc67f9d9110` (20/11/2026 BRT).  
