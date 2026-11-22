@@ -1,6 +1,6 @@
 ## Readback operacional vigente — pós-#303 — 22/11/2026 (BRT)
 
-- Pins lidos: Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@1188e6e4f355aa4b2a4ab442b02388c8135390cf`; Design System `main@e0dea59ba196af0ed9e8563603f7a63670ca0d5d` (base before this documentation update).
+- Pins lidos: Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@1188e6e4f355aa4b2a4ab442b02388c8135390cf`; Design System `main@e0dea59ba196af0ed9e8563603f7a63670ca0d5d` (base observado antes desta atualização documental).
 - #303 foi integrada seletivamente em Product `development` com árvore igual ao head validado. Nove gates passaram no head e os checks pós-merge aplicáveis passaram; nenhum deploy de produto ocorreu.
 - CMP-017 avançou para cinco fatias, mas o DoD do Admin segue parcial: faltam outras famílias de controles, exceções e cobertura abrangente de teclado.
 - ARC-13 em `development`: 1.038 ocorrências candidatas `unreviewed`; zero erros de parsing; 420 ocorrências primárias mapeadas e zero sem proveniência; hash `AEF1700357190F908828C62878E91BF885BFFA7F20209913A9B9BAEB916834D3`.
@@ -10,7 +10,6 @@
 
 ---
 
----
 
 ## Readback após a publicação da #291 — 22/11/2026
 
