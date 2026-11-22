@@ -4,7 +4,7 @@
 - #299 e #300 foram integradas em `development`; todos os gates aplicáveis passaram nos heads exatos e os gates pós-merge de inventário, preço e navegador passaram no SHA atual. `Supabase Preview` foi skipped. `main` não mudou.
 - A matriz de 21 workflows abaixo é uma baseline histórica. Ela não representa a lista integral atual e não prova quais checks são obrigatórios; essa relação permanece `UNKNOWN`.
 - #290 segue como PR Draft `main`→`development`; comparar deltas seletivos. O compare atual tem 448 commits exclusivos em `development`, 14 em `main`, base `221b54b2`.
-- Product tem 15 refs. Onze branches de PRs integradas foram verificadas desprotegidas e com árvores idênticas às árvores de integração. Nenhuma foi excluída; #274 (evidência exclusiva) e o buffer NAV-005 são preservados.
+- Product tem 4 refs: `main`, `development`, o arquivo #274 e o buffer NAV-005. As onze branches integradas autorizadas foram removidas nos SHAs aprovados; o readback remoto confirmou as quatro refs.
 - A PR DS #124 permanece documental e aberta; o head corrente não tem check-runs nem reviews registrados. A atualização documental não equivale à integração em Design System `main`.
 - As entradas seguintes são snapshots históricos; seus pins e estados não devem ser usados como estado live.
 

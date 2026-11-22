@@ -6,7 +6,7 @@
 - CMP-017 avançou em duas fatias: acento de tema coerente e nome acessível correto para visibilidade inicial no Configurador. O teste comprova alteração local até salvar, preservação separada da visibilidade do Viewer e releitura do valor salvo. O DoD completo do Admin ainda não foi fechado.
 - ARC-13 está integrado em `main` como inventário candidato não revisado. Isso não conclui LOC-002…008 nem aprova textos de interface.
 - #274 foi fechada sem merge; sua branch permanece preservada porque contém documentação e evidências exclusivas. #290 continua Draft, de `main` para `development`; comparar seletivamente, sem merge global.
-- O Product tem 15 branches. Onze refs de PRs já integradas foram verificadas sem proteção e com árvores idênticas às árvores integradas; removê-las reduziria 15→4. Nenhuma foi removida: falta confirmação para os alvos exatos. Manter o arquivo da #274 e o buffer NAV-005.
+- O Product tem 4 branches: `main`, `development`, o arquivo #274 e o buffer NAV-005. As outras 11 refs integradas foram removidas nos SHAs exatos após autorização; o readback remoto confirma as quatro refs preservadas.
 - DS #124 segue aberta e documental, sem check-runs configurados para esse pacote. Este readback atualiza os documentos, mas não integra a PR à `main` do Design System.
 - Required checks e associação de gates a deploy continuam `UNKNOWN`. Os blocos abaixo deste readback são snapshots históricos, não pins operacionais atuais.
 

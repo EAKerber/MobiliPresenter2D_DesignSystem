@@ -4,7 +4,7 @@
 - #299 e #300 estão integradas em development. A #300 passou dez gates aplicáveis no head exato; seus gates pós-merge de ARC-13, preço e browser passaram. Supabase Preview foi skipped. `main` e Production não foram alteradas.
 - CMP-017 segue incompleto: as fatias de tema e nome acessível/preferência inicial passaram, mas falta consolidar o mapa completo de controles do Admin, motivos de desabilitação, teclado e exceções.
 - A baseline histórica de 21 workflows/comandos permanece pinada no estado original e não constitui cobertura atual completa nem define required checks.
-- Product tem 15 refs; onze branches de PRs integradas têm árvore idêntica ao commit integrado e estão desprotegidas. Nenhuma exclusão ocorreu; preservam-se #274 e o buffer NAV-005 enquanto a autorização exata está pendente.
+- Product tem 4 refs: `main`, `development`, o arquivo #274 e o buffer NAV-005. As onze branches integradas autorizadas foram removidas nos SHAs aprovados e a lista remota foi conferida.
 - As entradas seguintes preservam resultados e pins históricos; consultar o readback operacional no topo antes de usar status ou SHAs antigos.
 
 ---
