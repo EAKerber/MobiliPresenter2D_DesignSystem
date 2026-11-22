@@ -1,10 +1,11 @@
-## Readback operacional vigente — pós-#301 — 22/11/2026 (BRT)
+## Readback operacional vigente — pós-#302 — 22/11/2026 (BRT)
 
-- Pins: Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@e977bb87691e0bc839097fb9a6c92c1bdc4fa1e3`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
-- #299–#301 estão integradas em development. A #301 passou nove workflows no head exato `0795860799976903b59c04ef23c6b49f4ea2afa6`; a árvore do merge e do head coincide. Nenhum Deploy Preview foi criado; main e Production não mudaram.
-- CMP-017 segue incompleto: cor temática, semântica/save-readback inicial e motivos de bloqueio das etapas estão cobertos; faltam outras famílias de controles, exceções e confirmação abrangente de teclado.
+- Pins: Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@f640f9018e6bc36cbf4ca79313a6576080e9ded4`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
+- #299–#302 estão integradas em development. A #302 passou 9/9 workflows no head exato `6d96342250ac34dc2a945b6794e5a09c67e0cdc7`; a árvore do merge `f640f9018e6bc36cbf4ca79313a6576080e9ded4` coincide. Nenhum Deploy Preview foi criado; main e Production não mudaram.
+- CMP-017 segue incompleto: quatro fatias foram integradas, incluindo disponibilidade de acabamento com restrições acessíveis. Ainda faltam outras famílias de controles, exceções e teclado de forma abrangente.
 - A baseline histórica de 21 workflows/comandos permanece pinada no estado original e não constitui cobertura atual completa nem define required checks.
-- Product tem 5 refs: `main`, `development`, arquivo #274, buffer NAV-005 e branch integrada #301 `codex/cmp017-admin-control-contract-20261122`. As onze refs anteriormente autorizadas foram removidas; a branch #301 permanece.
+- ARC-13 em development: 1.037 ocorrências candidatas `unreviewed`, zero erros de parsing, 420 ocorrências primárias mapeadas e zero sem proveniência; SHA-256 `1BEF3227C502FD14FBC60CEDAB9AE837CCCF7116BACC09C12084857A9C3EAD22`.
+- Product tem 6 refs: `main`, `development`, arquivo #274, buffer NAV-005 e branches integradas #301 `codex/cmp017-admin-control-contract-20261122` e #302 `codex/cmp017-finish-availability-20261122`. As onze refs anteriormente autorizadas foram removidas; #301/#302 permanecem.
 - As entradas seguintes preservam resultados e pins históricos; consultar o readback operacional no topo antes de usar status ou SHAs antigos.
 
 ---
