@@ -1,10 +1,10 @@
-## Readback operacional vigente — pós-#300 — 22/11/2026 (BRT)
+## Readback operacional vigente — pós-#301 — 22/11/2026 (BRT)
 
-- Pins: Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@3f23fbc8be673c9235b6724213ecf17f2407ebdf`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
-- #299 e #300 estão integradas em development. A #300 passou dez gates aplicáveis no head exato; seus gates pós-merge de ARC-13, preço e browser passaram. Supabase Preview foi skipped. `main` e Production não foram alteradas.
-- CMP-017 segue incompleto: as fatias de tema e nome acessível/preferência inicial passaram, mas falta consolidar o mapa completo de controles do Admin, motivos de desabilitação, teclado e exceções.
+- Pins: Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@e977bb87691e0bc839097fb9a6c92c1bdc4fa1e3`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
+- #299–#301 estão integradas em development. A #301 passou nove workflows no head exato `0795860799976903b59c04ef23c6b49f4ea2afa6`; a árvore do merge e do head coincide. Nenhum Deploy Preview foi criado; main e Production não mudaram.
+- CMP-017 segue incompleto: cor temática, semântica/save-readback inicial e motivos de bloqueio das etapas estão cobertos; faltam outras famílias de controles, exceções e confirmação abrangente de teclado.
 - A baseline histórica de 21 workflows/comandos permanece pinada no estado original e não constitui cobertura atual completa nem define required checks.
-- Product tem 4 refs: `main`, `development`, o arquivo #274 e o buffer NAV-005. As onze branches integradas autorizadas foram removidas nos SHAs aprovados e a lista remota foi conferida.
+- Product tem 5 refs: `main`, `development`, arquivo #274, buffer NAV-005 e branch integrada #301 `codex/cmp017-admin-control-contract-20261122`. As onze refs anteriormente autorizadas foram removidas; a branch #301 permanece.
 - As entradas seguintes preservam resultados e pins históricos; consultar o readback operacional no topo antes de usar status ou SHAs antigos.
 
 ---

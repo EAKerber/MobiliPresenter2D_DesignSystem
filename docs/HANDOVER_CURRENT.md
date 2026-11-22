@@ -1,12 +1,12 @@
-## Readback operacional vigente — pós-#300 — 22/11/2026 (BRT)
+## Readback operacional vigente — pós-#301 — 22/11/2026 (BRT)
 
-**Pins conferidos:** Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@3f23fbc8be673c9235b6724213ecf17f2407ebdf`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
+**Pins conferidos:** Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@e977bb87691e0bc839097fb9a6c92c1bdc4fa1e3`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
 
-- #299 e #300 foram integradas por squash em `development`; a #300 passou dez gates aplicáveis no head exato `c22be34484491914931eb3a337b30a1601637e11`. O merge é `3f23fbc8be673c9235b6724213ecf17f2407ebdf`; os gates pós-merge de inventário, preço e navegador passaram e o check Supabase Preview foi skipped. `main` não foi alterada.
-- CMP-017 avançou em duas fatias: acento de tema coerente e nome acessível correto para visibilidade inicial no Configurador. O teste comprova alteração local até salvar, preservação separada da visibilidade do Viewer e releitura do valor salvo. O DoD completo do Admin ainda não foi fechado.
+- #299–#301 foram integradas por squash em `development`. A #301 passou nove workflows no head `0795860799976903b59c04ef23c6b49f4ea2afa6`; sua árvore coincide exatamente com o merge `e977bb87691e0bc839097fb9a6c92c1bdc4fa1e3`. Sem Deploy Preview; `main` não mudou.
+- CMP-017 avançou em três fatias: cor temática, nome acessível/save-readback da visibilidade inicial e motivos visíveis e associados aos controles para etapas obrigatórias/vazias. Seu DoD do Admin segue incompleto.
 - ARC-13 está integrado em `main` como inventário candidato não revisado. Isso não conclui LOC-002…008 nem aprova textos de interface.
-- #274 foi fechada sem merge; sua branch permanece preservada porque contém documentação e evidências exclusivas. #290 continua Draft, de `main` para `development`; comparar seletivamente, sem merge global.
-- O Product tem 4 branches: `main`, `development`, o arquivo #274 e o buffer NAV-005. As outras 11 refs integradas foram removidas nos SHAs exatos após autorização; o readback remoto confirma as quatro refs preservadas.
+- #274 foi fechada sem merge; sua branch permanece preservada porque contém documentação e evidências exclusivas. #290 continua Draft, de `main` para `development`; seu compare tem 449 commits exclusivos em development e 14 em main. Reconciliar somente mudanças necessárias, sem merge global.
+- O Product tem 5 branches: `main`, `development`, arquivo de evidências #274, buffer NAV-005 e a branch integrada da #301 `codex/cmp017-admin-control-contract-20261122` @ `0795860799976903b59c04ef23c6b49f4ea2afa6`. As 11 exclusões autorizadas continuam confirmadas; a branch da #301 não foi removida.
 - DS #124 segue aberta e documental, sem check-runs configurados para esse pacote. Este readback atualiza os documentos, mas não integra a PR à `main` do Design System.
 - Required checks e associação de gates a deploy continuam `UNKNOWN`. Os blocos abaixo deste readback são snapshots históricos, não pins operacionais atuais.
 

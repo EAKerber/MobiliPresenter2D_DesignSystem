@@ -1,10 +1,10 @@
-## Readback operacional vigente — pós-#300 — 22/11/2026 (BRT)
+## Readback operacional vigente — pós-#301 — 22/11/2026 (BRT)
 
-- Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@3f23fbc8be673c9235b6724213ecf17f2407ebdf`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
-- #299 e #300 foram integradas em `development`; todos os gates aplicáveis passaram nos heads exatos e os gates pós-merge de inventário, preço e navegador passaram no SHA atual. `Supabase Preview` foi skipped. `main` não mudou.
+- Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@e977bb87691e0bc839097fb9a6c92c1bdc4fa1e3`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
+- #299–#301 foram integradas em `development`; nove workflows passaram no head da #301 e a árvore integrada coincide com ele. Sem Deploy Preview; `main` não mudou.
 - A matriz de 21 workflows abaixo é uma baseline histórica. Ela não representa a lista integral atual e não prova quais checks são obrigatórios; essa relação permanece `UNKNOWN`.
-- #290 segue como PR Draft `main`→`development`; comparar deltas seletivos. O compare atual tem 448 commits exclusivos em `development`, 14 em `main`, base `221b54b2`.
-- Product tem 4 refs: `main`, `development`, o arquivo #274 e o buffer NAV-005. As onze branches integradas autorizadas foram removidas nos SHAs aprovados; o readback remoto confirmou as quatro refs.
+- #290 segue como PR Draft `main`→`development`; comparar deltas seletivos. O compare atual tem 449 commits exclusivos em `development`, 14 em `main`, base `221b54b2`.
+- Product tem 5 refs: `main`, `development`, arquivo #274, buffer NAV-005 e branch integrada #301 `codex/cmp017-admin-control-contract-20261122`. As onze refs anteriormente autorizadas foram removidas; a branch #301 permanece.
 - A PR DS #124 permanece documental e aberta; o head corrente não tem check-runs nem reviews registrados. A atualização documental não equivale à integração em Design System `main`.
 - As entradas seguintes são snapshots históricos; seus pins e estados não devem ser usados como estado live.
 
