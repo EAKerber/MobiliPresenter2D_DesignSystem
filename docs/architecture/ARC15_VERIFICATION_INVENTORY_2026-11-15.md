@@ -1,11 +1,11 @@
-## Readback operacional vigente — pós-#303 — 22/11/2026 (BRT)
+## Readback operacional vigente — pós-#305 — 22/11/2026 (BRT)
 
-- Pins lidos: Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@1188e6e4f355aa4b2a4ab442b02388c8135390cf`; Design System `main@e0dea59ba196af0ed9e8563603f7a63670ca0d5d` (base observado antes desta atualização documental).
-- #303 foi integrada seletivamente em Product `development` com árvore igual ao head validado. Nove gates passaram no head e os checks pós-merge aplicáveis passaram; nenhum deploy de produto ocorreu.
-- CMP-017 avançou para cinco fatias, mas o DoD do Admin segue parcial: faltam outras famílias de controles, exceções e cobertura abrangente de teclado.
-- ARC-13 em `development`: 1.038 ocorrências candidatas `unreviewed`; zero erros de parsing; 420 ocorrências primárias mapeadas e zero sem proveniência; hash `AEF1700357190F908828C62878E91BF885BFFA7F20209913A9B9BAEB916834D3`.
-- O novo sink de referência `aria-describedby` é preservado como ocorrência técnica com hint `non-translatable-reference`; não é cópia de interface e continua sem disposição manual.
-- Product tem 7 refs. #274 e NAV-005 permanecem preservadas; #301–#303 foram integradas em development. Compare: 451 commits exclusivos em development, 14 em main, base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. A PR #290 permanece Draft/dirty; não integrar o merge global.
+- Pins: Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@613f28d9ee3aaa66d7bce24f772100d5f1354732`; Design System `main@cbc4e82fcb0091ae6ee9f449b9b13e226fcbab18` (base antes desta atualização documental).
+- #304 e #305 foram integradas seletivamente em Product `development`; as árvores coincidem com os heads validados. Nove gates passaram em cada head; não houve deploy de produto.
+- CMP-017 tem sete fatias integradas, mas o DoD do Admin segue parcial: faltam outras famílias de controles, exceções e cobertura abrangente de teclado.
+- ARC-13 em `development`: 1.043 ocorrências candidatas `unreviewed`; zero erros de parsing; 420 ocorrências primárias mapeadas e zero sem proveniência; hash `E865C5944928822484B89ADF070D3B9A752A939DE0564164E6FDC6092489B700`.
+- As referências técnicas `aria-describedby` permanecem no inventário com hint `non-translatable-reference`; elas não são texto de interface e ainda não têm disposição manual.
+- Product tem 9 refs. #274 e NAV-005 permanecem preservadas; #301–#305 foram integradas em development. Compare: 453 commits exclusivos em development, 14 em main, base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. A PR #290 permanece Draft/dirty; não integrar o merge global.
 - A baseline histórica de 21 workflows/comandos não define required checks.
 
 ---

@@ -1,11 +1,11 @@
-## Readback operacional vigente — pós-#303 — 22/11/2026 (BRT)
+## Readback operacional vigente — pós-#305 — 22/11/2026 (BRT)
 
-- Pins lidos: Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@1188e6e4f355aa4b2a4ab442b02388c8135390cf`; Design System `main@e0dea59ba196af0ed9e8563603f7a63670ca0d5d` (base observado antes desta atualização documental).
-- Product #303 está integrada em `development`; os 9 gates aplicáveis passaram no head exato e os checks pós-merge aplicáveis terminaram verdes. Não houve Deploy Preview.
+- Pins lidos: Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@613f28d9ee3aaa66d7bce24f772100d5f1354732`; Design System `main@cbc4e82fcb0091ae6ee9f449b9b13e226fcbab18` (base antes desta atualização documental).
+- Product #304 e #305 estão integradas em `development`; os 9 gates aplicáveis passaram no head exato de cada PR. Não houve Deploy Preview.
 - A matriz de 21 workflows abaixo é baseline histórica, não cobertura atual completa nem prova de required checks; estes seguem `UNKNOWN`.
-- #290 continua como PR Draft `main`→`development`; compare vivo: 451 commits exclusivos em development, 14 em main, base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. Não fazer merge global.
-- Product tem 7 refs; #274 e NAV-005 seguem preservadas e #301–#303 foram integradas. As 11 exclusões anteriores continuam confirmadas.
-- A PR Product #303 descreve uma fatia de CMP-017. ARC-13 no head integrado tem 1.038 ocorrências candidatas `unreviewed`, hash `AEF1700357190F908828C62878E91BF885BFFA7F20209913A9B9BAEB916834D3`; contagens não são aprovação de conteúdo.
+- #290 continua como PR Draft `main`→`development`; compare vivo: 453 commits exclusivos em development, 14 em main, base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. Não fazer merge global.
+- Product tem 9 refs; #274 e NAV-005 seguem preservadas e #301–#305 foram integradas. As 11 exclusões anteriores continuam confirmadas.
+- CMP-017 tem sete fatias integradas; seu DoD permanece incompleto. ARC-13 no head integrado tem 1.043 ocorrências candidatas `unreviewed`, hash `E865C5944928822484B89ADF070D3B9A752A939DE0564164E6FDC6092489B700`; contagens não são aprovação de conteúdo.
 - As entradas seguintes são snapshots históricos; consultar este readback antes de usar seus pins ou estados.
 
 ---
