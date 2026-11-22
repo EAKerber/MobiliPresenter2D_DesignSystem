@@ -1,6 +1,6 @@
 ## Readback operacional vigente — pós-#303 — 22/11/2026 (BRT)
 
-**Pins lidos:** Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@1188e6e4f355aa4b2a4ab442b02388c8135390cf`; Design System `main@e0dea59ba196af0ed9e8563603f7a63670ca0d5d` (base before this documentation update).
+**Pins lidos:** Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@1188e6e4f355aa4b2a4ab442b02388c8135390cf`; Design System `main@e0dea59ba196af0ed9e8563603f7a63670ca0d5d` (base observado antes desta atualização documental).
 
 - A PR Product #303 foi integrada por squash em `development`: head `21a8ae4492ef4f495d120c60d71a1c71e12aa9bf`, merge `1188e6e4f355aa4b2a4ab442b02388c8135390cf`. As árvores coincidem em `f4b9ab807a43b0d59257139f51b57c9354f8a8fe`.
 - Os 9 workflows aplicáveis passaram no head exato; os 5 checks pós-merge fecharam com inventário, browser de preço e ambos os contratos de preço em sucesso. Supabase Preview foi ignorado; não houve Deploy Preview nem alteração de `main` ou Production.
@@ -13,7 +13,6 @@
 
 ---
 
----
 
 ## Readback após a publicação da #291 — 22/11/2026
 
