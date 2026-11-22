@@ -1,15 +1,75 @@
+## Readback operacional vigente — pós-#302 — 22/11/2026 (BRT)
+
+- Pins: Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@f640f9018e6bc36cbf4ca79313a6576080e9ded4`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
+- #299–#302 estão integradas em development. A #302 passou 9/9 workflows no head exato `6d96342250ac34dc2a945b6794e5a09c67e0cdc7`; a árvore do merge `f640f9018e6bc36cbf4ca79313a6576080e9ded4` coincide. Nenhum Deploy Preview foi criado; main e Production não mudaram.
+- CMP-017 segue incompleto: quatro fatias foram integradas, incluindo disponibilidade de acabamento com restrições acessíveis. Ainda faltam outras famílias de controles, exceções e teclado de forma abrangente.
+- A baseline histórica de 21 workflows/comandos permanece pinada no estado original e não constitui cobertura atual completa nem define required checks.
+- ARC-13 em development: 1.037 ocorrências candidatas `unreviewed`, zero erros de parsing, 420 ocorrências primárias mapeadas e zero sem proveniência; SHA-256 `1BEF3227C502FD14FBC60CEDAB9AE837CCCF7116BACC09C12084857A9C3EAD22`.
+- Product tem 6 refs: `main`, `development`, arquivo #274, buffer NAV-005 e branches integradas #301 `codex/cmp017-admin-control-contract-20261122` e #302 `codex/cmp017-finish-availability-20261122`. As onze refs anteriormente autorizadas foram removidas; #301/#302 permanecem.
+- As entradas seguintes preservam resultados e pins históricos; consultar o readback operacional no topo antes de usar status ou SHAs antigos.
+
+---
+
+## Readback após a publicação da #291 — 22/11/2026
+
+- Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@188f5074f60dc35df7aa8c673dbac4a2249813be`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
+- A PR #291 foi integrada à main e a Production está pronta no deploy Netlify `6b033828fda9e5b6e8ced61b`; os quatro gates pós-merge passaram.
+- A integração promoveu a ferramenta e o inventário ARC-13 como candidato não revisado; não aprova textos como catálogo nem conclui LOC-002…008.
+- #274 segue Draft e preserva material exclusivo para triagem. #290 permanece inadequada para sincronização integral.
+- A divergência segue ampla: 14 commits main-only, 446 development-only, base `221b54b2`. Product tem 13 refs; o soft cap é 5.
+- A PR #124 permanece documental e sem integração. A tabela de workflows abaixo continua histórica; required checks atuais são UNKNOWN.
+
+---
+
+## Revalidação operacional live — 22/11/2026
+
+- Product `main@5b29934150a8f939057fbd3ae14fd1c1511afd03`; `development@188f5074f60dc35df7aa8c673dbac4a2249813be`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
+- #271/#281 estão integradas na main; Production está ready no deploy `6b01d6e95f50b12695984d74`.
+- #297 integrou o porte seletivo do CSS da #271 e o inventário ARC-13 refeito para o HTML corrente. Os 13 gates da PR passaram; os gates pós-merge aplicáveis passaram em development.
+- #298 corrigiu a referência desatualizada da main no auditor NAV-005. O gate final passou após a integração, incluindo 48 cenários de header/navegação e 20 do Viewer.
+- #291 está pronta, com 12 check runs sem falha e Preview READY, mas ainda aguarda autorização explícita para alterar main.
+- #274 permanece Draft e seus documentos/revisões exclusivos foram preservados para triagem; #290 não é seguro para sincronização integral.
+- Product tem 13 refs, acima do soft cap 5; nenhuma ref foi excluída nesta rodada.
+- A matriz abaixo continua uma baseline histórica, não inventário completo da árvore atual. Required checks permanecem UNKNOWN.
+
+---
+
+## Revalidação live — 22/11/2026 (BRT)
+
+- Pins: Product main@5b29934150a8f939057fbd3ae14fd1c1511afd03; development@9e352dbd2644e4e91c8fe533f92bf0a8827a840d; Design System main@43594dc5723bffd5acb42dad1cd8ee30bcd48778.
+- #271 e #281 permanecem integradas em main; Production segue no deploy 6b01d6e95f50b12695984d74.
+- #293 foi integrada em development após 14 checks verdes no head de PR. O pacote não recebeu Deploy Preview hospedado. A integração não altera a contagem histórica da baseline de 21 workflows.
+- #295 é uma correção de gates, não runtime: atualiza o pin de main e aguarda duas fases de layout após decode/eventos sintéticos no teste de fallback. Head atual 7d6f759337c67d0ffbb5733dfeaa294528708644; Current asset gates passou; workflow VIS-002C ainda estava em execução no último readback. Uma execução anterior falhou com mudança de altura 1246→734 px, evidência de estado inicial não assentado no WebKit; a nova execução deve confirmar o ajuste sem reduzir tolerância.
+- #291 continua pendente de autorização para main; #274 segue Draft e preserva 35 caminhos exclusivos para triagem. Required checks permanecem UNKNOWN.
+
+**Este addendum substitui somente os pins e estados operacionais acima; a matriz abaixo é baseline histórica, não inventário completo da árvore atual.**
+
+---
+
 # ARC-15 — Inventário de verificações do Produto
 
-## Delta live pós-#279 — 20/11/2026
+## Revalidação live — 21/11/2026, atualização após #292
+
+- Product pins: main@5b29934150a8f939057fbd3ae14fd1c1511afd03, development@44c7cb6495540e4038717b26fb2b1e96b02571f4. A matriz tabular e a contagem de 21 workflows/21 comandos abaixo permanecem uma baseline histórica; uma enumeração integral da árvore atual ainda não foi realizada.
+- #269, #271 e #281 estão integradas na main; #281 está publicada no deploy Production pronto 6b01d6e95f50b12695984d74.
+- A proposta #291 (head 1f34543974ae64abd7d133baffab64f3a238953b) ainda não foi integrada. Seus gates ARC-13, autorização Buyer, assets, NAV-005 e foco de skip-link passaram; o Preview #291 está READY. Não contar seus dois workflows propostos como parte da main.
+- A #292 (head ed81efc06973aa78bc874537f2c3702560c9f79e) foi integrada por squash em development@44c7cb6 após ARC-13 e Current asset gates passarem no head exato. O buffer agora tem 1.012 candidatas unreviewed, com 411/411 ocorrências das páginas principais mapeadas; esse gate não altera a contagem histórica de workflows.
+- #274 continua Draft e obsoleta como port executável para a base atual; aguarda disposição após #291. #290 não é mergeável e não deve ser usado para reconciliação integral de main e development.
+- O UX-04 run 44838594398 passou em development@be743fd98063b19be5ee0614add21b8c85fb4a85; serve àquele SHA, enquanto development hoje está em 44c7cb6. Ele não atualiza a matriz de workflows nem estabelece required checks.
+- Required checks e associação de gates a Production continuam UNKNOWN.
+
+**O delta UX-04 de 20/11 abaixo é um snapshot histórico.**
+
+### Snapshot de delta UX-04 — 20/11/2026
 
 - Pins atuais: Product `main@29e824e2f6c44af9c8f04fd9966ec3190f3637b8`; Product `development@be743fd98063b19be5ee0614add21b8c85fb4a85`.
 - Product main agora contém 22 arquivos de workflow. A matriz detalhada de 21 workflows/21 comandos abaixo continua sendo a baseline histórica pinada em `main46`; não deve ser lida como contagem atual.
 - A #279 foi integrada por squash em `main` e acrescentou somente `.github/workflows/development-ux04-geometry.yml`, blob `96703ca3ae3c195153f10742134dca7aa69b0faf`. O workflow já existe em `development@be743fd` com o mesmo blob e seus arquivos de teste/build estão presentes.
-- O workflow usa `workflow_dispatch`, `contents: read`, V5 local e Playwright; não pede secrets nem serviço hospedado. Há uma execução histórica bem-sucedida (#41344513485, push em 2026-11-01, SHA `c7c2822d5b651ae0bcfcf0ac28c66cb61b645e98`, os dois jobs verdes), mas seus artefatos já não estão listados. Ela não valida `development@be743fd` — 11 commits e 44 arquivos depois, incluindo nove em `app/`; não há run no SHA atual. O dispatch do SHA atual segue pendente; a automação do navegador/DevTools retorna `Transport closed`.
-- Quando o dispatch for possível, selecionar `ref=development`, reler e confirmar o SHA de `development` imediatamente antes, e guardar o run e os artefatos. Esta entrada não altera a baseline histórica nem redefine required checks.
+- O workflow usa `workflow_dispatch`, `contents: read`, fixture V5 local e Playwright; não pede secrets nem serviço hospedado. O run atual `44838594398` foi disparado manualmente em `development@be743fd98063b19be5ee0614add21b8c85fb4a85` e terminou `success`: `exact-archive-and-static-intent` e `live-local-browser` passaram. O artefato `development-ux04-geometry-focus-44838594398` (ID `14679149233`, 1.644 bytes, SHA-256 `ecb908825ae970d436b9bc995d9840a5416428edf82129f753345ac4421bf8f7`) expira em `2026-12-04T23:42:21Z`. A execução histórica `41344513485` em `c7c2822` permanece apenas como antecedente; o novo run é a prova vinculada ao SHA atual.
+- Para futuras execuções, reler o SHA de `development` imediatamente antes do dispatch e preservar run/artefatos. Este resultado fecha somente o gate UX-04 no SHA citado; não altera a baseline histórica de 21 workflows nem define required checks.
 
 
-**Estado:** primeira passada e parecer Common Sense Judge dos oito itens sem invocação localizada concluídos sobre a baseline Product main46; três overlaps adicionais classificados. MD-004 tem agora uma amostra da main atual e uma lacuna concreta de trigger do Keyboard corrigida; o crosswalk integral assertion→risco→rota/estado e as demais discrepâncias continuam pendentes.
+**Estado da baseline histórica main46:** primeira passada e parecer Common Sense Judge dos oito itens sem invocação localizada concluídos sobre a baseline Product main46; três overlaps adicionais classificados. MD-004 tem agora uma amostra da main atual e uma lacuna concreta de trigger do Keyboard corrigida; o crosswalk integral assertion→risco→rota/estado e as demais discrepâncias continuam pendentes.
 **Fonte:** primeira passada em `EAKerber/MobiliPresenter2D` `main@46a52e76a0eeae4bed4b567b12da5311ed90b475`; não representa o inventário pós-#275.
 **Revalidação live (16/11/2026):** Product `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9` foi conferida. Os oito artefatos revistos e `candidate-assets.yml` têm blobs idênticos entre essa main e `main46`, então os pareceres continuam aplicáveis sem mover a baseline histórica.
 **Método:** leitura dos contratos, comandos, gatilhos e áreas cobertas; classificação por risco/assertion/rota/estado, não por quantidade de arquivos.  
