@@ -1,6 +1,6 @@
 ## Readback operacional vigente — pós-#303 — 22/11/2026 (BRT)
 
-- Pins lidos: Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@1188e6e4f355aa4b2a4ab442b02388c8135390cf`; Design System `main@e0dea59ba196af0ed9e8563603f7a63670ca0d5d` (base before this documentation update).
+- Pins lidos: Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@1188e6e4f355aa4b2a4ab442b02388c8135390cf`; Design System `main@e0dea59ba196af0ed9e8563603f7a63670ca0d5d` (base observado antes desta atualização documental).
 - Product #303 está integrada em `development`; os 9 gates aplicáveis passaram no head exato e os checks pós-merge aplicáveis terminaram verdes. Não houve Deploy Preview.
 - A matriz de 21 workflows abaixo é baseline histórica, não cobertura atual completa nem prova de required checks; estes seguem `UNKNOWN`.
 - #290 continua como PR Draft `main`→`development`; compare vivo: 451 commits exclusivos em development, 14 em main, base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. Não fazer merge global.
@@ -10,7 +10,6 @@
 
 ---
 
----
 
 ## Readback após a publicação da #291 — 22/11/2026
 
