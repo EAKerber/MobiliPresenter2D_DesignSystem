@@ -5,7 +5,7 @@
 - A matriz de 21 workflows abaixo é uma baseline histórica. Ela não representa a lista integral atual e não prova quais checks são obrigatórios; essa relação permanece `UNKNOWN`.
 - #290 segue como PR Draft `main`→`development`; comparar deltas seletivos. O compare atual tem 450 commits exclusivos em `development`, 14 em `main`, base `221b54b2`.
 - Product tem 6 refs: `main`, `development`, arquivo #274, buffer NAV-005 e branches integradas #301 `codex/cmp017-admin-control-contract-20261122` e #302 `codex/cmp017-finish-availability-20261122`. As onze refs anteriormente autorizadas foram removidas; #301/#302 permanecem.
-- A PR DS #124 permanece documental e aberta; o head corrente não tem check-runs nem reviews registrados. A atualização documental não equivale à integração em Design System `main`.
+- A PR DS #124 foi integrada por squash à `main` em `3408f148187c7528b9e8cf0fd7c9e30a61fe9377`; o head `2203141db9103545cf7cc5914d8a4bf57401a361` altera somente três documentos e a árvore integrada coincide com esse head. O pacote não altera runtime do Produto.
 - As entradas seguintes são snapshots históricos; seus pins e estados não devem ser usados como estado live.
 
 ---

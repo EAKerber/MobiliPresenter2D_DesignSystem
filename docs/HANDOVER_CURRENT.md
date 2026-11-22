@@ -8,7 +8,7 @@
 - ARC-13 está integrado em `main` como inventário candidato não revisado. Isso não conclui LOC-002…008 nem aprova textos de interface.
 - #274 está fechada sem merge; sua branch permanece como arquivo de documentação e evidências exclusivas. #290 continua Draft/dirty, de `main` para `development`; o compare vivo tem 450 commits exclusivos em development e 14 em main. Reconciliar somente mudanças necessárias, sem merge global.
 - O Product tem 6 branches: `main`, `development`, arquivo #274, buffer NAV-005 e as branches integradas #301 `codex/cmp017-admin-control-contract-20261122` e #302 `codex/cmp017-finish-availability-20261122`. As 11 exclusões autorizadas continuam confirmadas; as branches #301/#302 foram preservadas.
-- DS #124 segue aberta e documental, sem check-runs configurados para esse pacote. Este readback atualiza os documentos, mas não integra a PR à `main` do Design System.
+- DS #124 foi integrada por squash à `main` em `3408f148187c7528b9e8cf0fd7c9e30a61fe9377`; a árvore integrada coincide com o head documental `2203141db9103545cf7cc5914d8a4bf57401a361`. O pacote altera somente os três documentos listados acima; não há runtime ou deploy de produto.
 - Required checks e associação de gates a deploy continuam `UNKNOWN`. Os blocos abaixo deste readback são snapshots históricos, não pins operacionais atuais.
 
 ---
