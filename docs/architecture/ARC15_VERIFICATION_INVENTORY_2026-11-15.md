@@ -1,12 +1,14 @@
-## Readback operacional vigente — pós-#302 — 22/11/2026 (BRT)
+## Readback operacional vigente — pós-#303 — 22/11/2026 (BRT)
 
-- Pins de base desta leitura (anteriores às atualizações documentais #124–#125): Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@f640f9018e6bc36cbf4ca79313a6576080e9ded4`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
-- #299–#302 estão integradas em development. A #302 passou 9/9 workflows no head exato `6d96342250ac34dc2a945b6794e5a09c67e0cdc7`; a árvore do merge `f640f9018e6bc36cbf4ca79313a6576080e9ded4` coincide. Nenhum Deploy Preview foi criado; main e Production não mudaram.
-- CMP-017 segue incompleto: quatro fatias foram integradas, incluindo disponibilidade de acabamento com restrições acessíveis. Ainda faltam outras famílias de controles, exceções e teclado de forma abrangente.
-- A baseline histórica de 21 workflows/comandos permanece pinada no estado original e não constitui cobertura atual completa nem define required checks.
-- ARC-13 em development: 1.037 ocorrências candidatas `unreviewed`, zero erros de parsing, 420 ocorrências primárias mapeadas e zero sem proveniência; SHA-256 `1BEF3227C502FD14FBC60CEDAB9AE837CCCF7116BACC09C12084857A9C3EAD22`.
-- Product tem 6 refs: `main`, `development`, arquivo #274, buffer NAV-005 e branches integradas #301 `codex/cmp017-admin-control-contract-20261122` e #302 `codex/cmp017-finish-availability-20261122`. As onze refs anteriormente autorizadas foram removidas; #301/#302 permanecem.
-- As entradas seguintes preservam resultados e pins históricos; consultar o readback operacional no topo antes de usar status ou SHAs antigos.
+- Pins lidos: Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@1188e6e4f355aa4b2a4ab442b02388c8135390cf`; Design System `main@e0dea59ba196af0ed9e8563603f7a63670ca0d5d` (base before this documentation update).
+- #303 foi integrada seletivamente em Product `development` com árvore igual ao head validado. Nove gates passaram no head e os checks pós-merge aplicáveis passaram; nenhum deploy de produto ocorreu.
+- CMP-017 avançou para cinco fatias, mas o DoD do Admin segue parcial: faltam outras famílias de controles, exceções e cobertura abrangente de teclado.
+- ARC-13 em `development`: 1.038 ocorrências candidatas `unreviewed`; zero erros de parsing; 420 ocorrências primárias mapeadas e zero sem proveniência; hash `AEF1700357190F908828C62878E91BF885BFFA7F20209913A9B9BAEB916834D3`.
+- O novo sink de referência `aria-describedby` é preservado como ocorrência técnica com hint `non-translatable-reference`; não é cópia de interface e continua sem disposição manual.
+- Product tem 7 refs. #274 e NAV-005 permanecem preservadas; #301–#303 foram integradas em development. Compare: 451 commits exclusivos em development, 14 em main, base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. A PR #290 permanece Draft/dirty; não integrar o merge global.
+- A baseline histórica de 21 workflows/comandos não define required checks.
+
+---
 
 ---
 
