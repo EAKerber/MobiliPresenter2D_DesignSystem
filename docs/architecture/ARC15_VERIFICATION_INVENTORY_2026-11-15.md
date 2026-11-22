@@ -1,3 +1,14 @@
+## Readback após a publicação da #291 — 22/11/2026
+
+- Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@188f5074f60dc35df7aa8c673dbac4a2249813be`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
+- A PR #291 foi integrada à main e a Production está pronta no deploy Netlify `6b033828fda9e5b6e8ced61b`; os quatro gates pós-merge passaram.
+- A integração promoveu a ferramenta e o inventário ARC-13 como candidato não revisado; não aprova textos como catálogo nem conclui LOC-002…008.
+- #274 segue Draft e preserva material exclusivo para triagem. #290 permanece inadequada para sincronização integral.
+- A divergência segue ampla: 14 commits main-only, 446 development-only, base `221b54b2`. Product tem 13 refs; o soft cap é 5.
+- A PR #124 permanece documental e sem integração. A tabela de workflows abaixo continua histórica; required checks atuais são UNKNOWN.
+
+---
+
 ## Revalidação operacional live — 22/11/2026
 
 - Product `main@5b29934150a8f939057fbd3ae14fd1c1511afd03`; `development@188f5074f60dc35df7aa8c673dbac4a2249813be`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
