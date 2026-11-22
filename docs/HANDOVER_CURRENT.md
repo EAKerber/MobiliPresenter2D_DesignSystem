@@ -1,15 +1,17 @@
-## Readback operacional vigente — pós-#302 — 22/11/2026 (BRT)
+## Readback operacional vigente — pós-#303 — 22/11/2026 (BRT)
 
-**Pins de base desta leitura (anteriores às atualizações documentais #124–#125):** Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@f640f9018e6bc36cbf4ca79313a6576080e9ded4`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
+**Pins lidos:** Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@1188e6e4f355aa4b2a4ab442b02388c8135390cf`; Design System `main@e0dea59ba196af0ed9e8563603f7a63670ca0d5d` (base before this documentation update).
 
-- #299–#302 foram integradas por squash em `development`. A #302 passou 9/9 workflows no head `6d96342250ac34dc2a945b6794e5a09c67e0cdc7`; sua árvore coincide com o merge `f640f9018e6bc36cbf4ca79313a6576080e9ded4` (`0f927c4f112222c69ed850340073c2f3c4996b24`). Sem Deploy Preview; `main` e Production não mudaram.
-- CMP-017 avançou em quatro fatias: cor temática, semântica/save-readback dos estados iniciais, motivos para etapas obrigatórias/vazias e disponibilidade de acabamentos. A última fatia explica por que o último acabamento global ou a última associação local não pode ser removida. O DoD do Admin segue incompleto.
-- ARC-13 em `development`: inventário determinístico com SHA-256 `1BEF3227C502FD14FBC60CEDAB9AE837CCCF7116BACC09C12084857A9C3EAD22`, 1.037 candidatas ainda `unreviewed`, zero erros de parsing e zero ocorrências primárias sem proveniência. Isso não decide conteúdo nem conclui LOC-002…008.
-- ARC-13 está integrado em `main` como inventário candidato não revisado. Isso não conclui LOC-002…008 nem aprova textos de interface.
-- #274 está fechada sem merge; sua branch permanece como arquivo de documentação e evidências exclusivas. #290 continua Draft/dirty, de `main` para `development`; o compare vivo tem 450 commits exclusivos em development e 14 em main. Reconciliar somente mudanças necessárias, sem merge global.
-- O Product tem 6 branches: `main`, `development`, arquivo #274, buffer NAV-005 e as branches integradas #301 `codex/cmp017-admin-control-contract-20261122` e #302 `codex/cmp017-finish-availability-20261122`. As 11 exclusões autorizadas continuam confirmadas; as branches #301/#302 foram preservadas.
-- DS #124 foi integrada por squash à `main` em `3408f148187c7528b9e8cf0fd7c9e30a61fe9377`; a árvore integrada coincide com o head documental `2203141db9103545cf7cc5914d8a4bf57401a361`. O pacote altera somente os três documentos listados acima; não há runtime ou deploy de produto.
-- Required checks e associação de gates a deploy continuam `UNKNOWN`. Os blocos abaixo deste readback são snapshots históricos, não pins operacionais atuais.
+- A PR Product #303 foi integrada por squash em `development`: head `21a8ae4492ef4f495d120c60d71a1c71e12aa9bf`, merge `1188e6e4f355aa4b2a4ab442b02388c8135390cf`. As árvores coincidem em `f4b9ab807a43b0d59257139f51b57c9354f8a8fe`.
+- Os 9 workflows aplicáveis passaram no head exato; os 5 checks pós-merge fecharam com inventário, browser de preço e ambos os contratos de preço em sucesso. Supabase Preview foi ignorado; não houve Deploy Preview nem alteração de `main` ou Production.
+- CMP-017 tem cinco fatias integradas: cor temática, semântica/save-readback dos estados iniciais, motivos para etapas obrigatórias/vazias, disponibilidade de acabamentos e descrição acessível do bloqueio de publicação de preços. O DoD do Admin segue incompleto.
+- ARC-13 em `development`: SHA-256 `AEF1700357190F908828C62878E91BF885BFFA7F20209913A9B9BAEB916834D3`, 1.038 ocorrências candidatas `unreviewed`, zero erros de parsing, 420 ocorrências primárias mapeadas e zero sem proveniência. A nova referência ARIA `ecc8f2834838630a` tem hint `non-translatable-reference`; permanece sem disposição manual e não representa texto de interface.
+- Product tem 7 refs: `main`, `development`, arquivo #274, buffer NAV-005 e branches integradas #301, #302 e #303. As 11 refs previamente autorizadas foram removidas; as branches #301/#302 foram preservadas conforme a triagem.
+- #274 permanece fechada sem merge e preservada. #290 continua Draft/dirty. O compare vivo é 451 commits exclusivos em development e 14 em main, base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`; não fazer merge global.
+- As PRs documentais DS #124–#126 atualizaram handover, inventário e crosswalk sem alterar runtime. Este readback é a base operacional para a próxima fatia; snapshots abaixo permanecem históricos.
+- Required checks e associação de gates a deploy continuam `UNKNOWN`.
+
+---
 
 ---
 
