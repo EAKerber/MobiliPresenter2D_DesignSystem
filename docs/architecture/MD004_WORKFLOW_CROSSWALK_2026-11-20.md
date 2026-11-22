@@ -5,7 +5,7 @@
 - A matriz de 21 workflows abaixo é baseline histórica, não cobertura atual completa nem prova de required checks; estes seguem `UNKNOWN`.
 - #290 continua como PR Draft `main`→`development`; compare vivo: 451 commits exclusivos em development, 14 em main, base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. Não fazer merge global.
 - Product tem 7 refs; #274 e NAV-005 seguem preservadas e #301–#303 foram integradas. As 11 exclusões anteriores continuam confirmadas.
-- A PR DS #303 descreve uma fatia de CMP-017. ARC-13 no head integrado tem 1.038 ocorrências candidatas `unreviewed`, hash `AEF1700357190F908828C62878E91BF885BFFA7F20209913A9B9BAEB916834D3`; contagens não são aprovação de conteúdo.
+- A PR Product #303 descreve uma fatia de CMP-017. ARC-13 no head integrado tem 1.038 ocorrências candidatas `unreviewed`, hash `AEF1700357190F908828C62878E91BF885BFFA7F20209913A9B9BAEB916834D3`; contagens não são aprovação de conteúdo.
 - As entradas seguintes são snapshots históricos; consultar este readback antes de usar seus pins ou estados.
 
 ---
