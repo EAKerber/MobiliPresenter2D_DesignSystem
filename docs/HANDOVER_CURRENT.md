@@ -13,7 +13,6 @@
 
 ---
 
-
 ## Readback após a publicação da #291 — 22/11/2026
 
 - Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@188f5074f60dc35df7aa8c673dbac4a2249813be`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
