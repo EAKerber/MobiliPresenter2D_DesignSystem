@@ -1,12 +1,12 @@
-## Readback operacional vigente — pós-#302 — 22/11/2026 (BRT)
+## Readback operacional vigente — pós-#303 — 22/11/2026 (BRT)
 
-- Pins de base desta leitura (anteriores às atualizações documentais #124–#125): Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@f640f9018e6bc36cbf4ca79313a6576080e9ded4`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
-- #299–#302 foram integradas em `development`; nove workflows passaram no head exato da #302 `6d96342250ac34dc2a945b6794e5a09c67e0cdc7`, com árvore idêntica no squash integrado. Sem Deploy Preview; `main` não mudou.
-- A matriz de 21 workflows abaixo é uma baseline histórica. Ela não representa a lista integral atual e não prova quais checks são obrigatórios; essa relação permanece `UNKNOWN`.
-- #290 segue como PR Draft `main`→`development`; comparar deltas seletivos. O compare atual tem 450 commits exclusivos em `development`, 14 em `main`, base `221b54b2`.
-- Product tem 6 refs: `main`, `development`, arquivo #274, buffer NAV-005 e branches integradas #301 `codex/cmp017-admin-control-contract-20261122` e #302 `codex/cmp017-finish-availability-20261122`. As onze refs anteriormente autorizadas foram removidas; #301/#302 permanecem.
-- A PR DS #124 foi integrada por squash à `main` em `3408f148187c7528b9e8cf0fd7c9e30a61fe9377`; o head `2203141db9103545cf7cc5914d8a4bf57401a361` altera somente três documentos e a árvore integrada coincide com esse head. O pacote não altera runtime do Produto.
-- As entradas seguintes são snapshots históricos; seus pins e estados não devem ser usados como estado live.
+- Pins lidos: Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@1188e6e4f355aa4b2a4ab442b02388c8135390cf`; Design System `main@e0dea59ba196af0ed9e8563603f7a63670ca0d5d` (base observado antes desta atualização documental).
+- Product #303 está integrada em `development`; os 9 gates aplicáveis passaram no head exato e os checks pós-merge aplicáveis terminaram verdes. Não houve Deploy Preview.
+- A matriz de 21 workflows abaixo é baseline histórica, não cobertura atual completa nem prova de required checks; estes seguem `UNKNOWN`.
+- #290 continua como PR Draft `main`→`development`; compare vivo: 451 commits exclusivos em development, 14 em main, base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. Não fazer merge global.
+- Product tem 7 refs; #274 e NAV-005 seguem preservadas e #301–#303 foram integradas. As 11 exclusões anteriores continuam confirmadas.
+- A PR Product #303 descreve uma fatia de CMP-017. ARC-13 no head integrado tem 1.038 ocorrências candidatas `unreviewed`, hash `AEF1700357190F908828C62878E91BF885BFFA7F20209913A9B9BAEB916834D3`; contagens não são aprovação de conteúdo.
+- As entradas seguintes são snapshots históricos; consultar este readback antes de usar seus pins ou estados.
 
 ---
 
