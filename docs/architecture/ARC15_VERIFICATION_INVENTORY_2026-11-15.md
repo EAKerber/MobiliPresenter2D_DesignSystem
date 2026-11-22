@@ -1,10 +1,10 @@
-## Readback operacional vigente — pós-#299 — 22/11/2026 (BRT)
+## Readback operacional vigente — pós-#300 — 22/11/2026 (BRT)
 
-- Pins: Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@089ee30437035d1e55e6a8ff7fa23692391e46bc`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
-- A #299 passou oito gates aplicáveis no head exato e integrou a correção de tema da checkbox inicial em `development`. O readback de merge é `089ee30437035d1e55e6a8ff7fa23692391e46bc`; `main` e Production não foram alteradas por essa PR.
-- O escopo da #299 não fecha CMP-017: não concluiu a classificação dos controles do Admin, nem verificou integralmente disabled reasons, teclado, persistência e readback.
-- A baseline histórica de 21 workflows/comandos permanece pinada no estado original e não constitui cobertura atual completa. Em `development@089ee30`, o gate pós-merge `price-contract` passou; o check Supabase Preview foi skipped. Isso não define required checks.
-- Product tem 14 refs; dez branches de PRs integradas têm árvore idêntica ao commit integrado e estão desprotegidas. Nenhuma exclusão ocorreu; preservam-se #274 e o buffer NAV-005 enquanto a autorização exata está pendente.
+- Pins: Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@3f23fbc8be673c9235b6724213ecf17f2407ebdf`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
+- #299 e #300 estão integradas em development. A #300 passou dez gates aplicáveis no head exato; seus gates pós-merge de ARC-13, preço e browser passaram. Supabase Preview foi skipped. `main` e Production não foram alteradas.
+- CMP-017 segue incompleto: as fatias de tema e nome acessível/preferência inicial passaram, mas falta consolidar o mapa completo de controles do Admin, motivos de desabilitação, teclado e exceções.
+- A baseline histórica de 21 workflows/comandos permanece pinada no estado original e não constitui cobertura atual completa nem define required checks.
+- Product tem 15 refs; onze branches de PRs integradas têm árvore idêntica ao commit integrado e estão desprotegidas. Nenhuma exclusão ocorreu; preservam-se #274 e o buffer NAV-005 enquanto a autorização exata está pendente.
 - As entradas seguintes preservam resultados e pins históricos; consultar o readback operacional no topo antes de usar status ou SHAs antigos.
 
 ---

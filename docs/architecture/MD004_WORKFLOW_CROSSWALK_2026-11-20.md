@@ -1,11 +1,11 @@
-## Readback operacional vigente — pós-#299 — 22/11/2026 (BRT)
+## Readback operacional vigente — pós-#300 — 22/11/2026 (BRT)
 
-- Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@089ee30437035d1e55e6a8ff7fa23692391e46bc`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
-- A #299 foi integrada em `development` após oito gates aplicáveis passarem no head exato. No SHA de merge, `price-contract` passou; `Supabase Preview` foi skipped. `main` não mudou.
+- Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@3f23fbc8be673c9235b6724213ecf17f2407ebdf`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
+- #299 e #300 foram integradas em `development`; todos os gates aplicáveis passaram nos heads exatos e os gates pós-merge de inventário, preço e navegador passaram no SHA atual. `Supabase Preview` foi skipped. `main` não mudou.
 - A matriz de 21 workflows abaixo é uma baseline histórica. Ela não representa a lista integral atual e não prova quais checks são obrigatórios; essa relação permanece `UNKNOWN`.
 - #290 segue como PR Draft `main`→`development`; comparar deltas seletivos. O compare atual tem 447 commits exclusivos em `development`, 14 em `main`, base `221b54b2`.
-- Product tem 14 refs. Dez branches de PRs integradas foram verificadas desprotegidas e com árvores idênticas às árvores de integração. Nenhuma foi excluída; #274 (evidência exclusiva) e o buffer NAV-005 são preservados.
-- A PR DS #124, head `dce52bc96605a1adca738852289429e112ce2f5e`, não possui check-runs. A atualização documental não equivale à autorização de integração em Design System `main`.
+- Product tem 15 refs. Onze branches de PRs integradas foram verificadas desprotegidas e com árvores idênticas às árvores de integração. Nenhuma foi excluída; #274 (evidência exclusiva) e o buffer NAV-005 são preservados.
+- A PR DS #124, head `3fa8b76465972f138a6eafe0d94b307303b4b89b`, não possui check-runs. A atualização documental não equivale à autorização de integração em Design System `main`.
 - As entradas seguintes são snapshots históricos; seus pins e estados não devem ser usados como estado live.
 
 ---

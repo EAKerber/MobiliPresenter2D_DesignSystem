@@ -1,13 +1,13 @@
-## Readback operacional vigente — pós-#299 — 22/11/2026 (BRT)
+## Readback operacional vigente — pós-#300 — 22/11/2026 (BRT)
 
-**Pins conferidos:** Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@089ee30437035d1e55e6a8ff7fa23692391e46bc`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
+**Pins conferidos:** Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@3f23fbc8be673c9235b6724213ecf17f2407ebdf`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
 
-- A #299 foi integrada por squash em `development`. Seu head `8d57f2725bf8e627f3407c287bc6d76f1f9cadcc` passou os oito gates aplicáveis; o merge é `089ee30437035d1e55e6a8ff7fa23692391e46bc`. `main` não foi alterada.
-- O recorte da #299 alinha a cor da checkbox de estado inicial ao token de tema e preserva a apresentação distinta da disponibilidade de etapa. Isso é progresso parcial de CMP-017; ainda faltam o inventário completo de controles, rótulos acessíveis revisados e o fluxo de gravação/readback do Admin.
+- #299 e #300 foram integradas por squash em `development`; a #300 passou dez gates aplicáveis no head exato `c22be34484491914931eb3a337b30a1601637e11`. O merge é `3f23fbc8be673c9235b6724213ecf17f2407ebdf`; os gates pós-merge de inventário, preço e navegador passaram e o check Supabase Preview foi skipped. `main` não foi alterada.
+- CMP-017 avançou em duas fatias: acento de tema coerente e nome acessível correto para visibilidade inicial no Configurador. O teste comprova alteração local até salvar, preservação separada da visibilidade do Viewer e releitura do valor salvo. O DoD completo do Admin ainda não foi fechado.
 - ARC-13 está integrado em `main` como inventário candidato não revisado. Isso não conclui LOC-002…008 nem aprova textos de interface.
 - #274 foi fechada sem merge; sua branch permanece preservada porque contém documentação e evidências exclusivas. #290 continua Draft, de `main` para `development`; comparar seletivamente, sem merge global.
-- O Product tem 14 branches. Dez refs de PRs já integradas foram verificadas sem proteção e com árvores idênticas às árvores integradas; removê-las reduziria 14→4. Nenhuma foi removida: falta confirmação para os alvos exatos. Manter o arquivo da #274 e o buffer NAV-005.
-- DS #124 segue aberta, apenas documental, no head `dce52bc96605a1adca738852289429e112ce2f5e`; não há check-runs nesse head. Este readback atualiza os documentos, mas não integra a PR à `main` do Design System.
+- O Product tem 15 branches. Onze refs de PRs já integradas foram verificadas sem proteção e com árvores idênticas às árvores integradas; removê-las reduziria 15→4. Nenhuma foi removida: falta confirmação para os alvos exatos. Manter o arquivo da #274 e o buffer NAV-005.
+- DS #124 segue aberta e documental, sem check-runs configurados para esse pacote. Este readback atualiza os documentos, mas não integra a PR à `main` do Design System.
 - Required checks e associação de gates a deploy continuam `UNKNOWN`. Os blocos abaixo deste readback são snapshots históricos, não pins operacionais atuais.
 
 ---
