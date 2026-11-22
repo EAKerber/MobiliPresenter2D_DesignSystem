@@ -1,3 +1,19 @@
+## Revalidação operacional live — 22/11/2026 (BRT)
+
+**Pins:** Product main@5b29934150a8f939057fbd3ae14fd1c1511afd03; Product development@9e352dbd2644e4e91c8fe533f92bf0a8827a840d; Design System main@43594dc5723bffd5acb42dad1cd8ee30bcd48778.
+
+- #281 e #271 seguem integradas na main; a publicação de #281 está pronta em Production no deploy 6b01d6e95f50b12695984d74.
+- #293 foi integrada por squash em development@9e352db. Seus 14 checks passaram no head da PR; a PR não recebeu Deploy Preview Netlify, portanto não há revisão visual hospedada desse candidato. O pacote transporta seletivamente o hero/vídeo, tela cheia, comparativos e gate geométrico, preservando ARC-03C.
+- A checagem pós-merge revelou pin estático antigo de main e uma diferença real de altura no teste de recuperação da imagem do hero no WebKit. A #295 contém somente dois arquivos de gate, está aberta em development, head 7d6f759337c67d0ffbb5733dfeaa294528708644; a execução que refresca o pin passou e Current asset gates passou, enquanto o workflow raster ainda está rodando. Uma tentativa anterior mediu 1246 px antes do evento e 734 px depois; o candidato atual espera o decode e o assentamento da geometria antes da captura inicial, sem afrouxar a comparação.
+- #294 foi fechada sem merge por diff incorreto de 18 arquivos; sua branch foi preservada. A correção limpa está em #295.
+- #291 segue fora de main e aguarda autorização explícita. #274 permanece Draft; manter os 35 caminhos exclusivos para triagem após decisão sobre #291. #290 continua inadequada para reconciliação integral main/development.
+- O Product tem 10 refs observadas (incluindo main e development), acima do gatilho de revisão de 5; branches integradas/fechadas continuam preservadas até triagem autorizada. O Design System mantém main e a branch documental de #124.
+- PR #124 continua documental e sem merge; esta atualização não autoriza sua integração. Os gates verdes da #293 não equivalem a publicação em Production.
+
+**Próxima ordem:** (1) aguardar resultado da #295; (2) atualizar este handover e a matriz novamente com resultado exato do gate e eventual integração em development; (3) seguir a promoção seletiva para main somente após autorização; (4) triar #274 e refs excedentes sem apagar artefatos.
+
+---
+
 ## Ponteiro operacional live — 21/11/2026 (BRT)
 
 **Pins revalidados:** Product main@5b29934150a8f939057fbd3ae14fd1c1511afd03; Product development@44c7cb6495540e4038717b26fb2b1e96b02571f4; Design System main@43594dc5723bffd5acb42dad1cd8ee30bcd48778.
