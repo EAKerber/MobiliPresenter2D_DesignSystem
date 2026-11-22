@@ -1,6 +1,6 @@
 ## Readback operacional vigente — pós-#302 — 22/11/2026 (BRT)
 
-**Pins conferidos:** Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@f640f9018e6bc36cbf4ca79313a6576080e9ded4`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
+**Pins de base desta leitura (anteriores às atualizações documentais #124–#125):** Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@f640f9018e6bc36cbf4ca79313a6576080e9ded4`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
 
 - #299–#302 foram integradas por squash em `development`. A #302 passou 9/9 workflows no head `6d96342250ac34dc2a945b6794e5a09c67e0cdc7`; sua árvore coincide com o merge `f640f9018e6bc36cbf4ca79313a6576080e9ded4` (`0f927c4f112222c69ed850340073c2f3c4996b24`). Sem Deploy Preview; `main` e Production não mudaram.
 - CMP-017 avançou em quatro fatias: cor temática, semântica/save-readback dos estados iniciais, motivos para etapas obrigatórias/vazias e disponibilidade de acabamentos. A última fatia explica por que o último acabamento global ou a última associação local não pode ser removida. O DoD do Admin segue incompleto.
