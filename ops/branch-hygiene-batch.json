@@ -1,13 +1,32 @@
 {
   "schemaVersion": "BranchHygieneBatch 0.1",
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "wave": "DS-HYG-P16-2026-10-27",
-  "purpose": "Final diverged HOLD only. Require full historical DAG reachability for 814 intermediate commits and exact protected archive tag; do not retire operational branch.",
+  "wave": "DS-HYG-AUDIT-2026-11-23-W1",
+  "purpose": "PREPARATION / AUDIT ONLY. Squash-tree-verified heads of merged documentary PRs #126-#128. DO NOT MERGE until separately authorized to retire the exact refs. No history deletion on this draft PR.",
   "branches": [
     {
-      "branch": "docs/current-handover-20261024",
-      "sha": "28062602a4ddcd1bee090742fe2587fe3837175d",
-      "protectedArchiveTag": "refs/tags/ds-history/2026-10-27/docs--current-handover-20261024-28062602a4dd"
+      "branch": "docs/readback-base-pins-20261122",
+      "sha": "143e89e1514bc5df04eda1b20928fc178cabd594",
+      "squashMerge": {
+        "pullRequest": 126,
+        "mergeCommit": "e0dea59ba196af0ed9e8563603f7a63670ca0d5d"
+      }
+    },
+    {
+      "branch": "docs/v09-readback-post-cmp017-publication-20261122",
+      "sha": "104ce028b3bf1c5549b354407abfcdd079871849",
+      "squashMerge": {
+        "pullRequest": 127,
+        "mergeCommit": "cbc4e82fcb0091ae6ee9f449b9b13e226fcbab18"
+      }
+    },
+    {
+      "branch": "docs/v09-readback-post-cmp017-disabled-states-20261122",
+      "sha": "944adfc51991687c38843f74cd14d0b5005039f0",
+      "squashMerge": {
+        "pullRequest": 128,
+        "mergeCommit": "5c1b0949ecc02bbb6cda18c67a4c286dce559020"
+      }
     }
   ]
 }
