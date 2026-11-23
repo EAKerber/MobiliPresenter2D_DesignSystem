@@ -1,31 +1,31 @@
 {
   "schemaVersion": "BranchHygieneBatch 0.1",
   "repository": "EAKerber/MobiliPresenter2D_DesignSystem",
-  "wave": "DS-HYG-AUDIT-2026-11-23-W1",
-  "purpose": "PREPARATION / AUDIT ONLY. Squash-tree-verified heads of merged documentary PRs #126-#128. DO NOT MERGE until separately authorized to retire the exact refs. No history deletion on this draft PR.",
+  "wave": "DS-HYG-2026-11-23-W2",
+  "purpose": "Retire only three verified squash-equivalent heads of PRs #124, #125, #129; preserve main and this new audit branch. Exact SHA and full-tree runtime proof required.",
   "branches": [
     {
-      "branch": "docs/readback-base-pins-20261122",
-      "sha": "143e89e1514bc5df04eda1b20928fc178cabd594",
+      "branch": "docs/md004-ds05a-paired-evidence-20261120",
+      "sha": "2203141db9103545cf7cc5914d8a4bf57401a361",
       "squashMerge": {
-        "pullRequest": 126,
-        "mergeCommit": "e0dea59ba196af0ed9e8563603f7a63670ca0d5d"
+        "pullRequest": 124,
+        "mergeCommit": "3408f148187c7528b9e8cf0fd7c9e30a61fe9377"
       }
     },
     {
-      "branch": "docs/v09-readback-post-cmp017-publication-20261122",
-      "sha": "104ce028b3bf1c5549b354407abfcdd079871849",
+      "branch": "docs/post124-readback-20261122",
+      "sha": "4af258b030caa13e1a3e946b58cdc25756d553ee",
       "squashMerge": {
-        "pullRequest": 127,
-        "mergeCommit": "cbc4e82fcb0091ae6ee9f449b9b13e226fcbab18"
+        "pullRequest": 125,
+        "mergeCommit": "409834c13745e39006bb91cbec552933ea94ee4c"
       }
     },
     {
-      "branch": "docs/v09-readback-post-cmp017-disabled-states-20261122",
-      "sha": "944adfc51991687c38843f74cd14d0b5005039f0",
+      "branch": "hygiene/ds-squash-126-128-audit-20261123",
+      "sha": "1c6bfd88490cdf0c2b1b06cbfb517669fc01e75f",
       "squashMerge": {
-        "pullRequest": 128,
-        "mergeCommit": "5c1b0949ecc02bbb6cda18c67a4c286dce559020"
+        "pullRequest": 129,
+        "mergeCommit": "5958d3ee73ebf2a564479896498f83183b995826"
       }
     }
   ]
