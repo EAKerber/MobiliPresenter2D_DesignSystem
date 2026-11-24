@@ -15,8 +15,8 @@ Product `main..development` shares base `221b54b2a41ecc8c338d1bf2cf67280cf165ce9
 
 ## Open work and branch hygiene
 
-- Product has one open PR, #400, which prepares exact retirement of the integrated TST-004 crosswalk branch. Design System has no open PRs.
-- The live remote inventory is **12 branches**: 11 in Product and 1 in Design System. There are not 60 live branches; “60 refs” is a legacy executor/test-fixture value.
+- Product has one open PR, #400, which prepares exact retirement of the integrated TST-004 crosswalk branch. Design System has open PR #137 for this handover update.
+- The live remote inventory is **13 branches**: 11 in Product and 2 in Design System, including this PR’s temporary handover branch. There are not 60 live branches; “60 refs” is a legacy executor/test-fixture value.
 - Product branch `codex/tst001-pr-inventory-readback-20261124` was retired after verifying PR #403 merged, the branch was unprotected, no open PR used it as a head, and its tree exactly matched current development. Its PR and commits remain recorded.
 - The TST-004 crosswalk branch `codex/tst004-mask-assertion-crosswalk-20261124` is integrated through PR #399 at `531c2814235c9524289ccb9efd909f43e01d908b`; its tree matches current development. PR #400 pins this exact target for the bounded retirement workflow, so preserve it until that apply/readback route is deliberately integrated and verified.
 - Other extra refs are active buffers, unmerged experiments, or retained evidence. In particular, preserve NAV-005, the closed-but-unmerged TST-004 browser setup experiments, and the closed ARC-13 PR #274 evidence branch. Do not delete a branch solely because its PR is closed.
@@ -37,6 +37,7 @@ Product `main..development` shares base `221b54b2a41ecc8c338d1bf2cf67280cf165ce9
 | Product | `codex/tst004-playwright-image-current-20261124` | `e1e92abd` | closed-unmerged image experiment; measured net slowdown, preserve result |
 | Product | `docs/arc13-post-273-reconciliation-20261114` | `82cca3b5` | closed Draft PR #274; preserve documentation and evidence pending triage |
 | Design System | `main` | `c6ff6545` | stable |
+| Design System | `codex/handover-live-reconciliation-20261124` | `61e718f6` | open PR #137; documentary reconciliation |
 
 The total is above the preferred steady-state target. Continue retiring only refs with a verified terminal disposition, while keeping active integration buffers and unresolved evidence.
 
