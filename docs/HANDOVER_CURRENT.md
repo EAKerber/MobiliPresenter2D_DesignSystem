@@ -39,6 +39,10 @@ Product `main..development` shares base `221b54b2a41ecc8c338d1bf2cf67280cf165ce9
 
 The count remains above the preferred steady-state target. Continue retiring only refs with a verified terminal disposition; keep the active buffer and unresolved evidence.
 
+### Hygiene mechanism and stale batch
+
+Product development has exact-SHA bounded hygiene tooling. The retirement workflow on Product main is triggered by changes to `ops/branch-hygiene-development-retirement.json` and applies that manifest after it reaches main. Its current manifest still lists 7 branch refs that are absent from the live branch list (codex/cmp017-admin-control-contract-20261122, codex/cmp017-finish-availability-20261122, codex/cmp017-price-publication-reason-20261122, codex/cmp017-material-disabled-reasons-20261122, codex/cmp017-object-asset-disabled-reason-20261122, codex/arc13-deterministic-scan-20261122, codex/loc004-youtube-links-20261123). Do not replay that manifest unchanged. Reconcile consumed batches and pins (GIT-021), update the candidate disposition, and run the audit-only path before any apply. The hard-coded “60 refs” in the legacy executor/test fixture is not a live inventory.
+
 ## TST-001 workflow inventory
 
 The manual dispatch route was removed because a workflow present only on `development` cannot be manually dispatched from the default branch. The reachable push-triggered inventory job passed on exact `development@fa4e482209933e20bab7a3f512fc29337a95b449` (run #45395199309; artifact #14920182560; SHA-256 `d55a65310889b24f4c0a8831663d375d286b470118a160516fa621e84559291d`). PR #397 persisted that generated snapshot to Product development at `3b339fbedd16679e42e204b461d9b77301491141`; PRs #398 and #399 changed only tests/evidence mapping; neither changed workflow definitions.
@@ -69,7 +73,7 @@ Product main, Netlify settings, deploy previews, and Production were not changed
 
 ## Immediate sequence
 
-1. Run the exact-SHA hygiene audit for the #399 integrated head using the current disposition and batch, then apply only if the audit and post-delete readback pass.
+1. Reconcile consumed hygiene batches and pins (GIT-021); the current main manifest references only absent refs. Then audit the #399 integrated head through the exact-SHA bounded path before any apply.
 2. Continue TST-004 across remaining workflow families, starting with path/condition edge cases; preserve existing gates until assertion equivalence is proved.
 3. Reconcile the 16 Product issues to current implementation and architecture work items.
 4. Classify the 17 main-only commits and prepare only compatible promotion packages.
