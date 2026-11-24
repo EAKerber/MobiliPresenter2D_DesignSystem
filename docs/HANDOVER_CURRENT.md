@@ -1,46 +1,19 @@
-## Readback operacional vigente — pós-#305 — 22/11/2026 (BRT)
+## Readback operacional vigente — reconciliação v0.9 — 24/11/2026 (BRT)
 
-**Pins lidos:** Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@613f28d9ee3aaa66d7bce24f772100d5f1354732`; Design System `main@cbc4e82fcb0091ae6ee9f449b9b13e226fcbab18` (base observado antes desta atualização documental).
+**Pins revalidados:** Product `development@b135aea4cc4a861d1b2ce1646e9fad71194b4774`; Product `main@01ded2c100fbfd8b16897e26113dc5068a83e429`; Design System `main@6cb858813f5a4e3ddb4f190580e90840f24449a4`.
 
-- Product #304 e #305 foram integradas seletivamente por squash em `development`: #304 head `204221d37314a2e5e84740a0d4e00c28c2bc78dc`, merge `e7869487d87c69de4461b31902129968f4fb056c`; #305 head `f162838dcab60975ce19cc38f2cc39678c2a5994`, merge `613f28d9ee3aaa66d7bce24f772100d5f1354732`. As árvores de ambos os merges coincidem com os heads revisados.
-- Os 9 gates aplicáveis passaram em cada head. Não houve Deploy Preview, alteração de `main` ou publicação em Production.
-- CMP-017 tem sete fatias integradas: cor temática, semântica/save-readback dos estados iniciais, motivos para etapas obrigatórias/vazias, disponibilidade de acabamentos, descrição acessível do bloqueio de publicação de preços, motivos para controles de material desabilitados e associação da restrição de ativos de cena aos três seletores correspondentes. O DoD do Admin segue incompleto.
-- ARC-13 em `development`: SHA-256 `E865C5944928822484B89ADF070D3B9A752A939DE0564164E6FDC6092489B700`, 1.043 ocorrências candidatas `unreviewed`, zero erros de parsing, 420 ocorrências primárias mapeadas e zero sem proveniência. As ocorrências técnicas `aria-describedby` permanecem no inventário com hint `non-translatable-reference`; contagens não são aprovação de conteúdo.
-- Product tem 9 refs: `main`, `development`, arquivo #274, buffer NAV-005, branch documental ARC-13 e branches integradas #301–#305. As 11 refs previamente autorizadas foram removidas; #301/#302 foram preservadas conforme a triagem, sem bloquear o avanço atual.
-- #274 permanece fechada sem merge e preservada. #290 continua Draft/dirty. O compare vivo é 453 commits exclusivos em development e 14 em main, base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`; não fazer merge global.
-- As PRs documentais DS #124–#127 atualizaram handover, inventário e crosswalk sem alterar runtime. Este readback é a base operacional para a próxima fatia; snapshots abaixo permanecem históricos.
-- Required checks e associação de gates a deploy continuam `UNKNOWN`.
+- O Produto está divergente: 485 commits exclusivos em `development`, 17 em `main`, base comum `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. A política vigente é promoção seletiva por pacote; não fazer merge da árvore inteira.
+- #339 integrou LOC-004 em `development@b0062b9); #340 integrou o rótulo acessível do menu em `development@4a910156`; #341 integrou o ajuste de escopo de cinco suites em `development@b135aea4`. Os 14 gates de #339, os 10 de #340 e os 5 de #341 passaram. A primeira tentativa do inventário em #340 falhou apenas porque o relatório refletia o manifesto anterior; após regeneração determinística, o gate passou no head final.
+- O Produto voltou a 5 refs após remover, com SHA esperado, as branches integradas dos PRs #340 e #341. O Design System tem 3 refs durante este PR documental; ao integrá-lo e remover sua branch curta, retorna a 2. Os soft caps são sinais de revisão, não hard caps.
+- A #274 permanece fechada sem merge e sua branch de evidências segue preservada. A #290 não autoriza sincronização integral. Nenhuma publicação em Production nem mudança de configuração Netlify faz parte desta continuação.
+- ARC-13 em `development@b135aea4`: 1.043 ocorrências ainda não revisadas, 420 ocorrências primárias com proveniência, zero sem proveniência e zero erros de parsing. É fotografia técnica count-only, não percentual de revisão semântica.
+- O plano v0.9, Anexo A, registra estados editoriais iniciais; não é ledger operacional nem prova de conclusão. Os readbacks seguintes atualizam o estado live e preservam os registros anteriores como histórico.
+- CMP-017 continua incompleto. O primeiro lote TST-004 de cinco filtros foi integrado e passou em todos os cinco workflows alterados. A análise maior de overlap, acionamento/custo e o estado integral de TST-004 ainda está em andamento.
+- A página autenticada de regras do GitHub foi lida em 24/11: nenhuma regra de branch ou required check está configurada. TST-005 tem essa evidência atual, não UNKNOWN; a ausência de regras merece uma decisão de governança, mas não bloqueia os PRs atuais.
+- TST-022 e a revisão de critérios/overlap continuam em andamento. As capturas CSSOM/runtime e pares visuais permanecem vinculados a SHA e ambiente; não concluem tokens globais nem DS-05A.
+- A continuação prioriza: (1) concluir o inventário e crosswalk atual dos workflows/overlap; (2) reconciliar cada item v0.9 por DoD e evidência, começando pelos 17 commits main-only; (3) seguir os pacotes verticais pendentes; (4) preparar promoção seletiva a `main` para decisão explícita, sem publicar em Production.
 
----
-
-## Readback após a publicação da #291 — 22/11/2026
-
-- Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@188f5074f60dc35df7aa8c673dbac4a2249813be`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
-- A PR #291 foi integrada à main e a Production está pronta no deploy Netlify `6b033828fda9e5b6e8ced61b`; os quatro gates pós-merge passaram.
-- A integração promoveu a ferramenta e o inventário ARC-13 como candidato não revisado; não aprova textos como catálogo nem conclui LOC-002…008.
-- #274 segue Draft e preserva material exclusivo para triagem. #290 permanece inadequada para sincronização integral.
-- A divergência segue ampla: 14 commits main-only, 446 development-only, base `221b54b2`. Product tem 13 refs; o soft cap é 5.
-- A PR #124 permanece documental e sem integração. A tabela de workflows abaixo continua histórica; required checks atuais são UNKNOWN.
-
----
-
-## Estado live — 22/11/2026
-
-**Pins revalidados:** Product `main@5b29934150a8f939057fbd3ae14fd1c1511afd03`; Product `development@188f5074f60dc35df7aa8c673dbac4a2249813be`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
-
-- #271 e #281 estão integradas na `main`; a Production está pronta no deploy Netlify `6b01d6e95f50b12695984d74`, vinculada ao SHA `5b299341`.
-- #293, #295, #296, #297 e #298 foram incorporadas seletivamente ao buffer `development`. #297 levou os ajustes CSS da #271 e regenerou o inventário após a mudança de fonte. Os 13 gates da PR passaram; o gate ARC-13 pós-merge e os gates de browser/publicação passaram no SHA corrente ou no head exato registrado.
-- #298 atualizou a guarda de continuidade NAV-005 para distinguir a `main` corrente da referência histórica. A execução pós-merge `45055266232` passou, incluindo 48 cenários de navegação e 20 do Viewer.
-- #291 permanece pronta para revisão: head `1f34543974ae64abd7d133baffab64f3a238953b`, base `main@5b299341`, 12 check runs sem falha e Deploy Preview READY. A integração na `main` aguarda autorização explícita.
-- #274 continua Draft: preserva documentação e revisões úteis, mas o inventário está vinculado a snapshot anterior. Seus artefatos exclusivos seguem preservados para triagem; não integrar o pacote inteiro.
-- #290 continua não mergeável como sincronização integral. Compare atual: 13 commits exclusivos na `main`, 446 em `development`, base comum `221b54b2`.
-- O Product tem 13 branches, acima do soft cap 5. Não foram removidas refs nesta rodada; a triagem de branches integradas continua necessária e depende de autorização para alvos exatos.
-- A matriz de 21 workflows abaixo é histórica; a associação atual de required checks permanece UNKNOWN.
-
-**Próxima ordem:** (1) aguardar autorização para #291; (2) após eventual integração, verificar o SHA e o deploy de Production; (3) triar #274 e as branches integradas, preservando proveniência; (4) continuar a promoção seletiva sem sincronizar a árvore divergente inteira.
-
----
-
+Os snapshots datados abaixo são históricos e não substituem este readback.
 ## Revalidação operacional live — 22/11/2026 (BRT)
 
 **Pins:** Product main@5b29934150a8f939057fbd3ae14fd1c1511afd03; Product development@9e352dbd2644e4e91c8fe533f92bf0a8827a840d; Design System main@43594dc5723bffd5acb42dad1cd8ee30bcd48778.
@@ -833,3 +806,40 @@ A [baseline](../evidence/architecture/g3-public-button-runtime-baseline-2026-11-
 Uma revisora independente comparou os contratos e conferiu o Product em `work/arc13-ui-inventory-20261112@db908e5`. “Iniciar ativo” permanece ambíguo na imagem: o texto é usado tanto para visibilidade inicial de objeto quanto para seleção inicial de serviço. “Ativa” é produzido pelo controle de disponibilidade de etapa, embora a captura não mostre o cartão. A cor diferente vem das regras de CSS; não há evidência suficiente para dizer que a hierarquia visual foi intencional.
 
 O inventário mantém sete contratos, compartilha apenas a casca/copy que a função permite e conserva pendentes seis decisões: copy/nome acessível por tipo e efeito; nome acessível de etapa em estado marcado; indicação da publicação para “Disponível para clientes”; accent/hierarquia para checks discretos e “Sem cor/tinta base”; feedback para a última opção; exceção de foco 3 px no controle de preço. A revisão detalhada no Product local (`docs/architecture/arc13/reviews/2026-11-14/admin-control-common-sense-review.md`) registra IDs, responsáveis e validação necessária. Nenhuma UI foi alterada e nenhum teste foi executado.
+
+
+## Revalidação operacional e execução v0.9 — 24/11/2026 (BRT)
+
+**Pins:** Product `main@01ded2c100fbfd8b16897e26113dc5068a83e429`; Product `development@b135aea4cc4a861d1b2ce1646e9fad71194b4774`; Design System `main@6cb858813f5a4e3ddb4f190580e90840f24449a4`. Product compare: 17 commits main-only, 485 development-only, base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`.
+
+### Entregas verificadas
+
+- PR #339 integrou LOC-004 em `development@b0062b9`; 14 gates aprovados.
+- PR #340, head final `16cec859`, integrou o rótulo público de menu em `development@4a910156`; 10 gates aprovados. O ARC-13 falhou no primeiro head por relatório desatualizado; a correção regenerou o inventário duas vezes com SHA idêntico e o gate passou no head final.
+- PR #341, head `93173acf`, integrou por squash em `development@b135aea4`; os cinco workflows modificados passaram. Removemos a branch de cada PR integrado com compare-and-delete usando o SHA esperado. O Produto voltou a 5 refs e `main` permaneceu em `01ded2c`.
+- O lote TST-004 retirou somente `scripts/compile-primary-pages.mjs` dos filtros `push.paths` e `pull_request.paths` de Flow layout, Keyboard, Mobile, Stone e Summary pricing. Os paths de domínio, os próprios YAMLs, `workflow_dispatch` e as saídas `app/index.html`/`app/**` permanecem. Atualizações reais de app continuam acionando os gates apropriados.
+- ARC-13 em `development@b135aea4`: SHA-256 `3AD718780463A9AE1907613250EEFB7C2508E9FE1A8619D2844CBB9CED80B195`; 1.043 ocorrências unreviewed, 420 mapeadas, 0 sem origem, 0 parse errors. Os três IDs `d01bb4284ec09ab0`, `d2de7c48d645e2db` e `95fa05532af8bdc7` correspondem às ocorrências públicas de “Abrir menu”. Contagens não medem revisão semântica.
+- #274 segue fechada sem merge e preservada. Nenhum PR ou pacote desta rodada alterou `main`, hosting ou Production.
+- Branch protection/required checks foi auditado por leitura autenticada da tela de configuração: nenhum rule set, regra clássica ou status check obrigatório listado em qualquer branch em 24/11. Registrar como observação live e decidir se a ausência é intencional.
+
+### Estados do plano e próximos passos
+
+- MD-001/002/003: parcial; inventário e proveniência reproduzíveis, mas candidatos sem revisão semântica e matriz fonte→consumidor incompleta.
+- MD-004 / RM-03 / TST-004: primeiro ajuste de acionamento concluído em PR #341; falta crosswalk de 74 workflows atuais, classificação de sobreposição, custo e propriedade por gate.
+- MD-005/006: falta matriz atual de browser/agente e fixture hosted autenticada validada por head.
+- MD-007/GIT-004: #340 e #341 fechadas/integradas; #274 continua fechada sem merge e retida.
+- MD-008 / GIT-003 / GIT-008: promoção seletiva comprovada; os 17 commits main-only devem ser classificados por substituição, compatibilidade e dependência antes de qualquer port.
+- MD-009 / DS-05A: parcial; capturas CSSOM/runtime com escopo e ambiente, sem fechamento hosted.
+- MD-010 / CMP-017: sete fatias integradas; DoD do Admin incompleto.
+- TST-005: interface autenticada sem regras/required checks em 24/11. Reavaliar o objetivo de proteção da branch e registrar a decisão sem presumir que gates executados são obrigatórios.
+- TST-022: em andamento. DOM-001…014, CMP-001…019 e TST-001…026 exigem evidência por DoD; não inferir conclusão por existência de componentes ou testes.
+- GIT-014: preservar e triar paths exclusivos da #274; extrações anteriores não dispositionam a branch inteira.
+- GIT-021/022: Product está em 5 refs. Design System tem 3 refs durante este PR documental, acima do soft cap 2 por uma branch curta.
+
+### Ordem operacional
+
+1. Completar a classificação semântica dos 17 commits main-only; separar conteúdo equivalente já mais novo em `development`, necessidades de port seletivo, e fluxos de higiene que não pertencem ao runtime.
+2. Construir o crosswalk atual dos 74 workflows e mapear cada um a intenção, domínio, fonte, sobreposição, custo e DoD; consolidar TST-004/TST-022 sem remover cobertura.
+3. Continuar CMP/DOM/ARC por fatias com evidência e revisão de senso comum, mantendo inventário global não aprovado.
+4. Atualizar o handover no mesmo arquivo após cada pacote integrado e preservar receipts por família.
+5. Preparar promoção seletiva a `main` somente após verificar dependências/estado; manter Production separada.
