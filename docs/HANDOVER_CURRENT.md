@@ -887,3 +887,25 @@ O inventário mantém sete contratos, compartilha apenas a casca/copy que a fun�
 3. Continuar CMP/DOM/ARC por fatias com evidência e revisão de senso comum, mantendo inventário global não aprovado.
 4. Atualizar o handover no mesmo arquivo após cada pacote integrado e preservar receipts por família.
 5. Preparar promoção seletiva a `main` somente após verificar dependências/estado; manter Production separada.
+
+## Reconciliação após Product PR #384 — 24/11/2026
+
+### Leitura operacional
+
+- Product `main@01ded2c100fbfd8b16897e26113dc5068a83e429` permanece inalterada; Product `development@54787e51528ae989fb2bc2b6690f87b6aa8b773a` contém a integração por squash da PR #384.
+- A #384 partiu do head `f661bd7a1f942d223b1ddec9d79ba4ffb28c4226`. O gate de proveniência passou nesse head no run [45372393480](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/45372393480): testes negativos, tags arquivadas fixadas, comparação dos 40 assets e publicação do artefato [14910185751](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/45372393480), digest `sha256:69a18b446f00608a399c3b284550c63b411eb0eaf2834ecf2d1555418244f0e8`. O check do seletor do plano também passou no head; jobs de inventário foram corretamente ignorados para esse diff.
+- O workflow de proveniência agora observa, em PRs e pushes para `development`, os 40 caminhos do manifesto arquivado e os arquivos de teste, auditoria e workflow. O acionamento manual permanece. A execução pós-merge no evento `push` ainda não foi lida de volta; não é reivindicada como evidência.
+- A mudança altera somente workflow e documentação. Não altera código de runtime, Viewer, máscaras, conteúdo binário de assets ou consumidores; não executa deploy nem operação de Production.
+- Product tem 31 refs na leitura atual. A auditoria exata encontrou 22 refs já integradas que atendem aos critérios de aposentadoria; seis refs foram preservadas por trabalho não integrado, buffer ou evidência. A branch recém-integrada da #384 ainda deve passar pelo mesmo readback de árvore/proteção antes de entrar num lote. O manifesto do batch de aposentadoria continua desatualizado e não pode ser aplicado sem atualização e nova auditoria.
+- Design System tinha 3 refs antes deste PR documental; esta branch curta eleva temporariamente a 4. Preservar as branches ainda não integradas até a triagem de seus PRs.
+
+### Estado e atrito
+
+A #384 fecha a lacuna de alcance automático da auditoria de proveniência. Não reduz as asserções e não mede economia de duração: o run observado confirma execução correta, mas não forma uma comparação controlada. TST-002 continua parcial; o mapa de asset provenance é uma fatia, e a aprovação visual humana permanece separada. TST-001 continua incompleto porque o inventário versionado ainda está fixado antes das últimas integrações e o command-to-assertion/event reachability crosswalk dos workflows não foi fechado.
+
+### Próxima sequência de execução
+
+1. Atualizar o lote de aposentadoria no caminho somente-development, ancorado nos 22 SHA/tree já auditados; revalidar cada alvo e decidir a #384 branch apenas após prova de árvore idêntica. Preservar as seis refs ainda necessárias. Executar primeiro o auditor; só aplicar o lote exato depois que o audit receipt passar.
+2. Regenerar o TST-001 inventory no SHA atual de `development`, conferir o artefato pós-push e substituir o pin antigo sem reescrever os snapshots históricos.
+3. Prosseguir o crosswalk TST-001/TST-002 por famílias ainda sem cobertura, incluindo localização semântica e relação comando→asserção/evento. Medir custo representativo antes de remover qualquer cobertura.
+4. Manter promoção para `main` seletiva e separar integração técnica, aprovação visual, deploy preview e Production.
