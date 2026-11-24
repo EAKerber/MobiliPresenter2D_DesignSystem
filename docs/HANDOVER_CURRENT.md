@@ -8,16 +8,16 @@
 | Repository | Ref | Verified SHA |
 |---|---|---|
 | Product | main | `01ded2c100fbfd8b16897e26113dc5068a83e429` |
-| Product | development | `81207f32d0bd2100421172fb7b6585099c3fa78a` |
+| Product | development | `0af0bb0bbe162be98fd8ce1c6c8347ae25106f13` |
 | Design System | main | `c6ff6545e9ae2071e695109fd94ac91676e7fb0a` |
 
-Product `main..development` shares base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`: 543 commits are development-only and 17 are main-only. These are commit counts, not a measure of runtime divergence. Promotion remains selective; do not merge the entire tree without classifying consumers.
+Product `main..development` shares base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`: 544 commits are development-only and 17 are main-only. These are commit counts, not a measure of runtime divergence. Promotion remains selective; do not merge the entire tree without classifying consumers.
 
 ## Open work and branch hygiene
 
 - Product has one open PR, #400, which prepares exact retirement of the integrated TST-004 crosswalk branch. Design System has open PR #137 for this handover update.
 - The live remote inventory is **13 branches**: 11 in Product and 2 in Design System, including this PR’s temporary handover branch. There are not 60 live branches; “60 refs” is a legacy executor/test-fixture value.
-- Product branch `codex/tst001-pr-inventory-readback-20261124` was retired after verifying PR #403 merged, the branch was unprotected, no open PR used it as a head, and its tree exactly matched current development. Its PR and commits remain recorded.
+- Product branches for PRs #403 and #404 were retired after each merge by verifying unprotected state, no open PR using the head, and exact tree equality with current development. Their PRs and commits remain recorded.
 - The TST-004 crosswalk branch `codex/tst004-mask-assertion-crosswalk-20261124` is integrated through PR #399 at `531c2814235c9524289ccb9efd909f43e01d908b`; its tree matches current development. PR #400 pins this exact target for the bounded retirement workflow, so preserve it until that apply/readback route is deliberately integrated and verified.
 - Other extra refs are active buffers, unmerged experiments, or retained evidence. In particular, preserve NAV-005, the closed-but-unmerged TST-004 browser setup experiments, and the closed ARC-13 PR #274 evidence branch. Do not delete a branch solely because its PR is closed.
 
@@ -53,8 +53,8 @@ The manual dispatch route was removed because a workflow present only on `develo
 
 - PR-head readback passed at exact SHA `5da6d931fdf77b839a9ef6c1c4e70fa52e4c3154` (run #45420119869). The run exposed and fixed an initial merge-ref checkout defect before it passed.
 - The integrated push readback passed at exact `development@81207f32d0bd2100421172fb7b6585099c3fa78a` (run #45420518073; conclusion: success). Its source tree is `d5f57b82c68d66169eed52ca663f85eafbba23f8`, verified against the development pin.
-- The live snapshot reports 27 main workflows, 68 development workflows, 25 shared, 2 main-only, and 43 development-only; 70 definitions, event counts PR 27 / push 62 / workflow_dispatch 54 / schedule 1, seven paths marked write-signal, and zero parse warnings.
-- The checked-in JSON still pins historical `fa4e482`; the current successful readback is in the workflow log/artifact, not yet a refreshed committed snapshot. TST-001 remains incomplete: finish the workflow → trigger → job → command → assertion → result mapping and clearly distinguish existing, candidate, and historical routes.
+- The live snapshot reports 27 main workflows, 68 development workflows, 25 shared, 2 main-only, and 43 development-only; 70 workflow paths, 89 distinct blob definitions, 364 declared run commands, event counts PR 27 / push 62 / workflow_dispatch 54 / schedule 1, seven paths marked write-signal, and zero parse warnings.
+- PR #404 refreshed the checked-in JSON from exact `development@81207f32` before its integration at `0af0bb0`. The integration changed only the inventory JSON, so the workflow definitions in the current tree remain the exact set measured by run #45420518073; the snapshot also records open PR #400. No push inventory run was triggered by this docs-only path change. TST-001 remains incomplete: publish the workflow → trigger → job → command → result matrix and clearly distinguish existing, candidate, and historical routes. Assertion reachability remains the separate TST-004 concern.
 
 
 
