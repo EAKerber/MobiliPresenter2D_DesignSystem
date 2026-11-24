@@ -1,4 +1,28 @@
-## Readback operacional vigente — execução do plano v0.9 — 24/11/2026 (BRT)
+## Leitura operacional vigente — execução do plano v0.9 — 24/11/2026 (BRT)
+
+**Pins revalidados:** Produto main 01ded2c100fbfd8b16897e26113dc5068a83e429; Produto development da0dc5d471cca012cbd6f417b411c82471786737; Design System main 570954f8e31c3530fb8570755f838965dc7f8105. O compare entre Produto main e development mantém a base 221b54b2a41ecc8c338d1bf2cf67280cf165ce95: 17 commits exclusivos em main e 520 exclusivos em development. A promoção continua seletiva.
+
+### Revisão dos gates e atrito medido
+
+- PR #377 integrou em development@da0dc5d. Os gates de teclado, fluxo responsivo, roteamento público e advisory passaram no head candidato. O lote preservou todas as assertions e alterou somente workflows e documentação; não mudou runtime do Viewer, dados/arquivos de máscara nem seus consumidores.
+- PR #378 foi encerrada sem merge. Os gates passaram, mas Mobile/Stone/Resumo de preços levaram 56/52/53 s, contra amostras anteriores de 39/37/38 s. São amostras isoladas, não benchmark controlado. O pull da imagem Playwright custou cerca de 13–17 s e não mostrou ganho total suficiente; manter os gates e suas assertions foi a decisão correta.
+- A leitura de 75 workflows em development não encontrou assertions redundantes nas famílias de navegação pública, cabeçalho do Viewer e Buyer V5. O mesmo teste reaparece sob eventos e contratos diferentes; texto de comando repetido, sozinho, não justifica remoção. Os totais de triggers se sobrepõem: 26 workflows declaram pull_request, 61 push, 63 workflow_dispatch e 1 schedule; 12 são somente manuais.
+- O inventário live exato foi gerado no run 45358270088 para development@da0dc5d, artefato 14903476960, SHA-256 fdabbdbe475af1fa0d6e462ec01dacd2a1fe81b7672feaa715edccef8838b32e (49.706 bytes). O conector entrega apenas a referência baixável, não o conteúdo do ZIP; contagens de comandos e hashes desse artefato permanecem UNKNOWN. As contagens de arquivos foram lidas diretamente das árvores: 27 main, 75 development, 25 compartilhados, 2 somente em main e 50 somente em development. O JSON versionado ainda está pinado em uma árvore histórica e não foi usado como fotografia atual.
+- O atrito mais claro agora é operacional: Produto tem 25 refs e nenhuma PR aberta, acima do soft cap 5. Dezessete refs correspondem a PRs integradas, estão no SHA exato integrado e têm árvore idêntica; seis refs auxiliares/candidatas permanecem sem essa comprovação, além de main e development. A tentativa de conferir exclusões pela interface foi interrompida após a navegação remover três refs sem validação visível. As três foram restauradas nos SHAs originais e a leitura posterior confirmou 25 refs; não houve redução líquida. A lista de candidatas continua preservada. Não repetir exclusões pela tabela do navegador; preparar uma via que compare o SHA remoto imediatamente antes de cada remoção e não acione publicação do Produto.
+- Essa revisão de gates, incluindo #377 e a candidata #378, não tocou comportamento/conteúdo das máscaras nem consumidores. Não inferir isso para toda a divergência histórica entre main e development.
+
+### Estado e sequência
+
+- TST-001: fotografia reproduzível gerada, mas o payload do artefato exato ainda não foi reconciliado; adicionar um caminho de leitura do resumo/linhas é a próxima correção de atrito.
+- TST-004: narrowing anterior e ajustes de setup continuam delimitados. Ainda faltam o crosswalk assertion-level dos 75 workflows, condições/paths e custos representativos; não remover gates por sobreposição aparente.
+- TST-022: segue advisory e não desativa workflows.
+- Restam a classificação dos 17 commits exclusivos de main, a continuação dos pacotes DOM/CMP/ARC conforme seus DoDs e a triagem das refs sem disposição. Preservar a #274 e evidências históricas.
+- Sem alteração em main do Produto, deployment, configuração Netlify ou Production nesta atualização.
+
+O snapshot operacional anterior está preservado abaixo como histórico.
+
+
+## Snapshot anterior — execução do plano v0.9 — 24/11/2026 (BRT), superseded by the live readback above
 
 **Pins revalidados:** Product `main@01ded2c100fbfd8b16897e26113dc5068a83e429`; Product `development@7552a3bbcafc2693cc1f290f868b92253fd37bc6`; Design System `main@d65677ee257bfb7279e4f196bbf179afc26e8e66`. O compare Product `development` → `main` registra 511 commits só em `development`, 17 só em `main` e base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. A política continua sendo promoção seletiva, sem merge integral da árvore.
 
