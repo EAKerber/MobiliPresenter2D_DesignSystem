@@ -8,36 +8,39 @@
 | Repository | Ref | Verified SHA |
 |---|---|---|
 | Product | main | `01ded2c100fbfd8b16897e26113dc5068a83e429` |
-| Product | development | `fbe6b9b409dd67884dd9447b02f87752a7d0f8ff` |
-| Design System | main | `efe754d25466ba3b77dedde04bf1e2d7c0abc0e7` |
+| Product | development | `81207f32d0bd2100421172fb7b6585099c3fa78a` |
+| Design System | main | `c6ff6545e9ae2071e695109fd94ac91676e7fb0a` |
 
-Product `main..development` shares base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`: 541 commits are development-only and 17 are main-only. These are commit counts, not a measure of runtime divergence. Promotion remains selective; do not merge the entire tree without classifying consumers.
+Product `main..development` shares base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`: 543 commits are development-only and 17 are main-only. These are commit counts, not a measure of runtime divergence. Promotion remains selective; do not merge the entire tree without classifying consumers.
 
 ## Open work and branch hygiene
 
-- Product has open PR #400, which reconciles the stale hygiene batches; Design System has open PR #136, which updates this handover.
-- Product has 16 open issues; reconcile them against current code, contracts, consumers, and evidence before marking any resolved.
-- There are **12 live branches**, not 60: 10 in Product and 2 in Design System. The number 60 belongs to a legacy executor/test fixture, not the live branch list. Product’s count includes the temporary branch for PR #400.
-- Five integrated refs were retired after exact SHA, merged-PR, protection, and open-PR checks. Their PRs and commits remain recorded.
-- One integrated Product ref is technically eligible for retirement: `codex/tst004-mask-assertion-crosswalk-20261124` @ `531c2814235c9524289ccb9efd909f43e01d908b`. PRs #398 and #399 are merged; PR #399 integrated this head into development at `fbe6b9b409dd67884dd9447b02f87752a7d0f8ff`. Its tree exactly matches current development (`80d486ab8044a398286de26f26aa70853489df08`), it is unprotected, no open PR uses it, and the current 68 development workflows do not reference its branch name. The exact-SHA audit-only run for PR #400 passed with one proof and `deleted: 0`; the branch remains intact until the manifest is integrated and the apply/readback path runs.
+- Product has one open PR, #400, which prepares exact retirement of the integrated TST-004 crosswalk branch. Design System has no open PRs.
+- The live remote inventory is **12 branches**: 11 in Product and 1 in Design System. There are not 60 live branches; “60 refs” is a legacy executor/test-fixture value.
+- Product branch `codex/tst001-pr-inventory-readback-20261124` was retired after verifying PR #403 merged, the branch was unprotected, no open PR used it as a head, and its tree exactly matched current development. Its PR and commits remain recorded.
+- The TST-004 crosswalk branch `codex/tst004-mask-assertion-crosswalk-20261124` is integrated through PR #399 at `531c2814235c9524289ccb9efd909f43e01d908b`; its tree matches current development. PR #400 pins this exact target for the bounded retirement workflow, so preserve it until that apply/readback route is deliberately integrated and verified.
+- Other extra refs are active buffers, unmerged experiments, or retained evidence. In particular, preserve NAV-005, the closed-but-unmerged TST-004 browser setup experiments, and the closed ARC-13 PR #274 evidence branch. Do not delete a branch solely because its PR is closed.
 
 ### Remaining refs
 
 | Repository | Branch | SHA | Role/status |
 |---|---|---|---|
 | Product | `main` | `01ded2c1` | stable |
-| Product | `development` | `fbe6b9b4` | active integration buffer |
-| Product | `codex/hygiene-retire-tst004-crosswalk-20261124` | `d2f1f3ae` | PR #400; exact hygiene audit passed, apply awaits integration |\n| Product | `codex/arc13-localization-menu-theme-20261122` | `fc12bb62` | localization/theme candidate; disposition still to verify |
+| Product | `development` | `81207f32` | active integration buffer |
+| Product | `codex/hygiene-retire-tst004-crosswalk-20261124` | `d2f1f3ae` | open PR #400; apply still awaits integration and readback |
+| Product | `codex/arc13-localization-menu-theme-20261122` | `fc12bb62` | localization/theme candidate; latest PR closed unmerged |
 | Product | `codex/nav005-development-buffer-20261121` | `9c18dd97` | NAV-005 buffer; preserve |
-| Product | `codex/tst001-current-snapshot-20261124` | `a8b31e3e` | evidence candidate; pin/disposition still to verify |
-| Product | `codex/tst001-refreshable-inventory-20261124` | `6f7a0d3f` | stale/diverged candidate; inspect before reuse |
-| Product | `codex/tst004-browser-image-setup-20261124` | `c8c7f71f` | divergent browser setup candidate; preserve until disposition |
-| Product | `codex/tst004-mask-assertion-crosswalk-20261124` | `531c2814` | PR #399 merged; tree equals development; controlled retirement candidate |
-| Product | `docs/arc13-post-273-reconciliation-20261114` | `82cca3b5` | ARC-13 evidence; preserve pending reconciliation |
-| Design System | `main` | `efe754d2` | stable |
-| Design System | `codex/md001-current-handover-20261124` | current PR #136 head | open handover update |
+| Product | `codex/tst001-current-snapshot-20261124` | `a8b31e3e` | current inventory candidate; compare with integrated snapshot before reuse |
+| Product | `codex/tst001-refreshable-inventory-20261124` | `6f7a0d3f` | closed-unmerged generation experiment; preserve evidence |
+| Product | `codex/tst004-browser-image-setup-20261124` | `c8c7f71f` | closed-unmerged browser setup experiment; preserve evidence |
+| Product | `codex/tst004-mask-assertion-crosswalk-20261124` | `531c2814` | integrated by #399; exact target in PR #400 retirement manifest |
+| Product | `codex/tst004-playwright-image-current-20261124` | `e1e92abd` | closed-unmerged image experiment; measured net slowdown, preserve result |
+| Product | `docs/arc13-post-273-reconciliation-20261114` | `82cca3b5` | closed Draft PR #274; preserve documentation and evidence pending triage |
+| Design System | `main` | `c6ff6545` | stable |
 
-The count remains above the preferred steady-state target. Continue retiring only refs with a verified terminal disposition; keep the active buffer and unresolved evidence.
+The total is above the preferred steady-state target. Continue retiring only refs with a verified terminal disposition, while keeping active integration buffers and unresolved evidence.
+
+
 
 ### Hygiene mechanism and stale batch
 
@@ -45,9 +48,14 @@ Product development has exact-SHA bounded hygiene tooling. The retirement workfl
 
 ## TST-001 workflow inventory
 
-The manual dispatch route was removed because a workflow present only on `development` cannot be manually dispatched from the default branch. The reachable push-triggered inventory job passed on exact `development@fa4e482209933e20bab7a3f512fc29337a95b449` (run #45395199309; artifact #14920182560; SHA-256 `d55a65310889b24f4c0a8831663d375d286b470118a160516fa621e84559291d`). PR #397 persisted that generated snapshot to Product development at `3b339fbedd16679e42e204b461d9b77301491141`; PRs #398 and #399 changed only tests/evidence mapping; neither changed workflow definitions.
+The manual dispatch route was removed because a workflow present only on `development` cannot be manually dispatched from the default branch. The shared inventory job now runs on both `push` and `pull_request`, pins the exact PR head (not GitHub's merge ref), verifies the push SHA, emits the full JSON to readable logs, and names artifacts uniquely.
 
-At the measured snapshot, the inventory reports 27 workflows in main, 68 in development, 25 shared, 2 main-only, 41 development-only, and 0 parse warnings. The JSON correctly leaves command/assertion validation separate. The file pins `fa4e482`, the exact measured workflow snapshot, rather than claiming the JSON commit itself was measured.
+- PR-head readback passed at exact SHA `5da6d931fdf77b839a9ef6c1c4e70fa52e4c3154` (run #45420119869). The run exposed and fixed an initial merge-ref checkout defect before it passed.
+- The integrated push readback passed at exact `development@81207f32d0bd2100421172fb7b6585099c3fa78a` (run #45420518073; conclusion: success). Its source tree is `d5f57b82c68d66169eed52ca663f85eafbba23f8`, verified against the development pin.
+- The live snapshot reports 27 main workflows, 68 development workflows, 25 shared, 2 main-only, and 43 development-only; 70 definitions, event counts PR 27 / push 62 / workflow_dispatch 54 / schedule 1, seven paths marked write-signal, and zero parse warnings.
+- The checked-in JSON still pins historical `fa4e482`; the current successful readback is in the workflow log/artifact, not yet a refreshed committed snapshot. TST-001 remains incomplete: finish the workflow → trigger → job → command → assertion → result mapping and clearly distinguish existing, candidate, and historical routes.
+
+
 
 ## TST-004 mask assertion slice
 
