@@ -1,45 +1,34 @@
-## Readback operacional vigente — pós-#305 — 22/11/2026 (BRT)
+## Readback operacional vigente — execução do plano v0.9 — 24/11/2026 (BRT)
 
-**Pins lidos:** Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@613f28d9ee3aaa66d7bce24f772100d5f1354732`; Design System `main@cbc4e82fcb0091ae6ee9f449b9b13e226fcbab18` (base observado antes desta atualização documental).
+**Pins verificados:** Product `main@01ded2c100fbfd8b16897e26113dc5068a83e429`; Product `development@b3f78a5eefc9d243f007af3d6618abe3d6a09142`; Design System `main@6cb858813f5a4e3ddb4f190580e90840f24449a4`. Product compare: 510 commits exclusivos em `development`, 17 em `main`, base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. Não fazer merge da árvore inteira.
 
-- Product #304 e #305 foram integradas seletivamente por squash em `development`: #304 head `204221d37314a2e5e84740a0d4e00c28c2bc78dc`, merge `e7869487d87c69de4461b31902129968f4fb056c`; #305 head `f162838dcab60975ce19cc38f2cc39678c2a5994`, merge `613f28d9ee3aaa66d7bce24f772100d5f1354732`. As árvores de ambos os merges coincidem com os heads revisados.
-- Os 9 gates aplicáveis passaram em cada head. Não houve Deploy Preview, alteração de `main` ou publicação em Production.
-- CMP-017 tem sete fatias integradas: cor temática, semântica/save-readback dos estados iniciais, motivos para etapas obrigatórias/vazias, disponibilidade de acabamentos, descrição acessível do bloqueio de publicação de preços, motivos para controles de material desabilitados e associação da restrição de ativos de cena aos três seletores correspondentes. O DoD do Admin segue incompleto.
-- ARC-13 em `development`: SHA-256 `E865C5944928822484B89ADF070D3B9A752A939DE0564164E6FDC6092489B700`, 1.043 ocorrências candidatas `unreviewed`, zero erros de parsing, 420 ocorrências primárias mapeadas e zero sem proveniência. As ocorrências técnicas `aria-describedby` permanecem no inventário com hint `non-translatable-reference`; contagens não são aprovação de conteúdo.
-- Product tem 9 refs: `main`, `development`, arquivo #274, buffer NAV-005, branch documental ARC-13 e branches integradas #301–#305. As 11 refs previamente autorizadas foram removidas; #301/#302 foram preservadas conforme a triagem, sem bloquear o avanço atual.
-- #274 permanece fechada sem merge e preservada. #290 continua Draft/dirty. O compare vivo é 453 commits exclusivos em development e 14 em main, base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`; não fazer merge global.
-- As PRs documentais DS #124–#127 atualizaram handover, inventário e crosswalk sem alterar runtime. Este readback é a base operacional para a próxima fatia; snapshots abaixo permanecem históricos.
-- Required checks e associação de gates a deploy continuam `UNKNOWN`.
+### Pacotes integrados em development
 
----
+- PR #364 integrou o fail-closed para configuração publicada ausente/inválida e testes de resposta/readback. Escopo: `netlify/functions/configuration.mjs` e dois testes de contrato; sem alteração no Viewer, dados de máscaras ou seus consumidores.
+- PR #365 manteve os três testes de navegador do Admin e passou a usar a imagem Playwright 1.62.1 com Chromium pré-instalado. No gate #364, a instalação de ferramentas e Chromium levou 4m18; no novo gate, o pacote Node instalou em cerca de 2s e o job terminou em aproximadamente 41s, incluindo a primeira busca da imagem.
+- PR #366 adicionou o quinto grupo advisory de impacto para Buyer Configuration. O teste de save V5 é mapeado aos contratos de configuração e concorrência; caminhos desconhecidos continuam selecionando todos os grupos. Nenhum workflow ou gate foi removido.
+- PR #367 corrigiu a execução manual do inventário: agora ela lê as PRs abertas em vez de fornecer uma lista vazia. A execução automática pós-merge passou.
 
-## Readback após a publicação da #291 — 22/11/2026
+### Evidência atual
 
-- Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@188f5074f60dc35df7aa8c673dbac4a2249813be`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
-- A PR #291 foi integrada à main e a Production está pronta no deploy Netlify `6b033828fda9e5b6e8ced61b`; os quatro gates pós-merge passaram.
-- A integração promoveu a ferramenta e o inventário ARC-13 como candidato não revisado; não aprova textos como catálogo nem conclui LOC-002…008.
-- #274 segue Draft e preserva material exclusivo para triagem. #290 permanece inadequada para sincronização integral.
-- A divergência segue ampla: 14 commits main-only, 446 development-only, base `221b54b2`. Product tem 13 refs; o soft cap é 5.
-- A PR #124 permanece documental e sem integração. A tabela de workflows abaixo continua histórica; required checks atuais são UNKNOWN.
+- TST-001 gerou o inventário exato para Product `main@01ded2c1` e `development@b3f78a5`: [run #45340082315](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/45340082315), artefato [tst-001-workflow-inventory-b3f78a5](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/45340082315/artifacts/14895742011).
+- O inventário registra 27 workflows em `main`, 75 em `development`, 25 compartilhados, 2 exclusivos de `main` e 50 exclusivos de `development`. Há 96 definições versionadas entre os dois pins, 0 avisos de parsing, 12 workflows dispatch-only e nenhum PR aberto no readback do SHA.
+- Nos 75 workflows de `development`, o artefato registra 268 comandos de job; 242 hashes de comando são distintos. Quinze hashes aparecem mais de uma vez, totalizando 26 execuções adicionais. A preparação local do V5 aparece em sete passos, distribuídos por seis workflows. Repetição textual é sinal para inspeção, não prova de assertions redundantes.
+- O artefato declara limites explícitos: o leitor YAML não é validador geral; texto de comando e hash não provam alcançabilidade de cada assertion; sinais de escrita não são prova de segurança.
+- TST-001 avançou para snapshot reproduzível; a classificação histórica e o resultado/assertion crosswalk continuam pendentes. TST-004 permanece em andamento: o primeiro lote de cinco filtros foi integrado em #341; o crosswalk integral dos 75 workflows e a avaliação de sobreposição/custo ainda faltam.
+- TST-022 agora contém cinco famílias advisory, incluindo Buyer Configuration. O seletor nunca desativa workflows.
+- O readback de branch protection em 24/11 não encontrou regras de branch nem required checks. Registrar como observação live, não como prova de que os gates são obrigatórios.
+- O Produto foi observado com 24 refs, acima do soft cap de revisão 5. As branches integradas desta rodada e outras refs ainda precisam de triagem criteriosa; preservar evidências e não apagar branches sem confirmar SHA/árvore e ausência de PR aberta.
+- Nenhuma publicação em Production, mudança de configuração Netlify, alteração de Viewer ou alteração de máscara fez parte desses pacotes.
 
----
+### Próximas frentes
 
-## Estado live — 22/11/2026
-
-**Pins revalidados:** Product `main@5b29934150a8f939057fbd3ae14fd1c1511afd03`; Product `development@188f5074f60dc35df7aa8c673dbac4a2249813be`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
-
-- #271 e #281 estão integradas na `main`; a Production está pronta no deploy Netlify `6b01d6e95f50b12695984d74`, vinculada ao SHA `5b299341`.
-- #293, #295, #296, #297 e #298 foram incorporadas seletivamente ao buffer `development`. #297 levou os ajustes CSS da #271 e regenerou o inventário após a mudança de fonte. Os 13 gates da PR passaram; o gate ARC-13 pós-merge e os gates de browser/publicação passaram no SHA corrente ou no head exato registrado.
-- #298 atualizou a guarda de continuidade NAV-005 para distinguir a `main` corrente da referência histórica. A execução pós-merge `45055266232` passou, incluindo 48 cenários de navegação e 20 do Viewer.
-- #291 permanece pronta para revisão: head `1f34543974ae64abd7d133baffab64f3a238953b`, base `main@5b299341`, 12 check runs sem falha e Deploy Preview READY. A integração na `main` aguarda autorização explícita.
-- #274 continua Draft: preserva documentação e revisões úteis, mas o inventário está vinculado a snapshot anterior. Seus artefatos exclusivos seguem preservados para triagem; não integrar o pacote inteiro.
-- #290 continua não mergeável como sincronização integral. Compare atual: 13 commits exclusivos na `main`, 446 em `development`, base comum `221b54b2`.
-- O Product tem 13 branches, acima do soft cap 5. Não foram removidas refs nesta rodada; a triagem de branches integradas continua necessária e depende de autorização para alvos exatos.
-- A matriz de 21 workflows abaixo é histórica; a associação atual de required checks permanece UNKNOWN.
-
-**Próxima ordem:** (1) aguardar autorização para #291; (2) após eventual integração, verificar o SHA e o deploy de Production; (3) triar #274 e as branches integradas, preservando proveniência; (4) continuar a promoção seletiva sem sincronizar a árvore divergente inteira.
-
----
+1. Concluir o crosswalk TST-004: mapear os acionamentos/custos de cada workflow aos comandos e assertions; distinguir setup repetido de validação realmente sobreposta antes de propor narrowing.
+2. Completar TST-001 com a classificação de workflows existentes, candidatos e históricos e com resultados ligados ao inventário exato.
+3. Continuar DOM-003/004 e TST-009 com distinção entre provas de store simulado e confirmação do provider Netlify real.
+4. Prosseguir CMP-017 sem juntar estados administrativos que representam políticas diferentes.
+5. Fazer a higiene das refs por critérios exatos, preservando a #274 e qualquer evidência não dispositionada.
+6. Manter promoção seletiva a `main` e Production separadas; sem sincronização integral.
 
 ## Revalidação operacional live — 22/11/2026 (BRT)
 
