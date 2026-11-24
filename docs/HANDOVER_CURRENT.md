@@ -1,89 +1,59 @@
-# Handover atual — execução do plano v0.9
+# Current operational handover — v0.9 plan execution
 
-**Fotografia verificada em:** 24/11/2026 (BRT)  
-**Escopo:** repositórios Product e Design System autorizados nesta conversa. Este handover é uma fotografia operacional, não declaração de conclusão do plano.
+**Verified:** 24 November 2026 (BRT)  
+**Purpose:** current working snapshot, not a declaration that the v0.9 plan is complete.
 
-## Estado canônico dos repositórios
+## Canonical repository state
 
-| Repositório | Ref | SHA verificado |
+| Repository | Ref | Verified SHA |
 |---|---|---|
-| Product | main | 01ded2c100fbfd8b16897e26113dc5068a83e429 |
-| Product | development | 5ffe2ef7d6db33bf1a616bf7b500469b6ab725e9 |
-| Design System | main | efe754d25466ba3b77dedde04bf1e2d7c0abc0e7 |
+| Product | main | `01ded2c100fbfd8b16897e26113dc5068a83e429` |
+| Product | development | `3b339fbedd16679e42e204b461d9b77301491141` |
+| Design System | main | `efe754d25466ba3b77dedde04bf1e2d7c0abc0e7` |
 
-A comparação Product main..development usa a base comum 221b54b2a41ecc8c338d1bf2cf67280cf165ce95: development tem 537 commits exclusivos e main tem 17. Essa contagem descreve commits, não divergência semântica de runtime. A política permanece promoção seletiva; não fazer merge integral da árvore sem classificação de consumidores.
+Product `main..development` shares base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`: 538 commits are development-only and 17 are main-only. These are commit counts, not a measure of runtime divergence. Promotion remains selective; do not merge the entire tree without classifying consumers.
 
-Não há PRs abertas nos dois repositórios. Product tem 16 issues abertas; Design System não tem issues abertas. As issues Product ainda precisam ser conciliadas com implementação e contratos atuais antes de receber estado de conclusão.
+## Open work and branch hygiene
 
-## Referências remotas preservadas
+- Product has no open PRs. Design System has open PR #136, which updates this handover.
+- Product has 16 open issues; reconcile them against current code, contracts, consumers, and evidence before marking any resolved.
+- There are **10 live branches**, not 60: 8 in Product and 2 in Design System. The earlier 60-ref roster was historical.
+- Five verified integrated branch refs were retired after exact SHA, merged-PR, protection, and open-PR checks. The closed PRs and commits remain recorded. The remaining refs are:
 
-A API do GitHub reporta 9 branches no Product e 4 no Design System, 13 no total — não 60. O roster de 60 mencionado em handovers antigos pertence a um executor histórico de higiene e não é a contagem atual. Todos os refs abaixo foram lidos diretamente; nenhum foi excluído nesta atualização.
+| Repository | Branch | SHA | Role/status |
+|---|---|---|---|
+| Product | `main` | `01ded2c1` | stable |
+| Product | `development` | `3b339fbe` | active integration buffer |
+| Product | `codex/arc13-localization-menu-theme-20261122` | `fc12bb62` | localization/theme candidate; disposition still to verify |
+| Product | `codex/nav005-development-buffer-20261121` | `9c18dd97` | NAV-005 buffer; preserve |
+| Product | `codex/tst001-current-snapshot-20261124` | `a8b31e3e` | evidence candidate; pin/disposition still to verify |
+| Product | `codex/tst001-refreshable-inventory-20261124` | `6f7a0d3f` | stale/diverged candidate; inspect before reuse |
+| Product | `codex/tst004-browser-image-setup-20261124` | `c8c7f71f` | browser-gate setup candidate; disposition still to verify |
+| Product | `docs/arc13-post-273-reconciliation-20261114` | `82cca3b5` | ARC-13 evidence; preserve pending reconciliation |
+| Design System | `main` | `efe754d2` | stable |
+| Design System | `codex/md001-current-handover-20261124` | `176d621c` | open PR #136 |
 
-### Product (9)
+The live count is above the preferred steady-state target. Further retirement should follow the same exact-reference checks; keep the active buffer, evidence, and unresolved candidates until their disposition is recorded.
 
-| Branch | SHA | Leitura operacional |
-|---|---|---|
-| codex/arc13-localization-menu-theme-20261122 | fc12bb6 | candidata de localização/tema; integração não verificada |
-| codex/nav005-development-buffer-20261121 | 9c18dd9 | buffer preservado; não tratar como descartável |
-| codex/tst001-current-snapshot-20261124 | a8b31e3 | referência de evidência; pin a revalidar |
-| codex/tst001-refreshable-inventory-20261124 | 6f7a0d3 | candidata stale: 3 commits à frente e 41 atrás de development; alteração vista somente no workflow de inventário |
-| codex/tst002-buyer-boundary-crosswalk-20261124 | 57b2e96 | head da PR #395, integrada por squash em 5ffe2ef |
-| codex/tst004-browser-image-setup-20261124 | c8c7f71 | setup/evidência de browser preservado; integração não verificada |
-| docs/arc13-post-273-reconciliation-20261114 | 82cca3b | evidência documental preservada |
-| development | 5ffe2ef | ref ativa |
-| main | 01ded2c | ref estável |
+## TST-001 workflow inventory
 
-### Design System (4)
+The manual dispatch route was removed because a workflow present only on `development` cannot be manually dispatched from the default branch. The reachable push-triggered inventory job passed on exact `development@fa4e482209933e20bab7a3f512fc29337a95b449` (run #45395199309; artifact #14920182560; SHA-256 `d55a65310889b24f4c0a8831663d375d286b470118a160516fa621e84559291d`). PR #397 persisted that generated snapshot to Product development at `3b339fbedd16679e42e204b461d9b77301491141`; its only file change was the inventory JSON. The source pin remains `fa4e482` because that is the exact measured workflow snapshot; the later commit only records the snapshot.
 
-| Branch | SHA | Leitura operacional |
-|---|---|---|
-| codex/handover-live-readback-20261124 | 5866813 | candidata documental divergente; 4 commits à frente e 3 atrás de main, apenas HANDOVER_CURRENT.md no diff observado |
-| codex/plan-v09-post-384-handover-20261124 | 7e7abdd | candidata documental divergente; 1 commit à frente e 2 atrás de main |
-| hygiene/ds-squash-124-125-129-20261123 | 1ae986b | finalidade e destino não revalidados nesta fotografia; preservar |
-| main | efe754d | ref ativa |
+At the measured snapshot, the inventory reports 27 workflows in main, 68 in development, 25 shared, 2 main-only, 41 development-only, and 0 parse warnings. The JSON status correctly leaves command/assertion validation separate. This is not yet the workflow-to-assertion crosswalk.
 
-As marcas de proteção reportadas pela listagem de branches são false. Isso não substitui uma auditoria de regras de proteção/regrasets. Não há PR aberta usando refs no momento da leitura. As classificações por nome são provisórias e não autorizam aposentadoria.
+## Other test and domain status
 
-## Issues Product abertas
+- **TST-002:** the Buyer boundary crosswalk from PR #395 is integrated in development. It remains partial (six assertion groups); reconcile its source pin and extend one risk family at a time.
+- **TST-004 / TST-022:** still partial. The selector remains advisory and no workflow coverage was removed. Repeated command text alone does not prove duplicate assertions.
+- **TST-005:** re-read required checks and branch rules before making any protection decision.
+- **Main-only work:** classify all 17 main-only commits by consumer and promotion risk; use selective packages rather than a whole-tree merge.
+- **DOM/CMP/ARC:** continue by each work item's definition of done, preserving explicit unknowns and consumer boundaries.
 
-Lista lida em 24/11/2026; nenhum item foi fechado ou declarado resolvido por este handover:
+The recent inventory and gate changes are CI/documentation only. They do not change Viewer runtime, mask content, or mask consumers. Product main, Netlify settings, deploy previews, and Production were not changed in this work.
 
-- #232 — gates do Configurador falham antes do bootstrap
-- #229 — execução sequencial de ajustes de login, Viewer e Como funciona
-- #228 — publicação de preços base com controle global desligado
-- #227 — benefícios e dimensões do rodapé do resumo
-- #225 — cabeçalho NAV-005 do Viewer
-- #222 — endpoint de sessão temporária em produção
-- #218 — cabeçalho público compacto NAV-005
-- #216 — pares claros homologados em textos públicos
-- #215 — primeiro clique do menu da landing
-- #213 — estado de sessão do menu após login
-- #212 — carregamento Admin após login
-- #208 — cobertura light/dark de DOM e CSS
-- #207 — estado “Em breve” sem Viewer
-- #206 — SVG técnico em dark mode
-- #205 — cards de detalhes do Viewer em dark mode
-- #192 — Identity Netlify e acesso temporário CP-PUBLIC
+## Immediate sequence
 
-A próxima ação de MD-001/MD-002 é classificar cada issue contra o código, contratos ARC, consumidor, branch-alvo e evidência atual. Permanecer aberta no GitHub não prova que a implementação esteja pendente.
-
-## Revisão dos gates e do atrito
-
-- A PR #395 foi integrada somente em Product development, no SHA 5ffe2ef. O run de PR #45388513416 passou no job plan; a validação executou 23 testes, todos aprovados. A mudança foi limitada a testes/metadata CI e ao crosswalk parcial Buyer/DOM-013; não alterou runtime do Viewer, máscaras, imagens, dados de produto, main ou deploy.
-- Não há run pós-merge para 5ffe2ef. O workflow test-impact-plan dispara no push apenas para alterações em workflows ou no gerador do inventário; os paths alterados pela #395 não satisfazem esse filtro. O gate de PR passou; isso não deve ser descrito como um gate pós-merge executado.
-- O crosswalk Buyer de TST-002 mapeia seis grupos de assertions do endpoint, mas declara explicitamente escopo parcial. Seu sourcePin é 17f345a, anterior ao merge; âncoras foram validadas no head da PR, mas a fotografia do pin precisa ser reconciliada.
-- O JSON TST-001 versionado em development ainda aponta para development@29cd75c, não para 5ffe2ef. Ele não é evidência do inventário atual. O branch TST-001 refreshable é divergente e não deve ser integrado sem port seletivo.
-- O workflow test-impact-plan está em development e ausente em main. Por isso a opção workflow_dispatch não está disponível como caminho operacional no default branch. A tentativa de executar a partir da interface expirou sem iniciar run. O próximo snapshot precisa ser produzido por um trigger acessível, com main e development SHAs explícitos, antes de atualizar o JSON versionado.
-- TST-004 e TST-022 continuam parciais. O seletor é advisory e não substitui nem desativa os workflows existentes. Comandos repetidos não provam assertions redundantes; conservar cobertura até validar trigger, filtros, condições, jobs, steps, assertions e custo representativo.
-- TST-005 e a configuração de required checks precisam de nova leitura antes de qualquer decisão de proteção de branch.
-
-## Próximas frentes, em ordem
-
-1. Fechar MD-001 com um snapshot reproduzível: SHAs, árvores, branches, PRs, issues e limites de evidência.
-2. Reconciliar o inventário TST-001 com os SHAs atuais e mapear workflow → evento/filtro → condição → job/step → comando → assertion → resultado.
-3. Ampliar TST-002 por uma família de risco prioritária, sem ampliar o seletor sem necessidade.
-4. Completar a revisão de TST-004/TST-022 com condições e custos; remover cobertura só com equivalência demonstrada.
-5. Classificar os 17 commits exclusivos de main e planejar promoção por famílias e consumidores. Não fazer merge integral.
-6. Prosseguir MD-002/003 e os pacotes DOM/CMP/ARC pelos respectivos DoDs; nenhuma fotografia aqui declara O0–O6 concluídas.
-
-Netlify, deploy previews e Production não foram alterados. Qualquer avaliação de configuração Netlify deve seguir o caminho de navegador previsto no plano.
+1. Continue TST-004 from workflow/path filters through conditions, jobs, commands, assertions, outcomes, and representative cost; preserve existing coverage until equivalence is proven.
+2. Reconcile the 16 Product issues to current code and their architecture-plan work items.
+3. Classify the 17 main-only commits and prepare only compatible promotion packages.
+4. Continue the open DOM/CMP/ARC work in the development buffer, with exact readback before any later promotion.
