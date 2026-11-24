@@ -1,5 +1,28 @@
 ## Leitura operacional vigente — execução do plano v0.9 — 24/11/2026 (BRT)
 
+**Pins revalidados:** Produto `main@01ded2c100fbfd8b16897e26113dc5068a83e429`; Produto `development@4cc726333917199b62645ed05be3b64c465331dd`; Design System `main@2fa1666b4982d5f49a149111abc1ffde0da8aff3`. Product compare preserva a base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`: 17 commits exclusivos em `main` e 529 exclusivos em `development`. A promoção continua seletiva.
+
+### Revisão atual dos gates e atrito
+
+- PR #384 conectou o gate de proveniência dos 40 assets a PRs e pushes em `development`; a execução exata da PR e o push pós-merge passaram. PR #386 removeu o `workflow_dispatch` inacessível na prática porque esse workflow não existe no default branch, sem remover os gatilhos automáticos.
+- O gate atual passou na PR #386 e no push pós-merge #45376907364 em `development@650eee3b5ffa7c564611136a72d097d6777ad221`. Os negativos, as duas tags exatas e a reconciliação dos 40 blobs passaram; artefato de prova 14912370706, digest `sha256:6c26b41532092f772d5e931fe2db5da59c0668ffc6925d313c4148d42e4a33ee`. O gate permanece somente leitura.
+- O snapshot TST-001 do run #45376907375 e artefato 14912380719 foi reconciliado ao JSON versionado na PR #387. O pin é `development@650eee3b5ffa7c564611136a72d097d6777ad221`, a árvore foi verificada, e o parser reporta zero avisos. Registra 75 workflows em development, 27 em main, 25 compartilhados, 2 somente em main, 50 somente em development; eventos em development: 27 pull_request, 62 push, 62 workflow_dispatch e 1 schedule; 11 workflows são dispatch-only. O comando de assertion ainda não foi provado por completo workflow a workflow.
+- PRs #385, #386 e #387 foram integradas em development. Alteraram apenas inventário, documentação e workflow de CI; nada em `app/`, Viewer, máscaras, imagens ou consumidores. Não houve alteração em Product `main`, deploy ou Production.
+- A leitura live contou 34 branches antes da higiene. Uma auditoria verificou 26 heads de PRs integradas: SHA exato, branch sem proteção, árvore igual à integração, nenhum PR aberto e nenhum nome referenciado pelos 75 workflows atuais. A remoção foi atômica, com lease por SHA esperado. O Product agora tem 8 refs: `main`, `development` e seis refs preservadas por trabalho não integrado, buffer NAV-005, inventário ainda em triagem, setup de browser e evidência #274. Não há PR aberta.
+- O executor antigo de aposentadoria ainda fixa um SHA de `main` de novembro e um roster original de 60 refs. Ele não foi usado nem alterado; futuras aposentadorias devem aguardar um executor atualizado com as mesmas proteções SHA/PR/tree antes de qualquer aplicação.
+
+### Estado e sequência
+
+- TST-001: snapshot atual reproduzível e pinado. Falta o mapa entre workflow, condições internas, comandos, assertions e resultado; hashes de comando sozinhos não provam alcance.
+- TST-002: slice de proveniência dos assets fechada quanto à execução e alcance. Falta reconciliar localização semântica, tema e demais famílias de assets/consumidores sem promover decisões editoriais automaticamente.
+- TST-004/TST-022: continuar cruzando condições e filtros com assertions distintas; não retirar cobertura por comando repetido ou fan-out aparente. Medir custos representativos antes de consolidar setup.
+- TST-005: os refs observados não têm required checks configurados. Manter como achado de governança; habilitar proteção exige decisão separada e seleção de checks estáveis que sempre reportem.
+- Seguir DOM/CMP/ARC conforme DoDs, classificar os 17 commits main-only antes de ports e manter `main`/Production estáveis.
+
+O snapshot operacional abaixo foi preservado como histórico para contexto e proveniência.
+
+## Snapshot anterior — execução do plano v0.9 — 24/11/2026 (BRT), superseded by the live readback below
+
 **Pins revalidados:** Produto main 01ded2c100fbfd8b16897e26113dc5068a83e429; Produto development da0dc5d471cca012cbd6f417b411c82471786737; Design System main 570954f8e31c3530fb8570755f838965dc7f8105. O compare entre Produto main e development mantém a base 221b54b2a41ecc8c338d1bf2cf67280cf165ce95: 17 commits exclusivos em main e 520 exclusivos em development. A promoção continua seletiva.
 
 ### Revisão dos gates e atrito medido
