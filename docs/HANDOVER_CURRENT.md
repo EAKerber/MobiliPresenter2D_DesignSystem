@@ -15,11 +15,11 @@ Product `main..development` shares base `221b54b2a41ecc8c338d1bf2cf67280cf165ce9
 
 ## Open work and branch hygiene
 
-- Product has no open PRs. Design System has open PR #136, which updates this handover.
+- Product has open PR #400, which reconciles the stale hygiene batches; Design System has open PR #136, which updates this handover.
 - Product has 16 open issues; reconcile them against current code, contracts, consumers, and evidence before marking any resolved.
-- There are **11 live branches**, not 60: 9 in Product and 2 in Design System. The number 60 belongs to a legacy executor/test fixture, not the live branch list.
+- There are **12 live branches**, not 60: 10 in Product and 2 in Design System. The number 60 belongs to a legacy executor/test fixture, not the live branch list. Product’s count includes the temporary branch for PR #400.
 - Five integrated refs were retired after exact SHA, merged-PR, protection, and open-PR checks. Their PRs and commits remain recorded.
-- One integrated Product ref is technically eligible for retirement: `codex/tst004-mask-assertion-crosswalk-20261124` @ `531c2814235c9524289ccb9efd909f43e01d908b`. PRs #398 and #399 are merged; PR #399 integrated this head into development at `fbe6b9b409dd67884dd9447b02f87752a7d0f8ff`. Its tree exactly matches current development (`80d486ab8044a398286de26f26aa70853489df08`), it is unprotected, no open PR uses it, and the current 68 development workflows do not reference its branch name. Retirement still needs to pass the current exact-SHA hygiene batch and readback.
+- One integrated Product ref is technically eligible for retirement: `codex/tst004-mask-assertion-crosswalk-20261124` @ `531c2814235c9524289ccb9efd909f43e01d908b`. PRs #398 and #399 are merged; PR #399 integrated this head into development at `fbe6b9b409dd67884dd9447b02f87752a7d0f8ff`. Its tree exactly matches current development (`80d486ab8044a398286de26f26aa70853489df08`), it is unprotected, no open PR uses it, and the current 68 development workflows do not reference its branch name. The exact-SHA audit-only run for PR #400 passed with one proof and `deleted: 0`; the branch remains intact until the manifest is integrated and the apply/readback path runs.
 
 ### Remaining refs
 
@@ -27,7 +27,7 @@ Product `main..development` shares base `221b54b2a41ecc8c338d1bf2cf67280cf165ce9
 |---|---|---|---|
 | Product | `main` | `01ded2c1` | stable |
 | Product | `development` | `fbe6b9b4` | active integration buffer |
-| Product | `codex/arc13-localization-menu-theme-20261122` | `fc12bb62` | localization/theme candidate; disposition still to verify |
+| Product | `codex/hygiene-retire-tst004-crosswalk-20261124` | `d2f1f3ae` | PR #400; exact hygiene audit passed, apply awaits integration |\n| Product | `codex/arc13-localization-menu-theme-20261122` | `fc12bb62` | localization/theme candidate; disposition still to verify |
 | Product | `codex/nav005-development-buffer-20261121` | `9c18dd97` | NAV-005 buffer; preserve |
 | Product | `codex/tst001-current-snapshot-20261124` | `a8b31e3e` | evidence candidate; pin/disposition still to verify |
 | Product | `codex/tst001-refreshable-inventory-20261124` | `6f7a0d3f` | stale/diverged candidate; inspect before reuse |
@@ -41,7 +41,7 @@ The count remains above the preferred steady-state target. Continue retiring onl
 
 ### Hygiene mechanism and stale batch
 
-Product development has exact-SHA bounded hygiene tooling. The retirement workflow on Product main is triggered by changes to `ops/branch-hygiene-development-retirement.json` and applies that manifest after it reaches main. Its current manifest still lists 7 branch refs that are absent from the live branch list (codex/cmp017-admin-control-contract-20261122, codex/cmp017-finish-availability-20261122, codex/cmp017-price-publication-reason-20261122, codex/cmp017-material-disabled-reasons-20261122, codex/cmp017-object-asset-disabled-reason-20261122, codex/arc13-deterministic-scan-20261122, codex/loc004-youtube-links-20261123). Do not replay that manifest unchanged. Reconcile consumed batches and pins (GIT-021), update the candidate disposition, and run the audit-only path before any apply. The hard-coded “60 refs” in the legacy executor/test fixture is not a live inventory.
+Product development has exact-SHA bounded hygiene tooling. The retirement workflow on Product main is triggered by changes to `ops/branch-hygiene-development-retirement.json` and applies that manifest after it reaches main. Its current manifest still lists 7 branch refs that are absent from the live branch list (codex/cmp017-admin-control-contract-20261122, codex/cmp017-finish-availability-20261122, codex/cmp017-price-publication-reason-20261122, codex/cmp017-material-disabled-reasons-20261122, codex/cmp017-object-asset-disabled-reason-20261122, codex/arc13-deterministic-scan-20261122, codex/loc004-youtube-links-20261123). Do not replay that manifest unchanged. PR #400 replaces both stale batches with the single current #399 head and exact terminal disposition. On the PR head, the bounded retirement audit passed with one proof and `deleted: 0`; the development audit passed with `count: 0` and `readback: NOT_APPLIED`. The ref has not been deleted. Integration to Product main may run its connected site build/deploy pipeline, so keep that publication effect separate from the audit result. The hard-coded “60 refs” in the legacy executor/test fixture is not a live inventory.
 
 ## TST-001 workflow inventory
 
@@ -73,7 +73,7 @@ Product main, Netlify settings, deploy previews, and Production were not changed
 
 ## Immediate sequence
 
-1. Reconcile consumed hygiene batches and pins (GIT-021); the current main manifest references only absent refs. Then audit the #399 integrated head through the exact-SHA bounded path before any apply.
+1. Finish GIT-021 by integrating the reconciled manifest only when the connected Product main build/deploy effect is accepted; the exact audit is already green, and apply/readback must then be verified before declaring retirement complete.
 2. Continue TST-004 across remaining workflow families, starting with path/condition edge cases; preserve existing gates until assertion equivalence is proved.
 3. Reconcile the 16 Product issues to current implementation and architecture work items.
 4. Classify the 17 main-only commits and prepare only compatible promotion packages.
