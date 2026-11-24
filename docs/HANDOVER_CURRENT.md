@@ -81,8 +81,9 @@ Product main, Netlify settings, deploy previews, and Production were not changed
 
 ## Immediate sequence
 
-1. Finish GIT-021 by integrating the reconciled manifest only when the connected Product main build/deploy effect is accepted; the exact audit is already green, and apply/readback must then be verified before declaring retirement complete.
-2. Continue TST-004 across remaining workflow families, starting with path/condition edge cases; preserve existing gates until assertion equivalence is proved.
-3. Reconcile the 16 Product issues to current implementation and architecture work items.
-4. Classify the 17 main-only commits and prepare only compatible promotion packages.
-5. Continue open DOM/CMP/ARC work in development, with exact readback before any later promotion.
+1. Finish TST-001 by reconciling the checked-in snapshot with the exact current readback and completing the workflow → trigger → job → command → assertion → result matrix; keep candidate and historical routes explicit.
+2. Continue TST-004 through the remaining gate families, including path/filter/condition edge cases; preserve existing gates until assertion reachability and equivalence are proven.
+3. Complete GIT-021 through PR #400’s bounded exact-SHA retirement path. Its target is already integrated in development; the remaining step reaches Product main and can trigger the connected site build/deploy pipeline, so verify that publication effect separately from audit and deletion/readback.
+4. Reconcile Product issues against current implementation, contracts, consumers, and evidence before resolving them.
+5. Classify the 17 main-only commits by consumer and promotion risk; prepare selective packages rather than a whole-tree merge.
+6. Continue DOM/CMP/ARC work by each item’s definition of done, preserving explicit unknowns and exact readback before any later promotion.
