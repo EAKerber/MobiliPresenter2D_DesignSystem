@@ -822,3 +822,40 @@ A [baseline](../evidence/architecture/g3-public-button-runtime-baseline-2026-11-
 Uma revisora independente comparou os contratos e conferiu o Product em `work/arc13-ui-inventory-20261112@db908e5`. “Iniciar ativo” permanece ambíguo na imagem: o texto é usado tanto para visibilidade inicial de objeto quanto para seleção inicial de serviço. “Ativa” é produzido pelo controle de disponibilidade de etapa, embora a captura não mostre o cartão. A cor diferente vem das regras de CSS; não há evidência suficiente para dizer que a hierarquia visual foi intencional.
 
 O inventário mantém sete contratos, compartilha apenas a casca/copy que a função permite e conserva pendentes seis decisões: copy/nome acessível por tipo e efeito; nome acessível de etapa em estado marcado; indicação da publicação para “Disponível para clientes”; accent/hierarquia para checks discretos e “Sem cor/tinta base”; feedback para a última opção; exceção de foco 3 px no controle de preço. A revisão detalhada no Product local (`docs/architecture/arc13/reviews/2026-11-14/admin-control-common-sense-review.md`) registra IDs, responsáveis e validação necessária. Nenhuma UI foi alterada e nenhum teste foi executado.
+
+
+## Revalidação operacional e execução v0.9 — 24/11/2026 (BRT)
+
+**Pins:** Product `main@01ded2c100fbfd8b16897e26113dc5068a83e429`; Product `development@b135aea4cc4a861d1b2ce1646e9fad71194b4774`; Design System `main@6cb858813f5a4e3ddb4f190580e90840f24449a4`. Product compare: 17 commits main-only, 485 development-only, base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`.
+
+### Entregas verificadas
+
+- PR #339 integrou LOC-004 em `development@b0062b9`; 14 gates aprovados.
+- PR #340, head final `16cec859`, integrou o rótulo público de menu em `development@4a910156`; 10 gates aprovados. O ARC-13 falhou no primeiro head por relatório desatualizado; a correção regenerou o inventário duas vezes com SHA idêntico e o gate passou no head final.
+- PR #341, head `93173acf`, integrou por squash em `development@b135aea4`; os cinco workflows modificados passaram. Removemos a branch de cada PR integrado com compare-and-delete usando o SHA esperado. O Produto voltou a 5 refs e `main` permaneceu em `01ded2c`.
+- O lote TST-004 retirou somente `scripts/compile-primary-pages.mjs` dos filtros `push.paths` e `pull_request.paths` de Flow layout, Keyboard, Mobile, Stone e Summary pricing. Os paths de domínio, os próprios YAMLs, `workflow_dispatch` e as saídas `app/index.html`/`app/**` permanecem. Atualizações reais de app continuam acionando os gates apropriados.
+- ARC-13 em `development@b135aea4`: SHA-256 `3AD718780463A9AE1907613250EEFB7C2508E9FE1A8619D2844CBB9CED80B195`; 1.043 ocorrências unreviewed, 420 mapeadas, 0 sem origem, 0 parse errors. Os três IDs `d01bb4284ec09ab0`, `d2de7c48d645e2db` e `95fa05532af8bdc7` correspondem às ocorrências públicas de “Abrir menu”. Contagens não medem revisão semântica.
+- #274 segue fechada sem merge e preservada. Nenhum PR ou pacote desta rodada alterou `main`, hosting ou Production.
+- Branch protection/required checks foi auditado por leitura autenticada da tela de configuração: nenhum rule set, regra clássica ou status check obrigatório listado em qualquer branch em 24/11. Registrar como observação live e decidir se a ausência é intencional.
+
+### Estados do plano e próximos passos
+
+- MD-001/002/003: parcial; inventário e proveniência reproduzíveis, mas candidatos sem revisão semântica e matriz fonte→consumidor incompleta.
+- MD-004 / RM-03 / TST-004: primeiro ajuste de acionamento concluído em PR #341; falta crosswalk de 74 workflows atuais, classificação de sobreposição, custo e propriedade por gate.
+- MD-005/006: falta matriz atual de browser/agente e fixture hosted autenticada validada por head.
+- MD-007/GIT-004: #340 e #341 fechadas/integradas; #274 continua fechada sem merge e retida.
+- MD-008 / GIT-003 / GIT-008: promoção seletiva comprovada; os 17 commits main-only devem ser classificados por substituição, compatibilidade e dependência antes de qualquer port.
+- MD-009 / DS-05A: parcial; capturas CSSOM/runtime com escopo e ambiente, sem fechamento hosted.
+- MD-010 / CMP-017: sete fatias integradas; DoD do Admin incompleto.
+- TST-005: interface autenticada sem regras/required checks em 24/11. Reavaliar o objetivo de proteção da branch e registrar a decisão sem presumir que gates executados são obrigatórios.
+- TST-022: em andamento. DOM-001…014, CMP-001…019 e TST-001…026 exigem evidência por DoD; não inferir conclusão por existência de componentes ou testes.
+- GIT-014: preservar e triar paths exclusivos da #274; extrações anteriores não dispositionam a branch inteira.
+- GIT-021/022: Product está em 5 refs. Design System tem 3 refs durante este PR documental, acima do soft cap 2 por uma branch curta.
+
+### Ordem operacional
+
+1. Completar a classificação semântica dos 17 commits main-only; separar conteúdo equivalente já mais novo em `development`, necessidades de port seletivo, e fluxos de higiene que não pertencem ao runtime.
+2. Construir o crosswalk atual dos 74 workflows e mapear cada um a intenção, domínio, fonte, sobreposição, custo e DoD; consolidar TST-004/TST-022 sem remover cobertura.
+3. Continuar CMP/DOM/ARC por fatias com evidência e revisão de senso comum, mantendo inventário global não aprovado.
+4. Atualizar o handover no mesmo arquivo após cada pacote integrado e preservar receipts por família.
+5. Preparar promoção seletiva a `main` somente após verificar dependências/estado; manter Production separada.
