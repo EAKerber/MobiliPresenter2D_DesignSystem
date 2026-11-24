@@ -1,90 +1,47 @@
 # Current operational handover — v0.9 plan execution
 
-**Verified:** 24 November 2026 (BRT)  
-**Purpose:** current working snapshot, not a declaration that the v0.9 plan is complete.
+**Verified:** 24 November 2026, 20:00 BRT  
+**Purpose:** live working snapshot; this is not a declaration that the v0.9 plan is complete.
 
 ## Canonical repository state
 
 | Repository | Ref | Verified SHA |
 |---|---|---|
 | Product | main | `01ded2c100fbfd8b16897e26113dc5068a83e429` |
-| Product | development | `0af0bb0bbe162be98fd8ce1c6c8347ae25106f13` |
+| Product | development | `116800e11016fb9093ce4ab5e3c0ed1e8527fe15` |
 | Design System | main | `c6ff6545e9ae2071e695109fd94ac91676e7fb0a` |
 
-Product `main..development` shares base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`: 544 commits are development-only and 17 are main-only. These are commit counts, not a measure of runtime divergence. Promotion remains selective; do not merge the entire tree without classifying consumers.
+Product `main..development` shares base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`: 549 commits are development-only and 17 are main-only. These counts do not measure runtime divergence. Promotion remains selective; do not merge the entire tree without classifying consumers.
 
-## Open work and branch hygiene
+## Branch inventory and hygiene
 
-- Product has one open PR, #400, which prepares exact retirement of the integrated TST-004 crosswalk branch. Design System has open PR #137 for this handover update.
-- The live remote inventory is **13 branches**: 11 in Product and 2 in Design System, including this PR’s temporary handover branch. There are not 60 live branches; “60 refs” is a legacy executor/test-fixture value.
-- Product branches for PRs #403 and #404 were retired after each merge by verifying unprotected state, no open PR using the head, and exact tree equality with current development. Their PRs and commits remain recorded.
-- The TST-004 crosswalk branch `codex/tst004-mask-assertion-crosswalk-20261124` is integrated through PR #399 at `531c2814235c9524289ccb9efd909f43e01d908b`; its tree matches current development. PR #400 pins this exact target for the bounded retirement workflow, so preserve it until that apply/readback route is deliberately integrated and verified.
-- Other extra refs are active buffers, unmerged experiments, or retained evidence. In particular, preserve NAV-005, the closed-but-unmerged TST-004 browser setup experiments, and the closed ARC-13 PR #274 evidence branch. Do not delete a branch solely because its PR is closed.
+There are **15 live remote Product branches** and **2 Design System branches**. The shared local Product repository has 44 local branch heads and 5 remote-tracking refs; these local pointers overlap the remote branches and many are attached to worktrees. Therefore “about 60” can describe a naïve sum of local and remote pointers, but not 60 distinct live hosted branches.
 
-### Remaining refs
+Product is 10 branches above the plan's soft review trigger of 5 and 13 above the stable target of 2. Design System is at its target of 2.
 
-| Repository | Branch | SHA | Role/status |
-|---|---|---|---|
-| Product | `main` | `01ded2c1` | stable |
-| Product | `development` | `81207f32` | active integration buffer |
-| Product | `codex/hygiene-retire-tst004-crosswalk-20261124` | `d2f1f3ae` | open PR #400; apply still awaits integration and readback |
-| Product | `codex/arc13-localization-menu-theme-20261122` | `fc12bb62` | localization/theme candidate; latest PR closed unmerged |
-| Product | `codex/nav005-development-buffer-20261121` | `9c18dd97` | NAV-005 buffer; preserve |
-| Product | `codex/tst001-current-snapshot-20261124` | `a8b31e3e` | current inventory candidate; compare with integrated snapshot before reuse |
-| Product | `codex/tst001-refreshable-inventory-20261124` | `6f7a0d3f` | closed-unmerged generation experiment; preserve evidence |
-| Product | `codex/tst004-browser-image-setup-20261124` | `c8c7f71f` | closed-unmerged browser setup experiment; preserve evidence |
-| Product | `codex/tst004-mask-assertion-crosswalk-20261124` | `531c2814` | integrated by #399; exact target in PR #400 retirement manifest |
-| Product | `codex/tst004-playwright-image-current-20261124` | `e1e92abd` | closed-unmerged image experiment; measured net slowdown, preserve result |
-| Product | `docs/arc13-post-273-reconciliation-20261114` | `82cca3b5` | closed Draft PR #274; preserve documentation and evidence pending triage |
-| Design System | `main` | `c6ff6545` | stable |
-| Design System | `codex/handover-live-reconciliation-20261124` | `61e718f6` | open PR #137; documentary reconciliation |
+- Product open PRs: #400 and #407, both target `main`. Design System open PR: #137, this handover.
+- Product refs `main@01ded2c1` and `development@116800e1` are the permanent control refs.
+- NAV-005 remains an active integration buffer. Closed or merged PR status alone does not make an experimental or evidence branch disposable.
+- Product #400 now prepares one exact retirement wave for #399, #409, and #411. Each head is pinned to its squash merge; the three current trees match their recorded integration trees. The current audit rechecks SHA, protection, open PRs, workflow references, and tree identity before any deletion.
+- The #400 audit run [#45505817682](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/45505817682) and retirement workflow run [#45505817693](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/45505817693) completed successfully on its current head; the audit passed and no branch was deleted. The Deploy Preview check passed at [preview #400](https://deploy-preview-400--mobilipresenter2d.netlify.app).
+- If the exact authorization reaches Product `main` and the apply gate passes, the wave reduces Product from 15 to 12 remote branches. No runtime files change, but merging to `main` can trigger the connected site build/deploy. The PR remains open; it has not been integrated.
 
-The total is above the preferred steady-state target. Continue retiring only refs with a verified terminal disposition, while keeping active integration buffers and unresolved evidence.
+The remaining Product remote refs are: `main`, `development`, `codex/arc13-localization-menu-theme-20261122`, `codex/cmp001-admin-stage-availability-20261124`, `codex/dom011-buyer-fixture-v5-validation-20261124`, `codex/hygiene-retire-tst004-crosswalk-20261124`, `codex/loc006-viewer-price-copy-20261124`, `codex/nav005-development-buffer-20261121`, `codex/tst001-current-snapshot-20261124`, `codex/tst001-refreshable-inventory-20261124`, `codex/tst004-browser-image-setup-20261124`, `codex/tst004-mask-assertion-crosswalk-20261124`, `codex/tst004-playwright-image-current-20261124`, `codex/tst004-viewer-price-main-pr-trigger-20261124`, and `docs/arc13-post-273-reconciliation-20261114`. This list is a point-in-time readback, not a deletion recommendation.
 
+## TST-001 and gate friction
 
+The checked-in workflow inventory still pins an older development snapshot at `81207f32`; it must be regenerated or reconciled against current `development@116800e1` before its counts are used as current. The global workflow → trigger → job → command → assertion → result crosswalk remains incomplete.
 
-### Hygiene mechanism and stale batch
+PR #411 is integrated in development at `116800e1`. It adds one current CMP-001/TST-001 slice for Admin stage availability to the existing gate-friction review. That record links the editable state, required/empty-stage rules, assertions, Admin workflow route, and exact evidence. It distinguishes stage availability from initial configurator/viewer/service visibility; both use checkboxes but have separate state and meaning. The exact Admin browser run on PR #410's tested candidate [#45501943629](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/45501943629) passed, and the Admin source, test, and workflow blobs match the integrated development tree. The harness is local-browser evidence, not proof of hosted Admin/API behavior. CMP-001 and TST-001 remain partial.
 
-Product development has exact-SHA bounded hygiene tooling. The retirement workflow on Product main is triggered by changes to `ops/branch-hygiene-development-retirement.json` and applies that manifest after it reaches main. Its current manifest still lists 7 branch refs that are absent from the live branch list (codex/cmp017-admin-control-contract-20261122, codex/cmp017-finish-availability-20261122, codex/cmp017-price-publication-reason-20261122, codex/cmp017-material-disabled-reasons-20261122, codex/cmp017-object-asset-disabled-reason-20261122, codex/arc13-deterministic-scan-20261122, codex/loc004-youtube-links-20261123). Do not replay that manifest unchanged. PR #400 replaces both stale batches with the single current #399 head and exact terminal disposition. On the PR head, the bounded retirement audit passed with one proof and `deleted: 0`; the development audit passed with `count: 0` and `readback: NOT_APPLIED`. The ref has not been deleted. Integration to Product main may run its connected site build/deploy pipeline, so keep that publication effect separate from the audit result. The hard-coded “60 refs” in the legacy executor/test fixture is not a live inventory.
-
-## TST-001 workflow inventory
-
-The manual dispatch route was removed because a workflow present only on `development` cannot be manually dispatched from the default branch. The shared inventory job now runs on both `push` and `pull_request`, pins the exact PR head (not GitHub's merge ref), verifies the push SHA, emits the full JSON to readable logs, and names artifacts uniquely.
-
-- PR-head readback passed at exact SHA `5da6d931fdf77b839a9ef6c1c4e70fa52e4c3154` (run #45420119869). The run exposed and fixed an initial merge-ref checkout defect before it passed.
-- The integrated push readback passed at exact `development@81207f32d0bd2100421172fb7b6585099c3fa78a` (run #45420518073; conclusion: success). Its source tree is `d5f57b82c68d66169eed52ca663f85eafbba23f8`, verified against the development pin.
-- The live snapshot reports 27 main workflows, 68 development workflows, 25 shared, 2 main-only, and 43 development-only; 70 workflow paths, 89 distinct blob definitions, 364 declared run commands, event counts PR 27 / push 62 / workflow_dispatch 54 / schedule 1, seven paths marked write-signal, and zero parse warnings.
-- PR #404 refreshed the checked-in JSON from exact `development@81207f32` before its integration at `0af0bb0`. The integration changed only the inventory JSON, so the workflow definitions in the current tree remain the exact set measured by run #45420518073; the snapshot also records open PR #400. No push inventory run was triggered by this docs-only path change. TST-001 remains incomplete: publish the workflow → trigger → job → command → result matrix and clearly distinguish existing, candidate, and historical routes. Assertion reachability remains the separate TST-004 concern.
-
-
-
-## TST-004 mask assertion slice
-
-PR #398 integrated a partial crosswalk in Product development. It maps three existing assertion groups to source anchors, the `candidate-assets.yml` job/step, branch/path filters, and trigger conditions. The pull-request event is path-filtered with no base-branch filter; push is path-filtered to `main`; manual dispatch is unfiltered.
-
-The exact candidate gate run #45402572720 passed 24/24 impact-plan tests. A prior successful asset-gate run #45307538355 is retained as runtime evidence; the current mask-validation step text is identical, and the test scripts, metadata, inline mask data, and referenced mask blobs match the measured source. This is only one TST-004 slice; the full workflow/path/condition/command/assertion/cost matrix remains incomplete.
-
-The PR #398 diff changed only the impact test, advisory bundle description, and crosswalk receipt. It did not change mask images/data, Viewer behavior, Netlify, or Production.
-
-## TST-004 public-navigation assertion slice
-
-PR #399 integrated a partial crosswalk into Product development at exact head `531c2814235c9524289ccb9efd909f43e01d908b`. It maps five assertion groups from the shared 124-case public-navigation browser suite to the current development and main workflow routes, path filters, and job conditions. The Viewer’s separate 20-case depth-2 gate remains distinct. The impact-plan workflow passed on the exact PR head (run #45406708875). This is workflow/assertion reachability evidence, not a new runtime browser pass or a claim that TST-004 is complete.
-
-## Other test and domain status
-
-- **TST-002:** the Buyer boundary crosswalk from PR #395 is integrated in development. It remains partial (six assertion groups); reconcile its older source pin and extend one risk family at a time.
-- **TST-022:** the selector remains advisory and does not suppress or replace existing gates.
-- **TST-005:** re-read required checks and branch rules before making any protection decision.
-- **Main-only work:** classify all 17 main-only commits by consumer and promotion risk; use selective packages rather than a whole-tree merge.
-- **DOM/CMP/ARC:** continue by each work item's definition of done, preserving explicit unknowns and consumer boundaries.
-
-Product main, Netlify settings, deploy previews, and Production were not changed by the inventory/crosswalk work.
+Previous evidence remains scoped: TST-001 workflow inventory and operational-friction runs are historical snapshots; the Admin slice does not complete the full crosswalk. TST-004 has partial mask and public-navigation assertion slices, but the remaining workflow/path/condition/command/assertion/cost matrix is still open. Do not remove existing gates until unique assertions are mapped and equivalent replacement evidence is demonstrated.
 
 ## Immediate sequence
 
-1. Finish TST-001 by reconciling the checked-in snapshot with the exact current readback and completing the workflow → trigger → job → command → assertion → result matrix; keep candidate and historical routes explicit.
-2. Continue TST-004 through the remaining gate families, including path/filter/condition edge cases; preserve existing gates until assertion reachability and equivalence are proven.
-3. Complete GIT-021 through PR #400’s bounded exact-SHA retirement path. Its target is already integrated in development; the remaining step reaches Product main and can trigger the connected site build/deploy pipeline, so verify that publication effect separately from audit and deletion/readback.
-4. Reconcile Product issues against current implementation, contracts, consumers, and evidence before resolving them.
-5. Classify the 17 main-only commits by consumer and promotion risk; prepare selective packages rather than a whole-tree merge.
-6. Continue DOM/CMP/ARC work by each item’s definition of done, preserving explicit unknowns and exact readback before any later promotion.
+1. Reconcile the checked-in TST-001 inventory with the exact current development tree and current open-PR readback; then continue the workflow → trigger → job → command → assertion → result matrix.
+2. Continue CMP-001 in bounded batches, expanding the Admin inventory beyond the stage-availability pilot and preserving semantic distinctions rather than creating generic checkbox abstractions.
+3. Extend TST-004 through remaining gate families and path/condition edges; retain existing gates during the audit.
+4. Classify the 17 main-only commits by consumer and risk, then prepare selective promotions rather than a whole-tree merge.
+5. Continue DOM/V5 and other P0 plan items by their own DoD, keeping implementation, development integration, main promotion, and publication as separate states.
+
+Product `main`, Design System `main`, and production were not changed by the latest crosswalk or hygiene preparation.
