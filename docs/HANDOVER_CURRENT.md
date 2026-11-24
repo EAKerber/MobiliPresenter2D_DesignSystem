@@ -1,19 +1,39 @@
-## Readback operacional vigente — reconciliação v0.9 — 24/11/2026 (BRT)
+## Readback operacional vigente — execução do plano v0.9 — 24/11/2026 (BRT)
 
-**Pins revalidados:** Product `development@b135aea4cc4a861d1b2ce1646e9fad71194b4774`; Product `main@01ded2c100fbfd8b16897e26113dc5068a83e429`; Design System `main@6cb858813f5a4e3ddb4f190580e90840f24449a4`.
+**Pins revalidados:** Product `main@01ded2c100fbfd8b16897e26113dc5068a83e429`; Product `development@7552a3bbcafc2693cc1f290f868b92253fd37bc6`; Design System `main@d65677ee257bfb7279e4f196bbf179afc26e8e66`. O compare Product `development` → `main` registra 511 commits só em `development`, 17 só em `main` e base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. A política continua sendo promoção seletiva, sem merge integral da árvore.
 
-- O Produto está divergente: 485 commits exclusivos em `development`, 17 em `main`, base comum `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. A política vigente é promoção seletiva por pacote; não fazer merge da árvore inteira.
-- #339 integrou LOC-004 em `development@b0062b9); #340 integrou o rótulo acessível do menu em `development@4a910156`; #341 integrou o ajuste de escopo de cinco suites em `development@b135aea4`. Os 14 gates de #339, os 10 de #340 e os 5 de #341 passaram. A primeira tentativa do inventário em #340 falhou apenas porque o relatório refletia o manifesto anterior; após regeneração determinística, o gate passou no head final.
-- O Produto voltou a 5 refs após remover, com SHA esperado, as branches integradas dos PRs #340 e #341. O Design System tem 3 refs durante este PR documental; ao integrá-lo e remover sua branch curta, retorna a 2. Os soft caps são sinais de revisão, não hard caps.
-- A #274 permanece fechada sem merge e sua branch de evidências segue preservada. A #290 não autoriza sincronização integral. Nenhuma publicação em Production nem mudança de configuração Netlify faz parte desta continuação.
-- ARC-13 em `development@b135aea4`: 1.043 ocorrências ainda não revisadas, 420 ocorrências primárias com proveniência, zero sem proveniência e zero erros de parsing. É fotografia técnica count-only, não percentual de revisão semântica.
-- O plano v0.9, Anexo A, registra estados editoriais iniciais; não é ledger operacional nem prova de conclusão. Os readbacks seguintes atualizam o estado live e preservam os registros anteriores como histórico.
-- CMP-017 continua incompleto. O primeiro lote TST-004 de cinco filtros foi integrado e passou em todos os cinco workflows alterados. A análise maior de overlap, acionamento/custo e o estado integral de TST-004 ainda está em andamento.
-- A página autenticada de regras do GitHub foi lida em 24/11: nenhuma regra de branch ou required check está configurada. TST-005 tem essa evidência atual, não UNKNOWN; a ausência de regras merece uma decisão de governança, mas não bloqueia os PRs atuais.
-- TST-022 e a revisão de critérios/overlap continuam em andamento. As capturas CSSOM/runtime e pares visuais permanecem vinculados a SHA e ambiente; não concluem tokens globais nem DS-05A.
-- A continuação prioriza: (1) concluir o inventário e crosswalk atual dos workflows/overlap; (2) reconciliar cada item v0.9 por DoD e evidência, começando pelos 17 commits main-only; (3) seguir os pacotes verticais pendentes; (4) preparar promoção seletiva a `main` para decisão explícita, sem publicar em Production.
+### Pacotes integrados no buffer Product
 
-Os snapshots datados abaixo são históricos e não substituem este readback.
+- **#364 — DOM-003/004:** a leitura administrativa distingue fonte ausente de fonte inválida e deixa de converter essas condições em defaults editáveis. Os testes de endpoint cobrem ausência, JSON malformado, metadados inválidos, schema desconhecido e V3/V5 inválidos; o save normal cobre readback ausente, conflito CAS entre dois editores, ETag, digest, downgrade e ausência de retry silencioso.
+- **#365 — redução de atrito do browser Admin:** manteve os mesmos três testes de navegador e passou a usar a imagem Playwright 1.62.1 com Chromium instalado. No run anterior, a instalação de dependências e Chromium ocupou ~258 s; no candidato, o pacote Node levou ~2 s, a primeira obtenção da imagem ~20 s e o job completo ~41 s. É uma comparação observada entre duas execuções, não um benchmark controlado de todos os browsers.
+- **#366 — TST-022:** o seletor advisory cobre a fronteira Buyer Configuration; caminhos desconhecidos e alterações de infraestrutura continuam acionando seleção ampla. Nenhum workflow foi removido.
+- **#367 — TST-001:** a execução manual do inventário passou a ler a lista real de PRs abertas. A execução pós-merge passou.
+- **#368 — TST-004:** integrado como recibo documental de revisão de fricção e sobreposição; não muda workflow, aplicação, Viewer, máscaras, configuração Netlify ou Production.
+
+### Inventário e revisão dos gates
+
+- A última fotografia medida é o [run #45340082315](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/45340082315), artefato [14895742011](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/45340082315/artifacts/14895742011), fixada em `main@01ded2c1` e `development@b3f78a5`. #368 acrescentou somente documentação depois desse pin.
+- O inventário registra 27 workflows em `main`, 75 em `development`, 25 compartilhados, 2 exclusivos de `main` e 50 exclusivos de `development`; 0 avisos de parsing. Nos 75 workflows de desenvolvimento: 268 passos de comando, 242 hashes distintos, 15 repetidos e 26 ocorrências adicionais. A preparação local V5 aparece em 7 passos distribuídos por 6 workflows.
+- Repetição de comando não prova assertion duplicada. O comando público de 124 cenários e o contrato Viewer de 20 cenários exercitam garantias diferentes; os workflows de navegação que reutilizam o teste responsivo têm escopos de branch/paths distintos. Não há evidência de que devam ser removidos.
+- Uma discrepância concreta segue na matriz: `tests/public-pages-smoke.cjs` aparece no filtro de PR de `public-routing-before-clerk.yml`, mas o teste é executado pelo job de browser que roda somente em PRs para `main`. Em PRs para `development`, a mudança nesse arquivo pode iniciar o workflow sem executar essa própria suíte. A correção deve escolher um caminho que preserve a prova de produção sem criar um segundo browser caro sem necessidade.
+- `viewer-base-price-contract-gate.yml` já tem trigger de PR para `main` e `development`; a lacuna histórica anotada no plano foi resolvida no estado atual.
+- TST-004 permanece **em andamento**: falta concluir o mapa de cada workflow de desenvolvimento para paths, eventos, condições internas, comandos, assertions, resultados e custos representativos; classificar testes locais/não invocados e filtros históricos. O inventário/hash atual não prova alcançabilidade até a assertion.
+
+### Estado de domínio e limites de evidência
+
+- #364 satisfaz partes substanciais de DOM-003/004 no serviço, handler e simulação. As stores usadas nos testes são mocks injetados; isso não prova atomicidade ou readback no provider Netlify real.
+- Antes de remover qualquer escrita legada V3 (DOM-005), é necessário confirmar que as stores e Deploy Previews ainda usados pelo Admin já estão em V5. Até esse preflight, a compatibilidade permanece.
+- Nenhuma alteração desde a pergunta sobre as máscaras modifica o runtime do Viewer, o conteúdo das máscaras ou os consumidores delas. #368 altera só um recibo em `docs/architecture/ci/`; as mudanças de #364 são limitadas ao endpoint administrativo e testes de configuração.
+
+### Governança e próximas frentes
+
+- O Product tem **20 refs** (incluindo `main` e `development`), portanto está acima do soft cap de 5. As demais refs incluem evidência #274 e candidatas distintas TST-001/TST-004, DOM-003/004, TST-009 e TST-022; não são removíveis por simples contagem. A branch documental da #274 continua preservada.
+- O Design System tem `main@d65677e`, PR documental #132 e uma branch de evidência de higiene; ao atualizar e integrar a #132, retirar somente sua branch curta após confirmar o merge e preservar o manifesto restante.
+- Próxima ordem: (1) concluir o crosswalk TST-004 e corrigir discrepâncias comprovadas; (2) atualizar TST-001 com classificação de existentes/candidatos/históricos e resultados ligados a assertions; (3) seguir DOM-005 somente após o preflight V5; (4) continuar CMP-017 por significado de controle; (5) reconciliar o DAG e preparar pacotes seletivos de `development` para revisão em `main`.
+- Nenhuma publicação em Production ou mudança de configuração Netlify foi feita nesta rodada. Required checks e branch rules devem ser registrados como evidência por repositório/SHA; o recibo #368 não executou gates de runtime.
+
+Os snapshots datados abaixo são históricos e preservam o contexto de cada integração.
+
 ## Revalidação operacional live — 22/11/2026 (BRT)
 
 **Pins:** Product main@5b29934150a8f939057fbd3ae14fd1c1511afd03; Product development@9e352dbd2644e4e91c8fe533f92bf0a8827a840d; Design System main@43594dc5723bffd5acb42dad1cd8ee30bcd48778.
