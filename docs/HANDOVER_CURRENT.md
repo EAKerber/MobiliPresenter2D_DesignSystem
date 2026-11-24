@@ -1,18 +1,17 @@
-## Readback operacional vigente — pós-#305 — 22/11/2026 (BRT)
+## Readback operacional vigente — reconciliação v0.9 — 24/11/2026 (BRT)
 
-**Pins lidos:** Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; Product `development@613f28d9ee3aaa66d7bce24f772100d5f1354732`; Design System `main@cbc4e82fcb0091ae6ee9f449b9b13e226fcbab18` (base observado antes desta atualização documental).
+**Pins revalidados:** Product `development@b0062b9f2735d46df571dbfecaec9c8030f1828c`; Product `main@01ded2c100fbfd8b16897e26113dc5068a83e429`; Design System `main@6cb858813f5a4e3ddb4f190580e90840f24449a4`.
 
-- Product #304 e #305 foram integradas seletivamente por squash em `development`: #304 head `204221d37314a2e5e84740a0d4e00c28c2bc78dc`, merge `e7869487d87c69de4461b31902129968f4fb056c`; #305 head `f162838dcab60975ce19cc38f2cc39678c2a5994`, merge `613f28d9ee3aaa66d7bce24f772100d5f1354732`. As árvores de ambos os merges coincidem com os heads revisados.
-- Os 9 gates aplicáveis passaram em cada head. Não houve Deploy Preview, alteração de `main` ou publicação em Production.
-- CMP-017 tem sete fatias integradas: cor temática, semântica/save-readback dos estados iniciais, motivos para etapas obrigatórias/vazias, disponibilidade de acabamentos, descrição acessível do bloqueio de publicação de preços, motivos para controles de material desabilitados e associação da restrição de ativos de cena aos três seletores correspondentes. O DoD do Admin segue incompleto.
-- ARC-13 em `development`: SHA-256 `E865C5944928822484B89ADF070D3B9A752A939DE0564164E6FDC6092489B700`, 1.043 ocorrências candidatas `unreviewed`, zero erros de parsing, 420 ocorrências primárias mapeadas e zero sem proveniência. As ocorrências técnicas `aria-describedby` permanecem no inventário com hint `non-translatable-reference`; contagens não são aprovação de conteúdo.
-- Product tem 9 refs: `main`, `development`, arquivo #274, buffer NAV-005, branch documental ARC-13 e branches integradas #301–#305. As 11 refs previamente autorizadas foram removidas; #301/#302 foram preservadas conforme a triagem, sem bloquear o avanço atual.
-- #274 permanece fechada sem merge e preservada. #290 continua Draft/dirty. O compare vivo é 453 commits exclusivos em development e 14 em main, base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`; não fazer merge global.
-- As PRs documentais DS #124–#127 atualizaram handover, inventário e crosswalk sem alterar runtime. Este readback é a base operacional para a próxima fatia; snapshots abaixo permanecem históricos.
-- Required checks e associação de gates a deploy continuam `UNKNOWN`.
+- O Produto está divergente: 483 commits exclusivos em `development`, 17 em `main`, base comum `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. A política vigente é promoção seletiva por pacote; não fazer merge da árvore inteira.
+- #339 foi integrada em `development@b0062b9`; os 14 gates daquela PR passaram. A nova PR #340 abre um pacote LOC-004 pequeno e preserva o cabeçalho estático, aguardando os gates no head atualizado.
+- O Produto está temporariamente em 6 refs devido à branch curta do #340; soft cap 5 é sinal de revisão, não hard cap. Após integração e limpeza exata da branch, o retorno esperado é 5. Design System mantém 2 refs antes desta branch documental; depois do merge e remoção da branch curta, retorna a 2.
+- A #274 permanece fechada sem merge e sua branch de evidências segue preservada. A #290 também não autoriza sincronização integral. Nenhuma publicação em Production ou mudança de configuração Netlify faz parte desta continuação.
+- ARC-13 no Product head da PR #340 (`16cec859579b3a8fbe645f4199d954c95d0bc0b2`) tem 1.043 ocorrências ainda não revisadas, 420 ocorrências primárias com proveniência, zero sem proveniência e zero erros de parsing. É fotografia técnica count-only, não percentual de revisão semântica.
+- O plano v0.9, Anexo A, registra estados editoriais iniciais; não deve ser tratado como ledger operacional nem como prova de conclusão. Os readbacks seguintes atualizam o estado live e preservam os registros anteriores como histórico.
+- CMP-017 continua incompleto. TST-004 e TST-022 ainda exigem correção de escopo/acionamento; required checks de TST-005 seguem `UNKNOWN`. A revisão CSS/semântica tem evidências parciais por estado, não aprova tokens globais nem conclui DS-05A.
+- A continuação prioriza: (1) concluir os gates e integrar #340 em `development`; (2) atualizar este handover com o readback pós-merge; (3) reconciliar os itens v0.9 por DoD/evidência e fonte canônica, começando por inventário atual de workflows, required checks e divergência main-only; (4) implementar os próximos pacotes verticais com gates proporcionais; (5) preparar promoção seletiva a `main` para decisão explícita, sem deploy de Production.
 
----
-
+Os snapshots datados abaixo são históricos e não substituem este readback.
 ## Readback após a publicação da #291 — 22/11/2026
 
 - Product `main@2b1c70c049cdcb5e2a75fb2a970d1fd3d112cc98`; `development@188f5074f60dc35df7aa8c673dbac4a2249813be`; Design System `main@43594dc5723bffd5acb42dad1cd8ee30bcd48778`.
@@ -833,3 +832,39 @@ A [baseline](../evidence/architecture/g3-public-button-runtime-baseline-2026-11-
 Uma revisora independente comparou os contratos e conferiu o Product em `work/arc13-ui-inventory-20261112@db908e5`. “Iniciar ativo” permanece ambíguo na imagem: o texto é usado tanto para visibilidade inicial de objeto quanto para seleção inicial de serviço. “Ativa” é produzido pelo controle de disponibilidade de etapa, embora a captura não mostre o cartão. A cor diferente vem das regras de CSS; não há evidência suficiente para dizer que a hierarquia visual foi intencional.
 
 O inventário mantém sete contratos, compartilha apenas a casca/copy que a função permite e conserva pendentes seis decisões: copy/nome acessível por tipo e efeito; nome acessível de etapa em estado marcado; indicação da publicação para “Disponível para clientes”; accent/hierarquia para checks discretos e “Sem cor/tinta base”; feedback para a última opção; exceção de foco 3 px no controle de preço. A revisão detalhada no Product local (`docs/architecture/arc13/reviews/2026-11-14/admin-control-common-sense-review.md`) registra IDs, responsáveis e validação necessária. Nenhuma UI foi alterada e nenhum teste foi executado.
+
+
+## Revalidação operacional e execução v0.9 — 24/11/2026 (BRT)
+
+**Estado observado neste checkpoint:** Product `main@01ded2c100fbfd8b16897e26113dc5068a83e429`; Product `development@b0062b9f2735d46df571dbfecaec9c8030f1828c`; Design System `main@6cb858813f5a4e3ddb4f190580e90840f24449a4`. Divergência Product: 17 commits exclusivos em `main`, 483 em `development`, base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`.
+
+### Entregas e validação em andamento
+
+- Product PR #339 (#339) integrou `codex/arc13-inventory-loc004-20261123` em `development@b0062b9`; os 14 gates passaram. O relatório foi regenerado, sem declarar aprovação global dos 1.043 candidatos.
+- Product PR #340, branch `codex/loc004-public-menu-open-20261123`, head local/remote `16cec859579b3a8fbe645f4199d954c95d0bc0b2`, mapeia `/navigation/menu/open` para o cabeçalho público em três rotas. O texto, markup, comportamento dinâmico, Admin, Viewer e páginas geradas permaneceram fora de alteração funcional. Validação local: compilador PASS; autoridade 6/6; contrato visual PASS; normalização de finais de linha 3/3; inventário determinístico SHA-256 `3AD718780463A9AE1907613250EEFB7C2508E9FE1A8619D2844CBB9CED80B195`, 420 mapeadas, 0 sem origem, 0 parse errors. Os gates remotos do novo head ainda estão pendentes.
+- O primeiro run de ARC-13 no head anterior do #340 falhou somente na reprodução do relatório porque o manifesto mudou e o inventário não havia sido regenerado. O relatório agora foi regenerado localmente; o run do novo head é a verificação autoritativa.
+- A branch local antiga de LOC-005 tem alterações não publicadas que sobrepõem commits posteriores já integrados em `development`; preservar como histórico e não republicar/rebasear automaticamente.
+
+### Reconciliação dos itens e próximos passos
+
+- MD-001/002/003: parcial. ARC-13 fornece métricas reproduzíveis e proveniência por fonte, mas os candidatos continuam sem revisão semântica; falta crosswalk completo fonte→consumidor e critérios denominadores por domínio.
+- MD-004 / RM-03 / TST-004: parcial. O crosswalk de workflows está marcado como histórico; gerar inventário atual e classificar triggers amplos, duplicação e falso positivo (incluindo Flow layout disparado por caminho compartilhado).
+- MD-005 / MD-006 / TST-005: parcial/UNKNOWN. Falta matriz atual de browser/agente e fixture hosted autenticada por head. A API não permitiu confirmar required checks; não inferir configuração a partir de `protected:false` ou lista vazia de rulesets.
+- MD-007 / GIT-004: 0 PRs abertas antes da criação de #340; #274 fechada sem merge continua preservada. Revalidar após resolver #340.
+- MD-008 / GIT-003 / GIT-008: estratégia seletiva comprovada, mas os 17 commits exclusivos de `main` ainda precisam triagem por conteúdo, pacote e dependências.
+- MD-009 / DS-05A: parcial. Capturas CSSOM/runtime e pares visuais devem continuar associados a SHA, ambiente e limite; evidência anterior não fecha configuração hosted ou aprovação ampla de tokens.
+- MD-010 / CMP-017: em andamento. Sete fatias foram integradas ao Produto, mas o DoD do Admin não está completo.
+- DOM-001…014 e CMP-001…019: requerem evidência item a item; V5, componentes ou testes existentes não são prova automática de DoD.
+- TST-001…026: vários itens seguem em revisão; TST-004/022 em andamento; TST-005 UNKNOWN. Atualizar estados apenas com evidência atual por head e gate.
+- GIT-010/011/023, OPS-NET-001/002: required checks continuam UNKNOWN; publicação/previews e configuração Netlify não foram reavaliados nesta rodada. Qualquer ajuste de configuração de hosting permanece sujeito ao fluxo visual previsto no plano.
+- RM-01/02/04/05 e DOC-003: este documento é o handover canônico; concluir a reconciliação sem criar ledger concorrente. Atualizar após integração e manter receipts como prova localizada. O Apêndice A do v0.9 permanece congelado como fotografia editorial inicial.
+- GIT-014: preservar e triar paths exclusivos da #274; a extração seletiva anterior não é disposição integral da branch.
+- GIT-021/022: Product está em 6 refs durante o pacote #340, acima do soft cap 5 por uma branch curta; DS passa temporariamente de 2 para 3 refs por este PR documental. Em ambos os casos, remover apenas a branch exata integrada/sem uso após readback.
+
+### Ordem operacional
+
+1. Confirmar todos os gates do head atualizado #340, integrar somente em `development`, verificar SHA/árvore e atualizar receipts.
+2. Integrar este readback documental no Design System e remover a branch curta após confirmar o merge.
+3. Revalidar refs, PRs, hashes e o estado de `main`/Production; restaurar Produto a 5 refs e Design System a 2.
+4. Construir o inventário atual dos workflows/required checks e revisar os pacotes P0 por DoD. Se a API continuar ocultando required checks, registrar UNKNOWN e usar o canal autorizado, sem adivinhar.
+5. Classificar os 17 commits exclusivos de `main` e preparar apenas pacotes necessários, com testes/gates e provenance, antes de qualquer promoção.
