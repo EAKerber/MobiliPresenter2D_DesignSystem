@@ -12424,13 +12424,13 @@ Este registro é **inicial e editorial**: as tarefas ainda não tiveram seus est
 | 016 | `RM-03` | Utilizar bundles de teste por domínio de mudança | I | P1 | `not_started` |
 | 017 | `RM-04` | Separar prova local de prova hospedada | I | P0 | `not_started` |
 | 018 | `RM-05` | Tornar a integração uma etapa planejada desde o início | I | P0 | `not_started` |
-| 019 | `TST-001` | Fixar baseline e mapa de execução | VI | P0 | `not_started` |
+| 019 | `TST-001` | Fixar baseline e mapa de execução | VI | P0 | `in_progress` |
 | 020 | `TST-002` | Construir matriz assertion → contrato → risco | VI | P0 | `not_started` |
-| 021 | `TST-004` | Auditar alcançabilidade dos workflows | VI | P0 | `not_started` |
+| 021 | `TST-004` | Auditar alcançabilidade dos workflows | VI | P0 | `in_progress` |
 | 022 | `TST-005` | Determinar required checks e política de status | VI | P0 | `not_started` |
 | 023 | `GIT-004` | Inventariar a intenção das PRs abertas | VII | P0 | `not_started` |
-| 024 | `GIT-019` | Auditar o mecanismo de branch hygiene | VII | P0 | `not_started` |
-| 025 | `GIT-020` | Resolver a política de exclusão automática pós-merge | VII | P0 | `not_started` |
+| 024 | `GIT-019` | Auditar o mecanismo de branch hygiene | VII | P0 | `in_progress` |
+| 025 | `GIT-020` | Resolver a política de exclusão automática pós-merge | VII | P0 | `in_progress` |
 | 026 | `GIT-003` | Classificar a divergência `development` versus `main` | VII | P0 | `not_started` |
 | 027 | `GIT-005` | Criar o DAG de dependências entre pacotes | VII | P0 | `not_started` |
 | 028 | `GIT-006` | Definir unidade mínima de integração | VII | P0 | `not_started` |
@@ -12522,8 +12522,8 @@ Este registro é **inicial e editorial**: as tarefas ainda não tiveram seus est
 | 114 | `TST-024` | Diagnosticar e tratar intermitência | VI | P1 | `not_started` |
 | 115 | `TST-025` | Formalizar os gates de integração e publicação | VI | P0 | `not_started` |
 | 116 | `TST-026` | Implantar recibo mínimo por pacote | VI | P0 | `not_started` |
-| 117 | `GIT-021` | Reconciliar batches consumidos e pins obsoletos | VII | P1 | `not_started` |
-| 118 | `GIT-022` | Consolidar a política de preservação e retirada de refs | VII | P1 | `not_started` |
+| 117 | `GIT-021` | Reconciliar batches consumidos e pins obsoletos | VII | P1 | `in_progress` |
+| 118 | `GIT-022` | Consolidar a política de preservação e retirada de refs | VII | P1 | `in_progress` |
 | 119 | `GIT-023` | Formalizar o pipeline de publicação Netlify | VII | P0/P1 | `not_started` |
 | 120 | `OPS-NET-002` | Aplicar a política aprovada | VIII | Condicional | `not_started` |
 | 121 | `GIT-024` | Formalizar rollback por classe de mudança | VII | P0 | `not_started` |
