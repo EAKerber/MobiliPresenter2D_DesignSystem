@@ -1,6 +1,6 @@
 # Current operational handover — v0.9 plan execution
 
-**Readback:** 2026-11-25 15:08 UTC. Point-in-time snapshot. Refresh exact refs, PRs, deployments, and access controls before dependent operations. This document is proposed in open Design System PR #137 and is not on Design System `main`.
+**Readback:** 2026-11-25 15:30 UTC. Point-in-time snapshot; refresh exact refs, PRs, deployments, and access controls before dependent operations. This document is proposed in open Design System PR #137 and is not on Design System `main`.
 
 ## Authority hierarchy
 
@@ -17,11 +17,11 @@ Historical records are preserved as provenance. Their dated state and operationa
 | Repository | Ref | SHA |
 |---|---|---|
 | Product | `main` | `e462f5df33e2354c81bbbc18170106c1a9d79ead` |
-| Product | `development` | `6e043ee7fb399d1599840c8d07fc57ec2dcf31e3` |
+| Product | `development` | `02c6ace2c59b96a11e3a2c87ab444eae00a27f3b` |
 | Design System | `main` | `c6ff6545e9ae2071e695109fd94ac91676e7fb0a` |
 | Design System | `development` | not found (GitHub returned 404) |
 
-Product `main` and `development` diverge from merge base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. The GitHub compare file list is capped; it is not a complete file-level promotion audit. Promotion remains selective.
+Product `main` and `development` diverge from merge base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. GitHub's compare file list is capped; it is not a complete file-level promotion audit. Promotion remains selective.
 
 Netlify production deploy `6b06ed3909631cffb66b2d7b` is READY on Product `main` at `e462f5df33e2354c81bbbc18170106c1a9d79ead`. The site is `https://casaemmodulos.casa`.
 
@@ -32,24 +32,25 @@ Netlify production deploy `6b06ed3909631cffb66b2d7b` is READY on Product `main` 
 | Product #400 | `main` | Branch-hygiene maintenance candidate; its description is not evidence that any ref has been deleted. |
 | Product #407 | `main` | Make the Viewer pricing gate reachable on main-targeting PRs; CI-only change. |
 | Product #432 | `main` | Test-only CAS race and missing-readback assertions. Open; integration remains separately authorized. |
-| Product #442 | `main` | Prevent Admin PUT from writing fallback defaults when V3 state is absent or invalid; preserve the documented GET fallback. Open at head `f6f75cbdb1d1cb07b39ba69d2a4801c3cd2bbcfd`; all nine triggered workflows passed, and its Deploy Preview is READY. Integration is pending because it targets production `main`. |
+| Product #442 | `main` | Prevent Admin PUT from writing fallback defaults when V3 state is absent or invalid; preserve the documented GET fallback. All nine triggered workflows passed; Deploy Preview #442 is READY at `https://deploy-preview-442--mobilipresenter2d.netlify.app`. Open; merge would publish to production. |
+| Product #445 | `main` | Use `NormalizedConfiguratorFlow` for stage navigation, ownership, and item availability; refresh the ARC-13 report. All nine triggered workflows passed; Deploy Preview #445 is READY at `https://deploy-preview-445--mobilipresenter2d.netlify.app`. Open; merge would publish to production. |
 | Design System #137 | `main` | This handover refresh only; documentation candidate, not integrated. |
 
-Product PR #441 has been squash-merged into `development` at `6e043ee7fb399d1599840c8d07fc57ec2dcf31e3`; it added four approved private-navigation labels from the copy catalog.
+Product PR #443 integrated the normalized-flow consumer correction into `development` at `5c89e08e3a700e640f31927fd01d6c8373b6d64f`; all ten exact-head workflows passed. Product PR #444 integrated the adversarial Buyer DTO projection test and execution-register reconciliation into `development` at `02c6ace2c59b96a11e3a2c87ab444eae00a27f3b`; all nine exact-head workflows passed.
 
 ## Selective promotion findings
 
-The shared V5 read/inspection/save core matches between Product `main` and `development`. PR #432 adds deterministic concurrent-CAS and missing-readback assertions to `main`; it changes tests only.
-
-The Admin endpoint differs on absent or invalid V3 data. Product `main` preserves the historical GET fallback but previously allowed PUT to use fallback defaults as the basis of a write. PR #442 closes that write path, returns conflict without storage mutation, handles Identity failure explicitly, and applies the shared Admin authorization policy. Its test and deployment gates pass on the exact PR head. It remains unintegrated pending the required main publication decision. This does not establish hosted Identity behavior or provider-level atomicity.
+- The V5 read/inspection/save core matches between Product `main` and `development`. PR #432 adds deterministic concurrent-CAS and missing-readback assertions to `main`; it changes tests only.
+- Admin behavior differs for missing or invalid V3. PR #442 closes the unsafe PUT-from-defaults path while preserving the historical GET fallback, and adds the shared Admin policy/Identity error handling. Hosted Identity and provider-level atomicity remain unproven.
+- DOM-006 is implemented and validated in Product `development`. PR #445 prepares the equivalent consumer-authority correction for `main`; it is not integrated.
+- DOM-001 remains partial. PR #444 added and integrated nested DTO allowlist assertions, but the wider schema/default/pricing/compatibility inventory and its CMP-001 dependency remain open.
 
 ## Validation and access limits
 
-- The local full test suite and the Buyer projection/authorization boundary checks passed for PR #442's exact candidate.
-- All nine PR-triggered GitHub Actions workflows passed for `f6f75cbdb1d1cb07b39ba69d2a4801c3cd2bbcfd`; Netlify Deploy Preview #442 is READY at `https://deploy-preview-442--mobilipresenter2d.netlify.app`.
-- Netlify production remains on Product `main` at `e462f5df33e2354c81bbbc18170106c1a9d79ead`; PR #442 has not changed production.
-- GitHub's branch-protection API returned 403 in the prior live check. Required checks and rulesets remain unknown; observed workflow runs do not prove required-check policy.
-- The Design System development branch lookup returned 404.
-- Documentation and test-only changes do not establish production deployment or completion of the v0.9 plan.
+- Local flow suites passed 4/4 for the candidate changes. PR #442 local full tests and Buyer boundary checks passed; PR #444's projection test passed 1/1.
+- All exact-head Actions workflows passed for PRs #442, #443, #444, and #445. The PR #442 and #445 Deploy Previews are READY; these states are separate from production.
+- Netlify production remains on Product `main` at `e462f5df33e2354c81bbbc18170106c1a9d79ead`; neither main-targeting PR has changed production.
+- The protected `/config/` route was not reviewed in an authenticated session for these candidates. No hosted Identity/cookie behavior or provider-level atomicity is claimed.
+- GitHub's branch-protection API returned 403 in the previous live check. Required checks and rulesets remain unknown; observed workflow runs do not prove required-check policy.
 
 This handover refresh changes documentation only. It does not change runtime, stored configuration, production content, or access-control settings.
