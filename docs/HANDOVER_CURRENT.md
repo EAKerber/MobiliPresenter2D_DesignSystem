@@ -1,36 +1,52 @@
-# Current handover — Plano Diretor v0.9
+# Current operational handover — v0.9 plan execution
 
-**Verificado:** 24 de novembro de 2026 (BRT)  
-**Escopo:** fotografia operacional; não declara o plano concluído.
+**Readback:** 2026-11-25 13:21 UTC. This is a point-in-time snapshot. Re-read live refs, PRs, deploys, and access controls before any Git or publication operation. This file is the head of open Design System PR #137; until that PR is integrated, Design System `main` remains at its separately verified SHA.
 
-## Autoridades e referências
+## Authority hierarchy
 
-- Plano canônico: [Plano Diretor v0.9](architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md), blob `59bb530b14172eb9772b9f89bb62272173f4381c`.
-- Registro operacional único dos 125 IDs: [Produto — register v0.9](https://github.com/EAKerber/MobiliPresenter2D/blob/development/docs/architecture/plan-v0.9-execution-register.json). O estado inicial do plano foi preservado; `unknown` e `unreviewed` não significam que o recurso ou código estejam ausentes.
-- O Design System mantém decisões e contratos; o Produto mantém a implementação executável.
+1. **Method and intended DoD:** this repository's [Plano Diretor v0.9](architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md), blob `59bb530b14172eb9772b9f89bb62272173f4381c`.
+2. **Execution state:** Product's single [125-ID operational register](https://github.com/EAKerber/MobiliPresenter2D/blob/development/docs/architecture/plan-v0.9-execution-register.json). Read its live blob and state dimensions; a partial implementation is not a completed item.
+3. **Design decisions:** this repository's [`decisions.json`](../decisions.json), blob `63b60f8d87327c6fd1e80c8cdf4ff832c4089bfa`.
+4. **Implementation and consumers:** exact Product source at the confirmed ref; code and its consumers decide what is implemented.
+5. **Validation:** source-pinned test crosswalks and exact test/Actions receipts. Keep local, hosted, Preview, production, and approval evidence distinct.
 
-| Repositório | `main` | `development` |
+Historical handovers and archives remain preserved. Their dated state and instructions are not live authorization.
+
+## Live repository readback
+
+| Repository | Ref | SHA |
 |---|---|---|
-| Produto | `01ded2c100fbfd8b16897e26113dc5068a83e429` | `6fbddd5a522dfe5ecc218132253647980720ba37` |
-| Design System | `c6ff6545e9ae2071e695109fd94ac91676e7fb0a` | — |
+| Product | `main` | `01ded2c100fbfd8b16897e26113dc5068a83e429` |
+| Product | `development` | `cc495684f8ace2c4d84443022d79ecd48a6ad47b` |
+| Design System | `main` | `c6ff6545e9ae2071e695109fd94ac91676e7fb0a` |
+| Design System | `development` | not found (GitHub returned 404) |
 
-O Produto está divergente: `development` tem 552 commits exclusivos e `main` 17. Esses números contam commits, não divergência funcional. A promoção continua seletiva; não integrar a árvore inteira.
+Product main and development are divergent from merge base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`. GitHub's compare response returned a capped file list, so it is not a complete file-by-file promotion audit. Promotion remains selective.
 
-## Estado de execução
+The confirmed Netlify production deploy is `6b045acbbb56d5e17bde8f8a`, READY on Product main at `01ded2c100fbfd8b16897e26113dc5068a83e429`.
 
-- O PR #413 criou o registro canônico e foi integrado somente em Produto `development`. Ele contém 125 IDs únicos; cinco têm evidência operacional parcial e os demais aguardam reconciliação. Nenhuma alteração de runtime ou de produção decorreu desse PR.
-- LOC-004 já tem extrações de copy estática compiladas para HTML em `development`. Os recibos cobrem apenas famílias específicas e não provam a conclusão global da ARC-13 nem a promoção para `main`.
-- Produto tem 16 branches remotas; Design System tem 2. A contagem remota total é 18. Referências locais e worktrees são inventários separados e não devem ser somados como branches remotas.
+## Open work requiring live disposition
 
-## Higiene e gates
+| PR | Base | Head SHA | Intent / current disposition |
+|---|---|---|---|
+| Product #400 | `main` | `d1fe79faafa1ed7345aff8afeb33bbf5e4a21e22` | Branch-retirement maintenance candidate. Its recorded audits did not apply deletions; do not infer that a ref was removed. |
+| Product #407 | `main` | `b986159d0c9d87d57aa5133eca9d26b2f8b31137` | Make the Viewer pricing gate reachable on main-targeting PRs; separate from runtime promotion. |
+| Product #432 | `main` | `8ebfdad9ef335bf0a9701718ebd947162adea2c3` | Test-only CAS concurrency and missing-readback assertions. Seven triggered gates passed and its Preview is READY. Merge awaits the user's specific authorization; no runtime code changes. |
+| Product #433 | `development` | `2db41c0739c1126fa69db71822dda6c368095345` | Refresh Product entry points and mark old dated handovers historical; documentation only. |
+| Design System #137 | `main` | this PR head | Refresh this live handover; documentation only. |
 
-- PRs abertas do Produto: #400 e #407, ambas para `main`. PR aberta do Design System: #137, este handover.
-- O PR #400 agora prepara seis heads integrados em duas ondas (3 + 3), com SHAs e árvores exatos. A auditoria atual [#45534095293](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/45534095293) passou com 45 testes, seis provas e `deleted: 0`; a aplicação foi ignorada. A auditoria de desenvolvimento [#45534095202](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/45534095202) também passou; ambas estão presas ao head `d1fe79faafa1ed7345aff8afeb33bbf5e4a21e22`.
-- Se a PR #400 chegar a Produto `main` e o gate de aplicação passar, o Produto cai de 16 para 10 branches remotas. Nenhuma foi removida; as demais refs incluem PRs abertas, PRs fechadas sem merge ou branches preservadas para triagem. A integração da PR pode acionar o deploy normal do site.
-- PR #407 adiciona o gate de preço do Viewer a PRs para `main`; permanece independente da promoção de LOC-004.
+None of these rows alone establishes approval, required-check policy, production deployment, or branch retirement. Re-read each PR before acting.
 
-## Próxima sequência
+## Selective promotion findings
 
-1. Reconciliar os IDs prioritários no registro com código, consumidores, DoD e evidência exata.
-2. Preparar a promoção seletiva de uma família arquitetural completa, incluindo suas fontes, compilação, saídas e gates proporcionais.
-3. Integrar somente pacotes compatíveis e validados; manter `main` estável e usar `development` como buffer temporário.
+The V5 shared read/inspection/save core is byte-identical between the current Product main and development snapshots. A bounded test-only candidate is prepared in Product #432.
+
+The Admin endpoint has a behavioral difference: main may substitute defaults for missing/invalid V3 state, while development returns an explicit missing/invalid result. That can affect first-run and recovery behavior; the handler, its tests, and a main-reachable endpoint gate require a bounded policy decision before promotion. The V5 test evidence does not settle that V3 behavior.
+
+## Validation and access limits
+
+- Product's V5 read/save tests pass locally against blobs that match the development source; the Blob/Identity doubles do not prove hosted Identity or provider-level atomicity under independent-instance contention.
+- The branch-protection endpoints returned 403 through the connected GitHub app. Required checks and rulesets are **UNKNOWN**; observed workflow runs are not proof that a status is required.
+- The Design System development branch lookup returned 404.
+
+No runtime, stored configuration, production content, or access-control setting was changed as part of this handover update.
