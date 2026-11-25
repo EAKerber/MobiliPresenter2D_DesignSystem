@@ -25,8 +25,8 @@ O Produto está divergente: `development` tem 552 commits exclusivos e `main` 17
 ## Higiene e gates
 
 - PRs abertas do Produto: #400 e #407, ambas para `main`. PR aberta do Design System: #137, este handover.
-- O PR #400 agora prepara cinco heads integrados em duas ondas (3 + 2), com SHAs e árvores exatos. O gate revalidou proteção, uso por PR, referências de workflow e árvore: run [#45532055112](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/45532055112) passou com cinco provas e `deleted: 0`; a aplicação foi ignorada. A auditoria de desenvolvimento [#45532055351](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/45532055351) passou com `count: 0` e `readback: NOT_APPLIED`.
-- Se a PR #400 chegar a Produto `main` e o gate de aplicação passar, o Produto cai de 16 para 11 branches remotas. Nenhuma foi removida até agora. A integração da PR pode acionar o deploy normal do site.
+- O PR #400 agora prepara seis heads integrados em duas ondas (3 + 3), com SHAs e árvores exatos. A auditoria atual [#45534095293](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/45534095293) passou com 45 testes, seis provas e `deleted: 0`; a aplicação foi ignorada. A auditoria de desenvolvimento [#45534095202](https://github.com/EAKerber/MobiliPresenter2D/actions/runs/45534095202) também passou; ambas estão presas ao head `d1fe79faafa1ed7345aff8afeb33bbf5e4a21e22`.
+- Se a PR #400 chegar a Produto `main` e o gate de aplicação passar, o Produto cai de 16 para 10 branches remotas. Nenhuma foi removida; as demais refs incluem PRs abertas, PRs fechadas sem merge ou branches preservadas para triagem. A integração da PR pode acionar o deploy normal do site.
 - PR #407 adiciona o gate de preço do Viewer a PRs para `main`; permanece independente da promoção de LOC-004.
 
 ## Próxima sequência
