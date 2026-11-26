@@ -1,6 +1,6 @@
 # Current operational handover — v0.9 plan execution
 
-**Readback:** 2026-11-26 05:17 UTC, immediately before this refresh was pushed. Point-in-time snapshot; re-read exact refs, PRs, deployments, permissions, and the execution register before dependent actions. This handover is updated in the open Design System PR #137 and becomes part of Design System `main` only if that documentation PR is integrated.
+**Readback:** 2026-11-26 07:55 UTC. Point-in-time snapshot; re-read exact refs, PRs, deployments, permissions, and the execution register before dependent actions. PR #137 was integrated into Design System `main` at `9261c5782c5987bc91d70f87dde3f8a4779c004d`; this follow-up refresh is proposed from `codex/v09-current-readback-after-137-20261126`.
 
 ## Authority hierarchy
 
@@ -17,15 +17,15 @@ Historical records are preserved as provenance. Their dated state and operationa
 | Repository | Ref | SHA |
 |---|---|---|
 | Product | `main` | `5c6e652693bd30218e6915bf8cb160bde03ac719` |
-| Product | `development` | `c04efa2c98f4ddd7d0566fe19b3cf3c5fa6df510` |
-| Design System | `main` | `c6ff6545e9ae2071e695109fd94ac91676e7fb0a` |
+| Product | `development` | `daede4b89525ffe4e2caafd89da9a1cda7684665` |
+| Design System | `main` | `9261c5782c5987bc91d70f87dde3f8a4779c004d` |
 | Design System | `development` | not found (GitHub returned 404) |
 
-Product has exactly two live branches, `main` and `development`, and no open Product PRs at this readback. Design System has `main` only; its open PR #137 is the documentation refresh carrying this handover. GitHub's issues endpoint returned 16 open Product issues; their current relevance and mapping to the 125-ID register remain an MD-001 task, so issue titles alone are not treated as proof of active defects.
+Product has four live branches: `main`, `development`, the retained `codex/v09-loc006-register-correction-20261126`, and the open register-refresh head `codex/v09-current-readback-fnd01-20261126`. Product has one open PR, #482, for that register refresh. Design System has three branches: `main`, the retained source branch from merged PR #137, and this handover-refresh branch; this PR is its only open PR. The Design System has no `development` branch. GitHub's issues endpoint previously returned 16 open Product issues; their current relevance and mapping to the 125-ID register remain an MD-001 task, so issue titles alone are not treated as proof of active defects.
 
-Product `main` and `development` diverge from merge base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`: development has 599 unique commits, main has 35, and the compare response is capped at 300 paths. The smaller reverse comparison lists 92 main-side changed paths. These are not grounds for a whole-tree merge; promotion remains selective by family.
+Product `main` and `development` diverge from merge base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`: development has 604 unique commits and main has 35. The reverse compare lists 92 main-side changed paths. These are not grounds for a whole-tree merge; promotion remains selective by family.
 
-Netlify production deploy [`6b07bd0f17cb2fd1e0d65b34`](https://6b07bd0f17cb2fd1e0d65b34--mobilipresenter2d.netlify.app) is READY on Product `main` at `5c6e652693bd30218e6915bf8cb160bde03ac719`. The site is [casaemmodulos.casa](https://casaemmodulos.casa).
+Previous readback recorded Netlify production deploy [`6b07bd0f17cb2fd1e0d65b34`](https://6b07bd0f17cb2fd1e0d65b34--mobilipresenter2d.netlify.app) as READY on Product `main` at `5c6e652693bd30218e6915bf8cb160bde03ac719`; deploy state was not revalidated in this refresh. The site is [casaemmodulos.casa](https://casaemmodulos.casa).
 
 ## Recent Product integrations
 
@@ -38,6 +38,8 @@ Netlify production deploy [`6b07bd0f17cb2fd1e0d65b34`](https://6b07bd0f17cb2fd1e
 | #432 | `main` | Test-only deterministic CAS race and missing-readback coverage; integrated at current `main` SHA `5c6e652693bd30218e6915bf8cb160bde03ac719`. |
 | #475 | `development` | Admin scene-asset fixed copy moved to its catalog; integrated at `ef943910f5513c423ce22b84b4ced548f9c042f2`. |
 | #476 | `development` | Execution register and historical handover context refreshed; integrated at `c04efa2c98f4ddd7d0566fe19b3cf3c5fa6df510`. |
+| #481 | `development` | Centralized the equivalent `.visually-hidden` utility; integrated at `daede4b89525ffe4e2caafd89da9a1cda7684665` after 16/16 exact-head workflow runs succeeded. |
+| #482 | `development` | Current v0.9 register readback; open at head `5c1c6f1b5649a50d208492fbad5baff294a080b8`, not yet integrated. |
 
 ## Selective promotion and architecture findings
 
@@ -45,8 +47,9 @@ Netlify production deploy [`6b07bd0f17cb2fd1e0d65b34`](https://6b07bd0f17cb2fd1e
 - **Admin V3:** the unsafe PUT-from-defaults path was closed by #442; its GET fallback remains a deliberate behavior to compare with development. Provider-level Identity and storage atomicity have not been proven. A local Admin login fixture is anonymous by design; use a deployed preview for real authentication.
 - **Test overlap:** TST-003 reconciliation found one `npm test` call in main's `app-build-purity`. `candidate-assets` runs scoped asset/mask/provenance checks and `variant-fidelity` derives/renders variant outputs; neither repeats that app test. Keep those guarantees distinct and do not transplant a duplicate-removal change to main.
 - **CSS-00:** the exact CSS baseline is still partial. The initial Config/Admin readback found distinct local bundles and other inline/dynamic CSS surfaces; the full stylesheet/selector inventory remains to be completed.
-- **FND-01 candidate:** `.visually-hidden` is defined identically in Product `app/styles.css` and `app/admin/admin.css`, consumed by the Config hidden heading and Admin brand name. Preserve `.sr-only`, which serves a different Config heading/live-region role. Product `app/ui-theme.css` is not Design System-derived or pinned and differs between main/development. A Design System-owned versioned export, manifest, Product pin and direct semantic/CSSOM/focus tests are needed before extraction; no implementation is claimed.
-- **v0.9 register:** all 125 IDs are retained. The current reconciliation count is 7 done, 20 partial and 98 unreviewed. This is a count of reconciled register entries, not a percentage of implementation completion.
+- **FND-01:** Product `development` now owns the identical `.visually-hidden` utility in `app/ui-theme.css`; PR #481 removed the duplicate Admin/Config rules and preserved Config's distinct `.sr-only`. Its exact head passed all 16 workflow runs. The Product register refresh in PR #482 keeps the family partial: CSS-00/ownership and the remaining focal focus/clip proof still need closure. Product `main` does not contain this change. Whether a Design-System-owned versioned export and Product pin are required remains a recorded architecture decision, not an assumption.
+- **LOC-006:** the Admin scene-asset copy candidate is local only at `c04826106119e799493c431d079491630d327809`, based on the older Product `development` state `c26b5b4`; it is not integrated. Port it onto the current development head and run exact PR gates before any integration.
+- **v0.9 register:** all 125 IDs remain. At Product `development@daede4b`, the register has 3 done, 18 in progress, 104 not started; reconciliation is 7 done, 22 partial, 96 unreviewed, and 96 entries have no attached evidence. This is an inventory, not an implementation percentage. PR #482 proposes the first current-state correction.
 
 ## Token validation and limits
 
