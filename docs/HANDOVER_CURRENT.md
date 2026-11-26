@@ -21,7 +21,7 @@ Historical records are preserved as provenance. Their dated state and operationa
 | Design System | `main` | `c6ff6545e9ae2071e695109fd94ac91676e7fb0a` |
 | Design System | `development` | not found (GitHub returned 404) |
 
-Product has exactly two live branches, `main` and `development`, and no open Product PRs at this readback. Design System has `main` only; its open PR #137 is the documentation refresh carrying this handover.
+Product has exactly two live branches, `main` and `development`, and no open Product PRs at this readback. Design System has `main` only; its open PR #137 is the documentation refresh carrying this handover. GitHub's issues endpoint returned 16 open Product issues; their current relevance and mapping to the 125-ID register remain an MD-001 task, so issue titles alone are not treated as proof of active defects.
 
 Product `main` and `development` diverge from merge base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`: development has 599 unique commits, main has 35, and the compare response is capped at 300 paths. The smaller reverse comparison lists 92 main-side changed paths. These are not grounds for a whole-tree merge; promotion remains selective by family.
 
