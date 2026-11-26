@@ -1,5 +1,23 @@
 # Current operational handover — v0.9 plan execution
 
+**Live readback:** 2026-11-26 17:02 UTC. Point-in-time snapshot; resolve exact refs, open PRs, checks, and deployments before dependent work.
+
+| Repository | Ref | SHA |
+|---|---|---|
+| Product | `main` | `ef9f073542c54ec44bf3c8808ab13d880222d329` |
+| Product | `development` | `ab518623bbfe59ef37a36a8bbc347ff9e03882c0` |
+| Design System | `main` | `8686df1cf13f84f18f755cb7de2067fda4f7c66d` |
+| Design System | `development` | not found in the live branch lookup |
+
+The Product execution authority is the [125-ID v0.9 register](https://github.com/EAKerber/MobiliPresenter2D/blob/development/docs/architecture/plan-v0.9-execution-register.json); always resolve it from the current Product `development` HEAD. The method and intended DoD are the [Plano Diretor v0.9](architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md), blob `59bb530b14172eb9772b9f89bb62272173f4381c`. Design decisions are in [`decisions.json`](../decisions.json), blob `63b60f8d87327c6fd1e80c8cdf4ff832c4089bfa`.
+
+Product `main` is the stable publication line and `development` its integration buffer. They remain divergent: select complete architectural families for promotion; do not merge the entire tree. Source evidence, consumer coverage, test gates, preview, production deployment, approval, and branch retirement are distinct states.
+
+## Prior handover snapshot — 2026-11-26 14:08 UTC (historical)
+
+The complete snapshot below is retained as provenance. Its refs, PR/deploy state, and next actions are historical, not current instructions. Re-read live sources before acting.
+
+
 **Readback:** 2026-11-26 14:08 UTC. Point-in-time snapshot; re-read exact refs, PRs, deployments, and the execution register before dependent actions. Product `main@94560aa9c4dfc2871a6eb1035b6ecaa283224453`, Product `development@adb83d7e4f3384e8757316b5952579d79dda9565`, and Design System `main@7f57633cb869d388d8279c7ac5d5ccab3a11a17f` were read live. Product PR #499 and Design System PR #141 have been integrated as recorded below. Netlify deploy `6b083a82b6dff365f89fa2bf` is READY on Product `main` at the exact commit `94560aa9c4dfc2871a6eb1035b6ecaa283224453`. The Design System has no `development` branch; branch protection/rulesets are not part of this snapshot.
 
 ## Authority hierarchy
