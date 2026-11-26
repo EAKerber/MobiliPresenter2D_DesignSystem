@@ -1,6 +1,6 @@
 # Current operational handover — v0.9 plan execution
 
-**Readback:** 2026-11-26 14:00 UTC. Point-in-time snapshot; re-read exact refs, PRs, deployments, and the execution register before dependent actions. Product `main@94560aa9c4dfc2871a6eb1035b6ecaa283224453`, Product `development@3c84c658439eae10ce5f3a13ecc8a71fb613d7e5`, and Design System `main@026c6c4f4d9a6d29102a241862afdb50c35de147` were read live. Product PRs #497 and #498 have been integrated as recorded below. Netlify deploy `6b083a82b6dff365f89fa2bf` is READY on Product `main` at the exact commit `94560aa9c4dfc2871a6eb1035b6ecaa283224453`. The Design System has no `development` branch; branch protection/rulesets are not part of this snapshot.
+**Readback:** 2026-11-26 14:08 UTC. Point-in-time snapshot; re-read exact refs, PRs, deployments, and the execution register before dependent actions. Product `main@94560aa9c4dfc2871a6eb1035b6ecaa283224453`, Product `development@adb83d7e4f3384e8757316b5952579d79dda9565`, and Design System `main@7f57633cb869d388d8279c7ac5d5ccab3a11a17f` were read live. Product PR #499 and Design System PR #141 have been integrated as recorded below. Netlify deploy `6b083a82b6dff365f89fa2bf` is READY on Product `main` at the exact commit `94560aa9c4dfc2871a6eb1035b6ecaa283224453`. The Design System has no `development` branch; branch protection/rulesets are not part of this snapshot.
 
 ## Authority hierarchy
 
@@ -17,11 +17,11 @@ Historical records are preserved as provenance. Their dated state and operationa
 | Repository | Ref | SHA |
 |---|---|---|
 | Product | `main` | `94560aa9c4dfc2871a6eb1035b6ecaa283224453` |
-| Product | `development` | `3c84c658439eae10ce5f3a13ecc8a71fb613d7e5` |
-| Design System | `main` | `026c6c4f4d9a6d29102a241862afdb50c35de147` |
+| Product | `development` | `adb83d7e4f3384e8757316b5952579d79dda9565` |
+| Design System | `main` | `7f57633cb869d388d8279c7ac5d5ccab3a11a17f` |
 | Design System | `development` | not found (GitHub returned 404) |
 
-Product has three live branches: `main`, `development`, and `codex/v09-loc006-register-correction-20261126`; it has no open PR. Design System has four live branches: `main`, `codex/handover-live-reconciliation-20261124`, `codex/v09-current-readback-after-137-20261126`, and `codex/v09-current-readback-loc006-20261126`; it has no open PR and no `development` branch. These counts are live readbacks from 2026-11-26 14:00 UTC. Mapping live issues to the 125-ID register remains an MD-001 task; issue titles alone are not proof of active defects.
+At the 14:08 UTC readback Product has three live branches: `main`, `development`, and `codex/v09-loc006-register-correction-20261126`; no Product PR was open before this follow-up. Design System has five live branches: `main`, `codex/handover-live-reconciliation-20261124`, `codex/v09-current-readback-after-137-20261126`, `codex/v09-current-readback-loc006-20261126`, and the retained source branch for merged PR #141, `codex/v09-refresh-current-handover-20261126`; no Design System PR was open before this follow-up. The Design System has no `development` branch. Mapping live issues to the 125-ID register remains an MD-001 task; issue titles alone are not proof of active defects.
 
 Product `main` and `development` remain divergent. The exact commit/path counts were not recalculated in this readback; do not reuse earlier compare numbers. They are not grounds for a whole-tree merge; promotion remains selective by family.
 
@@ -45,7 +45,8 @@ Netlify production deploy [`6b083a82b6dff365f89fa2bf`](https://6b083a82b6dff365f
 | #487 | `development` | Centralized the shared Admin pager labels; 11 exact-head gates passed; integrated at `212796fcab4b610ffa0bd721a26b823a05191a5c`. |
 | #488 | `development` | Reconciled exact v0.9 evidence for completed slices and refreshed live refs; documentation only, integrated at `ea66294bae4190ac09d8793b615cf00338d0795a`. |
 | #497 | `development` | Added the explicit VIS-002C reference/candidate/authorized lifecycle validator and source-pinned gate; exact-head run 45832739322 passed; integrated at `3c84c658439eae10ce5f3a13ecc8a71fb613d7e5`. |
-| #498 | `main` | Ported the VIS-002C lifecycle contract and exact-source gate without runtime/page/CSS changes; exact-head run 45833613512 passed; integrated at `94560aa9c4dfc2871a6eb1035b6ecaa283224453`. Production deploy `6b083a82b6dff365f89fa2bf` is READY.
+| #498 | `main` | Ported the VIS-002C lifecycle contract and exact-source gate without runtime/page/CSS changes; exact-head run 45833613512 passed; integrated at `94560aa9c4dfc2871a6eb1035b6ecaa283224453`. Production deploy `6b083a82b6dff365f89fa2bf` is READY. |
+| #499 | `development` | Refreshed Product CURRENT_STATE and reconciled exact TOK-00/GIT-002 evidence; integrated at `adb83d7e4f3384e8757316b5952579d79dda9565`. |
 
 ## Selective promotion and architecture findings — prior 10:13 UTC snapshot
 
