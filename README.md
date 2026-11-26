@@ -1,6 +1,14 @@
 # MobiliPresenter2D Design System
 
-> **PONTEIRO OPERACIONAL (20/11/2026, BRT):** a PR #119 foi integrada por squash à Design System `main` no commit `9f29e3f`; o readback confirmou os 95 caminhos e o recibo GIT-018. O pacote de validação externa está concluído com limites explícitos, descritos no [handover canônico](docs/HANDOVER_CURRENT.md). A branch integrada foi retirada após preservação da proveniência. Product `main@803c32f` recebeu, em PR separada, apenas um ajuste de gatilho do browser de teclado; o handover contém o inventário e os próximos passos.
+> **Current project entry point:** [operational handover](docs/HANDOVER_CURRENT.md). It records a live point-in-time readback; re-resolve refs before dependent work.
+>
+> **Architecture method:** [Plano Diretor v0.9](docs/architecture/MOBILIPRESENTER2D_PLANO_DIRETOR_CONSOLIDADO_v0.9.md).
+> **Product execution status:** [125-ID register](https://github.com/EAKerber/MobiliPresenter2D/blob/development/docs/architecture/plan-v0.9-execution-register.json).
+> **Design decisions:** [`decisions.json`](decisions.json).
+>
+> Dated snapshots below are preserved for provenance. Their statuses, refs, and operational instructions are historical unless reconfirmed against live sources.
+
+> **REGISTRO HISTÓRICO (20/11/2026, BRT; desatualizado):** a PR #119 foi integrada por squash à Design System `main` no commit `9f29e3f`; o readback confirmou os 95 caminhos e o recibo GIT-018. O pacote de validação externa está concluído com limites explícitos, descritos no [handover canônico](docs/HANDOVER_CURRENT.md). A branch integrada foi retirada após preservação da proveniência. Product `main@803c32f` recebeu, em PR separada, apenas um ajuste de gatilho do browser de teclado; o handover contém o inventário e os próximos passos.
 
 > **SNAPSHOT OPERACIONAL PRESERVADO (18/11/2026, BRT; histórico):** Product `main@efc40584c3f3ca940cf6cbca408f8fda31e3e1c9` continua publicado após #277. Product tem 9 refs: sete branches ligadas a PRs abertas, mais `development` e `main`; não há limpeza segura por contagem. #274 permanece Draft no head `b57880006c3ffeeb88d9e0daec43057af54c3026`; o relatório de 1.026 sinks segue `unreviewed`, com LOC-002 parcialmente classificado e owners/destinos pendentes. #281 permanece Draft no head `7f107b2566b61410e6f38d6477e4873015346f00`: TST-015 está concluído por contrato estático e 16 casos de navegador em oito shells e dois viewports; a ordem de foco/visual foi corrigida em `/config/`. Máscaras semânticas e pixels laterais passaram; os seis workflows e Deploy Preview passaram. Os três testes de pedra aguardam replay/revisão dos derivados. #280 segue Draft em `bf685e22338597f47d240c616473085d86a22cb8`, seis workflows passaram e a faceta `module-05-off` continua observação sem baseline. Design System mantém 2 refs; #119 continua Draft. G2/DS-05A segue HOLD. Nenhuma PR foi integrada nesta atualização.
 
