@@ -1,6 +1,6 @@
 # Current operational handover — v0.9 plan execution
 
-**Readback:** 2026-11-26 07:55 UTC. Point-in-time snapshot; re-read exact refs, PRs, deployments, permissions, and the execution register before dependent actions. PR #137 was integrated into Design System `main` at `9261c5782c5987bc91d70f87dde3f8a4779c004d`; this follow-up refresh is proposed from `codex/v09-current-readback-after-137-20261126`.
+**Readback:** 2026-11-26 07:59:29 UTC. Point-in-time snapshot; re-read exact refs, PRs, deployments, permissions, and the execution register before dependent actions. PR #137 was integrated into Design System `main` at `9261c5782c5987bc91d70f87dde3f8a4779c004d`; this follow-up refresh is open as PR #138 from `codex/v09-current-readback-after-137-20261126`.
 
 ## Authority hierarchy
 
