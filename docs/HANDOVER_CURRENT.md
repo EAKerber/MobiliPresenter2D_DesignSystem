@@ -1,6 +1,6 @@
 # Current operational handover — v0.9 plan execution
 
-**Readback:** 2026-11-26 07:59:29 UTC. Point-in-time snapshot; re-read exact refs, PRs, deployments, permissions, and the execution register before dependent actions. PR #137 was integrated into Design System `main` at `9261c5782c5987bc91d70f87dde3f8a4779c004d`; this follow-up refresh is open as PR #138 from `codex/v09-current-readback-after-137-20261126`.
+**Readback:** 2026-11-26 08:00 UTC. Point-in-time snapshot; re-read exact refs, PRs, deployments, permissions, and the execution register before dependent actions. PR #137 was integrated into Design System `main` at `9261c5782c5987bc91d70f87dde3f8a4779c004d`; this follow-up refresh is open as PR #138 from `codex/v09-current-readback-after-137-20261126`.
 
 ## Authority hierarchy
 
@@ -17,13 +17,13 @@ Historical records are preserved as provenance. Their dated state and operationa
 | Repository | Ref | SHA |
 |---|---|---|
 | Product | `main` | `5c6e652693bd30218e6915bf8cb160bde03ac719` |
-| Product | `development` | `daede4b89525ffe4e2caafd89da9a1cda7684665` |
+| Product | `development` | `3a55c4486c3c93108bf276368a3a9c774ddcf3f9` |
 | Design System | `main` | `9261c5782c5987bc91d70f87dde3f8a4779c004d` |
 | Design System | `development` | not found (GitHub returned 404) |
 
-Product has four live branches: `main`, `development`, the retained `codex/v09-loc006-register-correction-20261126`, and the open register-refresh head `codex/v09-current-readback-fnd01-20261126`. Product has one open PR, #482, for that register refresh. Design System has three branches: `main`, the retained source branch from merged PR #137, and this handover-refresh branch; this PR is its only open PR. The Design System has no `development` branch. GitHub's issues endpoint previously returned 16 open Product issues; their current relevance and mapping to the 125-ID register remain an MD-001 task, so issue titles alone are not treated as proof of active defects.
+Product has three live branches: `main`, `development`, and the retained `codex/v09-loc006-register-correction-20261126`; it has no open PR. Product PR #482 reconciled the live register and was squash-integrated into `development` at `3a55c4486c3c93108bf276368a3a9c774ddcf3f9`. Design System has three branches: `main`, the retained source branch from merged PR #137, and this handover-refresh branch; PR #138 is its only open PR. The Design System has no `development` branch. GitHub's issues endpoint previously returned 16 open Product issues; their current relevance and mapping to the 125-ID register remain an MD-001 task, so issue titles alone are not treated as proof of active defects.
 
-Product `main` and `development` diverge from merge base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`: development has 604 unique commits and main has 35. The reverse compare lists 92 main-side changed paths. These are not grounds for a whole-tree merge; promotion remains selective by family.
+Product `main` and `development` diverge from merge base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`: development has 605 unique commits and main has 35. The reverse compare lists 92 main-side changed paths. These are not grounds for a whole-tree merge; promotion remains selective by family.
 
 Previous readback recorded Netlify production deploy [`6b07bd0f17cb2fd1e0d65b34`](https://6b07bd0f17cb2fd1e0d65b34--mobilipresenter2d.netlify.app) as READY on Product `main` at `5c6e652693bd30218e6915bf8cb160bde03ac719`; deploy state was not revalidated in this refresh. The site is [casaemmodulos.casa](https://casaemmodulos.casa).
 
@@ -39,7 +39,7 @@ Previous readback recorded Netlify production deploy [`6b07bd0f17cb2fd1e0d65b34`
 | #475 | `development` | Admin scene-asset fixed copy moved to its catalog; integrated at `ef943910f5513c423ce22b84b4ced548f9c042f2`. |
 | #476 | `development` | Execution register and historical handover context refreshed; integrated at `c04efa2c98f4ddd7d0566fe19b3cf3c5fa6df510`. |
 | #481 | `development` | Centralized the equivalent `.visually-hidden` utility; integrated at `daede4b89525ffe4e2caafd89da9a1cda7684665` after 16/16 exact-head workflow runs succeeded. |
-| #482 | `development` | Current v0.9 register readback; open at head `5c1c6f1b5649a50d208492fbad5baff294a080b8`, not yet integrated. |
+| #482 | `development` | Current v0.9 register readback; squash-integrated at `3a55c4486c3c93108bf276368a3a9c774ddcf3f9`. |
 
 ## Selective promotion and architecture findings
 
