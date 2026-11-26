@@ -1,6 +1,6 @@
 # Current operational handover — v0.9 plan execution
 
-**Readback:** 2026-11-26 10:13 UTC. Point-in-time snapshot; re-read exact refs, PRs, deployments, permissions, and the execution register before dependent actions. Product PR #488 was integrated into `development` at `ea66294bae4190ac09d8793b615cf00338d0795a`; Design System `main` is `4c075fc8f8653b5d87f1f07f7471959718b106b2`. Production deploy state and current branch protections were not revalidated in this readback.
+**Readback:** 2026-11-26 14:00 UTC. Point-in-time snapshot; re-read exact refs, PRs, deployments, and the execution register before dependent actions. Product `main@94560aa9c4dfc2871a6eb1035b6ecaa283224453`, Product `development@3c84c658439eae10ce5f3a13ecc8a71fb613d7e5`, and Design System `main@026c6c4f4d9a6d29102a241862afdb50c35de147` were read live. Product PRs #497 and #498 have been integrated as recorded below. Netlify deploy `6b083a82b6dff365f89fa2bf` is READY on Product `main` at the exact commit `94560aa9c4dfc2871a6eb1035b6ecaa283224453`. The Design System has no `development` branch; branch protection/rulesets are not part of this snapshot.
 
 ## Authority hierarchy
 
@@ -16,16 +16,16 @@ Historical records are preserved as provenance. Their dated state and operationa
 
 | Repository | Ref | SHA |
 |---|---|---|
-| Product | `main` | `5c6e652693bd30218e6915bf8cb160bde03ac719` |
-| Product | `development` | `ea66294bae4190ac09d8793b615cf00338d0795a` |
-| Design System | `main` | `4c075fc8f8653b5d87f1f07f7471959718b106b2` |
+| Product | `main` | `94560aa9c4dfc2871a6eb1035b6ecaa283224453` |
+| Product | `development` | `3c84c658439eae10ce5f3a13ecc8a71fb613d7e5` |
+| Design System | `main` | `026c6c4f4d9a6d29102a241862afdb50c35de147` |
 | Design System | `development` | not found (GitHub returned 404) |
 
-Product has three live branches: `main`, `development`, and the retained `codex/v09-loc006-register-correction-20261126`; it has no open PR. PR #488 updated the 125-ID register and was squash-integrated into `development` at `ea66294bae4190ac09d8793b615cf00338d0795a`. Design System has four live branches: `main`, `codex/handover-live-reconciliation-20261124`, `codex/v09-current-readback-after-137-20261126`, and `codex/v09-current-readback-loc006-20261126`; it has no open PR and no `development` branch. Mapping live issues to the 125-ID register remains an MD-001 task; issue titles alone are not proof of active defects.
+Product has three live branches: `main`, `development`, and `codex/v09-loc006-register-correction-20261126`; it has no open PR. Design System has four live branches: `main`, `codex/handover-live-reconciliation-20261124`, `codex/v09-current-readback-after-137-20261126`, and `codex/v09-current-readback-loc006-20261126`; it has no open PR and no `development` branch. These counts are live readbacks from 2026-11-26 14:00 UTC. Mapping live issues to the 125-ID register remains an MD-001 task; issue titles alone are not proof of active defects.
 
-Product `main` and `development` diverge from merge base `221b54b2a41ecc8c338d1bf2cf67280cf165ce95`: development has 611 unique commits and main has 35. The reverse compare lists 92 main-side changed paths. These are not grounds for a whole-tree merge; promotion remains selective by family.
+Product `main` and `development` remain divergent. The exact commit/path counts were not recalculated in this readback; do not reuse earlier compare numbers. They are not grounds for a whole-tree merge; promotion remains selective by family.
 
-Previous readback recorded Netlify production deploy [`6b07bd0f17cb2fd1e0d65b34`](https://6b07bd0f17cb2fd1e0d65b34--mobilipresenter2d.netlify.app) as READY on Product `main` at `5c6e652693bd30218e6915bf8cb160bde03ac719`; deploy state was not revalidated in this refresh. The site is [casaemmodulos.casa](https://casaemmodulos.casa).
+Netlify production deploy [`6b083a82b6dff365f89fa2bf`](https://6b083a82b6dff365f89fa2bf--mobilipresenter2d.netlify.app) is READY on Product `main@94560aa9c4dfc2871a6eb1035b6ecaa283224453`; verified live at 2026-11-26 14:00 UTC. The site is [casaemmodulos.casa](https://casaemmodulos.casa).
 
 ## Recent Product integrations
 
@@ -44,8 +44,13 @@ Previous readback recorded Netlify production deploy [`6b07bd0f17cb2fd1e0d65b34`
 | #486 | `development` | Centralized Admin materials heading and empty-state copy; integrated at `0d929f0d3898d976e3e8b510b1495ac987c3cd7f`. |
 | #487 | `development` | Centralized the shared Admin pager labels; 11 exact-head gates passed; integrated at `212796fcab4b610ffa0bd721a26b823a05191a5c`. |
 | #488 | `development` | Reconciled exact v0.9 evidence for completed slices and refreshed live refs; documentation only, integrated at `ea66294bae4190ac09d8793b615cf00338d0795a`. |
+| #497 | `development` | Added the explicit VIS-002C reference/candidate/authorized lifecycle validator and source-pinned gate; exact-head run 45832739322 passed; integrated at `3c84c658439eae10ce5f3a13ecc8a71fb613d7e5`. |
+| #498 | `main` | Ported the VIS-002C lifecycle contract and exact-source gate without runtime/page/CSS changes; exact-head run 45833613512 passed; integrated at `94560aa9c4dfc2871a6eb1035b6ecaa283224453`. Production deploy `6b083a82b6dff365f89fa2bf` is READY.
 
-## Selective promotion and architecture findings
+## Selective promotion and architecture findings — prior 10:13 UTC snapshot
+
+The findings below were captured before Product PRs #497 and #498. They are retained as context, not as a current claim; reconcile them against the live Product register before relying on any status.
+
 
 - **Normalized flow:** DOM-006 is integrated and validated in both Product destinations. The main-targeting implementation in #445 passed its exact-head gates; the last recorded production deploy was on a descendant of that integration, but production was not revalidated in this readback.
 - **Admin V3:** the unsafe PUT-from-defaults path was closed by #442; its GET fallback remains a deliberate behavior to compare with development. Provider-level Identity and storage atomicity have not been proven. Netlify Identity login is not supported in `file://`, a static local server, or `netlify dev`; use a Deploy Preview for authenticated behavior.
@@ -55,7 +60,10 @@ Previous readback recorded Netlify production deploy [`6b07bd0f17cb2fd1e0d65b34`
 - **LOC-006:** the Admin scene-asset copy (#475), materials copy (#486), and pager labels (#487) are integrated into Product `development`. PR #486 moved the materials heading/empty-state copy into the catalog; #487 moved shared pager labels and passed 11 exact-head gates. These close bounded copy families only. LOC-006 remains partial because fixed copy across Admin/Config is not fully inventoried; Product `main` is unchanged.
 - **v0.9 register:** all 125 IDs remain. At Product `development@ea66294`, the register blob is `0312567d072b6a204be0f2b6dad0c62be52e2fbb`: 3 done, 18 in progress, 104 not started; reconciliation is 12 done, 21 partial, 92 unreviewed, and 92 entries have no attached evidence. This is an inventory, not an implementation percentage. The register's baseline readback captures Product development immediately before PR #488, which changed only this document.
 
-## Token validation and limits
+## Token validation and limits — prior 10:13 UTC snapshot
+
+This evidence predates the exact-head workflows for Product PRs #497 and #498 and is preserved as historical context.
+
 
 At exact Design System `main@c6ff6545e9ae2071e695109fd94ac91676e7fb0a`, local checks passed after reading the source and generated outputs as canonical Git blob bytes: P-TOKEN-01 tests 6/6, P-TOKEN-02B tests 3/3, and VIS-002C v0.3 verification passed. No new hosted workflow was run on this SHA. Windows `core.autocrlf=true` converts LF files to CRLF and causes false source-hash/generated-output failures in a standard checkout; the underlying repository blobs were unchanged.
 
